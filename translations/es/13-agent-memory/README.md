@@ -1,171 +1,170 @@
-# Memoria para Agentes de IA 
-[![Agent Memory](../../../translated_images/es/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
+# Memory for AI Agents 
+[![Memoria del agente](../../../translated_images/es/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-Al hablar de los beneficios únicos de crear Agentes de IA, se discuten principalmente dos cosas: la capacidad de llamar herramientas para completar tareas y la capacidad de mejorar con el tiempo. La memoria está en la base de la creación de agentes auto-mejorables que pueden ofrecer mejores experiencias a nuestros usuarios.
+When discussing the unique benefits of creating AI Agents, two things are mainly discussed: the ability to call tools to complete tasks and the ability to improve over time. Memory is at the foundation of creating self-improving agent that can create better experiences for our users.
 
-En esta lección, veremos qué es la memoria para Agentes de IA y cómo podemos gestionarla y usarla para el beneficio de nuestras aplicaciones.
+In this lesson, we will look at what memory is for AI Agents and how we can manage it and use it for the benefit of our applications.
 
-## Introducción
+## Introduction
 
-Esta lección cubrirá:
+This lesson will cover:
 
-• **Entendiendo la Memoria de Agentes de IA**: Qué es la memoria y por qué es esencial para los agentes.
+• **Understanding AI Agent Memory**: What memory is and why it's essential for agents.
 
-• **Implementación y Almacenamiento de la Memoria**: Métodos prácticos para agregar capacidades de memoria a tus agentes de IA, enfocándose en memoria a corto y largo plazo.
+• **Implementing and Storing Memory**: Practical methods for adding memory capabilities to your AI agents, focusing on short-term and long-term memory.
 
-• **Haciendo que los Agentes de IA se Auto-mejoren**: Cómo la memoria permite que los agentes aprendan de interacciones pasadas y mejoren con el tiempo.
+• **Making AI Agents Self-Improving**: How memory enables agents to learn from past interactions and improve over time.
 
-## Implementaciones Disponibles
+## Available Implementations
 
-Esta lección incluye dos tutoriales completos en notebooks:
+This lesson includes two comprehensive notebook tutorials:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implementa memoria usando Mem0 y Azure AI Search con el framework Semantic Kernel
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implements memory using Mem0 and Azure AI Search with Semantic Kernel framework
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implementa memoria estructurada usando Cognee, construyendo automáticamente un grafo de conocimiento respaldado por embeddings, visualizando el grafo y recuperación inteligente
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implements structured memory using Cognee, automatically building knowledge graph backed by embeddings, visualizing graph, and intelligent retrieval
 
-## Objetivos de Aprendizaje
+## Learning Goals
 
-Después de completar esta lección, sabrás cómo:
+After completing this lesson, you will know how to:
 
-• **Diferenciar entre varios tipos de memoria en agentes de IA**, incluyendo memoria de trabajo, a corto plazo y a largo plazo, así como formas especializadas como memoria de persona y episódica.
+• **Differentiate between various types of AI agent memory**, including working, short-term, and long-term memory, as well as specialized forms like persona and episodic memory.
 
-• **Implementar y gestionar la memoria a corto y largo plazo para agentes de IA** usando el framework Semantic Kernel, aprovechando herramientas como Mem0, Cognee, memoria Whiteboard, e integrando con Azure AI Search.
+• **Implement and manage short-term and long-term memory for AI agents** using the Semantic Kernel framework, leveraging tools like Mem0, Cognee, Whiteboard memory, and integrating with Azure AI Search.
 
-• **Entender los principios detrás de agentes de IA auto-mejorables** y cómo sistemas robustos de gestión de memoria contribuyen al aprendizaje y adaptación continuos.
+• **Understand the principles behind self-improving AI agents** and how robust memory management systems contribute to continuous learning and adaptation.
 
-## Entendiendo la Memoria de Agentes de IA
+## Understanding AI Agent Memory
 
-En esencia, **la memoria para agentes de IA se refiere a los mecanismos que les permiten retener y recordar información**. Esta información puede ser detalles específicos sobre una conversación, preferencias del usuario, acciones pasadas o incluso patrones aprendidos.
+At its core, **memory for AI agents refers to the mechanisms that allow them to retain and recall information**. This information can be specific details about a conversation, user preferences, past actions, or even learned patterns.
 
-Sin memoria, las aplicaciones de IA suelen ser sin estado, lo que significa que cada interacción comienza desde cero. Esto lleva a una experiencia de usuario repetitiva y frustrante donde el agente "olvida" el contexto o preferencias previas.
+Without memory, AI applications are often stateless, meaning each interaction starts from scratch. This leads to a repetitive and frustrating user experience where the agent "forgets" previous context or preferences.
 
-### ¿Por qué es importante la memoria?
+### Why is Memory Important?
 
-La inteligencia de un agente está profundamente ligada a su capacidad para recordar y utilizar información pasada. La memoria permite que los agentes sean:
+an agent's intelligence is deeply tied to its ability to recall and utilize past information. Memory allows agents to be:
 
-• **Reflexivos**: Aprendiendo de acciones y resultados pasados.
+• **Reflective**: Learning from past actions and outcomes.
 
-• **Interactivos**: Manteniendo el contexto durante una conversación en curso.
+• **Interactive**: Maintaining context over an ongoing conversation.
 
-• **Proactivos y Reactivos**: Anticipando necesidades o respondiendo apropiadamente basados en datos históricos.
+• **Proactive and Reactive**: Anticipating needs or responding appropriately based on historical data.
 
-• **Autónomos**: Operando de forma más independiente al recurrir a conocimiento almacenado.
+• **Autonomous**: Operating more independently by drawing on stored knowledge.
 
-El objetivo de implementar memoria es hacer a los agentes más **fiables y capaces**.
+The goal of implementing memory is to make agents more **reliable and capable**.
 
-### Tipos de Memoria
+### Types of Memory
 
-#### Memoria de Trabajo
+#### Working Memory
 
-Piensa en esto como un papel en blanco que un agente usa durante una única tarea o proceso de pensamiento en curso. Contiene información inmediata necesaria para calcular el siguiente paso.
+Think of this as a piece of scratch paper an agent uses during a single, ongoing task or thought process. It holds immediate information needed to compute the next step.
 
-Para agentes de IA, la memoria de trabajo a menudo captura la información más relevante de una conversación, incluso si el historial completo del chat es largo o truncado. Se enfoca en extraer elementos clave como requerimientos, propuestas, decisiones y acciones.
+For AI agents, working memory often captures the most relevant information from a conversation, even if the full chat history is long or truncated. It focuses on extracting key elements like requirements, proposals, decisions, and actions.
 
-**Ejemplo de Memoria de Trabajo**
+**Working Memory Example**
 
-En un agente de reservas de viajes, la memoria de trabajo podría capturar la solicitud actual del usuario, como "Quiero reservar un viaje a París". Este requisito específico se mantiene en el contexto inmediato del agente para guiar la interacción actual.
+In a travel booking agent, working memory might capture the user's current request, such as "Quiero reservar un viaje a París". This specific requirement is held in the agent's immediate context to guide the current interaction.
 
-#### Memoria a Corto Plazo
+#### Short Term Memory
 
-Este tipo de memoria retiene información durante la duración de una sola conversación o sesión. Es el contexto del chat actual, permitiendo al agente referirse a turnos previos en el diálogo.
+This type of memory retains information for the duration of a single conversation or session. It's the context of the current chat, allowing the agent to refer back to previous turns in the dialogue.
 
-**Ejemplo de Memoria a Corto Plazo**
+**Short Term Memory Example**
 
-Si un usuario pregunta, "¿Cuánto costaría un vuelo a París?" y luego continúa con "¿Y el alojamiento allí?", la memoria a corto plazo asegura que el agente entienda que "allí" se refiere a "París" dentro de la misma conversación.
+If a user asks, "How much would a flight to Paris cost?" and then follows up with "What about accommodation there?", short-term memory ensures the agent knows "there" refers to "Paris" within the same conversation.
 
-#### Memoria a Largo Plazo
+#### Long Term Memory
 
-Esta es información que persiste a lo largo de múltiples conversaciones o sesiones. Permite a los agentes recordar preferencias del usuario, interacciones históricas o conocimiento general durante períodos extensos. Esto es importante para la personalización.
+This is information that persists across multiple conversations or sessions. It allows agents to remember user preferences, historical interactions, or general knowledge over extended periods. This is important for personalization.
 
-**Ejemplo de Memoria a Largo Plazo**
+**Long Term Memory Example**
 
-Una memoria a largo plazo podría almacenar que "Ben disfruta el esquí y actividades al aire libre, le gusta el café con vista a la montaña y quiere evitar pistas de esquí avanzadas por una lesión pasada". Esta información, aprendida de interacciones previas, influye en recomendaciones en futuras sesiones de planificación de viajes, haciéndolas altamente personalizadas.
+A long-term memory might store that "Ben enjoys skiing and outdoor activities, likes coffee with a mountain view, and wants to avoid advanced ski slopes due to a past injury". This information, learned from previous interactions, influences recommendations in future travel planning sessions, making them highly personalized.
 
-#### Memoria de Persona
+#### Persona Memory
 
-Este tipo especial de memoria ayuda a un agente a desarrollar una "personalidad" o "persona" consistente. Permite que el agente recuerde detalles sobre sí mismo o su rol previsto, haciendo las interacciones más fluidas y enfocadas.
+This specialized memory type helps an agent develop a consistent "personality" or "persona". It allows the agent to remember details about itself or its intended role, making interactions more fluid and focused.
 
-**Ejemplo de Memoria de Persona**
+**Persona Memory Example**
+If the travel agent is designed to be an "expert ski planner," persona memory might reinforce this role, influencing its responses to align with an expert's tone and knowledge.
 
-Si el agente de viajes está diseñado para ser un "planificador de esquí experto," la memoria de persona podría reforzar este rol, influyendo en sus respuestas para alinearse con el tono y conocimiento de un experto.
+#### Workflow/Episodic Memory
 
-#### Memoria de Flujo de Trabajo/Episódica
+This memory stores the sequence of steps an agent takes during a complex task, including successes and failures. It's like remembering specific "episodes" or past experiences to learn from them.
 
-Esta memoria almacena la secuencia de pasos que un agente realiza durante una tarea compleja, incluyendo éxitos y fallos. Es como recordar "episodios" o experiencias pasadas para aprender de ellas.
+**Episodic Memory Example**
 
-**Ejemplo de Memoria Episódica**
+If the agent attempted to book a specific flight but it failed due to unavailability, episodic memory could record this failure, allowing the agent to try alternative flights or inform the user about the issue in a more informed way during a subsequent attempt.
 
-Si el agente intentó reservar un vuelo específico pero falló debido a falta de disponibilidad, la memoria episódica podría registrar este fallo, permitiendo que el agente intente vuelos alternativos o informe al usuario sobre el problema de forma más informada durante un intento posterior.
+#### Entity Memory
 
-#### Memoria de Entidades
+This involves extracting and remembering specific entities (like people, places, or things) and events from conversations. It allows the agent to build a structured understanding of key elements discussed.
 
-Esto implica extraer y recordar entidades específicas (como personas, lugares o cosas) y eventos de conversaciones. Permite que el agente construya una comprensión estructurada de los elementos clave discutidos.
+**Entity Memory Example**
 
-**Ejemplo de Memoria de Entidades**
+From a conversation about a past trip, the agent might extract "Paris," "Eiffel Tower," and "dinner at Le Chat Noir restaurant" as entities. In a future interaction, the agent could recall "Le Chat Noir" and offer to make a new reservation there.
 
-De una conversación sobre un viaje pasado, el agente podría extraer "París", "Torre Eiffel" y "cena en el restaurante Le Chat Noir" como entidades. En una futura interacción, el agente podría recordar "Le Chat Noir" y ofrecer hacer una nueva reserva allí.
+#### Structured RAG (Retrieval Augmented Generation)
 
-#### RAG Estructurado (Generación Aumentada por Recuperación)
+While RAG is a broader technique, "Structured RAG" is highlighted as a powerful memory technology. It extracts dense, structured information from various sources (conversations, emails, images) and uses it to enhance precision, recall, and speed in responses. Unlike classic RAG that relies solely on semantic similarity, Structured RAG works with the inherent structure of information.
 
-Aunque RAG es una técnica más amplia, el "RAG estructurado" se destaca como una poderosa tecnología de memoria. Extrae información densa y estructurada de varias fuentes (conversaciones, correos electrónicos, imágenes) y la usa para mejorar la precisión, recuperación y velocidad en las respuestas. A diferencia del RAG clásico que se basa solo en similitud semántica, el RAG estructurado trabaja con la estructura inherente de la información.
+**Structured RAG Example**
 
-**Ejemplo de RAG Estructurado**
+Instead of just matching keywords, Structured RAG could parse flight details (destination, date, time, airline) from an email and store them in a structured way. This allows precise queries like "¿Qué vuelo reservé a París el martes?"
 
-En lugar de solo coincidir palabras clave, el RAG estructurado podría analizar detalles de un vuelo (destino, fecha, hora, aerolínea) desde un correo electrónico y almacenarlos de forma estructurada. Esto permite consultas precisas como "¿Qué vuelo reservé a París el martes?"
+## Implementing and Storing Memory
 
-## Implementación y Almacenamiento de la Memoria
+Implementing memory for AI agents involves a systematic process of **memory management**, which includes generating, storing, retrieving, integrating, updating, and even "forgetting" (or deleting) information. Retrieval is a particularly crucial aspect.
 
-Implementar memoria para agentes de IA implica un proceso sistemático de **gestión de memoria**, que incluye generar, almacenar, recuperar, integrar, actualizar e incluso "olvidar" (o eliminar) información. La recuperación es un aspecto particularmente crucial.
-
-### Herramientas Especializadas de Memoria
+### Specialized Memory Tools
 
 #### Mem0
 
-Una forma de almacenar y gestionar la memoria del agente es usando herramientas especializadas como Mem0. Mem0 funciona como una capa de memoria persistente, permitiendo que los agentes recuerden interacciones relevantes, almacenen preferencias del usuario y contexto factual, y aprendan de éxitos y fallos a lo largo del tiempo. La idea aquí es que agentes sin estado se convierten en agentes con estado.
+One way to store and manage agent memory is using specialized tools like Mem0. Mem0 works as a persistent memory layer, allowing agents to recall relevant interactions, store user preferences and factual context, and learn from successes and failures over time. The idea here is that stateless agents turn into stateful ones.
 
-Opera mediante un **flujo de memoria en dos fases: extracción y actualización**. Primero, los mensajes añadidos al hilo de un agente se envían al servicio Mem0, que usa un Modelo de Lenguaje Grande (LLM) para resumir el historial de conversación y extraer nuevas memorias. Posteriormente, una fase de actualización dirigida por LLM determina si agregar, modificar o eliminar estas memorias, almacenándolas en un almacenamiento híbrido de datos que puede incluir bases de datos vectoriales, gráficas y key-value. Este sistema también soporta varios tipos de memoria y puede incorporar memoria de grafo para gestionar relaciones entre entidades.
+It works through a **two-phase memory pipeline: extraction and update**. First, messages added to an agent's thread are sent to the Mem0 service, which uses a Large Language Model (LLM) to summarize conversation history and extract new memories. Subsequently, an LLM-driven update phase determines whether to add, modify, or delete these memories, storing them in a hybrid data store that can include vector, graph, and key-value databases. This system also supports various memory types and can incorporate graph memory for managing relationships between entities.
 
 #### Cognee
 
-Otro enfoque poderoso es usar **Cognee**, una memoria semántica de código abierto para agentes de IA que transforma datos estructurados y no estructurados en grafos de conocimiento consultables respaldados por embeddings. Cognee proporciona una **arquitectura de doble almacenamiento** que combina búsqueda por similitud vectorial con relaciones gráficas, permitiendo que los agentes entiendan no solo qué información es similar, sino cómo los conceptos se relacionan entre sí.
+Another powerful approach is using **Cognee**, an open-source semantic memory for AI agents that transforms structured and unstructured data into queryable knowledge graphs backed by embeddings. Cognee provides a **dual-store architecture** combining vector similarity search with graph relationships, enabling agents to understand not just what information is similar, but how concepts relate to each other.
 
-Destaca en la **recuperación híbrida** que mezcla similitud vectorial, estructura de grafo y razonamiento LLM - desde la búsqueda de fragmentos sin procesar hasta la respuesta a preguntas consciente del grafo. El sistema mantiene una **memoria viva** que evoluciona y crece mientras permanece consultable como un grafo conectado, soportando tanto el contexto de sesión a corto plazo como la memoria persistente a largo plazo.
+It excels at **hybrid retrieval** that blends vector similarity, graph structure, and LLM reasoning - from raw chunk lookup to graph-aware question answering. The system maintains **living memory** that evolves and grows while remaining queryable as one connected graph, supporting both short-term session context and long-term persistent memory.
 
-El tutorial en notebook de Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demuestra cómo construir esta capa unificada de memoria, con ejemplos prácticos de ingestión de diversas fuentes de datos, visualización del grafo de conocimiento y consultas con diferentes estrategias de búsqueda adaptadas a las necesidades específicas del agente.
+The Cognee notebook tutorial ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonstrates building this unified memory layer, with practical examples of ingesting diverse data sources, visualizing the knowledge graph, and querying with different search strategies tailored to specific agent needs.
 
-### Almacenando Memoria con RAG
+### Storing Memory with RAG
 
-Más allá de herramientas especializadas como Mem0, puedes aprovechar servicios robustos de búsqueda como **Azure AI Search como backend para almacenar y recuperar memorias**, especialmente para RAG estructurado.
+Beyond specialized memory tools like mem0 , you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
 
-Esto te permite fundamentar las respuestas de tu agente con tus propios datos, asegurando respuestas más relevantes y precisas. Azure AI Search puede usarse para almacenar memorias de viajes específicas de usuarios, catálogos de productos o cualquier otro conocimiento específico del dominio.
+This allows you to ground your agent's responses with your own data, ensuring more relevant and accurate answers. Azure AI Search can be used to store user-specific travel memories, product catalogs, or any other domain-specific knowledge.
 
-Azure AI Search soporta capacidades como **RAG Estructurado**, que sobresale en la extracción y recuperación de información densa y estructurada desde grandes conjuntos de datos como historiales de conversación, correos electrónicos o incluso imágenes. Esto provee "precisión y recuperación sobrehumana" comparado con enfoques tradicionales de fragmentación de texto y embeddings.
+Azure AI Search supports capabilities like **Structured RAG**, which excels at extracting and retrieving dense, structured information from large datasets like conversation histories, emails, or even images. This provides "superhuman precision and recall" compared to traditional text chunking and embedding approaches.
 
-## Haciendo que los Agentes de IA se Auto-mejoren
+## Making AI Agents Self-Improve
 
-Un patrón común para agentes auto-mejorables implica introducir un **"agente de conocimiento"**. Este agente separado observa la conversación principal entre el usuario y el agente primario. Su rol es:
+A common pattern for self-improving agents involves introducing a **"knowledge agent"**. This separate agent observes the main conversation between the user and the primary agent. Its role is to:
 
-1. **Identificar información valiosa**: Determinar si alguna parte de la conversación vale la pena guardar como conocimiento general o preferencia específica del usuario.
+1. **Identify valuable information**: Determine if any part of the conversation is worth saving as general knowledge or a specific user preference.
 
-2. **Extraer y resumir**: Destilar el aprendizaje o preferencia esencial de la conversación.
+2. **Extract and summarize**: Distill the essential learning or preference from the conversation.
 
-3. **Almacenar en una base de conocimiento**: Persistir esta información extraída, frecuentemente en una base de datos vectorial, para que pueda ser recuperada después.
+3. **Store in a knowledge base**: Persist this extracted information, often in a vector database, so it can be retrieved later.
 
-4. **Aumentar consultas futuras**: Cuando el usuario inicia una nueva consulta, el agente de conocimiento recupera información almacenada relevante y la agrega al prompt del usuario, proporcionando contexto crucial al agente primario (similar a RAG).
+4. **Augment future queries**: When the user initiates a new query, the knowledge agent retrieves relevant stored information and appends it to the user's prompt, providing crucial context to the primary agent (similar to RAG).
 
-### Optimizaciones para la Memoria
+### Optimizations for Memory
 
-• **Gestión de Latencia**: Para evitar ralentizar las interacciones del usuario, un modelo más barato y rápido puede usarse inicialmente para verificar con rapidez si la información es valiosa para almacenar o recuperar, invocando el proceso de extracción/recuperación más complejo solo cuando es necesario.
+• **Latency Management**: To avoid slowing down user interactions, a cheaper, faster model can be used initially to quickly check if information is valuable to store or retrieve, only invoking the more complex extraction/retrieval process when necessary.
 
-• **Mantenimiento de la Base de Conocimiento**: Para una base de conocimiento en crecimiento, la información menos usada puede trasladarse a "almacenamiento en frío" para gestionar costos.
+• **Knowledge Base Maintenance**: For a growing knowledge base, less frequently used information can be moved to "cold storage" to manage costs.
 
-## ¿Tienes Más Preguntas Sobre la Memoria de Agentes?
+## Got More Questions About Agent Memory?
 
-Únete al [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) para encontrarte con otros aprendices, asistir a horas de oficina y resolver tus preguntas sobre Agentes de IA.
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Aviso legal**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos responsabilizamos por ningún malentendido o interpretación errónea que surja del uso de esta traducción.
+Descargo de responsabilidad:
+Este documento ha sido traducido mediante el servicio de traducción por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por traductores humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan derivarse del uso de esta traducción.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

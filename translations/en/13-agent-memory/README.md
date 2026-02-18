@@ -1,7 +1,7 @@
 # Memory for AI Agents 
 [![Agent Memory](../../../translated_images/en/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-When discussing the unique benefits of creating AI Agents, two things are mainly discussed: the ability to call tools to complete tasks and the ability to improve over time. Memory is at the foundation of creating self-improving agents that can create better experiences for our users.
+When discussing the unique benefits of creating AI Agents, two things are mainly discussed: the ability to call tools to complete tasks and the ability to improve over time. Memory is at the foundation of creating self-improving agent that can create better experiences for our users.
 
 In this lesson, we will look at what memory is for AI Agents and how we can manage it and use it for the benefit of our applications.
 
@@ -41,7 +41,7 @@ Without memory, AI applications are often stateless, meaning each interaction st
 
 ### Why is Memory Important?
 
-An agent's intelligence is deeply tied to its ability to recall and utilize past information. Memory allows agents to be:
+an agent's intelligence is deeply tied to its ability to recall and utilize past information. Memory allows agents to be:
 
 • **Reflective**: Learning from past actions and outcomes.
 
@@ -86,7 +86,6 @@ A long-term memory might store that "Ben enjoys skiing and outdoor activities, l
 This specialized memory type helps an agent develop a consistent "personality" or "persona". It allows the agent to remember details about itself or its intended role, making interactions more fluid and focused.
 
 **Persona Memory Example**
-
 If the travel agent is designed to be an "expert ski planner," persona memory might reinforce this role, influencing its responses to align with an expert's tone and knowledge.
 
 #### Workflow/Episodic Memory
@@ -135,7 +134,7 @@ The Cognee notebook tutorial ([13-agent-memory-cognee.ipynb](./13-agent-memory-c
 
 ### Storing Memory with RAG
 
-Beyond specialized memory tools like Mem0, you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
+Beyond specialized memory tools like mem0 , you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
 
 This allows you to ground your agent's responses with your own data, ensuring more relevant and accurate answers. Azure AI Search can be used to store user-specific travel memories, product catalogs, or any other domain-specific knowledge.
 
@@ -161,11 +160,11 @@ A common pattern for self-improving agents involves introducing a **"knowledge a
 
 ## Got More Questions About Agent Memory?
 
-Join the [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document has been translated using the AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

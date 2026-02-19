@@ -1,109 +1,110 @@
 [![Hogyan tervezzünk jó AI ügynököket](../../../translated_images/hu/lesson-3-thumbnail.1092dd7a8f1074a5.webp)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
 
-> _(Kattints a fenti képre a videó megtekintéséhez)_
+> _(Kattintson a fenti képre a lecke videójának megtekintéséhez)_
 # AI Ügynöki Tervezési Elvek
 
 ## Bevezetés
 
-Számos módja van annak, hogy AI ügynöki rendszereket építsünk. Mivel a generatív AI tervezésében a kétértelműség inkább jellemző, mint hiba, néha nehéz az mérnököknek eldönteni, hol kezdjék el. Létrehoztunk egy emberközpontú UX tervezési elvek készletét, amely lehetővé teszi a fejlesztők számára, hogy ügyfélközpontú ügynöki rendszereket építsenek üzleti igényeik megoldására. Ezek a tervezési elvek nem előíró architektúrák, hanem kiindulópontként szolgálnak azoknak a csapatoknak, akik ügynöki élményeket definiálnak és építenek.
+Számos módon lehet gondolkodni AI ügynöki rendszerek építéséről. Tekintettel arra, hogy a bizonytalanság a Generatív AI tervezésének jellemzője, nem pedig hibája, néha nehéz a mérnököknek eldönteni, hol kezdjék el. Létrehoztunk egy emberközpontú UX-tervezési elveket tartalmazó csomagot, amely lehetővé teszi a fejlesztők számára, hogy ügyfélközpontú ügynöki rendszereket építsenek üzleti igényeik kielégítésére. Ezek a tervezési elvek nem előíró architektúrák, hanem inkább kiindulópontok a csapatok számára, amelyek meghatározzák és fejlesztik az ügynöki élményeket.
 
-Általánosságban az ügynököknek a következőket kell tenniük:
+Általánosságban az ügynököknek:
 
-- Bővíteni és skálázni az emberi képességeket (ötletelés, problémamegoldás, automatizálás stb.)
-- Kitölteni a tudásbeli hiányosságokat (gyorsan képbe hozni tudományterületekről, fordítás stb.)
-- Elősegíteni és támogatni az együttműködést az általunk preferált módokon, ahogyan másokkal dolgozunk
-- Jobb verzióinkká tenni minket (pl. életvezetési tanácsadó/feladatkezelő, segítve az érzelmi szabályozás és tudatossági készségek elsajátítását, ellenálló képesség építése stb.)
+- Szélesíteniük és skálázniuk kell az emberi képességeket (ötletelés, problémamegoldás, automatizálás stb.)
+- Ki kell tölteniük a tudáshiányokat (tájékoztatás a tudásdoménekről, fordítás stb.)
+- Támogatniuk és elősegíteniük kell az együttműködést abban a módon, ahogy egyénileg a legszívesebben dolgozunk másokkal
+- Jobbá kell tenniük minket magunknál (pl. életvezetési tanácsadó/feladatvezető, segítve érzelmi szabályozás és tudatosság fejlesztését, reziliencia építése stb.)
 
-## Ebben a leckében szó lesz
+## Ez a lecke lefedi
 
-- Mik az ügynöki tervezési elvek
-- Milyen irányelveket kell követni ezeknek az elveknek a megvalósítása során
-- Példák az elvek alkalmazására
+- Mik az Ügynöki Tervezési Elvek
+- Milyen irányelveket érdemes követni ezen elvek alkalmazása során
+- Néhány példa az elvek használatára
 
 ## Tanulási célok
 
-A lecke elvégzése után képes leszel:
+A lecke elvégzése után képes lesz:
 
-1. Elmagyarázni, mik az ügynöki tervezési elvek
-2. Elmagyarázni az ügynöki tervezési elvek használatának irányelveit
-3. Megérteni, hogyan lehet ügynököt építeni az ügynöki tervezési elvek alapján
+1. Elmagyarázni, mik az Ügynöki Tervezési Elvek
+2. Elmagyarázni az irányelveket az Ügynöki Tervezési Elvek alkalmazásához
+3. Megérteni, hogyan lehet ügynököt építeni az Ügynöki Tervezési Elvek segítségével
 
-## Az ügynöki tervezési elvek
+## Az Ügynöki Tervezési Elvek
 
-![Ügynöki tervezési elvek](../../../translated_images/hu/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
+![Ügynöki Tervezési Elvek](../../../translated_images/hu/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
 
 ### Ügynök (Tér)
 
-Ez az a környezet, amelyben az ügynök működik. Ezek az elvek azt határozzák meg, hogyan tervezzük az ügynököket a fizikai és digitális világokban való részvételre.
+Ez az a környezet, amelyben az ügynök működik. Ezek az elvek informálják, hogyan tervezzünk ügynököket fizikai és digitális világokban való részvételhez.
 
-- **Kapcsolódás, nem összeomlás** – segít összekapcsolni embereket más emberekkel, eseményekkel és cselekvésre alkalmas tudással az együttműködés és kapcsolódás érdekében.
+- **Kapcsolódás, nem összeolvadás** – segítsük az embereket más emberekhez, eseményekhez és cselekvési tudáshoz kapcsolódni az együttműködés és kapcsolat elősegítéséhez.
 - Az ügynökök segítenek összekapcsolni eseményeket, tudást és embereket.
-- Az ügynökök közelebb hozzák az embereket egymáshoz. Nem arra tervezték őket, hogy helyettesítsék vagy lekicsinyeljék az embereket.
-- **Könnyen elérhető, mégis időnként láthatatlan** – az ügynök nagyrészt a háttérben működik, és csak akkor figyelmeztet minket, amikor releváns és megfelelő.
-  - Az ügynök könnyen felfedezhető és elérhető az engedélyezett felhasználók számára bármilyen eszközön vagy platformon.
+- Az ügynökök közelebb hozzák egymáshoz az embereket. Nem arra tervezték őket, hogy helyettesítsék vagy leértékeljék az embereket.
+- **Könnyen hozzáférhető, mégis időnként láthatatlan** – az ügynök nagyrészt a háttérben működik, és csak akkor emlékeztet minket, ha releváns és megfelelő.
+  - Az ügynök könnyen felfedezhető és elérhető a jogosult felhasználók számára bármilyen eszközön vagy platformon.
   - Az ügynök támogatja a multimodális bemeneteket és kimeneteket (hang, beszéd, szöveg stb.).
-  - Az ügynök zökkenőmentesen vált a háttér és az előtér között; a proaktív és reaktív működés között, a felhasználói igények érzékelése alapján.
-  - Az ügynök működhet láthatatlan formában, de háttérfolyamata és más ügynökökkel való együttműködése átlátható és a felhasználó által irányítható.
+  - Az ügynök zökkenőmentesen vált a háttér és előtér között; proaktív és reaktív mód között, a felhasználó igényeinek észlelése alapján.
+  - Az ügynök működhet láthatatlan formában, mégis a háttérben futó folyamata és más ügynökökkel való együttműködése átlátható és a felhasználó által szabályozható.
 
 ### Ügynök (Idő)
 
-Ez az, ahogyan az ügynök az idő múlásával működik. Ezek az elvek azt határozzák meg, hogyan tervezzük az ügynököket, amelyek a múlt, jelen és jövő között lépnek kapcsolatba.
+Ez az, ahogyan az ügynök az idő során működik. Ezek az elvek informálják, hogyan tervezzünk ügynököket, amelyek a múlt, jelen és jövő között lépnek kapcsolatba.
 
-- **Múlt**: Visszatekintés a történetre, amely magában foglalja az állapotot és a kontextust.
-  - Az ügynök relevánsabb eredményeket nyújt a gazdagabb történelmi adatok elemzése alapján, nem csak az események, emberek vagy állapotok alapján.
-  - Az ügynök kapcsolatokat hoz létre múltbeli eseményekből, és aktívan reflektál az emlékezetre, hogy a jelenlegi helyzetekkel foglalkozzon.
-- **Most**: Többet nyújt, mint értesítést.
-  - Az ügynök átfogó megközelítést képvisel az emberekkel való interakcióban. Amikor egy esemény történik, az ügynök túllép a statikus értesítéseken vagy más statikus formalitásokon. Az ügynök egyszerűsítheti a folyamatokat vagy dinamikusan generálhat jelzéseket, hogy a felhasználó figyelmét a megfelelő pillanatban irányítsa.
-  - Az ügynök információt nyújt a kontextuális környezet, társadalmi és kulturális változások alapján, és a felhasználói szándékhoz igazítva.
-  - Az ügynök interakciója fokozatos lehet, fejlődhet/komplexebbé válhat, hogy hosszú távon támogassa a felhasználókat.
-- **Jövő**: Alkalmazkodás és fejlődés.
-  - Az ügynök alkalmazkodik különböző eszközökhöz, platformokhoz és modalitásokhoz.
-  - Az ügynök alkalmazkodik a felhasználói viselkedéshez, hozzáférhetőségi igényekhez, és szabadon testreszabható.
-  - Az ügynök a folyamatos felhasználói interakció révén formálódik és fejlődik.
+- **Múlt**: a múlt tükrözése, amely magában foglalja az állapotot és a kontextust.
+  - Az ügynök relevánsabb eredményeket nyújt a gazdagabb történelmi adatok elemzésén alapulóan, túlmutatva az eseményen, személyeken vagy állapotokon.
+  - Az ügynök kapcsolatokat hoz létre múltbéli eseményekből és aktívan reflektál a memóriára a jelenlegi helyzetek kezeléséhez.
+- **Jelen**: ösztönzés a puszta értesítés helyett.
+  - Az ügynök átfogó megközelítést testesít meg az emberekkel való interakcióban. Amikor egy esemény történik, az ügynök túlmegy a statikus értesítés vagy más statikus formalitás keretein. Az ügynök leegyszerűsítheti a folyamatokat vagy dinamikusan generálhat figyelmeztetéseket, hogy megfelelő pillanatban irányítsa a felhasználó figyelmét.
+  - Az ügynök információt nyújt a kontextuális környezet, társadalmi és kulturális változások alapján, valamint a felhasználó szándékára szabva.
+  - Az ügynök interakciója fokozatos lehet, komplexitásában fejlődő/növekvő, hogy hosszú távon empowermentet nyújtson a felhasználóknak.
+- **Jövő**: alkalmazkodás és fejlődés.
+  - Az ügynök alkalmazkodik különféle eszközökhöz, platformokhoz és modalitásokhoz.
+  - Az ügynök alkalmazkodik a felhasználói viselkedéshez, az akadálymentességi igényekhez, és szabadon testreszabható.
+  - Az ügynök folyamatos felhasználói interakción keresztül formálódik és fejlődik.
 
 ### Ügynök (Mag)
 
-Ezek az ügynök tervezésének kulcselemei.
+Ezek a kulcselemek az ügynök tervezésének magjában.
 
-- **Fogadd el a bizonytalanságot, de építs bizalmat**.
-  - Az ügynök bizonyos szintű bizonytalansága várható. A bizonytalanság az ügynök tervezésének kulcseleme.
-  - A bizalom és átláthatóság az ügynök tervezésének alapvető rétegei.
-  - Az emberek irányítják, hogy az ügynök be van-e kapcsolva vagy ki van kapcsolva, és az ügynök állapota mindig egyértelműen látható.
+- **Fogadja el a bizonytalanságot, de építsen bizalmat**.
+  - Az ügynöknél bizonyos szintű bizonytalanság várható. A bizonytalanság az ügynöki tervezés kulcseleme.
+  - A bizalom és az átláthatóság az ügynöki tervezés alapvető rétegei.
+  - Az emberek irányítják, mikor van az ügynök be- vagy kikapcsolva, és az ügynök állapota mindig jól látható.
 
-## Az elvek megvalósításának irányelvei
+## Az irányelvek ezeknek az elveknek az alkalmazásához
 
-Az előző tervezési elvek használatakor kövesd az alábbi irányelveket:
+Amikor a fenti tervezési elveket használja, alkalmazza a következő irányelveket:
 
-1. **Átláthatóság**: Tájékoztasd a felhasználót arról, hogy AI van jelen, hogyan működik (beleértve a múltbeli tevékenységeket), és hogyan adhat visszajelzést, illetve módosíthatja a rendszert.
-2. **Irányítás**: Tedd lehetővé a felhasználó számára, hogy testreszabja, megadja preferenciáit és személyre szabja, valamint irányítsa a rendszert és annak attribútumait (beleértve a felejtés lehetőségét).
-3. **Konzisztencia**: Törekedj következetes, multimodális élményekre az eszközök és végpontok között. Használj ismerős UI/UX elemeket, ahol lehetséges (pl. mikrofon ikon a hanginterakcióhoz), és csökkentsd a felhasználó kognitív terhelését, amennyire csak lehet (pl. törekedj tömör válaszokra, vizuális segédeszközökre és „Tudj meg többet” tartalomra).
+1. **Átláthatóság**: Tájékoztassa a felhasználót, hogy AI érintett, hogyan működik (beleértve a múltbéli tevékenységeket is), valamint hogyan lehet visszajelzést adni és módosítani a rendszert.
+2. **Irányítás**: Tegye lehetővé a felhasználó számára a testreszabást, preferenciák megadását és személyre szabást, valamint a rendszer és attribútumai feletti irányítást (beleértve az elfelejtés lehetőségét is).
+3. **Konszisztencia**: Törekedjen következetes, multimodális élményre különböző eszközökön és végpontokon. Használjon ismerős UI/UX elemeket ahol lehet (pl. mikrofon ikon a hangalapú interakcióhoz), csökkentse a felhasználó kognitív terhelését a lehető legjobban (pl. tömör válaszokat, vizuális segédeszközöket és 'Tudj meg többet' tartalmakat alkalmazva).
 
 ## Hogyan tervezzünk utazási ügynököt ezekkel az elvekkel és irányelvekkel
 
-Képzeld el, hogy egy utazási ügynököt tervezel, itt van, hogyan gondolkodhatnál az elvek és irányelvek alkalmazásáról:
+Képzelje el, hogy egy utazási ügynököt tervez, így gondolhat az Ügynöki Tervezési Elvek és irányelvek alkalmazására:
 
-1. **Átláthatóság** – Tájékoztasd a felhasználót arról, hogy az utazási ügynök egy AI-alapú ügynök. Adj néhány alapvető utasítást a kezdéshez (pl. egy „Hello” üzenet, mintapéldák). Dokumentáld ezt egyértelműen a termékoldalon. Mutasd meg a felhasználó által korábban feltett kérdések listáját. Tedd egyértelművé, hogyan adhat visszajelzést (például „Tetszik” és „Nem tetszik” gombok, „Küldj visszajelzést” gomb stb.). Egyértelműen fogalmazd meg, ha az ügynöknek vannak használati vagy témakör korlátozásai.
-2. **Irányítás** – Tedd egyértelművé, hogyan módosíthatja a felhasználó az ügynököt, miután létrehozta, például a rendszeres promptokkal. Tedd lehetővé a felhasználó számára, hogy kiválassza, mennyire legyen részletes az ügynök, milyen stílusban írjon, és milyen témákról ne beszéljen. Engedd meg a felhasználónak, hogy megtekintse és törölje a kapcsolódó fájlokat vagy adatokat, promptokat és korábbi beszélgetéseket.
-3. **Konzisztencia** – Biztosítsd, hogy a „Prompt megosztása”, fájl vagy fotó hozzáadása, valamint valaki vagy valami megjelölése ikonok szabványosak és felismerhetők legyenek. Használj például gemkapocs ikont a fájl feltöltésére/megosztására az ügynökkel, és kép ikont a grafika feltöltésére.
+1. **Átláthatóság** – Tudassa a felhasználóval, hogy az Utazási Ügynök AI-támogatott agent. Adjon néhány alapvető útmutatást a kezdéshez (pl. „Helló” üzenet, mintapéldák). Egyértelműen dokumentálja ezt a termékoldalon. Mutassa meg a felhasználó korábbi kérdéseinek listáját. Tegye világossá, hogyan lehet visszajelzést adni (fel és lefelé mutató hüvelykujj, Visszajelzés küldése gomb stb.). Egyértelműen jelezze, ha az ügynöknek használati vagy témabeli korlátai vannak.
+2. **Irányítás** – Tegye világossá, hogyan módosíthatja a felhasználó az Ügynököt létrehozás után például a Rendszer Prompt segítségével. Tegye lehetővé a felhasználónak, hogy válassza meg az ügynök terjengőségének mértékét, írásstílusát és bármilyen kikötést arról, miről ne beszéljen. Engedje meg a felhasználónak, hogy megtekinthesse és törölhesse a kapcsolódó fájlokat vagy adatokat, promptokat és korábbi beszélgetéseket.
+3. **Konszisztencia** – Győződjön meg róla, hogy az ikonok a "Prompt megosztása", fájl vagy kép hozzáadása és valaki vagy valami megjelölése szabványosak és felismerhetők. Használja a gemkapocs ikont a fájl feltöltés vagy megosztás jelzésére az ügynökké, és kép ikont a grafikus feltöltéshez.
 
-## Mintakódok
+## Minta kódok
 
-- Python: [Ügynöki keretrendszer](./code_samples/03-python-agent-framework.ipynb)
-- .NET: [Ügynöki keretrendszer](./code_samples/03-dotnet-agent-framework.md)
+- Python: [Agent Framework](./code_samples/03-python-agent-framework.ipynb)
+- .NET: [Agent Framework](./code_samples/03-dotnet-agent-framework.md)
 
-## További kérdéseid vannak az AI ügynöki tervezési mintákról?
 
-Csatlakozz az [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) közösséghez, hogy találkozz más tanulókkal, részt vegyél fogadóórákon, és választ kapj az AI ügynökökkel kapcsolatos kérdéseidre.
+## További kérdések az AI ügynöki tervezési mintákról?
 
-## További források
+Csatlakozzon a [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) közösséghez, hogy találkozzon más tanulókkal, részt vegyen konzultációkon, és választ kapjon AI ügynöki kérdéseire.
 
-- <a href="https://openai.com" target="_blank">Gyakorlatok az ügynöki AI rendszerek irányításához | OpenAI</a>
+## További erőforrások
+
+- <a href="https://openai.com" target="_blank">Az ügynöki AI rendszerek irányításának gyakorlati útmutatója | OpenAI</a>
 - <a href="https://microsoft.com" target="_blank">A HAX Toolkit Projekt - Microsoft Research</a>
-- <a href="https://responsibleaitoolbox.ai" target="_blank">Responsible AI Toolbox</a>
+- <a href="https://responsibleaitoolbox.ai" target="_blank">Felelős AI Eszköztár</a>
 
 ## Előző lecke
 
-[Ügynöki keretrendszerek felfedezése](../02-explore-agentic-frameworks/README.md)
+[Az ügynöki keretrendszerek felfedezése](../02-explore-agentic-frameworks/README.md)
 
 ## Következő lecke
 
@@ -112,6 +113,6 @@ Csatlakozz az [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) köz�
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felmentés**:
+Ezt a dokumentumot az AI fordító szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) használatával fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások tartalmazhatnak hibákat vagy pontatlanságokat. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kiemelten fontos információk esetén szakmai emberi fordítást javasolunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

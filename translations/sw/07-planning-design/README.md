@@ -1,54 +1,55 @@
-[![Mpangilio wa Muundo wa Mipango](../../../translated_images/sw/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Mipango ya Muundo wa Mipango](../../../translated_images/sw/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Bofya picha hapo juu kutazama video ya somo hili)_
+> _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-# Mpangilio wa Mipango
+# Muundo wa Mipango
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litashughulikia
 
-* Kufafanua lengo kuu na kugawanya kazi ngumu kuwa kazi ndogo zinazoweza kudhibitiwa.
-* Kutumia matokeo yaliyojengwa kwa muundo ili kupata majibu yanayoaminika na yanayoweza kusomeka na mashine.
-* Kutumia mbinu inayotegemea matukio kushughulikia kazi za mabadiliko na pembejeo zisizotarajiwa.
+* Kuweka lengo kuu wazi na kugawanya kazi tata kuwa kazi ndogo zinazoweza kusimamiwa.
+* Kutumia matokeo yaliyopangwa kwa muundo kwa majibu ya kuaminika zaidi na yanayoweza kusomeka na mashine.
+* Kutumia mbinu inayoendeshwa na matukio kushughulikia kazi zinazobadilika na taarifa zisizotarajiwa.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utakuwa na uelewa kuhusu:
+Baada ya kukamilisha somo hili, utakuwa na ufahamu kuhusu:
 
-* Kutambua na kuweka lengo kuu kwa wakala wa AI, kuhakikisha anajua wazi kinachohitajika kufanikishwa.
-* Kugawanya kazi ngumu kuwa kazi ndogo zinazoweza kudhibitiwa na kuzipanga kwa mpangilio wa kimantiki.
-* Kuwawezesha mawakala na zana sahihi (mfano, zana za utafutaji au uchambuzi wa data), kuamua ni lini na jinsi ya kuzitumia, na kushughulikia hali zisizotarajiwa zinazojitokeza.
-* Kutathmini matokeo ya kazi ndogo, kupima utendaji, na kurudia hatua ili kuboresha matokeo ya mwisho.
+* Kutambua na kuweka lengo kuu kwa wakala wa AI, kuhakikisha anajua wazi kinachotakiwa kufanikishwa.
+* Kugawanya kazi tata kuwa kazi ndogo zinazoweza kusimamiwa na kuzipanga kwa mfuatano wa mantiki.
+* Kuwasidia mawakala na zana sahihi (mfano, zana za utafutaji au uchambuzi wa data), kuamua ni lini na jinsi zinavyotumika, na kushughulikia hali zisizotarajiwa zinazotokea.
+* Kutathmini matokeo ya kazi ndogo, kupima utendaji, na kurudia hatua za kuboresha matokeo ya mwisho.
 
-## Kufafanua Lengo Kuu na Kugawanya Kazi
+## Kuweka Lengo Kuu na Kugawanya Kazi
 
-![Kufafanua Malengo na Kazi](../../../translated_images/sw/defining-goals-tasks.d70439e19e37c47a.webp)
+![Kuweka Malengo na Kazi](../../../translated_images/sw/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Kazi nyingi za ulimwengu halisi ni ngumu sana kushughulikiwa kwa hatua moja. Wakala wa AI anahitaji lengo fupi ili kuongoza mipango na hatua zake. Kwa mfano, fikiria lengo:
+Kazi nyingi halisi ni tata mno kushughulikia kwa hatua moja. Wakala wa AI anahitaji lengo fupi la kuelekeza mipango na vitendo vyake. Kwa mfano, fikiria lengo:
 
     "Tengeneza ratiba ya safari ya siku 3."
 
-Ingawa ni rahisi kusema, bado inahitaji kufafanuliwa zaidi. Kadri lengo linavyokuwa wazi, ndivyo wakala (na washirika wa binadamu) wanavyoweza kuzingatia kufanikisha matokeo sahihi, kama vile kuunda ratiba kamili yenye chaguo za ndege, mapendekezo ya hoteli, na mapendekezo ya shughuli.
+Ingawa ni rahisi kusema, bado linahitaji kuboreshwa. Kadri lengo linavyokuwa wazi zaidi, ndivyo wakala (na washirika wa binadamu) wanavyoweza kuzingatia kufanikisha matokeo sahihi, kama kutengeneza ratiba kamilifu yenye chaguzi za ndege, mapendekezo ya hoteli, na mapendekezo ya shughuli.
 
-### Kugawanya Kazi
+### Ugawaji Kazi
 
-Kazi kubwa au ngumu zinakuwa rahisi kudhibitiwa zinapogawanywa kuwa kazi ndogo zinazolenga malengo maalum. Kwa mfano wa ratiba ya safari, unaweza kugawanya lengo kuwa:
+Kazi kubwa au ngumu zinakuwa rahisi kusimamia wakati zikitenganishwa kuwa kazi ndogo zinazolenga malengo.
+Kwa mfano wa ratiba ya safari, unaweza kugawanya lengo kubaki:
 
-* Kuhifadhi Ndege
-* Kuhifadhi Hoteli
+* Uhifadhi wa Ndege
+* Uhifadhi wa Hoteli
 * Kukodisha Gari
-* Kubinafsisha
+* Ubinafsishaji
 
-Kila kazi ndogo inaweza kushughulikiwa na mawakala au michakato maalum. Wakala mmoja anaweza kubobea katika kutafuta ofa bora za ndege, mwingine anaweza kuzingatia uhifadhi wa hoteli, na kadhalika. Wakala wa kuratibu au “wakala wa mto” anaweza kisha kukusanya matokeo haya kuwa ratiba moja ya pamoja kwa mtumiaji wa mwisho.
+Kila kazi ndogo inaweza kushughulikiwa na mawakala au michakato maalum. Wakala mmoja anaweza kuanzia kwa kutafuta ofa bora za ndege, mwingine akahusika na uhifadhi wa hoteli, n.k. Wakala anayeongoza au “wa nyuma” anaweza kuchanganya matokeo haya kuwa ratiba moja sawa kwa mtumiaji.
 
-Mbinu hii ya kimoduli pia inaruhusu maboresho ya hatua kwa hatua. Kwa mfano, unaweza kuongeza mawakala maalum kwa Mapendekezo ya Chakula au Mapendekezo ya Shughuli za Kijijini na kuboresha ratiba kwa muda.
+Mbinu hii ya moduli pia inaruhusu maboresho ya hatua kwa hatua. Kwa mfano, unaweza kuongeza mawakala maalum kwa Mapendekezo ya Chakula au Shughuli za Mtaa na kuboresha ratiba kwa muda.
 
-### Matokeo Yaliyojengwa kwa Muundo
+### Matokeo Yaliyopangwa kwa Muundo
 
-Mifano Mikubwa ya Lugha (LLMs) inaweza kutoa matokeo yaliyojengwa kwa muundo (mfano, JSON) ambayo ni rahisi kwa mawakala au huduma za mto kusoma na kuchakata. Hii ni muhimu hasa katika muktadha wa mawakala wengi, ambapo tunaweza kuchukua hatua kwa kazi hizi baada ya matokeo ya mipango kupokelewa. Rejelea hili kwa muhtasari wa haraka.
+Mifano Mikubwa ya Lugha (LLMs) inaweza kuzalisha matokeo yaliyo na muundo (k.m. JSON) ambayo ni rahisi kwa mawakala au huduma za nyuma kuyasoma na kuyashughulikia. Hii ni muhimu hasa katika muktadha wa mawakala wengi, ambapo tunaweza kutekeleza kazi hizi baada ya kupokea matokeo ya mipango. Rejelea <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogi hii</a> kwa muhtasari wa haraka.
 
-Snippet ya Python ifuatayo inaonyesha wakala rahisi wa mipango anayegawanya lengo kuwa kazi ndogo na kutoa mpango uliopangwa:
+Mfano wa Python hapa chini unaonyesha wakala wa mipango akigawanya lengo kuwa kazi ndogo na kuzalisha mpango uliopangwa kwa muundo:
 
 ```python
 from pydantic import BaseModel
@@ -71,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Mfano wa Kazi Ndogo ya Safari
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # tunataka kugawa kazi kwa wakala
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -84,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # Ili kuthibitisha na mfano utahitaji kuzalisha tokeni ya ufikiaji wa kibinafsi (PAT) katika mipangilio yako ya GitHub.
+    # Tengeneza tokeni yako ya PAT kwa kufuata maelekezo hapa: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -95,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Tafsiri ujumbe wa mtumiaji
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -124,31 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Hakikisha maudhui ya jibu ni mfuatano halali wa JSON kabla ya kuipakia
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
+# kama response_content ni None:
+#     inuka ValueError("Maudhui ya jibu si mfuatano halali wa JSON")
 
-# # Print the response content after loading it as JSON
+# # Chapisha maudhui ya jibu baada ya kuipakia kama JSON
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Thibitisha maudhui ya jibu na mfano wa MathReasoning
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Wakala wa Mipango na Uratibu wa Mawakala Wengi
+### Wakala wa Mipango na Usimamizi wa Mawakala Wengi
 
-Katika mfano huu, Wakala wa Router ya Semantic hupokea ombi la mtumiaji (mfano, "Nahitaji mpango wa hoteli kwa safari yangu.").
+Katika mfano huu, Wakala wa Mtaani wa Semantic anapokea ombi la mtumiaji (mfano, "Nahitaji mpango wa hoteli kwa safari yangu.").
 
-Mpangaji kisha:
+Mupango kisha:
 
-* Kupokea Mpango wa Hoteli: Mpangaji huchukua ujumbe wa mtumiaji na, kulingana na maelezo ya mfumo (ikiwemo maelezo ya mawakala waliopo), hutoa mpango wa safari uliopangwa.
-* Orodhesha Mawakala na Zana Zao: Usajili wa wakala unashikilia orodha ya mawakala (mfano, kwa ndege, hoteli, kukodisha gari, na shughuli) pamoja na kazi au zana wanazotoa.
-* Kusambaza Mpango kwa Mawakala Husika: Kulingana na idadi ya kazi ndogo, mpangaji ama hutuma ujumbe moja kwa moja kwa wakala maalum (kwa hali za kazi moja) au kuratibu kupitia msimamizi wa mazungumzo ya kikundi kwa ushirikiano wa mawakala wengi.
-* Kufupisha Matokeo: Hatimaye, mpangaji hufupisha mpango uliotolewa kwa uwazi.
-
-Snippet ya Python ifuatayo inaonyesha hatua hizi:
+* Kupokea Mpango wa Hoteli: Mupango hupokea ujumbe wa mtumiaji na, kulingana na agizo la mfumo (ikiwa ni pamoja na maelezo ya mawakala waliopo), huzalisha mpango wa safari ulio na muundo.
+* Orodhesha Wakala na Zana Zao: Usajili wa mawakala una orodha ya mawakala (mfano, kwa ndege, hoteli, kukodisha gari, na shughuli) pamoja na kazi au zana wanazotoa.
+* Kutuma Mpango kwa Mawakala Husika: Kulingana na idadi ya kazi ndogo, mupango hutuma ujumbe moja kwa moja kwa wakala maalum (kwa hali za kazi moja) au kuandaa kupitia meneja wa mazungumzo ya kikundi kwa ushirikiano wa mawakala wengi.
+* Kufupisha Matokeo: Hatimaye, mupango hufupisha mpango uliotengenezwa kwa uwazi.
+Mfano wa msimbo wa Python unaonyesha hatua hizi:
 
 ```python
 
@@ -166,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Mfano wa Kazi Ndogo ya Safari
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # tunataka kugawa kazi kwa wakala
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -183,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Unda mteja kwa mazingira yaliyopimwa aina
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -195,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Eleza ujumbe wa mtumiaji
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -212,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Hakikisha maudhui ya jibu ni mnyororo wa JSON halali kabla ya kuipakia
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Chapisha maudhui ya jibu baada ya kuipakia kama JSON
 
 pprint(json.loads(response_content))
 ```
 
-Kinachofuata ni matokeo kutoka kwa msimbo wa awali na unaweza kutumia matokeo haya yaliyojengwa kwa muundo kupeleka kwa `assigned_agent` na kufupisha mpango wa safari kwa mtumiaji wa mwisho.
+Kinachofuata ni matokeo kutoka kwa msimbo uliotangulia na unaweza kutumia matokeo haya iliyopangwa kwa muundo kupeleka kwa `assigned_agent` na kufupisha mpango wa safari kwa mtumiaji wa mwisho.
 
 ```json
 {
@@ -254,19 +254,19 @@ Kinachofuata ni matokeo kutoka kwa msimbo wa awali na unaweza kutumia matokeo ha
 }
 ```
 
-Notebook ya mfano yenye msimbo wa awali inapatikana [hapa](07-autogen.ipynb).
+Mfano wa daftari la maelezo na msimbo uliotangulia upo [hapa](07-autogen.ipynb).
 
 ### Mipango ya Kurudia
 
-Baadhi ya kazi zinahitaji mazungumzo ya kurudi nyuma au mipango upya, ambapo matokeo ya kazi moja ndogo yanaathiri inayofuata. Kwa mfano, ikiwa wakala atagundua muundo wa data usiotarajiwa wakati wa kuhifadhi ndege, huenda akahitaji kubadilisha mkakati wake kabla ya kuendelea na uhifadhi wa hoteli.
+Baadhi ya kazi zinahitaji kurudia au kupanga upya, ambapo matokeo ya kazi moja ndogo yanaathiri ifuatayo. Kwa mfano, ikiwa wakala atagundua muundo wa data usiotarajiwa wakati wa kuhifadhi ndege, anaweza kuhitaji kubadilisha mkakati kabla ya kuhifadhi hoteli.
 
-Aidha, maoni ya mtumiaji (mfano, binadamu kuamua wanapendelea ndege ya mapema) yanaweza kusababisha mipango upya ya sehemu. Mbinu hii ya mabadiliko na kurudia inahakikisha kuwa suluhisho la mwisho linakubaliana na vikwazo vya ulimwengu halisi na mapendeleo yanayobadilika ya mtumiaji.
+Aidha, maoni ya mtumiaji (mfano, mtu kuamua anapendelea ndege ya mapema) yanaweza kusababisha kupanga upya sehemu. Mbinu hii ya kurudia na kusonga mbele huhakikisha suluhisho la mwisho linaendana na vizingiti halisi vya dunia na mabadiliko ya mapendekezo ya mtumiaji.
 
-Mfano wa msimbo:
+mfano wa msimbo
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. sawa na msimbo wa awali na kuendelea na historia ya mtumiaji, mpango wa sasa
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -280,34 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. re-panga na tuma kazi kwa maajenti husika
 ```
 
-Kwa mipango ya kina zaidi angalia Magnetic One kwa kutatua kazi ngumu.
+Kwa mipango kamili zaidi angalia Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Blogi</a> kwa utatuzi wa kazi tata.
 
 ## Muhtasari
 
-Katika makala hii tumeangalia mfano wa jinsi tunavyoweza kuunda mpangaji ambaye anaweza kuchagua mawakala waliopo kwa kazi maalum. Matokeo ya Mpangaji hugawanya kazi na kuwapa mawakala ili waweze kutekelezwa. Inadhaniwa kuwa mawakala wana ufikiaji wa kazi/zana zinazohitajika kutekeleza kazi. Mbali na mawakala unaweza kujumuisha mifumo mingine kama tafakari, muhtasari, na mazungumzo ya mzunguko ili kubinafsisha zaidi.
+Katika makala hii tumeangalia mfano wa jinsi tunavyoweza kuunda mupango unaoweza kuchagua kwa mabadiliko mawakala waliopo waliotajwa. Matokeo ya Mupango hugawanya kazi na kuagiza mawakala ili kutekelezwa. Inadhaniwa mawakala wana ufikiaji wa kazi/zana zinazohitajika kutekeleza kazi. Zaidi ya mawakala, unaweza kujumuisha mifumo mingine kama tafakari, mfinyanzi, na mazungumzo ya mzunguko wa robin ili kubinafsisha zaidi.
 
-## Rasilimali za Ziada
+## Rasilimali Zaidi
 
-AutoGen Magnetic One - Mfumo wa mawakala wengi wa jumla kwa kutatua kazi ngumu na umefikia matokeo ya kuvutia kwenye viwango vingi vya changamoto za mawakala. Rejea:
+AutoGen Magentic One - Mfumo wa wakala wengi wa jumla wa kutatua kazi tata na umefanikiwa kupata matokeo mazuri katika vipimo kadhaa vigumu vya wakala. Marejeleo: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. Katika utekelezaji huu mratibu huunda mpango maalum wa kazi na kuagiza kazi hizi kwa mawakala waliopo. Zaidi ya kupanga, mratibu pia hutumia mfumo wa kufuatilia maendeleo ya kazi na kupanga upya inapohitajika.
 
-. Katika utekelezaji huu, mratibu huunda mpango maalum wa kazi na kugawa kazi hizi kwa mawakala waliopo. Mbali na mipango, mratibu pia hutumia mfumo wa ufuatiliaji kufuatilia maendeleo ya kazi na kupanga upya inapohitajika.
+### Una Maswali Zaidi kuhusu Muundo wa Mipango?
 
-### Una Maswali Zaidi Kuhusu Mpangilio wa Muundo wa Mipango?
+Jiunge na [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) kukutana na wanafunzi wengine, kuhudhuria saa za ofisi na kupata majibu kwa maswali yako kuhusu Wakala wa AI.
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi, na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+## Somo Lililotangulia
 
-## Somo la Awali
+[Kuunda Wakala wa AI wa Kuaminika](../06-building-trustworthy-agents/README.md)
 
-[Kuunda Mawakala wa AI Wanaoaminika](../06-building-trustworthy-agents/README.md)
+## Somo Linalofuata
 
-## Somo Lijalo
-
-[Muundo wa Mawakala Wengi](../08-multi-agent/README.md)
+[Muundo wa Wakala Wengi](../08-multi-agent/README.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Hati ya kutotegemea**:
+Nyaraka hii imetafsiriwa kwa kutumia huduma ya utafsiri wa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Nyaraka asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya mtaalamu wa binadamu inashauriwa. Hatuhusiki kwa dhana au tafsiri potovu zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,127 +1,126 @@
 # AGENTS.md
 
-## پروجیکٹ کا جائزہ
+## منصوبے کا جائزہ
 
-یہ ریپوزیٹری "AI Agents for Beginners" پر مشتمل ہے - ایک جامع تعلیمی کورس جو AI ایجنٹس بنانے کے لیے ضروری تمام معلومات فراہم کرتا ہے۔ کورس میں 15+ اسباق شامل ہیں جو بنیادی اصول، ڈیزائن پیٹرنز، فریم ورک، اور AI ایجنٹس کی پروڈکشن ڈیپلائمنٹ کا احاطہ کرتے ہیں۔
+یہ ریپوزیٹری "AI Agents for Beginners" پر مشتمل ہے - ایک جامع تعلیمی کورس جو AI ایجنٹس بنانے کے لیے درکار تمام چیزیں سکھاتا ہے۔ کورس میں 15+ اسباق شامل ہیں جو بنیادی تصورات، ڈیزائن پیٹرنز، فریم ورکس، اور AI ایجنٹس کی پروڈکشن ڈپلائمنٹ کا احاطہ کرتے ہیں۔
 
-**اہم ٹیکنالوجیز:**
+**Key Technologies:**
 - Python 3.12+
-- انٹرایکٹو لرننگ کے لیے Jupyter Notebooks
-- AI فریم ورک: Semantic Kernel، AutoGen، Microsoft Agent Framework (MAF)
-- Azure AI سروسز: Azure AI Foundry، Azure AI Agent Service
-- GitHub Models Marketplace (مفت ٹائر دستیاب)
+- Jupyter Notebooks for interactive learning
+- AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
+- GitHub Models Marketplace (free tier available)
 
-**آرکیٹیکچر:**
-- سبق پر مبنی ساخت (00-15+ ڈائریکٹریز)
-- ہر سبق میں شامل ہیں: README دستاویزات، کوڈ کے نمونے (Jupyter notebooks)، اور تصاویر
-- خودکار ترجمہ نظام کے ذریعے کثیر زبان کی حمایت
-- ہر سبق کے لیے متعدد فریم ورک کے اختیارات (Semantic Kernel، AutoGen، Azure AI Agent Service)
+**Architecture:**
+- Lesson-based structure (00-15+ directories)
+- Each lesson contains: README documentation, code samples (Jupyter notebooks), and images
+- Multi-language support via automated translation system
+- Multiple framework options per lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
 
-## سیٹ اپ کمانڈز
+## Setup Commands
 
 ### ضروریات
-- Python 3.12 یا اس سے زیادہ
-- GitHub اکاؤنٹ (GitHub Models کے لیے - مفت ٹائر)
+- Python 3.12 یا اس سے جدید
+- GitHub اکاؤنٹ (GitHub Models کے لیے - مفت ٹئیر)
 - Azure سبسکرپشن (اختیاری، Azure AI سروسز کے لیے)
 
-### ابتدائی سیٹ اپ
+### ابتدائی ترتیب
 
-1. **ریپوزیٹری کو کلون یا فورک کریں:**
+1. **ریپوزیٹری کلون یا فورک کریں:**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # یا
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **Python ورچوئل ماحول بنائیں اور فعال کریں:**
+2. **Python ورچوئل اینوائرنمنٹ بنائیں اور فعال کریں:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # ونڈوز پر: venv\Scripts\activate
    ```
 
-3. **ضروریات انسٹال کریں:**
+3. **انحصارات انسٹال کریں:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **ماحول کے متغیرات سیٹ کریں:**
+4. **ماحول کے متغیرات مرتب کریں:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # .env فائل کو اپنی API کلیدوں اور اینڈپوائنٹس کے ساتھ ترمیم کریں
    ```
 
+### مطلوبہ ماحول کے متغیرات
 
-### ضروری ماحول کے متغیرات
+برائے **GitHub Models (Free)**:
+- `GITHUB_TOKEN` - GitHub سے ذاتی رسائی ٹوکن
 
-**GitHub Models (مفت)** کے لیے:
-- `GITHUB_TOKEN` - GitHub سے پرسنل ایکسیس ٹوکن
-
-**Azure AI سروسز** (اختیاری) کے لیے:
-- `PROJECT_ENDPOINT` - Azure AI Foundry پروجیکٹ اینڈ پوائنٹ
+برائے **Azure AI Services** (اختیاری):
+- `PROJECT_ENDPOINT` - Microsoft Foundry پروجیکٹ اینڈ پوائنٹ
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API کی
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI اینڈ پوائنٹ URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - چیٹ ماڈل کے لیے ڈیپلائمنٹ کا نام
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - ایمبیڈنگ کے لیے ڈیپلائمنٹ کا نام
-- اضافی Azure کنفیگریشن جیسا کہ `.env.example` میں دکھایا گیا ہے
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - چیٹ ماڈل کے لیے ڈپلائمنٹ نام
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - ایمبیڈنگ کے لیے ڈپلائمنٹ نام
+- اضافی Azure کنفیگریشن `.env.example` میں دکھائی گئی ہے
 
-## ترقیاتی ورک فلو
+## Development Workflow
 
 ### Jupyter Notebooks چلانا
 
-ہر سبق میں مختلف فریم ورک کے لیے متعدد Jupyter notebooks شامل ہیں:
+ہر سبق میں مختلف فریم ورکس کے لیے متعدد Jupyter نوٹ بکس شامل ہیں:
 
 1. **Jupyter شروع کریں:**
    ```bash
    jupyter notebook
    ```
 
-2. **سبق کی ڈائریکٹری پر جائیں** (مثال کے طور پر، `01-intro-to-ai-agents/code_samples/`)
+2. **سبق ڈائریکٹری میں نیویگیٹ کریں** (مثلاً `01-intro-to-ai-agents/code_samples/`)
 
 3. **نوٹ بکس کھولیں اور چلائیں:**
    - `*-semantic-kernel.ipynb` - Semantic Kernel فریم ورک استعمال کرتے ہوئے
    - `*-autogen.ipynb` - AutoGen فریم ورک استعمال کرتے ہوئے
-   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python) استعمال کرتے ہوئے
-   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET) استعمال کرتے ہوئے
+   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python)
+   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET)
    - `*-azureaiagent.ipynb` - Azure AI Agent Service استعمال کرتے ہوئے
 
-### مختلف فریم ورک کے ساتھ کام کرنا
+### مختلف فریم ورکس کے ساتھ کام کرنا
 
 **Semantic Kernel + GitHub Models:**
-- GitHub اکاؤنٹ کے ساتھ مفت ٹائر دستیاب
-- سیکھنے اور تجربہ کرنے کے لیے بہترین
+- GitHub اکاؤنٹ کے ساتھ مفت ٹئیر دستیاب
+- سیکھنے اور تجربہ کرنے کے لیے موزوں
 - فائل پیٹرن: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
-- GitHub اکاؤنٹ کے ساتھ مفت ٹائر دستیاب
-- ملٹی ایجنٹ آرکیسٹریشن کی صلاحیتیں
+- GitHub اکاؤنٹ کے ساتھ مفت ٹئیر دستیاب
+- ملٹی-ایجنٹ آركیسٹریشن کی صلاحیتیں
 - فائل پیٹرن: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
-- Microsoft کا جدید ترین فریم ورک
+- Microsoft کا تازہ ترین فریم ورک
 - Python اور .NET میں دستیاب
 - فائل پیٹرن: `*-agent-framework.ipynb`
 
 **Azure AI Agent Service:**
-- Azure سبسکرپشن کی ضرورت ہے
-- پروڈکشن کے لیے تیار خصوصیات
+- Azure سبسکرپشن درکار ہے
+- پروڈکشن-ریڈی خصوصیات
 - فائل پیٹرن: `*-azureaiagent.ipynb`
 
 ## ٹیسٹنگ کی ہدایات
 
-یہ ایک تعلیمی ریپوزیٹری ہے جس میں مثال کے کوڈ شامل ہیں، پروڈکشن کوڈ کے بجائے خودکار ٹیسٹ کے ساتھ۔ اپنی سیٹ اپ اور تبدیلیوں کی تصدیق کے لیے:
+یہ ایک تعلیمی ریپوزیٹری ہے جس میں پروڈکشن کے خودکار ٹیسٹس کی بجائے مثال کے کوڈ شامل ہیں۔ اپنی سیٹ اپ اور تبدیلیوں کی تصدیق کے لیے:
 
 ### دستی ٹیسٹنگ
 
 1. **Python ماحول کی جانچ کریں:**
    ```bash
-   python --version  # Should be 3.12+
+   python --version  # 3.12+ ہونا چاہیے
    pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
    ```
 
-2. **نوٹ بک کی عملدرآمد کی جانچ کریں:**
+2. **نوٹ بک ایکزیکیوشن کی جانچ کریں:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # نوٹ بک کو اسکرپٹ میں تبدیل کریں اور چلائیں (ٹیسٹ امپورٹس)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
@@ -130,32 +129,31 @@
    python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
    ```
 
-
 ### انفرادی نوٹ بکس چلانا
 
-نوٹ بکس کو Jupyter میں کھولیں اور سیلز کو ترتیب وار چلائیں۔ ہر نوٹ بک خود مختار ہے اور شامل کرتی ہے:
-- امپورٹ اسٹیٹمنٹس
-- کنفیگریشن لوڈنگ
-- ایجنٹ کے نفاذ کی مثالیں
-- متوقع نتائج مارک ڈاؤن سیلز میں
+Jupyter میں نوٹ بکس کھولیں اور سیلز کو ترتیب وار چلائیں۔ ہر نوٹ بک خود مختار ہے اور اس میں شامل ہیں:
+- Import statements
+- Configuration loading
+- Example agent implementations
+- متوقع آؤٹ پٹس مارک ڈاون سیلز میں
 
 ## کوڈ اسٹائل
 
 ### Python کنونشنز
 
-- **Python ورژن**: 3.12+
-- **کوڈ اسٹائل**: معیاری Python PEP 8 کنونشنز پر عمل کریں
-- **نوٹ بکس**: تصورات کو واضح کرنے کے لیے مارک ڈاؤن سیلز استعمال کریں
-- **امپورٹس**: معیاری لائبریری، تھرڈ پارٹی، اور لوکل امپورٹس کے لحاظ سے گروپ کریں
+- **Python Version**: 3.12+
+- **Code Style**: معیاری Python PEP 8 کنونشنز پر عمل کریں
+- **Notebooks**: تصورات کی وضاحت کے لیے واضح مارک ڈاون سیلز استعمال کریں
+- **Imports**: standard library, third-party, local imports کے حساب سے گروپ کریں
 
 ### Jupyter Notebook کنونشنز
 
-- کوڈ سیلز سے پہلے وضاحتی مارک ڈاؤن سیلز شامل کریں
-- حوالہ کے لیے نوٹ بکس میں آؤٹ پٹ کی مثالیں شامل کریں
-- سبق کے تصورات سے مطابقت رکھنے والے واضح ویریبل نام استعمال کریں
-- نوٹ بک کے عملدرآمد کا ترتیب لکیری رکھیں (سیل 1 → 2 → 3...)
+- کوڈ سیلز سے پہلے تشریحی مارک ڈاون سیلز شامل کریں
+- حوالہ کے لیے نوٹ بکس میں آؤٹ پٹ مثالیں شامل کریں
+- واضح ویریبل نام استعمال کریں جو سبق کے تصورات سے میل کھاتے ہوں
+- نوٹ بک ایکزیکیوشن آرڈر کو خطی رکھیں (cell 1 → 2 → 3...)
 
-### فائل آرگنائزیشن
+### فائل کی ترتیب
 
 ```
 <lesson-number>-<lesson-name>/
@@ -169,52 +167,51 @@
     └── *.png
 ```
 
-
-## بلڈ اور ڈیپلائمنٹ
+## Build and Deployment
 
 ### دستاویزات بنانا
 
-یہ ریپوزیٹری دستاویزات کے لیے مارک ڈاؤن استعمال کرتی ہے:
-- ہر سبق فولڈر میں README.md فائلز
+یہ ریپوزیٹری ڈاکیومنٹیشن کے لیے مارک ڈاؤن استعمال کرتی ہے:
+- ہر سبق کے فولڈر میں README.md فائلیں
 - ریپوزیٹری روٹ پر مرکزی README.md
-- GitHub Actions کے ذریعے خودکار ترجمہ نظام
+- خودکار ترجمہ سسٹم GitHub Actions کے ذریعے
 
 ### CI/CD پائپ لائن
 
-`.github/workflows/` میں موجود:
+موقع واقع ہے `.github/workflows/` میں:
 
 1. **co-op-translator.yml** - 50+ زبانوں میں خودکار ترجمہ
-2. **welcome-issue.yml** - نئے مسئلے کے تخلیق کاروں کو خوش آمدید کہتا ہے
-3. **welcome-pr.yml** - نئے پل ریکویسٹ کے تعاون کرنے والوں کو خوش آمدید کہتا ہے
+2. **welcome-issue.yml** - نئے issue بنانے والوں کو خوش آمدید کہتا ہے
+3. **welcome-pr.yml** - نئے pull request contributors کو خوش آمدید کہتا ہے
 
-### ڈیپلائمنٹ
+### ڈپلائمنٹ
 
-یہ ایک تعلیمی ریپوزیٹری ہے - کوئی ڈیپلائمنٹ عمل نہیں۔ صارفین:
+یہ ایک تعلیمی ریپوزیٹری ہے - کوئی ڈپلائمنٹ پروسس نہیں۔ صارفین:
 1. ریپوزیٹری کو فورک یا کلون کریں
-2. نوٹ بکس کو مقامی طور پر یا GitHub Codespaces میں چلائیں
+2. نوٹ بکس مقامی طور پر یا GitHub Codespaces میں چلائیں
 3. مثالوں میں ترمیم اور تجربہ کرکے سیکھیں
 
-## پل ریکویسٹ گائیڈ لائنز
+## پل ریکویسٹ رہنما اصول
 
-### جمع کرانے سے پہلے
+### جمع کروانے سے پہلے
 
-1. **اپنی تبدیلیوں کی جانچ کریں:**
+1. **اپنی تبدیلیوں کا ٹیسٹ کریں:**
    - متاثرہ نوٹ بکس کو مکمل طور پر چلائیں
-   - تصدیق کریں کہ تمام سیلز بغیر کسی غلطی کے چلتے ہیں
-   - چیک کریں کہ آؤٹ پٹ مناسب ہیں
+   - تصدیق کریں کہ تمام سیلز بغیر ایرر کے چلتی ہیں
+   - چیک کریں کہ آؤٹ پٹس مناسب ہیں
 
 2. **دستاویزات کی اپ ڈیٹس:**
-   - اگر نئے تصورات شامل کر رہے ہیں تو README.md کو اپ ڈیٹ کریں
-   - پیچیدہ کوڈ کے لیے نوٹ بکس میں تبصرے شامل کریں
-   - یقینی بنائیں کہ مارک ڈاؤن سیلز مقصد کی وضاحت کرتے ہیں
+   - اگر نئے تصورات شامل کر رہے ہیں تو README.md اپ ڈیٹ کریں
+   - پیچیدہ کوڈ کے لیے نوٹ بکس میں کمنٹس شامل کریں
+   - یقینی بنائیں کہ مارک ڈاون سیلز مقصد کی وضاحت کریں
 
 3. **فائل تبدیلیاں:**
-   - `.env` فائلز کو کمیٹ کرنے سے گریز کریں (`.env.example` استعمال کریں)
-   - `venv/` یا `__pycache__/` ڈائریکٹریز کو کمیٹ نہ کریں
-   - جب وہ تصورات کو ظاہر کرتے ہیں تو نوٹ بک آؤٹ پٹ کو برقرار رکھیں
-   - عارضی فائلز اور بیک اپ نوٹ بکس (`*-backup.ipynb`) کو ہٹا دیں
+   - `.env` فائلیں کمٹ کرنے سے گریز کریں (`.env.example` استعمال کریں)
+   - `venv/` یا `__pycache__/` ڈائریکٹریز کمٹ نہ کریں
+   - جب وہ تصورات کی وضاحت کریں تو نوٹ بک آؤٹ پٹس رکھیں
+   - عارضی فائلیں اور بیک اپ نوٹ بکس (`*-backup.ipynb`) ہٹا دیں
 
-### PR عنوان کا فارمیٹ
+### PR عنوانی شکل
 
 وضاحتی عنوانات استعمال کریں:
 - `[Lesson-XX] Add new example for <concept>`
@@ -224,90 +221,90 @@
 
 ### ضروری چیکس
 
-- نوٹ بکس کو بغیر کسی غلطی کے چلنا چاہیے
-- README فائلز واضح اور درست ہونی چاہئیں
-- ریپوزیٹری میں موجودہ کوڈ پیٹرنز کی پیروی کریں
+- نوٹ بکس بغیر ایرر کے چلنے چاہئیں
+- README فائلیں واضح اور درست ہونی چاہئیں
+- ریپوزیٹری میں موجود دیگر اسباق کے کوڈ پیٹرنز کی پیروی کریں
 - دیگر اسباق کے ساتھ مطابقت برقرار رکھیں
 
 ## اضافی نوٹس
 
 ### عام مسائل
 
-1. **Python ورژن کا عدم مطابقت:**
+1. **Python ورژن کا میل نہ کھانا:**
    - یقینی بنائیں کہ Python 3.12+ استعمال ہو رہا ہے
-   - کچھ پیکجز پرانے ورژنز کے ساتھ کام نہیں کریں گے
-   - Python ورژن کو واضح طور پر بتانے کے لیے `python3 -m venv` استعمال کریں
+   - کچھ پیکیجز پرانے ورژنز کے ساتھ کام نہیں کر سکتے
+   - Python ورژن مخصوص کرنے کے لیے `python3 -m venv` استعمال کریں
 
 2. **ماحول کے متغیرات:**
-   - ہمیشہ `.env.example` سے `.env` بنائیں
-   - `.env` فائل کو کمیٹ نہ کریں (یہ `.gitignore` میں ہے)
-   - GitHub ٹوکن کو مناسب اجازتوں کی ضرورت ہے
+   - ہمیشہ `.env` کو `.env.example` سے بنائیں
+   - `.env` فائل کمٹ نہ کریں (یہ `.gitignore` میں ہے)
+   - GitHub ٹوکن کو مناسب اجازتیں درکار ہوتی ہیں
 
-3. **پیکج تنازعات:**
-   - ایک نیا ورچوئل ماحول استعمال کریں
-   - انفرادی پیکجز کے بجائے `requirements.txt` سے انسٹال کریں
-   - کچھ نوٹ بکس کو اضافی پیکجز کی ضرورت ہو سکتی ہے جو ان کے مارک ڈاؤن سیلز میں ذکر کیے گئے ہیں
+3. **پیکیج تنازعات:**
+   - تازہ ورچوئل اینوائرنمنٹ استعمال کریں
+   - انفرادی پیکیجز کی بجائے `requirements.txt` سے انسٹال کریں
+   - کچھ نوٹ بکس کو اضافی پیکیجز کی ضرورت ہو سکتی ہے جو ان کے مارک ڈاؤن سیلز میں ذکر ہیں
 
 4. **Azure سروسز:**
-   - Azure AI سروسز کو فعال سبسکرپشن کی ضرورت ہے
-   - کچھ خصوصیات علاقہ مخصوص ہیں
-   - GitHub Models پر مفت ٹائر کی حدود لاگو ہوتی ہیں
+   - Azure AI سروسز کے لیے فعال سبسکرپشن درکار ہے
+   - کچھ خصوصیات خطہ مخصوص ہو سکتی ہیں
+   - GitHub Models پر مفت ٹئیر کی حدود لاگو ہوتی ہیں
 
 ### سیکھنے کا راستہ
 
-سبق کے ذریعے تجویز کردہ ترقی:
-1. **00-course-setup** - ماحول کی سیٹ اپ کے لیے یہاں سے شروع کریں
-2. **01-intro-to-ai-agents** - AI ایجنٹ کے بنیادی اصول سمجھیں
-3. **02-explore-agentic-frameworks** - مختلف فریم ورک کے بارے میں سیکھیں
+سبقوں کے ذریعے تجویز کردہ ترتیب:
+1. **00-course-setup** - ماحول کی ترتیب کے لیے یہاں سے شروع کریں
+2. **01-intro-to-ai-agents** - AI ایجنٹس کے بنیادی اصول سمجھیں
+3. **02-explore-agentic-frameworks** - مختلف فریم ورکس کے بارے میں جانیں
 4. **03-agentic-design-patterns** - بنیادی ڈیزائن پیٹرنز
-5. نمبر شدہ اسباق کو ترتیب وار جاری رکھیں
+5. نمبر والے اسباق کو تسلسل کے ساتھ پڑھتے رہیں
 
 ### فریم ورک کا انتخاب
 
-اپنے اہداف کی بنیاد پر فریم ورک منتخب کریں:
-- **سیکھنا/پروٹوٹائپنگ**: Semantic Kernel + GitHub Models (مفت)
-- **ملٹی ایجنٹ سسٹمز**: AutoGen
-- **جدید خصوصیات**: Microsoft Agent Framework (MAF)
-- **پروڈکشن ڈیپلائمنٹ**: Azure AI Agent Service
+اپنے مقاصد کی بنیاد پر فریم ورک منتخب کریں:
+- **Learning/Prototyping**: Semantic Kernel + GitHub Models (free)
+- **Multi-agent systems**: AutoGen
+- **Latest features**: Microsoft Agent Framework (MAF)
+- **Production deployment**: Azure AI Agent Service
 
 ### مدد حاصل کرنا
 
-- [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord) میں شامل ہوں
-- مخصوص رہنمائی کے لیے سبق README فائلز کا جائزہ لیں
-- کورس کے جائزے کے لیے مرکزی [README.md](./README.md) چیک کریں
-- تفصیلی سیٹ اپ ہدایات کے لیے [Course Setup](./00-course-setup/README.md) کا حوالہ دیں
+- شمولیت کریں [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- مخصوص رہنمائی کے لیے سبق کے README فائلز دیکھیں
+- کورس جائزے کے لیے مرکزی [README.md](./README.md) دیکھیں
+- تفصیلی سیٹ اپ ہدایات کے لیے رجوع کریں [Course Setup](./00-course-setup/README.md)
 
-### تعاون کرنا
+### تعاون
 
-یہ ایک کھلا تعلیمی پروجیکٹ ہے۔ تعاون کا خیر مقدم:
+یہ ایک اوپن تعلیمی پراجیکٹ ہے۔ تعاون کا خیرمقدم ہے:
 - کوڈ کی مثالوں کو بہتر بنائیں
 - ٹائپوز یا غلطیوں کو درست کریں
-- وضاحتی تبصرے شامل کریں
+- وضاحتی کمنٹس شامل کریں
 - نئے سبق کے موضوعات تجویز کریں
 - اضافی زبانوں میں ترجمہ کریں
 
-موجودہ ضروریات کے لیے [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) دیکھیں۔
+موجودہ ضروریات کے لیے دیکھیں [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues)۔
 
-## پروجیکٹ کے مخصوص سیاق و سباق
+## پراجیکٹ مخصوص سیاق و سباق
 
-### کثیر زبان کی حمایت
+### کثیر لسانی معاونت
 
-یہ ریپوزیٹری خودکار ترجمہ نظام استعمال کرتی ہے:
-- 50+ زبانوں کی حمایت
-- ترجمے `/translations/<lang-code>/` ڈائریکٹریز میں
-- GitHub Actions ورک فلو ترجمہ اپ ڈیٹس کو ہینڈل کرتا ہے
-- سورس فائلز ریپوزیٹری روٹ پر انگریزی میں ہیں
+یہ ریپوزیٹری خود کار ترجمہ سسٹم استعمال کرتی ہے:
+- 50+ زبانیں معاونت یافتہ ہیں
+- ترجمے `/translations/<lang-code>/` ڈائریکٹریز میں موجود ہیں
+- GitHub Actions ورک فلو ترجمہ اپڈیٹس کو ہینڈل کرتا ہے
+- سورس فائلیں انگریزی میں ریپوزیٹری روٹ پر ہیں
 
 ### سبق کی ساخت
 
-ہر سبق ایک مستقل پیٹرن کی پیروی کرتا ہے:
+ہر سبق ایک مستقل پیٹرن پر عمل کرتا ہے:
 1. ویڈیو تھمب نیل کے ساتھ لنک
-2. تحریری سبق مواد (README.md)
-3. متعدد فریم ورک میں کوڈ کے نمونے
-4. سیکھنے کے مقاصد اور ضروریات
-5. اضافی سیکھنے کے وسائل کے لنکس
+2. تحریری سبق کا مواد (README.md)
+3. مختلف فریم ورکس میں کوڈ سیمپلز
+4. سیکھنے کے مقاصد اور پیش درکاریاں
+5. اضافی سیکھنے کے وسائل لنک کیے گئے
 
-### کوڈ نمونے کے نام
+### کوڈ نمونہ نام رکھنے کا طریقہ
 
 فارمیٹ: `<lesson-number>-<framework-name>.ipynb`
 - `04-semantic-kernel.ipynb` - سبق 4، Semantic Kernel
@@ -315,28 +312,30 @@
 - `14-python-agent-framework.ipynb` - سبق 14، MAF Python
 - `14-dotnet-agent-framework.ipynb` - سبق 14، MAF .NET
 
-### خاص ڈائریکٹریز
+### مخصوص ڈائریکٹریز
 
-- `translated_images/` - ترجمہ شدہ تصاویر کے لیے
+- `translated_images/` - ترجموں کے لیے مقامی تصاویر
 - `images/` - انگریزی مواد کے لیے اصل تصاویر
-- `.devcontainer/` - VS Code ترقیاتی کنٹینر کنفیگریشن
+- `.devcontainer/` - VS Code ڈویلپمنٹ کنٹینر کنفیگریشن
 - `.github/` - GitHub Actions ورک فلو اور ٹیمپلیٹس
 
-### ضروریات
+### انحصارات
 
-`requirements.txt` سے کلیدی پیکجز:
+اہم پیکجز `requirements.txt` سے:
 - `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen فریم ورک
 - `semantic-kernel` - Semantic Kernel فریم ورک
 - `agent-framework` - Microsoft Agent Framework
 - `azure-ai-inference`, `azure-ai-projects` - Azure AI سروسز
-- `azure-search-documents` - Azure AI Search انٹیگریشن
+- `azure-search-documents` - Azure AI Search انضمام
 - `chromadb` - RAG مثالوں کے لیے ویکٹر ڈیٹا بیس
 - `chainlit` - چیٹ UI فریم ورک
-- `browser_use` - ایجنٹس کے لیے براؤزر آٹومیشن
-- `mcp[cli]` - ماڈل کانٹیکسٹ پروٹوکول سپورٹ
+- `browser_use` - ایجنٹس کے لیے براؤزر آٹو میشن
+- `mcp[cli]` - Model Context Protocol سپورٹ
 - `mem0ai` - ایجنٹس کے لیے میموری مینجمنٹ
 
 ---
 
-**ڈسکلیمر**:  
-یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کا استعمال کرتے ہوئے ترجمہ کی گئی ہے۔ ہم درستگی کے لیے کوشش کرتے ہیں، لیکن براہ کرم آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا غیر درستیاں ہو سکتی ہیں۔ اصل دستاویز کو اس کی اصل زبان میں مستند ذریعہ سمجھا جانا چاہیے۔ اہم معلومات کے لیے، پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ ہم اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کے ذمہ دار نہیں ہیں۔
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+دستبرداری:
+یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لئے کوشاں ہیں، براہِ مہربانی نوٹ کریں کہ خودکار تراجم میں غلطیاں یا نواقص ہو سکتے ہیں۔ اصل دستاویز اپنی مادری زبان میں معتبر ماخذ سمجھی جائے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمے کی سفارش کی جاتی ہے۔ اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کے لیے ہم ذمہ دار نہیں ہیں۔
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

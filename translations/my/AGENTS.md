@@ -1,161 +1,159 @@
 # AGENTS.md
 
-## ပရောဂျက်အကျဉ်းချုပ်
+## Project Overview
 
-ဤ repository တွင် "AI Agents for Beginners" ပါဝင်ပြီး AI Agents တည်ဆောက်ရန် လိုအပ်သော အရာအားလုံးကို သင်ကြားပေးသည့် အကျုံးဝင်သော ပညာရေးသင်ခန်းစာများ ပါဝင်သည်။ သင်ခန်းစာများတွင် အခြေခံအကြောင်းအရာများ၊ ဒီဇိုင်းပုံစံများ၊ framework များနှင့် AI agents များကို ထုတ်လုပ်မှုအဆင့်သို့ ရောက်ရန် လိုအပ်သော နည်းလမ်းများကို 15+ သင်ခန်းစာများဖြင့် ဖုံးအုပ်ထားသည်။
+ဒီ repository မှာ "AI Agents for Beginners" ဆိုတဲ့ AI Agents တည်ဆောက်ဖို့ လိုအပ်တဲ့ အကြောင်းအရာအားလုံး ကို သင်ကြားပေးတဲ့ ပညာရေး အသုံးချမှု အပြည့်အစုံ ပါဝင်ပါတယ်။ ၎င်း သင်တန်းတွင် အခြေခံ သင်ခန်းစာ ၁၅ ကျော် ပါဝင်ပြီး AI agents များ၏ အခြေခံအကြောင်းအရာများ၊ ဒီဇိုင်းပုံစံများ၊ framework များနှင့် စက်ရုပ်ထုတ်လုပ်မှုအဆင့်များကို ဖုံးကွယ်ပြသထားသည်။
 
-**အဓိကနည်းပညာများ:**
+**Key Technologies:**
 - Python 3.12+
-- Jupyter Notebooks ဖြင့် အပြန်အလှန်လေ့လာမှု
-- AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI Services: Azure AI Foundry, Azure AI Agent Service
-- GitHub Models Marketplace (အခမဲ့အဆင့်ရရှိနိုင်)
+- interactive သင်ကြားရန် Jupyter Notebooks
+- AI Framework များ: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
+- GitHub Models Marketplace (အခမဲ့ အဆင့် ရရှိနိုင်)
 
 **Architecture:**
-- သင်ခန်းစာအခြေခံဖွဲ့စည်းမှု (00-15+ directories)
-- သင်ခန်းစာတစ်ခုစီတွင် README documentation, code samples (Jupyter notebooks), နှင့် ပုံများ ပါဝင်သည်
-- အလိုအလျောက်ဘာသာပြန်စနစ်ဖြင့် ဘာသာစကားများစွာကို ပံ့ပိုးမှု
-- သင်ခန်းစာတစ်ခုစီတွင် framework အမျိုးမျိုးကို ရွေးချယ်နိုင်မှု (Semantic Kernel, AutoGen, Azure AI Agent Service)
+- သင်ခန်းစာအလိုက် ဖွဲ့စည်းမှု (00-15+ ဖိုလ်ဒါများ)
+- သင်ခန်းစာတိုင်းတွင် ပါရှိသည်- README စာရွက်, ကုဒ်နမူနာများ (Jupyter notebooks), ပုံများ
+- ဘာသာစကား များအလိုက် အလိုအလျောက် ပြောင်းလဲပေးသည့် အစီအစဉ်ပါဝင်မှု
+- သင်ခန်းစာအားလုံးကို framework များ သုံးမျိုး (Semantic Kernel, AutoGen, Azure AI Agent Service) ဖြင့် အသုံးပြုနိုင်ခြင်း
 
 ## Setup Commands
 
-### လိုအပ်ချက်များ
+### Prerequisites
 - Python 3.12 သို့မဟုတ် အထက်
-- GitHub အကောင့် (GitHub Models - အခမဲ့အဆင့်)
+- GitHub အကောင့် (GitHub Models အတွက် အခမဲ့ အဆင့်)
 - Azure subscription (optional, Azure AI services အတွက်)
 
-### စတင်တပ်ဆင်ခြင်း
+### Initial Setup
 
-1. **Repository ကို Clone သို့မဟုတ် Fork လုပ်ပါ:**
+1. **Repository ကို clone သို့မဟုတ် fork လုပ်ပါ:**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # သို့မဟုတ်
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **Python virtual environment ကို ဖန်တီးပြီး အလုပ်လုပ်စေပါ:**
+2. **Python virtual environment ဖန်တီးပြီး ဖွင့်ပါ:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows တွင်: venv\Scripts\activate
    ```
 
-3. **လိုအပ်သော dependencies များကို တပ်ဆင်ပါ:**
+3. **လိုအပ်သော package များ ထည့်သွင်းပါ:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Environment variables များကို စနစ်တကျပြင်ဆင်ပါ:**
+4. **ပတ်ဝန်းကျင်ตัวแปรများ ပြင်ဆင်ပါ:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # သင့် API key များနှင့် endpoints များဖြင့် .env ကိုတည်းဖြတ်ပါ
    ```
 
+### Required Environment Variables
 
-### လိုအပ်သော Environment Variables
+GitHub Models (အခမဲ့) အတွက်:
+- `GITHUB_TOKEN` - GitHub မှ ကိုယ်ပိုင် access token
 
-**GitHub Models (အခမဲ့):**
-- `GITHUB_TOKEN` - GitHub မှ Personal access token
-
-**Azure AI Services** (optional):
-- `PROJECT_ENDPOINT` - Azure AI Foundry project endpoint
+Azure AI Services အတွက် (optional):
+- `PROJECT_ENDPOINT` - Microsoft Foundry project endpoint
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Chat model အတွက် deployment name
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Embeddings အတွက် deployment name
-- `.env.example` တွင် ဖော်ပြထားသော အခြား Azure configuration
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - စကားပြော model ထည့်သွင်းမှု အမည်
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - embedding deployment အမည်
+- `.env.example` တွင် ပြထားသည့် Azure configuration အပိုများ
 
 ## Development Workflow
 
-### Jupyter Notebooks ကို အလုပ်လုပ်စေခြင်း
+### Jupyter Notebooks ကို တက်ရောက်ခြင်း
 
-သင်ခန်းစာတစ်ခုစီတွင် framework များအမျိုးမျိုးအတွက် Jupyter notebooks များပါဝင်သည်:
+သင်ခန်းစာတိုင်းတွင် framework များအလိုက် Jupyter notebook များပါရှိပြီး:
 
 1. **Jupyter ကို စတင်ပါ:**
    ```bash
    jupyter notebook
    ```
 
-2. **သင်ခန်းစာ directory သို့ သွားပါ** (ဥပမာ `01-intro-to-ai-agents/code_samples/`)
+2. **သင်ခန်းစာ ဖိုလ်ဒါသို့ သွားပါ** (ဥပမာ `01-intro-to-ai-agents/code_samples/`)
 
-3. **Notebooks များကို ဖွင့်ပြီး အလုပ်လုပ်စေပါ:**
-   - `*-semantic-kernel.ipynb` - Semantic Kernel framework ကို အသုံးပြုခြင်း
-   - `*-autogen.ipynb` - AutoGen framework ကို အသုံးပြုခြင်း
-   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python) ကို အသုံးပြုခြင်း
-   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET) ကို အသုံးပြုခြင်း
-   - `*-azureaiagent.ipynb` - Azure AI Agent Service ကို အသုံးပြုခြင်း
+3. **Notebook များကို ဖွင့်ပြီး အသုံးပြုပါ:**
+   - `*-semantic-kernel.ipynb` - Semantic Kernel framework အသုံးပြုခြင်း
+   - `*-autogen.ipynb` - AutoGen framework အသုံးပြုခြင်း
+   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python)
+   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET)
+   - `*-azureaiagent.ipynb` - Azure AI Agent Service
 
-### Framework များနှင့် အလုပ်လုပ်ခြင်း
+### Framework များ ဖြင့် လုပ်ဆောင်ခြင်း
 
 **Semantic Kernel + GitHub Models:**
-- GitHub အကောင့်ဖြင့် အခမဲ့အဆင့်ရရှိနိုင်
-- လေ့လာမှုနှင့် စမ်းသပ်မှုအတွက် သင့်လျော်သည်
-- ဖိုင်ပုံစံ: `*-semantic-kernel*.ipynb`
+- GitHub အကောင့်ဖြင့် အခမဲ့ အဆင့် ရရှိနိုင်
+- သင်ယူခြင်းနှင့် စမ်းသပ်မှုအတွက် သင့်တော်
+- ဖိုင် pattern: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
-- GitHub အကောင့်ဖြင့် အခမဲ့အဆင့်ရရှိနိုင်
-- Multi-agent orchestration စွမ်းရည်များ
-- ဖိုင်ပုံစံ: `*-autogen.ipynb`
+- GitHub အကောင့်ဖြင့် အခမဲ့ အဆင့် ရရှိနိုင်
+- Multi-agent orchestration အတွက် သင့်တော်
+- ဖိုင် pattern: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
-- Microsoft မှ နောက်ဆုံးထွက် framework
-- Python နှင့် .NET တွင် ရရှိနိုင်
-- ဖိုင်ပုံစံ: `*-agent-framework.ipynb`
+- Microsoft မှ ထုတ်လုပ်သည့် နောက်ဆုံး framework
+- Python နှင့် .NET မှာ အသုံးပြုနိုင်
+- ဖိုင် pattern: `*-agent-framework.ipynb`
 
 **Azure AI Agent Service:**
-- Azure subscription လိုအပ်သည်
-- ထုတ်လုပ်မှုအဆင့်အတွက် သင့်လျော်သော features
-- ဖိုင်ပုံစံ: `*-azureaiagent.ipynb`
+- Azure subscription လိုအပ်
+- Production အဆင့် အသုံးပြုနိုင်သော features ပါရှိ
+- ဖိုင် pattern: `*-azureaiagent.ipynb`
 
 ## Testing Instructions
 
-ဤ repository သည် ပညာရေးအတွက် ရည်ရွယ်ထားသော code များပါဝင်ပြီး automated tests မပါဝင်ပါ။ သင့် setup နှင့် ပြင်ဆင်မှုများကို အတည်ပြုရန်:
+ဒီ repository သည် ပညာရေးအတွက် ဥပမာကုဒ်များ ပါရှိသဖြင့် စက်ထုတ်ကုဒ်အတိုင်း automated test များ မပါဝင်ပါ။ သင့် စနစ်နှင့် ပြင်ဆင်မှုများကို စစ်ဆေးရန်:
 
-### Manual Testing
+### ကိုယ်ပိုင် စစ်ဆေးခြင်း
 
-1. **Python environment ကို စမ်းသပ်ပါ:**
+1. **Python ပတ်ဝန်းကျင် စစ်ဆေးပါ:**
    ```bash
-   python --version  # Should be 3.12+
+   python --version  # 3.12 သို့အထက် ဖြစ်သင့်သည်။
    pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
    ```
 
-2. **Notebook များကို အလုပ်လုပ်စေခြင်းကို စမ်းသပ်ပါ:**
+2. **Notebook အတတ်ပညာ စမ်းသပ်ခြင်း:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # နိုတ်ဘုတ်ကို စကရစ်ပ်သို့ ပြောင်းပြီး ထည့်သွင်းပြီး စမ်းသပ်ပါ (တင်သွင်းမှုများကို စစ်ဆေးသည်)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
-3. **Environment variables ကို အတည်ပြုပါ:**
+3. **ပတ်ဝန်းကျင် variable များ စစ်ဆေးပါ:**
    ```bash
    python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
    ```
 
+### တစ်ခုချင်းစီ Notebook များ စမ်းသပ်ခြင်း
 
-### Individual Notebooks ကို အလုပ်လုပ်စေခြင်း
-
-Notebooks များကို Jupyter တွင် ဖွင့်ပြီး cell များကို အစဉ်လိုက် အလုပ်လုပ်စေပါ။ Notebook တစ်ခုစီသည် အခြားနဲ့မပေါင်းစပ်သော အကြောင်းအရာများပါဝင်ပြီး:
-- Import statements
-- Configuration loading
-- Agent implementation ဥပမာများ
-- Markdown cells တွင် မျှော်မှန်းထားသော output များ
+Jupyter တွင် notebooks ဖွင့်ပြီး အစီအစဉ်အတိုင်း cell များကို လည်ပတ်စေပါ။ Notebook တစ်ခုစီတွင်ပါဝင်သည် -
+- import statements
+- configuration load လုပ်ခြင်း
+- agent အပေါ် မူတည်သော နမူနာများ
+- markdown cells တွင် ရလာသော အဖြေများ
 
 ## Code Style
 
-### Python Conventions
+### Python စံနှုန်း
 
 - **Python Version**: 3.12+
-- **Code Style**: Python PEP 8 standard ကို လိုက်နာပါ
-- **Notebooks**: အကြောင်းအရာများကို ရှင်းလင်းသော markdown cells ဖြင့် ရှင်းပြပါ
-- **Imports**: Standard library, third-party, local imports အလိုက် အုပ်စုဖွဲ့ပါ
+- **Code Style**: Python PEP 8 စံ
+- **Notebook များ**: မျိုးချောင်းသော markdown cells ဖြင့် အကြောင်းအရာ ရှင်းလင်းရေးသားမှု
+- **Imports**: စံ library, third-party, ဒေသဆိုင်ရာ imports သို့ ခွဲခြားထားခြင်း
 
-### Jupyter Notebook Conventions
+### Jupyter Notebook စံနစ်
 
-- Code cells မတိုင်မီ ရှင်းလင်းသော markdown cells ထည့်ပါ
-- Notebook များတွင် output ဥပမာများ ထည့်သွင်းပါ
-- သင်ခန်းစာအကြောင်းအရာနှင့် ကိုက်ညီသော variable names အသုံးပြုပါ
-- Notebook execution order ကို linear ထားပါ (cell 1 → 2 → 3...)
+- code cell မတိုင်မီ ရှင်းလင်းသော markdown cells ထည့်သွင်းပါ
+- notebook များတွင်အထွက်အတွက် ဥပမာများ ထည့်ပါ
+- သင်ခန်းစာအပေါ် သပ်ရပ်သော variable နာမည်များကို သုံးပါ
+- Notebook cell execute အဆင့်သည် စဉ်လိုက် ဖြစ်စေရန် (cell ၁ → ၂ → ၃...)
 
-### File Organization
+### ဖိုင် စီမံခန့်ခွဲမှု
 
 ```
 <lesson-number>-<lesson-name>/
@@ -169,174 +167,175 @@ Notebooks များကို Jupyter တွင် ဖွင့်ပြီး
     └── *.png
 ```
 
-
 ## Build and Deployment
 
 ### Documentation တည်ဆောက်ခြင်း
 
-ဤ repository သည် Markdown ကို documentation အတွက် အသုံးပြုသည်:
-- သင်ခန်းစာ folder တစ်ခုစီတွင် README.md ဖိုင်များ
-- Repository root တွင် Main README.md
-- GitHub Actions ဖြင့် အလိုအလျောက်ဘာသာပြန်စနစ်
+ဒီ repository မှာ Markdown ဖြင့် စာရွက်စာတမ်းများရေးသားသည် -
+- သင်ခန်းစာ folder တစ်ခုစီအား README.md ဖိုင်များ
+- repository အခြေတွင် Main README.md
+- GitHub Actions ဖြင့် automated translation system
 
 ### CI/CD Pipeline
 
-`.github/workflows/` တွင် တည်ရှိသည်:
+`.github/workflows/` ဖိုလ်ဒါတွင်ရှိသည်:
 
-1. **co-op-translator.yml** - 50+ ဘာသာစကားများသို့ အလိုအလျောက်ဘာသာပြန်ခြင်း
-2. **welcome-issue.yml** - Issue အသစ်ဖန်တီးသူများကို ကြိုဆိုခြင်း
-3. **welcome-pr.yml** - Pull request အသစ်တင်သူများကို ကြိုဆိုခြင်း
+1. **co-op-translator.yml** - ဘာသာစကား ၅၀ ကျော်သို့ အလိုအလျောက် ဘာသာပြန်ခြင်း
+2. **welcome-issue.yml** - issue တင်သူများကို ကြိုဆိုခြင်း
+3. **welcome-pr.yml** - pull request တင်သူများကို ကြိုဆိုခြင်း
 
 ### Deployment
 
-ဤ repository သည် ပညာရေးအတွက် ရည်ရွယ်ထားပြီး deployment လုပ်ငန်းစဉ်မပါဝင်ပါ။ အသုံးပြုသူများ:
-1. Repository ကို Fork သို့မဟုတ် Clone လုပ်ပါ
-2. Notebooks များကို ဒေသတွင်း သို့မဟုတ် GitHub Codespaces တွင် အလုပ်လုပ်စေပါ
-3. ဥပမာများကို ပြင်ဆင်ခြင်းနှင့် စမ်းသပ်ခြင်းဖြင့် လေ့လာပါ
+ဒီ repository သည် ပညာရေးအတွက် ဖြစ်သောကြောင့် deployment လုပ်ငန်းစဉ် မရှိပါ။ အသုံးပြုသူများသည်:
+1. Fork သို့မဟုတ် clone ယူခြင်း
+2. ပန်းချီ၏ notebook များကို တိုင်းပြည်၌ သို့မဟုတ် GitHub Codespaces တွင် အလုပ်လုပ်ခြင်း
+3. ဥပမာ များကို ပြင်ဆင်၍ သင်ယူခြင်း
 
 ## Pull Request Guidelines
 
-### Submit မလုပ်မီ
+### တင်သည့်အရင်
 
-1. **သင့်ပြင်ဆင်မှုများကို စမ်းသပ်ပါ:**
-   - သက်ဆိုင်သော notebooks များကို အပြည့်အဝ အလုပ်လုပ်စေပါ
-   - Cell များအားလုံး error မရှိဘဲ အလုပ်လုပ်စေပါ
-   - Output များကို သင့်လျော်မှုရှိကြောင်း စစ်ဆေးပါ
+1. **ပြင်ဆင်မှုများ စမ်းသပ်ပါ:**
+   - သက်ဆိုင်ရာ notebooks အားလုံး အလုပ်လုပ်ခြင်း
+   - cell များ error မရှိစွာ လည်ပတ်ခြင်း
+   - ထွက်ရှိလာသော အဖြေများ သင့်တော်မှု စစ်ဆေးခြင်း
 
-2. **Documentation ပြင်ဆင်မှုများ:**
-   - Concepts အသစ်ထည့်သွင်းပါက README.md ကို update လုပ်ပါ
-   - ရှုပ်ထွေးသော code များအတွက် notebooks တွင် comment ထည့်ပါ
-   - Markdown cells တွင် ရည်ရွယ်ချက်ကို ရှင်းပြပါ
+2. **စာရွက်စာတမ်း ပြင်ဆင်မှု:**
+   - README.md တွင် အသစ်ထည့်မည့်အကြောင်းအရာများ ထည့်သွင်းခြင်း
+   - code ရှုပ်ထွေးမှုများ အတွက် notebook တွင် မှတ်ချက်များ ထည့်သွင်းခြင်း
+   - markdown cells အား အကျဉ်းချုပ် ရေးသားခြင်း
 
-3. **File ပြောင်းလဲမှုများ:**
-   - `.env` ဖိုင်များကို commit မလုပ်ပါ (`.env.example` ကို အသုံးပြုပါ)
-   - `venv/` သို့မဟုတ် `__pycache__/` directories မပါဝင်စေရန် သေချာပါ
-   - Concepts ကို ဖော်ပြသော notebook outputs များကို ထားပါ
-   - Temporary files နှင့် backup notebooks (`*-backup.ipynb`) ကို ဖယ်ရှားပါ
+3. **ဖိုင် ပြင်ဆင်မှုများ:**
+   - `.env` ဖိုင် မတင်ပါနှင့် (`.env.example` ကို သုံးပါ)
+   - `venv/` သို့မဟုတ် `__pycache__/` ဖိုလ်ဒါ မတင်ပါနှင့်
+   - သင်ခန်းစာ အကြောင်းအရာ ဖော်ပြတဲ့ notebook outputs များ ထားပါ
+   - ယာယီဖိုင် သို့မဟုတ် backup notebooks (`*-backup.ipynb`) များ ဖယ်ရှားပါ
 
-### PR Title Format
+### PR Title ပုံစံ
 
-ရှင်းလင်းသော ခေါင်းစဉ်များကို အသုံးပြုပါ:
-- `[Lesson-XX] Add new example for <concept>`
-- `[Fix] Correct typo in lesson-XX README`
-- `[Update] Improve code sample in lesson-XX`
-- `[Docs] Update setup instructions`
+ဖော်ပြချက်ရှင်းပြသောခေါင်းစဉ်များကို သုံးပါ:
+- `[Lesson-XX] <concept> အတွက် နမူနာအသစ် ဖြည့်စွက်ခြင်း`
+- `[Fix] lesson-XX README အတွင်း အမှား ပြင်ဆင်ခြင်း`
+- `[Update] lesson-XX အတွက် ကုဒ် နမူနာ မြှင့်တင်ခြင်း`
+- `[Docs] setup အသုံးပြုနည်း ပြင်ဆင်ခြင်း`
 
-### Required Checks
+### လိုအပ်သော စစ်ဆေးမှုများ
 
-- Notebooks များ error မရှိဘဲ အလုပ်လုပ်စေရန်
-- README ဖိုင်များ ရှင်းလင်းပြီး မှန်ကန်မှုရှိရန်
-- Repository တွင် ရှိသော code pattern များကို လိုက်နာရန်
-- အခြားသင်ခန်းစာများနှင့် အညီရှိရန်
+- notebooks များ error မရှိစွာ လည်ပတ်ရမည်
+- README ဖိုင်များ ပြတ်သားသာလွန်ရမည်
+- repository အောက်ရှိ ကုဒ် စံနစ်နှင့် ကိုက်ညီရမည်
+- သင်ခန်းစာများနှင့် ယှဉ်တင်ဆောင်ရန်တွက် ကိုက်ညီမှုရှိရမည်
 
-## အပိုဆောင်းမှတ်ချက်များ
+## Additional Notes
 
-### Common Gotchas
+### အထူး သတိပြုရန်အချက်များ
 
-1. **Python version မကိုက်ညီမှု:**
-   - Python 3.12+ ကို အသုံးပြုပါ
-   - အချို့သော packages များသည် အဟောင်း version များနှင့် အလုပ်မလုပ်နိုင်ပါ
-   - `python3 -m venv` ကို အသုံးပြု၍ Python version ကို သတ်မှတ်ပါ
+1. **Python ဗားရှင်း မကိုက်ညီခြင်း:**
+   - Python 3.12+ ကို သုံးရန် သေချာစေပါ
+   - အဟောင်းဗားရှင်းများနှင့် အချို့ package မအလုပ်လုပ်နိုင်ပါ
+   - python3 -m venv ဖြင့် Python ဗားရှင်း ထောက်ပံ့မှု ပြုလုပ်ပါ
 
-2. **Environment variables:**
-   - `.env.example` မှ `.env` ကို ဖန်တီးပါ
-   - `.env` ဖိုင်ကို commit မလုပ်ပါ (`.gitignore` တွင် ပါဝင်သည်)
-   - GitHub token သင့် permissions လိုအပ်သည်
+2. **ပတ်ဝန်းကျင် variable များ:**
+   - `.env.example` မှ `.env` ဖိုင် ဖန်တီးထားပါ
+   - `.env` ကို commit မလုပ်ပါ (အဆိုပါဖိုင် `.gitignore` တွင်ပါသည်)
+   - GitHub token သည် အထောက်အပံ့ ဖြစ်စေရန် လိုအပ်သော အခွင့်အရေးရှိရမည်
 
-3. **Package conflicts:**
-   - အသစ်သော virtual environment ကို အသုံးပြုပါ
-   - Individual packages မထည့်ဘဲ `requirements.txt` မှ တပ်ဆင်ပါ
-   - အချို့သော notebooks တွင် markdown cells တွင် ဖော်ပြထားသော အပို packages လိုအပ်နိုင်သည်
+3. **Package conflicts များ:**
+   - အသစ်သော virtual environment သုံးပါ
+   - package များကို တစ်ခုချင်း installs မှမလုပ်ဘဲ `requirements.txt` မှ install လုပ်ပါ
+   - notebook တချို့တွင် markdown cells တွင် ပြောထားသည့် အပိုင်း packages လိုအပ်နိုင်သည်
 
 4. **Azure services:**
-   - Azure AI services သည် subscription လိုအပ်သည်
-   - အချို့သော features သည် region-specific ဖြစ်သည်
-   - GitHub Models အတွက် အခမဲ့အဆင့်ကန့်သတ်ချက်များ ရှိသည်
+   - Azure AI services အတွက် subscription တက်ရောက်ထားရမည်
+   - အချို့ features များက ဒေသအလိုက် ကန့်သတ်ထားသည်
+   - GitHub Models အတွက် free tier ကန့်သတ်ချက်များ ရှိသည်
 
-### Learning Path
+### သင်ယူဖို့လမ်းညွှန်
 
-သင်ခန်းစာများကို အစဉ်လိုက် လေ့လာရန် အကြံပြုသည်:
-1. **00-course-setup** - Environment setup အတွက် ဤနေရာမှ စတင်ပါ
-2. **01-intro-to-ai-agents** - AI agent အခြေခံအကြောင်းအရာများကို နားလည်ပါ
-3. **02-explore-agentic-frameworks** - Framework များအကြောင်း လေ့လာပါ
-4. **03-agentic-design-patterns** - အဓိက ဒီဇိုင်းပုံစံများ
-5. အနံ့လိုက် သင်ခန်းစာများကို ဆက်လက် လေ့လာပါ
+သင်ခန်းစာများအား စဉ်လိုက် လေ့လာရန် အကြံပြုသည် -
+1. **00-course-setup** - ပတ်ဝန်းကျင် စတင်အတွက်
+2. **01-intro-to-ai-agents** - AI agent များ အခြေခံ နားလည်ခြင်း
+3. **02-explore-agentic-frameworks** - framework များ လေ့လာခြင်း
+4. **03-agentic-design-patterns** - အခြေခံ ဒီဇိုင်း ပုံစံများ
+5. အနောက်စဉ်အတိုင်း ယိုးဆောင်ပါ
 
-### Framework Selection
+### Framework ရွေးချယ်မှု
 
-သင့်ရည်ရွယ်ချက်အပေါ်မူတည်၍ framework ကို ရွေးချယ်ပါ:
-- **လေ့လာမှု/Prototype**: Semantic Kernel + GitHub Models (အခမဲ့)
-- **Multi-agent systems**: AutoGen
-- **နောက်ဆုံး features**: Microsoft Agent Framework (MAF)
-- **ထုတ်လုပ်မှု deployment**: Azure AI Agent Service
+ပန်းတိုင်အပေါ် မူတည်ပါ -
+- **သင်ယူမှု / prototype**: Semantic Kernel + GitHub Models (အခမဲ့)
+- **Multi-agent system များ**: AutoGen
+- **နောက်ဆုံး features များ**: Microsoft Agent Framework (MAF)
+- **ထုတ်လုပ်မှု အဆင့်**: Azure AI Agent Service
 
-### Getting Help
+### အကူအညီ ရယူရန်
 
-- [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord) ကို Join လုပ်ပါ
-- သင်ခန်းစာ README ဖိုင်များကို သီးသန့်လမ်းညွှန်အတွက် ပြန်လည်ကြည့်ပါ
-- ပရောဂျက်အကျဉ်းချုပ်အတွက် [README.md](./README.md) ကို ကြည့်ပါ
-- အသေးစိတ် setup လမ်းညွှန်များအတွက် [Course Setup](./00-course-setup/README.md) ကို ရည်ညွှန်းပါ
+- [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord) တွင် တက်ရောက်ပါ
+- သင်ခန်းစာ README files ကို သုံးသပ်ပါ
+- [README.md](./README.md) မှာ သင်တန်းအနှစ်ချုပ် ကြည့်ပါ
+- [Course Setup](./00-course-setup/README.md) မှ setup အသေးစိတ် အကြောင်းအရာ ကြည့်ပါ
 
-### Contributing
+### မိတ္တူပေးခြင်း
 
-ဤသည်မှာ ပွင့်လင်းသော ပညာရေးပရောဂျက်ဖြစ်သည်။ အထောက်အကူပြုမှုများကို ကြိုဆိုပါသည်:
-- Code ဥပမာများကို တိုးတက်အောင် ပြင်ဆင်ပါ
-- စာလုံးပေါင်းမှားများ သို့မဟုတ် အမှားများကို ပြင်ဆင်ပါ
-- ရှင်းလင်းသော comment များ ထည့်သွင်းပါ
-- သင်ခန်းစာအကြောင်းအရာအသစ်များကို အကြံပြုပါ
-- အပိုဘာသာစကားများသို့ ဘာသာပြန်ပါ
+ဒီဟာ သင်ကြားပေးသည့် ပရောဂျက်ဖြစ်ပါသည်။ အကူအညီ သို့မဟုတ် ပြုပြင်ထောက်ပံ့မှုများ လက်ခံပါသည်:
+- ကုဒ် နမူနာများ တိုးတက်စေရန်
+- အမှားများ ပြင်ဆင်ရန်
+- မှတ်ချက်များ ထည့်သွင်းရန်
+- သင်ခန်းစာ အသစ်များ အကြံပြုရန်
+- ဘာသာစကားအသစ်များသို့ ဘာသာပြန်ရန်
 
-[GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) တွင် လက်ရှိလိုအပ်ချက်များကို ကြည့်ပါ။
+လတ်တလော လိုအပ်ချက်များအတွက် [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) ကြည့်ပါ။
 
 ## Project-Specific Context
 
-### Multi-Language Support
+### ဘာသာစကား များစွာ ထောက်ခံမှု
 
-ဤ repository သည် အလိုအလျောက်ဘာသာပြန်စနစ်ကို အသုံးပြုသည်:
-- 50+ ဘာသာစကားများကို ပံ့ပိုးသည်
-- `/translations/<lang-code>/` directories တွင် ဘာသာပြန်ထားသော ဖိုင်များ
-- GitHub Actions workflow သည် ဘာသာပြန် update များကို ကိုင်တွယ်သည်
-- Source ဖိုင်များသည် repository root တွင် အင်္ဂလိပ်ဘာသာဖြင့် ရှိသည်
+ဒီ repository သည် အလိုအလျောက် ဘာသာပြန် စနစ် အသုံးပြုသည် -
+- ဘာသာစကား ၅၀ ကျော် ပံ့ပိုးမှုရှိ
+- `/translations/<lang-code>/` ဖိုလ်ဒါတွင် ဘာသာပြန်ဖိုင်များရှိ
+- GitHub Actions workflow မှ ဘာသာပြန်သတင်းအချက်အလက်များ အပ်ဒိတ်လုပ်သည်
+- ရင်းမြစ်ဖိုင်များသည် English တွင် repository အခြေတွင်ရှိ
 
-### Lesson Structure
+### သင်ခန်းစာ ဖွဲ့စည်းပုံ
 
-သင်ခန်းစာတစ်ခုစီသည် အညီတူပုံစံကို လိုက်နာသည်:
-1. Video thumbnail နှင့် link
-2. ရေးသားထားသော သင်ခန်းစာအကြောင်းအရာ (README.md)
-3. Framework များအမျိုးမျိုးဖြင့် code samples
-4. Learning objectives နှင့် prerequisites
-5. အပို learning resources များကို link ဖြင့် ထည့်သွင်းထားသည်
+သင်ခန်းစာတိုင်းသည် အတူတူသောပုံစံများကြားတွင်ရှိသည် -
+1. ဗီဒီယို thumbnail နှင့် လင့်ခ်
+2. စာရွက်စာတမ်း (README.md)
+3. Framework များ အလိုက် ကုဒ် နမူနာများ
+4. သင်ယူရမည့် ရည်မှန်းချက်များနှင့်လိုအပ်ချက်များ
+5. ပိုပြီး သင်ယူနိုင်မည့် ရင်းမြစ်များ လင့်ခ်
 
-### Code Sample Naming
+### ကုဒ် နမူနာ အမည်ပုံစံ
 
 ပုံစံ: `<lesson-number>-<framework-name>.ipynb`
-- `04-semantic-kernel.ipynb` - Lesson 4, Semantic Kernel
-- `07-autogen.ipynb` - Lesson 7, AutoGen
-- `14-python-agent-framework.ipynb` - Lesson 14, MAF Python
-- `14-dotnet-agent-framework.ipynb` - Lesson 14, MAF .NET
+- `04-semantic-kernel.ipynb` - သင်ခန်းစာ ၄၊ Semantic Kernel
+- `07-autogen.ipynb` - သင်ခန်းစာ ၇၊ AutoGen
+- `14-python-agent-framework.ipynb` - သင်ခန်းစာ ၁၄၊ MAF Python
+- `14-dotnet-agent-framework.ipynb` - သင်ခန်းစာ ၁၄၊ MAF .NET
 
-### Special Directories
+### အထူးဖိုလ်ဒါများ
 
-- `translated_images/` - ဘာသာပြန်ထားသော ပုံများ
-- `images/` - အင်္ဂလိပ်အကြောင်းအရာအတွက် ပုံများ
+- `translated_images/` - ဘာသာပြန်ထားသော ပုံများရိှသည်
+- `images/` - အင်္ဂလိပ်အကြောင်းအရာ ပုံများ
 - `.devcontainer/` - VS Code development container configuration
-- `.github/` - GitHub Actions workflows နှင့် templates
+- `.github/` - GitHub Actions workflow များ နှင့် template များ
 
-### Dependencies
+### လိုအပ်ချက်များ
 
-`requirements.txt` မှ အဓိက packages:
-- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen framework
+`requirements.txt` မှ အဓိက package များ -
+- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen framework များ
 - `semantic-kernel` - Semantic Kernel framework
 - `agent-framework` - Microsoft Agent Framework
 - `azure-ai-inference`, `azure-ai-projects` - Azure AI services
-- `azure-search-documents` - Azure AI Search integration
-- `chromadb` - RAG ဥပမာများအတွက် vector database
-- `chainlit` - Chat UI framework
-- `browser_use` - Agents အတွက် browser automation
-- `mcp[cli]` - Model Context Protocol support
-- `mem0ai` - Agents အတွက် memory management
+- `azure-search-documents` - Azure AI Search ပေါင်းစပ်မှု
+- `chromadb` - RAG examples များအတွက် vector database
+- `chainlit` - စကားပြော UI framework
+- `browser_use` - Agent များအတွက် browser automation
+- `mcp[cli]` - Model Context Protocol ထောက်ပံ့မှု
+- `mem0ai` - agent များအတွက် memory management
 
 ---
 
-**အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**လူကြီးမင်းအတည်ပြုချက်**  
+ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှုဖြစ်သော [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့မှ တိကျမှုအတွက်ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ရှိနိုင်ကြောင်း သတိပြုပါရန်အလားအလာရှိသည်။ မူရင်းစာတမ်းကို အခြေခံဘာသာစကားဖြင့်သာ ထိပ်တန်းအချက်အလက်အဖြစ် ယူဆသင့်ပါသည်။ အရေးကြီးသောအချက်အလက်များအတွက် အတတ်ပညာရှင် လူသား ဘာသာပြန်သူမှ ဘာသာပြန်ထားမှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုမှုကြောင့် ဖြစ်ပေါ်နိုင်သော နားလည်မှုမမှန်မှုများ သို့မဟုတ် မှားယွင်းချက်များအတွက် ကျွန်ုပ်တို့မှ တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

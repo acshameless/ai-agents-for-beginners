@@ -1,190 +1,194 @@
-[![Design de Multi-Agentes](../../../translated_images/pt-PT/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
+[![Design Multi-agente](../../../translated_images/pt-PT/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
 > _(Clique na imagem acima para ver o vídeo desta lição)_
 
-# Padrões de design de multi-agentes
+# Padrões de design multi-agente
 
-Assim que começar a trabalhar num projeto que envolva múltiplos agentes, será necessário considerar o padrão de design de multi-agentes. No entanto, pode não ser imediatamente claro quando mudar para multi-agentes e quais são as vantagens.
+Assim que começar a trabalhar num projeto que envolva vários agentes, terá de considerar o padrão de design multi-agente. No entanto, pode não ser imediatamente claro quando passar para multi-agentes e quais são as vantagens.
 
 ## Introdução
 
-Nesta lição, procuramos responder às seguintes perguntas:
+Nesta lição, iremos responder às seguintes perguntas:
 
 - Quais são os cenários em que os multi-agentes são aplicáveis?
-- Quais são as vantagens de usar multi-agentes em vez de um único agente a realizar várias tarefas?
-- Quais são os blocos de construção para implementar o padrão de design de multi-agentes?
+- Quais são as vantagens de usar multi-agentes em vez de um único agente a executar várias tarefas?
+- Quais são os blocos de construção para implementar o padrão de design multi-agente?
 - Como podemos ter visibilidade sobre como os múltiplos agentes estão a interagir entre si?
 
-## Objetivos de Aprendizagem
+## Objetivos de aprendizagem
 
 Após esta lição, deverá ser capaz de:
 
-- Identificar cenários em que os multi-agentes são aplicáveis.
-- Reconhecer as vantagens de usar multi-agentes em vez de um único agente.
-- Compreender os blocos de construção para implementar o padrão de design de multi-agentes.
+- Identificar cenários onde os multi-agentes são aplicáveis
+- Reconhecer as vantagens de usar multi-agentes em vez de um agente singular.
+- Compreender os blocos de construção para implementar o padrão de design multi-agente.
 
-Qual é o panorama geral?
+Qual é a visão geral?
 
-*Multi-agentes são um padrão de design que permite que múltiplos agentes trabalhem juntos para alcançar um objetivo comum*.
+*Os sistemas multi-agente são um padrão de design que permite a vários agentes trabalharem em conjunto para alcançar um objetivo comum*.
 
 Este padrão é amplamente utilizado em vários campos, incluindo robótica, sistemas autónomos e computação distribuída.
 
-## Cenários em que os Multi-Agentes São Aplicáveis
+## Cenários onde os multi-agentes são aplicáveis
 
-Então, quais são os cenários que justificam o uso de multi-agentes? A resposta é que existem muitos cenários em que empregar múltiplos agentes é benéfico, especialmente nos seguintes casos:
+Então, que cenários são um bom caso de utilização para usar multi-agentes? A resposta é que há muitos cenários onde empregar múltiplos agentes é benéfico, especialmente nos seguintes casos:
 
-- **Grandes volumes de trabalho**: Grandes volumes de trabalho podem ser divididos em tarefas menores e atribuídos a diferentes agentes, permitindo processamento paralelo e conclusão mais rápida. Um exemplo disso é no caso de uma tarefa de processamento de dados em larga escala.
-- **Tarefas complexas**: Tarefas complexas, assim como grandes volumes de trabalho, podem ser divididas em subtarefas menores e atribuídas a diferentes agentes, cada um especializado num aspeto específico da tarefa. Um bom exemplo disso é no caso de veículos autónomos, onde diferentes agentes gerem navegação, deteção de obstáculos e comunicação com outros veículos.
-- **Diversidade de competências**: Diferentes agentes podem ter competências diversas, permitindo-lhes lidar com diferentes aspetos de uma tarefa de forma mais eficaz do que um único agente. Neste caso, um bom exemplo é na área da saúde, onde agentes podem gerir diagnósticos, planos de tratamento e monitorização de pacientes.
+- **Grandes cargas de trabalho**: Grandes cargas de trabalho podem ser divididas em tarefas mais pequenas e atribuídas a diferentes agentes, permitindo processamento em paralelo e conclusão mais rápida. Um exemplo disto é no caso de uma grande tarefa de processamento de dados.
+- **Tarefas complexas**: Tarefas complexas, tal como grandes cargas de trabalho, podem ser divididas em subtarefas menores e atribuídas a diferentes agentes, cada um especializado num aspeto específico da tarefa. Um bom exemplo disto é no caso de veículos autónomos, onde diferentes agentes gerem a navegação, a deteção de obstáculos e a comunicação com outros veículos.
+- **Diversidade de competências**: Diferentes agentes podem ter competências diversas, permitindo-lhes tratar diferentes aspetos de uma tarefa de forma mais eficaz do que um único agente. Para este caso, um bom exemplo é na área da saúde, onde agentes podem gerir diagnósticos, planos de tratamento e monitorização de pacientes.
 
-## Vantagens de Usar Multi-Agentes em Relação a um Único Agente
+## Vantagens de usar multi-agentes em vez de um agente singular
 
-Um sistema com um único agente pode funcionar bem para tarefas simples, mas para tarefas mais complexas, usar múltiplos agentes pode oferecer várias vantagens:
+Um sistema com um único agente pode funcionar bem para tarefas simples, mas para tarefas mais complexas, usar vários agentes pode oferecer várias vantagens:
 
-- **Especialização**: Cada agente pode ser especializado numa tarefa específica. A falta de especialização num único agente significa que este pode realizar várias tarefas, mas pode ficar confuso ao lidar com uma tarefa complexa. Por exemplo, pode acabar por realizar uma tarefa para a qual não está melhor preparado.
-- **Escalabilidade**: É mais fácil escalar sistemas adicionando mais agentes do que sobrecarregando um único agente.
+- **Especialização**: Cada agente pode ser especializado para uma tarefa específica. A falta de especialização num único agente significa que tem um agente que consegue fazer tudo, mas que pode ficar confuso sobre o que fazer quando confrontado com uma tarefa complexa. Pode, por exemplo, acabar por executar uma tarefa para a qual não é o mais adequado.
+- **Escalabilidade**: É mais fácil escalar sistemas adicionando mais agentes em vez de sobrecarregar um único agente.
 - **Tolerância a falhas**: Se um agente falhar, outros podem continuar a funcionar, garantindo a fiabilidade do sistema.
 
-Vamos a um exemplo: reservar uma viagem para um utilizador. Um sistema com um único agente teria de lidar com todos os aspetos do processo de reserva, desde encontrar voos até reservar hotéis e carros de aluguer. Para isso, o agente precisaria de ferramentas para lidar com todas essas tarefas. Isso poderia levar a um sistema complexo e monolítico, difícil de manter e escalar. Um sistema de multi-agentes, por outro lado, poderia ter diferentes agentes especializados em encontrar voos, reservar hotéis e carros de aluguer. Isso tornaria o sistema mais modular, mais fácil de manter e escalável.
+Vamos tomar um exemplo: vamos reservar uma viagem para um utilizador. Um sistema com um único agente teria de tratar de todos os aspetos do processo de reserva da viagem, desde encontrar voos até reservar hotéis e carros de aluguer. Para conseguir isto com um único agente, o agente teria de possuir ferramentas para tratar todas essas tarefas. Isto poderia levar a um sistema complexo e monolítico que é difícil de manter e escalar. Um sistema multi-agente, por outro lado, poderia ter diferentes agentes especializados em encontrar voos, reservar hotéis e carros de aluguer. Isto tornaria o sistema mais modular, mais fácil de manter e escalável.
 
-Compare isso com uma agência de viagens gerida como um pequeno negócio familiar versus uma agência gerida como uma franquia. O pequeno negócio teria um único agente a lidar com todos os aspetos do processo de reserva, enquanto a franquia teria diferentes agentes a lidar com diferentes aspetos do processo.
+Compare isto com uma agência de viagens gerida como uma loja familiar versus uma agência de viagens a operar em regime de franquia. A loja familiar teria um único agente a tratar todos os aspetos do processo de reserva, enquanto a franquia teria diferentes agentes a tratar de diferentes aspetos do processo de reserva.
 
-## Blocos de Construção para Implementar o Padrão de Design de Multi-Agentes
+## Blocos de construção para implementar o padrão de design multi-agente
 
-Antes de implementar o padrão de design de multi-agentes, é necessário compreender os blocos de construção que compõem o padrão.
+Antes de poder implementar o padrão de design multi-agente, precisa de compreender os blocos de construção que compõem o padrão.
 
-Vamos tornar isso mais concreto, olhando novamente para o exemplo de reservar uma viagem para um utilizador. Neste caso, os blocos de construção incluiriam:
+Vamos tornar isto mais concreto analisando novamente o exemplo de reservar uma viagem para um utilizador. Neste caso, os blocos de construção incluiriam:
 
-- **Comunicação entre Agentes**: Agentes para encontrar voos, reservar hotéis e carros de aluguer precisam de comunicar e partilhar informações sobre as preferências e restrições do utilizador. É necessário decidir os protocolos e métodos para essa comunicação. Concretamente, isso significa que o agente para encontrar voos precisa de comunicar com o agente para reservar hotéis para garantir que o hotel é reservado para as mesmas datas do voo. Isso implica decidir *quais agentes partilham informações e como o fazem*.
-- **Mecanismos de Coordenação**: Os agentes precisam de coordenar as suas ações para garantir que as preferências e restrições do utilizador são atendidas. Uma preferência do utilizador pode ser que ele queira um hotel próximo do aeroporto, enquanto uma restrição pode ser que os carros de aluguer só estão disponíveis no aeroporto. Isso significa que o agente para reservar hotéis precisa de coordenar com o agente para reservar carros de aluguer para garantir que as preferências e restrições do utilizador são atendidas. Isso implica decidir *como os agentes estão a coordenar as suas ações*.
-- **Arquitetura dos Agentes**: Os agentes precisam de ter uma estrutura interna para tomar decisões e aprender com as suas interações com o utilizador. Isso significa que o agente para encontrar voos precisa de ter uma estrutura interna para tomar decisões sobre quais voos recomendar ao utilizador. Isso implica decidir *como os agentes estão a tomar decisões e a aprender com as suas interações com o utilizador*. Exemplos de como um agente aprende e melhora podem incluir o uso de um modelo de aprendizagem automática para recomendar voos ao utilizador com base nas suas preferências anteriores.
-- **Visibilidade nas Interações entre Multi-Agentes**: É necessário ter visibilidade sobre como os múltiplos agentes estão a interagir entre si. Isso significa ter ferramentas e técnicas para rastrear as atividades e interações dos agentes. Isso pode incluir ferramentas de registo e monitorização, ferramentas de visualização e métricas de desempenho.
-- **Padrões de Multi-Agentes**: Existem diferentes padrões para implementar sistemas de multi-agentes, como arquiteturas centralizadas, descentralizadas e híbridas. É necessário decidir o padrão que melhor se adapta ao seu caso de uso.
-- **Humano no Circuito**: Na maioria dos casos, haverá um humano no circuito, e é necessário instruir os agentes sobre quando pedir intervenção humana. Isso pode incluir um utilizador a pedir um hotel ou voo específico que os agentes não recomendaram ou a pedir confirmação antes de reservar um voo ou hotel.
+- **Comunicação entre agentes**: Agentes para encontrar voos, reservar hotéis e carros de aluguer precisam de comunicar e partilhar informação sobre as preferências e restrições do utilizador. Precisa de decidir os protocolos e métodos para esta comunicação. Concretamente, isto significa que o agente que procura voos precisa de comunicar com o agente que reserva hotéis para garantir que o hotel é reservado para as mesmas datas do voo. Isso significa que os agentes precisam de partilhar informações sobre as datas de viagem do utilizador, o que implica que precisa de decidir *quais os agentes que partilham informação e como é que partilham essa informação*.
+- **Mecanismos de coordenação**: Os agentes precisam de coordenar as suas ações para garantir que as preferências e restrições do utilizador sejam respeitadas. Uma preferência do utilizador poderia ser que queira um hotel perto do aeroporto, enquanto uma restrição poderia ser que os carros de aluguer só estão disponíveis no aeroporto. Isso significa que o agente que reserva hotéis precisa de coordenar-se com o agente que trata do aluguer de carros para garantir que as preferências e restrições do utilizador são satisfeitas. Isto significa que precisa de decidir *como é que os agentes estão a coordenar as suas ações*.
+- **Arquitetura do agente**: Os agentes precisam de ter uma estrutura interna para tomar decisões e aprender a partir das suas interações com o utilizador. Isto significa que o agente que procura voos precisa de ter uma estrutura interna para tomar decisões sobre que voos recomendar ao utilizador. Isso implica que precisa de decidir *como é que os agentes estão a tomar decisões e a aprender com as suas interações com o utilizador*. Exemplos de como um agente aprende e melhora poderiam ser, por exemplo, o agente que procura voos utilizar um modelo de machine learning para recomendar voos ao utilizador com base nas suas preferências passadas.
+- **Visibilidade das interações multi-agente**: Precisa de ter visibilidade sobre como os múltiplos agentes estão a interagir entre si. Isto significa que precisa de ferramentas e técnicas para rastrear as atividades e interações dos agentes. Isto pode ser na forma de ferramentas de registo e monitorização, ferramentas de visualização e métricas de desempenho.
+- **Padrões multi-agente**: Existem diferentes padrões para implementar sistemas multi-agente, como arquiteturas centralizadas, descentralizadas e híbridas. Precisa de decidir o padrão que melhor se adapta ao seu caso de uso.
+- **Humano no processo**: Na maioria dos casos, terá um humano no processo e precisa de instruir os agentes sobre quando pedir intervenção humana. Isto pode ser na forma de um utilizador a pedir um hotel ou voo específico que os agentes não tenham recomendado ou a pedir confirmação antes de reservar um voo ou hotel.
 
-## Visibilidade nas Interações entre Multi-Agentes
+## Visibilidade nas interações multi-agente
 
-É importante ter visibilidade sobre como os múltiplos agentes estão a interagir entre si. Essa visibilidade é essencial para depurar, otimizar e garantir a eficácia geral do sistema. Para isso, é necessário ter ferramentas e técnicas para rastrear as atividades e interações dos agentes. Isso pode incluir ferramentas de registo e monitorização, ferramentas de visualização e métricas de desempenho.
+É importante ter visibilidade sobre como os múltiplos agentes estão a interagir entre si. Esta visibilidade é essencial para depuração, otimização e para garantir a eficácia geral do sistema. Para conseguir isto, precisa de ferramentas e técnicas para rastrear as atividades e interações dos agentes. Isto pode ser na forma de ferramentas de registo e monitorização, ferramentas de visualização e métricas de desempenho.
 
-Por exemplo, no caso de reservar uma viagem para um utilizador, poderia haver um painel que mostra o estado de cada agente, as preferências e restrições do utilizador e as interações entre os agentes. Este painel poderia mostrar as datas de viagem do utilizador, os voos recomendados pelo agente de voos, os hotéis recomendados pelo agente de hotéis e os carros de aluguer recomendados pelo agente de carros de aluguer. Isso daria uma visão clara de como os agentes estão a interagir entre si e se as preferências e restrições do utilizador estão a ser atendidas.
+Por exemplo, no caso de reservar uma viagem para um utilizador, poderia ter um painel que mostre o estado de cada agente, as preferências e restrições do utilizador, e as interações entre agentes. Este painel poderia mostrar as datas de viagem do utilizador, os voos recomendados pelo agente de voos, os hotéis recomendados pelo agente de hotéis e os carros de aluguer recomendados pelo agente de aluguer de carros. Isto daria uma visão clara de como os agentes estão a interagir entre si e se as preferências e restrições do utilizador estão a ser satisfeitas.
 
-Vamos analisar cada um desses aspetos com mais detalhe.
+Vamos analisar cada um destes aspetos mais em detalhe.
 
-- **Ferramentas de Registo e Monitorização**: É importante registar cada ação realizada por um agente. Um registo pode armazenar informações sobre o agente que realizou a ação, a ação realizada, o momento em que a ação foi realizada e o resultado da ação. Essas informações podem ser usadas para depuração, otimização e mais.
-- **Ferramentas de Visualização**: Ferramentas de visualização podem ajudar a ver as interações entre agentes de forma mais intuitiva. Por exemplo, poderia haver um gráfico que mostra o fluxo de informações entre agentes. Isso poderia ajudar a identificar gargalos, ineficiências e outros problemas no sistema.
-- **Métricas de Desempenho**: Métricas de desempenho podem ajudar a acompanhar a eficácia do sistema de multi-agentes. Por exemplo, poderia acompanhar o tempo necessário para concluir uma tarefa, o número de tarefas concluídas por unidade de tempo e a precisão das recomendações feitas pelos agentes. Essas informações podem ajudar a identificar áreas para melhoria e otimizar o sistema.
+- **Registo e ferramentas de monitorização**: Deve registar cada ação tomada por um agente. Uma entrada de registo pode armazenar informação sobre o agente que tomou a ação, a ação tomada, o momento em que a ação foi tomada e o resultado da ação. Esta informação pode depois ser usada para depuração, otimização e mais.
+- **Ferramentas de visualização**: As ferramentas de visualização podem ajudar a ver as interações entre agentes de uma forma mais intuitiva. Por exemplo, poderia ter um grafo que mostre o fluxo de informação entre agentes. Isto pode ajudar a identificar estrangulamentos, ineficiências e outros problemas no sistema.
+- **Métricas de desempenho**: As métricas de desempenho podem ajudar a acompanhar a eficácia do sistema multi-agente. Por exemplo, poderia acompanhar o tempo necessário para completar uma tarefa, o número de tarefas concluídas por unidade de tempo e a precisão das recomendações feitas pelos agentes. Esta informação pode ajudar a identificar áreas para melhoria e otimizar o sistema.
 
-## Padrões de Multi-Agentes
+## Padrões multi-agente
 
-Vamos explorar alguns padrões concretos que podemos usar para criar aplicações de multi-agentes. Aqui estão alguns padrões interessantes a considerar:
+Vamos explorar alguns padrões concretos que podemos usar para criar aplicações multi-agente. Aqui estão alguns padrões interessantes a considerar:
 
-### Chat em Grupo
+### Chat de grupo
 
-Este padrão é útil quando se pretende criar uma aplicação de chat em grupo onde múltiplos agentes podem comunicar entre si. Casos de uso típicos para este padrão incluem colaboração em equipa, suporte ao cliente e redes sociais.
+Este padrão é útil quando pretende criar uma aplicação de chat de grupo onde múltiplos agentes podem comunicar entre si. Casos de utilização típicos para este padrão incluem colaboração de equipas, apoio ao cliente e redes sociais.
 
-Neste padrão, cada agente representa um utilizador no chat em grupo, e as mensagens são trocadas entre agentes usando um protocolo de mensagens. Os agentes podem enviar mensagens para o chat em grupo, receber mensagens do chat em grupo e responder a mensagens de outros agentes.
+Neste padrão, cada agente representa um utilizador no chat de grupo, e as mensagens são trocadas entre agentes utilizando um protocolo de mensagens. Os agentes podem enviar mensagens para o chat de grupo, receber mensagens do chat de grupo e responder a mensagens de outros agentes.
 
 Este padrão pode ser implementado usando uma arquitetura centralizada, onde todas as mensagens são encaminhadas através de um servidor central, ou uma arquitetura descentralizada, onde as mensagens são trocadas diretamente.
 
-![Chat em Grupo](../../../translated_images/pt-PT/multi-agent-group-chat.ec10f4cde556babd.webp)
+![Chat de grupo](../../../translated_images/pt-PT/multi-agent-group-chat.ec10f4cde556babd.webp)
 
-### Transferência de Tarefas
+### Passagem de tarefas
 
-Este padrão é útil quando se pretende criar uma aplicação onde múltiplos agentes podem transferir tarefas entre si.
+Este padrão é útil quando pretende criar uma aplicação onde múltiplos agentes podem passar tarefas entre si.
 
-Casos de uso típicos para este padrão incluem suporte ao cliente, gestão de tarefas e automação de fluxos de trabalho.
+Casos de utilização típicos para este padrão incluem apoio ao cliente, gestão de tarefas e automação de fluxos de trabalho.
 
-Neste padrão, cada agente representa uma tarefa ou um passo num fluxo de trabalho, e os agentes podem transferir tarefas para outros agentes com base em regras predefinidas.
+Neste padrão, cada agente representa uma tarefa ou um passo num fluxo de trabalho, e os agentes podem passar tarefas para outros agentes com base em regras predefinidas.
 
-![Transferência de Tarefas](../../../translated_images/pt-PT/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
+![Passagem de tarefas](../../../translated_images/pt-PT/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
-### Filtragem Colaborativa
+### Filtragem colaborativa
 
-Este padrão é útil quando se pretende criar uma aplicação onde múltiplos agentes podem colaborar para fazer recomendações aos utilizadores.
+Este padrão é útil quando pretende criar uma aplicação onde múltiplos agentes podem colaborar para fazer recomendações aos utilizadores.
 
-A razão para querer múltiplos agentes a colaborar é que cada agente pode ter competências diferentes e contribuir para o processo de recomendação de formas distintas.
+A razão para querer que vários agentes colaborem é que cada agente pode ter competências diferentes e pode contribuir para o processo de recomendação de formas distintas.
 
-Vamos a um exemplo onde um utilizador quer uma recomendação sobre a melhor ação para comprar no mercado de ações.
+Vamos tomar um exemplo em que um utilizador quer uma recomendação sobre a melhor ação para comprar no mercado bolsista.
 
-- **Especialista na Indústria**: Um agente poderia ser especialista numa indústria específica.
-- **Análise Técnica**: Outro agente poderia ser especialista em análise técnica.
-- **Análise Fundamental**: E outro agente poderia ser especialista em análise fundamental. Ao colaborar, esses agentes podem fornecer uma recomendação mais abrangente ao utilizador.
+- **Especialista do setor**: Um agente poderia ser um especialista num setor específico.
+- **Análise técnica**: Outro agente poderia ser um especialista em análise técnica.
+- **Análise fundamental**: E outro agente poderia ser um especialista em análise fundamental. Ao colaborarem, estes agentes podem fornecer uma recomendação mais completa ao utilizador.
 
 ![Recomendação](../../../translated_images/pt-PT/multi-agent-filtering.d959cb129dc9f608.webp)
 
-## Cenário: Processo de Reembolso
+## Cenário: Processo de reembolso
 
-Considere um cenário onde um cliente está a tentar obter um reembolso por um produto. Podem estar envolvidos vários agentes neste processo, mas vamos dividi-los entre agentes específicos para este processo e agentes gerais que podem ser usados noutros processos.
+Considere um cenário onde um cliente está a tentar obter o reembolso de um produto; podem estar envolvidos vários agentes neste processo, mas vamos dividi-los entre agentes específicos para este processo e agentes gerais que podem ser usados noutros processos.
 
 **Agentes específicos para o processo de reembolso**:
 
-Os seguintes são alguns agentes que poderiam estar envolvidos no processo de reembolso:
+A seguir estão alguns agentes que poderiam estar envolvidos no processo de reembolso:
 
-- **Agente do Cliente**: Este agente representa o cliente e é responsável por iniciar o processo de reembolso.
-- **Agente do Vendedor**: Este agente representa o vendedor e é responsável por processar o reembolso.
-- **Agente de Pagamento**: Este agente representa o processo de pagamento e é responsável por reembolsar o pagamento do cliente.
-- **Agente de Resolução**: Este agente representa o processo de resolução e é responsável por resolver quaisquer problemas que surjam durante o processo de reembolso.
-- **Agente de Conformidade**: Este agente representa o processo de conformidade e é responsável por garantir que o processo de reembolso cumpre os regulamentos e políticas.
+- **Agente do cliente**: Este agente representa o cliente e é responsável por iniciar o processo de reembolso.
+- **Agente do vendedor**: Este agente representa o vendedor e é responsável por processar o reembolso.
+- **Agente de pagamento**: Este agente representa o processo de pagamento e é responsável por reembolsar o pagamento do cliente.
+- **Agente de resolução**: Este agente representa o processo de resolução e é responsável por resolver quaisquer problemas que surjam durante o processo de reembolso.
+- **Agente de conformidade**: Este agente representa o processo de conformidade e é responsável por garantir que o processo de reembolso cumpre as normas e políticas.
 
 **Agentes gerais**:
 
-Estes agentes podem ser usados noutras partes do seu negócio.
+Estes agentes podem ser usados por outras partes do seu negócio.
 
-- **Agente de Envio**: Este agente representa o processo de envio e é responsável por enviar o produto de volta ao vendedor. Este agente pode ser usado tanto para o processo de reembolso como para o envio geral de um produto, por exemplo, numa compra.
-- **Agente de Feedback**: Este agente representa o processo de feedback e é responsável por recolher feedback do cliente. O feedback pode ser recolhido a qualquer momento e não apenas durante o processo de reembolso.
-- **Agente de Escalação**: Este agente representa o processo de escalação e é responsável por escalar problemas para um nível superior de suporte. Pode usar este tipo de agente para qualquer processo onde seja necessário escalar um problema.
-- **Agente de Notificação**: Este agente representa o processo de notificação e é responsável por enviar notificações ao cliente em várias etapas do processo de reembolso.
-- **Agente de Análise**: Este agente representa o processo de análise e é responsável por analisar dados relacionados ao processo de reembolso.
-- **Agente de Auditoria**: Este agente representa o processo de auditoria e é responsável por auditar o processo de reembolso para garantir que está a ser realizado corretamente.
-- **Agente de Relatórios**: Este agente representa o processo de relatórios e é responsável por gerar relatórios sobre o processo de reembolso.
-- **Agente de Conhecimento**: Este agente representa o processo de conhecimento e é responsável por manter uma base de conhecimento com informações relacionadas ao processo de reembolso. Este agente pode ser conhecedor tanto de reembolsos como de outras partes do seu negócio.
-- **Agente de Segurança**: Este agente representa o processo de segurança e é responsável por garantir a segurança do processo de reembolso.
-- **Agente de Qualidade**: Este agente representa o processo de qualidade e é responsável por garantir a qualidade do processo de reembolso.
+- **Agente de envio**: Este agente representa o processo de envio e é responsável por enviar o produto de volta ao vendedor. Este agente pode ser usado tanto no processo de reembolso como no envio geral de um produto aquando de uma compra, por exemplo.
+- **Agente de feedback**: Este agente representa o processo de recolha de feedback e é responsável por recolher a opinião do cliente. O feedback pode ser recolhido a qualquer momento e não apenas durante o processo de reembolso.
+- **Agente de escalonamento**: Este agente representa o processo de escalonamento e é responsável por escalar problemas para um nível superior de suporte. Pode usar este tipo de agente para qualquer processo onde seja necessário escalonar uma questão.
+- **Agente de notificações**: Este agente representa o processo de notificações e é responsável por enviar notificações ao cliente em várias fases do processo de reembolso.
+- **Agente de análise**: Este agente representa o processo de análise e é responsável por analisar dados relacionados com o processo de reembolso.
+- **Agente de auditoria**: Este agente representa o processo de auditoria e é responsável por auditar o processo de reembolso para garantir que está a ser realizado corretamente.
+- **Agente de relatórios**: Este agente representa o processo de geração de relatórios e é responsável por criar relatórios sobre o processo de reembolso.
+- **Agente de conhecimento**: Este agente representa o processo de gestão do conhecimento e é responsável por manter uma base de conhecimento com informação relacionada com o processo de reembolso. Este agente pode ter conhecimento tanto sobre reembolsos como sobre outras partes do seu negócio.
+- **Agente de segurança**: Este agente representa o processo de segurança e é responsável por garantir a segurança do processo de reembolso.
+- **Agente de qualidade**: Este agente representa o processo de qualidade e é responsável por garantir a qualidade do processo de reembolso.
 
-Há bastantes agentes listados anteriormente, tanto para o processo específico de reembolso como para os agentes gerais que podem ser usados noutras partes do seu negócio. Esperamos que isso lhe dê uma ideia de como pode decidir quais agentes usar no seu sistema de multi-agentes.
+Há bastantes agentes listados anteriormente, tanto para o processo específico de reembolso como para os agentes gerais que podem ser usados noutras partes do seu negócio. Espera-se que isto lhe dê uma ideia de como pode decidir quais os agentes a usar no seu sistema multi-agente.
 
-## Tarefa
-Desenhe um sistema multi-agente para um processo de suporte ao cliente. Identifique os agentes envolvidos no processo, os seus papéis e responsabilidades, e como interagem entre si. Considere tanto agentes específicos para o processo de suporte ao cliente como agentes gerais que podem ser utilizados noutras partes do seu negócio.
+## Exercício
 
-> Pense bem antes de ler a solução abaixo, pode precisar de mais agentes do que imagina.
+Desenhe um sistema multi-agente para um processo de apoio ao cliente. Identifique os agentes envolvidos no processo, os seus papéis e responsabilidades, e como interagem entre si. Considere tanto agentes específicos do processo de apoio ao cliente como agentes gerais que podem ser usados noutras partes do seu negócio.
+> Pensa antes de ler a solução seguinte, podes precisar de mais agentes do que pensas.
+>
+> DICA: Pensa nos diferentes estágios do processo de apoio ao cliente e considera também os agentes necessários para qualquer sistema.
 
-> TIP: Pense nas diferentes etapas do processo de suporte ao cliente e também nos agentes necessários para qualquer sistema.
-
-## Solução
+## Solution
 
 [Solução](./solution/solution.md)
 
-## Verificação de conhecimentos
+## Knowledge checks
 
-Pergunta: Quando deve considerar usar multi-agentes?
+Pergunta: Quando deves considerar usar multi-agentes?
 
-- [ ] A1: Quando tem uma carga de trabalho pequena e uma tarefa simples.
-- [ ] A2: Quando tem uma grande carga de trabalho.
-- [ ] A3: Quando tem uma tarefa simples.
+- [ ] A1: Quando tens pouca carga de trabalho e uma tarefa simples.
+- [ ] A2: Quando tens uma grande carga de trabalho
+- [ ] A3: Quando tens uma tarefa simples.
 
-[Solução do questionário](./solution/solution-quiz.md)
+[Questionário da solução](./solution/solution-quiz.md)
 
-## Resumo
+## Summary
 
-Nesta lição, analisámos o padrão de design multi-agente, incluindo os cenários onde os multi-agentes são aplicáveis, as vantagens de usar multi-agentes em vez de um agente singular, os blocos de construção para implementar o padrão de design multi-agente, e como ter visibilidade sobre como os múltiplos agentes interagem entre si.
+Nesta lição, analisámos o padrão de design multi-agente, incluindo os cenários em que os multi-agentes são aplicáveis, as vantagens de utilizar multi-agentes em vez de um único agente, os blocos de construção para implementar o padrão de design multi-agente e como ter visibilidade sobre como os vários agentes interagem entre si.
 
-### Tem mais perguntas sobre o Padrão de Design Multi-Agente?
+### Tens mais perguntas sobre o padrão de design multi-agente?
 
-Junte-se ao [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) para se conectar com outros aprendizes, participar em horários de atendimento e obter respostas às suas perguntas sobre Agentes de IA.
+Junta-te ao [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) para encontrares outros aprendentes, participa em sessões de atendimento e obter respostas às tuas perguntas sobre Agentes de IA.
 
-## Recursos adicionais
+## Additional resources
 
--
+- <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html" target="_blank">Padrões de design AutoGen</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Padrões de design agentic</a>
 
-## Lição anterior
 
-[Planeamento de Design](../07-planning-design/README.md)
+## Previous Lesson
 
-## Próxima lição
+[Planeamento do Design](../07-planning-design/README.md)
+
+## Next Lesson
 
 [Metacognição em Agentes de IA](../09-metacognition/README.md)
 
 ---
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso legal**:
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos por garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original, na sua língua nativa, deve ser considerado a fonte fidedigna. Para informações críticas, recomenda-se uma tradução profissional realizada por um tradutor humano. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

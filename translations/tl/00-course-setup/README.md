@@ -1,64 +1,68 @@
-# Pagsasaayos ng Kurso
+# Course Setup
 
-## Panimula
+## Introduction
 
-Ang araling ito ay magtuturo kung paano patakbuhin ang mga halimbawa ng code sa kursong ito.
+Tatalakayin ng araling ito kung paano patakbuhin ang mga code sample ng kursong ito.
 
-## Sumali sa Iba Pang Mga Mag-aaral at Humingi ng Tulong
+## Join Other Learners and Get Help
 
-Bago mo simulan ang pag-clone ng iyong repo, sumali sa [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) upang makakuha ng tulong sa pagsasaayos, magtanong tungkol sa kurso, o makipag-ugnayan sa iba pang mga mag-aaral.
+Bago ka magsimulang i-clone ang iyong repo, sumali sa [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) para makakuha ng tulong sa pag-setup, mga tanong tungkol sa kurso, o para makipag-ugnayan sa iba pang mga nag-aaral.
 
-## I-clone o I-fork ang Repo na Ito
+## Clone or Fork this Repo
 
-Upang magsimula, mangyaring i-clone o i-fork ang GitHub Repository. Magkakaroon ka ng sariling bersyon ng materyales ng kurso upang maipatupad, masubukan, at mabago ang code!
+Upang magsimula, i-clone o i-fork ang GitHub Repository. Gagawa ito ng sarili mong bersyon ng materyal ng kurso upang maaari mong patakbuhin, subukan, at baguhin ang code!
 
-Magagawa ito sa pamamagitan ng pag-click sa link upang <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">i-fork ang repo</a>
+This can be done by clicking the link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">i-fork ang repo</a>
 
-Dapat ay mayroon ka na ngayong sariling forked na bersyon ng kursong ito sa sumusunod na link:
+You should now have your own forked version of this course in the following link:
 
-![Forked Repo](../../../translated_images/tl/forked-repo.33f27ca1901baa6a.webp)
+![Naka-fork na Repo](../../../translated_images/tl/forked-repo.33f27ca1901baa6a.webp)
 
-### Shallow Clone (inirerekomenda para sa workshop / Codespaces)
+### Shallow Clone (recommended for workshop / Codespaces)
 
-  >Ang buong repository ay maaaring malaki (~3 GB) kapag na-download ang buong kasaysayan at lahat ng mga file. Kung ikaw ay dadalo lamang sa workshop o kailangan lamang ng ilang mga folder ng aralin, ang shallow clone (o sparse clone) ay maiiwasan ang karamihan sa pag-download sa pamamagitan ng pag-truncate ng kasaysayan at/o pag-skip ng mga blobs.
+  >Halimbawa
 
-#### Mabilis na shallow clone — minimal na kasaysayan, lahat ng mga file
+  Create Python venv directory:
 
-Palitan ang `<your-username>` sa mga utos sa ibaba gamit ang iyong fork URL (o ang upstream URL kung mas gusto mo).
+  >The full repository can be large (~3 GB) when you download full history and all files. If you're only attending the workshop or only need a few lesson folders, a shallow clone (or a sparse clone) avoids most of that download by truncating history and/or skipping blobs.
 
-Upang i-clone ang pinakabagong kasaysayan ng commit lamang (maliit na pag-download):
+#### Quick shallow clone — minimal history, all files
+
+Replace `<your-username>` in the below commands with your fork URL (or the upstream URL if you prefer).
+
+To clone only the latest commit history (small download):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Upang i-clone ang isang partikular na branch:
+To clone a specific branch:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Partial (sparse) clone — minimal na blobs + mga napiling folder lamang
+#### Partial (sparse) clone — minimal blobs + only selected folders
 
-Ginagamit nito ang partial clone at sparse-checkout (nangangailangan ng Git 2.25+ at inirerekomendang modernong Git na may suporta sa partial clone):
+This uses partial clone and sparse-checkout (requires Git 2.25+ and recommended modern Git with partial clone support):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Pumunta sa folder ng repo:
+Traverse into the repo folder:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Pagkatapos tukuyin kung aling mga folder ang gusto mo (halimbawa sa ibaba ay nagpapakita ng dalawang folder):
+Then specify which folders you want (example below shows two folders):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-Pagkatapos ng pag-clone at pag-verify ng mga file, kung kailangan mo lamang ng mga file at nais na magbakante ng espasyo (walang kasaysayan ng git), mangyaring tanggalin ang metadata ng repository (💀irreversible — mawawala ang lahat ng functionality ng Git: walang commits, pulls, pushes, o access sa kasaysayan).
+After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality: no commits, pulls, pushes, or history access).
 
 ```bash
 # zsh/bash
@@ -70,52 +74,51 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Paggamit ng GitHub Codespaces (inirerekomenda upang maiwasan ang malalaking pag-download sa lokal)
+#### Using GitHub Codespaces (recommended to avoid local large downloads)
 
-- Gumawa ng bagong Codespace para sa repo na ito sa pamamagitan ng [GitHub UI](https://github.com/codespaces).  
+- Create a new Codespace for this repo via the [GitHub UI](https://github.com/codespaces).  
 
-- Sa terminal ng bagong nilikhang codespace, patakbuhin ang isa sa mga shallow/sparse clone na utos sa itaas upang dalhin lamang ang mga folder ng aralin na kailangan mo sa workspace ng Codespace.
-- Opsyonal: pagkatapos ng pag-clone sa loob ng Codespaces, tanggalin ang .git upang mabawi ang karagdagang espasyo (tingnan ang mga utos ng pagtanggal sa itaas).
-- Tandaan: Kung mas gusto mong buksan ang repo nang direkta sa Codespaces (nang walang karagdagang clone), tandaan na ang Codespaces ay magtatayo ng devcontainer environment at maaaring maglaan pa rin ng higit sa kailangan mo. Ang pag-clone ng shallow copy sa loob ng sariwang Codespace ay nagbibigay sa iyo ng higit na kontrol sa paggamit ng disk.
+- In the terminal of the newly created codespace, run one of the shallow/sparse clone commands above to bring only the lesson folders you need into the Codespace workspace.
+- Optional: after cloning inside Codespaces, remove .git to reclaim extra space (see removal commands above).
+- Note: If you prefer to open the repo directly in Codespaces (without an extra clone), be aware Codespaces will construct the devcontainer environment and may still provision more than you need. Cloning a shallow copy inside a fresh Codespace gives you more control over disk usage.
 
-#### Mga Tip
+#### Tips
 
-- Palaging palitan ang clone URL gamit ang iyong fork kung nais mong mag-edit/commit.
-- Kung sa kalaunan ay kailangan mo ng higit pang kasaysayan o mga file, maaari mo itong i-fetch o ayusin ang sparse-checkout upang isama ang karagdagang mga folder.
+- Always replace the clone URL with your fork if you want to edit/commit.
+- If you later need more history or files, you can fetch them or adjust sparse-checkout to include additional folders.
 
-## Pagpapatakbo ng Code
+## Running the Code
 
-Ang kursong ito ay nag-aalok ng serye ng Jupyter Notebooks na maaari mong patakbuhin upang makakuha ng hands-on na karanasan sa paggawa ng AI Agents.
+This course offers a series of Jupyter Notebooks that you can run with to get hands-on experience building AI Agents.
 
-Ang mga halimbawa ng code ay gumagamit ng alinman sa:
+The code samples use either:
 
-**Kailangan ng GitHub Account - Libre**:
+**Requires GitHub Account - Free**:
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Tinatawag na (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Tinatawag na (autogen.ipynb)
+1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Labelled as (semantic-kernel.ipynb)
+2) AutoGen Framework + GitHub Models Marketplace. Labeled as (autogen.ipynb)
 
-**Kailangan ng Azure Subscription**:
+**Requires Azure Subscription**:
+3) Azure AI Foundry + Azure AI Agent Service. Labelled as (azureaiagent.ipynb)
 
-3) Azure AI Foundry + Azure AI Agent Service. Tinatawag na (azureaiagent.ipynb)
+Hinihikayat ka naming subukan ang lahat ng tatlong uri ng halimbawa upang makita kung alin ang pinakamainam para sa iyo.
 
-Hinihikayat namin kayong subukan ang lahat ng tatlong uri ng mga halimbawa upang makita kung alin ang pinakamahusay para sa inyo.
+Anuman ang piliin mo, iyon ang magtatakda kung aling mga setup na hakbang ang kailangan mong sundin sa ibaba:
 
-Anuman ang opsyon na pipiliin mo, ito ang magtatakda kung aling mga hakbang sa pagsasaayos ang kailangan mong sundin sa ibaba:
-
-## Mga Kinakailangan
+## Requirements
 
 - Python 3.12+
-  - **NOTE**: Kung wala kang Python3.12 na naka-install, tiyaking i-install ito. Pagkatapos ay gumawa ng iyong venv gamit ang python3.12 upang matiyak na ang tamang mga bersyon ay naka-install mula sa requirements.txt file.
+  - **TANDAAN**: Kung wala kang Python3.12 na naka-install, tiyaking i-install ito. Pagkatapos ay lumikha ng iyong venv gamit ang python3.12 upang matiyak na ang tamang mga bersyon ang mai-install mula sa requirements.txt file.
   
     >Halimbawa
 
-    Gumawa ng Python venv directory:
+    Gumawa ng direktoryo ng Python venv:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    Pagkatapos i-activate ang venv environment para sa:
+    Then activate venv environment for:
 
     ```bash
     # zsh/bash
@@ -127,79 +130,79 @@ Anuman ang opsyon na pipiliin mo, ito ang magtatakda kung aling mga hakbang sa p
     venv\Scripts\activate
     ```
 
-- .NET 10+: Para sa mga sample code na gumagamit ng .NET, tiyaking i-install ang [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) o mas bago. Pagkatapos, suriin ang naka-install na bersyon ng .NET SDK:
+- .NET 10+: For the sample codes using .NET, ensure you install [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later. Then, check your installed .NET SDK version:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- Isang GitHub Account - Para sa Access sa GitHub Models Marketplace
-- Azure Subscription - Para sa Access sa Azure AI Foundry
-- Azure AI Foundry Account - Para sa Access sa Azure AI Agent Service
+- A GitHub Account - For Access to the GitHub Models Marketplace
+- Azure Subscription - For Access to Microsoft Foundry
+- Microsoft Foundry Account - For Access to the Azure AI Agent Service
 
-Kasama sa repository na ito ang isang `requirements.txt` file sa root na naglalaman ng lahat ng kinakailangang Python packages upang patakbuhin ang mga halimbawa ng code.
+Isinama namin ang isang `requirements.txt` file sa ugat ng repositoryong ito na naglalaman ng lahat ng kinakailangang Python packages upang patakbuhin ang mga code sample.
 
-Maaari mo itong i-install sa pamamagitan ng pagpapatakbo ng sumusunod na utos sa iyong terminal sa root ng repository:
+Maaari mo silang i-install sa pamamagitan ng pagpapatakbo ng sumusunod na command sa iyong terminal sa ugat ng repositoryo:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-Inirerekomenda namin ang paggawa ng Python virtual environment upang maiwasan ang anumang mga conflict at isyu.
+Inirerekomenda naming gumawa ng Python virtual environment upang maiwasan ang anumang mga salungatan at isyu.
 
-## Pagsasaayos ng VSCode
+## Setup VSCode
 
 Tiyaking ginagamit mo ang tamang bersyon ng Python sa VSCode.
 
-![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+![larawan](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Pagsasaayos para sa Mga Halimbawa gamit ang GitHub Models 
+## Set Up for Samples using GitHub Models 
 
-### Hakbang 1: Kunin ang Iyong GitHub Personal Access Token (PAT)
+### Step 1: Retrieve Your GitHub Personal Access Token (PAT)
 
-Ang kursong ito ay gumagamit ng GitHub Models Marketplace, na nagbibigay ng libreng access sa Large Language Models (LLMs) na gagamitin mo upang bumuo ng AI Agents.
+Kina-kailangan ng kursong ito ang GitHub Models Marketplace, na nagbibigay ng libreng access sa Large Language Models (LLMs) na gagamitin mo upang bumuo ng AI Agents.
 
 Upang magamit ang GitHub Models, kailangan mong gumawa ng [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 Magagawa ito sa pamamagitan ng pagpunta sa iyong <a href="https://github.com/settings/personal-access-tokens" target="_blank">Personal Access Tokens settings</a> sa iyong GitHub Account.
 
-Mangyaring sundin ang [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) kapag gumagawa ng iyong token. Nangangahulugan ito na dapat mo lamang ibigay sa token ang mga pahintulot na kailangan nito upang patakbuhin ang mga halimbawa ng code sa kursong ito.
+Pakitutukan ang [Prinsipyo ng Pinakamababang Pribilehiyo](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) kapag lumilikha ng iyong token. Ibig sabihin nito na dapat mo lamang bigyan ang token ng mga pahintulot na kailangan nito upang patakbuhin ang mga code sample sa kursong ito.
 
-1. Piliin ang opsyon na `Fine-grained tokens` sa kaliwang bahagi ng iyong screen sa pamamagitan ng pagpunta sa **Developer settings**
+1. Piliin ang `Fine-grained tokens` option sa kaliwang bahagi ng iyong screen sa pamamagitan ng pagpunta sa **Developer settings**
 
-   ![Developer settings](../../../translated_images/tl/profile_developer_settings.410a859fe749c755.webp)
+   ![Mga setting ng Developer](../../../translated_images/tl/profile_developer_settings.410a859fe749c755.webp)
 
-   Pagkatapos piliin ang `Generate new token`.
+   Then select `Generate new token`.
 
-   ![Generate Token](../../../translated_images/tl/fga_new_token.1c1a234afe202ab3.webp)
+   ![Gumawa ng Token](../../../translated_images/tl/fga_new_token.1c1a234afe202ab3.webp)
 
-2. Maglagay ng isang deskriptibong pangalan para sa iyong token na sumasalamin sa layunin nito, upang madali itong makilala sa hinaharap.
+2. Ilagay ang isang malinaw na pangalan para sa iyong token na nagpapakita ng layunin nito, upang madali itong makilala sa hinaharap.
 
-    🔐 Rekomendasyon sa Tagal ng Token
+    🔐 Token Duration Recommendation
 
-    Inirerekomendang tagal: 30 araw
-    Para sa mas ligtas na postura, maaari kang pumili ng mas maikling panahon—tulad ng 7 araw 🛡️
-    Ito ay isang mahusay na paraan upang magtakda ng personal na target at tapusin ang kurso habang mataas ang iyong momentum sa pag-aaral 🚀.
+    Recommended duration: 30 days
+    For a more secure posture, you can opt for a shorter period—such as 7 days 🛡️
+    It’s a great way to set a personal target and complete the course while your learning momentum is high 🚀.
 
-    ![Token Name and Expiration](../../../translated_images/tl/token-name-expiry-date.a095fb0de6386864.webp)
+    ![Pangalan ng Token at Pag-expire](../../../translated_images/tl/token-name-expiry-date.a095fb0de6386864.webp)
 
-3. Limitahan ang saklaw ng token sa iyong fork ng repository na ito.
+3. Limitahan ang saklaw ng token sa iyong fork ng repositoryong ito.
 
-    ![Limit scope to fork repository](../../../translated_images/tl/token_repository_limit.924ade5e11d9d8bb.webp)
+    ![I-limit ang saklaw sa fork na repositoryo](../../../translated_images/tl/token_repository_limit.924ade5e11d9d8bb.webp)
 
-4. I-restrict ang mga pahintulot ng token: Sa ilalim ng **Permissions**, i-click ang **Account** tab, at i-click ang "+ Add permissions" button. Lalabas ang isang dropdown. Mangyaring hanapin ang **Models** at i-check ang kahon para dito.
+4. Limitahan ang mga pahintulot ng token: Sa ilalim ng **Permissions**, i-click ang **Account** tab, at i-click ang "+ Add permissions" button. Lalabas ang isang dropdown. Mangyaring hanapin ang **Models** at i-check ang kahon para dito.
 
-    ![Add Models Permission](../../../translated_images/tl/add_models_permissions.c0c44ed8b40fc143.webp)
+    ![Magdagdag ng Pahintulot ng Models](../../../translated_images/tl/add_models_permissions.c0c44ed8b40fc143.webp)
 
-5. I-verify ang mga kinakailangang pahintulot bago gumawa ng token. ![Verify Permissions](../../../translated_images/tl/verify_permissions.06bd9e43987a8b21.webp)
+5. Suriin ang mga kinakailangang pahintulot bago gumawa ng token. ![I-verify ang mga Pahintulot](../../../translated_images/tl/verify_permissions.06bd9e43987a8b21.webp)
 
-6. Bago gumawa ng token, tiyaking handa kang itago ang token sa isang ligtas na lugar tulad ng password manager vault, dahil hindi na ito ipapakita muli pagkatapos mong gawin ito. ![Store Token Securely](../../../translated_images/tl/store_token_securely.08ee2274c6ad6caf.webp)
+6. Bago gumawa ng token, tiyaking handa kang itago ang token sa isang ligtas na lugar tulad ng password manager vault, dahil hindi na ito ipapakita muli matapos mo itong likhain. ![Itago ang Token nang Ligtas](../../../translated_images/tl/store_token_securely.08ee2274c6ad6caf.webp)
 
-Kopyahin ang iyong bagong token na kakagawa mo lang. Idadagdag mo ito ngayon sa iyong `.env` file na kasama sa kursong ito.
+Kopyahin ang bagong token na kakalikha mo lang. Idadagdag mo ito ngayon sa iyong `.env` file na kasama sa kursong ito.
 
-### Hakbang 2: Gumawa ng Iyong `.env` File
+### Step 2: Create Your `.env` File
 
-Upang gumawa ng iyong `.env` file, patakbuhin ang sumusunod na utos sa iyong terminal.
+Upang gumawa ng iyong `.env` file patakbuhin ang sumusunod na command sa iyong terminal.
 
 ```bash
 # zsh/bash
@@ -211,29 +214,31 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Ito ay kokopya sa example file at gagawa ng `.env` sa iyong direktoryo kung saan mo pupunan ang mga halaga para sa mga environment variables.
+Ii-copy nito ang example file at gagawa ng `.env` sa iyong direktoryo kung saan pupunan mo ang mga halaga para sa mga environment variable.
 
-Sa iyong nakopyang token, buksan ang `.env` file sa iyong paboritong text editor at i-paste ang iyong token sa `GITHUB_TOKEN` field.
+Kapag nakopya mo na ang token, buksan ang `.env` file sa iyong paboritong text editor at i-paste ang iyong token sa `GITHUB_TOKEN` field.
 
-![GitHub Token Field](../../../translated_images/tl/github_token_field.20491ed3224b5f4a.webp)
+![Patlang ng GitHub Token](../../../translated_images/tl/github_token_field.20491ed3224b5f4a.webp)
 
-Dapat ay kaya mo nang patakbuhin ang mga halimbawa ng code sa kursong ito.
+Dapat mo na ngayong magawang patakbuhin ang mga code sample ng kursong ito.
 
-## Pagsasaayos para sa Mga Halimbawa gamit ang Azure AI Foundry at Azure AI Agent Service
+## Set Up for Samples using Microsoft Foundry and Azure AI Agent Service
 
-### Hakbang 1: Kunin ang Iyong Azure Project Endpoint
+### Step 1: Retrieve Your Azure Project Endpoint
 
-Sundin ang mga hakbang sa paggawa ng hub at proyekto sa Azure AI Foundry na matatagpuan dito: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
 
-Kapag nagawa mo na ang iyong proyekto, kakailanganin mong kunin ang connection string para sa iyong proyekto.
+Sundin ang mga hakbang sa paglikha ng hub at project sa Azure AI Foundry na makikita dito: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
 
-Magagawa ito sa pamamagitan ng pagpunta sa **Overview** page ng iyong proyekto sa Azure AI Foundry portal.
+
+Kapag nagawa mo na ang iyong proyekto, kailangan mong kunin ang connection string para sa iyong proyekto.
+
+Magagawa ito sa pamamagitan ng pagpunta sa **Overview** page ng iyong proyekto sa Microsoft Foundry portal.
 
 ![Project Connection String](../../../translated_images/tl/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### Hakbang 2: Gumawa ng Iyong `.env` File
+### Step 2: Create Your `.env` File
 
-Upang gumawa ng iyong `.env` file, patakbuhin ang sumusunod na utos sa iyong terminal.
+Upang gumawa ng iyong `.env` file patakbuhin ang sumusunod na command sa iyong terminal.
 
 ```bash
 # zsh/bash
@@ -245,79 +250,81 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Ito ay kokopya sa example file at gagawa ng `.env` sa iyong direktoryo kung saan mo pupunan ang mga halaga para sa mga environment variables.
+Ii-copy nito ang example file at gagawa ng `.env` sa iyong direktoryo kung saan pupunan mo ang mga halaga para sa mga environment variable.
 
-Sa iyong nakopyang token, buksan ang `.env` file sa iyong paboritong text editor at i-paste ang iyong token sa `PROJECT_ENDPOINT` field.
+Kapag nakopya mo na ang token, buksan ang `.env` file sa iyong paboritong text editor at i-paste ang iyong token sa `PROJECT_ENDPOINT` field.
 
-### Hakbang 3: Mag-sign in sa Azure
+### Step 3: Sign in to Azure
 
-Bilang isang security best practice, gagamit tayo ng [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) upang mag-authenticate sa Azure OpenAI gamit ang Microsoft Entra ID. 
+Bilang isang best practice sa seguridad, gagamit tayo ng [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) upang mag-authenticate sa Azure OpenAI gamit ang Microsoft Entra ID. 
 
 Susunod, buksan ang terminal at patakbuhin ang `az login --use-device-code` upang mag-sign in sa iyong Azure account.
 
-Kapag naka-login ka na, piliin ang iyong subscription sa terminal.
+Kapag naka-log in ka na, piliin ang iyong subscription sa terminal.
 
-## Karagdagang Environment Variables - Azure Search at Azure OpenAI 
+## Additional Environment Variables - Azure Search and Azure OpenAI 
 
-Para sa Agentic RAG Lesson - Lesson 5 - may mga halimbawa na gumagamit ng Azure Search at Azure OpenAI.
+Para sa Agentic RAG Lesson - Lesson 5 - may mga sample na gumagamit ng Azure Search at Azure OpenAI.
 
-Kung nais mong patakbuhin ang mga halimbawa na ito, kakailanganin mong idagdag ang mga sumusunod na environment variables sa iyong `.env` file:
+Kung nais mong patakbuhin ang mga sample na ito, kailangan mong idagdag ang mga sumusunod na environment variables sa iyong `.env` file:
 
 ### Overview Page (Project)
 
-- `AZURE_SUBSCRIPTION_ID` - Tingnan ang **Project details** sa **Overview** page ng iyong proyekto.
+- `AZURE_SUBSCRIPTION_ID` - Check **Project details** on the **Overview** page of your project.
 
-- `AZURE_AI_PROJECT_NAME` - Tingnan ang itaas ng **Overview** page para sa iyong proyekto.
+- `AZURE_AI_PROJECT_NAME` - Look at the top of the **Overview** page for your project.
 
-- `AZURE_OPENAI_SERVICE` - Hanapin ito sa **Included capabilities** tab para sa **Azure OpenAI Service** sa **Overview** page.
+- `AZURE_OPENAI_SERVICE` - Find this in the **Included capabilities** tab for **Azure OpenAI Service** on the **Overview** page.
 
 ### Management Center
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - Pumunta sa **Project properties** sa **Overview** page ng **Management Center**.
+- `AZURE_OPENAI_RESOURCE_GROUP` - Go to **Project properties** on the **Overview** page of the **Management Center**.
 
-- `GLOBAL_LLM_SERVICE` - Sa ilalim ng **Connected resources**, hanapin ang **Azure AI Services** connection name. Kung hindi nakalista, tingnan ang **Azure portal** sa ilalim ng iyong resource group para sa AI Services resource name.
+- `GLOBAL_LLM_SERVICE` - Under **Connected resources**, find the **Azure AI Services** connection name. If not listed, check the **Azure portal** under your resource group for the AI Services resource name.
 
 ### Models + Endpoints Page
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Piliin ang iyong embedding model (hal., `text-embedding-ada-002`) at tandaan ang **Deployment name** mula sa model details.
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Select your embedding model (e.g., `text-embedding-ada-002`) and note the **Deployment name** from the model details.
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Piliin ang iyong chat model (hal., `gpt-4o-mini`) at tandaan ang **Deployment name** mula sa model details.
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Select your chat model (e.g., `gpt-4o-mini`) and note the **Deployment name** from the model details.
 
 ### Azure Portal
 
-- `AZURE_OPENAI_ENDPOINT` - Hanapin ang **Azure AI services**, i-click ito, pagkatapos pumunta sa **Resource Management**, **Keys and Endpoint**, mag-scroll pababa sa "Azure OpenAI endpoints", at kopyahin ang isa na nagsasabing "Language APIs".
+- `AZURE_OPENAI_ENDPOINT` - Look for **Azure AI services**, click on it, then go to **Resource Management**, **Keys and Endpoint**, scroll down to the "Azure OpenAI endpoints", and copy the one that says "Language APIs".
 
-- `AZURE_OPENAI_API_KEY` - Mula sa parehong screen, kopyahin ang KEY 1 o KEY 2.
+- `AZURE_OPENAI_API_KEY` - From the same screen, copy KEY 1 or KEY 2.
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Hanapin ang iyong **Azure AI Search** resource, i-click ito, at tingnan ang **Overview**.
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Find your **Azure AI Search** resource, click it, and see **Overview**.
 
-- `AZURE_SEARCH_API_KEY` - Pagkatapos pumunta sa **Settings** at pagkatapos **Keys** upang kopyahin ang primary o secondary admin key.
+- `AZURE_SEARCH_API_KEY` - Then go to **Settings** and then **Keys** to copy the primary or secondary admin key.
 
 ### External Webpage
 
-- `AZURE_OPENAI_API_VERSION` - Bisitahin ang [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page sa ilalim ng **Latest GA API release**.
+- `AZURE_OPENAI_API_VERSION` - Visit the [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page under **Latest GA API release**.
 
-### Pagsasaayos ng keyless authentication
+### Setup keyless authentication
 
-Sa halip na i-hardcode ang iyong mga kredensyal, gagamit tayo ng keyless connection sa Azure OpenAI. Upang gawin ito, mag-i-import tayo ng `DefaultAzureCredential` at tatawagin ang `DefaultAzureCredential` function upang makuha ang kredensyal.
+Sa halip na i-hardcode ang iyong mga kredensyal, gagamit tayo ng keyless connection sa Azure OpenAI. Upang gawin ito, i-import natin ang `DefaultAzureCredential` at kalaunan tatawagin ang `DefaultAzureCredential` function upang makuha ang credential.
 
 ```python
 # Python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## Nahihirapan?
-Kung mayroon kang anumang problema sa pagpapatakbo ng setup na ito, sumali sa aming <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> o <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">gumawa ng isyu</a>.
+## Stuck Somewhere?
+
+
+Kung mayroon kang anumang problema sa pagpapatakbo ng pagsasaayos na ito, sumali sa aming <a href="https://discord.gg/kzRShWzttr" target="_blank">Komunidad ng Azure AI sa Discord</a> o <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">magbukas ng isyu</a>.
 
 ## Susunod na Aralin
 
-Handa ka nang patakbuhin ang code para sa kursong ito. Masaya naming pag-aaralan pa ang mundo ng AI Agents!
+Handa ka na ngayong patakbuhin ang code para sa kursong ito. Masayang matuto pa tungkol sa mundo ng mga AI Agent! 
 
-[Pagpapakilala sa AI Agents at Mga Gamit ng Agent](../01-intro-to-ai-agents/README.md)
+[Panimula sa mga AI Agent at Mga Kaso ng Paggamit](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Paunawa:
+Ang dokumentong ito ay isinalin gamit ang serbisyong AI na pagsasalin na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagaman nagsusumikap kami para sa katumpakan, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi tumpak na bahagi. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasaling-pantao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

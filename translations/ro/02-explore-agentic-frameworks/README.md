@@ -1,10 +1,10 @@
-[![Explorarea Cadrelor pentru Agenți AI](../../../translated_images/ro/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![Explorarea cadrelor pentru Agenți AI](../../../translated_images/ro/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
 > _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
-# Explorarea Cadrelor pentru Agenți AI
+# Explorarea cadrelor pentru Agenți AI
 
-Cadrele pentru agenți AI sunt platforme software concepute pentru a simplifica crearea, implementarea și gestionarea agenților AI. Aceste cadre oferă dezvoltatorilor componente pre-construite, abstracții și instrumente care eficientizează dezvoltarea sistemelor AI complexe.
+Cadramele pentru agenți AI sunt platforme software create pentru a simplifica crearea, implementarea și gestionarea agenților AI. Aceste cadre oferă dezvoltatorilor componente preconstruite, abstracții și unelte care optimizează dezvoltarea sistemelor AI complexe.
 
 Aceste cadre ajută dezvoltatorii să se concentreze pe aspectele unice ale aplicațiilor lor, oferind abordări standardizate pentru provocările comune în dezvoltarea agenților AI. Ele îmbunătățesc scalabilitatea, accesibilitatea și eficiența în construirea sistemelor AI.
 
@@ -12,62 +12,62 @@ Aceste cadre ajută dezvoltatorii să se concentreze pe aspectele unice ale apli
 
 Această lecție va acoperi:
 
-- Ce sunt cadrele pentru agenți AI și ce permit dezvoltatorilor să realizeze?
-- Cum pot echipele să le folosească pentru a prototipa rapid, a itera și a îmbunătăți capabilitățile agenților lor?
-- Care sunt diferențele între cadrele și instrumentele create de Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> și <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
-- Pot să integrez direct instrumentele existente din ecosistemul Azure sau am nevoie de soluții independente?
+- Ce sunt cadrele pentru Agenți AI și ce permit dezvoltatorilor să realizeze?
+- Cum pot echipele să folosească aceste cadre pentru a prototipa rapid, itera și îmbunătăți capacitățile agentului lor?
+- Care sunt diferențele între cadrele și uneltele create de Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> și <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
+- Pot integra direct uneltele mele existente din ecosistemul Azure sau am nevoie de soluții standalone?
 - Ce este serviciul Azure AI Agents și cum mă ajută acesta?
 
-## Obiectivele învățării
+## Obiectivele de învățare
 
-Obiectivele acestei lecții sunt să vă ajute să înțelegeți:
+Obiectivele acestei lecții sunt să te ajute să înțelegi:
 
-- Rolul cadrelor pentru agenți AI în dezvoltarea AI.
-- Cum să utilizați cadrele pentru agenți AI pentru a construi agenți inteligenți.
-- Capabilitățile cheie oferite de cadrele pentru agenți AI.
+- Rolul cadrelor pentru Agenți AI în dezvoltarea AI.
+- Cum să valorifici cadrele pentru Agenți AI pentru a construi agenți inteligenți.
+- Capacitățile cheie oferite de cadrele pentru Agenți AI.
 - Diferențele dintre AutoGen, Semantic Kernel și Azure AI Agent Service.
 
-## Ce sunt cadrele pentru agenți AI și ce permit dezvoltatorilor să facă?
+## Ce sunt cadrele pentru Agenți AI și ce permit acestea dezvoltatorilor să facă?
 
-Cadrele AI tradiționale vă pot ajuta să integrați AI în aplicațiile dvs. și să le îmbunătățiți în următoarele moduri:
+Cadrele AI tradiționale te pot ajuta să integrezi AI în aplicațiile tale și să le faci mai bune în următoarele moduri:
 
-- **Personalizare**: AI poate analiza comportamentul și preferințele utilizatorilor pentru a oferi recomandări, conținut și experiențe personalizate.  
-Exemplu: Servicii de streaming precum Netflix folosesc AI pentru a sugera filme și emisiuni pe baza istoricului de vizionare, sporind implicarea și satisfacția utilizatorilor.
-- **Automatizare și eficiență**: AI poate automatiza sarcinile repetitive, eficientiza fluxurile de lucru și îmbunătăți eficiența operațională.  
-Exemplu: Aplicațiile de servicii pentru clienți folosesc chatboți alimentați de AI pentru a gestiona întrebările comune, reducând timpii de răspuns și eliberând agenții umani pentru probleme mai complexe.
-- **Experiență îmbunătățită a utilizatorului**: AI poate îmbunătăți experiența generală a utilizatorului prin furnizarea de funcții inteligente, cum ar fi recunoașterea vocală, procesarea limbajului natural și textul predictiv.  
-Exemplu: Asistenții virtuali precum Siri și Google Assistant folosesc AI pentru a înțelege și răspunde comenzilor vocale, facilitând interacțiunea utilizatorilor cu dispozitivele lor.
+- **Personalizare**: AI poate analiza comportamentul și preferințele utilizatorului pentru a oferi recomandări, conținut și experiențe personalizate.  
+Exemplu: Serviciile de streaming precum Netflix folosesc AI pentru a sugera filme și emisiuni bazate pe istoricul de vizionare, sporind angajamentul și satisfacția utilizatorului.  
+- **Automatizare și Eficiență**: AI poate automatiza sarcini repetitive, optimiza fluxurile de lucru și îmbunătăți eficiența operațională.  
+Exemplu: Aplicațiile de servicii clienți folosesc chatboturi alimentate de AI pentru a gestiona cereri comune, reducând timpii de răspuns și eliberând agenții umani pentru probleme mai complexe.  
+- **Experiență îmbunătățită pentru utilizator**: AI poate îmbunătăți experiența generală a utilizatorului oferind funcții inteligente, cum ar fi recunoaștere vocală, procesare a limbajului natural și text predictiv.  
+Exemplu: Asistenții virtuali precum Siri și Google Assistant folosesc AI pentru a înțelege și a răspunde la comenzi vocale, facilitând interacțiunea utilizatorilor cu dispozitivele lor.
 
-### Sună grozav, nu-i așa? Atunci de ce avem nevoie de cadrele pentru agenți AI?
+### Sună grozav, nu? Atunci de ce avem nevoie de cadrul pentru Agenți AI?
 
-Cadrele pentru agenți AI reprezintă mai mult decât cadrele AI obișnuite. Ele sunt concepute pentru a permite crearea de agenți inteligenți care pot interacționa cu utilizatorii, alți agenți și mediul pentru a atinge obiective specifice. Acești agenți pot manifesta comportament autonom, pot lua decizii și se pot adapta la condiții în schimbare. Să analizăm câteva capabilități cheie oferite de cadrele pentru agenți AI:
+Cadrele pentru agenți AI reprezintă ceva mai mult decât cadrele AI obișnuite. Ele sunt concepute pentru a permite crearea de agenți inteligenți care pot interacționa cu utilizatorii, alți agenți și mediul înconjurător pentru a atinge scopuri specifice. Acești agenți pot manifesta comportament autonom, pot lua decizii și se pot adapta la condiții schimbătoare. Hai să vedem câteva capacități cheie furnizate de cadrele pentru Agenți AI:
 
-- **Colaborare și coordonare între agenți**: Permite crearea mai multor agenți AI care pot lucra împreună, comunica și coordona pentru a rezolva sarcini complexe.
-- **Automatizarea și gestionarea sarcinilor**: Oferă mecanisme pentru automatizarea fluxurilor de lucru în mai mulți pași, delegarea sarcinilor și gestionarea dinamică a sarcinilor între agenți.
+- **Colaborare și coordonare între agenți**: Permite crearea mai multor agenți AI care pot lucra împreună, comunica și coordona pentru a rezolva sarcini complexe.  
+- **Automatizarea și gestionarea sarcinilor**: Oferă mecanisme pentru automatizarea fluxurilor de lucru în mai mulți pași, delegarea sarcinilor și gestionarea dinamică a acestora între agenți.  
 - **Înțelegere contextuală și adaptare**: Echiparea agenților cu abilitatea de a înțelege contextul, de a se adapta la medii în schimbare și de a lua decizii bazate pe informații în timp real.
 
-Pe scurt, agenții vă permit să faceți mai mult, să duceți automatizarea la nivelul următor, să creați sisteme mai inteligente care se pot adapta și învăța din mediul lor.
+Pe scurt, agenții îți permit să faci mai mult, să duci automatizarea la un alt nivel, să creezi sisteme mai inteligente care pot învăța și se pot adapta din mediul lor.
 
-## Cum să prototipăm rapid, să iterăm și să îmbunătățim capabilitățile agenților?
+## Cum să prototipezi rapid, să iterezi și să îmbunătățești capacitățile agentului?
 
-Acesta este un domeniu în continuă evoluție, dar există câteva lucruri comune în majoritatea cadrelor pentru agenți AI care vă pot ajuta să prototipați și să iterați rapid, cum ar fi componentele modulare, instrumentele colaborative și învățarea în timp real. Să le explorăm:
+Acesta este un domeniu în mișcare rapidă, dar există câteva lucruri comune în cele mai multe cadre pentru Agenți AI care te pot ajuta să prototipezi rapid și să iterezi, în special componente modulare, unelte colaborative și învățare în timp real. Hai să explorăm acestea:
 
-- **Utilizați componente modulare**: SDK-urile AI oferă componente pre-construite, cum ar fi conectori AI și de memorie, apelarea funcțiilor folosind limbaj natural sau pluginuri de cod, șabloane de solicitări și altele.
-- **Valorificați instrumentele colaborative**: Proiectați agenți cu roluri și sarcini specifice, permițându-le să testeze și să rafineze fluxurile de lucru colaborative.
-- **Învățați în timp real**: Implementați bucle de feedback în care agenții învață din interacțiuni și își ajustează comportamentul dinamic.
+- **Folosește componente modulare**: SDK-urile AI oferă componente preconstruite, cum ar fi conectori AI și memorie, apelare de funcții folosind limbaj natural sau pluginuri de cod, șabloane de prompturi și altele.  
+- **Valorifică uneltele colaborative**: Proiectează agenți cu roluri și sarcini specifice, permițând testarea și rafinarea fluxurilor de lucru colaborative.  
+- **Învățare în timp real**: Implementează bucle de feedback în care agenții învață din interacțiuni și își ajustează comportamentul dinamic.
 
-### Utilizați componente modulare
+### Folosește componente modulare
 
-SDK-uri precum Microsoft Semantic Kernel și LangChain oferă componente pre-construite, cum ar fi conectori AI, șabloane de solicitări și gestionarea memoriei.
+SDK-uri precum Microsoft Semantic Kernel și LangChain oferă componente preconstruite, cum ar fi conectori AI, șabloane pentru prompturi și gestionare a memoriei.
 
-**Cum pot echipele să le folosească**: Echipele pot asambla rapid aceste componente pentru a crea un prototip funcțional fără a începe de la zero, permițând experimentarea și iterarea rapidă.
+**Cum pot folosi echipele acestea**: Echipele pot asambla rapid aceste componente pentru a crea un prototip funcțional fără a porni de la zero, facilitând experimentarea și iterarea rapidă.
 
-**Cum funcționează în practică**: Puteți utiliza un parser pre-construit pentru a extrage informații din intrările utilizatorului, un modul de memorie pentru a stoca și a recupera date și un generator de solicitări pentru a interacționa cu utilizatorii, toate acestea fără a fi nevoie să construiți aceste componente de la zero.
+**Cum funcționează în practică**: Poți folosi un parser preconstruit pentru a extrage informații din input-ul utilizatorului, un modul de memorie pentru a stoca și a recupera date și un generator de prompturi pentru a interacționa cu utilizatorii, toate acestea fără a fi nevoie să construiești aceste componente de la zero.
 
-**Exemplu de cod**. Să analizăm exemple despre cum puteți utiliza un conector AI pre-construit cu Semantic Kernel Python și .Net care folosește apelarea automată a funcțiilor pentru ca modelul să răspundă la intrările utilizatorului:
+**Exemplu de cod**. Hai să vedem exemple despre cum poți folosi un conector AI preconstruit cu Semantic Kernel Python și .Net care utilizează apeluri automate de funcții pentru a obține răspunsuri ale modelului la input-ul utilizatorului:
 
 ``` python
-# Semantic Kernel Python Example
+# Exemplu Semantic Kernel în Python
 
 import asyncio
 from typing import Annotated
@@ -78,12 +78,12 @@ from semantic_kernel.contents import ChatHistory
 from semantic_kernel.functions import kernel_function
 from semantic_kernel.kernel import Kernel
 
-# Define a ChatHistory object to hold the conversation's context
+# Definează un obiect ChatHistory pentru a păstra contextul conversației
 chat_history = ChatHistory()
 chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
 
 
-# Define a sample plugin that contains the function to book travel
+# Definează un plugin de exemplu care conține funcția de rezervare a călătoriei
 class BookTravelPlugin:
     """A Sample Book Travel Plugin"""
 
@@ -93,26 +93,26 @@ class BookTravelPlugin:
     ) -> str:
         return f"Travel was booked to {location} on {date}"
 
-# Create the Kernel
+# Creează Kernel-ul
 kernel = Kernel()
 
-# Add the sample plugin to the Kernel object
+# Adaugă pluginul de exemplu la obiectul Kernel
 kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
 
-# Define the Azure OpenAI AI Connector
+# Definează conectorul AI Azure OpenAI
 chat_service = AzureChatCompletion(
     deployment_name="YOUR_DEPLOYMENT_NAME", 
     api_key="YOUR_API_KEY", 
     endpoint="https://<your-resource>.azure.openai.com/",
 )
 
-# Define the request settings to configure the model with auto-function calling
+# Definează setările cererii pentru a configura modelul cu apelare automată a funcțiilor
 request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
+    # Trimite cererea către model folosind istoricul de chat dat și setările cererii
+    # Kernel-ul conține exemplul pe care modelul îl va solicita pentru a-l invoca
     response = await chat_service.get_chat_message_content(
         chat_history=chat_history, settings=request_settings, kernel=kernel
     )
@@ -145,9 +145,9 @@ async def main():
     """
 
     print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
+    # Răspuns exemplu al modelului AI: `Zborul dumneavoastră către New York din 1 ianuarie 2025 a fost rezervat cu succes. Călătorie plăcută! ✈️🗽`
 
-    # Add the model's response to our chat history context
+    # Adaugă răspunsul modelului în contextul istoricului nostru de chat
     chat_history.add_assistant_message(response.content)
 
 
@@ -216,24 +216,24 @@ public class BookTravelPlugin
 }
 ```
   
-Din acest exemplu puteți vedea cum puteți valorifica un parser pre-construit pentru a extrage informații cheie din intrările utilizatorului, cum ar fi originea, destinația și data unei cereri de rezervare a unui zbor. Această abordare modulară vă permite să vă concentrați pe logica de nivel înalt.
+Ce poți observa din acest exemplu este cum poți valorifica un parser preconstruit pentru a extrage informații cheie din input-ul utilizatorului, cum ar fi originea, destinația și data unei cereri de rezervare de zbor. Această abordare modulară îți permite să te concentrezi pe logica de nivel înalt.
 
-### Valorificați instrumentele colaborative
+### Valorifică uneltele colaborative
 
 Cadre precum CrewAI, Microsoft AutoGen și Semantic Kernel facilitează crearea mai multor agenți care pot lucra împreună.
 
-**Cum pot echipele să le folosească**: Echipele pot proiecta agenți cu roluri și sarcini specifice, permițându-le să testeze și să rafineze fluxurile de lucru colaborative și să îmbunătățească eficiența generală a sistemului.
+**Cum pot folosi echipele acestea**: Echipele pot proiecta agenți cu roluri și sarcini specifice, permițând testarea și rafinarea fluxurilor de lucru colaborative și îmbunătățind eficiența generală a sistemului.
 
-**Cum funcționează în practică**: Puteți crea o echipă de agenți în care fiecare agent are o funcție specializată, cum ar fi recuperarea datelor, analiza sau luarea deciziilor. Acești agenți pot comunica și împărtăși informații pentru a atinge un obiectiv comun, cum ar fi răspunsul la o întrebare a utilizatorului sau finalizarea unei sarcini.
+**Cum funcționează în practică**: Poți crea o echipă de agenți în care fiecare are o funcție specializată, cum ar fi colectarea datelor, analiza sau luarea deciziilor. Acești agenți pot comunica și împărtăși informații pentru a atinge un scop comun, cum ar fi răspunsul la o întrebare a utilizatorului sau finalizarea unei sarcini.
 
 **Exemplu de cod (AutoGen)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# creați agenți, apoi creați un program round-robin în care pot lucra împreună, în acest caz în ordine
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+# Agent de preluare a datelor
+# Agent de analiză a datelor
+# Agent de luare a deciziilor
 
 agent_retrieve = AssistantAgent(
     name="dataretrieval",
@@ -249,7 +249,7 @@ agent_analyze = AssistantAgent(
     system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
+# conversația se încheie când utilizatorul spune "APPROVE"
 termination = TextMentionTermination("APPROVE")
 
 user_proxy = UserProxyAgent("user_proxy", input_func=input)
@@ -257,42 +257,42 @@ user_proxy = UserProxyAgent("user_proxy", input_func=input)
 team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
 
 stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
+# Folosiți asyncio.run(...) când rulați un script.
 await Console(stream)
 ```
   
-În codul anterior, puteți vedea cum puteți crea o sarcină care implică mai mulți agenți care lucrează împreună pentru a analiza date. Fiecare agent îndeplinește o funcție specifică, iar sarcina este executată prin coordonarea agenților pentru a atinge rezultatul dorit. Creând agenți dedicați cu roluri specializate, puteți îmbunătăți eficiența și performanța sarcinilor.
+Ce vezi în codul anterior este cum poți crea o sarcină care implică mai mulți agenți ce lucrează împreună pentru a analiza date. Fiecare agent realizează o funcție specifică, iar sarcina este executată prin coordonarea agenților pentru a obține rezultatul dorit. Prin crearea de agenți dedicați cu roluri specializate, poți îmbunătăți eficiența și performanța sarcinii.
 
-### Învățați în timp real
+### Învață în timp real
 
-Cadrele avansate oferă capabilități pentru înțelegerea contextului în timp real și adaptare.
+Cadrele avansate oferă capabilități pentru înțelegerea contextuală în timp real și adaptare.
 
-**Cum pot echipele să le folosească**: Echipele pot implementa bucle de feedback în care agenții învață din interacțiuni și își ajustează comportamentul dinamic, ducând la îmbunătățirea continuă și rafinarea capabilităților.
+**Cum pot folosi echipele acestea**: Echipele pot implementa bucle de feedback în care agenții învață din interacțiuni și își ajustează comportamentul dinamic, conducând la o îmbunătățire continuă și rafinare a capacităților.
 
-**Cum funcționează în practică**: Agenții pot analiza feedback-ul utilizatorilor, datele de mediu și rezultatele sarcinilor pentru a-și actualiza baza de cunoștințe, a ajusta algoritmii de luare a deciziilor și a îmbunătăți performanța în timp. Acest proces de învățare iterativă permite agenților să se adapteze la condiții în schimbare și preferințele utilizatorilor, sporind eficiența generală a sistemului.
+**Cum funcționează în practică**: Agenții pot analiza feedback-ul utilizatorilor, datele de mediu și rezultatele sarcinilor pentru a-și actualiza baza de cunoștințe, a regla algoritmii de luare a deciziilor și a îmbunătăți performanța în timp. Acest proces iterativ de învățare permite agenților să se adapteze la condiții și preferințe ale utilizatorilor în schimbare, sporind eficacitatea generală a sistemului.
 
 ## Care sunt diferențele dintre cadrele AutoGen, Semantic Kernel și Azure AI Agent Service?
 
-Există multe moduri de a compara aceste cadre, dar să analizăm câteva diferențe cheie în ceea ce privește designul, capabilitățile și cazurile de utilizare țintă:
+Există multe moduri de a compara aceste cadre, dar hai să vedem câteva diferențe cheie în ceea ce privește designul, capabilitățile și cazurile lor țintă de utilizare:
 
 ## AutoGen
 
-AutoGen este un cadru open-source dezvoltat de Microsoft Research's AI Frontiers Lab. Se concentrează pe aplicații *agentice* distribuite, bazate pe evenimente, permițând mai multe LLM-uri și SLM-uri, instrumente și modele avansate de design multi-agent.
+AutoGen este un cadru open-source dezvoltat de AI Frontiers Lab de la Microsoft Research. Se concentrează pe aplicații *agențiale* distribuite, bazate pe evenimente, care permit multiple LLM-uri și SLM-uri, instrumente și modele avansate multi-agent.
 
-AutoGen este construit în jurul conceptului de bază al agenților, care sunt entități autonome ce pot percepe mediul lor, lua decizii și întreprinde acțiuni pentru a atinge obiective specifice. Agenții comunică prin mesaje asincrone, permițându-le să lucreze independent și în paralel, sporind scalabilitatea și receptivitatea sistemului.
+AutoGen este construit în jurul conceptului central de agenți, entități autonome care pot percepe mediul înconjurător, lua decizii și întreprinde acțiuni pentru a atinge scopuri specifice. Agenții comunică prin mesaje asincrone, permițându-le să lucreze independent și în paralel, sporind scalabilitatea și rapiditatea sistemului.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Agenții se bazează pe modelul actorului</a>. Conform Wikipedia, un actor este _blocul de bază al calculului concurent. Ca răspuns la un mesaj primit, un actor poate: lua decizii locale, crea mai mulți actori, trimite mai multe mesaje și determina cum să răspundă următorului mesaj primit_.
+<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Agenții se bazează pe modelul actorului</a>. Conform Wikipedia, un actor este _elementul de bază al calculului concurent. Ca răspuns la un mesaj primit, un actor poate: lua decizii locale, crea alți actori, trimite mesaje suplimentare și determina cum să răspundă la următorul mesaj primit_.
 
-**Cazuri de utilizare**: Automatizarea generării de cod, sarcini de analiză a datelor și construirea de agenți personalizați pentru funcții de planificare și cercetare.
+**Cazuri de utilizare**: Automatizarea generării de cod, sarcini de analiză de date și construirea de agenți personalizați pentru planificare și funcții de cercetare.
 
 Iată câteva concepte de bază importante ale AutoGen:
 
 - **Agenți**. Un agent este o entitate software care:
-  - **Comunică prin mesaje**, acestea putând fi sincronizate sau asincronizate.
-  - **Își menține propriul stat**, care poate fi modificat de mesajele primite.
-  - **Întreprinde acțiuni** ca răspuns la mesajele primite sau la schimbările din starea sa. Aceste acțiuni pot modifica starea agentului și pot produce efecte externe, cum ar fi actualizarea jurnalelor de mesaje, trimiterea de noi mesaje, executarea de cod sau efectuarea de apeluri API.
+  - **Comunică prin mesaje**, care pot fi sincron sau asincron.
+  - **Își menține propriul stadiu**, ce poate fi modificat de mesajele primite.
+  - **Întreprinde acțiuni** ca răspuns la mesajele primite sau la schimbările din stadiul său. Aceste acțiuni pot modifica stadiul agentului și pot produce efecte externe, cum ar fi actualizarea jurnalelor de mesaje, trimiterea de mesaje noi, executarea de cod sau apeluri API.
 
-  Aici aveți un scurt fragment de cod în care creați propriul agent cu capabilități de chat:
+  Iată un fragment de cod scurt în care creezi propriul agent cu capabilități de chat:
 
     ```python
     from autogen_agentchat.agents import AssistantAgent
@@ -315,9 +315,9 @@ Iată câteva concepte de bază importante ale AutoGen:
             print(f"{self.id.type} responded: {response.chat_message.content}")
     ```
   
-  În codul anterior, `MyAgent` a fost creat și moștenește din `RoutedAgent`. Are un handler de mesaje care afișează conținutul mesajului și apoi trimite un răspuns folosind delegatul `AssistantAgent`. Observați în special cum atribuim lui `self._delegate` o instanță a `AssistantAgent`, care este un agent pre-construit capabil să gestioneze completările de chat.
+În codul anterior, `MyAgent` a fost creat și moștenește de la `RoutedAgent`. Are un handler de mesaje care afișează conținutul mesajelor și apoi trimite un răspuns folosind delegatul `AssistantAgent`. Observă mai ales cum se atribuie pentru `self._delegate` o instanță a `AssistantAgent`, care este un agent preconstruit ce poate gestiona completări de chat.
 
-  Să informăm AutoGen despre acest tip de agent și să pornim programul:
+    Să anunțăm AutoGen despre acest tip de agent și să pornim programul mai departe:
 
     ```python
     
@@ -325,11 +325,11 @@ Iată câteva concepte de bază importante ale AutoGen:
     runtime = SingleThreadedAgentRuntime()
     await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
 
-    runtime.start()  # Start processing messages in the background.
+    runtime.start()  # Începe procesarea mesajelor în fundal.
     await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
     ```
   
-  În codul anterior, agenții sunt înregistrați cu runtime-ul, iar apoi un mesaj este trimis agentului, rezultând următoarea ieșire:
+În codul anterior, agenții sunt înregistrați în runtime și apoi se trimite un mesaj către agent, rezultând următorul output:
 
     ```text
     # Output from the console:
@@ -338,15 +338,15 @@ Iată câteva concepte de bază importante ale AutoGen:
     my_assistant responded: Hello! How can I assist you today?
     ```
   
-- **Multi-agenți**. AutoGen suportă crearea mai multor agenți care pot lucra împreună pentru a atinge sarcini complexe. Agenții pot comunica, împărtăși informații și coordona acțiunile lor pentru a rezolva probleme mai eficient. Pentru a crea un sistem multi-agent, puteți defini diferite tipuri de agenți cu funcții și roluri specializate, cum ar fi recuperarea datelor, analiza, luarea deciziilor și interacțiunea cu utilizatorii. Să vedem cum arată o astfel de creație:
+- **Multi-agenti**. AutoGen susține crearea mai multor agenți care pot lucra împreună pentru a realiza sarcini complexe. Agenții pot comunica, împărtăși informații și coordona acțiunile pentru a rezolva probleme mai eficient. Pentru a crea un sistem multi-agent, poți defini diferite tipuri de agenți cu funcții și roluri specializate, cum ar fi colectarea datelor, analiza, luarea deciziilor și interacțiunea cu utilizatorul. Hai să vedem cum arată o astfel de creație ca să avem o idee:
 
     ```python
     editor_description = "Editor for planning and reviewing the content."
 
-    # Example of declaring an Agent
+    # Exemplu de declarare a unui Agent
     editor_agent_type = await EditorAgent.register(
     runtime,
-    editor_topic_type,  # Using topic type as the agent type.
+    editor_topic_type,  # Folosind tipul 'topic' ca tip al agentului.
     lambda: EditorAgent(
         description=editor_description,
         group_chat_topic_type=group_chat_topic_type,
@@ -357,9 +357,9 @@ Iată câteva concepte de bază importante ale AutoGen:
         ),
     )
 
-    # remaining declarations shortened for brevity
+    # Celelalte declarații au fost prescurtate din motive de concizie
 
-    # Group chat
+    # Chat de grup
     group_chat_manager_type = await GroupChatManager.register(
     runtime,
     "group_chat_manager",
@@ -379,30 +379,30 @@ Iată câteva concepte de bază importante ale AutoGen:
     )
     ```
   
-  În codul anterior, avem un `GroupChatManager` care este înregistrat cu runtime-ul. Acest manager este responsabil pentru coordonarea interacțiunilor dintre diferite tipuri de agenți, cum ar fi scriitori, ilustratori, editori și utilizatori.
+În codul precedent avem un `GroupChatManager` înregistrat în runtime. Acest manager este responsabil de coordonarea interacțiunilor între diferite tipuri de agenți, cum ar fi scriitorii, ilustratorii, editorii și utilizatorii.
 
-- **Runtime-ul agentului**. Cadrul oferă un mediu de runtime, permițând comunicarea între agenți, gestionând identitățile și ciclurile lor de viață și impunând limite de securitate și confidențialitate. Aceasta înseamnă că puteți rula agenții dvs. într-un mediu sigur și controlat, asigurându-vă că pot interacționa în siguranță și eficient. Există două runtime-uri de interes:
-  - **Runtime independent**. Aceasta este o alegere bună pentru aplicații cu un singur proces, unde toți agenții sunt implementați în același limbaj de programare și rulează în același proces. Iată o ilustrare a modului în care funcționează:
+- **Runtime pentru agenți**. Cadrul oferă un mediu de rulare care permite comunicarea între agenți, gestionează identitățile și ciclurile lor de viață și impune limite de securitate și confidențialitate. Acest lucru înseamnă că poți rula agenții într-un mediu sigur și controlat, asigurând interacțiuni sigure și eficiente. Sunt două tipuri de runtime de interes:
+  - **Runtime standalone**. Este o opțiune bună pentru aplicații cu un singur proces, unde toți agenții sunt implementați în același limbaj de programare și rulează în același proces. Iată o ilustrație a modului în care funcționează:  
   
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Runtime independent</a>  
-    Stiva aplicației
+    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Runtime standalone</a>  
+Pachetul aplicației
 
-    *agenții comunică prin mesaje prin runtime, iar runtime-ul gestionează ciclul de viață al agenților*
+    *agenții comunică prin mesaje prin runtime, iar runtime gestionează ciclul de viață al agenților*
 
-  - **Runtime distribuit al agenților**, este potrivit pentru aplicații multi-proces, unde agenții pot fi implementați în diferite limbaje de programare și pot rula pe mașini diferite. Iată o ilustrare a modului în care funcționează:
+  - **Runtime distribuit pentru agenți**, potrivit pentru aplicații multi-proces unde agenții pot fi implementați în limbaje de programare diferite și rulează pe mașini diferite. Iată o ilustrație a modului în care funcționează:  
   
     <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">Runtime distribuit</a>
 
-## Semantic Kernel + Cadru pentru Agenți
+## Semantic Kernel + Agent Framework
 
-Semantic Kernel este un SDK de orchestrare AI pregătit pentru întreprinderi. Acesta constă din conectori AI și de memorie, împreună cu un Cadru pentru Agenți.
+Semantic Kernel este un SDK pentru orchestrare AI pregătit pentru întreprinderi. Este compus din conectori AI și de memorie, împreună cu un Cadru pentru Agenți.
 
-Să acoperim mai întâi câteva componente de bază:
+Să începem cu câteva componente de bază:
 
-- **Conectori AI**: Aceasta este o interfață cu servicii AI externe și surse de date pentru utilizare atât în Python, cât și în C#.
+- **Conectori AI**: Aceasta este o interfață cu servicii AI externe și surse de date utilizabilă atât în Python, cât și în C#.
 
   ```python
-  # Semantic Kernel Python
+  # Kernel semantic pentru Python
   from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
   from semantic_kernel.kernel import Kernel
 
@@ -432,9 +432,9 @@ Să acoperim mai întâi câteva componente de bază:
     var kernel = builder.Build();
     ```
   
-  Aici aveți un exemplu simplu despre cum puteți crea un kernel și adăuga un serviciu de completare a chat-ului. Semantic Kernel creează o conexiune la un serviciu AI extern, în acest caz, Azure OpenAI Chat Completion.
+Aici ai un exemplu simplu despre cum poți crea un kernel și adăuga un serviciu de completare chat. Semantic Kernel creează o conexiune către un serviciu AI extern, în acest caz, Azure OpenAI Chat Completion.
 
-- **Pluginuri**: Acestea encapsulează funcții pe care o aplicație le poate utiliza. Există atât pluginuri gata făcute, cât și unele personalizate pe care le puteți crea. Un concept asociat este "funcțiile de solicitare". În loc să oferiți indicii în limbaj natural pentru invocarea funcțiilor, difuzați anumite funcții către model. Pe baza contextului actual al chat-ului, modelul poate alege să apeleze una dintre aceste funcții pentru a completa o cerere sau o întrebare. Iată un exemplu:
+- **Pluginuri**: Acestea încuadrează funcții pe care o aplicație le poate folosi. Există atât pluginuri gata făcute, cât și unele personalizate pe care le poți crea. Un concept asociat este „funcțiile prompt”. În loc să furnizezi indicații în limbaj natural pentru invocarea funcțiilor, transmiți anumite funcții către model. Bazat pe contextul curent al chat-ului, modelul poate alege să apeleze una dintre aceste funcții pentru a îndeplini o solicitare sau un query. Iată un exemplu:
 
   ```python
   from semantic_kernel.connectors.ai.open_ai.services.azure_chat_completion import AzureChatCompletion
@@ -491,9 +491,9 @@ Să acoperim mai întâi câteva componente de bază:
 
     ```
   
-  Aici, aveți mai întâi un șablon de solicitare `skPrompt` care lasă loc pentru ca utilizatorul să introducă text, `$userInput`. Apoi creați funcția kernel `SummarizeText` și o importați în kernel cu numele pluginului `SemanticFunctions`. Observați numele funcției care ajută Semantic Kernel să înțeleagă ce face funcția și când ar trebui să fie apelată.
+Aici, mai întâi ai un șablon de prompt `skPrompt` care lasă loc utilizatorului să introducă textul, `$userInput`. Apoi creezi funcția kernel `SummarizeText` și o imporți în kernel cu numele pluginului `SemanticFunctions`. Observă numele funcției care ajută Semantic Kernel să înțeleagă ce face funcția și când ar trebui apelată.
 
-- **Funcție nativă**: Există și funcții native pe care cadrul le poate apela direct pentru a îndeplini sarcina. Iată un exemplu de astfel de funcție care recuperează conținutul dintr-un fișier:
+- **Funcție nativă**: Există și funcții native pe care cadrul le poate apela direct pentru a executa sarcini. Iată un exemplu de astfel de funcție care extrage conținutul dintr-un fișier:
 
     ```csharp
     public class NativeFunctions {
@@ -516,22 +516,51 @@ Să acoperim mai întâi câteva componente de bază:
 
     ```
   
-- **Memorie**: Abstractizează și simplifică gestionarea contextului pentru aplicațiile AI. Ideea cu memoria este că aceasta este
-Aceste informații sunt apoi stocate în colecția de memorie `SummarizedAzureDocs`. Acesta este un exemplu foarte simplificat, dar poți vedea cum poți stoca informații în memorie pentru ca LLM să le utilizeze.
+- **Memorie**: Abstractizează și simplifică gestionarea contextului pentru aplicațiile AI. Ideea cu memoria este că aceasta este ceva ce LLM ar trebui să știe. Poți stoca aceste informații într-un magazin vectorial care devine o bază de date în memorie, o bază de date vectorială sau similar. Iată un exemplu de scenariu foarte simplificat în care se adaugă *fapte* în memorie:
 
-Acestea sunt elementele de bază ale framework-ului Semantic Kernel, dar ce putem spune despre Agent Framework?
+    ```csharp
+    var facts = new Dictionary<string,string>();
+    facts.Add(
+        "Azure Machine Learning; https://learn.microsoft.com/azure/machine-learning/",
+        @"Azure Machine Learning is a cloud service for accelerating and
+        managing the machine learning project lifecycle. Machine learning professionals,
+        data scientists, and engineers can use it in their day-to-day workflows"
+    );
+    
+    facts.Add(
+        "Azure SQL Service; https://learn.microsoft.com/azure/azure-sql/",
+        @"Azure SQL is a family of managed, secure, and intelligent products
+        that use the SQL Server database engine in the Azure cloud."
+    );
+    
+    string memoryCollectionName = "SummarizedAzureDocs";
+    
+    foreach (var fact in facts) {
+        await memoryBuilder.SaveReferenceAsync(
+            collection: memoryCollectionName,
+            description: fact.Key.Split(";")[1].Trim(),
+            text: fact.Value,
+            externalId: fact.Key.Split(";")[2].Trim(),
+            externalSourceName: "Azure Documentation"
+        );
+    }
+    ```
 
-## Serviciul Azure AI Agent
+Aceste informații sunt apoi stocate în colecția de memorie `SummarizedAzureDocs`. Acesta este un exemplu foarte simplificat, dar puteți vedea cum puteți stoca informații în memorie pentru ca LLM să le folosească.
 
-Serviciul Azure AI Agent este o adăugare mai recentă, introdusă la Microsoft Ignite 2024. Acesta permite dezvoltarea și implementarea agenților AI cu modele mai flexibile, cum ar fi apelarea directă a LLM-urilor open-source precum Llama 3, Mistral și Cohere.
+Deci, acestea sunt elementele de bază ale framework-ului Semantic Kernel, dar ce putem spune despre Agent Framework?
 
-Serviciul Azure AI Agent oferă mecanisme mai puternice de securitate pentru întreprinderi și metode de stocare a datelor, ceea ce îl face potrivit pentru aplicații de tip enterprise.
+## Azure AI Agent Service
 
-Funcționează direct cu framework-uri de orchestrare multi-agent, cum ar fi AutoGen și Semantic Kernel.
+Azure AI Agent Service este o adiție mai recentă, introdusă la Microsoft Ignite 2024. Permite dezvoltarea și implementarea de agenți AI cu modele mai flexibile, cum ar fi apelarea directă a LLM-urilor open-source precum Llama 3, Mistral și Cohere.
 
-Acest serviciu este în prezent în Public Preview și suportă Python și C# pentru construirea agenților.
+Azure AI Agent Service oferă mecanisme de securitate enterprise mai puternice și metode de stocare a datelor, făcându-l potrivit pentru aplicații enterprise.
 
-Folosind Semantic Kernel Python, putem crea un agent Azure AI cu un plugin definit de utilizator:
+Funcționează direct cu framework-uri de orchestrare multi-agent precum AutoGen și Semantic Kernel.
+
+Acest serviciu este în prezent în Previzualizare Publică și suportă Python și C# pentru construirea agenților.
+
+Folosind Semantic Kernel Python, putem crea un Azure AI Agent cu un plugin definit de utilizator:
 
 ```python
 import asyncio
@@ -545,7 +574,7 @@ from semantic_kernel.contents import AuthorRole
 from semantic_kernel.functions import kernel_function
 
 
-# Define a sample plugin for the sample
+# Definește un plugin de exemplu pentru exemplu
 class MenuPlugin:
     """A sample Menu Plugin used for the concept sample."""
 
@@ -574,23 +603,23 @@ async def main() -> None:
             conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
         ) as client,
     ):
-        # Create agent definition
+        # Creează definiția agentului
         agent_definition = await client.agents.create_agent(
             model=ai_agent_settings.model_deployment_name,
             name="Host",
             instructions="Answer questions about the menu.",
         )
 
-        # Create the AzureAI Agent using the defined client and agent definition
+        # Creează Agentul AzureAI folosind clientul și definiția agentului definite
         agent = AzureAIAgent(
             client=client,
             definition=agent_definition,
             plugins=[MenuPlugin()],
         )
 
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
+        # Creează un fir de discuție pentru a găzdui conversația
+        # Dacă nu se furnizează niciun fir, un fir nou va fi
+        # creat și returnat împreună cu răspunsul inițial
         thread: AzureAIAgentThread | None = None
 
         user_inputs = [
@@ -603,7 +632,7 @@ async def main() -> None:
         try:
             for user_input in user_inputs:
                 print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
+                # Invocă agentul pentru firul specificat
                 response = await agent.get_response(
                     messages=user_input,
                     thread_id=thread,
@@ -619,11 +648,11 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### Concepte de bază
+### Concepute de bază
 
-Serviciul Azure AI Agent are următoarele concepte de bază:
+Azure AI Agent Service are următoarele concepte de bază:
 
-- **Agent**. Serviciul Azure AI Agent se integrează cu Azure AI Foundry. În cadrul AI Foundry, un agent AI acționează ca un microserviciu "inteligent" care poate fi utilizat pentru a răspunde la întrebări (RAG), a efectua acțiuni sau a automatiza complet fluxuri de lucru. Acest lucru este realizat prin combinarea puterii modelelor generative AI cu instrumente care îi permit să acceseze și să interacționeze cu surse de date din lumea reală. Iată un exemplu de agent:
+- **Agent**. Azure AI Agent Service se integrează cu Microsoft Foundry. În AI Foundry, un AI Agent acționează ca un microserviciu „inteligent” care poate fi folosit pentru a răspunde la întrebări (RAG), a efectua acțiuni sau a automatiza complet fluxurile de lucru. Realizează acest lucru combinând puterea modelelor AI generative cu instrumente care îi permit să acceseze și să interacționeze cu surse reale de date. Iată un exemplu de agent:
 
     ```python
     agent = project_client.agents.create_agent(
@@ -635,9 +664,9 @@ Serviciul Azure AI Agent are următoarele concepte de bază:
     )
     ```
 
-    În acest exemplu, un agent este creat cu modelul `gpt-4o-mini`, un nume `my-agent` și instrucțiuni `You are helpful agent`. Agentul este echipat cu instrumente și resurse pentru a efectua sarcini de interpretare a codului.
+    În acest exemplu, un agent este creat cu modelul `gpt-4o-mini`, un nume `my-agent` și instrucțiuni „You are helpful agent”. Agentul este echipat cu instrumente și resurse pentru a efectua sarcini de interpretare a codului.
 
-- **Thread și mesaje**. Thread-ul este un alt concept important. Reprezintă o conversație sau o interacțiune între un agent și un utilizator. Thread-urile pot fi utilizate pentru a urmări progresul unei conversații, a stoca informații de context și a gestiona starea interacțiunii. Iată un exemplu de thread:
+- **Thread și mesaje**. Thread-ul este un alt concept important. Reprezintă o conversație sau o interacțiune între un agent și un utilizator. Thread-urile pot fi folosite pentru a urmări progresul unei conversații, a stoca informații de context și a gestiona starea interacțiunii. Iată un exemplu de thread:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -655,67 +684,68 @@ Serviciul Azure AI Agent are următoarele concepte de bază:
     print(f"Messages: {messages}")
     ```
 
-    În codul anterior, este creat un thread. Ulterior, un mesaj este trimis către thread. Prin apelarea `create_and_process_run`, agentul este solicitat să efectueze o sarcină pe thread. În final, mesajele sunt preluate și înregistrate pentru a vedea răspunsul agentului. Mesajele indică progresul conversației dintre utilizator și agent. Este, de asemenea, important de înțeles că mesajele pot fi de diferite tipuri, cum ar fi text, imagine sau fișier, ceea ce înseamnă că munca agentului a rezultat, de exemplu, într-o imagine sau un răspuns text. Ca dezvoltator, poți folosi aceste informații pentru a procesa răspunsul sau pentru a-l prezenta utilizatorului.
+    În codul anterior, un thread este creat. Ulterior, un mesaj este trimis thread-ului. Prin apelarea funcției `create_and_process_run`, agentului i se cere să efectueze lucrări pe thread. În final, mesajele sunt preluate și înregistrate pentru a vedea răspunsul agentului. Mesajele indică progresul conversației dintre utilizator și agent. Este, de asemenea, important să înțelegem că mesajele pot fi de tipuri diferite, cum ar fi text, imagine sau fișier, ceea ce înseamnă că munca agentului a generat, de exemplu, o imagine sau un răspuns text. Ca dezvoltator, puteți folosi atunci aceste informații pentru a procesa mai departe răspunsul sau pentru a-l prezenta utilizatorului.
 
-- **Integrare cu alte framework-uri AI**. Serviciul Azure AI Agent poate interacționa cu alte framework-uri precum AutoGen și Semantic Kernel, ceea ce înseamnă că poți construi o parte din aplicația ta într-unul dintre aceste framework-uri și, de exemplu, să folosești serviciul Agent ca orchestrator sau poți construi totul în serviciul Agent.
+- **Se integrează cu alte framework-uri AI**. Azure AI Agent Service poate interacționa cu alte framework-uri, cum ar fi AutoGen și Semantic Kernel, ceea ce înseamnă că puteți construi o parte din aplicația dvs. într-unul dintre aceste framework-uri și, de exemplu, să folosiți serviciul Agent ca orchestrator sau să construiți totul în serviciul Agent.
 
-**Cazuri de utilizare**: Serviciul Azure AI Agent este conceput pentru aplicații de tip enterprise care necesită implementarea agenților AI într-un mod sigur, scalabil și flexibil.
+**Cazuri de utilizare**: Azure AI Agent Service este proiectat pentru aplicații enterprise care necesită implementare securizată, scalabilă și flexibilă a agenților AI.
 
-## Care sunt diferențele dintre aceste framework-uri?
+## Care este diferența dintre aceste framework-uri?
 
-Pare că există multe suprapuneri între aceste framework-uri, dar există câteva diferențe cheie în ceea ce privește designul, capabilitățile și cazurile de utilizare țintă:
+Se pare că există multe suprapuneri între aceste framework-uri, dar există diferențe cheie în ceea ce privește designul, capabilitățile și cazurile țintă de utilizare:
 
-- **AutoGen**: Este un framework de experimentare axat pe cercetarea de vârf în sisteme multi-agent. Este cel mai potrivit pentru experimentarea și prototiparea sistemelor multi-agent sofisticate.
-- **Semantic Kernel**: Este o bibliotecă de agenți pregătită pentru producție, destinată construirii aplicațiilor agentice de tip enterprise. Se concentrează pe aplicații agentice distribuite, bazate pe evenimente, permițând utilizarea mai multor LLM-uri și SLM-uri, instrumente și modele de design single/multi-agent.
-- **Azure AI Agent Service**: Este o platformă și un serviciu de implementare în Azure Foundry pentru agenți. Oferă conectivitate la servicii suportate de Azure, cum ar fi Azure OpenAI, Azure AI Search, Bing Search și execuția de cod.
+- **AutoGen**: Este un framework de experimentare axat pe cercetarea de ultimă generație în sisteme multi-agent. Este cel mai bun loc pentru a experimenta și prototipa sisteme multi-agent sofisticate.
+- **Semantic Kernel**: Este o bibliotecă gata pentru producție pentru construirea de aplicații agentice enterprise. Se concentrează pe aplicații agentice distribuite, bazate pe evenimente, permițând utilizarea mai multor LLM-uri și SLM-uri, unelte și modele de design cu agenți unici sau multipli.
+- **Azure AI Agent Service**: Este o platformă și un serviciu de implementare în Azure Foundry pentru agenți. Oferă conectivitate pentru servicii suportate de Azure Foundry, precum Azure OpenAI, Azure AI Search, Bing Search și execuția codului.
 
-Încă nu ești sigur ce să alegi?
+Încă nu sunteți sigur pe care să-l alegeți?
 
 ### Cazuri de utilizare
 
-Să vedem dacă te putem ajuta trecând prin câteva cazuri de utilizare comune:
+Să vedem dacă vă putem ajuta parcurgând câteva cazuri comune de utilizare:
 
-> Î: Experimentez, învăț și construiesc aplicații agent proof-of-concept și vreau să pot construi și experimenta rapid.
+> Întrebare: Experimentez, învăț și construiesc aplicații agentice proof-of-concept și doresc să pot construi și experimenta rapid
 >
 
-> R: AutoGen ar fi o alegere bună pentru acest scenariu, deoarece se concentrează pe aplicații agentice distribuite, bazate pe evenimente, și suportă modele avansate de design multi-agent.
+> Răspuns: AutoGen ar fi o alegere bună pentru acest scenariu, deoarece se concentrează pe aplicații agentice distribuite, bazate pe evenimente și suportă modele avansate de design multi-agent.
 
-> Î: Ce face ca AutoGen să fie o alegere mai bună decât Semantic Kernel și Azure AI Agent Service pentru acest caz de utilizare?
+> Întrebare: Ce face ca AutoGen să fie o alegere mai bună decât Semantic Kernel și Azure AI Agent Service pentru acest caz de utilizare?
 >
-> R: AutoGen este conceput special pentru aplicații agentice distribuite, bazate pe evenimente, ceea ce îl face potrivit pentru automatizarea sarcinilor de generare de cod și analiză de date. Oferă instrumentele și capabilitățile necesare pentru a construi eficient sisteme multi-agent complexe.
+> Răspuns: AutoGen este proiectat special pentru aplicații agentice distribuite, bazate pe evenimente, ceea ce îl face potrivit pentru automatizarea sarcinilor de generare cod și analiză de date. Oferă instrumentele și capabilitățile necesare pentru a construi sisteme complexe multi-agent în mod eficient.
 
-> Î: Pare că și Azure AI Agent Service ar putea funcționa aici, are instrumente pentru generarea de cod și altele?
+> Întrebare: Se pare că Azure AI Agent Service ar putea funcționa și el aici, are unelte pentru generare de cod și altele?
+
 >
-> R: Da, Azure AI Agent Service este o platformă pentru agenți și adaugă capabilități integrate pentru mai multe modele, Azure AI Search, Bing Search și Azure Functions. Este ușor să construiești agenții în Foundry Portal și să îi implementezi la scară.
+> Răspuns: Da, Azure AI Agent Service este un serviciu de platformă pentru agenți și adaugă capabilități încorporate pentru mai multe modele, Azure AI Search, Bing Search și Azure Functions. Facilitează construirea agenților în Foundry Portal și implementarea lor la scară.
 
-> Î: Sunt încă confuz, dă-mi doar o opțiune.
+> Întrebare: Încă sunt confuz, dă-mi te rog o singură opțiune
 >
-> R: O alegere excelentă este să îți construiești aplicația în Semantic Kernel mai întâi și apoi să folosești Azure AI Agent Service pentru a implementa agentul. Această abordare îți permite să îți păstrezi agenții cu ușurință, în timp ce beneficiezi de puterea de a construi sisteme multi-agent în Semantic Kernel. În plus, Semantic Kernel are un conector în AutoGen, ceea ce face ușor să folosești ambele framework-uri împreună.
+> Răspuns: O alegere excelentă este să-ți construiești aplicația în Semantic Kernel mai întâi și apoi să folosești Azure AI Agent Service pentru a-ți implementa agentul. Această abordare îți permite să persiști ușor agenții în timp ce valorifici puterea de a construi sisteme multi-agent în Semantic Kernel. În plus, Semantic Kernel are un conector în AutoGen, făcând ușoară utilizarea ambelor framework-uri împreună.
 
-Să rezumăm diferențele cheie într-un tabel:
+Să rezumăm principalele diferențe într-un tabel:
 
-| Framework | Focus | Concepte de bază | Cazuri de utilizare |
+| Framework | Focus | Concepute de bază | Cazuri de utilizare |
 | --- | --- | --- | --- |
-| AutoGen | Aplicații agentice distribuite, bazate pe evenimente | Agenți, Personaje, Funcții, Date | Generare de cod, sarcini de analiză de date |
-| Semantic Kernel | Înțelegerea și generarea de conținut asemănător limbajului uman | Agenți, Componente Modulare, Colaborare | Înțelegerea limbajului natural, generarea de conținut |
-| Azure AI Agent Service | Modele flexibile, securitate enterprise, Generare de cod, Apelare de instrumente | Modularitate, Colaborare, Orchestrare de procese | Implementarea agenților AI într-un mod sigur, scalabil și flexibil |
+| AutoGen | Aplicații agentice distribuite, bazate pe evenimente | Agenți, Personaje, Funcții, Date | Generare de cod, sarcini de analiză a datelor |
+| Semantic Kernel | Înțelegerea și generarea de conținut textual asemănător omului | Agenți, Componente modulare, Colaborare | Înțelegerea limbajului natural, generare de conținut |
+| Azure AI Agent Service | Modele flexibile, securitate enterprise, generare cod, apelare unelte | Modularitate, Colaborare, Orchestrarea proceselor | Implementare agenți AI securizată, scalabilă și flexibilă |
 
 Care este cazul ideal de utilizare pentru fiecare dintre aceste framework-uri?
 
-## Pot să integrez direct instrumentele existente din ecosistemul Azure sau am nevoie de soluții independente?
+## Pot integra instrumentele mele existente din ecosistemul Azure direct, sau am nevoie de soluții independente?
 
-Răspunsul este da, poți integra direct instrumentele existente din ecosistemul Azure cu Azure AI Agent Service, mai ales pentru că a fost construit să funcționeze perfect cu alte servicii Azure. De exemplu, ai putea integra Bing, Azure AI Search și Azure Functions. Există, de asemenea, o integrare profundă cu Azure AI Foundry.
+Răspunsul este da, puteți integra instrumentele existente din ecosistemul Azure direct cu Azure AI Agent Service, mai ales pentru că a fost construit să funcționeze perfect cu alte servicii Azure. De exemplu, ați putea integra Bing, Azure AI Search și Azure Functions. Există, de asemenea, o integrare profundă cu Microsoft Foundry.
 
-Pentru AutoGen și Semantic Kernel, poți, de asemenea, să integrezi cu serviciile Azure, dar poate fi necesar să apelezi serviciile Azure din codul tău. O altă modalitate de integrare este utilizarea SDK-urilor Azure pentru a interacționa cu serviciile Azure din agenții tăi. În plus, așa cum s-a menționat, poți folosi Azure AI Agent Service ca orchestrator pentru agenții construiți în AutoGen sau Semantic Kernel, ceea ce ar oferi acces ușor la ecosistemul Azure.
+Pentru AutoGen și Semantic Kernel, puteți de asemenea să integrați cu serviciile Azure, dar este posibil să fie nevoie să apelați serviciile Azure din codul vostru. O altă modalitate de integrare este să folosiți SDK-urile Azure pentru a interacționa cu serviciile Azure din agenții voștri. În plus, așa cum s-a menționat, puteți folosi Azure AI Agent Service ca orchestrator pentru agenții construiți în AutoGen sau Semantic Kernel, ceea ce oferă acces facil la ecosistemul Azure.
 
-## Exemple de cod
+## Coduri de exemplu
 
 - Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## Ai mai multe întrebări despre framework-urile AI Agent?
+## Aveți mai multe întrebări despre AI Agent Frameworks?
 
-Alătură-te [Discord-ului Azure AI Foundry](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de consultanță și a primi răspunsuri la întrebările tale despre AI Agents.
+Alăturați-vă [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de asistență și a primi răspunsuri la întrebările despre AI Agents.
 
 ## Referințe
 
@@ -724,19 +754,19 @@ Alătură-te [Discord-ului Azure AI Foundry](https://aka.ms/ai-agents/discord) p
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
 - <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Utilizarea Azure AI Agent Service cu AutoGen / Semantic Kernel pentru a construi o soluție multi-agent</a>
+- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution</a>
 
 ## Lecția anterioară
 
-[Introducere în AI Agents și cazuri de utilizare](../01-intro-to-ai-agents/README.md)
+[Introducere în agenții AI și cazuri de utilizare pentru agenți](../01-intro-to-ai-agents/README.md)
 
 ## Lecția următoare
 
-[Înțelegerea modelelor de design agentic](../03-agentic-design-patterns/README.md)
+[Înțelegerea modelelor de design agentice](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa nativă, trebuie considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care decurg din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

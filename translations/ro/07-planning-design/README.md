@@ -1,55 +1,55 @@
-[![Planificarea Modelului de Design](../../../translated_images/ro/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Model de proiectare pentru Planificare](../../../translated_images/ro/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
+> _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
-# Planificarea Designului
+# Planificare
 
 ## Introducere
 
-Această lecție va acoperi:
+Această lecție va acoperi
 
 * Definirea unui obiectiv general clar și împărțirea unei sarcini complexe în sarcini gestionabile.
-* Utilizarea unui output structurat pentru răspunsuri mai fiabile și ușor de citit de către mașini.
-* Aplicarea unei abordări bazate pe evenimente pentru a gestiona sarcini dinamice și intrări neașteptate.
+* Folosirea rezultatelor structurate pentru răspunsuri mai fiabile și ușor de procesat de către mașini.
+* Aplicarea unei abordări orientate pe evenimente pentru a gestiona sarcini dinamice și intrări neașteptate.
 
-## Obiective de Învățare
+## Obiective de învățare
 
-După finalizarea acestei lecții, vei înțelege:
+După parcurgerea acestei lecții, veți înțelege:
 
-* Cum să identifici și să stabilești un obiectiv general pentru un agent AI, asigurându-te că știe clar ce trebuie să realizeze.
-* Cum să descompui o sarcină complexă în subtasks gestionabile și să le organizezi într-o secvență logică.
-* Cum să echipezi agenții cu instrumentele potrivite (de exemplu, instrumente de căutare sau analiză de date), să decizi când și cum să le folosești și să gestionezi situațiile neașteptate care apar.
-* Cum să evaluezi rezultatele subtasks, să măsori performanța și să iterezi acțiunile pentru a îmbunătăți rezultatul final.
+* Identificarea și stabilirea unui obiectiv general pentru un agent AI, asigurându-vă că acesta știe clar ce trebuie realizat.
+* Descompunerea unei sarcini complexe în sub-sarcini gestionabile și organizarea lor într-o secvență logică.
+* Dotarea agenților cu instrumentele potrivite (de ex., unelte de căutare sau instrumente de analiză a datelor), deciderea momentului și modului în care sunt folosite și gestionarea situațiilor neașteptate care apar.
+* Evaluarea rezultatelor sub-sarcinilor, măsurarea performanței și iterarea acțiunilor pentru a îmbunătăți rezultatul final.
 
-## Definirea Obiectivului General și Descompunerea Sarcinii
+## Definirea obiectivului general și descompunerea unei sarcini
 
-![Definirea Obiectivelor și Sarcinilor](../../../translated_images/ro/defining-goals-tasks.d70439e19e37c47a.webp)
+![Definirea obiectivelor și sarcinilor](../../../translated_images/ro/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Majoritatea sarcinilor din lumea reală sunt prea complexe pentru a fi abordate într-un singur pas. Un agent AI are nevoie de un obiectiv concis pentru a-și ghida planificarea și acțiunile. De exemplu, consideră obiectivul:
+Majoritatea sarcinilor din lumea reală sunt prea complexe pentru a fi abordate într-un singur pas. Un agent AI are nevoie de un obiectiv concis pentru a-și ghida planificarea și acțiunile. De exemplu, luați în considerare obiectivul:
 
-    "Generează un itinerar de călătorie pentru 3 zile."
+    "Generează un itinerariu de călătorie de 3 zile."
 
-Deși este simplu de formulat, necesită totuși rafinare. Cu cât obiectivul este mai clar, cu atât agentul (și orice colaboratori umani) se pot concentra mai bine pe obținerea rezultatului dorit, cum ar fi crearea unui itinerar complet cu opțiuni de zbor, recomandări de hoteluri și sugestii de activități.
+Deși este simplu de enunțat, necesită totuși rafinare. Cu cât obiectivul este mai clar, cu atât agentul (și orice colaboratori umani) se pot concentra mai bine pe atingerea rezultatului dorit, cum ar fi crearea unui itinerar cuprinzător cu opțiuni de zbor, recomandări de hoteluri și sugestii de activități.
 
-### Descompunerea Sarcinii
+### Decompozirea sarcinii
 
-Sarcinile mari sau complexe devin mai ușor de gestionat atunci când sunt împărțite în subtasks mai mici, orientate spre obiectiv.
-Pentru exemplul itinerarului de călătorie, ai putea descompune obiectivul în:
+Sarcinile mari sau complicate devin mai ușor de gestionat când sunt împărțite în sub-sarcini mai mici, orientate către un obiectiv.
+Pentru exemplul itinerarului de călătorie, ați putea descompune obiectivul în:
 
-* Rezervarea Zborului
-* Rezervarea Hotelului
-* Închirierea Mașinii
+* Rezervare zbor
+* Rezervare hotel
+* Închiriere mașină
 * Personalizare
 
-Fiecare subtask poate fi abordat de agenți sau procese dedicate. Un agent ar putea fi specializat în căutarea celor mai bune oferte de zboruri, altul în rezervarea hotelurilor și așa mai departe. Un agent coordonator sau „downstream” poate apoi compila aceste rezultate într-un itinerar coerent pentru utilizatorul final.
+Fiecare sub-sarcină poate fi apoi abordată de agenți sau procese dedicate. Un agent s-ar putea specializa în căutarea celor mai bune oferte de zbor, altul se concentrează pe rezervările de hotel și așa mai departe. Un agent coordonator sau „downstream” poate apoi să compileze aceste rezultate într-un itinerar coerent pentru utilizatorul final.
 
-Această abordare modulară permite, de asemenea, îmbunătățiri incrementale. De exemplu, ai putea adăuga agenți specializați pentru Recomandări de Mâncare sau Sugestii de Activități Locale și să rafinezi itinerarul în timp.
+Această abordare modulară permite, de asemenea, îmbunătățiri treptate. De exemplu, puteți adăuga agenți specializați pentru Recomandări culinare sau Sugestii pentru activități locale și rafina itinerarul în timp.
 
-### Output Structurat
+### Ieșire structurată
 
-Modelele de Limbaj Mare (LLMs) pot genera output structurat (de exemplu, JSON) care este mai ușor de analizat și procesat de agenți sau servicii „downstream”. Acest lucru este deosebit de util într-un context multi-agent, unde putem acționa aceste sarcini după ce output-ul de planificare este primit. Consultă aceasta pentru o privire rapidă.
+Modelele de limbaj mari (LLM-uri) pot genera ieșiri structurate (de ex. JSON) care sunt mai ușor de analizat și procesat de către agenții sau serviciile downstream. Acest lucru este deosebit de util într-un context multi-agent, unde putem executa aceste sarcini după ce este primit rezultatul planificării. Consultați acest <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">articol pe blog</a> pentru o prezentare rapidă.
 
-Următorul fragment de cod Python demonstrează un agent de planificare simplu care descompune un obiectiv în subtasks și generează un plan structurat:
+The following Python snippet demonstrates a simple planning agent decomposing a goal into subtasks and generating a structured plan:
 
 ```python
 from pydantic import BaseModel
@@ -72,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model pentru sub-sarcină de călătorie
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # dorim să atribuim sarcina agentului
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -85,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # Pentru a vă autentifica cu modelul, va trebui să generați un token de acces personal (PAT) în setările GitHub.
+    # Creați tokenul PAT urmând instrucțiunile de aici: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -96,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Definiți mesajul utilizatorului
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -125,30 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Asigurați-vă că conținutul răspunsului este un șir JSON valid înainte de a-l încărca
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
 #     raise ValueError("Response content is not a valid JSON string")
 
-# # Print the response content after loading it as JSON
+# # Afișați conținutul răspunsului după ce este încărcat ca JSON
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Validați conținutul răspunsului cu modelul MathReasoning
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Agent de Planificare cu Orchestrare Multi-Agent
+### Planning Agent with Multi-Agent Orchestration
 
-În acest exemplu, un Agent Router Semantic primește o cerere de la utilizator (de exemplu, "Am nevoie de un plan de hotel pentru călătoria mea.").
+In this example, a Semantic Router Agent receives a user request (e.g., "I need a hotel plan for my trip.").
 
-Planificatorul apoi:
+The planner then:
 
-* Primește Planul Hotelului: Planificatorul preia mesajul utilizatorului și, pe baza unui prompt de sistem (inclusiv detalii despre agenții disponibili), generează un plan structurat de călătorie.
-* Listează Agenții și Instrumentele Lor: Registrul de agenți deține o listă de agenți (de exemplu, pentru zboruri, hoteluri, închirieri de mașini și activități) împreună cu funcțiile sau instrumentele pe care le oferă.
-* Direcționează Planul către Agenții Respectivi: În funcție de numărul de subtasks, planificatorul trimite fie mesajul direct unui agent dedicat (pentru scenarii cu o singură sarcină), fie coordonează printr-un manager de chat de grup pentru colaborare multi-agent.
-* Rezumă Rezultatul: În final, planificatorul rezumă planul generat pentru claritate.
-Următorul exemplu de cod Python ilustrează acești pași:
+* Receives the Hotel Plan: The planner takes the user’s message and, based on a system prompt (including available agent details), generates a structured travel plan.
+* Lists Agents and Their Tools: The agent registry holds a list of agents (e.g., for flight, hotel, car rental, and activities) along with the functions or tools they offer.
+* Routes the Plan to the Respective Agents: Depending on the number of subtasks, the planner either sends the message directly to a dedicated agent (for single-task scenarios) or coordinates via a group chat manager for multi-agent collaboration.
+* Summarizes the Outcome: Finally, the planner summarizes the generated plan for clarity.
+The following Python code sample illustrates these steps:
 
 ```python
 
@@ -166,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model de sub-sarcină pentru călătorii
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # vrem să atribuim sarcina agentului
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -183,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Creează clientul folosind variabile de mediu verificate de tip
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -195,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Definește mesajul utilizatorului
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -212,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Asigură-te că conținutul răspunsului este un șir JSON valid înainte de a-l încărca
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Afișează conținutul răspunsului după ce l-ai încărcat ca JSON
 
 pprint(json.loads(response_content))
 ```
 
-Ce urmează este output-ul din codul anterior și poți folosi acest output structurat pentru a direcționa către `assigned_agent` și a rezuma planul de călătorie pentru utilizatorul final.
+What follows is the output from the previous code and you can then use this structured output to route to `assigned_agent` and summarize the travel plan to the end user.
 
 ```json
 {
@@ -254,19 +254,19 @@ Ce urmează este output-ul din codul anterior și poți folosi acest output stru
 }
 ```
 
-Un notebook exemplu cu codul anterior este disponibil [aici](07-autogen.ipynb).
+An example notebook with the previous code sample is available [here](07-autogen.ipynb).
 
-### Planificare Iterativă
+### Planificare iterativă
 
-Unele sarcini necesită un proces de încercare și eroare sau re-planificare, unde rezultatul unui subtask influențează următorul. De exemplu, dacă agentul descoperă un format de date neașteptat în timp ce rezervă zboruri, ar putea fi necesar să își adapteze strategia înainte de a trece la rezervarea hotelurilor.
+Some tasks require a back-and-forth or re-planning, where the outcome of one subtask influences the next. For example, if the agent discovers an unexpected data format while booking flights, it might need to adapt its strategy before moving on to hotel bookings.
 
-În plus, feedback-ul utilizatorului (de exemplu, un utilizator care decide că preferă un zbor mai devreme) poate declanșa o re-planificare parțială. Această abordare dinamică, iterativă, asigură că soluția finală se aliniază cu constrângerile din lumea reală și preferințele utilizatorului în evoluție.
+Additionally, user feedback (e.g. a human deciding they prefer an earlier flight) can trigger a partial re-plan. This dynamic, iterative approach ensures that the final solution aligns with real-world constraints and evolving user preferences.
 
-Exemplu de cod:
+de ex. cod exemplu
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. la fel ca în codul anterior și transmite istoricul utilizatorului, planul curent
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -280,34 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. replanifică și trimite sarcinile agenților corespunzători
 ```
 
-Pentru o planificare mai cuprinzătoare, consultă Magnetic One pentru rezolvarea sarcinilor complexe.
+For more comprehensive planning do checkout Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">articol pe blog</a> for solving complex tasks.
 
 ## Rezumat
 
-În acest articol, am analizat un exemplu despre cum putem crea un planificator care poate selecta dinamic agenții disponibili definiți. Output-ul Planificatorului descompune sarcinile și atribuie agenții astfel încât acestea să poată fi executate. Se presupune că agenții au acces la funcțiile/instrumentele necesare pentru a îndeplini sarcina. În plus față de agenți, poți include alte modele precum reflecția, sumarizarea și chat-ul round robin pentru personalizare suplimentară.
+În acest articol am analizat un exemplu despre cum putem crea un planificator care poate selecta dinamic agenții disponibili. Ieșirea planificatorului descompune sarcinile și atribuie agenții astfel încât acestea să poată fi executate. Se presupune că agenții au acces la funcțiile/uneltele necesare pentru a îndeplini sarcina. Pe lângă agenți, puteți include și alte pattern-uri precum reflection, summarizer, și round robin chat pentru personalizare suplimentară.
 
-## Resurse Suplimentare
+## Resurse suplimentare
 
-AutoGen Magnetic One - Un sistem multi-agent generalist pentru rezolvarea sarcinilor complexe care a obținut rezultate impresionante pe mai multe benchmark-uri agentice provocatoare. Referință:
+AutoGen Magentic One - Un sistem multi-agent generalist pentru rezolvarea sarcinilor complexe și care a obținut rezultate impresionante pe multiple benchmark-uri agentice provocatoare. Referință: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. În această implementare orchestratorul creează un plan specific sarcinii și delegă aceste sarcini agenților disponibili. Pe lângă planificare, orchestratorul folosește și un mecanism de urmărire pentru a monitoriza progresul sarcinii și replanifică după cum este necesar.
 
-. În această implementare, orchestratorul creează un plan specific sarcinii și deleagă aceste sarcini agenților disponibili. Pe lângă planificare, orchestratorul utilizează și un mecanism de urmărire pentru a monitoriza progresul sarcinii și a re-planifica, dacă este necesar.
+### Aveți mai multe întrebări despre Modelul de design pentru planificare?
 
-### Ai Mai Multe Întrebări despre Modelul de Design pentru Planificare?
+Alăturați-vă [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de consultanță și a primi răspunsuri la întrebările despre agenții AI.
 
-Alătură-te [Discordului Azure AI Foundry](https://aka.ms/ai-agents/discord) pentru a te întâlni cu alți cursanți, a participa la ore de consultanță și a obține răspunsuri la întrebările tale despre AI Agents.
+## Lecția precedentă
 
-## Lecția Anterioară
+[Crearea agenților AI de încredere](../06-building-trustworthy-agents/README.md)
 
-[Construirea Agenților AI de Încredere](../06-building-trustworthy-agents/README.md)
+## Lecția următoare
 
-## Lecția Următoare
-
-[Modelul de Design Multi-Agent](../08-multi-agent/README.md)
+[Modelul de proiectare multi-agent](../08-multi-agent/README.md)
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Declinare de responsabilitate**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa de origine, trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională efectuată de un traducător uman. Nu suntem răspunzători pentru nicio neînțelegere sau interpretare greșită rezultată din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

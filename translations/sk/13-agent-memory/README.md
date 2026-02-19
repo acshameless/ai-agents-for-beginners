@@ -1,171 +1,170 @@
 # Pamäť pre AI agentov 
-[![Agent Memory](../../../translated_images/sk/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
+[![Pamäť agenta](../../../translated_images/sk/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-Keď sa diskutuje o jedinečných výhodách tvorby AI agentov, hlavne sa hovoria dve veci: schopnosť volať nástroje na dokončenie úloh a schopnosť zlepšovať sa v priebehu času. Pamäť je základom tvorby samo-zlepšujúceho sa agenta, ktorý dokáže vytvárať lepšie skúsenosti pre našich používateľov.
+Keď sa diskutuje o jedinečných výhodách vytvárania AI agentov, väčšinou sa hovoria dve veci: schopnosť volať nástroje na dokončenie úloh a schopnosť zlepšovať sa v čase. Pamäť je základom vytvárania samoučiacich sa agentov, ktorí dokážu vytvárať lepšie skúsenosti pre našich používateľov.
 
-V tejto lekcii si ukážeme, čo je pamäť pre AI agentov a ako ju môžeme spravovať a využívať v prospech našich aplikácií.
+V tejto lekcii sa pozrieme na to, čo je pamäť pre AI agentov a ako ju môžeme spravovať a využívať v prospech našich aplikácií.
 
 ## Úvod
 
-Táto lekcia zahŕňa:
+Táto lekcia pokryje:
 
-• **Porozumenie pamäti AI agenta**: Čo je pamäť a prečo je pre agentov nevyhnutná.
+• **Pochopenie pamäte AI agenta**: Čo je pamäť a prečo je pre agentov podstatná.
 
-• **Implementácia a ukladanie pamäti**: Praktické metódy pridania pamäťových schopností vašim AI agentom, so zameraním na krátkodobú a dlhodobú pamäť.
+• **Implementácia a ukladanie pamäte**: Praktické metódy pridania schopností pamäte vašim AI agentom so zameraním na krátkodobú a dlhodobú pamäť.
 
-• **Umožnenie samo-zlepšenia AI agentov**: Ako pamäť umožňuje agentom učiť sa z minulých interakcií a zlepšovať sa v čase.
+• **Vytvorenie samoučiacich sa AI agentov**: Ako pamäť umožňuje agentom učiť sa z minulých interakcií a zlepšovať sa v priebehu času.
 
 ## Dostupné implementácie
 
-Táto lekcia obsahuje dva komplexné učebné poznámkové bloky:
+Táto lekcia obsahuje dva komplexné notebookové tutoriály:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implementuje pamäť pomocou Mem0 a Azure AI Search s frameworkom Semantic Kernel
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implementuje pamäť pomocou Mem0 a Azure AI Search so Semantic Kernel frameworkom
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implementuje štruktúrovanú pamäť pomocou Cognee, automaticky buduje znalostný graf založený na embeddingoch, vizualizuje graf a inteligentné vyhľadávanie
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implementuje štruktúrovanú pamäť pomocou Cognee, automaticky buduje graf znalostí založený na embeddingoch, vizualizuje graf a zabezpečuje inteligentné vyhľadávanie
 
 ## Ciele učenia
 
 Po dokončení tejto lekcie budete vedieť:
 
-• **Rozlíšiť medzi rôznymi typmi pamäti AI agentov**, vrátane pracovnej, krátkodobej a dlhodobej pamäti, ako aj špecializovaných typov ako persona a epizodická pamäť.
+• **Rozlíšiť medzi rôznymi typmi pamäte AI agenta**, vrátane pracovnej, krátkodobej a dlhodobej pamäte, ako aj špecializovaných foriem ako persona a episodická pamäť.
 
-• **Implementovať a spravovať krátkodobú a dlhodobú pamäť pre AI agentov** pomocou frameworku Semantic Kernel s využitím nástrojov ako Mem0, Cognee, Whiteboard pamäť a integrácie s Azure AI Search.
+• **Implementovať a spravovať krátkodobú a dlhodobú pamäť pre AI agentov** pomocou Semantic Kernel frameworku, s využitím nástrojov ako Mem0, Cognee, Whiteboard memory a integráciou s Azure AI Search.
 
-• **Pochopiť princípy samo-zlepšujúcich sa AI agentov** a ako robustné systémy správy pamäti prispievajú k neustálemu učeniu a adaptácii.
+• **Pochopiť princípy fungovania samoučiacich sa AI agentov** a ako robustné systémy správy pamäte prispievajú k neustálemu učeniu a adaptácii.
 
-## Porozumenie pamäti AI agenta
+## Pochopenie pamäte AI agenta
 
-V jadre, **pamäť pre AI agentov označuje mechanizmy, ktoré im umožňujú uchovávať a vyvolávať informácie**. Tieto informácie môžu byť konkrétne detaily o konverzácii, preferencie používateľa, minulé akcie alebo dokonca naučené vzorce.
+V jadre, **pamäť pre AI agentov odkazuje na mechanizmy, ktoré im umožňujú uchovávať a vyvolávať informácie**. Tieto informácie môžu byť konkrétne detaily o konverzácii, preferencie používateľa, minulé akcie alebo dokonca naučené vzory.
 
-Bez pamäti sú AI aplikácie často bezstavové, t.j. každá interakcia začína od nuly. To vedie k opakujúcemu sa a frustrujúcemu používateľskému zážitku, kde agent „zabudne“ predchádzajúci kontext alebo preferencie.
+Bez pamäti sú AI aplikácie často bezstavové, čo znamená, že každá interakcia začína od nuly. To vedie k opakujúcemu sa a frustrujúcemu používateľskému zážitku, kde agent „zabúda“ predchádzajúci kontext alebo preferencie.
 
 ### Prečo je pamäť dôležitá?
 
-inteligencia agenta je hlboko spätá s jeho schopnosťou vyvolať a využiť minulé informácie. Pamäť umožňuje agentom byť:
+Inteligencia agenta je hlboko spätá s jeho schopnosťou vyvolávať a využívať minulé informácie. Pamäť umožňuje agentom byť:
 
 • **Reflexívni**: Učiť sa z minulých akcií a výsledkov.
 
 • **Interaktívni**: Udržiavať kontext počas prebiehajúcej konverzácie.
 
-• **Proaktívni a reaktívni**: Predvídať potreby alebo primerane reagovať na základe historických dát.
+• **Proaktívni a reaktívni**: Predvídať potreby alebo reagovať primerane na základe historických dát.
 
-• **Autonómni**: Fungovať viac nezávisle využitím uložených znalostí.
+• **Autonómni**: Pôsobiť nezávislejšie čerpaním zo uložených poznatkov.
 
-Cieľom implementácie pamäti je spraviť agentov viac **spoľahlivými a schopnými**.
+Cieľom implementácie pamäte je urobiť agentov viac **spoľahlivými a schopnými**.
 
 ### Typy pamäte
 
 #### Pracovná pamäť
 
-Predstavte si ju ako kus škrtacieho papiera, ktorý agent používa počas jednej prebiehajúcej úlohy alebo procesu myslenia. Uchováva okamžité informácie potrebné na výpočet ďalšieho kroku.
+Predstavte si to ako kus papieru, ktorý agent používa počas jedinej, prebiehajúcej úlohy alebo myšlienkového procesu. Uchováva okamžité informácie potrebné na výpočet ďalšieho kroku.
 
-Pre AI agentov pracovná pamäť často zachytáva najrelevantnejšie informácie z rozhovoru, aj keď je celá chatová história dlhá alebo skrátená. Zameriava sa na vyťaženie kľúčových prvkov ako požiadavky, návrhy, rozhodnutia a akcie.
+Pre AI agentov pracovná pamäť často zachytáva najrelevantnejšie informácie z konverzácie, aj keď je celý chat dlhý alebo skrátený. Zameriava sa na extrakciu kľúčových prvkov ako požiadavky, návrhy, rozhodnutia a akcie.
 
-**Príklad pracovnej pamäti**
+**Príklad pracovnej pamäte**
 
-V cestovnej bookingovej agentúre môže pracovná pamäť zachytiť aktuálnu požiadavku používateľa, napríklad „Chcem si zarezervovať výlet do Paríža“. Táto špecifická požiadavka je uložená v bezprostrednom kontexte agenta, aby riadila aktuálnu interakciu.
+V cestovnej rezervačnej službe by pracovná pamäť mohla zachytiť aktuálnu požiadavku používateľa, napríklad „Chcem si rezervovať výlet do Paríža“. Táto konkrétna požiadavka sa drží v bezprostrednom kontexte agenta, aby usmernila aktuálnu interakciu.
 
 #### Krátkodobá pamäť
 
-Tento typ pamäti uchováva informácie počas celej jednej konverzácie alebo relácie. Je to kontext aktuálneho chatu, ktorý agentovi umožňuje odkazovať na predchádzajúce kolá dialógu.
+Tento typ pamäte uchováva informácie počas trvania jednej konverzácie alebo relácie. Je to kontext aktuálneho chatu, ktorý agentovi umožňuje odvolať sa na predchádzajúce výmeny v dialógu.
 
-**Príklad krátkodobej pamäti**
+**Príklad krátkodobej pamäte**
 
-Ak sa používateľ opýta: „Koľko by stál let do Paríža?“ a potom dodatočne „Čo ubytovanie tam?“, krátkodobá pamäť zaručí, že agent vie, že „tam“ sa vzťahuje na „Paríž“ v rámci tej istej konverzácie.
+Ak sa používateľ spýta: „Koľko by stál let do Paríža?“ a následne pokračuje: „A čo ubytovanie tam?“, krátkodobá pamäť zabezpečí, že agent vie, že „tam“ odkazuje na „Paríž“ v rámci tej istej konverzácie.
 
 #### Dlhodobá pamäť
 
-Ide o informácie, ktoré pretrvávajú naprieč viacerými konverzáciami alebo reláciami. Umožňuje agentom pamätať si používateľské preferencie, historické interakcie alebo všeobecné znalosti počas dlhých období. Toto je dôležité pre personalizáciu.
+Ide o informácie, ktoré pretrvávajú naprieč viacerými konverzáciami alebo reláciami. Umožňuje agentom zapamätať si používateľské preferencie, historické interakcie alebo všeobecné znalosti počas dlhšieho obdobia. To je dôležité pre personalizáciu.
 
-**Príklad dlhodobej pamäti**
+**Príklad dlhodobej pamäte**
 
-Dlhodobá pamäť môže uložiť, že „Ben má rád lyžovanie a vonkajšie aktivity, má rád kávu s výhľadom na hory a chce sa vyhnúť pokročilým lyžiarskym svahom kvôli minulému zraneniu“. Táto informácia, získaná z predchádzajúcich interakcií, ovplyvňuje odporúčania pri plánovaní budúcich ciest, čím ich robí vysoko personalizovanými.
+Dlhodobá pamäť môže uložiť, že „Ben má rád lyžovanie a aktivity vonku, má rád kávu s výhľadom na hory a chce sa vyhnúť pokročilým zjazdovkám kvôli minulému zraneniu“. Táto informácia, získaná z predchádzajúcich interakcií, ovplyvňuje odporúčania pri budúcom plánovaní dovolenky, čím sú výrazne personalizované.
 
 #### Persona pamäť
 
-Tento špecializovaný typ pamäti pomáha agentovi rozvíjať konzistentnú „osobnosť“ alebo „perzonu“. Umožňuje agentovi pamätať si detaily o sebe alebo svojej zamýšľanej úlohe, čím robí interakcie plynulejšími a cielenejšími.
+Tento špecializovaný typ pamäte pomáha agentovi rozvinúť konzistentnú „osobnosť“ alebo „perzónu“. Umožňuje agentovi pamätať si detaily o sebe alebo o svojej zamýšľanej roli, čím robí interakcie plynulejšími a zameranejšími.
 
-**Príklad persona pamäti**
+**Príklad persona pamäte**
+Ak je cestovný agent navrhnutý ako „expert na plánovanie lyžovačiek“, persona pamäť môže posilniť túto rolu a ovplyvniť jeho odpovede tak, aby zodpovedali tónu a znalostiam odborníka.
 
-Ak je cestovný agent navrhnutý ako „expert na plánovanie lyžovania,“ persona pamäť môže túto rolu posilniť a ovplyvniť jeho odpovede tak, aby korešpondovali s tónom a znalosťami experta.
+#### Workflow/Episodická pamäť
 
-#### Workflow/Epizodická pamäť
+Táto pamäť uchováva sekvenciu krokov, ktoré agent podnikol počas komplexnej úlohy, vrátane úspechov a zlyhaní. Je to ako zapamätať si konkrétne „epizódy“ alebo minulé skúsenosti, aby sa z nich dalo poučiť.
 
-Táto pamäť uchováva sekvenciu krokov, ktoré agent vykoná počas komplexnej úlohy, vrátane úspechov a neúspechov. Je to ako zapamätať si konkrétne „epizódy“ alebo minulé skúsenosti, aby sa z nich agent mohol poučiť.
+**Príklad episodickej pamäte**
 
-**Príklad epizodickej pamäti**
+Ak sa agent pokúsil rezervovať konkrétny let, ale zlyhalo to kvôli nedostupnosti, episodická pamäť by mohla zaznamenať toto zlyhanie, čo umožní agentovi skúsiť alternatívne lety alebo informovať používateľa o probléme pri nasledujúcom pokuse s lepším kontextom.
 
-Ak sa agent pokúsil rezervovať konkrétny let, ale zlyhalo to kvôli nedostupnosti, epizodická pamäť môže zaznamenať tento neúspech, čo agentovi umožní skúsiť alternatívne lety alebo informovať používateľa o probléme počas ďalšieho pokusu.
+#### Entity pamäť
 
-#### Entity Memory (Pamäť entít)
+To zahŕňa extrahovanie a zapamätanie si konkrétnych entít (ako ľudia, miesta alebo veci) a udalostí z konverzácií. Umožňuje agentovi vybudovať štruktúrované porozumenie kľúčových prvkov diskutovaných tém.
 
-Týka sa extrahovania a zapamätania si konkrétnych entít (ako ľudia, miesta alebo veci) a udalostí z konverzácií. Umožňuje agentovi vytvoriť štruktúrované porozumenie kľúčových prvkov, o ktorých sa hovorilo.
+**Príklad entity pamäte**
 
-**Príklad entity pamäti**
+Z konverzácie o minulom výlete môže agent extrahovať „Paríž“, „Eiffelova veža“ a „večera v reštaurácii Le Chat Noir“ ako entity. Pri budúcej interakcii by si agent mohol spomenúť na „Le Chat Noir“ a ponúknuť možnosť urobiť novú rezerváciu tam.
 
-Z konverzácie o minulej ceste by agent mohol vyextrahovať „Paríž,“ „Eiffelova veža“ a „večera v reštaurácii Le Chat Noir“ ako entity. Pri budúcej interakcii by si agent mohol spomenúť na „Le Chat Noir“ a navrhnúť novú rezerváciu tam.
+#### Štruktúrované RAG (Retrieval Augmented Generation)
 
-#### Štruktúrovaný RAG (Retrieval Augmented Generation)
-
-Hoci RAG je širšia technika, „Štruktúrovaný RAG“ je vyzdvihovaný ako silná pamäťová technológia. Extrahuje husté, štruktúrované informácie z rôznych zdrojov (konverzácie, emaily, obrázky) a používa ich na zvýšenie presnosti, vyhľadávania a rýchlosti odpovedí. Na rozdiel od klasického RAG, ktorý sa spolieha iba na sémantickú podobnosť, Štruktúrovaný RAG pracuje s inherentnou štruktúrou informácií.
+Zatiaľ čo RAG je širšia technika, „Štruktúrované RAG“ je vyzdvihnuté ako silná technológia pamäte. Extrahuje husté, štruktúrované informácie z rôznych zdrojov (konverzácie, e-maily, obrázky) a používa ich na zvýšenie presnosti, vyhľadávania a rýchlosti odpovedí. Na rozdiel od klasického RAG, ktorý sa spolieha len na sémantickú podobnosť, Štruktúrované RAG pracuje s inherentnou štruktúrou informácií.
 
 **Príklad štruktúrovaného RAG**
 
-Namiesto len zhodovania kľúčových slov, Štruktúrovaný RAG môže z emailu vyparsovať detaily letu (cieľ, dátum, čas, letecká spoločnosť) a uložiť ich štruktúrovane. To umožňuje presné dotazy ako „Aký let som si rezervoval do Paríža v utorok?“
+Namiesto len zhodovania kľúčových slov by Štruktúrované RAG mohlo parsovať detaily letu (destinácia, dátum, čas, letecká spoločnosť) z e-mailu a uložiť ich štruktúrovaným spôsobom. To umožňuje presné dotazy ako „Aký let som si rezervoval do Paríža v utorok?“
 
-## Implementácia a ukladanie pamäti
+## Implementácia a ukladanie pamäte
 
-Implementácia pamäti pre AI agentov zahŕňa systematický proces **správy pamäti**, ktorý obsahuje generovanie, ukladanie, vyhľadávanie, integráciu, aktualizáciu a dokonca aj „zabúdanie“ (alebo mazanie) informácií. Vyhľadávanie je obzvlášť kľúčovým aspektom.
+Implementácia pamäte pre AI agentov zahŕňa systematický proces **správy pamäte**, ktorý zahŕňa generovanie, ukladanie, vyhľadávanie, integráciu, aktualizáciu a dokonca aj „zabúdanie“ (alebo mazanie) informácií. Vyhľadávanie je obzvlášť kľúčový aspekt.
 
-### Špecializované pamäťové nástroje
+### Špecializované nástroje pre pamäť
 
 #### Mem0
 
-Jedným zo spôsobov, ako ukladať a spravovať pamäť agenta, je použitie špecializovaných nástrojov ako Mem0. Mem0 funguje ako perzistentná pamäťová vrstva, ktorá agentom umožňuje vyvolávať relevantné interakcie, ukladať používateľské preferencie a faktický kontext a učiť sa z úspechov a zlyhaní v priebehu času. Myšlienka je, že bezstavoví agenti sa zmenia na stavových.
+Jedným zo spôsobov, ako ukladať a spravovať pamäť agenta, je použitie špecializovaných nástrojov ako Mem0. Mem0 funguje ako perzistentná vrstva pamäti, ktorá agentom umožňuje vyvolať relevantné interakcie, ukladať používateľské preferencie a faktický kontext a učiť sa z úspechov a zlyhaní v priebehu času. Myšlienka je, že bezstavoví agenti sa premienia na stavových.
 
-Funguje prostredníctvom **dvojfázového pamäťového pipeline: extrakcia a aktualizácia**. Najprv sú správy pridané do vlákna agenta odoslané do služby Mem0, ktorá využíva veľký jazykový model (LLM) na zhrnutie histórie konverzácie a extrahovanie nových spomienok. Následne fáza aktualizácie riadená LLM rozhodne, či tieto spomienky pridať, upraviť alebo vymazať, a ukladá ich do hybridného dátového úložiska, ktoré môže obsahovať vektorové, grafové a kľúčovo-hodnotové databázy. Tento systém tiež podporuje rôzne typy pamäte a môže začleniť grafovú pamäť na správu vzťahov medzi entitami.
+Funguje cez **dvojfázový pipeline pamäti: extrakcia a aktualizácia**. Najprv sú správy pridané do vlákna agenta odoslané do služby Mem0, ktorá používa veľký jazykový model (LLM) na zhrnutie histórie konverzácie a extrakciu nových spomienok. Následne fáza aktualizácie riadená LLM určí, či tieto spomienky pridať, upraviť alebo vymazať, pričom ich uloží do hybridnej dátovej úložiska, ktoré môže zahŕňať vektorové, grafové a kľúč-hodnota databázy. Tento systém tiež podporuje rôzne typy pamäti a môže začleniť grafovú pamäť na správu vzťahov medzi entitami.
 
 #### Cognee
 
-Ďalším silným prístupom je použitie **Cognee**, open-source sémantickej pamäti pre AI agentov, ktorá premieňa štruktúrované a neštruktúrované dáta na dotazovateľné znalostné grafy založené na embeddingoch. Cognee poskytuje **dvojitú architektúru úložísk** kombinujúcu vektorové vyhľadávanie podobnosti s grafovými vzťahmi, čo umožňuje agentom pochopiť nielen to, ktoré informácie sú podobné, ale aj ako sú pojmy navzájom prepojené.
+Ďalším silným prístupom je použitie **Cognee**, open-source sémantickej pamäte pre AI agentov, ktorá transformuje štruktúrované aj neštruktúrované dáta do dotazovateľných grafov znalostí podporených embeddingami. Cognee poskytuje **architektúru s dual-store**, ktorá kombinuje vektorové vyhľadávanie podľa podobnosti s grafovými vzťahmi, čo agentom umožňuje rozumieť nielen tomu, ktoré informácie sú podobné, ale aj ako sú koncepty navzájom prepojené.
 
-Vyniká v **hybridnom vyhľadávaní**, ktoré spája vektorovú podobnosť, štruktúru grafu a uvažovanie LLM - od vyhľadávania surových segmentov po odpovedanie na otázky vedomé grafu. Systém udržiava **živú pamäť**, ktorá sa vyvíja a rastie, pričom zostáva dotazovateľná ako jeden prepojený graf, podporujúci krátkodobý kontext relácie aj dlhodobú perzistentnú pamäť.
+Vyniká v **hybridnom vyhľadávaní**, ktoré spája vektorovú podobnosť, štruktúru grafu a LLM uvažovanie - od surového vyhľadania kúskov až po otázky s ohľadom na graf. Systém udržiava **živú pamäť**, ktorá sa vyvíja a rastie a zároveň zostáva dotazovateľná ako jeden prepojený graf, podporujúc krátkodobý kontext relácie aj dlhodobú perzistentnú pamäť.
 
-Návod v Cognee poznámkovom bloku ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonštruje budovanie tejto zjednotenej pamäťovej vrstvy s praktickými príkladmi ingestovania rôznych zdrojov dát, vizualizácie znalostného grafu a vyhľadávania s rôznymi stratégiami prispôsobenými špecifickým potrebám agenta.
+Notebookový tutoriál Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonštruje budovanie tejto zjednotenej vrstvy pamäti s praktickými príkladmi ingestovania rôznorodých zdrojov dát, vizualizácie grafu znalostí a dotazovania s rôznymi stratégiami vyhľadávania prispôsobenými konkrétnym potrebám agenta.
 
-### Ukladanie pamäti s RAG
+### Ukladanie pamäte pomocou RAG
 
-Navyše k špecializovaným pamäťovým nástrojom ako Mem0 môžete využiť robustné vyhľadávacie služby ako **Azure AI Search ako backend na ukladanie a vyhľadávanie spomienok**, najmä pre štruktúrovaný RAG.
+Okrem špecializovaných nástrojov pre pamäť ako Mem0 , môžete využiť robustné vyhľadávacie služby ako **Azure AI Search ako backend na ukladanie a vyhľadávanie spomienok**, najmä pre štruktúrované RAG.
 
-To umožňuje zakotviť odpovede vášho agenta vo vašich vlastných dátach, čo zabezpečuje relevantnejšie a presnejšie odpovede. Azure AI Search môže byť použité na ukladanie používateľských cestovných spomienok, katalógov produktov alebo akýchkoľvek iných doménovo špecifických znalostí.
+To vám umožní zakotviť odpovede agenta vo vašich vlastných dátach, čím zabezpečíte relevantnejšie a presnejšie odpovede. Azure AI Search môže byť použitý na ukladanie používateľsky špecifických cestovných spomienok, katalógov produktov alebo akýchkoľvek iných doménovo špecifických znalostí.
 
-Azure AI Search podporuje funkcie ako **Štruktúrovaný RAG**, ktorý vyniká v extrahovaní a vyhľadávaní hustých, štruktúrovaných informácií z veľkých dátových súborov ako histórie konverzácií, emailov či dokonca obrázkov. Toto poskytuje „nadľudskú presnosť a pamäť“ v porovnaní s tradičnými prístupmi založenými na textovom rozkúskovaní a embeedingoch.
+Azure AI Search podporuje schopnosti ako **Štruktúrované RAG**, ktoré vyniká v extrahovaní a vyhľadávaní hustých, štruktúrovaných informácií z veľkých datasetov ako história konverzácií, e-maily alebo dokonca obrázky. To poskytuje „nadľudskú presnosť a vyvolanie“ v porovnaní s tradičnými prístupmi delenia textu na kúsky a embeddingami.
 
-## Umožnenie samo-zlepšenia AI agentov
+## Vytváranie samoučiacich sa AI agentov
 
-Bežný vzor samo-zlepšujúcich sa agentov zahŕňa zavedenie **„poznatkovóho agenta“**. Tento samostatný agent pozoruje hlavnú konverzáciu medzi používateľom a primárnym agentom. Jeho úlohou je:
+Bežný vzor pre samoučiacich sa agentov zahŕňa zavedenie **„knowledge agenta“**. Tento samostatný agent pozoruje hlavnú konverzáciu medzi používateľom a primárnym agentom. Jeho úlohou je:
 
-1. **Identifikovať cenné informácie**: Zistiť, či niektorá časť konverzácie stojí za uloženie ako všeobecné vedomosti alebo konkrétna používateľská preferencia.
+1. **Identifikovať cenné informácie**: Určiť, či je časť konverzácie hodná uloženia ako všeobecné znalosti alebo špecifická používateľská preferencia.
 
 2. **Extrahovať a zhrnúť**: Destilovať podstatné učenie alebo preferenciu z konverzácie.
 
-3. **Uložiť do znalostnej bázy**: Udržať tieto extrahované informácie, často vo vektorovej databáze, aby sa dali neskôr vyhľadať.
+3. **Uložiť do znalostnej databázy**: Trvale uložiť tieto extrahované informácie, často do vektorovej databázy, aby ich bolo možné neskôr vyhľadať.
 
-4. **Rozšíriť budúce dotazy**: Keď používateľ iniciuje nový dotaz, poznatkovo agent vyhľadá relevantné uložené informácie a prikladá ich k používateľovej výzve, poskytujúc kľúčový kontext primárnemu agentovi (podobne ako RAG).
+4. **Obohacovať budúce dopyty**: Keď používateľ začne nový dopyt, knowledge agent načíta relevantné uložené informácie a pripojí ich k promptu používateľa, čím poskytne primárnemu agentovi kľúčový kontext (podobne ako RAG).
 
 ### Optimalizácie pre pamäť
 
-• **Manažment latencie**: Aby sa predišlo spomaleniu používateľských interakcií, môže sa najprv použiť lacnejší, rýchlejší model, ktorý rýchlo skontroluje, či sú informácie hodné uloženia alebo vyhľadávania, a zložitejší proces extrakcie/vyhľadávania spustiť iba v prípade potreby.
+• **Riadenie latencie**: Aby sa predišlo spomaleniu používateľských interakcií, môže sa najprv použiť lacnejší, rýchlejší model na rýchlu kontrolu, či sú informácie hodné uloženia alebo vyhľadania, pričom sa zložitejší proces extrakcie/vyhľadávania vykoná len v prípade potreby.
 
-• **Údržba znalostnej bázy**: Pre rastúcu znalostnú bázu môže byť menej často používaná informácia presunutá do „studeného úložiska“ na reguláciu nákladov.
+• **Údržba znalostnej databázy**: Pre rastúcu databázu znalostí možno menej často používané informácie presunúť do „studeného úložiska“, aby sa znížili náklady.
 
-## Máte ďalšie otázky o pamäti agentov?
+## Máte viac otázok o pamäti agentov?
 
-Pridajte sa na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde sa môžete stretnúť s inými študentmi, zúčastniť sa konzultácií a dostať odpovede na svoje otázky o AI agentoch.
+Pridajte sa na [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord), aby ste sa stretli s inými študentmi, zúčastnili sa úradných hodín a získali odpovede na svoje otázky o AI agentoch.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou prekladateľskej služby AI [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, berte prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny preklad vykonaný človekom. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Vylúčenie zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa usilujeme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho originálnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

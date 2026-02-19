@@ -1,42 +1,42 @@
-## Veranstaltungsname: Erstellen Sie Ihre Code-First-App mit Azure AI Agent Service (EMEA/US-Angebot)
+## Event Name: Erstellen Sie Ihre Code-first-App mit Azure AI Agent Service (EMEA/US Angebot)
 
 ## Beschreibung
 
-Der Azure AI Agent Service ist eine nahtlose Kombination aus Service und SDK, die die Entwicklung robuster KI-gesteuerter Lösungen vereinfacht. In dieser Sitzung lernen Sie, wie Sie Ihren eigenen Code-First-KI-Agenten mit Azure erstellen können, der Fragen beantworten, Daten analysieren und externe Datenquellen integrieren kann. Außerdem erkunden Sie komplexere Architekturen, einschließlich mehrerer zusammenarbeitender Agenten.
+Der Azure AI Agent Service ist eine nahtlose Kombination aus Dienst und SDK, die die Entwicklung robuster, AI-getriebener Lösungen vereinfacht. In dieser Sitzung lernen Sie, wie Sie Ihren eigenen Code-first-AI-Agenten mit Azure erstellen, der Fragen beantworten, Datenanalysen durchführen und externe Datenquellen integrieren kann. Sie werden außerdem komplexere Architekturen kennenlernen, einschließlich mehrerer zusammenarbeitender Agenten.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25325/>
 
 ---
 
-## Veranstaltungsname: Transformation von Geschäftsprozessen mit Multi-Agent-KI und Semantic Kernel
+## Event Name: Geschäftsprozesse mit Multi-Agent-AI unter Verwendung von Semantic Kernel transformieren
 
 ## Beschreibung
 
-Entdecken Sie die Möglichkeiten von Multi-Agent-KI-Systemen durch Live-Demonstrationen und praxisnahes Lernen mit Mustern wie Gruppenchat, Reflexion, Auswahl und Schwarm. Nutzen Sie das Semantic Kernel Process Framework, um kritische Geschäftsprozesse wie Kundenservice und Projektmanagement mit Python zu automatisieren und zu skalieren.
+Entdecken Sie die Leistungsfähigkeit von Multi-Agent-AI-Systemen durch Live-Demonstrationen und praxisnahes Lernen mit Mustern wie Gruppen-Chat, Reflexion, Selektor und Schwarm. Nutzen Sie das Semantic Kernel Process Framework, um kritische Geschäftsprozesse zu automatisieren und zu skalieren – von Kundensupport bis Projektmanagement – unter Verwendung von Python
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25313/>
 
 ---
 
-## Veranstaltungsname: Aufbau agentischer Anwendungen mit AutoGen v0.4
+## Event Name: Building Agentic Applications with AutoGen v0.4
 
 ## Beschreibung
 
-Erfahren Sie, wie Sie mit AutoGen v0.4 Agenten und Multi-Agent-Teams erstellen können. Wir geben Ihnen einen Überblick über die neue Architektur von AutoGen v0.4 und zeigen Ihnen, wie Sie ein Multi-Agent-Team mit einer webbasierten Benutzeroberfläche aufbauen können.
+Einstieg zum Erstellen von Agenten und Multi-Agent-Teams mit AutoGen v0.4. Wir behandeln einen Überblick über die neue AutoGen v0.4-Architektur und führen Sie Schritt für Schritt durch den Aufbau eines Multi-Agent-Teams mit einer webbasierten Benutzeroberfläche.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25327/>
 
 ---
 
-## Veranstaltungsname: Prototyping von KI-Agenten mit GitHub-Modellen
+## Event Name: Prototyping AI Agents with GitHub Models
 
 ## Beschreibung
 
-Dank GitHub-Modellen benötigen Sie lediglich ein GitHub-Konto, um Ihren ersten KI-Agenten zu erstellen! GitHub-Modelle umfassen leistungsstarke Modelle wie OpenAI gpt-4o, DeepSeek-R1, Llama-3.1 und viele mehr, die Sie im Playground oder in Ihrem Code ausprobieren können.  
-In dieser Sitzung zeigen wir Ihnen, wie Sie sich mit GitHub-Modellen über Python verbinden und anschließend Agenten mit beliebten Python-Paketen wie PydanticAI, AutoGen und Semantic Kernel erstellen.  
+Dank GitHub Models benötigen Sie nur ein GitHub-Konto, um Ihren ersten AI-Agenten zu erstellen! GitHub Models umfasst leistungsstarke Modelle wie OpenAI gpt-4o, DeepSeek-R1, Llama-3.1 und viele mehr, die Sie im Playground oder in Ihrem Code ausprobieren können.  
+In dieser Sitzung zeigen wir, wie man von Python aus eine Verbindung zu GitHub Models herstellt und dann Agenten mit beliebten Python-Paketen wie PydanticAI, AutoGen und Semantic Kernel erstellt.  
 Sie können live in GitHub Codespaces mitmachen oder die Beispiele jederzeit nach der Sitzung selbst ausprobieren.
 
 ## URL
@@ -44,149 +44,145 @@ Sie können live in GitHub Codespaces mitmachen oder die Beispiele jederzeit nac
 
 ---
 
-## Veranstaltungsname: Agenten erstellen mit einer Vielzahl von Modellen aus dem Azure AI Model Catalog
+## Event Name: Building agents with an army of models from the Azure AI model catalog
 
 ## Beschreibung
 
-Der Azure AI Model Catalog bietet eine große Auswahl an Modellen mit unterschiedlichen Fähigkeiten und Funktionen. Während ein Standardmodell Ihnen den Einstieg erleichtert, können Entwickler bei komplexeren Workflows spezialisierte Modelle nutzen, um ihre Aufgaben in ihrem bevorzugten Framework zu erledigen. In dieser Präsentation gehen wir auf das Angebot des Model Catalog ein und zeigen, wie Sie Agenten erstellen können, die auf einer Vielzahl von Modellen basieren – und das ohne hohe Kosten.
+Der Azure AI model catalog bietet eine große Vielfalt an Modellen mit unterschiedlichen Fähigkeiten und Kompetenzen. Während ein Standardmodell Ihnen den Einstieg erleichtert, können Entwickler mit anspruchsvolleren Workflows spezialisierte Modelle nutzen, um Aufgaben in ihrem bevorzugten Framework zu erledigen. In dieser Präsentation erläutern wir das Angebot des Model Catalogs und wie Sie Agenten erstellen können, die auf einer Armee von Modellen basieren – ohne ein Vermögen zu kosten.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25328/>
 
 ---
 
-## Veranstaltungsname: Multi-Agent-API mit LangGraph und Azure Cosmos DB
+## Event Name: Multi-Agent API with LangGraph and Azure Cosmos DB
 
 ## Beschreibung
 
-Der Aufstieg von Multi-Agent-KI-Anwendungen verändert die Art und Weise, wie wir intelligente Systeme entwickeln – aber wie gestaltet man sie für reale Skalierbarkeit und Leistung? In dieser Sitzung tauchen wir tief in eine produktionsreife Multi-Agent-Anwendung ein, die mit LangGraph für die Agenten-Orchestrierung, FastAPI für die API-Schicht und Azure Cosmos DB als Rückgrat für Zustandsmanagement, Vektorspeicherung und transaktionale Daten entwickelt wurde.
+Der Aufstieg von Multi-Agent-AI-Anwendungen verändert die Art und Weise, wie wir intelligente Systeme bauen – aber wie entwirft man sie für reale Skalierbarkeit und Leistung? In dieser Sitzung tauchen wir tief in eine produktionsreife Multi-Agent-Anwendung ein, die LangGraph für die Agentenorchestrierung, FastAPI für die API-Schicht und Azure Cosmos DB als Grundlage für Zustandsverwaltung, Vektorenspeicherung und transaktionale Daten verwendet.
 
-Durch einen detaillierten Code-Durchgang erfahren Sie, wie Sie einen agentengesteuerten Workflow entwerfen und implementieren, der nahtlos Retrieval-Augmented Generation (RAG), Speicherpersistenz und dynamische Zustandsübergänge integriert. Wir behandeln:
+Durch eine detaillierte Code-Durchsicht sehen Sie, wie man einen agentengesteuerten Workflow entwirft und implementiert, der Retrieval-Augmented Generation (RAG), persistente Erinnerungen und dynamische Zustandsübergänge nahtlos integriert. Wir behandeln:
 
-- Zusammenarbeit von Agenten mit LangGraph für strukturiertes Denken  
-- Echtzeit-Chat-Verlaufsspeicherung mit Azure Cosmos DB – derselben Datenbank, die den Chat-Verlauf in ChatGPT unterstützt, der am schnellsten wachsenden KI-Agenten-Anwendung der Geschichte  
-- Vektorsuche für Wissensabruf mit der nativen Einbettungsunterstützung von Cosmos DB  
-- Asynchrone Fähigkeiten von FastAPI, um Interaktionen reaktionsschnell und skalierbar zu halten  
-
-Am Ende dieser Sitzung haben Sie eine klare Blaupause für den Aufbau und die Bereitstellung Ihrer eigenen skalierbaren, cloudnativen Multi-Agent-Anwendungen, die die Leistungsfähigkeit moderner KI und Cloud-Infrastruktur nutzen. Egal, ob Sie KI-Ingenieur, Cloud-Architekt oder Python-Entwickler sind, dieser Vortrag vermittelt Ihnen praktische Einblicke und bewährte Muster, um die nächste Generation KI-gestützter Anwendungen zu entwickeln.
+Agentenzusammenarbeit mit LangGraph für strukturiertes Schlussfolgern  
+Echtzeit-Speicherung von Chatverläufen mit Azure Cosmos DB - derselbe Datenbankdienst, der den Chatverlauf in ChatGPT antreibt, der am schnellsten wachsenden AI-Agent-Anwendung der Geschichte  
+Vektorsuche zur Wissensabrufung mit nativer Embeddings-Unterstützung von Cosmos DB  
+FastAPIs async-Fähigkeiten, um Interaktionen reaktionsschnell und skalierbar zu halten  
+Am Ende dieser Sitzung haben Sie einen klaren Bauplan, um Ihre eigenen skalierbaren, cloud-nativen Multi-Agent-Anwendungen zu entwickeln und bereitzustellen, die die Leistungsfähigkeit moderner AI- und Cloud-Infrastruktur nutzen. Ob Sie AI-Ingenieur, Cloud-Architekt oder Python-Entwickler sind – dieser Vortrag vermittelt Ihnen praktische Erkenntnisse und erprobte Muster, um die nächste Generation AI-gestützter Anwendungen zu bauen
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25314/>
 
 ---
 
-## Veranstaltungsname: Ihr erster KI-Agent in JS mit Azure AI Agent Service
+## Event Name: Ihr erster AI-Agent in JS mit Azure AI Agent Service
 
 ## Beschreibung
 
-Erfahren Sie, wie Sie Ihren ersten KI-Agenten mit dem JavaScript-SDK für Azure AI Agent Service erstellen können, einer vollständig verwalteten Plattform, die die Entwicklung erleichtert. Sie lernen, wie Sie ihn einrichten, Tools wie Azure AI Search verbinden und einen einfachen Frage-Antwort-Agenten bereitstellen. Mit einer Live-Demo entdecken Sie, wie automatisches Tool-Calling und verwalteter Zustand den Prozess vereinfachen. Perfekt für Anfänger bietet diese Sitzung praktische Schritte und Tipps, um Ihre KI-Agenten-Reise mit Zuversicht zu beginnen.
+Erfahren Sie, wie Sie Ihren ersten AI-Agenten mit dem JavaScript-SDK für Azure AI Agent Service erstellen, einer vollständig verwalteten Plattform, die die Entwicklung erleichtert. Sie sehen, wie Sie die Umgebung einrichten, Tools wie Azure AI Search verbinden und einen einfachen Frage-Antwort-Agenten bereitstellen. Mit einer Live-Demo entdecken Sie, wie automatische Tool-Aufrufe und verwalteter Zustand den Prozess vereinfachen. Perfekt für Einsteiger bietet diese Sitzung praktische Schritte und Tipps, um Ihre Reise mit AI-Agenten selbstbewusst zu beginnen.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25381/>
 
 ---
 
-## Veranstaltungsname: Prompting ist das neue Scripting: Lernen Sie GenAIScript kennen
+## Event Name: Prompting is the New Scripting: Meet GenAIScript
 
 ## Beschreibung
 
-jQuery hat einst die Webentwicklung vereinfacht, indem es Komplexitäten abstrahierte und Entwicklern ermöglichte, sich auf das Bauen zu konzentrieren, anstatt sich mit Browserproblemen herumzuschlagen. Heute steht die KI-Entwicklung vor einer ähnlichen Herausforderung. Neue Muster entstehen ständig, und es kann überwältigend sein, Schritt zu halten, insbesondere da KI-Tools – insbesondere agentische – immer leistungsfähiger und komplexer werden.  
-Was wäre, wenn Sie modernste KI-Funktionen nutzen könnten, um Aufgaben mit einfachen, vertrauten JavaScript-Abstraktionen zu automatisieren? Lernen Sie GenAIScript kennen – eine Möglichkeit, KI mühelos in Ihren Workflow zu integrieren, indem Sie Prompts wie wiederverwendbare Code-Snippets behandeln.  
-In diesem Vortrag erkunden wir, wie GenAIScript die Automatisierung von KI-Agenten so intuitiv wie das Schreiben von JavaScript macht und Ihnen hilft, repetitive Arbeiten zu optimieren, ohne tiefgehende KI-Expertise zu benötigen.
+jQuery machte einst die Webentwicklung einfacher, indem es Komplexitäten abstrahierte und Entwicklern erlaubte, sich auf das Bauen statt auf Browserprobleme zu konzentrieren. Heute steht die AI-Entwicklung vor einer ähnlichen Herausforderung. Ständig entstehen neue Muster und Schritt zu halten kann überwältigend sein, besonders da AI-Tools – insbesondere agentische – immer leistungsfähiger und komplexer werden. Was wäre, wenn Sie modernste AI-Funktionen nutzen könnten, um Aufgaben mit einfachen, vertrauten JavaScript-Abstraktionen zu automatisieren? Hier kommt GenAIScript ins Spiel – ein Weg, AI mühelos in Ihren Arbeitsablauf zu integrieren, indem Prompts wie wiederverwendbare Code-Snippets behandelt werden. In diesem Vortrag erkunden wir, wie GenAIScript AI-Automationsagenten so intuitiv macht wie das Schreiben von JavaScript und Ihnen hilft, repetitive Arbeiten zu optimieren, ohne tiefgehende AI-Expertise zu benötigen.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25441/>
 
 ---
 
-## Veranstaltungsname: Wissenserweiterte Agenten mit LlamaIndex.TS
+## Event Name: Wissensangereicherte Agenten mit LlamaIndex.TS
 
 ## Beschreibung
 
-LlamaIndex ist bekannt dafür, die Erstellung von Retrieval-Augmented Generation (RAG) zu erleichtern, aber unsere Frameworks machen es auch einfach, Agenten und Multi-Agent-Systeme zu erstellen! In dieser Sitzung stellen wir Workflows vor, unsere grundlegenden Bausteine für den Aufbau agentischer Systeme, und erstellen einen Agenten, der RAG und andere Tools verwendet.
+LlamaIndex ist bekannt dafür, Retrieval-Augmented Generation (RAG) zu vereinfachen, aber unsere Frameworks erleichtern auch den Aufbau von Agenten und Multi-Agent-Systemen! In dieser Sitzung stellen wir Workflows vor, unseren grundlegenden Baustein zum Aufbau agentischer Systeme, und entwickeln einen Agenten, der RAG und andere Tools nutzt.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25440/>
 
 ---
 
-## Veranstaltungsname: KI-Agenten für Java mit Azure AI Foundry und GitHub Copilot
+## Event Name: AI Agents für Java mit Microsoft Foundry und GitHub Copilot
 
 ## Beschreibung
 
-In dieser Sitzung zeigen wir Ihnen, wie Sie fortschrittliche KI-Agenten-Funktionen in Ihre Java-Anwendungen mit Azure AI Foundry einbetten können, einschließlich der Festlegung von Projektzielen, dem Experimentieren mit Modellen und der sicheren Bereitstellung produktionsreifer Lösungen im großen Maßstab.  
-Dabei lernen Sie, wie GitHub Copilot (in IntelliJ, VS Code und Eclipse) das Codieren und die Erstellung von Prompts erleichtert, während bewährte Praktiken bei der Modellauswahl, Feinabstimmung und agentischen Workflows eine verantwortungsvolle und effiziente Entwicklung gewährleisten.  
-Egal, ob Sie neu in der Welt der KI-Agenten sind oder nach fortgeschrittenen Techniken suchen, diese Sitzung wird Sie befähigen, mit den Ihnen vertrauten Tools außergewöhnliche Erlebnisse zu schaffen.
+In dieser Sitzung zeigen wir Ihnen, wie Sie fortgeschrittene AI-Agenten-Funktionen in Ihre Java-Anwendungen mit Microsoft Foundry einbetten – einschließlich der Festlegung von Projektzielen, des Experimentierens mit Modellen und der sicheren Bereitstellung produktionsreifer Lösungen in großem Maßstab. Unterwegs lernen Sie, wie GitHub Copilot (in IntelliJ, VS Code und Eclipse) das Codieren und Erstellen von Prompts beschleunigen kann, während Best Practices bei Modellauswahl, Fine-Tuning und agentischen Workflows eine verantwortungsvolle und effiziente Entwicklung sicherstellen. Egal, ob Sie neu bei AI Agents sind oder nach fortgeschrittenen Techniken zum Aufbau von Agenten suchen, diese Sitzung stattet Sie mit dem Wissen aus, um erstklassige Erlebnisse mit den Tools zu liefern, die Sie bereits kennen.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25336/>
 
 ---
 
-## Veranstaltungsname: Java-KI-Agenten erstellen mit LangChain4j und dynamischen Sitzungen
+## Event Name: Erstellen von Java-AI-Agenten mit LangChain4j und dynamischen Sitzungen
 
 ## Beschreibung
 
-Nutzen Sie das Potenzial von KI-Agenten in Ihren Java-Anwendungen, indem Sie LangChain4j mit dynamischen Sitzungen von Azure Container Apps (ACA) verbinden, die mit Azure AI-Diensten verknüpft sind. Diese Sitzung zeigt ein praktisches Beispiel für die Erstellung eines Agenten, der mit einer entfernten Umgebung interagieren kann, einschließlich Dateiverwaltung.  
-Erfahren Sie, wie Sie benutzerdefinierte Tools definieren, sie in Agenten-Workflows integrieren und die skalierbare Infrastruktur von Azure nutzen, um intelligente, dynamische Lösungen bereitzustellen.
+Nutzen Sie das Potenzial von AI-Agenten in Ihren Java-Anwendungen, indem Sie LangChain4j mit Azure Container Apps (ACA) Dynamic Sessions verbinden, die an Azure AI-Dienste angebunden sind. Diese Sitzung zeigt ein praktisches Beispiel zum Aufbau eines Agenten, der mit einer entfernten Umgebung interagieren kann, einschließlich Datei-Management. Erfahren Sie, wie Sie benutzerdefinierte Tools definieren, diese in Agenten-Workflows integrieren und Azures skalierbare Infrastruktur nutzen, um intelligente, dynamische Lösungen bereitzustellen.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25337/>
 
 ---
 
-## Veranstaltungsname: Verantwortungslos agierende KI-Agenten
+## Event Name: Unverantwortliche AI-Agenten
 
 ## Beschreibung
 
-Begleiten Sie uns, während wir die potenziellen Risiken von KI-Agenten untersuchen und die Herausforderung angehen, vertrauenswürdige KI-Praktiken in konversationelle KI-Plattformen einzubetten! Diese Sitzung taucht tief in Beispiele für unverantwortliche KI-Agenten ein – mit verblüffenden Beispielen für Modellfehler, adversarielle Jailbreaks und andere Risiken, die Vertrauen und Compliance untergraben.
+Begleiten Sie uns, während wir die potenziellen Risiken von AI-Agenten erkunden und die Herausforderung angehen, vertrauenswürdige AI-Praktiken in konversationelle AI-Plattformen einzubetten! Diese Sitzung geht tief in Beispiele unverantwortlicher AI-Agenten – mit erstaunlichen Beispielen für Modellfehler, adversariale Jailbreaks und andere Risiken, die Vertrauen und Compliance untergraben.
 
-Wir erkunden Microsofts modernste Tools für vertrauenswürdige KI, einschließlich Inhaltsfilter, Red-Teaming-Strategien und Bewertungen – mit Live-Demos von KI-Agenten, die sich sowohl verantwortungsvoll als auch unverantwortlich verhalten, auf eine Weise, die Sie nicht glauben werden.
+Wir zeigen Microsofts modernste Tools für vertrauenswürdige AI, einschließlich Inhaltsfiltern, Red-Teaming-Strategien und Bewertungen – mit Live-Demos von AI-Agenten, die sich sowohl verantwortungsbewusst als auch unverantwortlich verhalten, sodass Sie es kaum glauben werden.
 
-🔥 Was Sie mitnehmen:  
-✅ Wie Sie KI-Risiken erkennen und mindern, bevor sie ausgenutzt werden können  
-✅ Wie Sie Azure AI Content Safety einsetzen, um riskantes Verhalten zu erkennen und zu verhindern  
-✅ Das Geheimnis, um KI-Agenten vertrauenswürdig zu machen  
+🔥 Was Sie mitnehmen werden:  
+✅ Wie man AI-Risiken erkennt und mindert, bevor sie ausgenutzt werden können  
+✅ Wie man Azure AI Content Safety einsetzt, um riskantes Verhalten zu erkennen und zu mindern  
+✅ Das Geheimrezept, um AI-Agenten vertrauenswürdig zu machen
 
-Bereiten Sie sich auf eine Sitzung voller Spannung, hochkarätigem KI-Drama und unverzichtbaren Strategien vor, um Ihre KI auf der richtigen Seite der Geschichte zu halten. Bauen Sie nicht einfach KI – bauen Sie KI, die zählt!
+Machen Sie sich bereit für eine Sitzung voller Hype, hochriskantem AI-Drama und unverzichtbaren Strategien, um Ihre AI auf die richtige Seite der Geschichte zu bringen. Bauen Sie nicht nur AI – bauen Sie AI, die zählt!
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25388/>
 
 ---
 
-## Veranstaltungsname: Erstellen Sie Ihre Code-First-App mit Azure AI Agent Service (.NET)
+## Event Name: Erstellen Sie Ihre Code-first-App mit Azure AI Agent Service (.NET)
 
 ## Beschreibung
 
-Der Azure AI Agent Service ist eine nahtlose Kombination aus Service und SDK, die die Entwicklung robuster KI-gesteuerter Lösungen vereinfacht. In dieser Sitzung lernen Sie, wie Sie Ihren eigenen Code-First-KI-Agenten mit Azure und C# erstellen können, der Fragen beantworten, Daten analysieren und externe Datenquellen integrieren kann. Außerdem erkunden Sie komplexere Architekturen, einschließlich mehrerer zusammenarbeitender Agenten.
+Der Azure AI Agent Service ist eine nahtlose Kombination aus Dienst und SDK, die die Entwicklung robuster, AI-getriebener Lösungen vereinfacht. In dieser Sitzung lernen Sie, wie Sie Ihren eigenen Code-first-AI-Agenten mit Azure und C# erstellen, der Fragen beantworten, Datenanalysen durchführen und externe Datenquellen integrieren kann. Sie werden außerdem komplexere Architekturen kennenlernen, einschließlich mehrerer zusammenarbeitender Agenten.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25370/>
 
 ---
 
-## Veranstaltungsname: KI-Agenten + .NET Aspire
+## Event Name: AI Agents + .NET Aspire
 
 ## Beschreibung
 
-In dieser Sitzung teilen wir einige der spannendsten Entwicklungen auf der .NET-Plattform rund um Agenten. Entdecken Sie den aktuellen Stand von .NET, einschließlich neuer Funktionen und Verbesserungen. Erkunden Sie die leistungsstarken KI-Agenten-Funktionen. Und wir werden live mit Agenten und .NET Aspire programmieren.
+In dieser Sitzung teilen wir einige der aufregendsten Entwicklungen auf der .NET-Plattform rund um Agents. Entdecken Sie den aktuellen Stand von .NET, einschließlich neuer Funktionen und Verbesserungen. Erkunden Sie die leistungsstarken AI-Agent-Fähigkeiten. Und wir werden etwas Live-Coding mit Agents and.NET Aspire machen.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25332/>
 
 ---
 
-## Veranstaltungsname: Semantic Kernel mit C#, um Multi-Agent-KI-Anwendungen mit Azure Cosmos zu erstellen
+## Event Name: Semantic Kernel mit C# zum Erstellen von Multi-Agent-AI-Anwendungen, betrieben von Azure Cosmos
 
 ## Beschreibung
 
-Wir führen Sie durch eine Multi-Agent-Anwendung in C#, die auf dem Semantic Kernel Framework basiert. Sie werden die Konzepte hinter agentischen Anwendungen verstehen, die Implementierungsdetails und Nuancen kennenlernen und erfahren, wie Sie Azure Cosmos DB als Datenbank für verschiedene Anwendungsfälle integrieren können.
+Wir führen Sie durch eine Multi-Agent-Anwendung in C#, die auf dem Semantic Kernel-Framework aufgebaut ist. Sie werden die Konzepte hinter agentischen Anwendungen verstehen, Implementierungsdetails und Feinheiten kennenlernen und lernen, wie Sie Azure Cosmos DB als Datenbank für verschiedene Anwendungsfälle integrieren.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25455/>
 
 ---
 
-**Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Haftungsausschluss**:
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ausgangssprache ist als maßgebliche Quelle zu betrachten. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Verwendung dieser Übersetzung ergeben.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

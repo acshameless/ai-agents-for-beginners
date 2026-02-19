@@ -1,56 +1,56 @@
-# Erkundung des Microsoft Agent Frameworks
+# Erkundung des Microsoft Agent Framework
 
 ![Agent Framework](../../../translated_images/de/lesson-14-thumbnail.90df0065b9d234ee.webp)
 
 ### Einführung
 
-In dieser Lektion behandeln wir:
+Diese Lektion behandelt:
 
-- Verständnis des Microsoft Agent Frameworks: Hauptmerkmale und Nutzen  
-- Erkundung der Schlüsselkonzepte des Microsoft Agent Frameworks
+- Verständnis des Microsoft Agent Framework: Hauptmerkmale und Nutzen  
+- Erkundung der Schlüsselkonzepte des Microsoft Agent Framework
 - Vergleich von MAF mit Semantic Kernel und AutoGen: Migrationsleitfaden
 
 ## Lernziele
 
-Nach Abschluss dieser Lektion können Sie:
+Nach Abschluss dieser Lektion wissen Sie, wie Sie:
 
 - Produktionsreife KI-Agenten mit dem Microsoft Agent Framework erstellen
-- Die Kernfunktionen des Microsoft Agent Frameworks auf Ihre agentischen Anwendungsfälle anwenden
+- Die Kernfunktionen des Microsoft Agent Framework auf Ihre agentischen Anwendungsfälle anwenden
 - Bestehende agentische Frameworks und Tools migrieren und integrieren  
 
-## Codebeispiele 
+## Code-Beispiele
 
-Codebeispiele für das [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) finden Sie in diesem Repository unter den Dateien `xx-python-agent-framework` und `xx-dotnet-agent-framework`.
+Code-Beispiele für [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) finden Sie in diesem Repository unter den Dateien `xx-python-agent-framework` und `xx-dotnet-agent-framework`.
 
-## Verständnis des Microsoft Agent Frameworks
+## Verständnis des Microsoft Agent Framework
 
 ![Framework Intro](../../../translated_images/de/framework-intro.077af16617cf130c.webp)
 
-Das [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) baut auf den Erfahrungen und Erkenntnissen aus Semantic Kernel und AutoGen auf. Es bietet die Flexibilität, eine Vielzahl von agentischen Anwendungsfällen in Produktions- und Forschungsumgebungen zu adressieren, darunter:
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) baut auf den Erfahrungen und Erkenntnissen von Semantic Kernel und AutoGen auf. Es bietet die Flexibilität, die Vielzahl agentischer Anwendungsfälle abzudecken, die sowohl in Produktions- als auch in Forschungsumgebungen zu finden sind, darunter:
 
-- **Sequenzielle Agenten-Orchestrierung** in Szenarien, in denen schrittweise Workflows erforderlich sind.
+- **Sequenzielle Agenten-Orchestrierung** in Szenarien, in denen Schritt-für-Schritt-Arbeitsabläufe erforderlich sind.
 - **Gleichzeitige Orchestrierung** in Szenarien, in denen Agenten Aufgaben gleichzeitig erledigen müssen.
 - **Gruppenchat-Orchestrierung** in Szenarien, in denen Agenten gemeinsam an einer Aufgabe arbeiten können.
-- **Übergabe-Orchestrierung** in Szenarien, in denen Agenten Aufgaben aneinander übergeben, sobald die Teilaufgaben abgeschlossen sind.
-- **Magnetische Orchestrierung** in Szenarien, in denen ein Manager-Agent eine Aufgabenliste erstellt und modifiziert und die Koordination von Unteragenten zur Erledigung der Aufgabe übernimmt.
+- **Übergabe-Orchestrierung** in Szenarien, in denen Agenten die Aufgabe aneinander übergeben, sobald Teilaufgaben abgeschlossen sind.
+- **Magnetische Orchestrierung** in Szenarien, in denen ein Manager-Agent eine Aufgabenliste erstellt und verändert und die Koordination der Unteragenten zur Erledigung der Aufgabe übernimmt.
 
-Um KI-Agenten in der Produktion bereitzustellen, bietet MAF auch Funktionen für:
+Um KI-Agenten in der Produktion bereitzustellen, enthält MAF außerdem Funktionen für:
 
-- **Beobachtbarkeit** durch die Nutzung von OpenTelemetry, bei der jede Aktion des KI-Agenten, einschließlich Toolaufrufen, Orchestrierungsschritten, Argumentationsflüssen und Leistungsüberwachung, über Azure AI Foundry-Dashboards verfolgt wird.
-- **Sicherheit** durch das native Hosting von Agenten auf Azure AI Foundry, das Sicherheitskontrollen wie rollenbasierte Zugriffsrechte, den Umgang mit privaten Daten und integrierte Inhaltsicherheit umfasst.
-- **Dauerhaftigkeit**, da Agenten-Threads und Workflows pausieren, fortsetzen und Fehler beheben können, was längere Prozesse ermöglicht.
-- **Kontrolle**, da menschliche Eingriffe in Workflows unterstützt werden, bei denen Aufgaben als genehmigungspflichtig markiert sind.
+- **Beobachtbarkeit** durch den Einsatz von OpenTelemetry, wobei jede Aktion des KI-Agenten einschließlich Werkzeugaufrufen, Orchestrierungsschritten, Argumentationsabläufen und Leistungsüberwachung über Microsoft Foundry Dashboards erfasst wird.
+- **Sicherheit** durch native Ausführung der Agenten auf Microsoft Foundry, das Sicherheitskontrollen wie rollenbasierte Zugriffssteuerung, Handhabung privater Daten und integrierte Inhalts-Sicherheit beinhaltet.
+- **Beständigkeit** da Agenten-Threads und Arbeitsabläufe pausieren, fortsetzen und Fehler wiederherstellen können, was längere Prozesse ermöglicht.
+- **Kontrolle** da Workflows mit menschlicher Einbindung unterstützt werden, bei denen Aufgaben als zur menschlichen Genehmigung erforderlich markiert sind.
 
-Das Microsoft Agent Framework ist außerdem darauf ausgelegt, interoperabel zu sein, indem es:
+Das Microsoft Agent Framework legt zudem Wert auf Interoperabilität durch:
 
-- **Cloud-unabhängig** ist - Agenten können in Containern, vor Ort und über verschiedene Clouds hinweg betrieben werden.
-- **Anbieterunabhängig** ist - Agenten können über das bevorzugte SDK erstellt werden, einschließlich Azure OpenAI und OpenAI.
-- **Offene Standards integriert** - Agenten können Protokolle wie Agent-to-Agent (A2A) und Model Context Protocol (MCP) nutzen, um andere Agenten und Tools zu entdecken und zu verwenden.
-- **Plugins und Konnektoren** - Verbindungen können zu Daten- und Speicherdiensten wie Microsoft Fabric, SharePoint, Pinecone und Qdrant hergestellt werden.
+- **Cloud-Unabhängigkeit** – Agenten können in Containern, lokal (on-premises) und in verschiedenen Clouds ausgeführt werden.
+- **Anbieter-Unabhängigkeit** – Agenten können mit dem bevorzugten SDK erstellt werden, einschließlich Azure OpenAI und OpenAI.
+- **Integration offener Standards** – Agenten können Protokolle wie Agent-to-Agent (A2A) und Model Context Protocol (MCP) verwenden, um andere Agenten und Werkzeuge zu entdecken und zu nutzen.
+- **Plugins und Connectoren** – Verbindungen zu Daten- und Speicher-Services wie Microsoft Fabric, SharePoint, Pinecone und Qdrant sind möglich.
 
-Schauen wir uns an, wie diese Funktionen auf einige der Kernkonzepte des Microsoft Agent Frameworks angewendet werden.
+Sehen wir uns an, wie diese Funktionen auf einige der Kernkonzepte des Microsoft Agent Framework angewendet werden.
 
-## Schlüsselkonzepte des Microsoft Agent Frameworks
+## Schlüsselkonzepte des Microsoft Agent Framework
 
 ### Agenten
 
@@ -58,13 +58,13 @@ Schauen wir uns an, wie diese Funktionen auf einige der Kernkonzepte des Microso
 
 **Erstellen von Agenten**
 
-Die Erstellung von Agenten erfolgt durch die Definition des Inferenzdienstes (LLM-Anbieter), eines Satzes von Anweisungen, denen der KI-Agent folgen soll, und eines zugewiesenen `Namens`:
+Die Erstellung von Agenten erfolgt durch Definition des Inferenzdienstes (LLM-Anbieter), eine Reihe von Anweisungen, denen der KI-Agent folgen soll, und einen zugewiesenen `name`:
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-Das obige Beispiel verwendet `Azure OpenAI`, aber Agenten können mit einer Vielzahl von Diensten erstellt werden, einschließlich `Azure AI Foundry Agent Service`:
+Oben wird `Azure OpenAI` verwendet, aber Agenten können mit verschiedenen Diensten erstellt werden, einschließlich `Microsoft Foundry Agent Service`:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
@@ -80,7 +80,7 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
-oder Remote-Agenten mit dem A2A-Protokoll:
+oder entfernte Agenten unter Verwendung des A2A-Protokolls:
 
 ```python
 agent = A2AAgent( name=agent_card.name, description=agent_card.description, agent_card=agent_card, url="https://your-a2a-agent-host" )
@@ -88,7 +88,7 @@ agent = A2AAgent( name=agent_card.name, description=agent_card.description, agen
 
 **Ausführen von Agenten**
 
-Agenten werden mit den Methoden `.run` oder `.run_stream` für nicht-streaming oder streaming Antworten ausgeführt.
+Agenten werden mit den Methoden `.run` oder `.run_stream` für nicht-streamende oder streamende Antworten ausgeführt.
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,75 +102,75 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-Jeder Agentenlauf kann auch Optionen enthalten, um Parameter wie `max_tokens`, die vom Agenten verwendet werden, `tools`, die der Agent aufrufen kann, und sogar das `model` selbst, das für den Agenten verwendet wird, anzupassen.
+Jeder Agentenlauf kann auch Optionen zur Anpassung von Parametern wie `max_tokens`, die vom Agenten verwendet werden, `tools`, die der Agent aufrufen kann, und sogar das `model`, das für den Agenten verwendet wird, enthalten.
 
-Dies ist nützlich in Fällen, in denen spezifische Modelle oder Tools erforderlich sind, um die Aufgabe eines Benutzers zu erfüllen.
+Dies ist nützlich in Fällen, in denen bestimmte Modelle oder Werkzeuge für die Ausführung der Benutzeraufgabe erforderlich sind.
 
-**Tools**
+**Werkzeuge**
 
-Tools können sowohl bei der Definition des Agenten:
+Werkzeuge können sowohl bei der Definition des Agenten festgelegt werden:
 
 ```python
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# Beim direkten Erstellen eines ChatAgenten
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
 ```
 
-als auch beim Ausführen des Agenten definiert werden:
+als auch beim Ausführen des Agenten:
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Werkzeug nur für diesen Lauf bereitgestellt )
 ```
 
 **Agenten-Threads**
 
-Agenten-Threads werden verwendet, um mehrstufige Gespräche zu führen. Threads können entweder durch:
+Agenten-Threads werden für Multi-Turn-Konversationen verwendet. Threads können entweder durch
 
-- Verwendung von `get_new_thread()`, wodurch der Thread über die Zeit gespeichert werden kann
-- Automatische Erstellung eines Threads beim Ausführen eines Agenten, wobei der Thread nur während des aktuellen Laufs bestehen bleibt.
+- Verwendung von `get_new_thread()` erstellt werden, was ermöglicht, dass der Thread über die Zeit gespeichert wird
+- automatisches Erstellen eines Threads beim Ausführen eines Agenten, der nur während der aktuellen Ausführung bestehen bleibt.
 
-Um einen Thread zu erstellen, sieht der Code wie folgt aus:
+Der Code zur Erstellung eines Threads sieht so aus:
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Erstelle einen neuen Thread.
+thread = agent.get_new_thread() # Führe den Agenten mit dem Thread aus.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-Sie können den Thread dann serialisieren, um ihn später zu speichern:
+Danach kann der Thread serialisiert werden, um ihn später zu speichern:
 
 ```python
-# Create a new thread. 
+# Erstelle einen neuen Thread.
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# Führe den Agenten mit dem Thread aus.
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# Serialisiere den Thread zur Speicherung.
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# Deserialisiere den Thread-Zustand nach dem Laden aus der Speicherung.
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
 **Agenten-Middleware**
 
-Agenten interagieren mit Tools und LLMs, um die Aufgaben der Benutzer zu erfüllen. In bestimmten Szenarien möchten wir zwischen diesen Interaktionen Aktionen ausführen oder verfolgen. Agenten-Middleware ermöglicht uns dies durch:
+Agenten interagieren mit Werkzeugen und LLMs, um Benutzeraufgaben zu erfüllen. In bestimmten Szenarien möchten wir Aktionen ausführen oder zwischen diesen Interaktionen verfolgen. Agenten-Middleware ermöglicht dies durch:
 
 *Funktions-Middleware*
 
-Diese Middleware ermöglicht es uns, eine Aktion zwischen dem Agenten und einer Funktion/einem Tool auszuführen, das er aufrufen wird. Ein Beispiel, wann dies verwendet werden könnte, ist, wenn Sie eine Protokollierung des Funktionsaufrufs durchführen möchten.
+Diese Middleware erlaubt es uns, eine Aktion zwischen dem Agenten und einer Funktion/einem Werkzeug, das aufgerufen wird, auszuführen. Ein Beispiel für deren Verwendung ist das Protokollieren eines Funktionsaufrufs.
 
-Im folgenden Code definiert `next`, ob die nächste Middleware oder die eigentliche Funktion aufgerufen werden soll.
+Im untenstehenden Code definiert `next`, ob die nächste Middleware oder die eigentliche Funktion aufgerufen werden soll.
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +178,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # Vorverarbeitung: Protokoll vor der Funktionsausführung
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # Weiter zum nächsten Middleware- oder Funktionsaufruf
     await next(context)
 
-    # Post-processing: Log after function execution
+    # Nachverarbeitung: Protokoll nach der Funktionsausführung
     print(f"[Function] {context.function.name} completed")
 ```
 
 *Chat-Middleware*
 
-Diese Middleware ermöglicht es uns, eine Aktion zwischen dem Agenten und den Anfragen zwischen dem LLM auszuführen oder zu protokollieren.
+Diese Middleware erlaubt es, eine Aktion zwischen dem Agenten und den Anfragen an das LLM auszuführen oder zu protokollieren.
 
-Dies enthält wichtige Informationen wie die `messages`, die an den KI-Dienst gesendet werden.
+Sie enthält wichtige Informationen wie die `messages`, die an den KI-Dienst gesendet werden.
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +200,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # Vorverarbeitung: Protokoll vor dem KI-Aufruf
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # Weiter zum nächsten Middleware oder KI-Dienst
     await next(context)
 
-    # Post-processing: Log after AI response
+    # Nachverarbeitung: Protokoll nach KI-Antwort
     print("[Chat] AI response received")
 
 ```
 
 **Agenten-Speicher**
 
-Wie in der Lektion `Agentic Memory` behandelt, ist Speicher ein wichtiges Element, um dem Agenten zu ermöglichen, in verschiedenen Kontexten zu arbeiten. MAF bietet mehrere verschiedene Arten von Speicher:
+Wie in der Lektion `Agentic Memory` behandelt, ist Speicher ein wichtiges Element, um den Agenten zu ermöglichen, über verschiedene Kontexte hinweg zu agieren. MAF bietet verschiedene Arten von Speicher:
 
-*Speicher im Arbeitsspeicher*
+*Im-Arbeitsspeicher*
 
-Dies ist der Speicher, der während der Laufzeit der Anwendung in Threads gespeichert wird.
+Dies ist der während der Anwendungszeit gespeicherte Speicher in Threads.
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Erstellen Sie einen neuen Thread.
+thread = agent.get_new_thread() # Führen Sie den Agenten mit dem Thread aus.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
 *Persistente Nachrichten*
 
-Dieser Speicher wird verwendet, wenn Gesprächsverläufe über verschiedene Sitzungen hinweg gespeichert werden. Er wird mit der `chat_message_store_factory` definiert:
+Dieser Speicher wird verwendet, um den Gesprächsverlauf über verschiedene Sitzungen hinweg zu speichern. Er wird über die `chat_message_store_factory` definiert:
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# Erstellen Sie einen benutzerdefinierten Nachrichtenstore
 def create_message_store():
     return ChatMessageStore()
 
@@ -251,7 +251,7 @@ Dieser Speicher wird dem Kontext hinzugefügt, bevor Agenten ausgeführt werden.
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# Verwendung von Mem0 für erweiterte Speicherfunktionen
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -268,7 +268,7 @@ agent = ChatAgent(
 
 **Agenten-Beobachtbarkeit**
 
-Beobachtbarkeit ist wichtig, um zuverlässige und wartbare agentische Systeme zu erstellen. MAF integriert sich mit OpenTelemetry, um Tracing und Metriken für eine bessere Beobachtbarkeit bereitzustellen.
+Beobachtbarkeit ist wichtig, um zuverlässige und wartbare agentische Systeme zu bauen. MAF integriert sich mit OpenTelemetry, um Tracing und Metriken für eine bessere Beobachtbarkeit bereitzustellen.
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,7 +276,7 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # etwas tun
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
@@ -284,21 +284,21 @@ counter.add(1, {"key": "value"})
 
 ### Workflows
 
-MAF bietet Workflows, die vordefinierte Schritte zur Erledigung einer Aufgabe enthalten und KI-Agenten als Komponenten in diesen Schritten einbeziehen.
+MAF bietet Workflows als vordefinierte Schritte zur Erledigung einer Aufgabe, die KI-Agenten als Komponenten in diesen Schritten enthalten.
 
-Workflows bestehen aus verschiedenen Komponenten, die eine bessere Steuerung des Ablaufs ermöglichen. Workflows ermöglichen auch **Multi-Agenten-Orchestrierung** und **Checkpointing**, um Workflow-Zustände zu speichern.
+Workflows bestehen aus verschiedenen Komponenten, die einen besseren Kontrollfluss ermöglichen. Workflows unterstützen außerdem **Multi-Agenten-Orchestrierung** und **Checkpointing**, um Workflow-Zustände zu speichern.
 
 Die Kernkomponenten eines Workflows sind:
 
-**Ausführende**
+**Executoren**
 
-Ausführende erhalten Eingabenachrichten, führen ihre zugewiesenen Aufgaben aus und erzeugen dann eine Ausgabenachricht. Dies bringt den Workflow näher an die Erledigung der größeren Aufgabe. Ausführende können entweder KI-Agenten oder benutzerdefinierte Logik sein.
+Executoren erhalten Eingabenachrichten, führen ihre zugewiesenen Aufgaben aus und erzeugen eine Ausgabenachricht. Dies bringt den Workflow voran, um die größere Aufgabe zu erledigen. Executoren können KI-Agenten oder benutzerdefinierte Logik sein.
 
-**Kanten**
+**Verbindungen (Edges)**
 
-Kanten werden verwendet, um den Nachrichtenfluss in einem Workflow zu definieren. Diese können sein:
+Verbindungen definieren den Nachrichtenfluss in einem Workflow. Diese können sein:
 
-*Direkte Kanten* - Einfache Eins-zu-Eins-Verbindungen zwischen Ausführenden:
+*Direkte Verbindungen* - Einfache Eins-zu-eins-Verbindungen zwischen Executoren:
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,24 +309,24 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*Bedingte Kanten* - Aktiviert, nachdem eine bestimmte Bedingung erfüllt ist. Zum Beispiel, wenn Hotelzimmer nicht verfügbar sind, kann ein Ausführender andere Optionen vorschlagen.
+*Bedingte Verbindungen* - Werden aktiviert, nachdem eine bestimmte Bedingung erfüllt ist. Zum Beispiel kann ein Executor bei nicht verfügbaren Hotelzimmern andere Optionen vorschlagen.
 
-*Switch-Case-Kanten* - Leiten Nachrichten basierend auf definierten Bedingungen an verschiedene Ausführende weiter. Zum Beispiel, wenn ein Reisekunde Prioritätszugang hat und seine Aufgaben durch einen anderen Workflow bearbeitet werden.
+*Switch-Case-Verbindungen* - Leiten Nachrichten basierend auf definierten Bedingungen an verschiedene Executoren weiter. Zum Beispiel wenn ein Reisekunde Prioritätszugang hat und seine Aufgaben durch einen anderen Workflow abgewickelt werden.
 
-*Fan-out-Kanten* - Senden eine Nachricht an mehrere Ziele.
+*Sternförmige Verbindungen (Fan-out)* - Sendet eine Nachricht an mehrere Ziele.
 
-*Fan-in-Kanten* - Sammeln mehrere Nachrichten von verschiedenen Ausführenden und senden sie an ein Ziel.
+*Sternförmige Zusammenführungen (Fan-in)* - Sammelt mehrere Nachrichten von verschiedenen Executoren und sendet sie an ein Ziel.
 
 **Ereignisse**
 
-Um eine bessere Beobachtbarkeit in Workflows zu bieten, bietet MAF integrierte Ereignisse für die Ausführung, einschließlich:
+Um eine bessere Beobachtbarkeit von Workflows zu ermöglichen, bietet MAF integrierte Ereignisse für die Ausführung, darunter:
 
 - `WorkflowStartedEvent`  - Workflow-Ausführung beginnt
 - `WorkflowOutputEvent` - Workflow erzeugt eine Ausgabe
 - `WorkflowErrorEvent` - Workflow stößt auf einen Fehler
-- `ExecutorInvokeEvent`  - Ausführender beginnt mit der Verarbeitung
-- `ExecutorCompleteEvent`  -  Ausführender beendet die Verarbeitung
-- `RequestInfoEvent` - Eine Anfrage wird gestellt
+- `ExecutorInvokeEvent`  - Executor beginnt mit der Verarbeitung
+- `ExecutorCompleteEvent`  -  Executor beendet die Verarbeitung
+- `RequestInfoEvent` - Eine Anforderung wird ausgegeben
 
 ## Migration von anderen Frameworks (Semantic Kernel und AutoGen)
 
@@ -334,7 +334,7 @@ Um eine bessere Beobachtbarkeit in Workflows zu bieten, bietet MAF integrierte E
 
 **Vereinfachte Agentenerstellung**
 
-Semantic Kernel erfordert die Erstellung einer Kernel-Instanz für jeden Agenten. MAF verwendet einen vereinfachten Ansatz durch Erweiterungen für die Hauptanbieter.
+Semantic Kernel erfordert die Erstellung einer Kernel-Instanz für jeden Agenten. MAF verwendet einen vereinfachten Ansatz durch Nutzung von Erweiterungen für die Hauptanbieter.
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
@@ -342,15 +342,15 @@ agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( ins
 
 **Erstellung von Agenten-Threads**
 
-Semantic Kernel erfordert, dass Threads manuell erstellt werden. In MAF wird dem Agenten direkt ein Thread zugewiesen.
+Im Semantic Kernel müssen Threads manuell erstellt werden. In MAF wird einem Agenten direkt ein Thread zugewiesen.
 
 ```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+thread = agent.get_new_thread() # Führen Sie den Agenten mit dem Thread aus.
 ```
 
-**Tool-Registrierung**
+**Werkzeug-Registrierung**
 
-In Semantic Kernel werden Tools beim Kernel registriert, und der Kernel wird dann an den Agenten übergeben. In MAF werden Tools direkt während des Agentenerstellungsprozesses registriert.
+Im Semantic Kernel werden Werkzeuge beim Kernel registriert und dieser dann an den Agenten übergeben. In MAF werden Werkzeuge direkt während der Agentenerstellung registriert.
 
 ```python
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
@@ -360,25 +360,27 @@ agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpf
 
 **Teams vs Workflows**
 
-`Teams` sind die Ereignisstruktur für ereignisgesteuerte Aktivitäten mit Agenten in AutoGen. MAF verwendet `Workflows`, die Daten durch eine graphbasierte Architektur an Ausführende weiterleiten.
+`Teams` sind die Event-Struktur für ereignisgesteuerte Aktivitäten mit Agenten in AutoGen. MAF verwendet `Workflows`, die Daten an Executoren über eine graphbasierte Architektur leiten.
 
-**Tool-Erstellung**
+**Werkzeugerstellung**
 
-AutoGen verwendet `FunctionTool`, um Funktionen für Agenten aufzurufen. MAF verwendet @ai_function, das ähnlich funktioniert, aber auch die Schemas automatisch für jede Funktion ableitet.
+AutoGen verwendet `FunctionTool`, um Funktionen für Agenten aufzubereiten. MAF nutzt @ai_function, welches ähnlich funktioniert, aber auch automatisch die Schemata für jede Funktion ableitet.
 
-**Agentenverhalten**
+**Agenten-Verhalten**
 
-Agenten sind standardmäßig Einzelturn-Agenten in AutoGen, es sei denn, `max_tool_iterations` wird auf einen höheren Wert gesetzt. Innerhalb von MAF ist der `ChatAgent` standardmäßig mehrturnfähig, was bedeutet, dass er weiterhin Tools aufruft, bis die Aufgabe des Benutzers abgeschlossen ist.
+Agenten sind standardmäßig in AutoGen Single-Turn-Agenten, es sei denn `max_tool_iterations` wird auf einen höheren Wert gesetzt. Im MAF ist der `ChatAgent` standardmäßig Multi-Turn, was bedeutet, dass er Werkzeuge solange aufruft, bis die Benutzeraufgabe abgeschlossen ist.
 
-## Codebeispiele 
+## Code-Beispiele
 
-Codebeispiele für das Microsoft Agent Framework finden Sie in diesem Repository unter den Dateien `xx-python-agent-framework` und `xx-dotnet-agent-framework`.
+Code-Beispiele für Microsoft Agent Framework finden Sie in diesem Repository unter den Dateien `xx-python-agent-framework` und `xx-dotnet-agent-framework`.
 
 ## Haben Sie weitere Fragen zum Microsoft Agent Framework?
 
-Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, Sprechstunden zu besuchen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
+Treten Sie dem [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, an Sprechstunden teilzunehmen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, können automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten. Das Originaldokument in seiner Herkunftssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Verwendung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,158 +1,154 @@
-[![Multi-Agent Design](../../../translated_images/sl/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
+[![Multi-agentni oblikovni vzorci](../../../translated_images/sl/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
-> _(Kliknite na zgornjo sliko za ogled videoposnetka te lekcije)_
+> _(Kliknite zgornjo sliko za ogled videa te lekcije)_
 
-# Vzorci oblikovanja več agentov
+# Vzorci oblikovanja za večagentne sisteme
 
-Ko začnete delati na projektu, ki vključuje več agentov, morate razmisliti o vzorcu oblikovanja več agentov. Vendar pa morda ni takoj jasno, kdaj preklopiti na več agentov in kakšne so prednosti.
+Ko začnete delati na projektu, ki vključuje več agentov, morate upoštevati vzorec oblikovanja za večagentne sisteme. Vendar pa morda ni takoj jasno, kdaj preiti na več agentov in kakšne so prednosti.
 
 ## Uvod
 
-V tej lekciji bomo poskušali odgovoriti na naslednja vprašanja:
+V tej lekciji želimo odgovoriti na naslednja vprašanja:
 
-- Kateri so scenariji, kjer so več agenti primerni?
+- Kateri so scenariji, kjer je uporaba več agentov smiselna?
 - Kakšne so prednosti uporabe več agentov v primerjavi z enim samim agentom, ki opravlja več nalog?
-- Kateri so gradniki za implementacijo vzorca oblikovanja več agentov?
-- Kako lahko spremljamo, kako več agentov medsebojno sodeluje?
+- Kateri so gradniki za implementacijo vzorca oblikovanja za večagentne sisteme?
+- Kako vidimo, kako medsebojno sodelujejo več agentov?
 
 ## Cilji učenja
 
 Po tej lekciji boste lahko:
 
-- Prepoznali scenarije, kjer so več agenti primerni.
-- Razumeli prednosti uporabe več agentov v primerjavi z enim samim agentom.
-- Razumeli gradnike za implementacijo vzorca oblikovanja več agentov.
+- Prepoznali scenarije, kjer je uporaba več agentov smiselna
+- Prepoznali prednosti uporabe več agentov v primerjavi z enim samim agentom
+- Razumeli gradnike za implementacijo vzorca oblikovanja za večagentne sisteme
 
-Kaj je širša slika?
+Kakšna je širša slika?
 
-*Več agentov je vzorec oblikovanja, ki omogoča več agentom sodelovanje za dosego skupnega cilja.*
+*Več agentov je vzorec oblikovanja, ki omogoča sodelovanje več agentov za dosego skupnega cilja*.
 
-Ta vzorec se pogosto uporablja na različnih področjih, vključno z robotiko, avtonomnimi sistemi in porazdeljenim računalništvom.
+Ta vzorec se široko uporablja na različnih področjih, vključno z robotiko, avtonomnimi sistemi in distribuiranim računalništvom.
 
-## Scenariji, kjer so več agenti primerni
+## Scenariji, kjer je uporaba več agentov smiselna
 
-Kateri scenariji so primerni za uporabo več agentov? Odgovor je, da obstaja veliko scenarijev, kjer je uporaba več agentov koristna, zlasti v naslednjih primerih:
+Kateri scenariji so torej dober primer za uporabo več agentov? Odgovor je, da obstaja veliko scenarijev, kjer je uporaba več agentov koristna, še posebej v naslednjih primerih:
 
-- **Velike delovne obremenitve**: Velike delovne obremenitve je mogoče razdeliti na manjše naloge in jih dodeliti različnim agentom, kar omogoča vzporedno obdelavo in hitrejše dokončanje. Primer tega je obdelava velike količine podatkov.
-- **Zapletene naloge**: Zapletene naloge, podobno kot velike delovne obremenitve, je mogoče razdeliti na manjše podnaloge in jih dodeliti različnim agentom, ki se specializirajo za določen vidik naloge. Dober primer tega so avtonomna vozila, kjer različni agenti upravljajo navigacijo, zaznavanje ovir in komunikacijo z drugimi vozili.
-- **Raznolika strokovnost**: Različni agenti lahko imajo različno strokovnost, kar jim omogoča učinkovitejše obvladovanje različnih vidikov naloge kot enemu samemu agentu. Primer tega je zdravstvena oskrba, kjer agenti upravljajo diagnostiko, načrte zdravljenja in spremljanje pacientov.
+- **Velika delovna obremenitev**: Velike delovne obremenitve se lahko razdelijo na manjše naloge in dodelijo različnim agentom, kar omogoča vzporedno obdelavo in hitrejše dokončanje. Primer tega je obdelava velikih podatkov.
+- **Zapletene naloge**: Zapletene naloge, podobno kot velike delovne obremenitve, je mogoče razdeliti na manjše podnaloge in dodeliti različnim agentom, ki se specializirajo za določen vidik naloge. Dober primer tega so avtonomna vozila, kjer različni agenti upravljajo navigacijo, zaznavanje ovir in komunikacijo z drugimi vozili.
+- **Raznolike strokovne kompetence**: Različni agenti imajo lahko raznolike strokovne kompetence, kar jim omogoča učinkovitejše upravljanje različnih vidikov naloge kot en sam agent. Dober primer tega je zdravstvena oskrba, kjer lahko agenti upravljajo diagnostiko, načrte zdravljenja in spremljanje pacientov.
 
 ## Prednosti uporabe več agentov v primerjavi z enim samim agentom
 
-Sistem z enim samim agentom lahko dobro deluje pri enostavnih nalogah, vendar pri bolj zapletenih nalogah uporaba več agentov prinaša več prednosti:
+Sistem z enim samim agentom bi lahko dobro deloval za enostavne naloge, vendar pa lahko uporaba več agentov pri bolj zapletenih nalogah prinese številne prednosti:
 
-- **Specializacija**: Vsak agent se lahko specializira za določeno nalogo. Pomanjkanje specializacije pri enem samem agentu pomeni, da imate agenta, ki lahko opravlja vse, vendar se lahko zmede, ko se sooči z zapleteno nalogo. Na primer, lahko opravi nalogo, za katero ni najbolj usposobljen.
-- **Razširljivost**: Sisteme je lažje razširiti z dodajanjem več agentov kot z obremenjevanjem enega samega agenta.
-- **Odpornost na napake**: Če en agent odpove, lahko drugi še naprej delujejo, kar zagotavlja zanesljivost sistema.
+- **Specializacija**: Vsak agent se lahko specializira za določeno nalogo. Pomanjkanje specializacije v enem agentu pomeni, da imate agenta, ki zna vse, vendar se lahko zmede, kaj narediti pri zapleteni nalogi. Na primer, lahko se zgodi, da agent opravi nalogo, za katero ni najbolje usposobljen.
+- **Razširljivost**: Lažje je razširiti sistem z dodajanjem novih agentov kot pa preobremenjevati en sam agent.
+- **Odpornost na napake**: Če eden od agentov odpove, lahko drugi še vedno delujejo, kar zagotavlja zanesljivost sistema.
 
-Vzemimo primer rezervacije potovanja za uporabnika. Sistem z enim samim agentom bi moral obravnavati vse vidike postopka rezervacije potovanja, od iskanja letov do rezervacije hotelov in najema avtomobilov. Da bi to dosegel, bi moral imeti agent orodja za obravnavo vseh teh nalog. To bi lahko privedlo do zapletenega in monolitnega sistema, ki ga je težko vzdrževati in razširiti. Sistem z več agenti pa bi lahko imel različne agente, specializirane za iskanje letov, rezervacijo hotelov in najem avtomobilov. To bi sistem naredilo bolj modularen, lažje vzdrževan in razširljiv.
+Vzemimo primer: rezervacija potovanja za uporabnika. Sistem z enim agentom bi moral upravljati vse vidike rezervacije potovanja, od iskanja letov do rezervacije hotelov in najema avtomobilov. Za dosego tega z enim agentom bi morali imeti orodja za vse te naloge. To bi lahko vodilo do zapletenega in monolitnega sistema, ki je težaven za vzdrževanje in razširjanje. Sistem z več agenti pa lahko vključuje različne agente, specializirane za iskanje letov, rezervacijo hotelov in najem avtomobilov. Tako je sistem bolj modularen, lažji za vzdrževanje in razširljiv.
 
-Primerjajte to s turistično agencijo, ki jo vodi družinska trgovina, v primerjavi s turistično agencijo, ki jo vodi franšiza. Družinska trgovina bi imela enega agenta, ki obravnava vse vidike postopka rezervacije potovanja, medtem ko bi franšiza imela različne agente, ki obravnavajo različne vidike postopka rezervacije potovanja.
+Primerjajmo to z manjšo potovalno agencijo (mama in oče) v primerjavi s potovalno agencijo kot franšizo. Mama in oče bi imela enega samega agenta, ki skrbi za vse vidike rezervacije, medtem ko bi franšiza imela različne agente za različne vidike rezervacije.
 
-## Gradniki za implementacijo vzorca oblikovanja več agentov
+## Gradniki za implementacijo vzorca oblikovanja za večagentne sisteme
 
-Preden lahko implementirate vzorec oblikovanja več agentov, morate razumeti gradnike, ki sestavljajo ta vzorec.
+Preden lahko implementirate vzorec oblikovanja za večagentne sisteme, morate razumeti gradnike, ki sestavljajo ta vzorec.
 
-Poglejmo to bolj konkretno z zgledom rezervacije potovanja za uporabnika. V tem primeru bi gradniki vključevali:
+Naredimo to bolj konkretno z zgledom rezervacije potovanja za uporabnika. V tem primeru gradniki vključujejo:
 
-- **Komunikacija med agenti**: Agenti za iskanje letov, rezervacijo hotelov in najem avtomobilov morajo komunicirati in deliti informacije o uporabnikovih željah in omejitvah. Odločiti se morate o protokolih in metodah za to komunikacijo. Konkretno to pomeni, da mora agent za iskanje letov komunicirati z agentom za rezervacijo hotelov, da zagotovi, da je hotel rezerviran za iste datume kot let. To pomeni, da morajo agenti deliti informacije o uporabnikovih datumih potovanja, kar pomeni, da morate odločiti *kateri agenti delijo informacije in kako jih delijo*.
-- **Mehanizmi koordinacije**: Agenti morajo usklajevati svoja dejanja, da zagotovijo, da so uporabnikove želje in omejitve izpolnjene. Uporabnikova želja bi lahko bila, da želi hotel blizu letališča, medtem ko bi omejitev lahko bila, da so najem avtomobili na voljo le na letališču. To pomeni, da mora agent za rezervacijo hotelov usklajevati z agentom za najem avtomobilov, da zagotovi, da so uporabnikove želje in omejitve izpolnjene. To pomeni, da morate odločiti *kako agenti usklajujejo svoja dejanja*.
-- **Arhitektura agenta**: Agenti morajo imeti notranjo strukturo za sprejemanje odločitev in učenje iz interakcij z uporabnikom. To pomeni, da mora agent za iskanje letov imeti notranjo strukturo za sprejemanje odločitev o tem, katere lete priporočiti uporabniku. To pomeni, da morate odločiti *kako agenti sprejemajo odločitve in se učijo iz interakcij z uporabnikom*. Primeri, kako se agent uči in izboljšuje, bi lahko bili, da agent za iskanje letov uporablja model strojnega učenja za priporočanje letov uporabniku na podlagi njegovih preteklih želja.
-- **Vidljivost interakcij med agenti**: Morate imeti vidljivost, kako več agentov medsebojno sodeluje. To pomeni, da morate imeti orodja in tehnike za sledenje dejavnostim in interakcijam agentov. To bi lahko bilo v obliki orodij za beleženje in spremljanje, orodij za vizualizacijo in meril uspešnosti.
-- **Vzorci več agentov**: Obstajajo različni vzorci za implementacijo sistemov z več agenti, kot so centralizirane, decentralizirane in hibridne arhitekture. Odločiti se morate za vzorec, ki najbolje ustreza vašemu primeru uporabe.
-- **Človek v zanki**: V večini primerov boste imeli človeka v zanki in morate agentom dati navodila, kdaj naj zaprosijo za človeško posredovanje. To bi lahko bilo v obliki uporabnika, ki zahteva določen hotel ali let, ki ga agenti niso priporočili, ali zahteva potrditev pred rezervacijo leta ali hotela.
+- **Komunikacija med agenti**: Agenti za iskanje letov, rezervacijo hotelov in najem avtomobilov morajo komunicirati in deliti informacije o uporabnikovih željah in omejitvah. Potrebno je odločiti o protokolih in metodah za to komunikacijo. Konkretno to pomeni, da agent za iskanje letov komunicira z agentom za rezervacijo hotelov, da se zagotovi, da je hotel rezerviran za iste datume kot let. To pomeni, da morajo agenti deliti informacije o uporabnikovih datumih potovanja, kar pomeni, da morate določiti *kateri agenti delijo informacije in kako jih delijo*.
+- **Mehanizmi usklajevanja**: Agenti morajo usklajevati svoja dejanja, da zagotovijo izpolnitev uporabnikovih želja in omejitev. Uporabnikova želja je lahko na primer hotel blizu letališča, medtem ko je omejitev, da so avtomobili za najem na voljo samo na letališču. To pomeni, da mora agent za rezervacijo hotelov usklajevati svoja dejanja z agentom za najem avtomobilov, da se zagotovi izpolnitev uporabnikovih želja in omejitev. To pomeni, da morate določiti *kako agenti usklajujejo svoja dejanja*.
+- **Arhitektura agentov**: Agenti morajo imeti notranjo strukturo za sprejemanje odločitev in učenje iz interakcij z uporabnikom. To pomeni, da mora agent za iskanje letov imeti notranjo strukturo za odločanje, katere lete priporočiti uporabniku. To pomeni, da morate določiti *kako agenti sprejemajo odločitve in se učijo iz interakcij z uporabnikom*. Primeri učenja in izboljševanja agenta so, da agent za iskanje letov lahko uporablja strojno učenje za priporočanje letov glede na pretekle želje uporabnika.
+- **Preglednost večagentnih interakcij**: Potrebno je zagotoviti preglednost, kako medsebojno sodelujejo različni agenti. To pomeni, da potrebujete orodja in tehnike za sledenje aktivnostim in interakcijam agentov. To so lahko orodja za beleženje in spremljanje, vizualizacijska orodja in merila uspešnosti.
+- **Vzorci za večagentne sisteme**: Obstajajo različni vzorci za implementacijo večagentnih sistemov, kot so centralizirana, decentralizirana in hibridna arhitektura. Potrebno je izbrati vzorec, ki najbolj ustreza vašemu primeru uporabe.
+- **Človek v zanki**: V večini primerov bo v zanki prisoten človek, zato morate agentom določiti, kdaj prositi za človeško intervencijo. To je lahko, ko uporabnik zahteva določen hotel ali let, ki ga agenti niso priporočili, ali ko je potrebna potrdita pred rezervacijo leta ali hotela.
 
-## Vidljivost interakcij med agenti
+## Preglednost večagentnih interakcij
 
-Pomembno je, da imate vidljivost, kako več agentov medsebojno sodeluje. Ta vidljivost je ključna za odpravljanje napak, optimizacijo in zagotavljanje učinkovitosti celotnega sistema. Da to dosežete, morate imeti orodja in tehnike za sledenje dejavnostim in interakcijam agentov. To bi lahko bilo v obliki orodij za beleženje in spremljanje, orodij za vizualizacijo in meril uspešnosti.
+Pomembno je, da imate preglednost, kako medsebojno sodelujejo različni agenti. Ta preglednost je ključna za odpravljanje napak, optimizacijo in zagotavljanje učinkovitosti sistema kot celote. Za dosego tega potrebujete orodja in tehnike za sledenje aktivnostim in interakcijam agentov. To je lahko v obliki orodij za beleženje in spremljanje, vizualizacije in meril uspešnosti.
 
-Na primer, v primeru rezervacije potovanja za uporabnika bi lahko imeli nadzorno ploščo, ki prikazuje stanje vsakega agenta, uporabnikove želje in omejitve ter interakcije med agenti. Ta nadzorna plošča bi lahko prikazovala uporabnikove datume potovanja, lete, ki jih priporoča agent za lete, hotele, ki jih priporoča agent za hotele, in najem avtomobilov, ki jih priporoča agent za najem avtomobilov. To bi vam dalo jasen pogled na to, kako agenti medsebojno sodelujejo in ali so uporabnikove želje in omejitve izpolnjene.
+Na primer, pri rezervaciji potovanja za uporabnika bi lahko imeli nadzorno ploščo, ki prikazuje stanje posameznega agenta, uporabnikove želje in omejitve ter interakcije med agenti. Ta nadzorna plošča bi lahko prikazovala datume potovanja uporabnika, lete, ki jih priporoča agent za lete, hotele, ki jih priporoča agent za hotele, in avtomobile za najem, ki jih priporoča agent za najem avtomobilov. Tako bi imeli jasen pregled nad medsebojnim delovanjem agentov in ali so uporabnikove želje in omejitve upoštevane.
 
-Poglejmo podrobneje vsak od teh vidikov.
+Poglejmo te vidike podrobneje.
 
-- **Orodja za beleženje in spremljanje**: Želite beležiti vsako dejanje, ki ga izvede agent. Vnos v dnevnik lahko vsebuje informacije o agentu, ki je izvedel dejanje, izvedenem dejanju, času izvedbe dejanja in rezultatu dejanja. Te informacije lahko nato uporabite za odpravljanje napak, optimizacijo in drugo.
+- **Orodja za beleženje in spremljanje**: Želite imeti beleženje za vsako dejanje, ki ga opravi agent. Zapisi v dnevniku lahko vsebujejo informacije o agentu, ki je izvedel dejanje, opravljenem dejanju, času izvajanja in izidu. Te informacije se uporabljajo za odpravljanje napak, optimizacijo in drugo.
+- **Vizualizacijska orodja**: Vizualizacijska orodja pomagajo videti interakcije med agenti na bolj intuitiven način. Na primer, lahko imate graf, ki prikazuje pretok informacij med agenti. To lahko pomaga pri identifikaciji ozkih grl, neučinkovitosti in drugih težav v sistemu.
+- **Merila uspešnosti**: Merila uspešnosti pomagajo spremljati učinkovitost večagentnega sistema. Na primer, lahko spremljate čas, potreben za izvedbo naloge, število opravljenih nalog na časovno enoto in točnost priporočil, ki jih agenti podajajo. Te informacije vam pomagajo odkriti področja za izboljšave in optimizirati sistem.
 
-- **Orodja za vizualizacijo**: Orodja za vizualizacijo vam lahko pomagajo videti interakcije med agenti na bolj intuitiven način. Na primer, lahko imate graf, ki prikazuje tok informacij med agenti. To vam lahko pomaga prepoznati ozka grla, neučinkovitosti in druge težave v sistemu.
+## Vzorci za večagentne sisteme
 
-- **Merila uspešnosti**: Merila uspešnosti vam lahko pomagajo spremljati učinkovitost sistema z več agenti. Na primer, lahko spremljate čas, potreben za dokončanje naloge, število nalog, dokončanih na enoto časa, in natančnost priporočil, ki jih podajo agenti. Te informacije vam lahko pomagajo prepoznati področja za izboljšave in optimizirati sistem.
-
-## Vzorci več agentov
-
-Poglejmo nekaj konkretnih vzorcev, ki jih lahko uporabimo za ustvarjanje aplikacij z več agenti. Tukaj je nekaj zanimivih vzorcev, ki jih je vredno upoštevati:
+Oglejmo si nekaj konkretnih vzorcev, ki jih lahko uporabimo za ustvarjanje večagentnih aplikacij. Tukaj je nekaj zanimivih vzorcev, ki jih je vredno upoštevati:
 
 ### Skupinski klepet
 
-Ta vzorec je uporaben, ko želite ustvariti aplikacijo za skupinski klepet, kjer lahko več agentov medsebojno komunicira. Tipični primeri uporabe tega vzorca vključujejo sodelovanje v ekipi, podporo strankam in družabna omrežja.
+Ta vzorec je uporaben, ko želite ustvariti aplikacijo za skupinski klepet, kjer lahko več agentov komunicira med seboj. Tipični primeri uporabe so timsko sodelovanje, podpora strankam in družbena omrežja.
 
-V tem vzorcu vsak agent predstavlja uporabnika v skupinskem klepetu, sporočila pa se izmenjujejo med agenti z uporabo protokola za sporočanje. Agenti lahko pošiljajo sporočila v skupinski klepet, prejemajo sporočila iz skupinskega klepeta in odgovarjajo na sporočila drugih agentov.
+V tem vzorcu vsak agent predstavlja uporabnika v skupinskem klepetu, sporočila pa se izmenjujejo med agenti prek protokola za sporočila. Agenti lahko pošiljajo sporočila skupinskemu klepetu, prejemajo sporočila iz klepeta in odgovarjajo na sporočila drugih agentov.
 
-Ta vzorec je mogoče implementirati z uporabo centralizirane arhitekture, kjer se vsa sporočila usmerjajo prek centralnega strežnika, ali decentralizirane arhitekture, kjer se sporočila izmenjujejo neposredno.
+Ta vzorec se lahko implementira z centralizirano arhitekturo, kjer se vsa sporočila usmerjajo prek centralnega strežnika, ali decentralizirano arhitekturo, kjer se sporočila izmenjujejo neposredno.
 
 ![Skupinski klepet](../../../translated_images/sl/multi-agent-group-chat.ec10f4cde556babd.webp)
 
 ### Predaja nalog
 
-Ta vzorec je uporaben, ko želite ustvariti aplikacijo, kjer lahko več agentov medsebojno predaja naloge.
+Ta vzorec je uporaben, ko želite ustvariti aplikacijo, kjer lahko več agentov izmenjuje naloge med seboj.
 
-Tipični primeri uporabe tega vzorca vključujejo podporo strankam, upravljanje nalog in avtomatizacijo delovnih tokov.
+Tipični primeri uporabe vključujejo podporo strankam, upravljanje nalog in avtomatizacijo potekov dela.
 
-V tem vzorcu vsak agent predstavlja nalogo ali korak v delovnem toku, agenti pa lahko predajajo naloge drugim agentom na podlagi vnaprej določenih pravil.
+V tem vzorcu vsak agent predstavlja nalogo ali korak v poteku dela, agenti pa naloge posredujejo drugim agentom na podlagi vnaprej določenih pravil.
 
 ![Predaja nalog](../../../translated_images/sl/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
 ### Sodelovalno filtriranje
 
-Ta vzorec je uporaben, ko želite ustvariti aplikacijo, kjer lahko več agentov sodeluje pri podajanju priporočil uporabnikom.
+Ta vzorec je uporaben, ko želite ustvariti aplikacijo, kjer lahko več agentov sodeluje pri dajanju priporočil uporabnikom.
 
-Zakaj bi želeli, da več agentov sodeluje? Ker ima lahko vsak agent različno strokovnost in lahko na različne načine prispeva k procesu priporočanja.
+Zakaj bi želeli, da sodeluje več agentov? Ker lahko vsak agent ima različne strokovne kompetence in prispeva k procesu priporočanja na različne načine.
 
-Vzemimo primer, kjer uporabnik želi priporočilo za najboljšo delnico za nakup na borzi.
+Vzemimo primer, ko uporabnik želi priporočilo o najboljšem delnicah za nakup na borzi.
 
-- **Strokovnjak za industrijo**: En agent bi lahko bil strokovnjak za določeno industrijo.
-- **Tehnična analiza**: Drug agent bi lahko bil strokovnjak za tehnično analizo.
-- **Temeljna analiza**: Tretji agent pa bi lahko bil strokovnjak za temeljno analizo. S sodelovanjem lahko ti agenti uporabniku podajo bolj celovito priporočilo.
+- **Strokovnjak za industrijo**: En agent je lahko strokovnjak za določeno industrijo.
+- **Tehnična analiza**: Drug agent je lahko strokovnjak za tehnično analizo.
+- **Temeljna analiza**: Tretji agent je lahko strokovnjak za temeljno analizo. S sodelovanjem lahko ti agenti zagotovijo bolj celovito priporočilo uporabniku.
 
 ![Priporočilo](../../../translated_images/sl/multi-agent-filtering.d959cb129dc9f608.webp)
 
-## Scenarij: Postopek vračila denarja
+## Scenarij: Postopek vračila
 
-Razmislimo o scenariju, kjer stranka poskuša dobiti vračilo za izdelek. V tem procesu je lahko vključenih kar nekaj agentov, vendar jih razdelimo na agente, specifične za ta proces, in splošne agente, ki jih je mogoče uporabiti v drugih procesih.
+Predstavljajte si scenarij, kjer kupec želi dobiti vračilo za izdelek. Ta proces lahko zajema več agentov, vendar jih bomo razdelili na agente, specifične za ta proces, in splošne agente, ki se lahko uporabljajo tudi v drugih procesih.
 
-**Agenti, specifični za postopek vračila denarja**:
+**Agenti specifični za postopek vračila**:
 
-Naslednji so nekateri agenti, ki bi lahko bili vključeni v postopek vračila denarja:
+Naslednji agenti bi lahko sodelovali v postopku vračila:
 
-- **Agent stranke**: Ta agent predstavlja stranko in je odgovoren za začetek postopka vračila denarja.
-- **Agent prodajalca**: Ta agent predstavlja prodajalca in je odgovoren za obdelavo vračila denarja.
-- **Agent plačil**: Ta agent predstavlja proces plačil in je odgovoren za vračilo strankinega plačila.
-- **Agent za reševanje težav**: Ta agent predstavlja proces reševanja težav in je odgovoren za reševanje morebitnih težav, ki se pojavijo med postopkom vračila denarja.
-- **Agent za skladnost**: Ta agent predstavlja proces skladnosti in je odgovoren za zagotavljanje, da postopek vračila denarja ustreza predpisom in politikam.
+- **Agent za stranke**: Predstavlja kupca in je odgovoren za začetek postopka vračila.
+- **Agent prodajalca**: Predstavlja prodajalca in je odgovoren za obdelavo vračila.
+- **Agent za plačila**: Predstavlja plačilni proces in skrbi za vračilo plačila kupcu.
+- **Agent za reševanje**: Predstavlja proces reševanja težav in je odgovoren za reševanje morebitnih težav med postopkom vračila.
+- **Agent za skladnost**: Predstavlja proces skladnosti in zagotavlja, da potek vračila ustreza predpisom in pravilnikom.
 
 **Splošni agenti**:
 
 Ti agenti se lahko uporabljajo v drugih delih vašega poslovanja.
 
-- **Agent za pošiljanje**: Ta agent predstavlja proces pošiljanja in je odgovoren za pošiljanje izdelka nazaj prodajalcu. Ta agent se lahko uporablja tako za postopek vračila denarja kot za splošno pošiljanje izdelka, na primer ob nakupu.
-- **Agent za povratne informacije**: Ta agent predstavlja proces povratnih informacij in je odgovoren za zbiranje povratnih informacij od stranke. Povratne informacije je mogoče pridobiti kadarkoli, ne le med postopkom vračila denarja.
-- **Agent za eskalacijo**: Ta agent predstavlja proces eskalacije in je odgovoren za eskalacijo težav na višjo raven podpore. Ta tip agenta lahko uporabite v kateremkoli procesu, kjer je treba eskalirati težavo.
-- **Agent za obveščanje**: Ta agent predstavlja proces obveščanja in je odgovoren za pošiljanje obvestil stranki na različnih stopnjah postopka vračila denarja.
-- **Agent za analitiko**: Ta agent predstavlja proces analitike in je odgovoren za analizo podatkov, povezanih s postopkom vračila denarja.
-- **Agent za revizijo**: Ta agent predstavlja proces revizije in je odgovoren za revizijo postopka vračila denarja, da zagotovi, da se izvaja pravilno.
-- **Agent za poročanje**: Ta agent predstavlja proces poročanja in je odgovoren za ustvarjanje poročil o postopku vračila denarja.
-- **Agent za znanje**: Ta agent predstavlja proces znanja in je odgovoren za vzdrževanje baze znanja, povezane s postopkom vračila denarja. Ta agent bi lahko bil seznanjen tako z vračili kot z drugimi deli vašega poslovanja.
-- **Agent za varnost**: Ta agent predstavlja proces varnosti in je odgovoren za zagotavljanje varnosti postopka vračila denarja.
-- **Agent za kakovost**: Ta agent predstavlja proces kakovosti in je odgovoren za zagotavljanje kakovosti postopka vračila denarja.
+- **Agent za dostavo**: Predstavlja proces dostave in je odgovoren za vračilo izdelka prodajalcu. Ta agent se lahko uporablja tako za postopek vračila kot za splošno dostavo izdelkov, na primer ob nakupu.
+- **Agent za povratne informacije**: Predstavlja proces zbiranja povratnih informacij od strank. Povratne informacije lahko zbirate kadarkoli, ne le med postopkom vračila.
+- **Agent za eskalacijo**: Predstavlja proces eskalacije in skrbi za prenos težav na višjo podporno raven. Ta vrsta agenta se lahko uporablja za vsak proces, kjer je potrebna eskalacija problema.
+- **Agent za obveščanje**: Predstavlja proces obveščanja in je odgovoren za pošiljanje obvestil kupcu v različnih fazah postopka vračila.
+- **Agent za analizo**: Predstavlja proces analize in je odgovoren za analizo podatkov, povezanih s postopkom vračila.
+- **Agent za revizijo**: Predstavlja proces revizije in zagotavlja, da je postopek vračila pravilno izveden.
+- **Agent za poročanje**: Predstavlja proces poročanja in je odgovoren za pripravo poročil o postopku vračila.
+- **Agent za znanje**: Predstavlja proces upravljanja znanja in vzdržuje bazo znanja o postopku vračila. Ta agent ima lahko znanje tako o vračilih kot o drugih poslovnih področjih.
+- **Agent za varnost**: Predstavlja proces varnosti in zagotavlja varnost postopka vračila.
+- **Agent za kakovost**: Predstavlja proces zagotavljanja kakovosti in skrbi za kakovost postopka vračila.
 
-Naštetih je kar nekaj agentov, tako za specifični postopek vračila denarja kot za splošne agente, ki jih je mogoče uporabiti v drugih delih vašega poslovanja. Upamo, da vam to daje idejo, kako se lahko odločite, katere agente uporabiti v vašem sistemu z več agenti.
+Naštetih je kar nekaj agentov, tako specifičnih za postopek vračila kot tudi splošnih agentov, ki jih lahko uporabite v drugih delih vašega poslovanja. Upamo, da vam to daje idejo, kako se odločiti, katere agente uporabiti v vašem večagentnem sistemu.
 
 ## Naloga
-## Oblikovanje večagentnega sistema za proces podpore strankam
 
-Identificirajte agente, vključene v proces, njihove vloge in odgovornosti ter kako medsebojno sodelujejo. Upoštevajte tako agente, specifične za proces podpore strankam, kot tudi splošne agente, ki jih je mogoče uporabiti v drugih delih vašega podjetja.
+Oblikujte večagentni sistem za proces podpore strankam. Prepoznajte agente v procesu, njihove vloge in odgovornosti ter kako med seboj sodelujejo. Upoštevajte tako agente specifične za proces podpore kot tudi splošne agente, ki jih lahko uporabite v drugih delih vašega poslovanja.
+> Premislite, preden preberete naslednjo rešitev, morda boste potrebovali več agentov, kot mislite.
 
-> Premislite, preden preberete naslednjo rešitev, morda boste potrebovali več agentov, kot si mislite.
-
-> TIP: Razmislite o različnih fazah procesa podpore strankam in tudi o agentih, potrebnih za kateri koli sistem.
+> NAMIG: Razmislite o različnih fazah procesa podpore strankam in prav tako upoštevajte agente, potrebne za kateri koli sistem.
 
 ## Rešitev
 
@@ -160,25 +156,27 @@ Identificirajte agente, vključene v proces, njihove vloge in odgovornosti ter k
 
 ## Preverjanje znanja
 
-Vprašanje: Kdaj bi morali razmisliti o uporabi večagentnega sistema?
+Vprašanje: Kdaj bi morali razmisliti o uporabi več agentov?
 
-- [ ] A1: Ko imate majhno delovno obremenitev in preprosto nalogo.
-- [ ] A2: Ko imate veliko delovno obremenitev.
-- [ ] A3: Ko imate preprosto nalogo.
+- [ ] A1: Ko imate malo dela in enostavno nalogo.
+- [ ] A2: Ko imate veliko dela
+- [ ] A3: Ko imate enostavno nalogo.
 
-[Rešitev kviza](./solution/solution-quiz.md)
+[Rešitveni kviz](./solution/solution-quiz.md)
 
 ## Povzetek
 
-V tej lekciji smo obravnavali vzorec oblikovanja večagentnega sistema, vključno s scenariji, kjer so večagentni sistemi uporabni, prednostmi uporabe večagentnih sistemov v primerjavi z enim agentom, gradniki za implementacijo vzorca večagentnega sistema in kako pridobiti vpogled v interakcije med več agenti.
+V tej lekciji smo si ogledali vzorec večagentnega načrtovanja, vključno s scenariji, kjer so večagenti primerni, prednosti uporabe več agentov pred enim samim agentom, gradnike za implementacijo večagentnega vzorca ter kako imeti pregled nad tem, kako medsebojno delujejo več agenti.
 
-### Imate več vprašanj o vzorcu oblikovanja večagentnega sistema?
+### Imate več vprašanj o večagentnem vzorcu načrtovanja?
 
-Pridružite se [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), da se povežete z drugimi učenci, se udeležite uradnih ur in dobite odgovore na svoja vprašanja o AI agentih.
+Pridružite se [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord), da se srečate z drugimi udeleženci, obiščete svetovalne ure in dobite odgovore na vprašanja o AI agentih.
 
 ## Dodatni viri
 
-- 
+- <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html" target="_blank">Vzorce načrtovanja AutoGen</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentni vzorci načrtovanja</a>
+
 
 ## Prejšnja lekcija
 
@@ -186,9 +184,11 @@ Pridružite se [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), da 
 
 ## Naslednja lekcija
 
-[Metakognicija pri AI agentih](../09-metacognition/README.md)
+[Metakognicija v AI agentih](../09-metacognition/README.md)
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za uradni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazuma ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne prevzemamo nobene odgovornosti.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

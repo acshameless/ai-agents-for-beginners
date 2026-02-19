@@ -1,182 +1,187 @@
-[![Višestruki dizajn agenata](../../../translated_images/hr/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
+[![Dizajn sustava s više agenata](../../../translated_images/hr/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
-> _(Kliknite na sliku iznad za pregled videa ove lekcije)_
+> _(Kliknite sliku iznad da pogledate video ove lekcije)_
 
-# Obrasci dizajna višestrukih agenata
+# Obrasci dizajna za sustave s više agenata
 
-Čim počnete raditi na projektu koji uključuje više agenata, morat ćete razmotriti obrazac dizajna višestrukih agenata. Međutim, možda neće biti odmah jasno kada prijeći na višestruke agente i koje su prednosti.
+Čim počnete raditi na projektu koji uključuje više agenata, morat ćete razmotriti obrazac dizajna za više agenata. Međutim, možda neće biti odmah jasno kada prijeći na sustav s više agenata i koje su prednosti.
 
 ## Uvod
 
 U ovoj lekciji nastojimo odgovoriti na sljedeća pitanja:
 
-- Koji su scenariji u kojima su višestruki agenti primjenjivi?
-- Koje su prednosti korištenja višestrukih agenata u odnosu na jednog agenta koji obavlja više zadataka?
-- Koji su osnovni elementi za implementaciju obrasca dizajna višestrukih agenata?
-- Kako možemo imati pregled nad interakcijama između višestrukih agenata?
+- Na koje se scenarije primjenjuju sustavi s više agenata?
+- Koje su prednosti korištenja sustava s više agenata u odnosu na jednog agenta koji obavlja više zadataka?
+- Koji su gradivni elementi implementacije obrasca dizajna za više agenata?
+- Kako imati uvid u to kako se agenti međusobno međusobno povezuju i komuniciraju?
 
 ## Ciljevi učenja
 
 Nakon ove lekcije trebali biste moći:
 
-- Identificirati scenarije u kojima su višestruki agenti primjenjivi.
-- Prepoznati prednosti korištenja višestrukih agenata u odnosu na jednog agenta.
-- Razumjeti osnovne elemente za implementaciju obrasca dizajna višestrukih agenata.
+- Prepoznati scenarije u kojima su sustavi s više agenata primjenjivi
+- Uočiti prednosti korištenja sustava s više agenata u odnosu na jednog agenta
+- Razumjeti gradivne elemente implementacije obrasca dizajna za više agenata
 
-Šira slika?
+Koja je šira slika?
 
-*Višestruki agenti su obrazac dizajna koji omogućuje da više agenata surađuje kako bi postigli zajednički cilj.*
+*Sustavi s više agenata su obrazac dizajna koji omogućuje da više agenata surađuje kako bi postigli zajednički cilj*.
 
-Ovaj obrazac se široko koristi u raznim područjima, uključujući robotiku, autonomne sustave i distribuirano računalstvo.
+Ovaj obrazac se široko koristi u raznim područjima, uključujući robotiku, autonomne sustave i distribuirano računarstvo.
 
-## Scenariji u kojima su višestruki agenti primjenjivi
+## Scenariji u kojima su sustavi s više agenata primjenjivi
 
-Koji su to scenariji u kojima je korisno koristiti višestruke agente? Odgovor je da postoji mnogo scenarija u kojima je primjena višestrukih agenata korisna, posebno u sljedećim slučajevima:
+Koji su slučajevi dobar izbor za korištenje više agenata? Odgovor je da postoji mnogo scenarija u kojima je korisno koristiti više agenata, osobito u sljedećim slučajevima:
 
-- **Veliki radni zadaci**: Veliki radni zadaci mogu se podijeliti na manje zadatke i dodijeliti različitim agentima, omogućujući paralelnu obradu i brže dovršavanje. Primjer za to je obrada velike količine podataka.
-- **Složeni zadaci**: Složeni zadaci, poput velikih radnih zadataka, mogu se razložiti na manje podzadatke i dodijeliti različitim agentima, od kojih svaki specijalizira određeni aspekt zadatka. Dobar primjer za to su autonomna vozila gdje različiti agenti upravljaju navigacijom, otkrivanjem prepreka i komunikacijom s drugim vozilima.
-- **Raznolika stručnost**: Različiti agenti mogu imati raznoliku stručnost, omogućujući im da se učinkovitije bave različitim aspektima zadatka nego jedan agent. Primjer za to je zdravstvena skrb gdje agenti mogu upravljati dijagnostikom, planovima liječenja i praćenjem pacijenata.
+- **Velika opterećenja**: Velike radne količine mogu se podijeliti na manje zadatke i dodijeliti različitim agentima, što omogućuje paralelnu obradu i brže dovršenje. Primjer za to je veliki zadatak obrade podataka.
+- **Kompleksni zadaci**: Kompleksne zadaće, poput velikih opterećenja, mogu se razbiti na manje podzadatke i dodijeliti različitim agentima, od kojih se svaki specijalizira za određeni aspekt zadatka. Dobar primjer za to su autonomna vozila gdje različiti agenti upravljaju navigacijom, otkrivanjem prepreka i komunikacijom s drugim vozilima.
+- **Raznolika stručnost**: Različiti agenti mogu imati raznoliku stručnost, što im omogućuje da učinkovitije rješavaju različite aspekte zadatka nego jedan agent. U tom slučaju dobar primjer je zdravstvena zaštita gdje agenti mogu upravljati dijagnostikom, planovima liječenja i praćenjem pacijenata.
 
-## Prednosti korištenja višestrukih agenata u odnosu na jednog agenta
+## Prednosti korištenja sustava s više agenata u odnosu na jednog agenta
 
-Sustav s jednim agentom može dobro funkcionirati za jednostavne zadatke, ali za složenije zadatke korištenje višestrukih agenata može donijeti nekoliko prednosti:
+Sustav s jednim agentom mogao bi dobro funkcionirati za jednostavne zadatke, ali za složenije zadatke korištenje više agenata može pružiti nekoliko prednosti:
 
-- **Specijalizacija**: Svaki agent može biti specijaliziran za određeni zadatak. Nedostatak specijalizacije kod jednog agenta znači da imate agenta koji može raditi sve, ali se može zbuniti kada se suoči sa složenim zadatkom. Na primjer, može završiti radeći zadatak za koji nije najbolje prilagođen.
+- **Specijalizacija**: Svaki agent može biti specijaliziran za određeni zadatak. Nedostatak specijalizacije u jednom agentu znači da imate agenta koji može raditi sve, ali se može zbuniti što treba raditi kada se suoči sa složenim zadatkom. Na primjer, može na kraju obaviti zadatak za koji nije najbolje prikladan.
 - **Skalabilnost**: Lakše je skalirati sustave dodavanjem više agenata nego preopterećivanjem jednog agenta.
-- **Otpornost na greške**: Ako jedan agent zakaže, drugi mogu nastaviti funkcionirati, osiguravajući pouzdanost sustava.
+- **Otpornost na greške**: Ako jedan agent zakaže, ostali mogu nastaviti s radom, osiguravajući pouzdanost sustava.
 
-Uzmimo primjer: rezervacija putovanja za korisnika. Sustav s jednim agentom morao bi upravljati svim aspektima procesa rezervacije putovanja, od pronalaženja letova do rezervacije hotela i iznajmljivanja automobila. Da bi to postigao, agent bi morao imati alate za upravljanje svim tim zadacima. To bi moglo dovesti do složenog i monolitnog sustava koji je teško održavati i skalirati. Sustav s višestrukim agentima, s druge strane, mogao bi imati različite agente specijalizirane za pronalaženje letova, rezervaciju hotela i iznajmljivanje automobila. To bi sustav učinilo modularnijim, lakšim za održavanje i skalabilnim.
+Uzmimo primjer — rezervirajmo putovanje za korisnika. Sustav s jednim agentom morao bi se baviti svim aspektima procesa rezervacije putovanja, od pronalaženja letova do rezervacije hotela i najma automobila. Da bi to postigao, jedan agent trebao bi imati alate za rukovanje svim tim zadacima. To bi moglo rezultirati složenim i monolitnim sustavom koji je teško održavati i skalirati. Sustav s više agenata, s druge strane, mogao bi imati različite agente specijalizirane za pronalaženje letova, rezervaciju hotela i najam automobila. To bi sustav učinilo modularnijim, lakšim za održavanje i skalabilnim.
 
-Usporedimo to s turističkom agencijom vođenom kao obiteljski posao naspram turističke agencije vođene kao franšiza. Obiteljski posao imao bi jednog agenta koji upravlja svim aspektima procesa rezervacije putovanja, dok bi franšiza imala različite agente koji upravljaju različitim aspektima procesa rezervacije putovanja.
+Usporedite to s putničkom agencijom vođenom kao obiteljska agencija naspram franšize. Obiteljska agencija imala bi jednog agenta koji rješava sve aspekte procesa rezervacije putovanja, dok bi franšiza imala različite agente koji se bave različitim aspektima procesa rezervacije.
 
-## Osnovni elementi za implementaciju obrasca dizajna višestrukih agenata
+## Gradivni elementi implementacije obrasca dizajna za više agenata
 
-Prije nego što možete implementirati obrazac dizajna višestrukih agenata, morate razumjeti osnovne elemente koji čine taj obrazac.
+Prije nego što možete implementirati obrazac dizajna za više agenata, morate razumjeti gradivne elemente koji čine taj obrazac.
 
-Uzmimo konkretan primjer rezervacije putovanja za korisnika. U ovom slučaju, osnovni elementi uključuju:
+Da bismo to učinili konkretnijim, ponovno pogledajmo primjer rezervacije putovanja za korisnika. U tom slučaju gradivni elementi uključivali bi:
 
-- **Komunikacija agenata**: Agenti za pronalaženje letova, rezervaciju hotela i iznajmljivanje automobila moraju komunicirati i dijeliti informacije o korisnikovim preferencijama i ograničenjima. Morate odlučiti o protokolima i metodama za ovu komunikaciju. Konkretno, to znači da agent za pronalaženje letova mora komunicirati s agentom za rezervaciju hotela kako bi osigurao da je hotel rezerviran za iste datume kao i let. To znači da agenti moraju dijeliti informacije o korisnikovim datumima putovanja, što znači da morate odlučiti *koji agenti dijele informacije i kako ih dijele*.
-- **Mehanizmi koordinacije**: Agenti moraju koordinirati svoje radnje kako bi osigurali da su korisnikove preferencije i ograničenja ispunjeni. Korisnička preferencija mogla bi biti da žele hotel blizu zračne luke, dok bi ograničenje moglo biti da su automobili za iznajmljivanje dostupni samo na zračnoj luci. To znači da agent za rezervaciju hotela mora koordinirati s agentom za rezervaciju automobila kako bi osigurao da su korisnikove preferencije i ograničenja ispunjeni. To znači da morate odlučiti *kako agenti koordiniraju svoje radnje*.
-- **Arhitektura agenata**: Agenti moraju imati unutarnju strukturu za donošenje odluka i učenje iz svojih interakcija s korisnikom. To znači da agent za pronalaženje letova mora imati unutarnju strukturu za donošenje odluka o tome koje letove preporučiti korisniku. To znači da morate odlučiti *kako agenti donose odluke i uče iz svojih interakcija s korisnikom*. Primjeri kako agent uči i poboljšava se mogli bi biti da agent za pronalaženje letova koristi model strojnog učenja za preporuku letova korisniku na temelju njihovih prošlih preferencija.
-- **Pregled interakcija višestrukih agenata**: Morate imati pregled nad interakcijama između višestrukih agenata. To znači da morate imati alate i tehnike za praćenje aktivnosti i interakcija agenata. To bi moglo biti u obliku alata za zapisivanje i praćenje, alata za vizualizaciju i mjernih podataka o izvedbi.
-- **Obrasci višestrukih agenata**: Postoje različiti obrasci za implementaciju sustava višestrukih agenata, poput centraliziranih, decentraliziranih i hibridnih arhitektura. Morate odlučiti o obrascu koji najbolje odgovara vašem slučaju.
-- **Čovjek u petlji**: U većini slučajeva imat ćete čovjeka u petlji i morate uputiti agente kada tražiti ljudsku intervenciju. To bi moglo biti u obliku korisnika koji traži određeni hotel ili let koji agenti nisu preporučili ili traži potvrdu prije rezervacije leta ili hotela.
+- **Komunikacija agenata**: Agenti za pronalaženje letova, rezervaciju hotela i najam automobila trebaju komunicirati i dijeliti informacije o korisničkim preferencijama i ograničenjima. Trebate odlučiti o protokolima i metodama za tu komunikaciju. Konkretno, agent za pronalaženje letova mora komunicirati s agentom za rezervaciju hotela kako bi osigurao da je hotel rezerviran za iste datume kao i let. To znači da agenti trebaju dijeliti informacije o datumima putovanja korisnika, što znači da trebate odlučiti *koji agenti dijele informacije i kako ih dijele*.
+- **Mehanizmi koordinacije**: Agenti trebaju koordinirati svoje akcije kako bi osigurali da su korisničke preferencije i ograničenja zadovoljena. Korisnička preferencija mogla bi biti da žele hotel blizu zračne luke, dok ograničenje može biti da su najamni automobili dostupni samo na zračnoj luci. To znači da agent za rezervaciju hotela treba koordinirati s agentom za rezervaciju najma automobila kako bi osigurao da su korisničke preferencije i ograničenja zadovoljena. To znači da trebate odlučiti *kako agenti koordiniraju svoje akcije*.
+- **Arhitektura agenata**: Agenti trebaju imati unutarnju strukturu za donošenje odluka i učenje iz svojih interakcija s korisnikom. To znači da agent za pronalaženje letova treba imati unutarnju strukturu za donošenje odluka o tome koje letove preporučiti korisniku. To znači da trebate odlučiti *kako agenti donose odluke i uče iz svojih interakcija s korisnikom*. Primjeri kako agent uči i poboljšava se mogli bi biti da agent za pronalaženje letova koristi model strojnog učenja za preporučivanje letova korisniku na temelju njihovih prethodnih preferencija.
+- **Vidljivost interakcija među agentima**: Trebate imati uvid u to kako se više agenata međusobno povezuje i komunicira. To znači da trebate imati alate i tehnike za praćenje aktivnosti i interakcija agenata. To može biti u obliku alata za evidentiranje i nadzor, alata za vizualizaciju i metrika izvedbe.
+- **Obrasci za sustave s više agenata**: Postoje različiti obrasci za implementaciju sustava s više agenata, poput centraliziranih, decentraliziranih i hibridnih arhitektura. Trebate odlučiti o obrascu koji najbolje odgovara vašem slučaju korištenja.
+- **Čovjek u petlji**: U većini slučajeva imat ćete čovjeka u petlji i trebate uputiti agente kada tražiti ljudsku intervenciju. To može biti u obliku korisnika koji traži određeni hotel ili let koji agenti nisu preporučili ili traženja potvrde prije rezervacije leta ili hotela.
 
-## Pregled interakcija višestrukih agenata
+## Vidljivost interakcija među agentima
 
-Važno je da imate pregled nad interakcijama između višestrukih agenata. Ovaj pregled je ključan za otklanjanje grešaka, optimizaciju i osiguranje učinkovitosti cjelokupnog sustava. Da biste to postigli, morate imati alate i tehnike za praćenje aktivnosti i interakcija agenata. To bi moglo biti u obliku alata za zapisivanje i praćenje, alata za vizualizaciju i mjernih podataka o izvedbi.
+Važno je imati uvid u to kako se više agenata međusobno povezuje i komunicira. Ta vidljivost je ključna za otklanjanje pogrešaka, optimizaciju i osiguravanje učinkovitosti sustava u cjelini. Da biste to postigli, trebate imati alate i tehnike za praćenje aktivnosti i interakcija agenata. To može biti u obliku alata za evidentiranje i nadzor, alata za vizualizaciju i metrika izvedbe.
 
-Na primjer, u slučaju rezervacije putovanja za korisnika, mogli biste imati nadzornu ploču koja prikazuje status svakog agenta, korisnikove preferencije i ograničenja te interakcije između agenata. Ova nadzorna ploča mogla bi prikazivati korisnikove datume putovanja, letove koje preporučuje agent za letove, hotele koje preporučuje agent za hotele i automobile koje preporučuje agent za iznajmljivanje automobila. To bi vam dalo jasan pregled kako agenti međusobno djeluju i jesu li korisnikove preferencije i ograničenja ispunjeni.
+Na primjer, u slučaju rezervacije putovanja za korisnika, mogli biste imati nadzornu ploču koja prikazuje status svakog agenta, korisničke preferencije i ograničenja te interakcije među agentima. Ta nadzorna ploča mogla bi prikazivati datume putovanja korisnika, letove koje je preporučio agent za letove, hotele koje je preporučio agent za hotele i najamne automobile koje je preporučio agent za najam automobila. To bi vam dalo jasan uvid u to kako agenti međusobno komuniciraju i zadovoljavaju li se korisničke preferencije i ograničenja.
 
-Pogledajmo detaljnije svaki od ovih aspekata.
+Pogledajmo svaki od ovih aspekata detaljnije.
 
-- **Alati za zapisivanje i praćenje**: Želite zapisivati svaku radnju koju poduzme agent. Unos zapisa mogao bi sadržavati informacije o agentu koji je poduzeo radnju, poduzetoj radnji, vremenu kada je radnja poduzeta i ishodu radnje. Ove informacije mogu se koristiti za otklanjanje grešaka, optimizaciju i više.
-- **Alati za vizualizaciju**: Alati za vizualizaciju mogu vam pomoći da vidite interakcije između agenata na intuitivniji način. Na primjer, mogli biste imati grafikon koji prikazuje tok informacija između agenata. To bi vam moglo pomoći da identificirate uska grla, neučinkovitosti i druge probleme u sustavu.
-- **Mjerni podaci o izvedbi**: Mjerni podaci o izvedbi mogu vam pomoći da pratite učinkovitost sustava višestrukih agenata. Na primjer, mogli biste pratiti vrijeme potrebno za dovršavanje zadatka, broj dovršenih zadataka po jedinici vremena i točnost preporuka koje daju agenti. Ove informacije mogu vam pomoći da identificirate područja za poboljšanje i optimizirate sustav.
+- **Alati za evidentiranje i nadzor**: Želite imati evidentiranje za svaku radnju koju agent poduzme. Unos u zapisnik mogao bi pohraniti informacije o agentu koji je poduzeo radnju, poduzetoj radnji, vremenu kada je radnja poduzeta i ishodu radnje. Te se informacije potom mogu koristiti za otklanjanje pogrešaka, optimizaciju i drugo.
 
-## Obrasci višestrukih agenata
+- **Alati za vizualizaciju**: Alati za vizualizaciju mogu vam pomoći da intuitivnije vidite interakcije među agentima. Na primjer, mogli biste imati graf koji prikazuje tok informacija između agenata. To bi vam moglo pomoći identificirati uska grla, neučinkovitosti i druge probleme u sustavu.
 
-Pogledajmo konkretne obrasce koje možemo koristiti za stvaranje aplikacija s višestrukim agentima. Evo nekoliko zanimljivih obrazaca koje vrijedi razmotriti:
+- **Metrike učinka**: Metrike učinka mogu vam pomoći pratiti učinkovitost sustava s više agenata. Na primjer, mogli biste pratiti vrijeme potrebno za dovršetak zadatka, broj zadataka dovršenih po jedinici vremena i točnost preporuka koje daju agenti. Te informacije mogu vam pomoći identificirati područja za poboljšanje i optimizirati sustav.
 
-### Grupni chat
+## Obrasci sustava s više agenata
 
-Ovaj obrazac je koristan kada želite stvoriti aplikaciju za grupni chat u kojoj više agenata može međusobno komunicirati. Tipični slučajevi upotrebe za ovaj obrazac uključuju timsku suradnju, korisničku podršku i društvene mreže.
+Zaronimo u neke konkretne obrasce koje možemo koristiti za izradu aplikacija s više agenata. Ovdje su neki zanimljivi obrasci koje vrijedi razmotriti:
 
-U ovom obrascu, svaki agent predstavlja korisnika u grupnom chatu, a poruke se razmjenjuju između agenata koristeći protokol za razmjenu poruka. Agenti mogu slati poruke u grupni chat, primati poruke iz grupnog chata i odgovarati na poruke drugih agenata.
+### Grupni razgovor
 
-Ovaj obrazac može se implementirati koristeći centraliziranu arhitekturu gdje se sve poruke usmjeravaju kroz centralni poslužitelj ili decentraliziranu arhitekturu gdje se poruke razmjenjuju izravno.
+Ovaj je obrazac koristan kada želite stvoriti aplikaciju za grupni razgovor u kojoj više agenata može međusobno komunicirati. Tipični slučajevi korištenja za ovaj obrazac uključuju timsku suradnju, korisničku podršku i društvene mreže.
 
-![Grupni chat](../../../translated_images/hr/multi-agent-group-chat.ec10f4cde556babd.webp)
+U ovom obrascu svaki agent predstavlja korisnika u grupnom razgovoru, a poruke se razmjenjuju između agenata koristeći protokol za razmjenu poruka. Agenti mogu slati poruke u grupni razgovor, primati poruke iz grupnog razgovora i odgovarati na poruke od drugih agenata.
+
+Ovaj se obrazac može implementirati koristeći centraliziranu arhitekturu u kojoj sve poruke prolaze kroz središnji poslužitelj, ili decentraliziranu arhitekturu u kojoj se poruke razmjenjuju izravno.
+
+![Grupni razgovor](../../../translated_images/hr/multi-agent-group-chat.ec10f4cde556babd.webp)
 
 ### Predaja zadatka
 
-Ovaj obrazac je koristan kada želite stvoriti aplikaciju u kojoj više agenata može predavati zadatke jedni drugima.
+Ovaj je obrazac koristan kada želite stvoriti aplikaciju u kojoj više agenata može prenositi zadatke jedni drugima.
 
-Tipični slučajevi upotrebe za ovaj obrazac uključuju korisničku podršku, upravljanje zadacima i automatizaciju tijeka rada.
+Tipični slučajevi korištenja za ovaj obrazac uključuju korisničku podršku, upravljanje zadacima i automatizaciju radnih tokova.
 
-U ovom obrascu, svaki agent predstavlja zadatak ili korak u tijeku rada, a agenti mogu predavati zadatke drugim agentima na temelju unaprijed definiranih pravila.
+U ovom obrascu svaki agent predstavlja zadatak ili korak u radnom toku, a agenti mogu predavati zadatke drugim agentima na temelju unaprijed definiranih pravila.
 
 ![Predaja zadatka](../../../translated_images/hr/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
-### Kolaborativno filtriranje
+### Suradničko filtriranje
 
-Ovaj obrazac je koristan kada želite stvoriti aplikaciju u kojoj više agenata može surađivati kako bi korisnicima dali preporuke.
+Ovaj je obrazac koristan kada želite stvoriti aplikaciju u kojoj više agenata može surađivati pri davanju preporuka korisnicima.
 
-Zašto biste željeli da više agenata surađuje? Zato što svaki agent može imati različitu stručnost i može doprinijeti procesu preporuka na različite načine.
+Razlog zašto želite da više agenata surađuje jest taj što svaki agent može imati različitu stručnost i može pridonijeti procesu preporuka na različite načine.
 
 Uzmimo primjer gdje korisnik želi preporuku za najbolju dionicu za kupnju na burzi.
 
-- **Industrijski stručnjak**: Jedan agent mogao bi biti stručnjak za određenu industriju.
+- **Stručnjak za industriju**: Jedan agent mogao bi biti stručnjak za određenu industriju.
 - **Tehnička analiza**: Drugi agent mogao bi biti stručnjak za tehničku analizu.
-- **Fundamentalna analiza**: Treći agent mogao bi biti stručnjak za fundamentalnu analizu. Suradnjom, ovi agenti mogu korisniku pružiti sveobuhvatniju preporuku.
+- **Fundamentalna analiza**: Još jedan agent mogao bi biti stručnjak za fundamentalnu analizu. Suradnjom ti agenti mogu korisniku pružiti sveobuhvatniju preporuku.
 
 ![Preporuka](../../../translated_images/hr/multi-agent-filtering.d959cb129dc9f608.webp)
 
 ## Scenarij: Proces povrata novca
 
-Razmotrimo scenarij u kojem korisnik pokušava dobiti povrat novca za proizvod. U ovom procesu može biti uključeno dosta agenata, ali podijelimo ih na agente specifične za ovaj proces i opće agente koji se mogu koristiti u drugim procesima.
+Razmotrite scenarij u kojem kupac pokušava dobiti povrat novca za proizvod; u tom procesu može biti uključeno prilično mnogo agenata, ali podijelimo ih između agenata specifičnih za ovaj proces i općih agenata koji se mogu koristiti u drugim procesima.
 
-**Agenti specifični za proces povrata novca**:
+**Agenti specifični za proces povrata**:
 
-Slijede neki agenti koji bi mogli biti uključeni u proces povrata novca:
+Slijede neki agenti koji bi mogli biti uključeni u proces povrata:
 
-- **Agent korisnika**: Ovaj agent predstavlja korisnika i odgovoran je za pokretanje procesa povrata novca.
-- **Agent prodavatelja**: Ovaj agent predstavlja prodavatelja i odgovoran je za obradu povrata novca.
-- **Agent plaćanja**: Ovaj agent predstavlja proces plaćanja i odgovoran je za povrat korisnikove uplate.
-- **Agent za rješavanje problema**: Ovaj agent predstavlja proces rješavanja problema i odgovoran je za rješavanje svih problema koji se pojave tijekom procesa povrata novca.
-- **Agent za usklađenost**: Ovaj agent predstavlja proces usklađenosti i odgovoran je za osiguranje da proces povrata novca bude u skladu s propisima i politikama.
+- **Agent kupca**: Ovaj agent predstavlja kupca i odgovoran je za pokretanje procesa povrata.
+- **Agent prodavača**: Ovaj agent predstavlja prodavača i odgovoran je za obradu povrata.
+- **Agent za plaćanje**: Ovaj agent predstavlja proces plaćanja i odgovoran je za vraćanje kupčeve uplate.
+- **Agent za rješavanje**: Ovaj agent predstavlja proces rješavanja problema i odgovoran je za rješavanje bilo kakvih problema koji se pojave tijekom procesa povrata.
+- **Agent za usklađenost**: Ovaj agent predstavlja proces usklađenosti i odgovoran je za osiguravanje da je proces povrata u skladu s propisima i politikama.
 
 **Opći agenti**:
 
-Ovi agenti mogu se koristiti u drugim dijelovima vašeg poslovanja.
+Ove agente možete koristiti u drugim dijelovima vašeg poslovanja.
 
-- **Agent za dostavu**: Ovaj agent predstavlja proces dostave i odgovoran je za dostavu proizvoda natrag prodavatelju. Ovaj agent može se koristiti i za proces povrata novca i za opću dostavu proizvoda, primjerice nakon kupnje.
-- **Agent za povratne informacije**: Ovaj agent predstavlja proces povratnih informacija i odgovoran je za prikupljanje povratnih informacija od korisnika. Povratne informacije mogu se prikupljati u bilo kojem trenutku, ne samo tijekom procesa povrata novca.
-- **Agent za eskalaciju**: Ovaj agent predstavlja proces eskalacije i odgovoran je za eskalaciju problema na višu razinu podrške. Ova vrsta agenta može se koristiti u bilo kojem procesu gdje je potrebno eskalirati problem.
-- **Agent za obavijesti**: Ovaj agent predstavlja proces obavijesti i odgovoran je za slanje obavijesti korisniku u različitim fazama procesa povrata novca.
-- **Agent za analitiku**: Ovaj agent predstavlja proces analitike i odgovoran je za analizu podataka povezanih s procesom povrata novca.
-- **Agent za reviziju**: Ovaj agent predstavlja proces revizije i odgovoran je za reviziju procesa povrata novca kako bi se osiguralo da se provodi ispravno.
-- **Agent za izvještavanje**: Ovaj agent predstavlja proces izvještavanja i odgovoran je za generiranje izvještaja o procesu povrata novca.
-- **Agent za znanje**: Ovaj agent predstavlja proces znanja i odgovoran je za održavanje baze znanja informacija povezanih s procesom povrata novca. Ovaj agent može biti informiran i o povratima i o drugim dijelovima vašeg poslovanja.
-- **Agent za sigurnost**: Ovaj agent predstavlja proces sigurnosti i odgovoran je za osiguranje sigurnosti procesa povrata novca.
-- **Agent za kvalitetu**: Ovaj agent predstavlja proces kvalitete i odgovoran je za osiguranje kvalitete procesa povrata novca.
+- **Agent dostave**: Ovaj agent predstavlja proces dostave i odgovoran je za slanje proizvoda natrag prodavaču. Ovaj agent može se koristiti i za proces povrata i za opću dostavu proizvoda prilikom kupnje, na primjer.
+- **Agent za povratne informacije**: Ovaj agent predstavlja proces prikupljanja povratnih informacija i odgovoran je za prikupljanje povratnih informacija od kupca. Povratne informacije mogu se prikupljati u bilo kojem trenutku, a ne samo tijekom procesa povrata.
+- **Agent za eskalaciju**: Ovaj agent predstavlja proces eskalacije i odgovoran je za eskalaciju problema na višu razinu podrške. Ovaj tip agenta možete koristiti za bilo koji proces u kojem trebate eskalirati problem.
+- **Agent za obavijesti**: Ovaj agent predstavlja proces obavještavanja i odgovoran je za slanje obavijesti kupcu u različitim fazama procesa povrata.
+- **Agent za analitiku**: Ovaj agent predstavlja proces analitike i odgovoran je za analiziranje podataka povezanih s procesom povrata.
+- **Agent za reviziju**: Ovaj agent predstavlja proces revizije i odgovoran je za reviziju procesa povrata kako bi se osiguralo da se provodi ispravno.
+- **Agent za izvještavanje**: Ovaj agent predstavlja proces izvještavanja i odgovoran je za generiranje izvještaja o procesu povrata.
+- **Agent za znanje**: Ovaj agent predstavlja proces upravljanja znanjem i odgovoran je za održavanje baze znanja informacija povezanih s procesom povrata. Ovaj agent mogao bi imati znanje i o povratima i o drugim dijelovima vašeg poslovanja.
+- **Agent sigurnosti**: Ovaj agent predstavlja proces sigurnosti i odgovoran je za osiguravanje sigurnosti procesa povrata.
+- **Agent kvalitete**: Ovaj agent predstavlja proces osiguranja kvalitete i odgovoran je za osiguravanje kvalitete procesa povrata.
 
-Naveden je priličan broj agenata, kako specifičnih za proces povrata novca, tako i općih agenata koji se mogu koristiti u drugim dijelovima vašeg poslovanja. Nadamo se da vam ovo daje ideju kako možete odlučiti koje agente koristiti u svom sustavu višestrukih agenata.
+Ranije je navedeno prilično mnogo agenata, kako za specifični proces povrata, tako i općih agenata koji se mogu koristiti u drugim dijelovima vašeg poslovanja. Nadamo se da vam to daje ideju kako odlučiti koje agente koristiti u svom sustavu s više agenata.
 
 ## Zadatak
-Dizajnirajte sustav s više agenata za proces korisničke podrške. Identificirajte agente uključene u proces, njihove uloge i odgovornosti te kako međusobno komuniciraju. Razmotrite i specifične agente za proces korisničke podrške i opće agente koji se mogu koristiti u drugim dijelovima vašeg poslovanja.
 
-> Razmislite prije nego što pročitate sljedeće rješenje, možda će vam trebati više agenata nego što mislite.
-
-> TIP: Razmislite o različitim fazama procesa korisničke podrške i također uzmite u obzir agente potrebne za bilo koji sustav.
+Dizajnirajte sustav s više agenata za proces korisničke podrške. Identificirajte agente uključene u proces, njihove uloge i odgovornosti te kako međusobno komuniciraju. Uzmite u obzir i agente specifične za proces korisničke podrške i opće agente koji se mogu koristiti u drugim dijelovima vašeg poslovanja.
+> Razmislite prije nego pročitate sljedeće rješenje, možda će vam trebati više agenata nego što mislite.
+> SAVJET: Razmislite o različitim fazama procesa korisničke podrške i također uzmite u obzir agente potrebne za bilo koji sustav.
 
 ## Rješenje
 
 [Rješenje](./solution/solution.md)
 
-## Provjera znanja
+## Provjere znanja
 
-Pitanje: Kada biste trebali razmotriti korištenje sustava s više agenata?
+Question: When should you consider using multi-agents?
 
 - [ ] A1: Kada imate mali opseg posla i jednostavan zadatak.
-- [ ] A2: Kada imate veliki opseg posla.
+- [ ] A2: Kada imate veliki opseg posla
 - [ ] A3: Kada imate jednostavan zadatak.
 
-[Kviz rješenja](./solution/solution-quiz.md)
+[Solution quiz](./solution/solution-quiz.md)
 
 ## Sažetak
 
-U ovoj lekciji smo razmotrili dizajnerski obrazac s više agenata, uključujući scenarije u kojima su primjenjivi, prednosti korištenja više agenata u odnosu na jednog agenta, osnovne elemente implementacije dizajnerskog obrasca s više agenata te kako imati uvid u međusobnu interakciju više agenata.
+U ovoj lekciji razmotrili smo obrazac dizajna s više agenata, uključujući scenarije u kojima su višestruki agenti primjenjivi, prednosti korištenja više agenata u odnosu na pojedinačnog agenta, gradivne blokove implementacije obrasca dizajna s više agenata te kako steći uvid u to kako više agenata međusobno djeluje.
 
-### Imate li dodatnih pitanja o dizajnerskom obrascu s više agenata?
+### Imate li još pitanja o obrascu dizajna s više agenata?
 
-Pridružite se [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) kako biste se povezali s drugim učenicima, sudjelovali u uredskim satima i dobili odgovore na svoja pitanja o AI agentima.
+Pridružite se [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) kako biste se susreli s drugim polaznicima, sudjelovali na radnim satima i dobili odgovore na pitanja o AI agentima.
 
 ## Dodatni resursi
 
+- <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html" target="_blank">Obrasci dizajna AutoGen</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentni dizajnerski obrasci</a>
+
+
 ## Prethodna lekcija
 
-[Dizajn planiranja](../07-planning-design/README.md)
+[Planiranje dizajna](../07-planning-design/README.md)
 
 ## Sljedeća lekcija
 
@@ -184,5 +189,7 @@ Pridružite se [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) kako
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Odricanje odgovornosti:
+Ovaj je dokument preveden pomoću AI usluge za prijevod [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatizirani prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za važne informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakve nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

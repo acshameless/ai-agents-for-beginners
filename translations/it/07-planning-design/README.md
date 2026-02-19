@@ -1,53 +1,55 @@
-[![Pianificazione del Design Pattern](../../../translated_images/it/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Planning Design Pattern](../../../translated_images/it/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
 > _(Clicca sull'immagine sopra per vedere il video di questa lezione)_
 
-# Pianificazione del Design
+# Planning Design
 
 ## Introduzione
 
-Questa lezione coprirà:
+Questa lezione tratterà
 
-* Definire un obiettivo generale chiaro e suddividere un compito complesso in attività gestibili.
-* Utilizzare output strutturati per risposte più affidabili e leggibili dalle macchine.
-* Applicare un approccio basato sugli eventi per gestire attività dinamiche e input imprevisti.
+* Definire un obiettivo chiaro complessivo e suddividere un compito complesso in compiti gestibili.
+* Sfruttare l'output strutturato per risposte più affidabili e leggibili dalle macchine.
+* Applicare un approccio guidato dagli eventi per gestire compiti dinamici e input imprevisti.
 
 ## Obiettivi di Apprendimento
 
 Dopo aver completato questa lezione, avrai una comprensione di:
 
-* Identificare e impostare un obiettivo generale per un agente AI, assicurandoti che sappia chiaramente cosa deve essere raggiunto.
-* Scomporre un compito complesso in sotto-attività gestibili e organizzarle in una sequenza logica.
-* Dotare gli agenti degli strumenti giusti (ad esempio, strumenti di ricerca o di analisi dei dati), decidere quando e come utilizzarli e gestire situazioni impreviste che si presentano.
-* Valutare i risultati delle sotto-attività, misurare le prestazioni e iterare sulle azioni per migliorare il risultato finale.
+* Identificare e impostare un obiettivo complessivo per un agente AI, assicurandosi che sappia chiaramente cosa deve essere raggiunto.
+* Decomporre un compito complesso in sotto-compiti gestibili e organizzarli in una sequenza logica.
+* Dotare gli agenti degli strumenti giusti (ad es., strumenti di ricerca o strumenti di analisi dati), decidere quando e come vengono utilizzati, e gestire situazioni impreviste che si presentano.
+* Valutare i risultati dei sotto-compiti, misurare le prestazioni e iterare sulle azioni per migliorare il risultato finale.
 
-## Definire l'Obiettivo Generale e Suddividere un Compito
+## Definire l'Obiettivo Complessivo e Suddividere un Compito
 
-![Definire Obiettivi e Compiti](../../../translated_images/it/defining-goals-tasks.d70439e19e37c47a.webp)
+![Defining Goals and Tasks](../../../translated_images/it/defining-goals-tasks.d70439e19e37c47a.webp)
 
-La maggior parte dei compiti del mondo reale è troppo complessa per essere affrontata in un unico passaggio. Un agente AI ha bisogno di un obiettivo conciso per guidare la sua pianificazione e le sue azioni. Ad esempio, considera l'obiettivo:
+La maggior parte dei compiti del mondo reale è troppo complessa per essere affrontata in un unico passo. Un agente AI ha bisogno di un obiettivo conciso per guidare la sua pianificazione e azioni. Ad esempio, considera l'obiettivo:
 
     "Generare un itinerario di viaggio di 3 giorni."
 
-Sebbene sia semplice da enunciare, necessita comunque di essere affinato. Più chiaro è l'obiettivo, meglio l'agente (e qualsiasi collaboratore umano) può concentrarsi sul raggiungimento del risultato corretto, come creare un itinerario completo con opzioni di volo, raccomandazioni per hotel e suggerimenti per attività.
+Anche se è semplice da enunciare, necessita ancora di affinamento. Più chiaro è l'obiettivo, meglio l'agente (e qualsiasi collaboratore umano) può concentrarsi sul raggiungimento del risultato corretto, come creare un itinerario completo con opzioni di volo, raccomandazioni di hotel e suggerimenti di attività.
 
-### Scomposizione del Compito
+### Decomposizione del Compito
 
-I compiti grandi o intricati diventano più gestibili quando vengono suddivisi in sotto-attività orientate agli obiettivi. 
-Per l'esempio dell'itinerario di viaggio, potresti scomporre l'obiettivo in:
+Compiti grandi o complessi diventano più gestibili se suddivisi in sotto-compiti più piccoli e orientati all’obiettivo.
+Per l'esempio dell'itinerario di viaggio, potresti decomporre l’obiettivo in:
 
-* Prenotazione Voli
+* Prenotazione Volo
 * Prenotazione Hotel
 * Noleggio Auto
 * Personalizzazione
 
-Ogni sotto-attività può essere affrontata da agenti o processi dedicati. Un agente potrebbe specializzarsi nella ricerca delle migliori offerte sui voli, un altro nella prenotazione degli hotel, e così via. Un agente coordinatore o "a valle" può quindi compilare questi risultati in un unico itinerario coeso per l'utente finale.
+Ogni sotto-compito può poi essere affrontato da agenti o processi dedicati. Un agente potrebbe specializzarsi nella ricerca delle migliori offerte di volo, un altro si concentra sulle prenotazioni degli hotel, e così via. Un agente di coordinamento o “downstream” può quindi compilare questi risultati in un unico itinerario coerente per l’utente finale.
 
-Questo approccio modulare consente anche miglioramenti incrementali. Ad esempio, potresti aggiungere agenti specializzati per raccomandazioni gastronomiche o suggerimenti per attività locali e affinare l'itinerario nel tempo.
+Questo approccio modulare consente anche miglioramenti incrementali. Per esempio, potresti aggiungere agenti specializzati per Raccomandazioni Alimentari o Suggerimenti su Attività Locali e perfezionare l’itinerario nel tempo.
 
 ### Output Strutturato
 
-I modelli di linguaggio di grandi dimensioni (LLM) possono generare output strutturati (ad esempio JSON) che sono più facili da analizzare e processare per agenti o servizi a valle. Questo è particolarmente utile in un contesto multi-agente, dove possiamo agire su questi compiti dopo che l'output della pianificazione è stato ricevuto. Per una panoramica rapida, consulta il seguente snippet Python che dimostra un semplice agente di pianificazione che scompone un obiettivo in sotto-attività e genera un piano strutturato:
+I Large Language Models (LLMs) possono generare output strutturati (ad es. JSON) che sono più facili da analizzare e processare per agenti o servizi downstream. Questo è particolarmente utile in un contesto multi-agente, dove possiamo agire su questi compiti una volta ricevuto l'output della pianificazione. Consulta questo <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogpost</a> per una rapida panoramica.
+
+Lo snippet Python seguente mostra un semplice agente di pianificazione che scompone un obiettivo in sotto-compiti e genera un piano strutturato:
 
 ```python
 from pydantic import BaseModel
@@ -70,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Modello SubTask di Viaggio
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # vogliamo assegnare il compito all'agente
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -83,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # Per autenticarti con il modello dovrai generare un token di accesso personale (PAT) nelle impostazioni di GitHub.
+    # Crea il tuo token PAT seguendo le istruzioni qui: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -94,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Definisci il messaggio dell'utente
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -123,31 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Assicurati che il contenuto della risposta sia una stringa JSON valida prima di caricarla
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
+#     raise ValueError("Il contenuto della risposta non è una stringa JSON valida")
 
-# # Print the response content after loading it as JSON
+# # Stampa il contenuto della risposta dopo averlo caricato come JSON
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Valida il contenuto della risposta con il modello MathReasoning
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
 ### Agente di Pianificazione con Orchestrazione Multi-Agente
 
-In questo esempio, un Semantic Router Agent riceve una richiesta dell'utente (ad esempio, "Ho bisogno di un piano per un hotel per il mio viaggio.").
+In questo esempio, un agente Semantic Router riceve una richiesta dell’utente (ad esempio, "Ho bisogno di un piano hotel per il mio viaggio.").
 
 Il pianificatore quindi:
 
-* Riceve il Piano Hotel: Il pianificatore prende il messaggio dell'utente e, basandosi su un prompt di sistema (inclusi i dettagli degli agenti disponibili), genera un piano di viaggio strutturato.
-* Elenca gli Agenti e i loro Strumenti: Il registro degli agenti contiene un elenco di agenti (ad esempio, per voli, hotel, noleggio auto e attività) insieme alle funzioni o agli strumenti che offrono.
-* Instrada il Piano agli Agenti Rispettivi: A seconda del numero di sotto-attività, il pianificatore invia il messaggio direttamente a un agente dedicato (per scenari a singolo compito) o coordina tramite un gestore di chat di gruppo per la collaborazione multi-agente.
-* Riassume il Risultato: Infine, il pianificatore riassume il piano generato per chiarezza.
-
-Il seguente esempio di codice Python illustra questi passaggi:
+* Riceve il Piano Hotel: Il pianificatore prende il messaggio dell’utente e, basandosi su un prompt di sistema (inclusi i dettagli degli agenti disponibili), genera un piano di viaggio strutturato.
+* Elenca Agenti e Loro Strumenti: Il registro degli agenti contiene una lista di agenti (ad esempio per volo, hotel, noleggio auto e attività) insieme alle funzioni o agli strumenti offerti.
+* Instrada il Piano ai Rispettivi Agenti: A seconda del numero di sotto-compiti, il pianificatore invia il messaggio direttamente a un agente dedicato (per scenari a singolo compito) o coordina tramite un gestore di chat di gruppo per la collaborazione multi-agente.
+* Riassume il Risultato: Infine, il pianificatore sintetizza il piano generato per chiarezza.
+Il codice Python seguente illustra questi passaggi:
 
 ```python
 
@@ -165,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Modello SottoCompito di Viaggio
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # vogliamo assegnare il compito all'agente
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -182,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Crea il client con variabili d'ambiente verificate tramite tipo
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -194,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Definisci il messaggio dell'utente
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -211,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Assicurati che il contenuto della risposta sia una stringa JSON valida prima di caricarlo
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Stampa il contenuto della risposta dopo averlo caricato come JSON
 
 pprint(json.loads(response_content))
 ```
 
-Segue l'output del codice precedente e puoi quindi utilizzare questo output strutturato per instradare a `assigned_agent` e riassumere il piano di viaggio per l'utente finale.
+Quanto segue è l’output del codice precedente e puoi quindi usare questo output strutturato per instradare verso `assigned_agent` e riassumere il piano di viaggio per l’utente finale.
 
 ```json
 {
@@ -257,15 +258,15 @@ Un notebook di esempio con il codice precedente è disponibile [qui](07-autogen.
 
 ### Pianificazione Iterativa
 
-Alcuni compiti richiedono un processo iterativo o di ripianificazione, dove il risultato di una sotto-attività influenza la successiva. Ad esempio, se l'agente scopre un formato di dati imprevisto durante la prenotazione dei voli, potrebbe dover adattare la sua strategia prima di passare alla prenotazione degli hotel.
+Alcuni compiti richiedono un rimando o una ripianificazione, in cui il risultato di un sotto-compito influenza il successivo. Ad esempio, se l’agente scopre un formato dati inatteso durante la prenotazione di voli, potrebbe dover adattare la sua strategia prima di passare alla prenotazione dell’hotel.
 
-Inoltre, il feedback dell'utente (ad esempio, un umano che decide di preferire un volo anticipato) può innescare una ripianificazione parziale. Questo approccio dinamico e iterativo garantisce che la soluzione finale sia in linea con i vincoli del mondo reale e le preferenze dell'utente in evoluzione.
+Inoltre, il feedback dell’utente (ad esempio un umano che decide di preferire un volo anticipato) può innescare una ripianificazione parziale. Questo approccio dinamico e iterativo assicura che la soluzione finale sia in linea con vincoli reali e preferenze utente in evoluzione.
 
-Ad esempio, codice di esempio:
+e.g codice di esempio
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. uguale al codice precedente e passa la cronologia dell'utente, piano attuale
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -279,32 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. ripianifica e invia i compiti agli agenti rispettivi
 ```
 
-Per una pianificazione più completa, consulta Magnetic One per risolvere compiti complessi.
+Per una pianificazione più completa, dai un’occhiata a Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Blogpost</a> per risolvere compiti complessi.
 
 ## Riepilogo
 
-In questo articolo abbiamo esaminato un esempio di come possiamo creare un pianificatore che selezioni dinamicamente gli agenti disponibili definiti. L'output del pianificatore scompone i compiti e assegna gli agenti affinché possano essere eseguiti. Si presume che gli agenti abbiano accesso alle funzioni/strumenti necessari per svolgere il compito. Oltre agli agenti, puoi includere altri pattern come riflessione, riassunto e chat a rotazione per personalizzare ulteriormente.
+In questo articolo abbiamo visto un esempio di come possiamo creare un pianificatore che possa selezionare dinamicamente gli agenti disponibili definiti. L’output del Pianificatore scompone i compiti e assegna gli agenti così che possano essere eseguiti. Si presume che gli agenti abbiano accesso alle funzioni/strumenti richiesti per svolgere il compito. Oltre agli agenti puoi includere altri pattern come reflection, summarizer e round robin chat per personalizzare ulteriormente.
 
 ## Risorse Aggiuntive
 
-AutoGen Magnetic One - Un sistema multi-agente generalista per risolvere compiti complessi che ha ottenuto risultati impressionanti su molteplici benchmark agentici impegnativi. Riferimento: . In questa implementazione l'orchestratore crea un piano specifico per il compito e delega questi compiti agli agenti disponibili. Oltre alla pianificazione, l'orchestratore impiega anche un meccanismo di monitoraggio per controllare il progresso del compito e ripianificare se necessario.
+AutoGen Magentic One - Un sistema multi-agente generalista per risolvere compiti complessi che ha ottenuto risultati impressionanti su molteplici benchmark agentici sfidanti. Riferimento: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. In questa implementazione l’orchestratore crea un piano specifico per il compito e delega questi compiti agli agenti disponibili. Oltre alla pianificazione, l’orchestratore impiega anche un meccanismo di tracciamento per monitorare il progresso del compito e ripianificare se necessario.
 
-### Hai altre domande sul Design Pattern di Pianificazione?
+### Hai altre domande sul Pattern di Planning Design?
 
-Unisciti al [Discord di Azure AI Foundry](https://aka.ms/ai-agents/discord) per incontrare altri studenti, partecipare a sessioni di domande e risposte e ottenere risposte alle tue domande sugli agenti AI.
+Unisciti al [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) per incontrare altri studenti, partecipare a sessioni di office hours e ottenere risposte alle tue domande sugli AI Agents.
 
 ## Lezione Precedente
 
-[Costruire Agenti AI Affidabili](../06-building-trustworthy-agents/README.md)
+[Building Trustworthy AI Agents](../06-building-trustworthy-agents/README.md)
 
-## Prossima Lezione
+## Lezione Successiva
 
-[Design Pattern Multi-Agente](../08-multi-agent/README.md)
+[Multi-Agent Design Pattern](../08-multi-agent/README.md)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatizzate possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire accuratezza, si prega di considerare che le traduzioni automatiche possono contenere errori o inesattezze. Il documento originale nella sua lingua natìa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall’uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

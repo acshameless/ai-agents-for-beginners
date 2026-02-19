@@ -1,73 +1,73 @@
-[![探索 AI Agent 框架](../../../translated_images/zh-TW/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![探索 AI 代理框架](../../../translated_images/zh-TW/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(點擊上方圖片觀看本課程影片)_
+> _(點擊上方圖片以觀看此課程的影片)_
 
-# 探索 AI Agent 框架
+# 探索 AI 代理框架
 
-AI Agent 框架是專為簡化 AI Agent 的創建、部署和管理而設計的軟體平台。這些框架為開發者提供了預建的元件、抽象層和工具，從而簡化了複雜 AI 系統的開發過程。
+AI 代理框架是用來簡化 AI 代理建立、部署與管理的軟體平台。這些框架為開發人員提供預建元件、抽象層與工具，幫助理順複雜 AI 系統的開發流程。
 
-這些框架透過提供標準化的方法來解決 AI Agent 開發中的常見挑戰，幫助開發者專注於應用程式的獨特部分。它們提升了構建 AI 系統的可擴展性、可訪問性和效率。
+這些框架透過為 AI 代理開發中的常見挑戰提供標準化的方法，幫助開發人員專注於應用程式的獨特面向。它們提升了構建 AI 系統的可擴充性、可取得性與效率。
 
-## 簡介
+## 介紹 
 
 本課程將涵蓋：
 
-- 什麼是 AI Agent 框架？它能幫助開發者實現什麼？
-- 團隊如何利用這些框架快速原型設計、迭代並改進 Agent 的能力？
-- 微軟的 <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>、<a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> 和 <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a> 所創建的框架和工具之間有什麼不同？
-- 我可以直接整合現有的 Azure 生態系統工具，還是需要獨立的解決方案？
-- 什麼是 Azure AI Agents 服務？它如何幫助我？
+- 什麼是 AI 代理框架，以及它們能讓開發人員達成什麼？
+- 團隊如何使用這些框架快速建立原型、迭代並改進代理的能力？
+- 由 Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>、<a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> 與 <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a> 所建立的框架與工具之間有何差異？
+- 我可以直接整合我現有的 Azure 生態系工具，還是需要獨立解決方案？
+- 什麼是 Azure AI Agents 服務，它如何幫助我？
 
 ## 學習目標
 
 本課程的目標是幫助你了解：
 
-- AI Agent 框架在 AI 開發中的角色。
-- 如何利用 AI Agent 框架構建智能 Agent。
-- AI Agent 框架所啟用的關鍵功能。
-- AutoGen、Semantic Kernel 和 Azure AI Agent Service 之間的差異。
+- AI 代理框架在 AI 開發中的角色。
+- 如何運用 AI 代理框架來構建智慧代理。
+- AI 代理框架所啟用的主要能力。
+- AutoGen、Semantic Kernel 與 Azure AI Agent Service 之間的差異。
 
-## 什麼是 AI Agent 框架？它能幫助開發者實現什麼？
+## 什麼是 AI 代理框架，以及它們讓開發人員能做什麼？
 
-傳統的 AI 框架可以幫助你將 AI 整合到應用程式中，並通過以下方式改進這些應用程式：
+傳統的 AI 框架可以幫助你將 AI 整合到應用程式中，並在下列方面使這些應用程式更優化：
 
-- **個性化**：AI 可以分析用戶行為和偏好，提供個性化的推薦、內容和體驗。  
-範例：像 Netflix 這樣的串流服務使用 AI 根據觀看歷史推薦電影和節目，提升用戶參與度和滿意度。
-- **自動化與效率**：AI 可以自動化重複性任務、簡化工作流程並提高運營效率。  
-範例：客戶服務應用程式使用 AI 驅動的聊天機器人處理常見查詢，縮短響應時間，讓人類客服專注於更複雜的問題。
-- **增強用戶體驗**：AI 可以通過提供智能功能（如語音識別、自然語言處理和預測文本）來改善整體用戶體驗。  
-範例：像 Siri 和 Google Assistant 這樣的虛擬助手使用 AI 理解並回應語音指令，使用戶更輕鬆地與設備互動。
+- **個人化**: AI 可以分析使用者行為與偏好，提供客製化的推薦、內容與體驗。
+Example: 影音串流服務如 Netflix 使用 AI 根據觀看歷史建議電影與節目，提升使用者的互動率與滿意度。
+- **自動化與效率**: AI 可以自動化重複性工作、簡化工作流程並提升營運效率。
+Example: 客服應用使用 AI 驅動的聊天機器人處理常見詢問，減少回應時間並釋放真人客服處理較複雜問題。
+- **強化使用者體驗**: AI 可以透過語音辨識、自然語言處理與預測文字等智慧功能改善整體使用者體驗。
+Example: 虛擬助理如 Siri 與 Google Assistant 使用 AI 來理解並回應語音指令，讓使用者更容易與裝置互動。
 
-### 聽起來很棒，對吧？那麼為什麼我們還需要 AI Agent 框架？
+### 這一切聽起來很棒，為什麼我們還需要 AI 代理框架？
 
-AI Agent 框架不僅僅是 AI 框架。它們旨在創建能與用戶、其他 Agent 和環境互動以實現特定目標的智能 Agent。這些 Agent 可以表現出自主行為、做出決策並適應不斷變化的條件。以下是 AI Agent 框架所啟用的一些關鍵功能：
+AI 代理框架不只是一般的 AI 框架。它們旨在啟用能與使用者、其他代理與環境互動以達成特定目標的智慧代理。這些代理可以展現自治行為、做出決策並適應變化的條件。讓我們來看看 AI 代理框架所啟用的一些關鍵能力：
 
-- **Agent 協作與協調**：支持創建多個 AI Agent，這些 Agent 可以協作、溝通並協調以解決複雜任務。
-- **任務自動化與管理**：提供機制來自動化多步驟工作流程、任務分配和 Agent 之間的動態任務管理。
-- **上下文理解與適應**：賦予 Agent 理解上下文、適應變化環境並根據實時資訊做出決策的能力。
+- **代理協作與協調**: 允許建立多個可一起工作的 AI 代理，彼此溝通與協作以解決複雜任務。
+- **任務自動化與管理**: 提供用於自動化多步驟工作流程、任務委派與代理之間動態任務管理的機制。
+- **情境理解與適應**: 賦予代理理解情境、適應變化環境並根據即時資訊做出決策的能力。
 
-總結來說，Agent 讓你能做更多事情，將自動化提升到新層次，創建能從環境中學習和適應的更智能系統。
+總結來說，代理可以讓你做到更多，將自動化提升到下一個層次，創造出能從環境中適應與學習的更智慧系統。
 
-## 如何快速原型設計、迭代並改進 Agent 的能力？
+## 如何快速原型、迭代與改進代理的能力？
 
-這是一個快速變化的領域，但大多數 AI Agent 框架中有一些共同點，可以幫助你快速原型設計和迭代，主要包括模組化元件、協作工具和實時學習。我們來深入了解這些：
+這是一個變動迅速的領域，但在大多數 AI 代理框架中，有一些共通項目能幫助你快速建立原型與迭代，特別是模組元件、協作工具與即時學習。讓我們深入這些面向：
 
-- **使用模組化元件**：AI SDK 提供預建元件，例如 AI 和記憶體連接器、使用自然語言或程式碼插件進行函數調用、提示模板等。
-- **利用協作工具**：設計具有特定角色和任務的 Agent，測試並改進協作工作流程。
-- **實時學習**：實施反饋迴路，讓 Agent 從互動中學習並動態調整其行為。
+- **使用模組化元件**: AI SDK 提供預建元件，例如 AI 與記憶體連接器、使用自然語言或程式碼外掛的函式呼叫、提示模板等。
+- **利用協作工具**: 設計具有特定角色與任務的代理，使它們能測試並優化協作工作流程。
+- **即時學習**: 實作回饋循環，讓代理從互動中學習並動態調整其行為。
 
 ### 使用模組化元件
 
-像 Microsoft Semantic Kernel 和 LangChain 這樣的 SDK 提供預建元件，例如 AI 連接器、提示模板和記憶體管理。
+像 Microsoft Semantic Kernel 和 LangChain 這類的 SDK 提供預建元件，例如 AI 連接器、提示模板與記憶管理。
 
-**團隊如何使用這些**：團隊可以快速組裝這些元件來創建功能性原型，而無需從頭開始，從而實現快速實驗和迭代。
+**團隊如何使用這些**: 團隊可以快速組裝這些元件以建立功能性原型，而無需從零開始，從而允許快速實驗與迭代。
 
-**實際運作方式**：你可以使用預建的解析器從用戶輸入中提取資訊，使用記憶體模組存儲和檢索數據，並使用提示生成器與用戶互動，所有這些都無需從頭構建這些元件。
+**實作方式**: 你可以使用預建的解析器從使用者輸入中擷取資訊、使用記憶模組來儲存與檢索資料，並使用提示產生器與使用者互動，全部都不需自行重建這些元件。
 
-**範例程式碼**。以下是如何使用 Semantic Kernel Python 和 .Net 的預建 AI 連接器，通過自動函數調用讓模型回應用戶輸入的範例：
+**範例程式碼**. 讓我們看一下如何在 Semantic Kernel Python 與 .Net 中使用預建 AI Connector 的範例，該範例使用自動函式呼叫讓模型回應使用者輸入：
 
 ``` python
-# Semantic Kernel Python Example
+# 語意核心 Python 範例
 
 import asyncio
 from typing import Annotated
@@ -78,12 +78,12 @@ from semantic_kernel.contents import ChatHistory
 from semantic_kernel.functions import kernel_function
 from semantic_kernel.kernel import Kernel
 
-# Define a ChatHistory object to hold the conversation's context
+# 定義一個 ChatHistory 物件來保存對話的上下文
 chat_history = ChatHistory()
 chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
 
 
-# Define a sample plugin that contains the function to book travel
+# 定義一個包含預訂旅遊功能的範例插件
 class BookTravelPlugin:
     """A Sample Book Travel Plugin"""
 
@@ -93,26 +93,26 @@ class BookTravelPlugin:
     ) -> str:
         return f"Travel was booked to {location} on {date}"
 
-# Create the Kernel
+# 建立 Kernel
 kernel = Kernel()
 
-# Add the sample plugin to the Kernel object
+# 將範例插件新增至 Kernel 物件
 kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
 
-# Define the Azure OpenAI AI Connector
+# 定義 Azure OpenAI AI 連接器
 chat_service = AzureChatCompletion(
     deployment_name="YOUR_DEPLOYMENT_NAME", 
     api_key="YOUR_API_KEY", 
     endpoint="https://<your-resource>.azure.openai.com/",
 )
 
-# Define the request settings to configure the model with auto-function calling
+# 定義請求設定以使用自動函數調用配置模型
 request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
+    # 依給予的聊天歷史和請求設定向模型提出請求
+    # Kernel 含有模型將請求調用的範例
     response = await chat_service.get_chat_message_content(
         chat_history=chat_history, settings=request_settings, kernel=kernel
     )
@@ -145,9 +145,9 @@ async def main():
     """
 
     print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
+    # 範例 AI 模型回應：`您於 2025 年 1 月 1 日飛往紐約的航班已成功預訂。祝旅途愉快！✈️🗽`
 
-    # Add the model's response to our chat history context
+    # 將模型的回應新增至我們的聊天歷史上下文
     chat_history.add_assistant_message(response.content)
 
 
@@ -215,25 +215,25 @@ public class BookTravelPlugin
     }
 }
 ```
-  
-從這個範例中可以看到，你如何利用預建的解析器從用戶輸入中提取關鍵資訊，例如航班預訂請求的出發地、目的地和日期。這種模組化方法讓你能專注於高層邏輯。
+
+從此範例你可以看到如何利用預建解析器從使用者輸入中擷取關鍵資訊，例如航班預訂請求的出發地、目的地與日期。這種模組化方法讓你可以專注於高階邏輯。
 
 ### 利用協作工具
 
-像 CrewAI、Microsoft AutoGen 和 Semantic Kernel 這樣的框架促進了多個 Agent 的創建，這些 Agent 可以協作完成任務。
+像 CrewAI、Microsoft AutoGen 與 Semantic Kernel 這類框架促進建立可協同工作的多個代理。
 
-**團隊如何使用這些**：團隊可以設計具有特定角色和任務的 Agent，測試並改進協作工作流程，提升整體系統效率。
+**團隊如何使用這些**: 團隊可以設計具有特定角色與任務的代理，使它們能測試並優化協作式工作流程，並提升整體系統效率。
 
-**實際運作方式**：你可以創建一個由多個 Agent 組成的團隊，每個 Agent 都有專門的功能，例如數據檢索、分析或決策。這些 Agent 可以溝通並共享資訊，以實現共同目標，例如回答用戶查詢或完成任務。
+**實作方式**: 你可以建立一群代理，每個代理有專門職能，例如資料檢索、分析或決策。這些代理可以互相溝通並共享資訊以達成共同目標，例如回應使用者查詢或完成任務。
 
-**範例程式碼 (AutoGen)**：
+**範例程式碼（AutoGen）**：
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# 建立代理，然後建立一個輪流排程讓他們可以一起工作，在此情況下是依序進行
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+# 資料擷取代理
+# 資料分析代理
+# 決策代理
 
 agent_retrieve = AssistantAgent(
     name="dataretrieval",
@@ -249,7 +249,7 @@ agent_analyze = AssistantAgent(
     system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
+# 當使用者說「APPROVE」時結束對話
 termination = TextMentionTermination("APPROVE")
 
 user_proxy = UserProxyAgent("user_proxy", input_func=input)
@@ -257,42 +257,42 @@ user_proxy = UserProxyAgent("user_proxy", input_func=input)
 team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
 
 stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
+# 在執行腳本時使用 asyncio.run(...)。
 await Console(stream)
 ```
-  
-在上述程式碼中，你可以看到如何創建一個涉及多個 Agent 協作分析數據的任務。每個 Agent 執行特定功能，並通過協調這些 Agent 來實現所需的結果。通過創建具有專門角色的專用 Agent，你可以提高任務效率和性能。
 
-### 實時學習
+在前面的程式碼中，你可以看到如何建立一個涉及多個代理共同協作分析資料的任務。每個代理執行特定功能，並透過協調代理的方式來執行任務以達成預期結果。透過建立具有專門角色的專注代理，你可以提升任務的效率與效能。
 
-高級框架提供了實時上下文理解和適應的能力。
+### 即時學習
 
-**團隊如何使用這些**：團隊可以實施反饋迴路，讓 Agent 從互動中學習並動態調整其行為，從而持續改進和完善能力。
+先進的框架提供即時情境理解與適應能力。
 
-**實際運作方式**：Agent 可以分析用戶反饋、環境數據和任務結果，更新其知識庫、調整決策演算法並隨時間改進性能。這種迭代學習過程使 Agent 能夠適應不斷變化的條件和用戶偏好，增強整體系統的有效性。
+**團隊如何使用這些**: 團隊可以實作回饋迴路，讓代理從互動中學習並動態調整其行為，進而持續改進與精進其能力。
 
-## AutoGen、Semantic Kernel 和 Azure AI Agent Service 框架之間有什麼不同？
+**實作方式**: 代理可以分析使用者回饋、環境資料與任務結果，以更新其知識庫、調整決策演算法並隨時間提升效能。這種反覆的學習流程使代理能適應變化的條件與使用者偏好，增強整體系統效能。
 
-有許多方法可以比較這些框架，但我們來看看它們在設計、功能和目標使用案例方面的一些關鍵差異：
+## AutoGen、Semantic Kernel 與 Azure AI Agent Service 這些框架有何不同？
+
+有很多比較方式，但我們先從設計、能力與目標使用案例的差異來看幾個要點：
 
 ## AutoGen
 
-AutoGen 是由微軟研究院的 AI Frontiers Lab 開發的開源框架。它專注於事件驅動的分散式 *agentic* 應用程式，支持多個 LLM 和 SLM、工具以及高級多 Agent 設計模式。
+AutoGen 是由 Microsoft Research 的 AI Frontiers Lab 所開發的開源框架。它專注於事件驅動、分散式的「代理式」應用，支援多個 LLM 與 SLM、工具與進階的多代理設計模式。
 
-AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做出決策並採取行動以實現特定目標的自主實體。Agent 通過非同步消息進行通信，使其能夠獨立並行工作，增強系統的可擴展性和響應能力。
+AutoGen 的核心概念是代理（agents），代理是能感知其環境、做決策並採取行動以達成特定目標的自主實體。代理透過非同步訊息進行溝通，允許它們獨立且並行地工作，提升系統的可擴充性與回應性。
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Agent 基於 Actor 模型</a>。根據維基百科，Actor 是 _並發計算的基本構建塊。Actor 在接收到消息時，可以：做出本地決策、創建更多 Actor、發送更多消息以及決定如何回應下一條接收到的消息_。
+<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">代理基於 actor model（演員模型）</a>。根據 Wikipedia，演員是 _並行計算的基本建構塊。在收到訊息後，演員可以：做出本地決策、建立更多演員、傳送更多訊息，並決定如何回應下一個收到的訊息_。
 
-**使用案例**：自動化程式碼生成、數據分析任務以及為規劃和研究功能構建自定義 Agent。
+**使用案例**：自動化程式碼生成、資料分析任務，與為規劃與研究功能構建自訂代理。
 
 以下是 AutoGen 的一些重要核心概念：
 
-- **Agent**。Agent 是一個軟體實體，具有以下特性：
-  - **通過消息進行通信**，這些消息可以是同步或非同步的。
-  - **維護自己的狀態**，該狀態可以通過接收到的消息進行修改。
-  - **執行動作**，以回應接收到的消息或其狀態的變化。這些動作可能會修改 Agent 的狀態並產生外部效果，例如更新消息日誌、發送新消息、執行程式碼或進行 API 調用。
+- **Agents（代理）**。代理是一種軟體實體，會：
+  - **透過訊息進行溝通**，這些訊息可以是同步或非同步的。
+  - **維護自己的狀態**，該狀態可被入站訊息修改。
+  - **執行動作**以回應收到的訊息或狀態變更。這些動作可能會修改代理的狀態並產生外部效果，例如更新訊息記錄、傳送新訊息、執行程式碼或呼叫 API。
     
-  以下是一段簡短的程式碼範例，展示如何創建具有聊天功能的 Agent：
+  下面有一個簡短的程式碼片段，展示如何建立具備聊天功能的自訂代理：
 
     ```python
     from autogen_agentchat.agents import AssistantAgent
@@ -314,10 +314,11 @@ AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做�
             )
             print(f"{self.id.type} responded: {response.chat_message.content}")
     ```
-  
-    在上述程式碼中，`MyAgent` 被創建並繼承自 `RoutedAgent`。它有一個消息處理器，會打印消息內容，然後使用 `AssistantAgent` 委派發送回應。特別注意我們如何將 `self._delegate` 指派為 `AssistantAgent` 的實例，這是一個可以處理聊天完成的預建 Agent。
+    
+    在前面的程式碼中，`MyAgent` 已被建立並繼承自 `RoutedAgent`。它有一個訊息處理器會印出訊息內容，然後使用 `AssistantAgent` delegate 發送回應。特別要注意我們如何將 `self._delegate` 指派為 `AssistantAgent` 的實例，該實例是一個可處理聊天補完的預建代理。
 
-    接下來，讓 AutoGen 知道這種類型的 Agent 並啟動程式：
+
+    接著讓 AutoGen 知道這個代理類型並啟動程式：
 
     ```python
     
@@ -325,11 +326,11 @@ AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做�
     runtime = SingleThreadedAgentRuntime()
     await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
 
-    runtime.start()  # Start processing messages in the background.
+    runtime.start()  # 在背景中開始處理訊息。
     await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
     ```
-  
-    在上述程式碼中，Agent 被註冊到運行時，然後向 Agent 發送一條消息，結果輸出如下：
+
+    在先前的程式碼中，代理已向執行環境註冊，然後向該代理發送一個訊息，結果產生以下輸出：
 
     ```text
     # Output from the console:
@@ -337,16 +338,16 @@ AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做�
     my_assistant received message: Hello, World!
     my_assistant responded: Hello! How can I assist you today?
     ```
-  
-- **多 Agent**。AutoGen 支持創建多個 Agent，這些 Agent 可以協作完成複雜任務。Agent 可以通信、共享資訊並協調其行動以更高效地解決問題。要創建多 Agent 系統，你可以定義具有專門功能和角色的不同類型的 Agent，例如數據檢索、分析、決策和用戶互動。以下是這樣的創建範例：
+
+- **多代理**。AutoGen 支援建立多個代理共同協作以完成複雜任務。代理可以互相溝通、分享資訊並協調其動作以更有效地解決問題。要建立多代理系統，你可以定義具有專門功能與角色的不同代理類型，例如資料檢索、分析、決策與使用者互動。讓我們看看這類建立方式長什麼樣子，以便對其有一個概念：
 
     ```python
     editor_description = "Editor for planning and reviewing the content."
 
-    # Example of declaring an Agent
+    # 宣告一個代理人的範例
     editor_agent_type = await EditorAgent.register(
     runtime,
-    editor_topic_type,  # Using topic type as the agent type.
+    editor_topic_type,  # 使用主題類型作為代理人類型。
     lambda: EditorAgent(
         description=editor_description,
         group_chat_topic_type=group_chat_topic_type,
@@ -357,9 +358,9 @@ AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做�
         ),
     )
 
-    # remaining declarations shortened for brevity
+    # 其餘宣告為簡潔起見略寫
 
-    # Group chat
+    # 群組聊天
     group_chat_manager_type = await GroupChatManager.register(
     runtime,
     "group_chat_manager",
@@ -378,31 +379,31 @@ AutoGen 圍繞 Agent 的核心概念構建，Agent 是能夠感知環境、做�
         ),
     )
     ```
-  
-    在上述程式碼中，我們有一個 `GroupChatManager`，它被註冊到運行時。這個管理器負責協調不同類型 Agent（如作家、插畫師、編輯和用戶）之間的互動。
 
-- **Agent 運行時**。該框架提供了一個運行時環境，支持 Agent 之間的通信，管理它們的身份和生命週期，並強制執行安全和隱私邊界。這意味著你可以在安全受控的環境中運行你的 Agent，確保它們能夠安全高效地互動。有兩種值得注意的運行時：
-  - **獨立運行時**。適用於所有 Agent 都用相同程式語言實現並運行在同一進程中的單進程應用程式。以下是其工作方式的示意圖：
-  
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">獨立運行時</a>  
-應用程式堆疊
+    在先前的程式碼中，我們有一個已在執行環境中註冊的 `GroupChatManager`。此管理者負責協調不同類型代理之間的互動，例如撰稿者、插畫家、編輯與使用者。
 
-    *Agent 通過運行時通過消息進行通信，運行時管理 Agent 的生命週期*
-
-  - **分散式 Agent 運行時**，適用於多進程應用程式，其中 Agent 可能用不同程式語言實現並運行在不同機器上。以下是其工作方式的示意圖：
+- **Agent Runtime（代理執行環境）**。該框架提供執行時環境，啟用代理之間的通訊、管理其身份與生命週期，並強制安全與隱私邊界。這意味著你可以在受控且安全的環境中執行代理，確保它們能安全且有效地互動。有兩種值得關注的執行環境：
+  - **獨立執行環境（Stand-alone runtime）**。這是單一程序應用的良好選擇，所有代理都在相同的程式語言中實作並在相同的程序中執行。以下是一個運作示意：
   
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">分散式運行時</a>
+    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Stand-alone runtime</a>   
+Application stack
+
+    *agents communicate via messages through the runtime, and the runtime manages the lifecycle of agents*
+
+  - **分散式代理執行環境（Distributed agent runtime）**，適用於多程序應用，其中代理可能以不同程式語言實作並在不同機器上執行。以下是一個運作示意：
+  
+    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">Distributed runtime</a>
 
 ## Semantic Kernel + Agent Framework
 
-Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接器以及一個 Agent 框架組成。
+Semantic Kernel 是一個企業級的 AI 編排 SDK。它包含 AI 與記憶體連接器，以及一個代理框架。
 
-首先介紹一些核心元件：
+我們先來介紹一些核心元件：
 
-- **AI 連接器**：這是一個用於與外部 AI 服務和數據源進行介面的工具，適用於 Python 和 C#。
+- **AI Connectors（AI 連接器）**：這是在 Python 與 C# 中與外部 AI 服務和資料來源介接的介面。
 
   ```python
-  # Semantic Kernel Python
+  # 語義核心 Python
   from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
   from semantic_kernel.kernel import Kernel
 
@@ -415,7 +416,7 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
     )
   )
   ```  
-  
+
     ```csharp
     // Semantic Kernel C#
     using Microsoft.SemanticKernel;
@@ -431,10 +432,10 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
         "deployment-model");
     var kernel = builder.Build();
     ```
-  
-    這裡是一個簡單的範例，展示如何創建一個 Kernel 並添加聊天完成服務。Semantic Kernel 創建了一個與外部 AI 服務的連接，在此例中是 Azure OpenAI Chat Completion。
 
-- **插件**：這些封裝了應用程式可以使用的功能。既有現成的插件，也可以創建自定義插件。一個相關的概念是“提示函數”。與提供自然語言提示來調用函數不同，你可以向模型廣播某些函數。根據當前聊天上下文，模型可能選擇調用這些函數之一來完成請求或查詢。以下是一個範例：
+    這裡有一個簡單範例，示範如何建立一個 kernel 並新增一個聊天補完服務。Semantic Kernel 與外部 AI 服務建立連接，在此例中為 Azure OpenAI Chat Completion。
+
+- **Plugins（外掛）**：這些封裝了應用程式可以使用的函式。既有現成的外掛，也可以建立自訂外掛。相關概念是「提示函式」。你不是以自然語言提示去呼叫函式，而是將某些函式廣播給模型。根據當前聊天上下文，模型可能會選擇呼叫其中一個函式來完成請求或查詢。以下是一個範例：
 
   ```python
   from semantic_kernel.connectors.ai.open_ai.services.azure_chat_completion import AzureChatCompletion
@@ -472,7 +473,7 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
     import asyncio
     asyncio.run(main())
   ```
-  
+
     ```csharp
     var userInput = Console.ReadLine();
 
@@ -490,10 +491,10 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
     kernel.ImportPluginFromFunctions("SemanticFunctions", [summarizeFunc]);
 
     ```
-  
-    這裡，你首先有一個模板提示 `skPrompt`，它為用戶輸入 `$userInput` 留出空間。然後你創建 Kernel 函數 `SummarizeText`，並將其作為插件名稱 `SemanticFunctions` 導入到 Kernel 中。注意函數的名稱，這有助於 Semantic Kernel 理解該函數的作用以及何時應該調用它。
 
-- **原生函數**：框架還可以直接調用原生函數來執行任務。以下是一個直接從檔案中檢索內容的範例：
+    在這裡，你先有一個模板提示 `skPrompt`，它保留讓使用者輸入文字的空間 `$userInput`。接著你建立 kernel 函式 `SummarizeText`，然後以外掛名稱 `SemanticFunctions` 將它匯入到 kernel。請注意函式的名稱，這有助於 Semantic Kernel 理解該函式的用途以及何時應該被呼叫。
+
+- **Native function（原生函式）**：框架也有可以直接被呼叫以執行任務的原生函式。以下是一個從檔案檢索內容的範例：
 
     ```csharp
     public class NativeFunctions {
@@ -515,8 +516,8 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
     kernel.ImportPluginFromType<NativeFunctions>();
 
     ```
-  
-- **記憶體**：為 AI 應用程式抽象並簡化上下文管理。記憶體的概念是 LLM 應該知道的內容。你可以將這些資訊存儲在向量存儲中，這最終會成為內存數據庫或向量數據庫或類似的東西。以下是一個非常簡化的場景範例，展示如何將“事實”添加到記憶體中：
+
+- **Memory（記憶體）**：為 AI 應用抽象化並簡化情境管理。記憶體的概念是指這些資訊是模型應該知道的內容。你可以將這些資訊儲存在向量資料庫中，該資料庫通常是記憶體中的資料庫或向量資料庫或類似的系統。以下是一個非常簡化的情境範例，將「事實」加入到記憶體中：
 
     ```csharp
     var facts = new Dictionary<string,string>();
@@ -545,22 +546,22 @@ Semantic Kernel 是一個企業級 AI 編排 SDK。它由 AI 和記憶體連接�
         );
     }
     ```
-  
-這些事實會被存儲在記憶集合 `SummarizedAzureDocs` 中。這是一個非常簡化的例子，但你可以看到如何將信息存儲在記憶中供 LLM 使用。
 
-這就是 Semantic Kernel 框架的基本概念，那麼 Agent Framework 呢？
+    這些事實接著會儲存在記憶集合 `SummarizedAzureDocs` 中。這是一個非常簡化的範例，但你可以看到如何將資訊儲存在記憶中供 LLM 使用。
+
+So that's the basics of the Semantic Kernel framework, what about the Agent Framework?
 
 ## Azure AI Agent Service
 
-Azure AI Agent Service 是最近新增的功能，於 Microsoft Ignite 2024 推出。它允許使用更靈活的模型來開發和部署 AI 代理，例如直接調用開源 LLMs，如 Llama 3、Mistral 和 Cohere。
+Azure AI Agent Service is a more recent addition, introduced at Microsoft Ignite 2024. It allows for the development and deployment of AI agents with more flexible models, such as directly calling open-source LLMs like Llama 3, Mistral, and Cohere.
 
-Azure AI Agent Service 提供更強大的企業安全機制和數據存儲方法，使其適合企業應用。
+Azure AI Agent Service provides stronger enterprise security mechanisms and data storage methods, making it suitable for enterprise applications. 
 
-它可以直接與多代理協作框架（如 AutoGen 和 Semantic Kernel）配合使用。
+It works out-of-the-box with multi-agent orchestration frameworks like AutoGen and Semantic Kernel.
 
-此服務目前處於公開預覽階段，支持使用 Python 和 C# 來構建代理。
+This service is currently in Public Preview and supports Python and C# for building agents.
 
-使用 Semantic Kernel Python，我們可以創建一個具有用戶定義插件的 Azure AI Agent：
+Using Semantic Kernel Python, we can create an Azure AI Agent with a user-defined plugin:
 
 ```python
 import asyncio
@@ -574,7 +575,7 @@ from semantic_kernel.contents import AuthorRole
 from semantic_kernel.functions import kernel_function
 
 
-# Define a sample plugin for the sample
+# 定義一個範例插件作為示範
 class MenuPlugin:
     """A sample Menu Plugin used for the concept sample."""
 
@@ -603,23 +604,23 @@ async def main() -> None:
             conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
         ) as client,
     ):
-        # Create agent definition
+        # 建立代理定義
         agent_definition = await client.agents.create_agent(
             model=ai_agent_settings.model_deployment_name,
             name="Host",
             instructions="Answer questions about the menu.",
         )
 
-        # Create the AzureAI Agent using the defined client and agent definition
+        # 使用已定義的用戶端和代理定義來建立 AzureAI 代理
         agent = AzureAIAgent(
             client=client,
             definition=agent_definition,
             plugins=[MenuPlugin()],
         )
 
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
+        # 建立一個對話串以保存對話內容
+        # 如果未提供對話串，
+        # 將建立一個新的對話串並隨初始回應返回
         thread: AzureAIAgentThread | None = None
 
         user_inputs = [
@@ -632,7 +633,7 @@ async def main() -> None:
         try:
             for user_input in user_inputs:
                 print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
+                # 調用指定對話串的代理
                 response = await agent.get_response(
                     messages=user_input,
                     thread_id=thread,
@@ -648,11 +649,11 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### 核心概念
+### Core concepts
 
-Azure AI Agent Service 包含以下核心概念：
+Azure AI Agent Service has the following core concepts:
 
-- **Agent**。Azure AI Agent Service 與 Azure AI Foundry 集成。在 AI Foundry 中，AI Agent 充當一個“智能”微服務，可以用來回答問題（RAG）、執行操作或完全自動化工作流程。它通過結合生成式 AI 模型的能力以及能夠訪問和交互真實世界數據源的工具來實現這些功能。以下是一個代理的例子：
+- **Agent**. Azure AI Agent Service integrates with Microsoft Foundry. Within AI Foundry, an AI Agent acts as a "smart" microservice that can be used to answer questions (RAG), perform actions, or completely automate workflows. It achieves this by combining the power of generative AI models with tools that allow it to access and interact with real-world data sources. Here's an example of an agent:
 
     ```python
     agent = project_client.agents.create_agent(
@@ -664,9 +665,9 @@ Azure AI Agent Service 包含以下核心概念：
     )
     ```
 
-    在此示例中，代理使用模型 `gpt-4o-mini` 創建，名稱為 `my-agent`，指令為 `You are helpful agent`。該代理配備了工具和資源來執行代碼解釋任務。
+    In this example, an agent is created with the model `gpt-4o-mini`, a name `my-agent`, and instructions `You are helpful agent`. The agent is equipped with tools and resources to perform code interpretation tasks.
 
-- **Thread 和 messages**。Thread 是另一個重要概念。它表示代理和用戶之間的對話或交互。Threads 可用於跟踪對話的進展、存儲上下文信息以及管理交互的狀態。以下是一個 thread 的示例：
+- **Thread and messages**. The thread is another important concept. It represents a conversation or interaction between an agent and a user. Threads can be used to track the progress of a conversation, store context information, and manage the state of the interaction. Here's an example of a thread:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -684,88 +685,89 @@ Azure AI Agent Service 包含以下核心概念：
     print(f"Messages: {messages}")
     ```
 
-    在之前的代碼中，創建了一個 thread。隨後，一條消息被發送到 thread。通過調用 `create_and_process_run`，代理被要求在 thread 上執行工作。最後，消息被提取並記錄下來以查看代理的回應。這些消息表明了用戶與代理之間對話的進展。還需要了解的是，消息可以是不同類型的，例如文本、圖片或文件，這些是代理工作的結果，例如生成了一張圖片或文本回應。作為開發者，你可以使用這些信息進一步處理回應或將其呈現給用戶。
+    In the previous code, a thread is created. Thereafter, a message is sent to the thread. By calling `create_and_process_run`, the agent is asked to perform work on the thread. Finally, the messages are fetched and logged to see the agent's response. The messages indicate the progress of the conversation between the user and the agent. It's also important to understand that the messages can be of different types such as text, image, or file, that is the agents work has resulted in for example an image or a text response for example. As a developer, you can then use this information to further process the response or present it to the user.
 
-- **與其他 AI 框架集成**。Azure AI Agent Service 可以與其他框架（如 AutoGen 和 Semantic Kernel）交互，這意味著你可以在這些框架之一中構建應用的一部分，例如使用 Agent Service 作為協調器，或者完全在 Agent Service 中構建。
+- **Integrates with other AI frameworks**. Azure AI Agent service can interact with other frameworks like AutoGen and Semantic Kernel, which means you can build part of your app in one of these frameworks and for example using the Agent service as an orchestrator or you can build everything in the Agent service.
 
-**使用案例**：Azure AI Agent Service 專為需要安全、可擴展和靈活的 AI 代理部署的企業應用而設計。
+**Use Cases**: Azure AI Agent Service is designed for enterprise applications that require secure, scalable, and flexible AI agent deployment.
 
-## 這些框架之間有什麼區別？
+## What's the difference between these frameworks?
+ 
+It does sound like there is a lot of overlap between these frameworks, but there are some key differences in terms of their design, capabilities, and target use cases:
+ 
+- **AutoGen**: Is an experimentation framework focused on leading-edge research on multi-agent systems. It is the best place to experiment and prototype sophisticated multi-agent systems.
+- **Semantic Kernel**: Is a production-ready agent library for building enterprise agentic applications. Focuses on event-driven, distributed agentic applications, enabling multiple LLMs and SLMs, tools, and single/multi-agent design patterns.
+- **Azure AI Agent Service**: Is a platform and deployment service in Azure Foundry for agents. It offers building connectivity to services support by Azure Found like Azure OpenAI, Azure AI Search, Bing Search and code execution.
+ 
+Still not sure which one to choose?
 
-看起來這些框架之間有很多重疊，但它們在設計、功能和目標使用案例方面有一些關鍵差異：
-
-- **AutoGen**：是一個專注於多代理系統前沿研究的實驗框架。它是實驗和原型設計複雜多代理系統的最佳選擇。
-- **Semantic Kernel**：是一個面向生產的代理庫，用於構建企業代理應用。專注於事件驅動的分佈式代理應用，支持多個 LLMs 和 SLMs、工具以及單/多代理設計模式。
-- **Azure AI Agent Service**：是一個 Azure Foundry 中的代理平台和部署服務。它提供了與 Azure Found 支持的服務（如 Azure OpenAI、Azure AI Search、Bing Search 和代碼執行）的連接。
-
-仍然不確定該選擇哪一個？
-
-### 使用案例
-
-讓我們通過一些常見的使用案例來幫助你：
-
-> 問：我正在進行實驗、學習並構建概念驗證代理應用，我希望能快速構建和實驗。
+### Use Cases
+ 
+Let's see if we can help you by going through some common use cases:
+ 
+> Q: I'm experimenting, learning and building proof-of-concept agent applications, and I want to be able to build and experiment quickly
 >
 
-> 答：AutoGen 是這種情況的良好選擇，因為它專注於事件驅動的分佈式代理應用，並支持高級多代理設計模式。
+>A: AutoGen would be a good choice for this scenario, as it focuses on event-driven, distributed agentic applications and supports advanced multi-agent design patterns.
 
-> 問：為什麼 AutoGen 比 Semantic Kernel 和 Azure AI Agent Service 更適合這個使用案例？
+> Q: What makes AutoGen a better choice than Semantic Kernel and Azure AI Agent Service for this use case?
 >
-> 答：AutoGen 專門設計用於事件驅動的分佈式代理應用，非常適合自動化代碼生成和數據分析任務。它提供了構建複雜多代理系統所需的工具和功能。
+> A: AutoGen is specifically designed for event-driven, distributed agentic applications, making it well-suited for automating code generation and data analysis tasks. It provides the necessary tools and capabilities to build complex multi-agent systems efficiently.
 
-> 問：聽起來 Azure AI Agent Service 也可以用於這裡，它有代碼生成工具和更多功能？
+>Q: Sounds like Azure AI Agent Service could work here too, it has tools for code generation and more?
+
 >
-> 答：是的，Azure AI Agent Service 是一個代理平台服務，並內置了多模型、Azure AI Search、Bing Search 和 Azure Functions 的功能。它使你能夠輕鬆在 Foundry Portal 中構建代理並進行大規模部署。
-
-> 問：我還是很困惑，直接給我一個選擇吧。
+> A: Yes, Azure AI Agent Service is a platform service for agents and add built-in capabilities for multiple models, Azure AI Search, Bing Search and Azure Functions. It makes it easy to build your agents in the Foundry Portal and deploy them at scale.
+ 
+> Q: I'm still confused just give me one option
 >
-> 答：一個不錯的選擇是先在 Semantic Kernel 中構建你的應用，然後使用 Azure AI Agent Service 部署你的代理。這種方法使你能夠輕鬆持久化你的代理，同時利用 Semantic Kernel 中構建多代理系統的能力。此外，Semantic Kernel 在 AutoGen 中有一個連接器，使得同時使用這兩個框架變得容易。
+> A: A great choice is to build your application in Semantic Kernel first and then use Azure AI Agent Service to deploy your agent. This approach allows you to easily persist your agents while leveraging the power to build multi-agent systems in Semantic Kernel. Additionally, Semantic Kernel has a connector in AutoGen, making it easy to use both frameworks together.
+ 
+Let's summarize the key differences in a table:
 
-讓我們用表格來總結這些框架的主要差異：
-
-| 框架 | 重點 | 核心概念 | 使用案例 |
+| Framework | Focus | Core Concepts | Use Cases |
 | --- | --- | --- | --- |
-| AutoGen | 事件驅動的分佈式代理應用 | Agents, Personas, Functions, Data | 代碼生成、數據分析任務 |
-| Semantic Kernel | 理解和生成類人文本內容 | Agents, Modular Components, Collaboration | 自然語言理解、內容生成 |
-| Azure AI Agent Service | 靈活模型、企業安全、代碼生成、工具調用 | Modularity, Collaboration, Process Orchestration | 安全、可擴展且靈活的 AI 代理部署 |
+| AutoGen | Event-driven, distributed agentic applications | Agents, Personas, Functions, Data | Code generation, data analysis tasks |
+| Semantic Kernel | Understanding and generating human-like text content | Agents, Modular Components, Collaboration | Natural language understanding, content generation |
+| Azure AI Agent Service | Flexible models, enterprise security, Code generation, Tool calling | Modularity, Collaboration, Process Orchestration | Secure, scalable, and flexible AI agent deployment |
 
-每個框架的理想使用案例是什麼？
+What's the ideal use case for each of these frameworks?
 
-## 我可以直接集成現有的 Azure 生態系統工具，還是需要獨立解決方案？
+## Can I integrate my existing Azure ecosystem tools directly, or do I need standalone solutions?
 
-答案是肯定的，你可以直接將現有的 Azure 生態系統工具與 Azure AI Agent Service 集成，尤其是因為它已被設計為與其他 Azure 服務無縫協作。例如，你可以集成 Bing、Azure AI Search 和 Azure Functions。此外，它還與 Azure AI Foundry 深度集成。
+The answer is yes, you can integrate your existing Azure ecosystem tools directly with Azure AI Agent Service especially, this because it has been built to work seamlessly with other Azure services. You could for example integrate Bing, Azure AI Search, and Azure Functions. There's also deep integration with Microsoft Foundry.
 
-對於 AutoGen 和 Semantic Kernel，你也可以與 Azure 服務集成，但可能需要從代碼中調用 Azure 服務。另一種集成方式是使用 Azure SDKs 從你的代理中與 Azure 服務交互。此外，如前所述，你可以使用 Azure AI Agent Service 作為協調器，為在 AutoGen 或 Semantic Kernel 中構建的代理提供簡便的 Azure 生態系統訪問。
+For AutoGen and Semantic Kernel, you can also integrate with Azure services, but it may require you to call the Azure services from your code. Another way to integrate is to use the Azure SDKs to interact with Azure services from your agents. Additionally, like was mentioned, you can use Azure AI Agent Service as an orchestrator for your agents built in AutoGen or Semantic Kernel which would give easy access to the Azure ecosystem.
 
-## 示例代碼
+## Sample Codes
 
-- Python：[Agent Framework](./code_samples/02-python-agent-framework.ipynb)
-- .NET：[Agent Framework](./code_samples/02-dotnet-agent-framework.md)
+- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
+- .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## 有更多關於 AI Agent Framework 的問題嗎？
+## Got More Questions about AI Agent Frameworks?
 
-加入 [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)，與其他學習者交流，參加辦公時間並解答你的 AI Agents 問題。
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
-## 參考資料
+## References
 
 - <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel 和 AutoGen</a>
+- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel and AutoGen</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">使用 Azure AI Agent Service 與 AutoGen / Semantic Kernel 構建多代理解決方案</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
+- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution</a>
 
-## 上一課
+## Previous Lesson
 
-[AI Agents 和代理使用案例介紹](../01-intro-to-ai-agents/README.md)
+[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
 
-## 下一課
+## Next Lesson
 
-[理解代理設計模式](../03-agentic-design-patterns/README.md)
+[Understanding Agentic Design Patterns](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用本翻譯而產生的任何誤解或誤釋不承擔責任。
+免責聲明：
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不精確之處。原始語言之原文應被視為具權威性的版本。若涉及重要資訊，建議採用專業人工翻譯。對因使用本翻譯而產生之任何誤解或誤釋，概不負責。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,171 +1,170 @@
-# AI 智能代理的記憶力
-[![Agent Memory](../../../translated_images/zh-TW/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
+# AI 代理的記憶 
+[![代理記憶](../../../translated_images/zh-TW/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-當談論建立 AI 智能代理的獨特優勢時，主要討論兩件事：調用工具完成任務的能力，以及隨時間改進的能力。記憶是創建能自我改進並為用戶提供更佳體驗的代理的基礎。
+在討論創建 AI 代理的獨特優勢時，主要談到兩件事：能夠呼叫工具以完成任務，以及能夠隨著時間改善。記憶是建立能自我改進、並為使用者創造更佳體驗的代理的基礎。
 
-在本課程中，我們將探討 AI 智能代理的記憶是什麼，以及如何管理和利用它來提升應用的效益。
+在本課中，我們將探討 AI 代理的記憶是什麼，以及如何管理和使用它來提升我們的應用程式。
 
-## 介紹
+## Introduction
 
-本課程涵蓋：
+This lesson will cover:
 
-• **理解 AI 智能代理的記憶**：記憶是什麼，以及為什麼它對代理至關重要。
+• **Understanding AI Agent Memory**: What memory is and why it's essential for agents.
 
-• **實現與存儲記憶**：為 AI 代理添加記憶能力的實用方法，重點關注短期記憶和長期記憶。
+• **Implementing and Storing Memory**: Practical methods for adding memory capabilities to your AI agents, focusing on short-term and long-term memory.
 
-• **讓 AI 智能代理自我改進**：記憶如何使代理從過去互動中學習並隨時間改進。
+• **Making AI Agents Self-Improving**: How memory enables agents to learn from past interactions and improve over time.
 
-## 可用實作
+## Available Implementations
 
-本課程包含兩個全面的筆記本教學：
+This lesson includes two comprehensive notebook tutorials:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**：使用 Mem0 和 Azure AI Search 搭配 Semantic Kernel 框架實現記憶
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implements memory using Mem0 and Azure AI Search with Semantic Kernel framework
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**：使用 Cognee 實現結構化記憶，能自動建立由嵌入支持的知識圖譜，並視覺化圖譜與智慧檢索
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implements structured memory using Cognee, automatically building knowledge graph backed by embeddings, visualizing graph, and intelligent retrieval
 
-## 學習目標
+## Learning Goals
 
-完成本課程後，你將能：
+After completing this lesson, you will know how to:
 
-• **區分各類 AI 代理的記憶類型**，包括工作記憶、短期記憶與長期記憶，以及如人格記憶和情節記憶等專門形式。
+• **Differentiate between various types of AI agent memory**, including working, short-term, and long-term memory, as well as specialized forms like persona and episodic memory.
 
-• **使用 Semantic Kernel 框架實現並管理 AI 代理的短期和長期記憶**，運用 Mem0、Cognee、Whiteboard 記憶等工具，並整合 Azure AI Search。
+• **Implement and manage short-term and long-term memory for AI agents** using the Semantic Kernel framework, leveraging tools like Mem0, Cognee, Whiteboard memory, and integrating with Azure AI Search.
 
-• **了解自我改進 AI 智能代理背後的原理**，以及強大的記憶管理系統如何促進持續學習和適應。
+• **Understand the principles behind self-improving AI agents** and how robust memory management systems contribute to continuous learning and adaptation.
 
-## 理解 AI 智能代理的記憶
+## Understanding AI Agent Memory
 
-本質上，**AI 智能代理的記憶指的是讓它們能保留並回憶資訊的機制**。這些資訊可以是對話的具體細節、使用者偏好、過去的行動，甚至是學習到的模式。
+At its core, **memory for AI agents refers to the mechanisms that allow them to retain and recall information**. This information can be specific details about a conversation, user preferences, past actions, or even learned patterns.
 
-沒有記憶的 AI 應用通常是無狀態的，意味著每次互動都從零開始。這導致重複且令人沮喪的使用經驗，代理「忘記」先前的上下文或偏好。
+Without memory, AI applications are often stateless, meaning each interaction starts from scratch. This leads to a repetitive and frustrating user experience where the agent "forgets" previous context or preferences.
 
-### 為什麼記憶重要？
+### Why is Memory Important?
 
-代理的智能與其回憶和運用過去資訊的能力密切相關。記憶讓代理能夠：
+an agent's intelligence is deeply tied to its ability to recall and utilize past information. Memory allows agents to be:
 
-• **反思**：從過去行動與結果中學習。
+• **Reflective**: Learning from past actions and outcomes.
 
-• **互動**：維持對話上下文。
+• **Interactive**: Maintaining context over an ongoing conversation.
 
-• **主動與被動**：根據歷史資料預測需求或做出適當回應。
+• **Proactive and Reactive**: Anticipating needs or responding appropriately based on historical data.
 
-• **自主**：通過調用已存知識，能更獨立運作。
+• **Autonomous**: Operating more independently by drawing on stored knowledge.
 
-實現記憶的目標是讓代理更**可靠且有能力**。
+The goal of implementing memory is to make agents more **reliable and capable**.
 
-### 記憶類型
+### Types of Memory
 
-#### 工作記憶
+#### Working Memory
 
-可將其視為代理在單一、持續任務或思考過程中使用的草稿紙。它持有計算下一步所需的即時資訊。
+Think of this as a piece of scratch paper an agent uses during a single, ongoing task or thought process. It holds immediate information needed to compute the next step.
 
-對 AI 代理而言，工作記憶通常捕捉對話中最相關的資訊，即使整個聊天記錄很長或被截斷。重點是提取關鍵元素，如需求、建議、決策及行動。
+For AI agents, working memory often captures the most relevant information from a conversation, even if the full chat history is long or truncated. It focuses on extracting key elements like requirements, proposals, decisions, and actions.
 
-**工作記憶範例**
+**Working Memory Example**
 
-在旅遊訂票代理中，工作記憶可能捕捉使用者當前的需求，例如「我想預訂一趟去巴黎的行程」。這個具體需求被保存在代理的即時上下文中，以引導當前互動。
+In a travel booking agent, working memory might capture the user's current request, such as "I want to book a trip to Paris". This specific requirement is held in the agent's immediate context to guide the current interaction.
 
-#### 短期記憶
+#### Short Term Memory
 
-此類記憶會在單次對話或工作階段期間保留資訊，形成當前對話的上下文，讓代理能回顧對話中的先前回合。
+This type of memory retains information for the duration of a single conversation or session. It's the context of the current chat, allowing the agent to refer back to previous turns in the dialogue.
 
-**短期記憶範例**
+**Short Term Memory Example**
 
-若使用者問「飛往巴黎的機票多少錢？」再問「那住宿費用呢？」短期記憶確保代理知道「那裡」指的是同一次對話中的「巴黎」。
+If a user asks, "How much would a flight to Paris cost?" and then follows up with "What about accommodation there?", short-term memory ensures the agent knows "there" refers to "Paris" within the same conversation.
 
-#### 長期記憶
+#### Long Term Memory
 
-這是跨多次對話或工作階段持續保留的資訊。它能讓代理記得使用者偏好、歷史互動或長期的通用知識，對個性化非常重要。
+This is information that persists across multiple conversations or sessions. It allows agents to remember user preferences, historical interactions, or general knowledge over extended periods. This is important for personalization.
 
-**長期記憶範例**
+**Long Term Memory Example**
 
-一個長期記憶可能存有「Ben 喜歡滑雪和戶外活動，喜歡帶山景的咖啡，並且因過去受傷想避免高難度滑雪道」等資訊。這些從先前互動中學到的訊息會影響未來旅遊規劃的推薦，使體驗更具個性化。
+A long-term memory might store that "Ben enjoys skiing and outdoor activities, likes coffee with a mountain view, and wants to avoid advanced ski slopes due to a past injury". This information, learned from previous interactions, influences recommendations in future travel planning sessions, making them highly personalized.
 
-#### 人格記憶
+#### Persona Memory
 
-這種專門的記憶類型幫助代理建立一致的「個性」或「角色」。它允許代理記得關於自身或其預定角色的細節，讓互動更順暢且聚焦。
+This specialized memory type helps an agent develop a consistent "personality" or "persona". It allows the agent to remember details about itself or its intended role, making interactions more fluid and focused.
 
-**人格記憶範例**
+**Persona Memory Example**
+If the travel agent is designed to be an "expert ski planner," persona memory might reinforce this role, influencing its responses to align with an expert's tone and knowledge.
 
-若旅遊代理被設計為「滑雪專家」，人格記憶可能強化此角色，讓回答更符合專家語氣與知識。
+#### Workflow/Episodic Memory
 
-#### 工作流程／情節記憶
+This memory stores the sequence of steps an agent takes during a complex task, including successes and failures. It's like remembering specific "episodes" or past experiences to learn from them.
 
-這種記憶存儲代理在複雜任務中採取的步驟序列，包括成功與失敗。就像記住特定「情節」或過去經驗以供學習。
+**Episodic Memory Example**
 
-**情節記憶範例**
+If the agent attempted to book a specific flight but it failed due to unavailability, episodic memory could record this failure, allowing the agent to try alternative flights or inform the user about the issue in a more informed way during a subsequent attempt.
 
-若代理嘗試預訂特定航班但因無票失敗，情節記憶會記錄此失敗，讓代理在下一次嘗試時能嘗試其他航班，或更有根據地通知使用者問題。
+#### Entity Memory
 
-#### 實體記憶
+This involves extracting and remembering specific entities (like people, places, or things) and events from conversations. It allows the agent to build a structured understanding of key elements discussed.
 
-涉及從對話中提取並記住特定實體（例如人、地點或物品）和事件，讓代理構建討論關鍵元素的結構化理解。
+**Entity Memory Example**
 
-**實體記憶範例**
+From a conversation about a past trip, the agent might extract "Paris," "Eiffel Tower," and "dinner at Le Chat Noir restaurant" as entities. In a future interaction, the agent could recall "Le Chat Noir" and offer to make a new reservation there.
 
-在一次關於過去旅行的對話中，代理可能提取「巴黎」、「艾菲爾鐵塔」和「在 Le Chat Noir 餐廳用餐」三個實體。未來互動時，代理可以回憶起「Le Chat Noir」並提供預訂服務。
+#### Structured RAG (Retrieval Augmented Generation)
 
-#### 結構化 RAG（檢索增強生成）
+While RAG is a broader technique, "Structured RAG" is highlighted as a powerful memory technology. It extracts dense, structured information from various sources (conversations, emails, images) and uses it to enhance precision, recall, and speed in responses. Unlike classic RAG that relies solely on semantic similarity, Structured RAG works with the inherent structure of information.
 
-RAG 是更廣泛的技術，「結構化 RAG」被強調為強大的記憶技術。它從各種來源（對話、電子郵件、圖片）提取密集且結構化的資訊，並用於提升回應的精確度、召回率和速度。與只依賴語意相似度的經典 RAG 不同，結構化 RAG 利用資訊的內在結構。
+**Structured RAG Example**
 
-**結構化 RAG 範例**
+Instead of just matching keywords, Structured RAG could parse flight details (destination, date, time, airline) from an email and store them in a structured way. This allows precise queries like "What flight did I book to Paris on Tuesday?"
 
-結構化 RAG 不僅匹配關鍵字，它能解析電子郵件中的航班細節（目的地、日期、時間、航空公司）並以結構化方式存儲，從而能準確地回答「我週二訂了哪班飛往巴黎的航班？」
+## Implementing and Storing Memory
 
-## 實現與存儲記憶
+Implementing memory for AI agents involves a systematic process of **memory management**, which includes generating, storing, retrieving, integrating, updating, and even "forgetting" (or deleting) information. Retrieval is a particularly crucial aspect.
 
-為 AI 代理實現記憶涉及有系統的**記憶管理**流程，包括生成、存儲、檢索、整合、更新，甚至「遺忘」（或刪除）資訊。其中檢索尤為關鍵。
-
-### 專用記憶工具
+### Specialized Memory Tools
 
 #### Mem0
 
-一種儲存與管理代理記憶的專用工具是 Mem0。Mem0 作為持久記憶層，允許代理回憶相關互動、存儲使用者偏好與事實上下文，並從成功與失敗中學習。它的概念是讓無狀態的代理變成有狀態。
+One way to store and manage agent memory is using specialized tools like Mem0. Mem0 works as a persistent memory layer, allowing agents to recall relevant interactions, store user preferences and factual context, and learn from successes and failures over time. The idea here is that stateless agents turn into stateful ones.
 
-它通過**兩階段記憶管線：擷取與更新**運作。首先，向代理主題添加的訊息會送到 Mem0 服務，該服務使用大型語言模型（LLM）摘要對話歷史並擷取新記憶。接著，LLM 驅動的更新階段決定是否新增、修改或刪除這些記憶，並將其存儲在可包含向量庫、圖譜與鍵值資料庫的混合數據庫中。此系統還支持多種記憶類型，並可整合圖譜記憶以管理實體間關係。
+It works through a **two-phase memory pipeline: extraction and update**. First, messages added to an agent's thread are sent to the Mem0 service, which uses a Large Language Model (LLM) to summarize conversation history and extract new memories. Subsequently, an LLM-driven update phase determines whether to add, modify, or delete these memories, storing them in a hybrid data store that can include vector, graph, and key-value databases. This system also supports various memory types and can incorporate graph memory for managing relationships between entities.
 
 #### Cognee
 
-另一個強大方法是使用 **Cognee**，一種開源的語意記憶工具，能將結構化與非結構化數據轉換為以嵌入為基礎的可查詢知識圖譜。Cognee 提供**雙重存儲架構**，結合向量相似搜索與圖譜關係，使代理能理解信息的相似性與概念間的關聯。
+Another powerful approach is using **Cognee**, an open-source semantic memory for AI agents that transforms structured and unstructured data into queryable knowledge graphs backed by embeddings. Cognee provides a **dual-store architecture** combining vector similarity search with graph relationships, enabling agents to understand not just what information is similar, but how concepts relate to each other.
 
-它在**混合檢索**方面表現出色，融合向量相似度、圖譜結構與 LLM 推理——從原始切片查找到基於圖譜的問答。該系統維持**活躍的記憶**，能隨時間演進並增長，同時保持可查詢的連續圖譜形式，支持短期會話上下文及長期持久記憶。
+It excels at **hybrid retrieval** that blends vector similarity, graph structure, and LLM reasoning - from raw chunk lookup to graph-aware question answering. The system maintains **living memory** that evolves and grows while remaining queryable as one connected graph, supporting both short-term session context and long-term persistent memory.
 
-Cognee 筆記本教學（[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)）示範構建此統一記憶層，包含實作示例：攝取多元資料源、視覺化知識圖譜以及以針對代理需求調整的不同搜索策略進行查詢。
+The Cognee notebook tutorial ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonstrates building this unified memory layer, with practical examples of ingesting diverse data sources, visualizing the knowledge graph, and querying with different search strategies tailored to specific agent needs.
 
-### 使用 RAG 存儲記憶
+### Storing Memory with RAG
 
-除了像 Mem0 這類專用記憶工具，你還可以利用強大的搜索服務，比如**Azure AI Search 作為記憶的存儲和檢索後端**，尤其適用於結構化 RAG。
+Beyond specialized memory tools like mem0 , you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
 
-這讓你能基於自己的數據提供依據，確保回答更相關與精準。Azure AI Search 可用於存儲用戶特定的旅遊記憶、產品目錄或其他特定領域知識。
+This allows you to ground your agent's responses with your own data, ensuring more relevant and accurate answers. Azure AI Search can be used to store user-specific travel memories, product catalogs, or any other domain-specific knowledge.
 
-Azure AI Search 支援如**結構化 RAG**功能，擅長從大型資料集（對話歷史、郵件、圖片）中提取並檢索密集結構化資訊。與傳統文本切片和嵌入方法相比，能提供「超越人類的精確度和召回率」。
+Azure AI Search supports capabilities like **Structured RAG**, which excels at extracting and retrieving dense, structured information from large datasets like conversation histories, emails, or even images. This provides "superhuman precision and recall" compared to traditional text chunking and embedding approaches.
 
-## 讓 AI 智能代理自我改進
+## Making AI Agents Self-Improve
 
-自我改進代理的一個常見模式是引入一個**「知識代理」**。此獨立代理會監控使用者與主要代理間的對話。其職責是：
+A common pattern for self-improving agents involves introducing a **"knowledge agent"**. This separate agent observes the main conversation between the user and the primary agent. Its role is to:
 
-1. **識別有價值資訊**：判別對話中哪些內容值得保存為通用知識或特定使用者偏好。
+1. **Identify valuable information**: Determine if any part of the conversation is worth saving as general knowledge or a specific user preference.
 
-2. **擷取與摘要**：提煉對話中的核心學習或偏好。
+2. **Extract and summarize**: Distill the essential learning or preference from the conversation.
 
-3. **存入知識庫**：將擷取的資訊持久化，通常存於向量資料庫中，以便後續查詢。
+3. **Store in a knowledge base**: Persist this extracted information, often in a vector database, so it can be retrieved later.
 
-4. **強化後續查詢**：當使用者發起新查詢時，知識代理會檢索相關存儲訊息並附加於使用者提示中，為主代理提供重要上下文（類似 RAG）。
+4. **Augment future queries**: When the user initiates a new query, the knowledge agent retrieves relevant stored information and appends it to the user's prompt, providing crucial context to the primary agent (similar to RAG).
 
-### 記憶最佳化
+### Optimizations for Memory
 
-• **延遲管理**：為避免拖慢用戶互動速度，可以先使用成本較低、較快的模型初步檢查信息是否有存儲或檢索價值，僅在必要時調用複雜的擷取/檢索程序。
+• **Latency Management**: To avoid slowing down user interactions, a cheaper, faster model can be used initially to quickly check if information is valuable to store or retrieve, only invoking the more complex extraction/retrieval process when necessary.
 
-• **知識庫維護**：面對持續增長的知識庫，使用較少的資訊可移至「冷存儲」以節約成本。
+• **Knowledge Base Maintenance**: For a growing knowledge base, less frequently used information can be moved to "cold storage" to manage costs.
 
-## 有更多代理記憶的問題嗎？
+## Got More Questions About Agent Memory?
 
-加入 [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) 與其他學習者會面，參加辦公時間並解決你的 AI 智能代理問題。
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件之母語版本應視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們不對因使用本翻譯而引起之任何誤解或誤譯負責。
+免責聲明：
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不精確之處。以原始語言撰寫的原文應被視為具權威性的參考來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而導致的任何誤解或錯誤詮釋負責。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

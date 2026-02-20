@@ -1,6 +1,6 @@
 [![Planleggingsdesignmønster](../../../translated_images/no/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Klikk på bildet ovenfor for å se videoen til denne leksjonen)_
+> _(Klikk på bildet ovenfor for å se videoen av denne leksjonen)_
 
 # Planleggingsdesign
 
@@ -8,48 +8,48 @@
 
 Denne leksjonen vil dekke
 
-* Definere et klart overordnet mål og bryte ned en kompleks oppgave i håndterbare oppgaver.
-* Utnytte strukturert output for mer pålitelige og maskinlesbare svar.
-* Bruke en hendelsesdrevet tilnærming for å håndtere dynamiske oppgaver og uventede innspill.
+* Å definere et klart overordnet mål og bryte en kompleks oppgave ned i håndterbare oppgaver.
+* Å bruke strukturert utdata for mer pålitelige og maskinlesbare svar.
+* Å anvende en hendelsesdrevet tilnærming for å håndtere dynamiske oppgaver og uventede inndata.
 
 ## Læringsmål
 
 Etter å ha fullført denne leksjonen, vil du ha forståelse for:
 
-* Identifisere og sette et overordnet mål for en AI-agent, slik at den tydelig vet hva som skal oppnås.
-* Dele opp en kompleks oppgave i håndterbare deloppgaver og organisere dem i en logisk rekkefølge.
+* Identifisere og sette et overordnet mål for en AI-agent, og sikre at den tydelig vet hva som må oppnås.
+* Dele en kompleks oppgave inn i håndterbare deloppgaver og organisere dem i en logisk rekkefølge.
 * Utstyre agenter med riktige verktøy (f.eks. søkeverktøy eller dataanalyseverktøy), bestemme når og hvordan de skal brukes, og håndtere uventede situasjoner som oppstår.
-* Evaluere resultatene av deloppgaver, måle ytelse og iterere handlinger for å forbedre sluttresultatet.
+* Vurdere deloppgavers resultater, måle ytelse, og iterere på handlinger for å forbedre sluttresultatet.
 
 ## Definere det overordnede målet og bryte ned en oppgave
 
 ![Definere mål og oppgaver](../../../translated_images/no/defining-goals-tasks.d70439e19e37c47a.webp)
 
-De fleste oppgaver i den virkelige verden er for komplekse til å løses i ett enkelt steg. En AI-agent trenger et konsist mål for å veilede sin planlegging og handlinger. For eksempel, vurder målet:
+De fleste oppgaver i den virkelige verden er for komplekse til å håndteres i ett enkelt trinn. En AI-agent trenger et konsist mål for å styre planleggingen og handlingene sine. For eksempel, vurder målet:
 
-    "Lag en 3-dagers reiseplan."
+    "Generer en 3-dagers reiserute."
 
-Selv om det er enkelt å formulere, trenger det fortsatt presisering. Jo klarere målet er, desto bedre kan agenten (og eventuelle menneskelige samarbeidspartnere) fokusere på å oppnå riktig resultat, som å lage en omfattende reiseplan med flyalternativer, hotellanbefalinger og aktivitetsforslag.
+Selv om det er enkelt å formulere, trenger det fortsatt presisering. Jo klarere målet er, desto bedre kan agenten (og eventuelle menneskelige samarbeidspartnere) fokusere på å oppnå riktig resultat, for eksempel å lage en omfattende reiseplan med flyalternativer, hotellanbefalinger og aktivitetsforslag.
 
-### Oppgaveoppdeling
+### Oppgavedekomponering
 
 Store eller intrikate oppgaver blir mer håndterbare når de deles opp i mindre, målrettede deloppgaver.
-For reiseplaneksempelet kan du dele opp målet i:
+For reiseruteeksemplet kan du dele målet inn i:
 
 * Flybestilling
 * Hotellbestilling
 * Bilutleie
-* Personalisering
+* Personlig tilpasning
 
-Hver deloppgave kan deretter håndteres av dedikerte agenter eller prosesser. En agent kan spesialisere seg på å finne de beste flytilbudene, en annen på hotellbestillinger, og så videre. En koordinerende eller "nedstrøms" agent kan deretter samle disse resultatene til en sammenhengende reiseplan for sluttbrukeren.
+Hver deloppgave kan deretter håndteres av dedikerte agenter eller prosesser. En agent kan spesialisere seg på å finne de beste flytilbudene, en annen fokuserer på hotellbestillinger, og så videre. En koordinerende eller «nedstrøms» agent kan deretter sammenstille disse resultatene til én sammenhengende reiseplan for sluttbrukeren.
 
-Denne modulære tilnærmingen tillater også gradvise forbedringer. For eksempel kan du legge til spesialiserte agenter for matanbefalinger eller lokale aktivitetsforslag og finjustere reiseplanen over tid.
+Denne modulære tilnærmingen åpner også for trinnvise forbedringer. For eksempel kan du legge til spesialiserte agenter for matanbefalinger eller lokale aktivitetsforslag og raffinere reiseplanen over tid.
 
-### Strukturert output
+### Strukturert utdata
 
-Store språkmodeller (LLMs) kan generere strukturert output (f.eks. JSON) som er enklere for nedstrøms agenter eller tjenester å analysere og behandle. Dette er spesielt nyttig i en multi-agent-kontekst, hvor vi kan utføre disse oppgavene etter at planleggingsoutputen er mottatt. Se dette for en rask oversikt.
+Store språkmodeller (LLMs) kan generere strukturert utdata (f.eks. JSON) som er enklere for nedstrømsagenter eller tjenester å analysere og behandle. Dette er spesielt nyttig i en fleragent-kontekst, hvor vi kan iverksette disse oppgavene etter at planleggingsutdataene er mottatt. Se dette <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogginnlegg</a> for en rask oversikt.
 
-Den følgende Python-koden viser en enkel planleggingsagent som deler opp et mål i deloppgaver og genererer en strukturert plan:
+Følgende Python-snutt demonstrerer en enkel planleggingsagent som dekomponerer et mål til deloppgaver og genererer en strukturert plan:
 
 ```python
 from pydantic import BaseModel
@@ -72,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Modell for reise-underoppgave
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # vi vil tildele oppgaven til agenten
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -85,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # For å autentisere mot modellen må du generere et personlig tilgangstoken (PAT) i GitHub-innstillingene dine.
+    # Opprett ditt PAT-token ved å følge instruksjonene her: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -96,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Definer brukermeldingen
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -125,30 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Sørg for at responsinnholdet er en gyldig JSON-streng før du laster det
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
 #     raise ValueError("Response content is not a valid JSON string")
 
-# # Print the response content after loading it as JSON
+# # Skriv ut responsinnholdet etter at det er lastet inn som JSON
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Valider responsinnholdet med MathReasoning-modellen
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Planleggingsagent med multi-agent orkestrering
+### Planleggingsagent med fleragentorkestrering
 
-I dette eksempelet mottar en Semantic Router Agent en brukerforespørsel (f.eks. "Jeg trenger en hotellplan for reisen min.").
+I dette eksemplet mottar en Semantisk ruteragent en brukerforespørsel (f.eks. "Jeg trenger en hotellplan for reisen min.").
 
-Planleggeren deretter:
+Planleggeren gjør deretter:
 
-* Mottar hotellplanen: Planleggeren tar brukerens melding og, basert på et systemprompt (inkludert detaljer om tilgjengelige agenter), genererer en strukturert reiseplan.
-* Lister opp agenter og deres verktøy: Agentregisteret holder en liste over agenter (f.eks. for fly, hotell, bilutleie og aktiviteter) sammen med funksjonene eller verktøyene de tilbyr.
-* Ruter planen til de respektive agentene: Avhengig av antall deloppgaver, sender planleggeren enten meldingen direkte til en dedikert agent (for enkeltoppgave-scenarier) eller koordinerer via en gruppechat-manager for multi-agent samarbeid.
+* Mottar hotellplanen: Planleggeren tar brukerens melding og, basert på et systemprompt (inkludert tilgjengelige agentdetaljer), genererer en strukturert reiseplan.
+* Lister agenter og deres verktøy: Agentregisteret inneholder en liste over agenter (f.eks. for fly, hotell, bilutleie og aktiviteter) sammen med funksjonene eller verktøyene de tilbyr.
+* Ruter planen til de respektive agentene: Avhengig av antall deloppgaver sender planleggeren enten meldingen direkte til en dedikert agent (for enkeltsaks-scenarier) eller koordinerer via en gruppechatsleder for fleragent-samarbeid.
 * Oppsummerer resultatet: Til slutt oppsummerer planleggeren den genererte planen for klarhet.
-Den følgende Python-kodeeksempelet illustrerer disse trinnene:
+Følgende Python-kodeeksempel illustrerer disse trinnene:
 
 ```python
 
@@ -166,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Reise-underoppgave-modell
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # vi vil tildele oppgaven til agenten
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -183,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Opprett klienten med typekontrollerte miljøvariabler
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -195,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Definer brukermeldingen
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -212,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Sørg for at responsinnholdet er en gyldig JSON-streng før du laster det inn
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Skriv ut responsinnholdet etter at det er lastet inn som JSON
 
 pprint(json.loads(response_content))
 ```
 
-Det som følger er outputen fra den forrige koden, og du kan deretter bruke denne strukturerte outputen til å rute til `assigned_agent` og oppsummere reiseplanen for sluttbrukeren.
+Det som følger er utdata fra forrige kode, og du kan deretter bruke denne strukturerte utdataen til å rute til `assigned_agent` og oppsummere reiseplanen for sluttbrukeren.
 
 ```json
 {
@@ -254,19 +254,19 @@ Det som følger er outputen fra den forrige koden, og du kan deretter bruke denn
 }
 ```
 
-En eksempelnotatbok med den forrige koden er tilgjengelig [her](07-autogen.ipynb).
+Et eksempel-notatbok med forrige kodeeksempel er tilgjengelig [her](07-autogen.ipynb).
 
 ### Iterativ planlegging
 
-Noen oppgaver krever en frem-og-tilbake-prosess eller re-planlegging, hvor resultatet av en deloppgave påvirker den neste. For eksempel, hvis agenten oppdager et uventet dataformat mens den bestiller fly, kan den måtte tilpasse strategien sin før den går videre til hotellbestillinger.
+Noen oppgaver krever en frem og tilbake-prosess eller re-planlegging, der resultatet av én deloppgave påvirker den neste. For eksempel, hvis agenten oppdager et uventet dataformat mens den bestiller fly, kan den måtte tilpasse strategien før den går videre til hotellbestillinger.
 
-I tillegg kan brukerfeedback (f.eks. en person som bestemmer seg for at de foretrekker et tidligere fly) utløse en delvis re-planlegging. Denne dynamiske, iterative tilnærmingen sikrer at den endelige løsningen samsvarer med virkelige begrensninger og utviklende brukerpreferanser.
+I tillegg kan tilbakemeldinger fra brukeren (f.eks. at et menneske bestemmer seg for at de foretrekker et tidligere fly) utløse en delvis re-planlegging. Denne dynamiske, iterative tilnærmingen sikrer at den endelige løsningen samsvarer med virkelige begrensninger og brukeres endrede preferanser.
 
 f.eks. eksempelkode
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. det samme som forrige kode og videreformidle brukerens historikk og gjeldende plan
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -280,24 +280,22 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. planlegg på nytt og send oppgavene til respektive agenter
 ```
 
-For mer omfattende planlegging, sjekk ut Magnetic One for å løse komplekse oppgaver.
+For mer omfattende planlegging, sjekk ut Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">blogginnlegg</a> for å løse komplekse oppgaver.
 
-## Sammendrag
+## Oppsummering
 
-I denne artikkelen har vi sett på et eksempel på hvordan vi kan lage en planlegger som dynamisk kan velge de tilgjengelige agentene som er definert. Outputen fra planleggeren deler opp oppgavene og tildeler agentene slik at de kan utføres. Det antas at agentene har tilgang til funksjonene/verktøyene som kreves for å utføre oppgaven. I tillegg til agentene kan du inkludere andre mønstre som refleksjon, oppsummering og rundgang-chat for ytterligere tilpasning.
+I denne artikkelen har vi sett på et eksempel på hvordan vi kan lage en planlegger som dynamisk kan velge de tilgjengelige agentene som er definert. Utdataene fra planleggeren dekomponerer oppgavene og tildeler agentene slik at de kan utføres. Det forutsettes at agentene har tilgang til funksjonene/verktøyene som kreves for å utføre oppgaven. I tillegg til agentene kan du inkludere andre mønstre som refleksjon, oppsummeringsmodul og round-robin-chat for å ytterligere tilpasse løsningen.
 
-## Tilleggsressurser
+## Ytterligere ressurser
 
-AutoGen Magnetic One - Et generalist multi-agent system for å løse komplekse oppgaver og har oppnådd imponerende resultater på flere utfordrende agent-benchmarks. Referanse:
-
-. I denne implementeringen oppretter orkestratoren en oppgavespesifikk plan og delegerer disse oppgavene til de tilgjengelige agentene. I tillegg til planlegging benytter orkestratoren også en sporingsmekanisme for å overvåke fremdriften av oppgaven og re-planlegge etter behov.
+AutoGen Magentic One - A Generalist multi-agent system for solving complex tasks and has achieved impressive results on multiple challenging agentic benchmarks. Reference: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. I denne implementasjonen oppretter orkestratoren oppgavespesifikke planer og delegerer disse oppgavene til de tilgjengelige agentene. I tillegg til planlegging bruker orkestratoren også en sporingsmekanisme for å overvåke fremdriften i oppgaven og re-planlegger etter behov.
 
 ### Har du flere spørsmål om planleggingsdesignmønsteret?
 
-Bli med i [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) for å møte andre elever, delta på kontortimer og få svar på spørsmålene dine om AI-agenter.
+Bli med i [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) for å møte andre lærende, delta på kontortid og få spørsmålene dine om AI-agenter besvart.
 
 ## Forrige leksjon
 
@@ -305,9 +303,11 @@ Bli med i [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) for å m�
 
 ## Neste leksjon
 
-[Multi-agent designmønster](../08-multi-agent/README.md)
+[Fleragent-designmønster](../08-multi-agent/README.md)
 
 ---
 
-**Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Ansvarsfraskrivelse:
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten Co-op Translator (https://github.com/Azure/co-op-translator). Selv om vi legger vekt på nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Originaldokumentet på det opprinnelige språket bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

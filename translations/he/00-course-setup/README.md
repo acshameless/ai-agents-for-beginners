@@ -1,67 +1,67 @@
 # הגדרת הקורס
 
-## הקדמה
+## مقدּמה
 
-בשיעור זה נלמד כיצד להפעיל את דוגמאות הקוד של הקורס.
+הלקסון הזה יכסה כיצד להפעיל את דוגמאות הקוד של הקורס הזה.
 
-## הצטרפות ללומדים אחרים וקבלת עזרה
+## הצטרף ללומדים אחרים וקבל עזרה
 
-לפני שתתחילו לשכפל את המאגר שלכם, הצטרפו לערוץ [AI Agents For Beginners Discord](https://aka.ms/ai-agents/discord) כדי לקבל עזרה בהגדרות, לשאול שאלות על הקורס או להתחבר ללומדים אחרים.
+לפני שתתחיל לשכפל את הרפוזיטורי שלך, הצטרף ל-[ערוץ דיסקורד של AI Agents למתחילים](https://aka.ms/ai-agents/discord) כדי לקבל עזרה בהגדרה, לשאול שאלות לגבי הקורס, או כדי להתחבר עם לומדים אחרים.
 
-## שכפול או יצירת מאגר משלכם
+## שכפל או פורק את הרפוזיטורי הזה
 
-כדי להתחיל, אנא שכפלו או צרו מאגר משלכם מתוך מאגר GitHub. זה יאפשר לכם ליצור גרסה משלכם של חומרי הקורס כך שתוכלו להפעיל, לבדוק ולשנות את הקוד!
+כדי להתחיל, אנא שכפל או פורק את רפוזיטורי ה-GitHub. זה ייצור גרסה משלך של חומר הקורס כך שתוכל להפעיל, לבדוק ולשנות את הקוד!
 
-ניתן לעשות זאת על ידי לחיצה על הקישור ל-<a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">יצירת מאגר משלכם</a>
+ניתן לעשות זאת בלחיצה על הקישור ל- <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">פורק את הרפוזיטורי</a>
 
-כעת אמור להיות לכם מאגר משלכם בקישור הבא:
+כעת יש לך גרסה משלך של הפורק של הקורס בקישור הבא:
 
-![מאגר משוכפל](../../../translated_images/he/forked-repo.33f27ca1901baa6a.webp)
+![Forked Repo](../../../translated_images/he/forked-repo.33f27ca1901baa6a.webp)
 
-### שכפול רדוד (מומלץ לסדנאות / Codespaces)
+### שכפול שטחי (מומלץ לסדנאות / Codespaces)
 
-  >המאגר המלא יכול להיות גדול (~3 GB) כאשר מורידים את כל ההיסטוריה וכל הקבצים. אם אתם משתתפים רק בסדנה או זקוקים רק לתיקיות של שיעורים מסוימים, שכפול רדוד (או שכפול חלקי) ימנע את רוב ההורדה על ידי קיצור ההיסטוריה ו/או דילוג על קבצים גדולים.
+  >הרפוזיטורי המלא יכול להיות גדול (~3 GB) כשאתה מוריד את כל ההיסטוריה וכל הקבצים. אם אתה משתתף רק בסדנה או צריך רק כמה תיקיות לקורס, שכפול שטחי (או שכפול דל) ימנע את רוב ההורדה על ידי קיצור ההיסטוריה ו/או דילוג על בלובים.
 
-#### שכפול רדוד מהיר — היסטוריה מינימלית, כל הקבצים
+#### שכפול שטחי מהיר — היסטוריה מינימלית, כל הקבצים
 
-החליפו `<your-username>` בפקודות הבאות עם כתובת המאגר שלכם (או כתובת המקור אם אתם מעדיפים).
+החלף את `<your-username>` בפקודות מטה בכתובת ה-URL של הפורק שלך (או בכתובת ה-URL של האספקה אם תרצה).
 
-לשכפול רק ההיסטוריה של ההתחייבות האחרונה (הורדה קטנה):
+כדי לשכפל רק את היסטוריית הקומיטים האחרונה (הורדה קטנה):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-לשכפול ענף מסוים:
+כדי לשכפל ענף ספציפי:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### שכפול חלקי — קבצים מינימליים + רק תיקיות נבחרות
+#### שכפול חלקי (דל) — מינימום בלובים + תיקיות נבחרות בלבד
 
-שיטה זו משתמשת בשכפול חלקי וב-sparse-checkout (דורש Git 2.25+ ומומלץ להשתמש בגרסה מודרנית של Git עם תמיכה בשכפול חלקי):
+זה משתמש בשכפול חלקי וב-sparse-checkout (דורש Git 2.25+ ומומלץ להשתמש ב-Git מודרני עם תמיכה בשכפול חלקי):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-היכנסו לתיקיית המאגר:
+גש לתיקיית הרפוזיטורי:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-לאחר מכן ציינו אילו תיקיות אתם רוצים (הדוגמה למטה מציגה שתי תיקיות):
+ואז ציין אילו תיקיות אתה רוצה (דוגמה למטה מציגה שתי תיקיות):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-לאחר השכפול ואימות הקבצים, אם אתם זקוקים רק לקבצים ורוצים לפנות מקום (ללא היסטוריית Git), אנא מחקו את המטא-נתונים של המאגר (💀בלתי הפיך — תאבדו את כל הפונקציונליות של Git: אין התחייבויות, משיכות, דחיפות או גישה להיסטוריה).
+לאחר השכפול ואימות הקבצים, אם אתה צריך רק את הקבצים ורוצה לפנות מקום (ללא היסטוריית git), אנא מחק את המידע המטאדאטה של הרפוזיטורי (💀בלתי הפיך — תאבד את כל פונקציונליות Git: אין קומיטים, משיכות, דחיפות או גישה להיסטוריה).
 
 ```bash
-# zsh/bash
+# זש/בש
 rm -rf .git
 ```
 
@@ -70,55 +70,54 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### שימוש ב-GitHub Codespaces (מומלץ כדי להימנע מהורדות גדולות מקומיות)
+#### שימוש ב-GitHub Codespaces (מומלץ להימנע מהורדות גדולות מקומיות)
 
-- צרו Codespace חדש עבור המאגר הזה דרך [ממשק המשתמש של GitHub](https://github.com/codespaces).  
+- צור חיבור Codespace חדש לרפוזיטורי הזה דרך [ממשק GitHub](https://github.com/codespaces).  
 
-- בטרמינל של ה-Codespace החדש שנוצר, הריצו אחת מפקודות השכפול הרדוד/חלקי לעיל כדי להביא רק את תיקיות השיעורים שאתם צריכים לתוך סביבת העבודה של Codespace.
-- אופציונלי: לאחר השכפול בתוך Codespaces, הסירו את .git כדי לשחרר מקום נוסף (ראו פקודות הסרה לעיל).
-- הערה: אם אתם מעדיפים לפתוח את המאגר ישירות ב-Codespaces (ללא שכפול נוסף), שימו לב ש-Codespaces יבנה את סביבת devcontainer וייתכן שעדיין יספק יותר ממה שאתם צריכים. שכפול עותק רדוד בתוך Codespace חדש נותן לכם יותר שליטה על השימוש בדיסק.
+- בטרמינל של ה-Codespace שנוצר הרץ אחת מהפקודות לשכפול השטחי/הדל למעלה כדי להביא רק את תיקיות השיעורים שאתה צריך לתוך סביבת העבודה של Codespace.
+- אופציונלי: אחרי השכפול בתוך Codespaces, הסר את .git כדי לשחרר מקום נוסף (ראה פקודות הסרה למעלה).
+- שים לב: אם אתה מעדיף לפתוח את הרפוזיטורי ישירות ב-Codespaces (בלי שכפול נוסף), שים לב ש-Codespaces ייבנה את סביבת devcontainer וייתכן שעדיין יספק יותר ממה שאתה צריך. שכפול שטחי בתוך Codespace חדש נותן לך שליטה טובה יותר על השימוש בדיסק.
 
 #### טיפים
 
-- תמיד החליפו את כתובת השכפול עם המאגר שלכם אם אתם רוצים לערוך/להתחייב.
-- אם תצטרכו מאוחר יותר יותר היסטוריה או קבצים, תוכלו להביא אותם או להתאים את sparse-checkout לכלול תיקיות נוספות.
+- תמיד החלף את כתובת השכפול לכתובת הפורק שלך אם אתה רוצה לערוך/לקמוט.
+- אם בעתיד תצטרך יותר היסטוריה או קבצים, תוכל למשוך אותם או להתאים את sparse-checkout לכלול תיקיות נוספות.
 
 ## הפעלת הקוד
 
-הקורס מציע סדרת מחברות Jupyter שתוכלו להפעיל כדי לקבל ניסיון מעשי בבניית סוכני AI.
+קורס זה מציע סדרת מחברות Jupyter שתוכל להריץ כדי לקבל ניסיון מעשי בבניית סוכני בינה מלאכותית.
 
 דוגמאות הקוד משתמשות באחת מהאפשרויות הבאות:
 
-**דורש חשבון GitHub - חינם**:
+**דורש חשבון GitHub - בחינם**:
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. מסומן כ-(semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. מסומן כ-(autogen.ipynb)
+1) Semantic Kernel Agent Framework + GitHub Models Marketplace. מסומן כ-(semantic-kernel.ipynb)  
+2) AutoGen Framework + GitHub Models Marketplace. מסומן כ-(autogen.ipynb)  
 
-**דורש מנוי Azure**:
+**דורש מנוי Azure**:  
+3) Azure AI Foundry + Azure AI Agent Service. מסומן כ-(azureaiagent.ipynb)  
 
-3) Azure AI Foundry + Azure AI Agent Service. מסומן כ-(azureaiagent.ipynb)
+אנו מעודדים אותך לנסות את כל שלוש האופציות כדי לראות איזו מהן מתאימה לך ביותר.
 
-אנו ממליצים לכם לנסות את כל שלושת סוגי הדוגמאות כדי לראות מה עובד הכי טוב עבורכם.
-
-האפשרות שתבחרו תקבע אילו שלבי הגדרה תצטרכו לבצע בהמשך:
+כל אופציה שתבחר תקבע אילו צעדי הגדרה אתה צריך לפעול על פיהם למטה:
 
 ## דרישות
 
-- Python 3.12+
-  - **NOTE**: אם אין לכם Python3.12 מותקן, ודאו שאתם מתקינים אותו. לאחר מכן צרו את venv שלכם באמצעות python3.12 כדי להבטיח שהגרסאות הנכונות יותקנו מקובץ requirements.txt.
+- Python 3.12+  
+  - **הערה**: אם אין לך Python3.12 מותקן, ודא שאתה מתקין אותו. לאחר מכן צור את סביבת ה-venv שלך באמצעות python3.12 כדי להבטיח שהגרסאות הנכונות מותקנות מתוך קובץ requirements.txt.  
   
-    >דוגמה
+    >דוגמה  
 
-    יצירת תיקיית Python venv:
+    צור תיקיית venv ב-Python:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    לאחר מכן הפעילו את סביבת venv עבור:
+    לאחר מכן הפעל את סביבת ה-venv עבור:
 
     ```bash
-    # zsh/bash
+    # זש/באש
     source venv/bin/activate
     ```
   
@@ -127,82 +126,82 @@ Remove-Item -Recurse -Force .git
     venv\Scripts\activate
     ```
 
-- .NET 10+: עבור דוגמאות הקוד המשתמשות ב-.NET, ודאו שאתם מתקינים את [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) או גרסה מאוחרת יותר. לאחר מכן, בדקו את גרסת ה-.NET SDK המותקנת:
+- .NET 10+: לקודים המשתמשים ב-.NET, וודא שאתה מתקין את [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) או גרסה מאוחרת יותר. לאחר מכן בדוק את גרסת .NET SDK המותקנת:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- חשבון GitHub - לגישה ל-GitHub Models Marketplace
-- מנוי Azure - לגישה ל-Azure AI Foundry
-- חשבון Azure AI Foundry - לגישה ל-Azure AI Agent Service
+- חשבון GitHub - לגישה ל-GitHub Models Marketplace  
+- מנוי Azure - לגישה ל-Microsoft Foundry  
+- חשבון Microsoft Foundry - לגישה לשירות Azure AI Agent  
 
-הוספנו קובץ `requirements.txt` בתיקיית השורש של המאגר הזה שמכיל את כל חבילות ה-Python הנדרשות להפעלת דוגמאות הקוד.
+כלולנו קובץ `requirements.txt` בשורש הרפוזיטורי שמכיל את כל חבילת ה-Python הנדרשות כדי להריץ את דוגמאות הקוד.
 
-תוכלו להתקין אותן על ידי הרצת הפקודה הבאה בטרמינל בתיקיית השורש של המאגר:
+אתה יכול להתקין אותן על ידי הרצת הפקודה הבאה בטרמינל שלך בתיקיית השורש של הרפוזיטורי:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
-
-אנו ממליצים ליצור סביבת Python וירטואלית כדי להימנע מקונפליקטים ובעיות.
+  
+אנו ממליצים ליצור סביבת Python וירטואלית כדי להימנע מכל התנגשויות ובעיות.
 
 ## הגדרת VSCode
 
-ודאו שאתם משתמשים בגרסה הנכונה של Python ב-VSCode.
+וודא שאתה משתמש בגרסת ה-Python המתאימה ב-VSCode.
 
-![תמונה](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## הגדרה לדוגמאות המשתמשות ב-GitHub Models 
+## הגדרת דוגמאות המשתמשות ב-GitHub Models
 
-### שלב 1: קבלת GitHub Personal Access Token (PAT)
+### שלב 1: קבל את אסימון הגישה האישית (PAT) שלך מ-GitHub
 
-הקורס הזה משתמש ב-GitHub Models Marketplace, המספק גישה חינמית למודלים של שפה גדולה (LLMs) שתשתמשו בהם לבניית סוכני AI.
+קורס זה מנצל את GitHub Models Marketplace, ומספק גישה חופשית למודלי שפה גדולים (LLMs) שתשתמש בהם לבניית סוכני בינה מלאכותית.
 
-כדי להשתמש ב-GitHub Models, תצטרכו ליצור [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+כדי להשתמש ב-GitHub Models, תצטרך ליצור [אסימון גישה אישי ל-GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
-ניתן לעשות זאת על ידי מעבר ל<a href="https://github.com/settings/personal-access-tokens" target="_blank">הגדרות Personal Access Tokens</a> בחשבון GitHub שלכם.
+ניתן לעשות זאת על ידי כניסה ל<a href="https://github.com/settings/personal-access-tokens" target="_blank">הגדרות אסימוני הגישה האישיים</a> בחשבון ה-GitHub שלך.
 
-אנא עקבו אחר [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) בעת יצירת הטוקן. משמעות הדבר היא שעליכם לתת לטוקן רק את ההרשאות שהוא צריך כדי להפעיל את דוגמאות הקוד בקורס הזה.
+אנא פעל לפי [עקרון ההרשאה המינימלית](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) בעת יצירת האסימון שלך. משמעות הדבר היא שעליך לתת לאסימון רק את ההרשאות שהוא זקוק להן כדי להפעיל את דוגמאות הקוד בקורס זה.
 
-1. בחרו באפשרות `Fine-grained tokens` בצד השמאלי של המסך על ידי מעבר ל-**Developer settings**
+1. בחר באפשרות `Fine-grained tokens` בצד השמאלי של המסך על ידי ניווט ל**Developer settings**
 
-   ![הגדרות מפתחים](../../../translated_images/he/profile_developer_settings.410a859fe749c755.webp)
+   ![Developer settings](../../../translated_images/he/profile_developer_settings.410a859fe749c755.webp)
 
-   לאחר מכן בחרו `Generate new token`.
+   לאחר מכן בחר `Generate new token`.
 
-   ![יצירת טוקן](../../../translated_images/he/fga_new_token.1c1a234afe202ab3.webp)
+   ![Generate Token](../../../translated_images/he/fga_new_token.1c1a234afe202ab3.webp)
 
-2. הזינו שם תיאורי לטוקן שלכם שמשקף את מטרתו, כך שיהיה קל לזהות אותו מאוחר יותר.
+2. הזן שם תיאורי לאסימון שלך שמשקף את מטרתו, כדי שיהיה קל לזהות אותו מאוחר יותר.
 
-    🔐 המלצה על משך הטוקן
+    🔐 המלצת משך האסימון
 
-    משך מומלץ: 30 ימים
-    למען אבטחה גבוהה יותר, תוכלו לבחור תקופה קצרה יותר—כמו 7 ימים 🛡️
-    זו דרך מצוינת להציב יעד אישי ולהשלים את הקורס בזמן שהמומנטום הלימודי שלכם גבוה 🚀.
+    משך מומלץ: 30 ימים  
+    למצב אבטחה חזק יותר, תוכל לבחור תקופה קצרה יותר — כגון 7 ימים 🛡️  
+    זו דרך מצוינת להציב מטרה אישית ולהשלים את הקורס בזמן שהמומנטום הלמידתי שלך גבוה 🚀.
 
-    ![שם הטוקן ותאריך תפוגה](../../../translated_images/he/token-name-expiry-date.a095fb0de6386864.webp)
+    ![Token Name and Expiration](../../../translated_images/he/token-name-expiry-date.a095fb0de6386864.webp)
 
-3. הגבילו את תחום הטוקן למאגר המשוכפל שלכם.
+3. הגבל את היקף האסימון לפורק שלך של הרפוזיטורי הזה.
 
-    ![הגבלת תחום למאגר משוכפל](../../../translated_images/he/token_repository_limit.924ade5e11d9d8bb.webp)
+    ![Limit scope to fork repository](../../../translated_images/he/token_repository_limit.924ade5e11d9d8bb.webp)
 
-4. הגבלות הרשאות הטוקן: תחת **Permissions**, לחצו על לשונית **Account**, ולחצו על כפתור "+ Add permissions". תופיע רשימה נפתחת. חפשו **Models** וסמנו את התיבה עבורו.
+4. הגבל את הרשאות האסימון: תחת **Permissions**, לחץ על לשונית **Account**, ולאחר מכן לחץ על כפתור "+ Add permissions". ייפתח תפריט נפתח. אנא חפש **Models** וסמן את התיבה שלצדו.
 
-    ![הוספת הרשאות Models](../../../translated_images/he/add_models_permissions.c0c44ed8b40fc143.webp)
+    ![Add Models Permission](../../../translated_images/he/add_models_permissions.c0c44ed8b40fc143.webp)
 
-5. ודאו את ההרשאות הנדרשות לפני יצירת הטוקן. ![אימות הרשאות](../../../translated_images/he/verify_permissions.06bd9e43987a8b21.webp)
+5. אמת את ההרשאות הדרושות לפני יצירת האסימון. ![Verify Permissions](../../../translated_images/he/verify_permissions.06bd9e43987a8b21.webp)
 
-6. לפני יצירת הטוקן, ודאו שאתם מוכנים לשמור את הטוקן במקום בטוח כמו כספת מנהל סיסמאות, מכיוון שהוא לא יוצג שוב לאחר יצירתו. ![שמירת טוקן בצורה בטוחה](../../../translated_images/he/store_token_securely.08ee2274c6ad6caf.webp)
+6. לפני יצירת האסימון, וודא שאתה מוכן לשמור את האסימון במקום בטוח כמו מאגר סיסמאות, שכן הוא לא יוצג שוב לאחר יצירתו. ![Store Token Securely](../../../translated_images/he/store_token_securely.08ee2274c6ad6caf.webp)
 
-העתיקו את הטוקן החדש שיצרתם. כעת תוסיפו אותו לקובץ `.env` הכלול בקורס הזה.
+העתק את האסימון החדש שיצרת. כעת תוסיף אותו לקובץ `.env` הכלול בקורס זה.
 
-### שלב 2: יצירת קובץ `.env`
+### שלב 2: צור את קובץ `.env` שלך
 
-כדי ליצור את קובץ `.env`, הריצו את הפקודה הבאה בטרמינל שלכם.
+כדי ליצור את קובץ `.env` שלך, הרץ את הפקודה הבאה בטרמינל.
 
 ```bash
-# zsh/bash
+# זש/בש
 cp .env.example .env
 ```
 
@@ -211,32 +210,32 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-זה יעתיק את קובץ הדוגמה ויצור `.env` בתיקייה שלכם, שם תמלאו את הערכים עבור משתני הסביבה.
+זה יעתיק את הקובץ לדוגמה ויצור `.env` בתיקייתך, שבו תמלא את הערכים של המשתני סביבה.
 
-עם הטוקן שהעתקתם, פתחו את קובץ `.env` בעורך הטקסט המועדף עליכם והדביקו את הטוקן בשדה `GITHUB_TOKEN`.
+עם ההעתקה של האסימון שלך, פתח את קובץ `.env` בעורך הטקסט האהוב עליך והדבק את האסימון בשדה `GITHUB_TOKEN`.
 
-![שדה טוקן GitHub](../../../translated_images/he/github_token_field.20491ed3224b5f4a.webp)
+![GitHub Token Field](../../../translated_images/he/github_token_field.20491ed3224b5f4a.webp)
 
-כעת תוכלו להפעיל את דוגמאות הקוד של הקורס הזה.
+כעת אמור להיות באפשרותך להריץ את דוגמאות הקוד של הקורס הזה.
 
-## הגדרה לדוגמאות המשתמשות ב-Azure AI Foundry וב-Azure AI Agent Service
+## הגדרת דוגמאות המשתמשות ב-Microsoft Foundry וב-Azure AI Agent Service
 
-### שלב 1: קבלת נקודת הקצה של פרויקט Azure שלכם
+### שלב 1: קבל את נקודת הקצה (Endpoint) של פרויקט ה-Azure שלך
 
-עקבו אחר השלבים ליצירת hub ופרויקט ב-Azure AI Foundry שנמצאים כאן: [סקירת משאבי hub](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
+עקוב אחרי הצעדים ליצירת Hub ופרויקט ב-Azure AI Foundry שנמצא כאן: [סקירת משאבי Hub](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
 
-לאחר שיצרתם את הפרויקט שלכם, תצטרכו לקבל את מחרוזת החיבור עבור הפרויקט שלכם.
+לאחר שיצרת את הפרויקט, תצטרך לקבל את מחרוזת החיבור לפרויקט שלך.
 
-ניתן לעשות זאת על ידי מעבר לדף **Overview** של הפרויקט שלכם בפורטל Azure AI Foundry.
+ניתן לעשות זאת על ידי כניסה לדף ה**Overview** של הפרויקט שלך בפורטל Microsoft Foundry.
 
-![מחרוזת חיבור פרויקט](../../../translated_images/he/project-endpoint.8cf04c9975bbfbf1.webp)
+![Project Connection String](../../../translated_images/he/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### שלב 2: יצירת קובץ `.env`
+### שלב 2: צור את קובץ `.env` שלך
 
-כדי ליצור את קובץ `.env`, הריצו את הפקודה הבאה בטרמינל שלכם.
+כדי ליצור את קובץ `.env` שלך, הרץ את הפקודה הבאה בטרמינל.
 
 ```bash
-# zsh/bash
+# זש/בש
 cp .env.example .env
 ```
 
@@ -245,79 +244,72 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-זה יעתיק את קובץ הדוגמה ויצור `.env` בתיקייה שלכם, שם תמלאו את הערכים עבור משתני הסביבה.
+זה יעתיק את קובץ הדוגמה ויבנה `.env` בתיקייתך, שבו תמלא את ערכי משתני הסביבה.
 
-עם הטוקן שהעתקתם, פתחו את קובץ `.env` בעורך הטקסט המועדף עליכם והדביקו את הטוקן בשדה `PROJECT_ENDPOINT`.
+עם ההעתקה של האסימון שלך, פתח את הקובץ `.env` בעורך הטקסט האהוב עליך והדבק את האסימון בשדה `PROJECT_ENDPOINT`.
 
-### שלב 3: התחברות ל-Azure
+### שלב 3: התחבר ל-Azure
 
-כפרקטיקה בטיחותית, נשתמש ב-[keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) כדי לאמת ל-Azure OpenAI עם Microsoft Entra ID. 
+כפרקטיקת אבטחה טובה, נשתמש ב-[אימות ללא מפתח](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) כדי לאמת קישור ל-Azure OpenAI עם Microsoft Entra ID.
 
-לאחר מכן, פתחו טרמינל והריצו `az login --use-device-code` כדי להתחבר לחשבון Azure שלכם.
+לאחר מכן, פתח טרמינל והריץ `az login --use-device-code` כדי להתחבר לחשבון Azure שלך.
 
-לאחר שהתחברתם, בחרו את המנוי שלכם בטרמינל.
+לאחר ההתחברות, בטרמינל בחר את המנוי שלך.
 
-## משתני סביבה נוספים - Azure Search ו-Azure OpenAI 
+## משתני סביבה נוספים - Azure Search ו-Azure OpenAI
 
-עבור שיעור Agentic RAG - שיעור 5 - יש דוגמאות שמשתמשות ב-Azure Search וב-Azure OpenAI.
+לשיעור Agentic RAG - שיעור 5 - יש דוגמאות שמשתמשות ב-Azure Search וב-Azure OpenAI.
 
-אם אתם רוצים להפעיל את הדוגמאות הללו, תצטרכו להוסיף את משתני הסביבה הבאים לקובץ `.env` שלכם:
+אם תרצה להריץ דוגמאות אלה, תצטרך להוסיף את משתני הסביבה הבאים בקובץ `.env` שלך:
 
-### דף סקירה (פרויקט)
+### דף סקירה (Project)
 
-- `AZURE_SUBSCRIPTION_ID` - בדקו **פרטי פרויקט** בדף **Overview** של הפרויקט שלכם.
-
-- `AZURE_AI_PROJECT_NAME` - הסתכלו בראש דף **Overview** של הפרויקט שלכם.
-
-- `AZURE_OPENAI_SERVICE` - מצאו זאת בלשונית **Included capabilities** עבור **Azure OpenAI Service** בדף **Overview**.
+- `AZURE_SUBSCRIPTION_ID` - בדוק את **פרטי הפרויקט** בדף **Overview** של הפרויקט שלך.  
+- `AZURE_AI_PROJECT_NAME` - בעיין בחלק העליון של דף **Overview** של הפרויקט שלך.  
+- `AZURE_OPENAI_SERVICE` - מצא זאת בלשונית **כלולות היכולות** ל-**שירות Azure OpenAI** בדף **Overview**.
 
 ### מרכז ניהול
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - עברו ל-**פרטי פרויקט** בדף **Overview** של **מרכז הניהול**.
+- `AZURE_OPENAI_RESOURCE_GROUP` - עבור ל**מאפייני הפרויקט** בדף **Overview** של **מרכז הניהול**.  
+- `GLOBAL_LLM_SERVICE` - תחת **משאבים מחוברים**, מצא את שם החיבור של **Azure AI Services**. אם לא רשום, בדוק את ה-**פורטל Azure** תחת קבוצת המשאבים שלך עבור שם משאב שירותי AI.
 
-- `GLOBAL_LLM_SERVICE` - תחת **משאבים מחוברים**, מצאו את שם החיבור של **Azure AI Services**. אם לא מופיע, בדקו את **פורטל Azure** תחת קבוצת המשאבים שלכם עבור שם משאב AI Services.
+### דף מודלים ונקודות קצה
 
-### דף מודלים + נקודות קצה
-
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - בחרו את מודל ההטמעה שלכם (לדוגמה, `text-embedding-ada-002`) ורשמו את **שם הפריסה** מפרטי המודל.
-
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - בחרו את מודל הצ'אט שלכם (לדוגמה, `gpt-4o-mini`) ורשמו את **שם הפריסה** מפרטי המודל.
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - בחר את מודל ההטמעה שלך (למשל, `text-embedding-ada-002`) ורשום את **שם הפריסה** מהפרטים של המודל.  
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - בחר את מודל הצ'אט שלך (למשל, `gpt-4o-mini`) ורשום את **שם הפריסה** מהפרטים של המודל.
 
 ### פורטל Azure
 
-- `AZURE_OPENAI_ENDPOINT` - חפשו **שירותי Azure AI**, לחצו עליו, ואז עברו ל-**ניהול משאבים**, **מפתחות ונקודות קצה**, גללו למטה ל-"נקודות הקצה של Azure OpenAI", והעתיקו את זו שאומרת "Language APIs".
-
-- `AZURE_OPENAI_API_KEY` - מאותו מסך, העתיקו KEY 1 או KEY 2.
-
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - מצאו את משאב **Azure AI Search** שלכם, לחצו עליו, וראו **סקירה**.
-
-- `AZURE_SEARCH_API_KEY` - לאחר מכן עברו ל-**הגדרות** ואז ל-**מפתחות** כדי להעתיק את המפתח הראשי או המשני של מנהל המערכת.
+- `AZURE_OPENAI_ENDPOINT` - חפש **שירותי Azure AI**, לחץ עליו, עבור ל**ניהול משאבים**, **מפתחות ונקודת קצה**, גלול למטה אל "נקודות קצה של Azure OpenAI", והעתק את זו שכתוב עליה "שירותי שפה".  
+- `AZURE_OPENAI_API_KEY` - מאותו המסך, העתק את KEY 1 או KEY 2.  
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - מצא את משאב **Azure AI Search** שלך, לחץ עליו וראה את ה**סקירה**.  
+- `AZURE_SEARCH_API_KEY` - לאחר מכן עבור ל**הגדרות**, ואז ל**מפתחות** כדי להעתיק את המפתח הראשי או המשני.
 
 ### דף חיצוני
 
-- `AZURE_OPENAI_API_VERSION` - בקרו בדף [מחזור חיי גרסת API](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) תחת **גרסת GA האחרונה של API**.
+- `AZURE_OPENAI_API_VERSION` - בקר בדף [מחזור חיי גרסת API](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) תחת **הגרסה הרשמית העדכנית ביותר**.
 
 ### הגדרת אימות ללא מפתח
 
-במקום להקשיח את האישורים שלכם, נשתמש בחיבור ללא מפתח עם Azure OpenAI. לשם כך, נייבא `DefaultAzureCredential` ולאחר מכן נקרא לפונקציה `DefaultAzureCredential` כדי לקבל את האישורים.
+במקום לקודד את האישורים ישירות, נשתמש בקישור ללא מפתח עם Azure OpenAI. לשם כך, נייבא את `DefaultAzureCredential` ואחר כך נקרא לפונקציה `DefaultAzureCredential` כדי לקבל את האישורים.
 
 ```python
 # פייתון
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## נתקעתם איפשהו?
-אם יש לכם בעיות בהפעלת ההגדרה הזו, הצטרפו ל-<a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> שלנו או <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">צרו בעיה חדשה</a>.
+## נתקעת איפשהו?
+אם יש לך בעיות בהרצת ההגדרה הזו, הצטרף ל- <a href="https://discord.gg/kzRShWzttr" target="_blank">קהילת Azure AI ב-Discord</a> או <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">צור דו"ח בעיה</a>.
 
 ## השיעור הבא
 
-אתם עכשיו מוכנים להריץ את הקוד עבור הקורס הזה. למידה מהנה על עולם סוכני הבינה המלאכותית!
+אתה עכשיו מוכן להריץ את הקוד של הקורס הזה. בהצלחה בלמידה נוספת על עולם סוכני ה-AI!
 
-[מבוא לסוכני בינה מלאכותית ושימושים בסוכנים](../01-intro-to-ai-agents/README.md)
+[הקדמה לסוכני AI ומקרי השימוש שלהם](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו אחראים לאי-הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל טעויות או אי דיוקים. המסמך המקורי בשפתו המקורית נחשב למקור הסמכותי. למידע קריטי מומלץ להיעזר בתרגום מקצועי של בני אדם. אנו לא אחראים על הבנות שגויות או פרשנויות מוטעות הנובעות משימוש בתרגום זה.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

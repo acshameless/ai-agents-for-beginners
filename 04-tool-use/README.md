@@ -75,7 +75,7 @@ Let's use the example of getting the current time in a city to illustrate:
     ```python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
-        azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"), 
+        azure_endpoint = os.getenv("AZURE_AI_PROJECT_ENDPOINT"), 
         api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
         api_version="2024-05-01-preview"
     )
@@ -225,10 +225,7 @@ def get_current_time(location: str) -> str:
     ...
 
 # Create the client
-provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
-    deployment_name=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
-)
+provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
 
 # Create an agent and run with the tool
 agent = await provider.create_agent(name="TimeAgent", instructions="Use available tools to answer questions.", tools=get_current_time)

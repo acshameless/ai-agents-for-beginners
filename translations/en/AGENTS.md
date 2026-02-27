@@ -2,26 +2,26 @@
 
 ## Project Overview
 
-This repository contains "AI Agents for Beginners" - a comprehensive educational course that teaches everything you need to know to build AI Agents. The course includes over 15 lessons covering the basics, design patterns, frameworks, and deploying AI agents in production.
+This repository contains "AI Agents for Beginners" - a comprehensive educational course teaching everything needed to build AI Agents. The course consists of 15+ lessons covering fundamentals, design patterns, frameworks, and production deployment of AI agents.
 
 **Key Technologies:**
 - Python 3.12+
 - Jupyter Notebooks for interactive learning
 - AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI Services: Azure AI Foundry, Azure AI Agent Service
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
 - GitHub Models Marketplace (free tier available)
 
 **Architecture:**
-- Lesson-based structure (directories numbered 00-15+)
-- Each lesson includes: README documentation, code samples (Jupyter notebooks), and images
-- Multi-language support through an automated translation system
-- Multiple framework options for each lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
+- Lesson-based structure (00-15+ directories)
+- Each lesson contains: README documentation, code samples (Jupyter notebooks), and images
+- Multi-language support via automated translation system
+- Multiple framework options per lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
 
 ## Setup Commands
 
 ### Prerequisites
 - Python 3.12 or higher
-- GitHub account (required for GitHub Models - free tier)
+- GitHub account (for GitHub Models - free tier)
 - Azure subscription (optional, for Azure AI services)
 
 ### Initial Setup
@@ -34,7 +34,7 @@ This repository contains "AI Agents for Beginners" - a comprehensive educational
    cd ai-agents-for-beginners
    ```
 
-2. **Create and activate a Python virtual environment:**
+2. **Create and activate Python virtual environment:**
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -57,7 +57,7 @@ For **GitHub Models (Free)**:
 - `GITHUB_TOKEN` - Personal access token from GitHub
 
 For **Azure AI Services** (optional):
-- `PROJECT_ENDPOINT` - Azure AI Foundry project endpoint
+- `PROJECT_ENDPOINT` - Microsoft Foundry project endpoint
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
 - `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Deployment name for chat model
@@ -68,7 +68,7 @@ For **Azure AI Services** (optional):
 
 ### Running Jupyter Notebooks
 
-Each lesson includes multiple Jupyter notebooks for different frameworks:
+Each lesson contains multiple Jupyter notebooks for different frameworks:
 
 1. **Start Jupyter:**
    ```bash
@@ -78,8 +78,8 @@ Each lesson includes multiple Jupyter notebooks for different frameworks:
 2. **Navigate to a lesson directory** (e.g., `01-intro-to-ai-agents/code_samples/`)
 
 3. **Open and run notebooks:**
-   - `*-semantic-kernel.ipynb` - Using the Semantic Kernel framework
-   - `*-autogen.ipynb` - Using the AutoGen framework
+   - `*-semantic-kernel.ipynb` - Using Semantic Kernel framework
+   - `*-autogen.ipynb` - Using AutoGen framework
    - `*-python-agent-framework.ipynb` - Using Microsoft Agent Framework (Python)
    - `*-dotnet-agent-framework.ipynb` - Using Microsoft Agent Framework (.NET)
    - `*-azureaiagent.ipynb` - Using Azure AI Agent Service
@@ -88,12 +88,12 @@ Each lesson includes multiple Jupyter notebooks for different frameworks:
 
 **Semantic Kernel + GitHub Models:**
 - Free tier available with GitHub account
-- Ideal for learning and experimentation
+- Good for learning and experimentation
 - File pattern: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
 - Free tier available with GitHub account
-- Supports multi-agent orchestration
+- Multi-agent orchestration capabilities
 - File pattern: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
@@ -173,14 +173,14 @@ Open notebooks in Jupyter and execute cells sequentially. Each notebook is self-
 
 This repository uses Markdown for documentation:
 - README.md files in each lesson folder
-- Main README.md at the repository root
+- Main README.md at repository root
 - Automated translation system via GitHub Actions
 
 ### CI/CD Pipeline
 
 Located in `.github/workflows/`:
 
-1. **co-op-translator.yml** - Automatically translates content into 50+ languages
+1. **co-op-translator.yml** - Automatic translation to 50+ languages
 2. **welcome-issue.yml** - Welcomes new issue creators
 3. **welcome-pr.yml** - Welcomes new pull request contributors
 
@@ -246,7 +246,7 @@ Use descriptive titles:
    - Some notebooks may require additional packages mentioned in their markdown cells
 
 4. **Azure services:**
-   - Azure AI services require an active subscription
+   - Azure AI services require active subscription
    - Some features are region-specific
    - Free tier limitations apply to GitHub Models
 
@@ -261,7 +261,7 @@ Recommended progression through lessons:
 
 ### Framework Selection
 
-Choose a framework based on your goals:
+Choose framework based on your goals:
 - **Learning/Prototyping**: Semantic Kernel + GitHub Models (free)
 - **Multi-agent systems**: AutoGen
 - **Latest features**: Microsoft Agent Framework (MAF)
@@ -269,14 +269,14 @@ Choose a framework based on your goals:
 
 ### Getting Help
 
-- Join the [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- Join the [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
 - Review lesson README files for specific guidance
 - Check the main [README.md](./README.md) for course overview
 - Refer to [Course Setup](./00-course-setup/README.md) for detailed setup instructions
 
 ### Contributing
 
-This is an open educational project. Contributions are welcome:
+This is an open educational project. Contributions welcome:
 - Improve code examples
 - Fix typos or errors
 - Add clarifying comments
@@ -293,7 +293,7 @@ This repository uses an automated translation system:
 - 50+ languages supported
 - Translations in `/translations/<lang-code>/` directories
 - GitHub Actions workflow handles translation updates
-- Source files are in English at the repository root
+- Source files are in English at repository root
 
 ### Lesson Structure
 
@@ -335,5 +335,7 @@ Key packages from `requirements.txt`:
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

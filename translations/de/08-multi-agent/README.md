@@ -1,190 +1,194 @@
 [![Multi-Agent Design](../../../translated_images/de/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
-> _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
+> _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 
-# Multi-Agent-Designmuster
+# Multi-Agenten-Designmuster
 
-Sobald Sie an einem Projekt arbeiten, das mehrere Agenten umfasst, müssen Sie das Multi-Agent-Designmuster berücksichtigen. Es ist jedoch möglicherweise nicht sofort klar, wann der Wechsel zu Multi-Agenten sinnvoll ist und welche Vorteile dies bietet.
+Sobald Sie an einem Projekt arbeiten, das mehrere Agenten umfasst, müssen Sie das Multi-Agenten-Designmuster berücksichtigen. Es ist jedoch möglicherweise nicht sofort klar, wann man auf Multi-Agenten umsteigen sollte und welche Vorteile dies hat.
 
 ## Einführung
 
-In dieser Lektion wollen wir folgende Fragen beantworten:
+In dieser Lektion möchten wir folgende Fragen beantworten:
 
-- In welchen Szenarien sind Multi-Agenten anwendbar?
-- Welche Vorteile bietet der Einsatz von Multi-Agenten im Vergleich zu einem einzelnen Agenten, der mehrere Aufgaben übernimmt?
-- Was sind die Bausteine für die Implementierung des Multi-Agent-Designmusters?
-- Wie können wir nachvollziehen, wie die verschiedenen Agenten miteinander interagieren?
+- Für welche Szenarien sind Multi-Agenten geeignet?
+- Welche Vorteile hat die Verwendung von Multi-Agenten gegenüber einem einzelnen Agenten, der mehrere Aufgaben übernimmt?
+- Welche Bausteine gibt es für die Implementierung des Multi-Agenten-Designmusters?
+- Wie erhalten wir Einblick darin, wie die mehreren Agenten miteinander interagieren?
 
 ## Lernziele
 
 Nach dieser Lektion sollten Sie in der Lage sein:
 
-- Szenarien zu identifizieren, in denen Multi-Agenten anwendbar sind.
-- Die Vorteile von Multi-Agenten gegenüber einem einzelnen Agenten zu erkennen.
-- Die Bausteine für die Implementierung des Multi-Agent-Designmusters zu verstehen.
+- Szenarien zu identifizieren, in denen Multi-Agenten anwendbar sind
+- Die Vorteile der Verwendung von Multi-Agenten gegenüber einem einzelnen Agenten zu erkennen.
+- Die Bausteine für die Implementierung des Multi-Agenten-Designmusters zu verstehen.
 
-Was ist der größere Zusammenhang?
+Wie sieht das große Ganze aus?
 
-*Multi-Agenten sind ein Designmuster, das es mehreren Agenten ermöglicht, zusammenzuarbeiten, um ein gemeinsames Ziel zu erreichen.*
+*Multi-Agenten sind ein Designmuster, das es mehreren Agenten erlaubt, zusammenzuarbeiten, um ein gemeinsames Ziel zu erreichen*.
 
-Dieses Muster wird in verschiedenen Bereichen wie Robotik, autonome Systeme und verteiltes Rechnen häufig eingesetzt.
+Dieses Muster wird in verschiedenen Bereichen eingesetzt, unter anderem in der Robotik, autonomen Systemen und verteiltem Rechnen.
 
 ## Szenarien, in denen Multi-Agenten anwendbar sind
 
-In welchen Szenarien ist der Einsatz von Multi-Agenten sinnvoll? Die Antwort ist, dass es viele Szenarien gibt, in denen der Einsatz mehrerer Agenten von Vorteil ist, insbesondere in den folgenden Fällen:
+Welche Szenarien sind also gut geeignet für den Einsatz von Multi-Agenten? Die Antwort ist, dass es viele Szenarien gibt, in denen der Einsatz mehrerer Agenten vorteilhaft ist, insbesondere in folgenden Fällen:
 
-- **Große Arbeitslasten**: Große Arbeitslasten können in kleinere Aufgaben unterteilt und verschiedenen Agenten zugewiesen werden, was parallele Verarbeitung und schnellere Fertigstellung ermöglicht. Ein Beispiel hierfür ist eine umfangreiche Datenverarbeitungsaufgabe.
-- **Komplexe Aufgaben**: Komplexe Aufgaben können, ähnlich wie große Arbeitslasten, in kleinere Teilaufgaben unterteilt und verschiedenen Agenten zugewiesen werden, die jeweils auf einen bestimmten Aspekt der Aufgabe spezialisiert sind. Ein gutes Beispiel hierfür sind autonome Fahrzeuge, bei denen verschiedene Agenten für Navigation, Hinderniserkennung und Kommunikation mit anderen Fahrzeugen zuständig sind.
-- **Vielfältige Expertise**: Unterschiedliche Agenten können über unterschiedliche Fachkenntnisse verfügen, sodass sie verschiedene Aspekte einer Aufgabe effektiver bewältigen können als ein einzelner Agent. Ein gutes Beispiel hierfür ist der Gesundheitsbereich, in dem Agenten Diagnosen, Behandlungspläne und Patientenüberwachung übernehmen können.
+- **Große Arbeitslasten**: Große Arbeitslasten können in kleinere Aufgaben aufgeteilt und verschiedenen Agenten zugewiesen werden, wodurch parallele Verarbeitung und schnellere Fertigstellung möglich sind. Ein Beispiel hierfür ist eine große Datenverarbeitungsaufgabe.
+- **Komplexe Aufgaben**: Komplexe Aufgaben können, wie große Arbeitslasten, in kleinere Teilaufgaben aufgeteilt werden, die jeweils verschiedenen Agenten zugewiesen werden, die sich auf einen bestimmten Aspekt der Aufgabe spezialisieren. Ein gutes Beispiel hierfür sind autonome Fahrzeuge, bei denen verschiedene Agenten Navigation, Hinderniserkennung und Kommunikation mit anderen Fahrzeugen übernehmen.
+- **Verschiedene Fachkenntnisse**: Unterschiedliche Agenten können verschiedene Fachkenntnisse besitzen, sodass sie unterschiedliche Aspekte einer Aufgabe effektiver als ein einziger Agent bearbeiten können. Ein gutes Beispiel hierfür ist im Gesundheitswesen, wo Agenten Diagnosen, Behandlungspläne und Patientenüberwachung verwalten können.
 
-## Vorteile von Multi-Agenten gegenüber einem einzelnen Agenten
+## Vorteile der Verwendung von Multi-Agenten gegenüber einem einzelnen Agenten
 
-Ein Ein-Agenten-System kann für einfache Aufgaben gut funktionieren, aber für komplexere Aufgaben bieten mehrere Agenten mehrere Vorteile:
+Ein Ein-Agenten-System könnte bei einfachen Aufgaben gut funktionieren, aber bei komplexeren Aufgaben bietet die Verwendung mehrerer Agenten mehrere Vorteile:
 
-- **Spezialisierung**: Jeder Agent kann auf eine bestimmte Aufgabe spezialisiert sein. Ein Mangel an Spezialisierung bei einem einzelnen Agenten bedeutet, dass dieser zwar alles erledigen kann, aber bei komplexen Aufgaben möglicherweise überfordert ist. Er könnte beispielsweise eine Aufgabe übernehmen, für die er nicht optimal geeignet ist.
-- **Skalierbarkeit**: Es ist einfacher, Systeme zu skalieren, indem man weitere Agenten hinzufügt, anstatt einen einzelnen Agenten zu überlasten.
-- **Fehlertoleranz**: Wenn ein Agent ausfällt, können andere weiterhin funktionieren, was die Zuverlässigkeit des Systems gewährleistet.
+- **Spezialisierung**: Jeder Agent kann auf eine bestimmte Aufgabe spezialisiert sein. Ein einzelner Agent ohne Spezialisierung kann alles tun, ist aber bei komplexen Aufgaben unter Umständen überfordert oder führt Aufgaben aus, für die er nicht optimal geeignet ist.
+- **Skalierbarkeit**: Es ist einfacher, Systeme durch Hinzufügen weiterer Agenten zu skalieren, als einen einzelnen Agenten zu überlasten.
+- **Fehlertoleranz**: Wenn ein Agent ausfällt, können andere weiterhin funktionieren, was die Zuverlässigkeit des Systems sicherstellt.
 
-Betrachten wir ein Beispiel: Wir möchten eine Reise für einen Nutzer buchen. Ein Ein-Agenten-System müsste alle Aspekte des Buchungsprozesses abwickeln, von der Flugsuche bis zur Hotel- und Mietwagenbuchung. Dazu müsste der Agent über Werkzeuge für alle diese Aufgaben verfügen. Dies könnte zu einem komplexen und monolithischen System führen, das schwer zu warten und zu skalieren ist. Ein Multi-Agenten-System hingegen könnte verschiedene Agenten haben, die auf die Flugsuche, Hotelbuchung und Mietwagenbuchung spezialisiert sind. Dies würde das System modularer, wartungsfreundlicher und skalierbarer machen.
+Nehmen wir ein Beispiel, wir buchen eine Reise für einen Nutzer. Ein Ein-Agenten-System müsste alle Aspekte des Buchungsprozesses abwickeln, von der Flugsuche bis zur Buchung von Hotels und Mietwagen. Um dies mit einem einzigen Agenten zu erreichen, müsste der Agent Werkzeuge für alle diese Aufgaben haben. Dies könnte zu einem komplexen und monolithischen System führen, das schwer zu warten und zu skalieren ist. Ein Multi-Agenten-System könnte dagegen unterschiedliche Agenten haben, die sich auf das Finden von Flügen, die Buchung von Hotels und Mietwagen spezialisieren. Das macht das System modularer, leichter wartbar und skalierbar.
 
-Vergleichen Sie dies mit einem Reisebüro, das als Familienbetrieb geführt wird, im Gegensatz zu einem Reisebüro, das als Franchise organisiert ist. Der Familienbetrieb hätte einen einzigen Agenten, der alle Aspekte des Buchungsprozesses abwickelt, während das Franchise verschiedene Agenten für die unterschiedlichen Aspekte des Buchungsprozesses hätte.
+Vergleichen Sie das mit einem Reisebüro, das als Familienbetrieb geführt wird, gegenüber einem Franchise-Reisebüro. Das Familienreisebüro hätte einen einzelnen Agenten, der alle Aspekte der Buchung übernimmt, während das Franchise verschiedene Agenten für unterschiedliche Aspekte des Buchungsprozesses einsetzt.
 
-## Bausteine für die Implementierung des Multi-Agent-Designmusters
+## Bausteine für die Implementierung des Multi-Agenten-Designmusters
 
-Bevor Sie das Multi-Agent-Designmuster implementieren können, müssen Sie die Bausteine verstehen, die das Muster ausmachen.
+Bevor Sie das Multi-Agenten-Designmuster implementieren können, müssen Sie die Bausteine verstehen, aus denen das Muster besteht.
 
-Machen wir dies anhand des Beispiels einer Reisebuchung für einen Nutzer konkreter. In diesem Fall umfassen die Bausteine:
+Machen wir das anhand des Beispiels der Reisebuchung für einen Nutzer konkreter. Die Bausteine würden hier einschließen:
 
-- **Agentenkommunikation**: Agenten für die Flugsuche, Hotelbuchung und Mietwagenbuchung müssen kommunizieren und Informationen über die Präferenzen und Einschränkungen des Nutzers austauschen. Sie müssen entscheiden, welche Protokolle und Methoden für diese Kommunikation verwendet werden. Konkret bedeutet dies, dass der Agent für die Flugsuche mit dem Agenten für die Hotelbuchung kommunizieren muss, um sicherzustellen, dass das Hotel für die gleichen Daten wie der Flug gebucht wird. Das bedeutet, dass die Agenten Informationen über die Reisedaten des Nutzers austauschen müssen, und Sie müssen entscheiden, *welche Agenten Informationen austauschen und wie sie dies tun*.
-- **Koordinationsmechanismen**: Agenten müssen ihre Aktionen koordinieren, um sicherzustellen, dass die Präferenzen und Einschränkungen des Nutzers erfüllt werden. Eine Nutzerpräferenz könnte sein, dass er ein Hotel in der Nähe des Flughafens möchte, während eine Einschränkung sein könnte, dass Mietwagen nur am Flughafen verfügbar sind. Das bedeutet, dass der Agent für die Hotelbuchung mit dem Agenten für die Mietwagenbuchung koordinieren muss, um sicherzustellen, dass die Präferenzen und Einschränkungen des Nutzers erfüllt werden. Das bedeutet, dass Sie entscheiden müssen, *wie die Agenten ihre Aktionen koordinieren*.
-- **Agentenarchitektur**: Agenten müssen über eine interne Struktur verfügen, um Entscheidungen zu treffen und aus ihren Interaktionen mit dem Nutzer zu lernen. Das bedeutet, dass der Agent für die Flugsuche über eine interne Struktur verfügen muss, um Entscheidungen darüber zu treffen, welche Flüge dem Nutzer empfohlen werden. Das bedeutet, dass Sie entscheiden müssen, *wie die Agenten Entscheidungen treffen und aus ihren Interaktionen mit dem Nutzer lernen*. Beispiele dafür, wie ein Agent lernt und sich verbessert, könnten sein, dass der Agent für die Flugsuche ein maschinelles Lernmodell verwendet, um dem Nutzer Flüge basierend auf seinen bisherigen Präferenzen zu empfehlen.
-- **Sichtbarkeit der Multi-Agenten-Interaktionen**: Sie müssen die Interaktionen zwischen den verschiedenen Agenten nachvollziehen können. Das bedeutet, dass Sie Werkzeuge und Techniken benötigen, um die Aktivitäten und Interaktionen der Agenten zu verfolgen. Dies könnte in Form von Protokollierungs- und Überwachungstools, Visualisierungstools und Leistungsmetriken erfolgen.
-- **Multi-Agenten-Muster**: Es gibt verschiedene Muster für die Implementierung von Multi-Agenten-Systemen, wie zentralisierte, dezentralisierte und hybride Architekturen. Sie müssen das Muster auswählen, das am besten zu Ihrem Anwendungsfall passt.
-- **Mensch in der Schleife**: In den meisten Fällen wird ein Mensch in den Prozess eingebunden sein, und Sie müssen die Agenten anweisen, wann sie menschliche Eingriffe anfordern sollen. Dies könnte in Form eines Nutzers geschehen, der ein bestimmtes Hotel oder einen bestimmten Flug anfordert, den die Agenten nicht empfohlen haben, oder der eine Bestätigung vor der Buchung eines Fluges oder Hotels verlangt.
+- **Agentenkommunikation**: Agenten für Flugsuche, Hotel- und Mietwagenbuchung müssen kommunizieren und Informationen über die Vorlieben und Einschränkungen des Nutzers austauschen. Sie müssen sich auf Protokolle und Methoden für diese Kommunikation einigen. Konkret bedeutet das, dass der Agent für Flugsuche mit dem Agenten für Hotelbuchung kommunizieren muss, damit das Hotel für die gleichen Daten wie der Flug gebucht wird. Die Agenten müssen also Informationen zum Reisedatum des Nutzers austauschen, was bedeutet, dass Sie festlegen müssen, *welche Agenten Informationen teilen und wie sie diese teilen*.
+- **Koordinationsmechanismen**: Die Agenten müssen ihre Aktionen koordinieren, um sicherzustellen, dass die Präferenzen und Einschränkungen des Nutzers erfüllt werden. Eine Präferenz könnte sein, dass der Nutzer ein Hotel in Flughafennähe möchte, während eine Einschränkung sein könnte, dass Mietwagen nur am Flughafen verfügbar sind. Das bedeutet, dass der Agent für Hotelbuchung mit dem Agenten für Mietwagenbuchung koordinieren muss, um sicherzustellen, dass die Nutzerwünsche und -einschränkungen berücksichtigt werden. Sie müssen also entscheiden, *wie die Agenten ihre Aktionen koordinieren*.
+- **Agentenarchitektur**: Agenten benötigen eine interne Struktur, um Entscheidungen zu treffen und aus ihren Interaktionen mit dem Nutzer zu lernen. Das bedeutet, dass der Agent für Flugsuche eine interne Struktur benötigt, um Entscheidungen darüber zu treffen, welche Flüge dem Nutzer empfohlen werden. Sie müssen also bestimmen, *wie die Agenten Entscheidungen treffen und aus der Interaktion mit dem Nutzer lernen*. Beispiele, wie ein Agent lernt und sich verbessert, könnten sein, dass der Agent für Flugsuche ein Machine-Learning-Modell nutzt, um Flüge basierend auf den bisherigen Präferenzen des Nutzers zu empfehlen.
+- **Sichtbarkeit in Multi-Agenten-Interaktionen**: Sie müssen Einblick darin haben, wie die mehreren Agenten miteinander interagieren. Dazu benötigen Sie Werkzeuge und Techniken zur Verfolgung von Agentenaktivitäten und -interaktionen. Dies könnte in Form von Protokollierungs- und Überwachungstools, Visualisierungstools und Leistungskennzahlen erfolgen.
+- **Multi-Agenten-Muster**: Es gibt verschiedene Muster zur Implementierung von Multi-Agenten-Systemen, wie zentralisierte, dezentralisierte und hybride Architekturen. Sie müssen das Muster wählen, das am besten zu Ihrem Anwendungsfall passt.
+- **Mensch in der Schleife**: In den meisten Fällen ist ein Mensch in der Schleife, und Sie müssen die Agenten anweisen, wann sie menschliches Eingreifen anfordern sollen. Dies könnte beispielsweise dann der Fall sein, wenn ein Nutzer ein bestimmtes Hotel oder einen Flug anfordert, der von den Agenten nicht empfohlen wurde, oder wenn vor der Buchung eines Fluges oder Hotels eine Bestätigung eingeholt werden soll.
 
-## Sichtbarkeit der Multi-Agenten-Interaktionen
+## Sichtbarkeit in Multi-Agenten-Interaktionen
 
-Es ist wichtig, dass Sie nachvollziehen können, wie die verschiedenen Agenten miteinander interagieren. Diese Sichtbarkeit ist entscheidend für das Debugging, die Optimierung und die Sicherstellung der Effektivität des Gesamtsystems. Um dies zu erreichen, benötigen Sie Werkzeuge und Techniken, um die Aktivitäten und Interaktionen der Agenten zu verfolgen. Dies könnte in Form von Protokollierungs- und Überwachungstools, Visualisierungstools und Leistungsmetriken erfolgen.
+Es ist wichtig, dass Sie Einblick darin haben, wie die verschiedenen Agenten miteinander interagieren. Diese Sichtbarkeit ist wesentlich für das Debugging, die Optimierung und die Sicherstellung der Effektivität des Gesamtsystems. Um dies zu erreichen, benötigen Sie Werkzeuge und Techniken, um Agentenaktivitäten und -interaktionen zu verfolgen. Dies kann in Form von Protokollierungs- und Überwachungswerkzeugen, Visualisierungstools und Leistungskennzahlen erfolgen.
 
-Zum Beispiel könnten Sie im Fall der Reisebuchung für einen Nutzer ein Dashboard haben, das den Status jedes Agenten, die Präferenzen und Einschränkungen des Nutzers sowie die Interaktionen zwischen den Agenten anzeigt. Dieses Dashboard könnte die Reisedaten des Nutzers, die vom Flugagenten empfohlenen Flüge, die vom Hotelagenten empfohlenen Hotels und die vom Mietwagenagenten empfohlenen Mietwagen anzeigen. Dies würde Ihnen einen klaren Überblick darüber geben, wie die Agenten miteinander interagieren und ob die Präferenzen und Einschränkungen des Nutzers erfüllt werden.
+Zum Beispiel könnten Sie im Fall der Reisebuchung für einen Nutzer ein Dashboard haben, das den Status jedes Agenten, die Präferenzen und Einschränkungen des Nutzers sowie die Interaktionen zwischen den Agenten anzeigt. Dieses Dashboard könnte die Reisedaten des Nutzers, die vom Flug-Agenten empfohlenen Flüge, die vom Hotel-Agenten empfohlenen Hotels und die vom Mietwagen-Agenten empfohlenen Fahrzeuge zeigen. So erhalten Sie eine klare Sicht darauf, wie die Agenten miteinander interagieren und ob die Wünsche und Einschränkungen des Nutzers erfüllt werden.
 
-Schauen wir uns diese Aspekte genauer an:
+Schauen wir uns diese Aspekte etwas detaillierter an.
 
-- **Protokollierungs- und Überwachungstools**: Sie möchten, dass jede Aktion eines Agenten protokolliert wird. Ein Protokolleintrag könnte Informationen über den Agenten enthalten, der die Aktion ausgeführt hat, die ausgeführte Aktion, den Zeitpunkt der Aktion und das Ergebnis der Aktion. Diese Informationen können dann für Debugging, Optimierung und mehr verwendet werden.
-
-- **Visualisierungstools**: Visualisierungstools können Ihnen helfen, die Interaktionen zwischen Agenten auf eine intuitivere Weise zu sehen. Zum Beispiel könnten Sie ein Diagramm haben, das den Informationsfluss zwischen Agenten zeigt. Dies könnte Ihnen helfen, Engpässe, Ineffizienzen und andere Probleme im System zu identifizieren.
-
-- **Leistungsmetriken**: Leistungsmetriken können Ihnen helfen, die Effektivität des Multi-Agenten-Systems zu verfolgen. Zum Beispiel könnten Sie die Zeit messen, die für die Erledigung einer Aufgabe benötigt wird, die Anzahl der pro Zeiteinheit erledigten Aufgaben und die Genauigkeit der von den Agenten gegebenen Empfehlungen. Diese Informationen können Ihnen helfen, Verbesserungsmöglichkeiten zu identifizieren und das System zu optimieren.
+- **Protokollierungs- und Überwachungstools**: Sie sollten für jede Aktion, die ein Agent ausführt, Protokolle erstellen. Ein Protokolleintrag könnte Informationen über den ausführenden Agenten, die Aktion, die Uhrzeit der Aktion und das Ergebnis der Aktion speichern. Diese Informationen können für Debugging, Optimierung und weitere Zwecke genutzt werden.
+- **Visualisierungstools**: Visualisierungstools können Ihnen helfen, die Interaktionen zwischen Agenten auf anschaulichere Weise zu sehen. Beispielsweise könnten Sie einen Graphen haben, der den Informationsfluss zwischen Agenten zeigt. Dies könnte helfen, Engpässe, Ineffizienzen und andere Probleme im System zu identifizieren.
+- **Leistungskennzahlen**: Leistungskennzahlen helfen Ihnen dabei, die Effektivität des Multi-Agenten-Systems zu verfolgen. Beispielsweise könnten Sie die Zeit zur Erledigung einer Aufgabe, die Anzahl der Aufgaben pro Zeiteinheit und die Genauigkeit der Empfehlungen der Agenten messen. Diese Daten helfen Ihnen, Verbesserungsbereiche zu identifizieren und das System zu optimieren.
 
 ## Multi-Agenten-Muster
 
-Schauen wir uns einige konkrete Muster an, die wir zur Erstellung von Multi-Agenten-Anwendungen verwenden können. Hier sind einige interessante Muster, die es zu berücksichtigen gilt:
+Tauchen wir nun in einige konkrete Muster ein, die wir verwenden können, um Multi-Agenten-Anwendungen zu erstellen. Hier sind einige interessante Muster, die es wert sind, betrachtet zu werden:
 
 ### Gruppenchat
 
-Dieses Muster ist nützlich, wenn Sie eine Gruppenchat-Anwendung erstellen möchten, in der mehrere Agenten miteinander kommunizieren können. Typische Anwendungsfälle für dieses Muster sind Teamzusammenarbeit, Kundensupport und soziale Netzwerke.
+Dieses Muster ist nützlich, wenn Sie eine Gruppenchat-Anwendung erstellen wollen, in der mehrere Agenten miteinander kommunizieren können. Typische Anwendungsfälle sind Teamzusammenarbeit, Kundenservice und soziale Netzwerke.
 
-In diesem Muster repräsentiert jeder Agent einen Nutzer im Gruppenchat, und Nachrichten werden zwischen den Agenten über ein Nachrichtenprotokoll ausgetauscht. Die Agenten können Nachrichten an den Gruppenchat senden, Nachrichten aus dem Gruppenchat empfangen und auf Nachrichten anderer Agenten antworten.
+In diesem Muster repräsentiert jeder Agent einen Nutzer im Gruppenchat, und Nachrichten werden über ein Nachrichtenprotokoll zwischen den Agenten ausgetauscht. Die Agenten können Nachrichten an den Gruppenchat senden, Nachrichten vom Gruppenchat empfangen und auf Nachrichten anderer Agenten antworten.
 
-Dieses Muster kann mit einer zentralisierten Architektur implementiert werden, bei der alle Nachrichten über einen zentralen Server geleitet werden, oder mit einer dezentralisierten Architektur, bei der Nachrichten direkt ausgetauscht werden.
+Dieses Muster kann mit einer zentralisierten Architektur implementiert werden, bei der alle Nachrichten über einen zentralen Server geleitet werden, oder dezentral, bei dem Nachrichten direkt ausgetauscht werden.
 
-![Gruppenchat](../../../translated_images/de/multi-agent-group-chat.ec10f4cde556babd.webp)
+![Group chat](../../../translated_images/de/multi-agent-group-chat.ec10f4cde556babd.webp)
 
-### Übergabe
+### Weitergabe
 
-Dieses Muster ist nützlich, wenn Sie eine Anwendung erstellen möchten, in der mehrere Agenten Aufgaben aneinander übergeben können.
+Dieses Muster ist nützlich, wenn Sie eine Anwendung erstellen wollen, in der mehrere Agenten Aufgaben aneinander weitergeben können.
 
-Typische Anwendungsfälle für dieses Muster sind Kundensupport, Aufgabenmanagement und Workflow-Automatisierung.
+Typische Anwendungsfälle sind Kundenservice, Aufgabenverwaltung und Workflow-Automatisierung.
 
 In diesem Muster repräsentiert jeder Agent eine Aufgabe oder einen Schritt in einem Workflow, und Agenten können Aufgaben basierend auf vordefinierten Regeln an andere Agenten übergeben.
 
-![Übergabe](../../../translated_images/de/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
+![Hand off](../../../translated_images/de/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
-### Kollaboratives Filtern
+### Kollaborative Filterung
 
-Dieses Muster ist nützlich, wenn Sie eine Anwendung erstellen möchten, in der mehrere Agenten zusammenarbeiten, um Nutzern Empfehlungen zu geben.
+Dieses Muster ist nützlich, wenn Sie eine Anwendung erstellen wollen, in der mehrere Agenten zusammenarbeiten, um Nutzern Empfehlungen zu geben.
 
-Warum sollten mehrere Agenten zusammenarbeiten? Weil jeder Agent über unterschiedliche Fachkenntnisse verfügen kann und auf unterschiedliche Weise zum Empfehlungsprozess beitragen kann.
+Der Grund für die Zusammenarbeit mehrerer Agenten ist, dass jeder Agent unterschiedliche Expertise besitzt und den Empfehlungsprozess auf verschiedene Weise bereichern kann.
 
-Nehmen wir ein Beispiel, bei dem ein Nutzer eine Empfehlung für die beste Aktie auf dem Aktienmarkt möchte.
+Nehmen wir das Beispiel, dass ein Nutzer eine Empfehlung für die beste Aktie für den Aktienmarkt möchte.
 
-- **Branchenexperte**: Ein Agent könnte ein Experte für eine bestimmte Branche sein.
-- **Technische Analyse**: Ein anderer Agent könnte ein Experte für technische Analysen sein.
-- **Fundamentalanalyse**: Und ein weiterer Agent könnte ein Experte für Fundamentalanalysen sein. Durch die Zusammenarbeit können diese Agenten dem Nutzer eine umfassendere Empfehlung geben.
+- **Branchenexperte**: Ein Agent könnte Experte in einer bestimmten Branche sein.
+- **Technische Analyse**: Ein weiterer Agent könnte Experte in technischer Analyse sein.
+- **Fundamentalanalyse**: Und ein anderer Agent könnte Experte in Fundamentalanalyse sein. Durch Zusammenarbeit können diese Agenten eine umfassendere Empfehlung für den Nutzer bereitstellen.
 
-![Empfehlung](../../../translated_images/de/multi-agent-filtering.d959cb129dc9f608.webp)
+![Recommendation](../../../translated_images/de/multi-agent-filtering.d959cb129dc9f608.webp)
 
 ## Szenario: Rückerstattungsprozess
 
-Betrachten wir ein Szenario, in dem ein Kunde versucht, eine Rückerstattung für ein Produkt zu erhalten. Es könnten mehrere Agenten an diesem Prozess beteiligt sein, aber lassen Sie uns zwischen agentenspezifischen Prozessen und allgemeinen Agenten unterscheiden, die auch in anderen Prozessen verwendet werden können.
+Betrachten Sie ein Szenario, in dem ein Kunde eine Rückerstattung für ein Produkt beantragt. Dabei können mehrere Agenten involviert sein, aber wir teilen sie auf in spezifische Agenten für diesen Prozess und allgemeine Agenten, die auch in anderen Prozessen verwendet werden können.
 
-**Agenten, die spezifisch für den Rückerstattungsprozess sind**:
+**Agenten spezifisch für den Rückerstattungsprozess**:
 
-Folgende Agenten könnten am Rückerstattungsprozess beteiligt sein:
+Folgende Agenten könnten im Rückerstattungsprozess beteiligt sein:
 
-- **Kundenagent**: Dieser Agent repräsentiert den Kunden und ist für die Einleitung des Rückerstattungsprozesses verantwortlich.
-- **Verkäuferagent**: Dieser Agent repräsentiert den Verkäufer und ist für die Bearbeitung der Rückerstattung verantwortlich.
-- **Zahlungsagent**: Dieser Agent repräsentiert den Zahlungsprozess und ist für die Rückerstattung der Zahlung des Kunden verantwortlich.
-- **Lösungsagent**: Dieser Agent repräsentiert den Lösungsprozess und ist für die Lösung von Problemen verantwortlich, die während des Rückerstattungsprozesses auftreten.
-- **Compliance-Agent**: Dieser Agent repräsentiert den Compliance-Prozess und ist dafür verantwortlich, sicherzustellen, dass der Rückerstattungsprozess den Vorschriften und Richtlinien entspricht.
+- **Kundenagent**: Dieser Agent repräsentiert den Kunden und ist verantwortlich für die Einleitung des Rückerstattungsprozesses.
+- **Verkäuferagent**: Dieser Agent repräsentiert den Verkäufer und ist verantwortlich für die Abwicklung der Rückerstattung.
+- **Zahlungsagent**: Dieser Agent repräsentiert den Zahlungsprozess und ist verantwortlich für die Rückzahlung des Kunden.
+- **Lösungsagent**: Dieser Agent steht für den Lösungsprozess und ist verantwortlich für die Behebung von Problemen während des Rückerstattungsprozesses.
+- **Compliance-Agent**: Dieser Agent stellt sicher, dass der Rückerstattungsprozess den Vorschriften und Richtlinien entspricht.
 
 **Allgemeine Agenten**:
 
 Diese Agenten können in anderen Teilen Ihres Unternehmens verwendet werden.
 
-- **Versandagent**: Dieser Agent repräsentiert den Versandprozess und ist für den Rückversand des Produkts an den Verkäufer verantwortlich. Dieser Agent kann sowohl für den Rückerstattungsprozess als auch für den allgemeinen Versand eines Produkts bei einem Kauf verwendet werden.
-- **Feedback-Agent**: Dieser Agent repräsentiert den Feedback-Prozess und ist für das Sammeln von Kundenfeedback verantwortlich. Feedback kann jederzeit eingeholt werden, nicht nur während des Rückerstattungsprozesses.
-- **Eskalationsagent**: Dieser Agent repräsentiert den Eskalationsprozess und ist für die Eskalation von Problemen auf eine höhere Supportebene verantwortlich. Dieser Agent kann in jedem Prozess verwendet werden, in dem Probleme eskaliert werden müssen.
-- **Benachrichtigungsagent**: Dieser Agent repräsentiert den Benachrichtigungsprozess und ist für das Senden von Benachrichtigungen an den Kunden in verschiedenen Phasen des Rückerstattungsprozesses verantwortlich.
-- **Analyseagent**: Dieser Agent repräsentiert den Analyseprozess und ist für die Analyse von Daten im Zusammenhang mit dem Rückerstattungsprozess verantwortlich.
-- **Audit-Agent**: Dieser Agent repräsentiert den Audit-Prozess und ist dafür verantwortlich, den Rückerstattungsprozess zu überprüfen, um sicherzustellen, dass er korrekt durchgeführt wird.
-- **Berichtsagent**: Dieser Agent repräsentiert den Berichtsprozess und ist für die Erstellung von Berichten über den Rückerstattungsprozess verantwortlich.
-- **Wissensagent**: Dieser Agent repräsentiert den Wissensprozess und ist für die Pflege einer Wissensdatenbank mit Informationen zum Rückerstattungsprozess verantwortlich. Dieser Agent könnte sowohl über Rückerstattungen als auch über andere Teile Ihres Unternehmens informiert sein.
-- **Sicherheitsagent**: Dieser Agent repräsentiert den Sicherheitsprozess und ist dafür verantwortlich, die Sicherheit des Rückerstattungsprozesses zu gewährleisten.
-- **Qualitätsagent**: Dieser Agent repräsentiert den Qualitätsprozess und ist dafür verantwortlich, die Qualität des Rückerstattungsprozesses sicherzustellen.
+- **Versandagent**: Dieser Agent repräsentiert den Versandprozess und ist verantwortlich für den Rückversand des Produkts an den Verkäufer. Dieser Agent kann sowohl im Rückerstattungsprozess als auch beim allgemeinen Versand eines Produkts, etwa nach einem Kauf, eingesetzt werden.
+- **Feedback-Agent**: Dieser Agent kümmert sich um das Sammeln von Rückmeldungen vom Kunden. Feedback kann jederzeit erfolgen, nicht nur während des Rückerstattungsprozesses.
+- **Escalation-Agent**: Dieser Agent ist zuständig für die Eskalation von Problemen an eine höhere Supportebene. Diesen Agenten können Sie für jeden Prozess verwenden, bei dem eine Eskalation erforderlich ist.
+- **Benachrichtigungsagent**: Dieser Agent ist für die Benachrichtigung des Kunden in verschiedenen Phasen des Rückerstattungsprozesses zuständig.
+- **Analyse-Agent**: Dieser Agent analysiert Daten im Zusammenhang mit dem Rückerstattungsprozess.
+- **Audit-Agent**: Dieser Agent überprüft den Rückerstattungsprozess, um dessen korrekte Durchführung sicherzustellen.
+- **Reporting-Agent**: Dieser Agent erstellt Berichte zum Rückerstattungsprozess.
+- **Wissensagent**: Dieser Agent verwaltet eine Wissensdatenbank mit Informationen zum Rückerstattungsprozess. Dieser Agent könnte sowohl hinsichtlich Rückerstattungen als auch anderer Geschäftsteile kundig sein.
+- **Sicherheitsagent**: Dieser Agent sorgt für die Sicherheit im Rückerstattungsprozess.
+- **Qualitätsagent**: Dieser Agent stellt die Qualität des Rückerstattungsprozesses sicher.
 
-Es gibt eine Vielzahl von Agenten, die sowohl für den spezifischen Rückerstattungsprozess als auch für allgemeine Geschäftsprozesse verwendet werden können. Hoffentlich gibt Ihnen dies eine Vorstellung davon, wie Sie entscheiden können, welche Agenten in Ihrem Multi-Agenten-System verwendet werden sollen.
+Es wurden vorher ziemlich viele Agenten genannt, sowohl für den spezifischen Rückerstattungsprozess als auch für allgemeine Agenten, die in anderen Unternehmensbereichen eingesetzt werden können. Hoffentlich gibt Ihnen das eine Vorstellung davon, wie Sie entscheiden können, welche Agenten Sie in Ihrem Multi-Agenten-System verwenden.
 
 ## Aufgabe
-Entwerfen Sie ein Multi-Agenten-System für einen Kundensupport-Prozess. Identifizieren Sie die beteiligten Agenten, ihre Rollen und Verantwortlichkeiten sowie ihre Interaktionen miteinander. Berücksichtigen Sie sowohl agentenspezifische Aufgaben für den Kundensupport-Prozess als auch allgemeine Agenten, die in anderen Bereichen Ihres Unternehmens eingesetzt werden können.
 
-> Denken Sie darüber nach, bevor Sie die folgende Lösung lesen – möglicherweise benötigen Sie mehr Agenten, als Sie denken.
+Entwerfen Sie ein Multi-Agenten-System für einen Kundenserviceprozess. Identifizieren Sie die im Prozess beteiligten Agenten, deren Rollen und Verantwortlichkeiten sowie ihre Interaktionen untereinander. Berücksichtigen Sie sowohl Agenten, die spezifisch für den Kundenserviceprozess sind, als auch allgemeine Agenten, die in anderen Teilen Ihres Unternehmens verwendet werden können.
+> Denken Sie nach, bevor Sie die folgende Lösung lesen, Sie benötigen möglicherweise mehr Agenten, als Sie denken.
 
-> TIP: Denken Sie an die verschiedenen Phasen des Kundensupport-Prozesses und berücksichtigen Sie auch Agenten, die für jedes System erforderlich sind.
+> TIPP: Denken Sie an die verschiedenen Phasen des Kundenserviceprozesses und berücksichtigen Sie auch die für jedes System benötigten Agenten.
 
 ## Lösung
 
 [Lösung](./solution/solution.md)
 
-## Wissensüberprüfung
+## Wissensüberprüfungen
 
-Frage: Wann sollten Sie den Einsatz von Multi-Agenten in Betracht ziehen?
+Frage: Wann sollten Sie die Verwendung von Multi-Agenten in Betracht ziehen?
 
-- [ ] A1: Wenn Sie eine geringe Arbeitslast und eine einfache Aufgabe haben.
-- [ ] A2: Wenn Sie eine hohe Arbeitslast haben.
+- [ ] A1: Wenn Sie eine geringe Arbeitsbelastung und eine einfache Aufgabe haben.
+- [ ] A2: Wenn Sie eine hohe Arbeitsbelastung haben.
 - [ ] A3: Wenn Sie eine einfache Aufgabe haben.
 
-[Quiz zur Lösung](./solution/solution-quiz.md)
+[Lösung Quiz](./solution/solution-quiz.md)
 
 ## Zusammenfassung
 
-In dieser Lektion haben wir das Multi-Agenten-Designmuster betrachtet, einschließlich der Szenarien, in denen Multi-Agenten anwendbar sind, der Vorteile von Multi-Agenten gegenüber einem einzelnen Agenten, der Bausteine zur Implementierung des Multi-Agenten-Designmusters und wie man Einblick in die Interaktionen zwischen den verschiedenen Agenten erhält.
+In dieser Lektion haben wir uns das Multi-Agent Designmuster angesehen, einschließlich der Szenarien, in denen Multi-Agenten anwendbar sind, der Vorteile der Verwendung von Multi-Agenten gegenüber einem einzelnen Agenten, den Bausteinen zur Implementierung des Multi-Agent Designmusters und wie man die Sichtbarkeit darüber erhält, wie die mehreren Agenten miteinander interagieren.
 
-### Haben Sie weitere Fragen zum Multi-Agenten-Designmuster?
+### Haben Sie weitere Fragen zum Multi-Agent Designmuster?
 
-Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, an Sprechstunden teilzunehmen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
+Treten Sie dem [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, an Sprechstunden teilzunehmen und Ihre Fragen zu AI Agents beantwortet zu bekommen.
 
 ## Zusätzliche Ressourcen
 
-- ## Vorherige Lektion
+- <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html" target="_blank">AutoGen Designmuster</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentic Designmuster</a>
+
+
+## Vorherige Lektion
 
 [Planungsdesign](../07-planning-design/README.md)
 
 ## Nächste Lektion
 
-[Metakognition bei KI-Agenten](../09-metacognition/README.md)
+[Metakognition in AI Agents](../09-metacognition/README.md)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die durch die Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, bitten wir zu beachten, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in der jeweiligen Ausgangssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die durch die Nutzung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

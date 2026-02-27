@@ -2,41 +2,41 @@
 
 > _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 
-# Vertrauenswürdige KI-Agenten entwickeln
+# Vertrauenswürdige KI-Agenten bauen
 
 ## Einführung
 
-In dieser Lektion behandeln wir:
+Diese Lektion behandelt:
 
-- Wie man sichere und effektive KI-Agenten entwickelt und bereitstellt.
-- Wichtige Sicherheitsaspekte bei der Entwicklung von KI-Agenten.
-- Wie man Daten- und Benutzerprivatsphäre bei der Entwicklung von KI-Agenten wahrt.
+- Wie man sichere und effektive KI-Agenten erstellt und einsetzt
+- Wichtige Sicherheitsüberlegungen bei der Entwicklung von KI-Agenten
+- Wie man Datenschutz und Benutzerprivatsphäre bei der Entwicklung von KI-Agenten wahrt
 
 ## Lernziele
 
-Nach Abschluss dieser Lektion werden Sie wissen, wie man:
+Nach Abschluss dieser Lektion wissen Sie, wie Sie:
 
-- Risiken bei der Erstellung von KI-Agenten identifiziert und minimiert.
-- Sicherheitsmaßnahmen implementiert, um sicherzustellen, dass Daten und Zugriffe ordnungsgemäß verwaltet werden.
-- KI-Agenten erstellt, die die Datenprivatsphäre wahren und eine hochwertige Benutzererfahrung bieten.
+- Risiken bei der Erstellung von KI-Agenten erkennen und mindern
+- Sicherheitsmaßnahmen implementieren, um sicherzustellen, dass Daten und Zugriffe richtig verwaltet werden
+- KI-Agenten erstellen, die Datenschutz gewährleisten und eine hochwertige Benutzererfahrung bieten
 
 ## Sicherheit
 
-Schauen wir uns zunächst an, wie man sichere agentenbasierte Anwendungen entwickelt. Sicherheit bedeutet, dass der KI-Agent wie vorgesehen funktioniert. Als Entwickler agentenbasierter Anwendungen haben wir Methoden und Werkzeuge, um die Sicherheit zu maximieren:
+Schauen wir uns zunächst den Aufbau sicherer agentischer Anwendungen an. Sicherheit bedeutet, dass der KI-Agent so funktioniert, wie er entworfen wurde. Als Entwickler agentischer Anwendungen verfügen wir über Methoden und Werkzeuge, um die Sicherheit zu maximieren:
 
 ### Aufbau eines Systemnachrichten-Frameworks
 
-Wenn Sie jemals eine KI-Anwendung mit großen Sprachmodellen (LLMs) entwickelt haben, wissen Sie, wie wichtig es ist, eine robuste Systemaufforderung oder Systemnachricht zu entwerfen. Diese Aufforderungen legen die Meta-Regeln, Anweisungen und Richtlinien fest, wie das LLM mit dem Benutzer und den Daten interagieren soll.
+Wenn Sie schon einmal eine KI-Anwendung mit Large Language Models (LLMs) gebaut haben, kennen Sie die Wichtigkeit, einen robusten Systemprompt oder eine Systemnachricht zu gestalten. Diese Prompts legen die Meta-Regeln, Anweisungen und Leitlinien fest, wie das LLM mit dem Nutzer und den Daten interagiert.
 
-Für KI-Agenten ist die Systemaufforderung noch wichtiger, da die KI-Agenten hochspezifische Anweisungen benötigen, um die Aufgaben zu erfüllen, die wir für sie entworfen haben.
+Für KI-Agenten ist der Systemprompt noch wichtiger, da die KI-Agenten hochspezifische Anweisungen benötigen, um die Aufgaben zu erfüllen, die wir für sie entworfen haben.
 
-Um skalierbare Systemaufforderungen zu erstellen, können wir ein Systemnachrichten-Framework verwenden, um einen oder mehrere Agenten in unserer Anwendung zu entwickeln:
+Um skalierbare Systemprompts zu erzeugen, können wir ein Systemnachrichten-Framework verwenden, um einen oder mehrere Agenten in unserer Anwendung zu erstellen:
 
 ![Aufbau eines Systemnachrichten-Frameworks](../../../translated_images/de/system-message-framework.3a97368c92d11d68.webp)
 
 #### Schritt 1: Erstellen einer Meta-Systemnachricht
 
-Die Meta-Aufforderung wird von einem LLM verwendet, um die Systemaufforderungen für die Agenten zu generieren, die wir erstellen. Wir entwerfen sie als Vorlage, damit wir bei Bedarf effizient mehrere Agenten erstellen können.
+Der Meta-Prompt wird von einem LLM verwendet, um die Systemprompts für die Agenten zu generieren, die wir erstellen. Wir gestalten ihn als Vorlage, damit wir bei Bedarf effizient mehrere Agenten erstellen können.
 
 Hier ist ein Beispiel für eine Meta-Systemnachricht, die wir dem LLM geben würden:
 
@@ -47,9 +47,9 @@ information that you will use to provide a system prompt for.
 To create the system prompt, be descriptive as possible and provide a structure that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
 ```
 
-#### Schritt 2: Erstellen einer grundlegenden Aufforderung
+#### Schritt 2: Erstellen eines Basis-Prompts
 
-Der nächste Schritt besteht darin, eine grundlegende Aufforderung zu erstellen, um den KI-Agenten zu beschreiben. Sie sollten die Rolle des Agenten, die Aufgaben, die der Agent erledigen soll, und alle weiteren Verantwortlichkeiten des Agenten einbeziehen.
+Der nächste Schritt ist das Erstellen eines Basis-Prompts, das den KI-Agenten beschreibt. Sie sollten die Rolle des Agenten, die Aufgaben, die er erledigen wird, und alle weiteren Verantwortlichkeiten des Agenten einschließen.
 
 Hier ist ein Beispiel:
 
@@ -57,11 +57,11 @@ Hier ist ein Beispiel:
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### Schritt 3: Bereitstellen der grundlegenden Systemnachricht für das LLM
+#### Schritt 3: Bereitstellen der Basis-Systemnachricht an das LLM
 
-Nun können wir diese Systemnachricht optimieren, indem wir die Meta-Systemnachricht als Systemnachricht und unsere grundlegende Systemnachricht bereitstellen.
+Nun können wir diese Systemnachricht optimieren, indem wir die Meta-Systemnachricht als Systemnachricht und unsere Basis-Systemnachricht bereitstellen.
 
-Dies wird eine Systemnachricht erzeugen, die besser darauf ausgelegt ist, unsere KI-Agenten zu leiten:
+Das erzeugt eine Systemnachricht, die besser gestaltet ist, um unsere KI-Agenten zu leiten:
 
 ```markdown
 **Company Name:** Contoso Travel  
@@ -115,86 +115,86 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 #### Schritt 4: Iterieren und Verbessern
 
-Der Wert dieses Systemnachrichten-Frameworks liegt darin, die Erstellung von Systemnachrichten für mehrere Agenten zu erleichtern und Ihre Systemnachrichten im Laufe der Zeit zu verbessern. Es ist selten, dass eine Systemnachricht beim ersten Mal für Ihren vollständigen Anwendungsfall funktioniert. Kleine Anpassungen und Verbesserungen vorzunehmen, indem Sie die grundlegende Systemnachricht ändern und sie durch das System laufen lassen, ermöglicht es Ihnen, Ergebnisse zu vergleichen und zu bewerten.
+Der Wert dieses Systemnachrichten-Frameworks besteht darin, die Erstellung von Systemnachrichten mehrerer Agenten leichter skalieren und Ihre Systemnachrichten im Laufe der Zeit verbessern zu können. Es ist selten, dass eine Systemnachricht beim ersten Mal für Ihren kompletten Anwendungsfall funktioniert. Kleine Anpassungen und Verbesserungen durch Änderung der Basis-Systemnachricht und deren Durchlauf durch das System ermöglichen es Ihnen, Ergebnisse zu vergleichen und zu bewerten.
 
 ## Bedrohungen verstehen
 
-Um vertrauenswürdige KI-Agenten zu entwickeln, ist es wichtig, die Risiken und Bedrohungen für Ihren KI-Agenten zu verstehen und zu minimieren. Schauen wir uns einige der verschiedenen Bedrohungen für KI-Agenten an und wie Sie besser planen und sich darauf vorbereiten können.
+Um vertrauenswürdige KI-Agenten zu bauen, ist es wichtig, die Risiken und Bedrohungen für Ihren KI-Agenten zu verstehen und zu mindern. Schauen wir uns einige der verschiedenen Bedrohungen für KI-Agenten an und wie Sie sich besser darauf vorbereiten können.
 
 ![Bedrohungen verstehen](../../../translated_images/de/understanding-threats.89edeada8a97fc0f.webp)
 
 ### Aufgaben und Anweisungen
 
-**Beschreibung:** Angreifer versuchen, die Anweisungen oder Ziele des KI-Agenten durch Eingabeaufforderungen oder Manipulationen zu ändern.
+**Beschreibung:** Angreifer versuchen, die Anweisungen oder Ziele des KI-Agenten durch Prompt-Manipulation oder Eingabemanipulation zu ändern.
 
-**Minderung:** Führen Sie Validierungsprüfungen und Eingabefilter durch, um potenziell gefährliche Eingabeaufforderungen zu erkennen, bevor sie vom KI-Agenten verarbeitet werden. Da diese Angriffe in der Regel häufige Interaktionen mit dem Agenten erfordern, ist die Begrenzung der Anzahl von Gesprächsrunden eine weitere Möglichkeit, diese Angriffe zu verhindern.
+**Minderung:** Führen Sie Validierungsprüfungen und Eingabefilter durch, um potenziell gefährliche Prompts zu erkennen, bevor sie vom KI-Agenten verarbeitet werden. Da diese Angriffe typischerweise häufige Interaktionen mit dem Agenten erfordern, ist das Begrenzen der Gesprächsrunden eine weitere Möglichkeit, solche Angriffe zu verhindern.
 
-### Zugriff auf kritische Systeme
+### Zugang zu kritischen Systemen
 
-**Beschreibung:** Wenn ein KI-Agent Zugriff auf Systeme und Dienste hat, die sensible Daten speichern, können Angreifer die Kommunikation zwischen dem Agenten und diesen Diensten kompromittieren. Dies können direkte Angriffe oder indirekte Versuche sein, Informationen über diese Systeme durch den Agenten zu erlangen.
+**Beschreibung:** Wenn ein KI-Agent Zugriff auf Systeme und Dienste hat, die sensible Daten speichern, können Angreifer die Kommunikation zwischen dem Agenten und diesen Diensten kompromittieren. Dies können direkte Angriffe oder indirekte Versuche sein, Informationen über diese Systeme durch den Agenten zu erhalten.
 
-**Minderung:** KI-Agenten sollten nur bei Bedarf Zugriff auf Systeme haben, um diese Art von Angriffen zu verhindern. Die Kommunikation zwischen dem Agenten und dem System sollte ebenfalls sicher sein. Die Implementierung von Authentifizierung und Zugriffskontrolle ist eine weitere Möglichkeit, diese Informationen zu schützen.
+**Minderung:** KI-Agenten sollten nur bedarfsweise Zugriff auf Systeme haben, um diese Angriffsarten zu verhindern. Die Kommunikation zwischen Agent und System sollte zudem gesichert sein. Implementierung von Authentifizierung und Zugriffskontrolle ist eine weitere Möglichkeit, diese Informationen zu schützen.
 
 ### Überlastung von Ressourcen und Diensten
 
-**Beschreibung:** KI-Agenten können auf verschiedene Tools und Dienste zugreifen, um Aufgaben zu erledigen. Angreifer können diese Fähigkeit nutzen, um diese Dienste anzugreifen, indem sie eine hohe Anzahl von Anfragen über den KI-Agenten senden, was zu Systemausfällen oder hohen Kosten führen kann.
+**Beschreibung:** KI-Agenten können verschiedene Werkzeuge und Dienste nutzen, um Aufgaben zu erledigen. Angreifer können diese Fähigkeit ausnutzen, um diese Dienste durch eine hohe Anzahl von Anfragen über den KI-Agenten anzugreifen, was zu Systemausfällen oder hohen Kosten führen kann.
 
-**Minderung:** Implementieren Sie Richtlinien, um die Anzahl der Anfragen zu begrenzen, die ein KI-Agent an einen Dienst senden kann. Die Begrenzung der Anzahl von Gesprächsrunden und Anfragen an Ihren KI-Agenten ist eine weitere Möglichkeit, diese Angriffe zu verhindern.
+**Minderung:** Implementieren Sie Richtlinien, die die Anzahl der Anfragen begrenzen, die ein KI-Agent an einen Dienst senden kann. Die Begrenzung der Gesprächsrunden und der Anfragen an Ihren KI-Agenten ist eine weitere Möglichkeit, solche Angriffe zu verhindern.
 
 ### Vergiftung der Wissensbasis
 
-**Beschreibung:** Diese Art von Angriff zielt nicht direkt auf den KI-Agenten ab, sondern auf die Wissensbasis und andere Dienste, die der KI-Agent nutzen wird. Dies könnte die Korruption der Daten oder Informationen beinhalten, die der KI-Agent zur Erfüllung einer Aufgabe verwenden wird, was zu voreingenommenen oder unbeabsichtigten Antworten an den Benutzer führen kann.
+**Beschreibung:** Diese Art von Angriff richtet sich nicht direkt gegen den KI-Agenten, sondern gegen die Wissensbasis und andere Dienste, die der KI-Agent nutzt. Dies könnte die Korruption der Daten oder Informationen sein, die der KI-Agent verwendet, um eine Aufgabe zu erfüllen, was zu voreingenommenen oder unbeabsichtigten Antworten an den Nutzer führt.
 
-**Minderung:** Führen Sie regelmäßige Überprüfungen der Daten durch, die der KI-Agent in seinen Arbeitsabläufen verwenden wird. Stellen Sie sicher, dass der Zugriff auf diese Daten sicher ist und nur von vertrauenswürdigen Personen geändert wird, um diese Art von Angriff zu vermeiden.
+**Minderung:** Führen Sie regelmäßige Überprüfungen der Daten durch, die der KI-Agent in seinen Workflows verwendet. Stellen Sie sicher, dass der Zugang zu diesen Daten sicher ist und nur von vertrauenswürdigen Personen geändert wird, um diese Art von Angriff zu vermeiden.
 
 ### Kaskadierende Fehler
 
-**Beschreibung:** KI-Agenten greifen auf verschiedene Tools und Dienste zu, um Aufgaben zu erledigen. Fehler, die durch Angreifer verursacht werden, können zu Ausfällen anderer Systeme führen, mit denen der KI-Agent verbunden ist, wodurch der Angriff weiter verbreitet wird und schwerer zu beheben ist.
+**Beschreibung:** KI-Agenten greifen auf verschiedene Werkzeuge und Dienste zu, um Aufgaben zu erledigen. Fehler, die durch Angreifer verursacht werden, können zu Ausfällen anderer Systeme führen, die mit dem KI-Agenten verbunden sind, wodurch der Angriff sich weiter ausbreitet und schwerer zu beheben ist.
 
-**Minderung:** Eine Methode, dies zu vermeiden, besteht darin, den KI-Agenten in einer begrenzten Umgebung arbeiten zu lassen, z. B. indem Aufgaben in einem Docker-Container ausgeführt werden, um direkte Systemangriffe zu verhindern. Das Erstellen von Rückfallmechanismen und Wiederholungslogik, wenn bestimmte Systeme mit einem Fehler antworten, ist eine weitere Möglichkeit, größere Systemausfälle zu verhindern.
+**Minderung:** Eine Methode, dies zu vermeiden, ist, den KI-Agenten in einer begrenzten Umgebung arbeiten zu lassen, wie z. B. in einem Docker-Container, um direkte Systemangriffe zu verhindern. Das Erstellen von Fallback-Mechanismen und Wiederholungslogik, wenn bestimmte Systeme mit einem Fehler antworten, ist eine weitere Möglichkeit, größere Systemausfälle zu verhindern.
 
-## Mensch-in-der-Schleife
+## Mensch im Kreislauf
 
-Eine weitere effektive Methode, um vertrauenswürdige KI-Agentensysteme zu entwickeln, ist die Verwendung eines Mensch-in-der-Schleife-Ansatzes. Dies schafft einen Ablauf, bei dem Benutzer während der Ausführung Feedback an die Agenten geben können. Benutzer fungieren im Wesentlichen als Agenten in einem Multi-Agenten-System, indem sie den laufenden Prozess genehmigen oder beenden.
+Ein weiterer effektiver Weg, vertrauenswürdige KI-Agentensysteme zu bauen, ist die Verwendung eines Mensch-im-Kreislauf. Dies schafft einen Ablauf, bei dem Nutzer während der Ausführung Feedback an die Agenten geben können. Nutzer agieren im Wesentlichen als Agenten in einem Multi-Agenten-System und geben Genehmigungen oder beenden den laufenden Prozess.
 
-![Mensch in der Schleife](../../../translated_images/de/human-in-the-loop.5f0068a678f62f4f.webp)
+![Mensch im Kreislauf](../../../translated_images/de/human-in-the-loop.5f0068a678f62f4f.webp)
 
-Hier ist ein Codebeispiel mit AutoGen, das zeigt, wie dieses Konzept implementiert wird:
+Hier ist ein Code-Snippet, das mit AutoGen zeigt, wie dieses Konzept implementiert wird:
 
 ```python
 
-# Create the agents.
+# Erstellen Sie die Agenten.
 model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
 assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Verwenden Sie input(), um Benutzereingaben von der Konsole zu erhalten.
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
+# Erstellen Sie die Abbruchbedingung, die das Gespräch beendet, wenn der Benutzer "APPROVE" sagt.
 termination = TextMentionTermination("APPROVE")
 
-# Create the team.
+# Erstellen Sie das Team.
 team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
 
-# Run the conversation and stream to the console.
+# Führen Sie das Gespräch aus und streamen Sie es in die Konsole.
 stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
+# Verwenden Sie asyncio.run(...), wenn Sie es in einem Skript ausführen.
 await Console(stream)
 
 ```
 
 ## Fazit
 
-Vertrauenswürdige KI-Agenten zu entwickeln, erfordert sorgfältiges Design, robuste Sicherheitsmaßnahmen und kontinuierliche Iteration. Durch die Implementierung strukturierter Meta-Aufforderungssysteme, das Verständnis potenzieller Bedrohungen und die Anwendung von Minderungsstrategien können Entwickler KI-Agenten erstellen, die sowohl sicher als auch effektiv sind. Darüber hinaus stellt die Einbindung eines Mensch-in-der-Schleife-Ansatzes sicher, dass KI-Agenten mit den Bedürfnissen der Benutzer übereinstimmen und gleichzeitig Risiken minimiert werden. Da sich KI weiterentwickelt, wird es entscheidend sein, eine proaktive Haltung in Bezug auf Sicherheit, Datenschutz und ethische Überlegungen einzunehmen, um Vertrauen und Zuverlässigkeit in KI-gesteuerten Systemen zu fördern.
+Der Aufbau vertrauenswürdiger KI-Agenten erfordert sorgfältiges Design, robuste Sicherheitsmaßnahmen und kontinuierliche Iteration. Durch die Implementierung strukturierter Meta-Prompting-Systeme, das Verständnis potenzieller Bedrohungen und das Anwenden von Minderungsstrategien können Entwickler KI-Agenten schaffen, die sowohl sicher als auch effektiv sind. Zusätzlich stellt die Einbindung eines Mensch-im-Kreislauf-Ansatzes sicher, dass KI-Agenten auf die Bedürfnisse der Nutzer abgestimmt bleiben und Risiken minimiert werden. Da KI sich weiterentwickelt, wird eine proaktive Haltung zu Sicherheit, Privatsphäre und ethischen Überlegungen entscheidend sein, um Vertrauen und Zuverlässigkeit in KI-gesteuerte Systeme zu fördern.
 
-### Haben Sie weitere Fragen zur Entwicklung vertrauenswürdiger KI-Agenten?
+### Haben Sie weitere Fragen zum Aufbau vertrauenswürdiger KI-Agenten?
 
-Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei, um sich mit anderen Lernenden auszutauschen, Sprechstunden zu besuchen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
+Treten Sie dem [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) bei, um sich mit anderen Lernenden zu treffen, an Office Hours teilzunehmen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
 
 ## Zusätzliche Ressourcen
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Verantwortungsvoller Umgang mit KI – Übersicht</a>
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Bewertung generativer KI-Modelle und KI-Anwendungen</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Überblick über verantwortungsvolle KI</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Bewertung von generativen KI-Modellen und KI-Anwendungen</a>
 - <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Sicherheits-Systemnachrichten</a>
-- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Risikobewertungs-Vorlage</a>
+- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Vorlage für Risikoabschätzung</a>
 
 ## Vorherige Lektion
 
@@ -206,5 +206,7 @@ Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei,
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir auf Genauigkeit achten, können automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die durch die Nutzung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

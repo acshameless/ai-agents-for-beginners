@@ -1,6 +1,6 @@
 # Explorarea Microsoft Agent Framework
 
-![Agent Framework](../../../translated_images/ro/lesson-14-thumbnail.90df0065b9d234ee.webp)
+![Framework pentru agenți](../../../translated_images/ro/lesson-14-thumbnail.90df0065b9d234ee.webp)
 
 ### Introducere
 
@@ -12,65 +12,65 @@ Această lecție va acoperi:
 
 ## Obiective de învățare
 
-După finalizarea acestei lecții, vei ști cum să:
+După parcurgerea acestei lecții, veți ști cum să:
 
-- Construiești agenți AI gata de producție folosind Microsoft Agent Framework
-- Aplici caracteristicile de bază ale Microsoft Agent Framework la cazurile tale de utilizare agentică
-- Migrezi și integrezi cadrele și instrumentele agentice existente  
+- Dezvoltați agenți AI pregătiți pentru producție folosind Microsoft Agent Framework
+- Aplicați funcționalitățile de bază ale Microsoft Agent Framework la cazurile dvs. de utilizare agentice
+- Migrați și integrați framework-uri și instrumente agentice existente  
 
 ## Exemple de cod 
 
-Exemplele de cod pentru [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) pot fi găsite în acest depozit sub fișierele `xx-python-agent-framework` și `xx-dotnet-agent-framework`.
+Code samples for [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) can be found in this repository under `xx-python-agent-framework` and `xx-dotnet-agent-framework` files.
 
 ## Înțelegerea Microsoft Agent Framework
 
-![Framework Intro](../../../translated_images/ro/framework-intro.077af16617cf130c.webp)
+![Introducere în Framework](../../../translated_images/ro/framework-intro.077af16617cf130c.webp)
 
-[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) se bazează pe experiența și învățăturile din Semantic Kernel și AutoGen. Acesta oferă flexibilitatea de a aborda o varietate largă de cazuri de utilizare agentică întâlnite atât în medii de producție, cât și în cercetare, inclusiv:
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) se bazează pe experiența și învățăturile din Semantic Kernel și AutoGen. Oferă flexibilitatea de a aborda o gamă largă de cazuri de utilizare agentice întâlnite atât în medii de producție, cât și de cercetare, inclusiv:
 
-- **Orchestrare secvențială a agenților** în scenarii unde sunt necesare fluxuri de lucru pas cu pas.
-- **Orchestrare concurentă** în scenarii unde agenții trebuie să finalizeze sarcini simultan.
-- **Orchestrare de chat în grup** în scenarii unde agenții pot colabora împreună la o sarcină.
-- **Orchestrare prin predare** în scenarii unde agenții își predau sarcinile unul altuia pe măsură ce subtascurile sunt finalizate.
-- **Orchestrare magnetică** în scenarii unde un agent manager creează și modifică o listă de sarcini și gestionează coordonarea subagenților pentru a finaliza sarcina.
+- **Orchestrare secvențială a agenților** în scenarii în care sunt necesare fluxuri de lucru pas cu pas.
+- **Orchestrare concurentă** în scenarii în care agenții trebuie să finalizeze sarcini în același timp.
+- **Orchestrare pentru chat de grup** în scenarii în care agenții pot colabora împreună la o singură sarcină.
+- **Orchestrare de predare** în scenarii în care agenții predă sarcina unul altuia pe măsură ce sub-sarcinile sunt finalizate.
+- **Orchestrare magnetică** în scenarii în care un agent manager creează și modifică o listă de sarcini și se ocupă de coordonarea subagenților pentru a finaliza sarcina.
 
-Pentru a livra agenți AI în producție, MAF include și caracteristici pentru:
+Pentru a livra agenți AI în producție, MAF include și funcționalități pentru:
 
-- **Observabilitate** prin utilizarea OpenTelemetry, unde fiecare acțiune a agentului AI, inclusiv invocarea instrumentelor, pașii de orchestrare, fluxurile de raționament și monitorizarea performanței prin tablourile de bord Azure AI Foundry, este urmărită.
-- **Securitate** prin găzduirea agenților nativ pe Azure AI Foundry, care include controale de securitate precum acces bazat pe roluri, gestionarea datelor private și siguranța conținutului încorporată.
-- **Durabilitate** deoarece firele și fluxurile de lucru ale agenților pot fi puse pe pauză, reluate și recuperate din erori, ceea ce permite procese de lungă durată.
-- **Control** prin suport pentru fluxuri de lucru cu implicarea umană, unde sarcinile sunt marcate ca necesitând aprobare umană.
+- **Observabilitate** prin utilizarea OpenTelemetry, unde fiecare acțiune a agentului AI, inclusiv apelul instrumentelor, pașii de orchestrare, fluxurile de raționament și monitorizarea performanței sunt vizibile prin panourile Microsoft Foundry.
+- **Securitate** prin găzduirea agenților nativ pe Microsoft Foundry, care include controale de securitate precum accesul bazat pe roluri, gestionarea datelor private și protecția conținutului încorporată.
+- **Durabilitate** deoarece firele și fluxurile de lucru ale agenților pot fi întrerupte, reluate și recuperate după erori, permițând procese care rulează pe durate mai lungi.
+- **Control** deoarece sunt suportate fluxuri de lucru cu intervenție umană, în care sarcinile sunt marcate ca necesitând aprobare umană.
 
 Microsoft Agent Framework se concentrează, de asemenea, pe interoperabilitate prin:
 
-- **Independență față de cloud** - Agenții pot rula în containere, on-premises și pe mai multe cloud-uri diferite.
-- **Independență față de furnizor** - Agenții pot fi creați prin SDK-ul preferat, inclusiv Azure OpenAI și OpenAI.
-- **Integrarea standardelor deschise** - Agenții pot utiliza protocoale precum Agent-to-Agent (A2A) și Model Context Protocol (MCP) pentru a descoperi și utiliza alți agenți și instrumente.
-- **Plugin-uri și conectori** - Se pot face conexiuni la servicii de date și memorie precum Microsoft Fabric, SharePoint, Pinecone și Qdrant.
+- **Independenți de cloud** - Agenții pot rula în containere, on‑premises și în mai multe cloud-uri diferite.
+- **Agnostici în privința furnizorului** - Agenții pot fi creați prin SDK-ul preferat, inclusiv Azure OpenAI și OpenAI
+- **Integrarea standardelor deschise** - Agenții pot utiliza protocoale precum Agent-to-Agent (A2A) și Model Context Protocol (MCP) pentru a descoperi și folosi alți agenți și instrumente.
+- **Pluginuri și conectori** - Pot fi realizate conexiuni la servicii de date și memorie precum Microsoft Fabric, SharePoint, Pinecone și Qdrant.
 
-Să vedem cum sunt aplicate aceste caracteristici la unele dintre conceptele de bază ale Microsoft Agent Framework.
+Să vedem cum sunt aplicate aceste funcționalități unor dintre conceptele cheie ale Microsoft Agent Framework.
 
 ## Concepte cheie ale Microsoft Agent Framework
 
 ### Agenți
 
-![Agent Framework](../../../translated_images/ro/agent-components.410a06daf87b4fef.webp)
+![Framework pentru agenți](../../../translated_images/ro/agent-components.410a06daf87b4fef.webp)
 
 **Crearea agenților**
 
-Crearea agenților se face prin definirea serviciului de inferență (furnizor LLM), a unui set de instrucțiuni pe care agentul AI trebuie să le urmeze și a unui `nume` atribuit:
+Crearea agenților se realizează prin definirea serviciului de inferență (furnizor LLM), a unui set de instrucțiuni pe care agentul AI trebuie să le urmeze și a unui `name` atribuit:
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-Exemplul de mai sus folosește `Azure OpenAI`, dar agenții pot fi creați utilizând o varietate de servicii, inclusiv `Azure AI Foundry Agent Service`:
+Exemplul de mai sus folosește `Azure OpenAI`, dar agenții pot fi creați folosind o varietate de servicii, inclusiv `Microsoft Foundry Agent Service`:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
 ```
 
-API-urile OpenAI `Responses`, `ChatCompletion`
+OpenAI `Responses`, `ChatCompletion` APIs
 
 ```python
 agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="You are a helpful weather assistant.", )
@@ -80,7 +80,7 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
-sau agenți la distanță folosind protocolul A2A:
+sau agenți de la distanță folosind protocolul A2A:
 
 ```python
 agent = A2AAgent( name=agent_card.name, description=agent_card.description, agent_card=agent_card, url="https://your-a2a-agent-host" )
@@ -88,7 +88,7 @@ agent = A2AAgent( name=agent_card.name, description=agent_card.description, agen
 
 **Rularea agenților**
 
-Agenții sunt rulați folosind metodele `.run` sau `.run_stream` pentru răspunsuri non-streaming sau streaming.
+Agenții sunt rulați folosind metodele `.run` sau `.run_stream` pentru răspunsuri fără streaming sau cu streaming.
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,9 +102,9 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-Fiecare rulare a agentului poate avea opțiuni pentru personalizarea parametrilor, cum ar fi `max_tokens` utilizați de agent, `tools` pe care agentul le poate apela și chiar `modelul` folosit de agent.
+Fiecare execuție a unui agent poate avea, de asemenea, opțiuni pentru a personaliza parametri precum `max_tokens` folosit de agent, `tools` pe care agentul le poate apela și chiar `model` folosit de agent.
 
-Aceasta este utilă în cazurile în care sunt necesare modele sau instrumente specifice pentru a finaliza sarcina utilizatorului.
+Acest lucru este util în cazurile în care sunt necesare modele sau instrumente specifice pentru a finaliza sarcina unui utilizator.
 
 **Instrumente**
 
@@ -114,63 +114,63 @@ Instrumentele pot fi definite atât la definirea agentului:
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# Când se creează un ChatAgent direct
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
 ```
 
-cât și la rularea agentului:
+și de asemenea când se rulează agentul:
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Instrument furnizat doar pentru această rulare )
 ```
 
-**Firele agentului**
+**Fire ale agenților**
 
-Firele agentului sunt utilizate pentru a gestiona conversațiile multi-turn. Firele pot fi create fie prin:
+Firele agenților sunt folosite pentru a gestiona conversații multi-turn. Firele pot fi create fie prin:
 
-- Utilizarea `get_new_thread()`, care permite salvarea firului în timp
-- Crearea automată a unui fir atunci când agentul este rulat, firul existând doar pe durata rulării curente.
+- Utilizarea `get_new_thread()` care permite salvarea firului în timp
+- Crearea automată a unui fir la rularea unui agent, fir care există doar pe durata execuției curente.
 
 Pentru a crea un fir, codul arată astfel:
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Creează un fir de execuție nou.
+thread = agent.get_new_thread() # Rulează agentul folosind firul de execuție.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-Poți apoi să serializezi firul pentru a fi stocat pentru utilizare ulterioară:
+Apoi puteți serializa firul pentru a fi stocat pentru utilizare ulterioară:
 
 ```python
-# Create a new thread. 
+# Creează un fir de execuție nou.
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# Rulează agentul pe fir.
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# Serializează firul pentru stocare.
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# Deserializează starea firului după încărcarea din stocare.
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
-**Middleware-ul agentului**
+**Middleware pentru agenți**
 
-Agenții interacționează cu instrumentele și LLM-urile pentru a finaliza sarcinile utilizatorului. În anumite scenarii, dorim să executăm sau să urmărim acțiuni între aceste interacțiuni. Middleware-ul agentului ne permite să facem acest lucru prin:
+Agenții interacționează cu instrumente și LLM-uri pentru a finaliza sarcinile utilizatorilor. În anumite scenarii, dorim să executăm sau să urmărim interacțiunile dintre acestea. Middleware-ul pentru agenți ne permite să facem acest lucru prin:
 
-*Middleware pentru funcții*
+*Middleware de funcții*
 
-Acest middleware ne permite să executăm o acțiune între agent și o funcție/instrument pe care urmează să îl apeleze. Un exemplu de utilizare ar fi atunci când dorim să facem logarea apelului funcției.
+Acest middleware ne permite să executăm o acțiune între agent și o funcție/instrument pe care îl va apela. Un exemplu de utilizare este când doriți să realizați înregistrări (logging) la apelul funcției.
 
-În codul de mai jos, `next` definește dacă următorul middleware sau funcția propriu-zisă ar trebui să fie apelată.
+În codul de mai jos, `next` definește dacă trebuie apelat următorul middleware sau funcția propriu-zisă.
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +178,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # Pre-procesare: Jurnalizare înainte de executarea funcției
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # Continuă la următorul middleware sau la executarea funcției
     await next(context)
 
-    # Post-processing: Log after function execution
+    # Post-procesare: Jurnalizare după executarea funcției
     print(f"[Function] {context.function.name} completed")
 ```
 
-*Middleware pentru chat*
+*Middleware de chat*
 
-Acest middleware ne permite să executăm sau să logăm o acțiune între agent și cererile dintre LLM.
+Acest middleware ne permite să executăm sau să înregistrăm o acțiune între agent și solicitările către LLM.
 
-Acesta conține informații importante, cum ar fi `messages` care sunt trimise serviciului AI.
+Acesta conține informații importante, cum ar fi `messages` care sunt trimise către serviciul AI.
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +200,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # Preprocesare: Înregistrare înainte de apelul AI
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # Continuați la următorul middleware sau serviciu AI
     await next(context)
 
-    # Post-processing: Log after AI response
+    # Postprocesare: Înregistrare după răspunsul AI
     print("[Chat] AI response received")
 
 ```
 
-**Memoria agentului**
+**Memoria agenților**
 
-Așa cum s-a discutat în lecția `Agentic Memory`, memoria este un element important pentru a permite agentului să opereze în contexte diferite. MAF oferă mai multe tipuri de memorii:
+După cum s-a acoperit în lecția `Agentic Memory`, memoria este un element important pentru a permite agentului să opereze în diferite contexte. MAF oferă mai multe tipuri de memorii:
 
 *Stocare în memorie*
 
-Aceasta este memoria stocată în firele de execuție pe durata rulării aplicației.
+Aceasta este memoria stocată în fire pe durata rulării aplicației.
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Creează un fir nou.
+thread = agent.get_new_thread() # Rulează agentul cu firul.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
 *Mesaje persistente*
 
-Această memorie este utilizată pentru stocarea istoricului conversațiilor între sesiuni diferite. Este definită folosind `chat_message_store_factory`:
+Această memorie este folosită pentru stocarea istoricului conversațiilor între diferite sesiuni. Este definită folosind `chat_message_store_factory` :
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# Creați un depozit personalizat de mesaje
 def create_message_store():
     return ChatMessageStore()
 
@@ -246,12 +246,12 @@ agent = ChatAgent(
 
 *Memorie dinamică*
 
-Această memorie este adăugată contextului înainte ca agenții să fie rulați. Aceste memorii pot fi stocate în servicii externe, cum ar fi mem0:
+Această memorie este adăugată în context înainte ca agenții să fie rulați. Aceste memorii pot fi stocate în servicii externe precum mem0:
 
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# Folosind Mem0 pentru capabilități avansate de memorie
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -266,9 +266,9 @@ agent = ChatAgent(
 
 ```
 
-**Observabilitatea agentului**
+**Observabilitatea agenților**
 
-Observabilitatea este importantă pentru construirea sistemelor agentice fiabile și ușor de întreținut. MAF se integrează cu OpenTelemetry pentru a oferi trasabilitate și măsurători pentru o mai bună observabilitate.
+Observabilitatea este importantă pentru construirea unor sisteme agentice fiabile și ușor de întreținut. MAF se integrează cu OpenTelemetry pentru a oferi trasare și metri pentru o observabilitate mai bună.
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,7 +276,7 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # fă ceva
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
@@ -286,19 +286,19 @@ counter.add(1, {"key": "value"})
 
 MAF oferă fluxuri de lucru care sunt pași predefiniți pentru a finaliza o sarcină și includ agenți AI ca componente în acești pași.
 
-Fluxurile de lucru sunt alcătuite din diferite componente care permit un control mai bun al fluxului. De asemenea, fluxurile de lucru permit **orchestrare multi-agent** și **checkpointing** pentru a salva stările fluxului de lucru.
+Fluxurile de lucru sunt compuse din diferite componente care permit un control mai bun al fluxului. Fluxurile de lucru permit de asemenea **orchestrare multi-agent** și **checkpointing** pentru a salva stările fluxului de lucru.
 
 Componentele de bază ale unui flux de lucru sunt:
 
-**Executori**
+**Executorii**
 
-Executorii primesc mesaje de intrare, își îndeplinesc sarcinile atribuite și apoi produc un mesaj de ieșire. Acest lucru avansează fluxul de lucru spre finalizarea sarcinii mai mari. Executorii pot fi fie agenți AI, fie logică personalizată.
+Executorii primesc mesaje de intrare, își îndeplinesc sarcinile atribuite și apoi produc un mesaj de ieșire. Acest lucru propulsează fluxul de lucru înainte, spre finalizarea sarcinii mai ample. Executorii pot fi fie agenți AI, fie logică personalizată.
 
-**Margini**
+**Conexiuni**
 
-Marginile sunt utilizate pentru a defini fluxul de mesaje într-un flux de lucru. Acestea pot fi:
+Conexiunile sunt folosite pentru a defini fluxul mesajelor într-un flux de lucru. Acestea pot fi:
 
-*Margini directe* - Conexiuni simple unu-la-unu între executori:
+*Conexiuni directe* - Conexiuni simple unu-la-unu între executori:
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,43 +309,43 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*Margini condiționale* - Activate după îndeplinirea unei anumite condiții. De exemplu, când camerele de hotel nu sunt disponibile, un executor poate sugera alte opțiuni.
+*Conexiuni condiționate* - Activate după îndeplinirea unei anumite condiții. De exemplu, când camerele de hotel nu sunt disponibile, un executor poate sugera alte opțiuni.
 
-*Margini switch-case* - Direcționează mesajele către executori diferiți pe baza condițiilor definite. De exemplu, dacă un client de călătorie are acces prioritar, sarcinile sale vor fi gestionate printr-un alt flux de lucru.
+*Conexiuni switch-case* - Direcționează mesajele către diferiți executori pe baza unor condiții definite. De exemplu, dacă un client de călătorie are acces prioritar, sarcinile lor vor fi gestionate printr-un alt flux de lucru.
 
-*Margini fan-out* - Trimit un mesaj către mai multe destinații.
+*Conexiuni de tip fan-out* - Trimite un mesaj către multiple destinații.
 
-*Margini fan-in* - Colectează mai multe mesaje de la executori diferiți și le trimit către o singură destinație.
+*Conexiuni de tip fan-in* - Colectează multiple mesaje de la diferiți executori și le trimite către o singură destinație.
 
 **Evenimente**
 
-Pentru a oferi o mai bună observabilitate în fluxurile de lucru, MAF oferă evenimente încorporate pentru execuție, inclusiv:
+Pentru a oferi o observabilitate mai bună a fluxurilor de lucru, MAF oferă evenimente încorporate pentru execuție, inclusiv:
 
 - `WorkflowStartedEvent`  - Execuția fluxului de lucru începe
-- `WorkflowOutputEvent` - Fluxul de lucru produce o ieșire
+- `WorkflowOutputEvent` - Fluxul de lucru produce un rezultat
 - `WorkflowErrorEvent` - Fluxul de lucru întâmpină o eroare
 - `ExecutorInvokeEvent`  - Executorul începe procesarea
-- `ExecutorCompleteEvent`  - Executorul finalizează procesarea
-- `RequestInfoEvent` - Este emisă o cerere
+- `ExecutorCompleteEvent`  -  Executorul termină procesarea
+- `RequestInfoEvent` - Se emite o cerere
 
-## Migrarea de la alte cadre (Semantic Kernel și AutoGen)
+## Migrarea din alte framework-uri (Semantic Kernel și AutoGen)
 
 ### Diferențe între MAF și Semantic Kernel
 
-**Crearea simplificată a agenților**
+**Creare simplificată a agenților**
 
-Semantic Kernel se bazează pe crearea unei instanțe Kernel pentru fiecare agent. MAF folosește o abordare simplificată prin utilizarea extensiilor pentru principalii furnizori.
+Semantic Kernel se bazează pe crearea unei instanțe Kernel pentru fiecare agent. MAF folosește o abordare simplificată, utilizând extensii pentru principalii furnizori.
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-**Crearea firelor agentului**
+**Crearea firelor agenților**
 
-Semantic Kernel necesită crearea manuală a firelor. În MAF, agentului i se atribuie direct un fir.
+Semantic Kernel cere ca firele să fie create manual. În MAF, agentului i se atribuie direct un fir.
 
 ```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+thread = agent.get_new_thread() # Rulează agentul cu firul de execuție.
 ```
 
 **Înregistrarea instrumentelor**
@@ -356,29 +356,31 @@ thread = agent.get_new_thread() # Run the agent with the thread.
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 ```
 
-### Diferențe între MAF și AutoGen
+### Diferențe între MAF și  AutoGen
 
-**Echipe vs Fluxuri de lucru**
+**Teams vs Workflows**
 
-`Echipele` sunt structura de evenimente pentru activități bazate pe evenimente cu agenți în AutoGen. MAF folosește `Fluxuri de lucru` care direcționează datele către executori printr-o arhitectură bazată pe grafuri.
+`Teams` reprezintă structura de evenimente pentru activități conduse de evenimente cu agenți în AutoGen. MAF folosește `Workflows` care direcționează date către executori printr-o arhitectură bazată pe graf.
 
 **Crearea instrumentelor**
 
-AutoGen folosește `FunctionTool` pentru a înveli funcții pe care agenții să le apeleze. MAF folosește @ai_function, care funcționează similar, dar deduce automat schemele pentru fiecare funcție.
+AutoGen folosește `FunctionTool` pentru a înfășura funcțiile pe care agenții le pot apela. MAF folosește @ai_function care funcționează similar, dar deduce și schemele în mod automat pentru fiecare funcție.
 
 **Comportamentul agenților**
 
-Agenții sunt agenți single-turn în mod implicit în AutoGen, cu excepția cazului în care `max_tool_iterations` este setat la o valoare mai mare. În MAF, `ChatAgent` este multi-turn în mod implicit, ceea ce înseamnă că va continua să apeleze instrumente până când sarcina utilizatorului este completă.
+Agenții sunt agenți single-turn implicit în AutoGen, cu excepția cazului în care `max_tool_iterations` este setat la o valoare mai mare. În MAF, `ChatAgent` este multi-turn implicit, ceea ce înseamnă că va continua să apeleze instrumente până când sarcina utilizatorului este finalizată.
 
 ## Exemple de cod 
 
-Exemplele de cod pentru Microsoft Agent Framework pot fi găsite în acest depozit sub fișierele `xx-python-agent-framework` și `xx-dotnet-agent-framework`.
+Exemplele de cod pentru Microsoft Agent Framework pot fi găsite în acest depozit în fișierele `xx-python-agent-framework` și `xx-dotnet-agent-framework`.
 
-## Ai mai multe întrebări despre Microsoft Agent Framework?
+## Aveți mai multe întrebări despre Microsoft Agent Framework?
 
-Alătură-te [Discord-ului Azure AI Foundry](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de consultanță și a primi răspunsuri la întrebările tale despre agenții AI.
+Alăturați-vă [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de consultanță și a obține răspunsuri la întrebările dvs. despre agenți AI.
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru acuratețe, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autoritară. Pentru informații critice, se recomandă traducerea realizată de un profesionist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Declinare de responsabilitate:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui să fie considerat sursa autorizată. Pentru informații critice, se recomandă o traducere profesională realizată de un traducător uman. Nu ne asumăm răspunderea pentru eventuale neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

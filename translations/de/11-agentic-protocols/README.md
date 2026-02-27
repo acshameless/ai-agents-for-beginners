@@ -1,180 +1,182 @@
-# Verwendung von Agentenprotokollen (MCP, A2A und NLWeb)
+# Using Agentic Protocols (MCP, A2A and NLWeb)
 
-[![Agentenprotokolle](../../../translated_images/de/lesson-11-thumbnail.b6c742949cf1ce2a.webp)](https://youtu.be/X-Dh9R3Opn8)
+[![Agentic Protocols](../../../translated_images/de/lesson-11-thumbnail.b6c742949cf1ce2a.webp)](https://youtu.be/X-Dh9R3Opn8)
 
-> _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
+> _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
 
-Mit der zunehmenden Nutzung von KI-Agenten wächst auch der Bedarf an Protokollen, die Standardisierung, Sicherheit und offene Innovation unterstützen. In dieser Lektion behandeln wir drei Protokolle, die diesen Bedarf decken sollen: Model Context Protocol (MCP), Agent to Agent (A2A) und Natural Language Web (NLWeb).
+As the use of AI agents grows, so does the need for protocols that ensure standardization, security, and support open innovation. In this lesson, we will cover 3 protocols looking to meet this need - Model Context Protocol (MCP), Agent to Agent (A2A) and Natural Language Web (NLWeb).
 
-## Einführung
+## Introduction
 
-In dieser Lektion behandeln wir:
+In this lesson, we will cover:
 
-• Wie **MCP** KI-Agenten ermöglicht, externe Tools und Daten zu nutzen, um Benutzeraufgaben zu erledigen.
+• How **MCP** allows AI Agents to access external tools and data to complete user tasks.
 
-• Wie **A2A** die Kommunikation und Zusammenarbeit zwischen verschiedenen KI-Agenten erleichtert.
+•  How **A2A** enables communication and collaboration between different AI agents.
 
-• Wie **NLWeb** natürliche Sprachschnittstellen auf jeder Website bereitstellt, sodass KI-Agenten Inhalte entdecken und mit ihnen interagieren können.
+• How **NLWeb** brings natural language interfaces to any website enabling AI Agents to discover and interact with the content.
 
-## Lernziele
+## Learning Goals
 
-• **Identifizieren** Sie den Hauptzweck und die Vorteile von MCP, A2A und NLWeb im Kontext von KI-Agenten.
+• **Identify** the core purpose and benefits of MCP, A2A, and NLWeb in the context of AI agents.
 
-• **Erklären** Sie, wie jedes Protokoll die Kommunikation und Interaktion zwischen LLMs, Tools und anderen Agenten erleichtert.
+• **Explain** how each protocol facilitates communication and interaction between LLMs, tools, and other agents.
 
-• **Erkennen** Sie die unterschiedlichen Rollen, die jedes Protokoll beim Aufbau komplexer agentenbasierter Systeme spielt.
+• **Recognize** the distinct roles each protocol plays in building complex agentic systems.
 
 ## Model Context Protocol
 
-Das **Model Context Protocol (MCP)** ist ein offener Standard, der eine standardisierte Methode bietet, mit der Anwendungen Kontext und Tools für LLMs bereitstellen können. Dies ermöglicht einen "universellen Adapter" für verschiedene Datenquellen und Tools, mit denen KI-Agenten konsistent verbunden werden können.
+The **Model Context Protocol (MCP)** is an open standard that provides standardized way for applications to provide context and tools to LLMs. This enables a "universal adaptor" to different data sources and tools that AI Agents can connect to in a consistent way.
 
-Schauen wir uns die Komponenten von MCP, die Vorteile im Vergleich zur direkten API-Nutzung und ein Beispiel an, wie KI-Agenten einen MCP-Server verwenden könnten.
+Let’s look at the components of MCP, the benefits compared to direct API usage, and an example of how AI agents might use an MCP server.
 
-### MCP-Kernkomponenten
+### MCP Core Components
 
-MCP basiert auf einer **Client-Server-Architektur**, und die Kernkomponenten sind:
+MCP operates on a **client-server architecture** and the core components are:
 
-• **Hosts** sind LLM-Anwendungen (zum Beispiel ein Code-Editor wie VSCode), die die Verbindungen zu einem MCP-Server initiieren.
+• **Hosts** are LLM applications (for example a code editor like VSCode) that start the connections to an MCP Server.
 
-• **Clients** sind Komponenten innerhalb der Host-Anwendung, die Einzelverbindungen zu Servern aufrechterhalten.
+• **Clients** are components within the host application that maintain one-to-one connections with servers.
 
-• **Server** sind leichtgewichtige Programme, die spezifische Funktionen bereitstellen.
+• **Servers** are lightweight programs that expose specific capabilities.
 
-Das Protokoll umfasst drei Kernprimitive, die die Fähigkeiten eines MCP-Servers darstellen:
+Included in the protocol are three core primitives which are the capabilities of an MCP Server:
 
-• **Tools**: Dies sind diskrete Aktionen oder Funktionen, die ein KI-Agent aufrufen kann, um eine Aufgabe auszuführen. Beispielsweise könnte ein Wetterdienst ein "Wetter abrufen"-Tool bereitstellen, oder ein E-Commerce-Server könnte ein "Produkt kaufen"-Tool anbieten. MCP-Server geben den Namen, die Beschreibung und das Ein-/Ausgabe-Schema jedes Tools in ihrer Fähigkeitenliste an.
+• **Tools**: These are discrete actions or functions an AI agent can call to perform an action. For example, a weather service might expose a "get weather" tool, or an e-commerce server might expose a "purchase product" tool. MCP servers advertise each tool's name, description, and input/output schema in their capabilities listing.
 
-• **Ressourcen**: Dies sind schreibgeschützte Datenobjekte oder Dokumente, die ein MCP-Server bereitstellen kann und die Clients bei Bedarf abrufen können. Beispiele sind Dateiinhalte, Datenbankeinträge oder Protokolldateien. Ressourcen können Text (wie Code oder JSON) oder binär (wie Bilder oder PDFs) sein.
+• **Resources**: These are read-only data items or documents that an MCP server can provide, and clients can retrieve them on demand. Examples include file contents, database records, or log files. Resources can be text (like code or JSON) or binary (like images or PDFs).
 
-• **Prompts**: Dies sind vordefinierte Vorlagen, die vorgeschlagene Eingaben bereitstellen und komplexere Workflows ermöglichen.
+• **Prompts**: These are predefined templates that provide suggested prompts, allowing for more complex workflows.
 
-### Vorteile von MCP
+### Benefits of MCP
 
-MCP bietet erhebliche Vorteile für KI-Agenten:
+MCP offers significant advantages for AI Agents:
 
-• **Dynamische Tool-Erkennung**: Agenten können dynamisch eine Liste verfügbarer Tools von einem Server erhalten, zusammen mit Beschreibungen ihrer Funktionen. Dies steht im Gegensatz zu traditionellen APIs, die oft statisches Codieren für Integrationen erfordern, was bedeutet, dass jede API-Änderung Code-Updates erfordert. MCP bietet einen "einmal integrieren"-Ansatz, der zu größerer Anpassungsfähigkeit führt.
+• **Dynamic Tool Discovery**: Agents can dynamically receive a list of available tools from a server along with descriptions of what they do. This contrasts with traditional APIs, which often require static coding for integrations, meaning any API change necessitates code updates. MCP offers an "integrate once" approach, leading to greater adaptability.
 
-• **Interoperabilität zwischen LLMs**: MCP funktioniert mit verschiedenen LLMs und bietet die Flexibilität, Kernmodelle zu wechseln, um eine bessere Leistung zu evaluieren.
+• **Interoperability Across LLMs**: MCP works across different LLMs, providing flexibility to switch core models to evaluate for better performance.
 
-• **Standardisierte Sicherheit**: MCP enthält eine standardisierte Authentifizierungsmethode, die die Skalierbarkeit beim Hinzufügen von Zugriff auf zusätzliche MCP-Server verbessert. Dies ist einfacher als die Verwaltung unterschiedlicher Schlüssel und Authentifizierungstypen für verschiedene traditionelle APIs.
+• **Standardized Security**: MCP includes a standard authentication method, improving scalability when adding access to additional MCP servers. This is simpler than managing different keys and authentication types for various traditional APIs.
 
-### MCP-Beispiel
+### MCP Example
 
-![MCP Diagramm](../../../translated_images/de/mcp-diagram.e4ca1cbd551444a1.webp)
+![MCP Diagram](../../../translated_images/de/mcp-diagram.e4ca1cbd551444a1.webp)
 
-Stellen Sie sich vor, ein Benutzer möchte mit einem KI-Assistenten, der MCP verwendet, einen Flug buchen.
+Imagine a user wants to book a flight using an AI assistant powered by MCP.
 
-1. **Verbindung**: Der KI-Assistent (der MCP-Client) verbindet sich mit einem MCP-Server, der von einer Fluggesellschaft bereitgestellt wird.
+1. **Connection**: The AI assistant (the MCP client) connects to an MCP server provided by an airline.
 
-2. **Tool-Erkennung**: Der Client fragt den MCP-Server der Fluggesellschaft: "Welche Tools stehen zur Verfügung?" Der Server antwortet mit Tools wie "Flüge suchen" und "Flüge buchen".
+2. **Tool Discovery**: The client asks the airline's MCP server, "What tools do you have available?" The server responds with tools like "search flights" and "book flights".
 
-3. **Tool-Aufruf**: Sie bitten den KI-Assistenten: "Bitte suchen Sie einen Flug von Portland nach Honolulu." Der KI-Assistent identifiziert mithilfe seines LLM, dass er das Tool "Flüge suchen" aufrufen muss, und übergibt die relevanten Parameter (Abflugort, Zielort) an den MCP-Server.
+3. **Tool Invocation**: You then ask the AI assistant, "Please search for a flight from Portland to Honolulu." The AI assistant, using its LLM, identifies that it needs to call the "search flights" tool and passes the relevant parameters (origin, destination) to the MCP server.
 
-4. **Ausführung und Antwort**: Der MCP-Server, der als Wrapper fungiert, führt den eigentlichen Aufruf der internen Buchungs-API der Fluggesellschaft aus. Er erhält die Fluginformationen (z. B. JSON-Daten) und sendet sie zurück an den KI-Assistenten.
+4. **Execution and Response**: The MCP server, acting as a wrapper, makes the actual call to the airline's internal booking API. It then receives the flight information (e.g., JSON data) and sends it back to the AI assistant.
 
-5. **Weitere Interaktion**: Der KI-Assistent präsentiert die Flugoptionen. Sobald Sie einen Flug auswählen, könnte der Assistent das Tool "Flüge buchen" auf demselben MCP-Server aufrufen und die Buchung abschließen.
+5. **Further Interaction**: The AI assistant presents the flight options. Once you select a flight, the assistant might invoke the "book flight" tool on the same MCP server, completing the booking.
 
-## Agent-to-Agent-Protokoll (A2A)
+## Agent-to-Agent Protocol (A2A)
 
-Während MCP sich darauf konzentriert, LLMs mit Tools zu verbinden, geht das **Agent-to-Agent (A2A)-Protokoll** einen Schritt weiter, indem es die Kommunikation und Zusammenarbeit zwischen verschiedenen KI-Agenten ermöglicht. A2A verbindet KI-Agenten über verschiedene Organisationen, Umgebungen und Technologiestacks hinweg, um eine gemeinsame Aufgabe zu erfüllen.
+While MCP focuses on connecting LLMs to tools, the **Agent-to-Agent (A2A) protocol** takes it a step further by enabling communication and collaboration between different AI agents.  A2A connects AI agents across different organizations, environments and tech stacks to complete a shared task.
 
-Wir werden die Komponenten und Vorteile von A2A sowie ein Beispiel für dessen Anwendung in unserer Reiseanwendung untersuchen.
+We’ll examine the components and benefits of A2A, along with an example of how it could be applied in our travel application.
 
-### A2A-Kernkomponenten
+### A2A Core Components
 
-A2A konzentriert sich darauf, die Kommunikation zwischen Agenten zu ermöglichen und sie zusammenarbeiten zu lassen, um eine Teilaufgabe des Benutzers zu erledigen. Jede Komponente des Protokolls trägt dazu bei:
+A2A focuses on enabling communication between agents and having them work together to complete a subtask of user. Each component of the protocol contributes to this:
 
-#### Agentenkarte
+#### Agent Card
 
-Ähnlich wie ein MCP-Server eine Liste von Tools teilt, enthält eine Agentenkarte:
-- Den Namen des Agenten.
-- Eine **Beschreibung der allgemeinen Aufgaben**, die er erledigt.
-- Eine **Liste spezifischer Fähigkeiten** mit Beschreibungen, die anderen Agenten (oder sogar menschlichen Benutzern) helfen, zu verstehen, wann und warum sie diesen Agenten aufrufen sollten.
-- Die **aktuelle Endpunkt-URL** des Agenten.
-- Die **Version** und **Fähigkeiten** des Agenten, wie Streaming-Antworten und Push-Benachrichtigungen.
+Similar to how an MCP server shares a list of tools, an Agent Card has:
+- The Name of the Agent .
+- A **description of the general tasks** it completes.
+- A **list of specific skills** with descriptions to help other agents (or even human users) understand when and why they would want to call that agent.
+- The **current Endpoint URL** of the agent
+- The **version** and **capabilities** of the agent such as streaming responses and push notifications.
 
-#### Agenten-Executor
+#### Agent Executor
 
-Der Agenten-Executor ist dafür verantwortlich, **den Kontext des Benutzerchats an den entfernten Agenten weiterzugeben**, damit dieser die Aufgabe versteht, die erledigt werden muss. In einem A2A-Server verwendet ein Agent sein eigenes Large Language Model (LLM), um eingehende Anfragen zu analysieren und Aufgaben mit seinen eigenen internen Tools auszuführen.
+The Agent Executor is responsible for **passing the context of the user chat to the remote agent**, the remote agent needs this to understand the task that needs to be completed. In an A2A server, an agent uses its own Large Language Model (LLM) to parse incoming requests and execute tasks using its own internal tools.
 
-#### Artefakt
+#### Artifact
 
-Sobald ein entfernter Agent die angeforderte Aufgabe abgeschlossen hat, wird sein Arbeitsergebnis als Artefakt erstellt. Ein Artefakt **enthält das Ergebnis der Arbeit des Agenten**, eine **Beschreibung dessen, was erledigt wurde**, und den **Textkontext**, der über das Protokoll gesendet wurde. Nachdem das Artefakt gesendet wurde, wird die Verbindung zum entfernten Agenten geschlossen, bis sie erneut benötigt wird.
+Once a remote agent has completed the requested task, its work product is created as an artifact.  An artifact **contains the result of the agent's work**, a **description of what was completed**, and the **text context** that is sent through the protocol. After the artifact is sent, the connection with the remote agent is closed until it is needed again.
 
-#### Ereigniswarteschlange
+#### Event Queue
 
-Diese Komponente wird verwendet, um **Updates zu verwalten und Nachrichten zu übermitteln**. Sie ist besonders wichtig in Produktionsumgebungen für agentenbasierte Systeme, um zu verhindern, dass die Verbindung zwischen Agenten geschlossen wird, bevor eine Aufgabe abgeschlossen ist, insbesondere wenn die Bearbeitungszeit länger dauern kann.
+This component is used for **handling updates and passing messages**. It is particularly important in production for agentic systems to prevent the connection between agents from being closed before a task is completed, especially when task completion times can take a longer time.
 
-### Vorteile von A2A
+### Benefits of A2A
 
-• **Verbesserte Zusammenarbeit**: Es ermöglicht Agenten von verschiedenen Anbietern und Plattformen, miteinander zu interagieren, Kontext zu teilen und zusammenzuarbeiten, wodurch eine nahtlose Automatisierung über traditionell getrennte Systeme hinweg erleichtert wird.
+• **Enhanced Collaboration**: It enables agents from different vendors and platforms to interact, share context, and work together, facilitating seamless automation across traditionally disconnected systems.
 
-• **Flexibilität bei der Modellauswahl**: Jeder A2A-Agent kann entscheiden, welches LLM er für die Bearbeitung seiner Anfragen verwendet, wodurch optimierte oder feinabgestimmte Modelle pro Agent ermöglicht werden, im Gegensatz zu einer einzigen LLM-Verbindung in einigen MCP-Szenarien.
+• **Model Selection Flexibility**: Each A2A agent can decide which LLM it uses to service its requests, allowing for optimized or fine-tuned models per agent, unlike a single LLM connection in some MCP scenarios.
 
-• **Integrierte Authentifizierung**: Die Authentifizierung ist direkt in das A2A-Protokoll integriert und bietet einen robusten Sicherheitsrahmen für die Interaktionen zwischen Agenten.
+• **Built-in Authentication**: Authentication is integrated directly into the A2A protocol, providing a robust security framework for agent interactions.
 
-### A2A-Beispiel
+### A2A Example
 
-![A2A Diagramm](../../../translated_images/de/A2A-Diagram.8666928d648acc26.webp)
+![A2A Diagram](../../../translated_images/de/A2A-Diagram.8666928d648acc26.webp)
 
-Erweitern wir unser Reisebuchungsszenario, diesmal mit A2A.
+Let's expand on our travel booking scenario, but this time using A2A.
 
-1. **Benutzeranfrage an Multi-Agenten**: Ein Benutzer interagiert mit einem "Reiseagenten" A2A-Client/Agenten, indem er beispielsweise sagt: "Bitte buchen Sie eine komplette Reise nach Honolulu für nächste Woche, einschließlich Flügen, eines Hotels und eines Mietwagens."
+1. **User Request to Multi-Agent**: A user interacts with a "Travel Agent" A2A client/agent, perhaps by saying, "Please book an entire trip to Honolulu for next week, including flights, a hotel, and a rental car".
 
-2. **Orchestrierung durch Reiseagenten**: Der Reiseagent erhält diese komplexe Anfrage. Er verwendet sein LLM, um über die Aufgabe nachzudenken und festzustellen, dass er mit anderen spezialisierten Agenten interagieren muss.
+2. **Orchestration by Travel Agent**: The Travel Agent receives this complex request. It uses its LLM to reason about the task and determine that it needs to interact with other specialized agents.
 
-3. **Inter-Agenten-Kommunikation**: Der Reiseagent verwendet das A2A-Protokoll, um sich mit nachgelagerten Agenten zu verbinden, wie einem "Fluggesellschaft-Agenten", einem "Hotel-Agenten" und einem "Mietwagen-Agenten", die von verschiedenen Unternehmen erstellt wurden.
+3. **Inter-Agent Communication**: The Travel Agent then uses the A2A protocol to connect to downstream agents, such as an "Airline Agent," a "Hotel Agent," and a "Car Rental Agent" that are created by different companies.
 
-4. **Delegierte Aufgabenbearbeitung**: Der Reiseagent sendet spezifische Aufgaben an diese spezialisierten Agenten (z. B. "Flüge nach Honolulu finden", "Hotel buchen", "Auto mieten"). Jeder dieser spezialisierten Agenten, der seine eigenen LLMs und Tools verwendet (die selbst MCP-Server sein könnten), führt seinen spezifischen Teil der Buchung aus.
+4. **Delegated Task Execution**: The Travel Agent sends specific tasks to these specialized agents (e.g., "Find flights to Honolulu," "Book a hotel," "Rent a car"). Each of these specialized agents, running their own LLMs and utilizing their own tools (which could be MCP servers themselves), performs its specific part of the booking.
 
-5. **Konsolidierte Antwort**: Sobald alle nachgelagerten Agenten ihre Aufgaben abgeschlossen haben, kompiliert der Reiseagent die Ergebnisse (Flugdaten, Hotelbestätigung, Mietwagenbuchung) und sendet eine umfassende, chatartige Antwort zurück an den Benutzer.
+5. **Consolidated Response**: Once all downstream agents complete their tasks, the Travel Agent compiles the results (flight details, hotel confirmation, car rental booking) and sends a comprehensive, chat-style response back to the user.
 
 ## Natural Language Web (NLWeb)
 
-Websites sind seit langem der primäre Weg, über den Benutzer Informationen und Daten im Internet abrufen können.
+Websites have long been the primary way for users to access information and data across the internet.
 
-Schauen wir uns die verschiedenen Komponenten von NLWeb, die Vorteile von NLWeb und ein Beispiel an, wie NLWeb in unserer Reiseanwendung funktioniert.
+Let us look at the different components of NLWeb, the benefits of NLWeb and an example how our NLWeb works by looking at our travel application.
 
-### Komponenten von NLWeb
+### Components of NLWeb
 
-- **NLWeb-Anwendung (Kernservice-Code)**: Das System, das natürliche Sprachfragen verarbeitet. Es verbindet die verschiedenen Teile der Plattform, um Antworten zu erstellen. Sie können es sich als den **Motor vorstellen, der die natürlichen Sprachfunktionen** einer Website antreibt.
+- **NLWeb Application (Core Service Code)**: The system that processes natural language questions. It connects the different parts of the platform to create responses. You can think of it as the **engine that powers the natural language features** of a website.
 
-- **NLWeb-Protokoll**: Dies ist ein **grundlegender Satz von Regeln für die natürliche Sprachinteraktion** mit einer Website. Es sendet Antworten im JSON-Format zurück (oft unter Verwendung von Schema.org). Ziel ist es, eine einfache Grundlage für das „KI-Web“ zu schaffen, ähnlich wie HTML das Teilen von Dokumenten online ermöglicht hat.
+- **NLWeb Protocol**: This is a **basic set of rules for natural language interaction** with a website. It sends back responses in JSON format (often using Schema.org). Its purpose is to create a simple foundation for the “AI Web,” in the same way that HTML made it possible to share documents online.
 
-- **MCP-Server (Model Context Protocol-Endpunkt)**: Jede NLWeb-Installation funktioniert auch als **MCP-Server**. Das bedeutet, dass sie **Tools (wie eine „ask“-Methode) und Daten** mit anderen KI-Systemen teilen kann. In der Praxis macht dies die Inhalte und Fähigkeiten der Website für KI-Agenten nutzbar, sodass die Website Teil des größeren „Agenten-Ökosystems“ wird.
+- **MCP Server (Model Context Protocol Endpoint)**: Each NLWeb setup also works as an **MCP server**. This means it can **share tools (like an “ask” method) and data** with other AI systems. In practice, this makes the website’s content and abilities usable by AI agents, allowing the site to become part of the wider “agent ecosystem.”
 
-- **Embedding-Modelle**: Diese Modelle werden verwendet, um **Website-Inhalte in numerische Darstellungen, sogenannte Vektoren**, umzuwandeln (Embeddings). Diese Vektoren erfassen Bedeutungen auf eine Weise, die Computer vergleichen und durchsuchen können. Sie werden in einer speziellen Datenbank gespeichert, und Benutzer können auswählen, welches Embedding-Modell sie verwenden möchten.
+- **Embedding Models**: These models are used to **convert website content into numerical representations called vectors** (embeddings). These vectors capture meaning in a way computers can compare and search. They are stored in a special database, and users can choose which embedding model they want to use.
 
-- **Vektordatenbank (Abrufmechanismus)**: Diese Datenbank **speichert die Embeddings der Website-Inhalte**. Wenn jemand eine Frage stellt, überprüft NLWeb die Vektordatenbank, um schnell die relevantesten Informationen zu finden. Es liefert eine schnelle Liste möglicher Antworten, sortiert nach Ähnlichkeit. NLWeb arbeitet mit verschiedenen Vektorspeichersystemen wie Qdrant, Snowflake, Milvus, Azure AI Search und Elasticsearch.
+- **Vector Database (Retrieval Mechanism)**: This database **stores the embeddings of the website content**. When someone asks a question, NLWeb checks the vector database to quickly find the most relevant information. It gives a fast list of possible answers, ranked by similarity. NLWeb works with different vector storage systems such as Qdrant, Snowflake, Milvus, Azure AI Search, and Elasticsearch.
 
-### NLWeb am Beispiel
+### NLWeb by Example
 
 ![NLWeb](../../../translated_images/de/nlweb-diagram.c1e2390b310e5fe4.webp)
 
-Betrachten wir unsere Reisebuchungs-Website erneut, diesmal jedoch mit NLWeb.
+Consider our travel booking website again, but this time, it's powered by NLWeb.
 
-1. **Datenaufnahme**: Die bestehenden Produktkataloge der Reise-Website (z. B. Flugangebote, Hotelbeschreibungen, Reisepakete) werden mit Schema.org formatiert oder über RSS-Feeds geladen. Die Tools von NLWeb nehmen diese strukturierten Daten auf, erstellen Embeddings und speichern sie in einer lokalen oder entfernten Vektordatenbank.
+1. **Data Ingestion**: The travel website's existing product catalogs (e.g., flight listings, hotel descriptions, tour packages) are formatted using Schema.org or loaded via RSS feeds. NLWeb's tools ingest this structured data, create embeddings, and store them in a local or remote vector database.
 
-2. **Natürliche Sprachabfrage (Mensch)**: Ein Benutzer besucht die Website und gibt statt über Menüs zu navigieren in eine Chat-Oberfläche ein: "Finden Sie ein familienfreundliches Hotel in Honolulu mit Pool für nächste Woche."
+2. **Natural Language Query (Human)**: A user visits the website and, instead of navigating menus, types into a chat interface: "Find me a family-friendly hotel in Honolulu with a pool for next week".
 
-3. **NLWeb-Verarbeitung**: Die NLWeb-Anwendung erhält diese Anfrage. Sie sendet die Anfrage an ein LLM zur Interpretation und durchsucht gleichzeitig ihre Vektordatenbank nach relevanten Hotelangeboten.
+3. **NLWeb Processing**: The NLWeb application receives this query. It sends the query to an LLM for understanding and simultaneously searches its vector database for relevant hotel listings.
 
-4. **Präzise Ergebnisse**: Das LLM hilft, die Suchergebnisse aus der Datenbank zu interpretieren, die besten Übereinstimmungen basierend auf den Kriterien "familienfreundlich", "Pool" und "Honolulu" zu identifizieren und eine Antwort in natürlicher Sprache zu formatieren. Wichtig ist, dass die Antwort sich auf tatsächliche Hotels aus dem Katalog der Website bezieht und keine erfundenen Informationen enthält.
+4. **Accurate Results**: The LLM helps to interpret the search results from the database, identify the best matches based on "family-friendly," "pool," and "Honolulu" criteria, and then formats a natural language response. Crucially, the response refers to actual hotels from the website's catalog, avoiding made-up information.
 
-5. **Interaktion mit KI-Agenten**: Da NLWeb als MCP-Server fungiert, könnte ein externer KI-Reiseagent auch eine Verbindung zur NLWeb-Instanz dieser Website herstellen. Der KI-Agent könnte dann die `ask`-MCP-Methode verwenden, um die Website direkt abzufragen: `ask("Gibt es vegane Restaurants in der Nähe von Honolulu, die vom Hotel empfohlen werden?")`. Die NLWeb-Instanz würde dies verarbeiten, ihre Datenbank mit Restaurantinformationen (falls geladen) nutzen und eine strukturierte JSON-Antwort zurückgeben.
+5. **AI Agent Interaction**: Because NLWeb serves as an MCP server, an external AI travel agent could also connect to this website's NLWeb instance. The AI agent could then use the `ask("Gibt es vom Hotel empfohlene, vegane Restaurants in der Umgebung von Honolulu?")` MCP method to query the website directly. The NLWeb instance would process this, leveraging its database of restaurant information (if loaded), and return a structured JSON response.
 
-### Noch Fragen zu MCP/A2A/NLWeb?
+### Got More Questions about MCP/A2A/NLWeb?
 
-Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, Sprechstunden zu besuchen und Ihre Fragen zu KI-Agenten beantwortet zu bekommen.
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
-## Ressourcen
+## Resources
 
-- [MCP für Anfänger](https://aka.ms/mcp-for-beginners)  
-- [MCP-Dokumentation](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic-kernel/semantic_kernel/connectors/mcp)
-- [NLWeb-Repo](https://github.com/nlweb-ai/NLWeb)
+- [MCP for Beginners](https://aka.ms/mcp-for-beginners)  
+- [MCP Documentation](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic-kernel/semantic_kernel/connectors/mcp)
+- [NLWeb Repo](https://github.com/nlweb-ai/NLWeb)
 - [Semantic Kernel Guides](https://learn.microsoft.com/semantic-kernel/)
 
 ---
 
-**Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Haftungsausschluss:
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst Co-op Translator (https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatische Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ausgangssprache ist als maßgebliche Quelle zu betrachten. Für kritische Informationen wird eine professionelle Übersetzung durch einen qualifizierten Übersetzer empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die durch die Verwendung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

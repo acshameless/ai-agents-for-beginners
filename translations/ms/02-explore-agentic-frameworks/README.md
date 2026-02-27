@@ -1,73 +1,73 @@
 [![Meneroka Rangka Kerja Ejen AI](../../../translated_images/ms/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(Klik imej di atas untuk menonton video pelajaran ini)_
+> _(Klik imej di atas untuk melihat video pelajaran ini)_
 
-# Meneroka Rangka Kerja Ejen AI
+# Terokai Rangka Kerja Ejen AI
 
-Rangka kerja ejen AI adalah platform perisian yang direka untuk mempermudah penciptaan, penyebaran, dan pengurusan ejen AI. Rangka kerja ini menyediakan komponen, abstraksi, dan alat yang telah dibina untuk memudahkan pembangunan sistem AI yang kompleks.
+Rangka kerja ejen AI adalah platform perisian yang direka untuk memudahkan penciptaan, pelaksanaan, dan pengurusan ejen AI. Rangka kerja ini menyediakan pembangun dengan komponen siap sedia, abstraksi, dan alat yang memudahkan pembangunan sistem AI yang kompleks.
 
-Rangka kerja ini membantu pembangun memberi tumpuan kepada aspek unik aplikasi mereka dengan menyediakan pendekatan standard kepada cabaran biasa dalam pembangunan ejen AI. Ia meningkatkan skalabiliti, kebolehcapaian, dan kecekapan dalam membina sistem AI.
+Rangka kerja ini membantu pembangun menumpukan perhatian pada aspek unik aplikasi mereka dengan menyediakan pendekatan standard untuk cabaran biasa dalam pembangunan ejen AI. Ia meningkatkan kebolehskalaan, aksesibiliti, dan kecekapan dalam membina sistem AI.
 
 ## Pengenalan 
 
 Pelajaran ini akan merangkumi:
 
-- Apa itu Rangka Kerja Ejen AI dan apa yang dapat dicapai oleh pembangun dengannya?
-- Bagaimana pasukan boleh menggunakan ini untuk membuat prototaip dengan cepat, mengulangi, dan meningkatkan keupayaan ejen mereka?
-- Apakah perbezaan antara rangka kerja dan alat yang dicipta oleh Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, dan <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
-- Bolehkah saya mengintegrasikan alat ekosistem Azure sedia ada saya secara langsung, atau adakah saya memerlukan penyelesaian yang berdiri sendiri?
-- Apa itu perkhidmatan Azure AI Agents dan bagaimana ini membantu saya?
+- Apakah Rangka Kerja Ejen AI dan apa yang mereka benarkan pembangun capai?
+- Bagaimana pasukan boleh menggunakan ini untuk membuat prototaip dengan cepat, iterasi, dan memperbaiki keupayaan ejen mereka?
+- Apakah perbezaan antara rangka kerja dan alat yang dihasilkan oleh Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, dan <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
+- Bolehkah saya mengintegrasikan alat ekosistem Azure saya yang sedia ada secara langsung, atau adakah saya memerlukan penyelesaian berdiri sendiri?
+- Apakah perkhidmatan Azure AI Agents dan bagaimana ini membantu saya?
 
-## Matlamat Pembelajaran
+## Matlamat pembelajaran
 
 Matlamat pelajaran ini adalah untuk membantu anda memahami:
 
 - Peranan Rangka Kerja Ejen AI dalam pembangunan AI.
-- Bagaimana memanfaatkan Rangka Kerja Ejen AI untuk membina ejen pintar.
-- Keupayaan utama yang diaktifkan oleh Rangka Kerja Ejen AI.
-- Perbezaan antara AutoGen, Semantic Kernel, dan Azure AI Agent Service.
+- Cara memanfaatkan Rangka Kerja Ejen AI untuk membina ejen pintar.
+- Keupayaan utama yang dibolehkan oleh Rangka Kerja Ejen AI.
+- Perbezaan antara AutoGen, Semantic Kernel, dan Perkhidmatan Ejen Azure AI.
 
-## Apa itu Rangka Kerja Ejen AI dan apa yang dapat dicapai oleh pembangun dengannya?
+## Apakah Rangka Kerja Ejen AI dan apa yang mereka benarkan pembangun lakukan?
 
-Rangka kerja AI tradisional boleh membantu anda mengintegrasikan AI ke dalam aplikasi anda dan menjadikan aplikasi ini lebih baik dengan cara berikut:
+Rangka Kerja AI tradisional boleh membantu anda mengintegrasikan AI ke dalam aplikasi anda dan menjadikan aplikasi ini lebih baik dalam cara berikut:
 
-- **Pemperibadian**: AI boleh menganalisis tingkah laku dan keutamaan pengguna untuk memberikan cadangan, kandungan, dan pengalaman yang diperibadikan.
+- **Personalisasi**: AI boleh menganalisis kelakuan dan keutamaan pengguna untuk menyediakan cadangan, kandungan, dan pengalaman yang diperibadikan.
 Contoh: Perkhidmatan penstriman seperti Netflix menggunakan AI untuk mencadangkan filem dan rancangan berdasarkan sejarah tontonan, meningkatkan penglibatan dan kepuasan pengguna.
-- **Automasi dan Kecekapan**: AI boleh mengautomasi tugas berulang, mempermudah aliran kerja, dan meningkatkan kecekapan operasi.
-Contoh: Aplikasi perkhidmatan pelanggan menggunakan chatbot berkuasa AI untuk menangani pertanyaan biasa, mengurangkan masa tindak balas dan membebaskan ejen manusia untuk isu yang lebih kompleks.
-- **Pengalaman Pengguna yang Dipertingkatkan**: AI boleh meningkatkan pengalaman pengguna keseluruhan dengan menyediakan ciri pintar seperti pengecaman suara, pemprosesan bahasa semula jadi, dan teks ramalan.
-Contoh: Pembantu maya seperti Siri dan Google Assistant menggunakan AI untuk memahami dan bertindak balas terhadap arahan suara, memudahkan pengguna berinteraksi dengan peranti mereka.
+- **Automasi dan Kecekapan**: AI boleh mengautomasikan tugas berulang, melicinkan aliran kerja, dan meningkatkan kecekapan operasi.
+Contoh: Aplikasi perkhidmatan pelanggan menggunakan chatbot bertenaga AI untuk menangani pertanyaan biasa, mengurangkan masa respon dan membebaskan ejen manusia untuk isu yang lebih kompleks.
+- **Pengalaman Pengguna Dipertingkatkan**: AI boleh meningkatkan pengalaman pengguna secara keseluruhan dengan menyediakan ciri pintar seperti pengecaman suara, pemprosesan bahasa semula jadi, dan teks ramalan.
+Contoh: Pembantu maya seperti Siri dan Google Assistant menggunakan AI untuk memahami dan menjawab arahan suara, memudahkan pengguna berinteraksi dengan peranti mereka.
 
-### Kedengarannya hebat, jadi mengapa kita memerlukan Rangka Kerja Ejen AI?
+### Semua itu kedengaran hebat bukan, jadi mengapa kita perlukan Rangka Kerja Ejen AI?
 
-Rangka kerja ejen AI mewakili sesuatu yang lebih daripada sekadar rangka kerja AI. Ia direka untuk membolehkan penciptaan ejen pintar yang boleh berinteraksi dengan pengguna, ejen lain, dan persekitaran untuk mencapai matlamat tertentu. Ejen ini boleh menunjukkan tingkah laku autonomi, membuat keputusan, dan menyesuaikan diri dengan keadaan yang berubah. Mari kita lihat beberapa keupayaan utama yang diaktifkan oleh Rangka Kerja Ejen AI:
+Rangka Kerja Ejen AI mewakili sesuatu yang lebih daripada sekadar rangka kerja AI. Ia direka untuk membolehkan penciptaan ejen pintar yang boleh berinteraksi dengan pengguna, ejen lain, dan persekitaran untuk mencapai matlamat tertentu. Ejen ini boleh menunjukkan tingkah laku autonomi, membuat keputusan, dan menyesuaikan diri dengan keadaan yang berubah. Mari kita lihat beberapa keupayaan utama yang dibolehkan oleh Rangka Kerja Ejen AI:
 
-- **Kerjasama dan Koordinasi Ejen**: Membolehkan penciptaan pelbagai ejen AI yang boleh bekerjasama, berkomunikasi, dan berkoordinasi untuk menyelesaikan tugas yang kompleks.
-- **Automasi dan Pengurusan Tugas**: Menyediakan mekanisme untuk mengautomasi aliran kerja berbilang langkah, delegasi tugas, dan pengurusan tugas dinamik antara ejen.
-- **Pemahaman dan Penyesuaian Kontekstual**: Melengkapkan ejen dengan keupayaan untuk memahami konteks, menyesuaikan diri dengan persekitaran yang berubah, dan membuat keputusan berdasarkan maklumat masa nyata.
+- **Kerjasama dan Penyelarasan Ejen**: Membolehkan penciptaan beberapa ejen AI yang boleh bekerjasama, berkomunikasi, dan menyelaras untuk menyelesaikan tugas kompleks.
+- **Automasi dan Pengurusan Tugas**: Menyediakan mekanisme untuk mengautomasikan aliran kerja berbilang langkah, pendelegasian tugas, dan pengurusan tugas dinamik antara ejen.
+- **Pemahaman Kontekstual dan Penyesuaian**: Melengkapi ejen dengan keupayaan untuk memahami konteks, menyesuaikan diri dengan persekitaran yang berubah, dan membuat keputusan berdasarkan maklumat masa nyata.
 
-Secara ringkasnya, ejen membolehkan anda melakukan lebih banyak perkara, membawa automasi ke tahap seterusnya, mencipta sistem yang lebih pintar yang boleh menyesuaikan diri dan belajar daripada persekitaran mereka.
+Jadi secara ringkas, ejen membolehkan anda melakukan lebih banyak, membawa automasi ke tahap seterusnya, mencipta sistem yang lebih pintar yang boleh menyesuaikan diri dan belajar dari persekitarannya.
 
-## Bagaimana untuk membuat prototaip dengan cepat, mengulangi, dan meningkatkan keupayaan ejen?
+## Bagaimana untuk membuat prototaip dengan cepat, iterasi, dan memperbaiki keupayaan ejen?
 
-Ini adalah landskap yang bergerak pantas, tetapi terdapat beberapa perkara yang biasa di kebanyakan Rangka Kerja Ejen AI yang boleh membantu anda membuat prototaip dan mengulangi dengan cepat iaitu komponen modular, alat kolaboratif, dan pembelajaran masa nyata. Mari kita selami ini:
+Ini adalah lanskap yang bergerak pantas, tetapi terdapat beberapa perkara yang biasa dalam kebanyakan Rangka Kerja Ejen AI yang boleh membantu anda membuat prototaip dan iterasi dengan cepat iaitu komponen modul, alat kolaboratif, dan pembelajaran masa nyata. Mari kita terokai ini:
 
-- **Gunakan Komponen Modular**: SDK AI menawarkan komponen yang telah dibina seperti penyambung AI dan Memori, panggilan fungsi menggunakan bahasa semula jadi atau plugin kod, templat arahan, dan banyak lagi.
-- **Manfaatkan Alat Kolaboratif**: Reka bentuk ejen dengan peranan dan tugas tertentu, membolehkan mereka menguji dan memperbaiki aliran kerja kolaboratif.
-- **Belajar dalam Masa Nyata**: Laksanakan gelung maklum balas di mana ejen belajar daripada interaksi dan menyesuaikan tingkah laku mereka secara dinamik.
+- **Gunakan Komponen Modular**: SDK AI menawarkan komponen siap sedia seperti penyambung AI dan Memori, panggilan fungsi menggunakan bahasa semula jadi atau plugin kod, templat arahan, dan lain-lain.
+- **Manfaatkan Alat Kolaboratif**: Reka ejen dengan peranan dan tugas khusus, membolehkan mereka menguji dan memperhalusi aliran kerja kolaboratif.
+- **Belajar dalam Masa Nyata**: Laksanakan gelung maklum balas di mana ejen belajar dari interaksi dan menyesuaikan tingkah laku mereka secara dinamik.
 
 ### Gunakan Komponen Modular
 
-SDK seperti Microsoft Semantic Kernel dan LangChain menawarkan komponen yang telah dibina seperti penyambung AI, templat arahan, dan pengurusan memori.
+SDK seperti Microsoft Semantic Kernel dan LangChain menawarkan komponen siap sedia seperti penyambung AI, templat arahan, dan pengurusan memori.
 
-**Bagaimana pasukan boleh menggunakan ini**: Pasukan boleh dengan cepat menyusun komponen ini untuk mencipta prototaip yang berfungsi tanpa bermula dari awal, membolehkan eksperimen dan pengulangan yang pantas.
+**Bagaimana pasukan boleh gunakan ini**: Pasukan boleh dengan cepat menyusun komponen ini untuk mencipta prototaip berfungsi tanpa bermula dari kosong, membolehkan eksperimen dan iterasi pantas.
 
-**Bagaimana ia berfungsi dalam amalan**: Anda boleh menggunakan parser yang telah dibina untuk mengekstrak maklumat daripada input pengguna, modul memori untuk menyimpan dan mendapatkan data, dan penjana arahan untuk berinteraksi dengan pengguna, semuanya tanpa perlu membina komponen ini dari awal.
+**Bagaimana ia berfungsi dalam amalan**: Anda boleh menggunakan parser siap sedia untuk mengekstrak maklumat dari input pengguna, modul memori untuk menyimpan dan mengambil data, dan penjana arahan untuk berinteraksi dengan pengguna, semua tanpa perlu membina komponen ini dari awal.
 
-**Contoh kod**. Mari kita lihat contoh bagaimana anda boleh menggunakan Penyambung AI yang telah dibina dengan Semantic Kernel Python dan .Net yang menggunakan panggilan fungsi automatik untuk membolehkan model bertindak balas terhadap input pengguna:
+**Kod contoh**. Mari lihat contoh bagaimana anda boleh menggunakan Penyambung AI siap sedia dengan Semantic Kernel Python dan .Net yang menggunakan panggilan fungsi auto untuk membolehkan model memberi respons kepada input pengguna:
 
 ``` python
-# Semantic Kernel Python Example
+# Contoh Semantic Kernel Python
 
 import asyncio
 from typing import Annotated
@@ -78,12 +78,12 @@ from semantic_kernel.contents import ChatHistory
 from semantic_kernel.functions import kernel_function
 from semantic_kernel.kernel import Kernel
 
-# Define a ChatHistory object to hold the conversation's context
+# Tentukan objek ChatHistory untuk menyimpan konteks perbualan
 chat_history = ChatHistory()
 chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
 
 
-# Define a sample plugin that contains the function to book travel
+# Tentukan pemalam contoh yang mengandungi fungsi untuk menempah perjalanan
 class BookTravelPlugin:
     """A Sample Book Travel Plugin"""
 
@@ -93,26 +93,26 @@ class BookTravelPlugin:
     ) -> str:
         return f"Travel was booked to {location} on {date}"
 
-# Create the Kernel
+# Cipta Kernel
 kernel = Kernel()
 
-# Add the sample plugin to the Kernel object
+# Tambah pemalam contoh ke objek Kernel
 kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
 
-# Define the Azure OpenAI AI Connector
+# Tentukan Penyambung AI Azure OpenAI
 chat_service = AzureChatCompletion(
     deployment_name="YOUR_DEPLOYMENT_NAME", 
     api_key="YOUR_API_KEY", 
     endpoint="https://<your-resource>.azure.openai.com/",
 )
 
-# Define the request settings to configure the model with auto-function calling
+# Tentukan tetapan permintaan untuk mengkonfigurasi model dengan pemanggilan fungsi automatik
 request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
+    # Buat permintaan kepada model untuk sejarah perbualan dan tetapan permintaan yang diberikan
+    # Kernel mengandungi contoh yang model akan minta untuk dipanggil
     response = await chat_service.get_chat_message_content(
         chat_history=chat_history, settings=request_settings, kernel=kernel
     )
@@ -145,9 +145,9 @@ async def main():
     """
 
     print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
+    # Contoh Respons Model AI: `Penerbangan anda ke New York pada 1 Januari 2025 telah berjaya ditempah. Selamat jalan! ✈️🗽`
 
-    # Add the model's response to our chat history context
+    # Tambah respons model ke konteks sejarah perbualan kita
     chat_history.add_assistant_message(response.content)
 
 
@@ -216,24 +216,24 @@ public class BookTravelPlugin
 }
 ```
 
-Apa yang anda boleh lihat daripada contoh ini ialah bagaimana anda boleh memanfaatkan parser yang telah dibina untuk mengekstrak maklumat utama daripada input pengguna, seperti asal, destinasi, dan tarikh permintaan tempahan penerbangan. Pendekatan modular ini membolehkan anda memberi tumpuan kepada logik tahap tinggi.
+Apa yang anda boleh lihat dari contoh ini adalah bagaimana anda boleh memanfaatkan parser siap sedia untuk mengekstrak maklumat utama dari input pengguna, seperti asal, destinasi, dan tarikh permintaan tempahan penerbangan. Pendekatan modular ini membolehkan anda fokus pada logik aras tinggi.
 
 ### Manfaatkan Alat Kolaboratif
 
-Rangka kerja seperti CrewAI, Microsoft AutoGen, dan Semantic Kernel memudahkan penciptaan pelbagai ejen yang boleh bekerjasama.
+Rangka kerja seperti CrewAI, Microsoft AutoGen, dan Semantic Kernel memudahkan penciptaan beberapa ejen yang boleh bekerjasama.
 
-**Bagaimana pasukan boleh menggunakan ini**: Pasukan boleh mereka bentuk ejen dengan peranan dan tugas tertentu, membolehkan mereka menguji dan memperbaiki aliran kerja kolaboratif dan meningkatkan kecekapan sistem keseluruhan.
+**Bagaimana pasukan boleh gunakan ini**: Pasukan boleh mereka ejen dengan peranan dan tugas khusus, membolehkan mereka menguji dan memperhalusi aliran kerja kolaboratif serta meningkatkan kecekapan sistem keseluruhan.
 
-**Bagaimana ia berfungsi dalam amalan**: Anda boleh mencipta pasukan ejen di mana setiap ejen mempunyai fungsi khusus, seperti pengambilan data, analisis, atau membuat keputusan. Ejen ini boleh berkomunikasi dan berkongsi maklumat untuk mencapai matlamat bersama, seperti menjawab pertanyaan pengguna atau menyelesaikan tugas.
+**Bagaimana ia berfungsi dalam amalan**: Anda boleh mencipta satu pasukan ejen di mana setiap ejen mempunyai fungsi khusus, seperti pengambilan data, analisis, atau pembuatan keputusan. Ejen ini boleh berkomunikasi dan berkongsi maklumat untuk mencapai matlamat bersama, seperti menjawab pertanyaan pengguna atau menyelesaikan tugasan.
 
-**Contoh kod (AutoGen)**:
+**Kod contoh (AutoGen)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# mencipta ejen, kemudian membuat jadual round robin di mana mereka boleh bekerja bersama, dalam kes ini secara berurutan
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+# Ejen Pengambilan Data
+# Ejen Analisis Data
+# Ejen Pembuat Keputusan
 
 agent_retrieve = AssistantAgent(
     name="dataretrieval",
@@ -249,7 +249,7 @@ agent_analyze = AssistantAgent(
     system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
+# perbualan berakhir apabila pengguna berkata "APPROVE"
 termination = TextMentionTermination("APPROVE")
 
 user_proxy = UserProxyAgent("user_proxy", input_func=input)
@@ -257,42 +257,42 @@ user_proxy = UserProxyAgent("user_proxy", input_func=input)
 team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
 
 stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
+# Gunakan asyncio.run(...) apabila menjalankan dalam skrip.
 await Console(stream)
 ```
 
-Apa yang anda lihat dalam kod sebelumnya ialah bagaimana anda boleh mencipta tugas yang melibatkan pelbagai ejen bekerjasama untuk menganalisis data. Setiap ejen melaksanakan fungsi tertentu, dan tugas itu dilaksanakan dengan menyelaraskan ejen untuk mencapai hasil yang diinginkan. Dengan mencipta ejen berdedikasi dengan peranan khusus, anda boleh meningkatkan kecekapan dan prestasi tugas.
+Apa yang anda lihat dalam kod sebelumnya adalah bagaimana anda boleh mencipta tugas yang melibatkan beberapa ejen yang bekerja bersama untuk menganalisis data. Setiap ejen melaksanakan fungsi spesifik, dan tugas dilakukan dengan menyelaraskan ejen untuk mencapai hasil yang diingini. Dengan mencipta ejen khusus dengan peranan khusus, anda boleh meningkatkan kecekapan dan prestasi tugas.
 
 ### Belajar dalam Masa Nyata
 
-Rangka kerja maju menyediakan keupayaan untuk memahami konteks masa nyata dan penyesuaian.
+Rangka kerja maju menyediakan keupayaan untuk pemahaman konteks masa nyata dan penyesuaian.
 
-**Bagaimana pasukan boleh menggunakan ini**: Pasukan boleh melaksanakan gelung maklum balas di mana ejen belajar daripada interaksi dan menyesuaikan tingkah laku mereka secara dinamik, membawa kepada peningkatan berterusan dan penambahbaikan keupayaan.
+**Bagaimana pasukan boleh gunakan ini**: Pasukan boleh melaksanakan gelung maklum balas di mana ejen belajar dari interaksi dan menyesuaikan tingkah laku mereka secara dinamik, membawa kepada peningkatan dan penyempurnaan keupayaan secara berterusan.
 
-**Bagaimana ia berfungsi dalam amalan**: Ejen boleh menganalisis maklum balas pengguna, data persekitaran, dan hasil tugas untuk mengemas kini pangkalan pengetahuan mereka, menyesuaikan algoritma membuat keputusan, dan meningkatkan prestasi dari semasa ke semasa. Proses pembelajaran berulang ini membolehkan ejen menyesuaikan diri dengan keadaan yang berubah dan keutamaan pengguna, meningkatkan keberkesanan sistem keseluruhan.
+**Bagaimana ia berfungsi dalam amalan**: Ejen boleh menganalisis maklum balas pengguna, data persekitaran, dan hasil tugasan untuk mengemas kini pangkalan pengetahuan mereka, menyesuaikan algoritma pembuatan keputusan, dan meningkatkan prestasi dari masa ke masa. Proses pembelajaran iteratif ini membolehkan ejen menyesuaikan diri dengan keadaan berubah dan keutamaan pengguna, meningkatkan keberkesanan sistem keseluruhan.
 
-## Apakah perbezaan antara rangka kerja AutoGen, Semantic Kernel dan Azure AI Agent Service?
+## Apakah perbezaan antara rangka kerja AutoGen, Semantic Kernel dan Perkhidmatan Ejen Azure AI?
 
 Terdapat banyak cara untuk membandingkan rangka kerja ini, tetapi mari kita lihat beberapa perbezaan utama dari segi reka bentuk, keupayaan, dan kes penggunaan sasaran:
 
 ## AutoGen
 
-AutoGen adalah rangka kerja sumber terbuka yang dibangunkan oleh Microsoft Research's AI Frontiers Lab. Ia memberi tumpuan kepada aplikasi *agentic* yang didorong oleh peristiwa dan diedarkan, membolehkan pelbagai LLM dan SLM, alat, dan corak reka bentuk ejen berbilang maju.
+AutoGen adalah rangka kerja sumber terbuka yang dibangunkan oleh Makmal AI Frontiers Microsoft Research. Ia memfokus kepada aplikasi *agentic* yang didorong acara dan diedarkan, membolehkan pelbagai LLM dan SLM, alat, dan corak reka bentuk multi-ejen yang maju.
 
-AutoGen dibina di sekitar konsep teras ejen, iaitu entiti autonomi yang boleh memahami persekitaran mereka, membuat keputusan, dan mengambil tindakan untuk mencapai matlamat tertentu. Ejen berkomunikasi melalui mesej tak segerak, membolehkan mereka bekerja secara bebas dan selari, meningkatkan skalabiliti dan responsif sistem.
+AutoGen dibina di sekitar konsep teras ejen, yang merupakan entiti autonomi yang boleh merasakan persekitarannya, membuat keputusan, dan mengambil tindakan untuk mencapai matlamat tertentu. Ejen berkomunikasi melalui mesej tidak serentak, membolehkan mereka bekerja secara bebas dan selari, meningkatkan kebolehskalaan dan kepekaan sistem.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Ejen adalah berdasarkan model pelakon</a>. Menurut Wikipedia, pelakon adalah _blok asas pengiraan serentak. Sebagai tindak balas kepada mesej yang diterima, pelakon boleh: membuat keputusan tempatan, mencipta lebih banyak pelakon, menghantar lebih banyak mesej, dan menentukan bagaimana untuk bertindak balas terhadap mesej seterusnya yang diterima_.
+<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Ejen berdasarkan model pelakon</a>. Menurut Wikipedia, seorang pelakon adalah _blok binaan asas pengiraan serentak. Sebagai tindak balas kepada mesej yang diterimanya, pelakon boleh: membuat keputusan tempatan, mencipta lebih banyak pelakon, menghantar lebih banyak mesej, dan menentukan bagaimana untuk bertindak balas terhadap mesej seterusnya yang diterima_.
 
-**Kes Penggunaan**: Mengautomasi penjanaan kod, tugas analisis data, dan membina ejen tersuai untuk fungsi perancangan dan penyelidikan.
+**Kes Penggunaan**: Automasi penjanaan kod, tugasan analisis data, dan membina ejen khusus untuk fungsi perancangan dan penyelidikan.
 
 Berikut adalah beberapa konsep teras penting AutoGen:
 
 - **Ejen**. Ejen adalah entiti perisian yang:
-  - **Berkomunikasi melalui mesej**, mesej ini boleh menjadi segerak atau tak segerak.
+  - **Berkomunikasi melalui mesej**, mesej ini boleh serentak atau tidak serentak.
   - **Mengekalkan keadaan sendiri**, yang boleh diubah oleh mesej masuk.
-  - **Melaksanakan tindakan** sebagai tindak balas kepada mesej yang diterima atau perubahan dalam keadaannya. Tindakan ini boleh mengubah keadaan ejen dan menghasilkan kesan luaran, seperti mengemas kini log mesej, menghantar mesej baru, melaksanakan kod, atau membuat panggilan API.
+  - **Melaksanakan tindakan** sebagai tindak balas kepada mesej diterima atau perubahan dalam keadaannya. Tindakan ini mungkin mengubah keadaan ejen dan menghasilkan kesan luaran, seperti mengemas kini log mesej, menghantar mesej baru, menjalankan kod, atau membuat panggilan API.
     
-  Berikut adalah potongan kod pendek di mana anda mencipta ejen anda sendiri dengan keupayaan Chat:
+  Berikut anda mempunyai petikan kod ringkas di mana anda mencipta ejen sendiri dengan keupayaan Chat:
 
     ```python
     from autogen_agentchat.agents import AssistantAgent
@@ -315,10 +315,9 @@ Berikut adalah beberapa konsep teras penting AutoGen:
             print(f"{self.id.type} responded: {response.chat_message.content}")
     ```
     
-    Dalam kod sebelumnya, `MyAgent` telah dicipta dan mewarisi daripada `RoutedAgent`. Ia mempunyai pengendali mesej yang mencetak kandungan mesej dan kemudian menghantar respons menggunakan delegasi `AssistantAgent`. Perhatikan terutamanya bagaimana kita menetapkan kepada `self._delegate` satu instance `AssistantAgent` yang merupakan ejen yang telah dibina yang boleh mengendalikan penyelesaian chat.
+    Dalam kod sebelumnya, `MyAgent` telah dicipta dan mewarisi dari `RoutedAgent`. Ia mempunyai pengendali mesej yang mencetak kandungan mesej dan kemudian menghantar respons menggunakan delegasi `AssistantAgent`. Terutamanya perhatikan bagaimana kami menetapkan kepada `self._delegate` satu contoh `AssistantAgent` iaitu ejen siap sedia yang boleh mengendalikan penyelesaian chat.
 
-
-    Mari kita maklumkan kepada AutoGen tentang jenis ejen ini dan mulakan program seterusnya:
+    Mari beritahu AutoGen tentang jenis ejen ini dan mulakan program seterusnya:
 
     ```python
     
@@ -326,11 +325,11 @@ Berikut adalah beberapa konsep teras penting AutoGen:
     runtime = SingleThreadedAgentRuntime()
     await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
 
-    runtime.start()  # Start processing messages in the background.
+    runtime.start()  # Mulakan pemprosesan mesej di latar belakang.
     await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
     ```
 
-    Dalam kod sebelumnya ejen didaftarkan dengan runtime dan kemudian mesej dihantar kepada ejen yang menghasilkan output berikut:
+    Dalam kod sebelumnya ejen didaftar dengan runtime dan kemudian mesej dihantar kepada ejen yang menghasilkan output berikut:
 
     ```text
     # Output from the console:
@@ -339,15 +338,15 @@ Berikut adalah beberapa konsep teras penting AutoGen:
     my_assistant responded: Hello! How can I assist you today?
     ```
 
-- **Ejen Berbilang**. AutoGen menyokong penciptaan pelbagai ejen yang boleh bekerjasama untuk mencapai tugas yang kompleks. Ejen boleh berkomunikasi, berkongsi maklumat, dan menyelaraskan tindakan mereka untuk menyelesaikan masalah dengan lebih cekap. Untuk mencipta sistem ejen berbilang, anda boleh menentukan jenis ejen yang berbeza dengan fungsi dan peranan khusus, seperti pengambilan data, analisis, membuat keputusan, dan interaksi pengguna. Mari kita lihat bagaimana penciptaan sedemikian kelihatan supaya kita mendapat gambaran mengenainya:
+- **Multi ejen**. AutoGen menyokong penciptaan pelbagai ejen yang boleh bekerjasama untuk mencapai tugasan kompleks. Ejen boleh berkomunikasi, berkongsi maklumat, dan menyelaraskan tindakan mereka untuk menyelesaikan masalah dengan lebih cekap. Untuk mencipta sistem multi-ejen, anda boleh mendefinisikan jenis ejen yang berbeza dengan fungsi dan peranan khusus, seperti pengambilan data, analisis, pembuatan keputusan dan interaksi pengguna. Mari kita lihat bagaimana ciptaan sedemikian kelihatan supaya kita mendapat gambaran:
 
     ```python
     editor_description = "Editor for planning and reviewing the content."
 
-    # Example of declaring an Agent
+    # Contoh pengisytiharan Ejen
     editor_agent_type = await EditorAgent.register(
     runtime,
-    editor_topic_type,  # Using topic type as the agent type.
+    editor_topic_type,  # Menggunakan jenis topik sebagai jenis ejen.
     lambda: EditorAgent(
         description=editor_description,
         group_chat_topic_type=group_chat_topic_type,
@@ -358,9 +357,9 @@ Berikut adalah beberapa konsep teras penting AutoGen:
         ),
     )
 
-    # remaining declarations shortened for brevity
+    # pengisytiharan yang tinggal dipendekkan untuk ringkasan
 
-    # Group chat
+    # Sembang kumpulan
     group_chat_manager_type = await GroupChatManager.register(
     runtime,
     "group_chat_manager",
@@ -380,30 +379,30 @@ Berikut adalah beberapa konsep teras penting AutoGen:
     )
     ```
 
-    Dalam kod sebelumnya kita mempunyai `GroupChatManager` yang didaftarkan dengan runtime. Pengurus ini bertanggungjawab untuk menyelaraskan interaksi antara jenis ejen yang berbeza, seperti penulis, ilustrator, editor, dan pengguna.
+    Dalam kod sebelumnya kami mempunyai `GroupChatManager` yang didaftarkan dengan runtime. Pengurus ini bertanggungjawab untuk menyelaraskan interaksi antara jenis ejen yang berbeza, seperti penulis, pelukis ilustrasi, editor, dan pengguna.
 
-- **Runtime Ejen**. Rangka kerja menyediakan persekitaran runtime, membolehkan komunikasi antara ejen, mengurus identiti dan kitaran hayat mereka, dan menguatkuasakan sempadan keselamatan dan privasi. Ini bermakna anda boleh menjalankan ejen anda dalam persekitaran yang selamat dan terkawal, memastikan mereka boleh berinteraksi dengan selamat dan cekap. Terdapat dua runtime yang menarik:
-  - **Runtime berdiri sendiri**. Ini adalah pilihan yang baik untuk aplikasi proses tunggal di mana semua ejen dilaksanakan dalam bahasa pengaturcaraan yang sama dan berjalan dalam proses yang sama. Berikut adalah ilustrasi bagaimana ia berfungsi:
+- **Runtime Ejen**. Rangka kerja menyediakan persekitaran runtime, membolehkan komunikasi antara ejen, menguruskan identiti dan kitar hayat mereka, dan menguatkuasakan sempadan keselamatan dan privasi. Ini bermakna anda boleh menjalankan ejen anda dalam persekitaran yang selamat dan terkawal, memastikan mereka boleh berinteraksi dengan selamat dan cekap. Terdapat dua runtime yang menarik perhatian:
+  - **Runtime berdiri sendiri**. Ini adalah pilihan yang baik untuk aplikasi proses tunggal di mana semua ejen dilaksanakan dalam bahasa pengaturcaraan yang sama dan berjalan dalam proses yang sama. Berikut ialah ilustrasi bagaimana ia berfungsi:
   
     <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Runtime berdiri sendiri</a>   
 Tumpukan aplikasi
 
-    *ejen berkomunikasi melalui mesej melalui runtime, dan runtime menguruskan kitaran hayat ejen*
+    *ejen berkomunikasi melalui mesej melalui runtime, dan runtime menguruskan kitar hayat ejen*
 
-  - **Runtime ejen diedarkan**, sesuai untuk aplikasi berbilang proses di mana ejen mungkin dilaksanakan dalam bahasa pengaturcaraan yang berbeza dan berjalan pada mesin yang berbeza. Berikut adalah ilustrasi bagaimana ia berfungsi:
+  - **Runtime ejen diedarkan**, sesuai untuk aplikasi berbilang proses di mana ejen mungkin dilaksanakan dalam bahasa pengaturcaraan yang berbeza dan berjalan pada mesin berbeza. Berikut ialah ilustrasi bagaimana ia berfungsi:
   
     <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">Runtime diedarkan</a>
 
 ## Semantic Kernel + Rangka Kerja Ejen
 
-Semantic Kernel adalah SDK Orkestrasi AI yang sedia untuk perusahaan. Ia terdiri daripada penyambung AI dan memori, bersama dengan Rangka Kerja Ejen.
+Semantic Kernel adalah SDK Orkestrasi AI siap perusahaan. Ia terdiri daripada penyambung AI dan memori, bersama dengan Rangka Kerja Ejen.
 
-Mari kita mula-mula merangkumi beberapa komponen teras:
+Mari mula dengan beberapa komponen teras:
 
 - **Penyambung AI**: Ini adalah antara muka dengan perkhidmatan AI luaran dan sumber data untuk digunakan dalam Python dan C#.
 
   ```python
-  # Semantic Kernel Python
+  # Kernel Semantik Python
   from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
   from semantic_kernel.kernel import Kernel
 
@@ -433,9 +432,9 @@ Mari kita mula-mula merangkumi beberapa komponen teras:
     var kernel = builder.Build();
     ```
 
-    Di sini anda mempunyai contoh mudah bagaimana anda boleh mencipta kernel dan menambah perkhidmatan penyelesaian chat. Semantic Kernel mencipta sambungan kepada perkhidmatan AI luaran, dalam kes ini, Azure OpenAI Chat Completion.
+    Di sini anda mempunyai contoh ringkas bagaimana anda boleh mencipta kernel dan menambah perkhidmatan penyelesaian chat. Semantic Kernel mewujudkan sambungan ke perkhidmatan AI luaran, dalam kes ini, Penyelesaian Chat Azure OpenAI.
 
-- **Plugin**: Ini merangkumi fungsi yang boleh digunakan oleh aplikasi. Terdapat plugin yang telah sedia ada dan plugin tersuai yang boleh anda cipta. Konsep berkaitan adalah "fungsi arahan." Daripada memberikan petunjuk bahasa semula jadi untuk pemanggilan fungsi, anda menyiarkan fungsi tertentu kepada model. Berdasarkan konteks chat semasa, model mungkin memilih untuk memanggil salah satu fungsi ini untuk melengkapkan permintaan atau pertanyaan. Berikut adalah contoh:
+- **Plugin**: Ini mengandungi fungsi yang boleh digunakan oleh aplikasi. Terdapat kedua-dua plugin siap dan plugin tersuai yang anda boleh cipta. Konsep berkaitan ialah "fungsi prompt." Daripada memberikan petunjuk bahasa semula jadi untuk panggilan fungsi, anda menyiarkan fungsi tertentu kepada model. Berdasarkan konteks chat semasa, model mungkin memilih untuk memanggil salah satu fungsi ini untuk melengkapkan permintaan atau pertanyaan. Berikut adalah contoh:
 
   ```python
   from semantic_kernel.connectors.ai.open_ai.services.azure_chat_completion import AzureChatCompletion
@@ -492,9 +491,9 @@ Mari kita mula-mula merangkumi beberapa komponen teras:
 
     ```
 
-    Di sini, anda mula-mula mempunyai templat arahan `skPrompt` yang meninggalkan ruang untuk pengguna memasukkan teks, `$userInput`. Kemudian anda mencipta fungsi kernel `SummarizeText` dan kemudian mengimportnya ke dalam kernel dengan nama plugin `SemanticFunctions`. Perhatikan nama fungsi yang membantu Semantic Kernel memahami apa yang dilakukan oleh fungsi dan bila ia harus dipanggil.
+    Di sini, anda mula-mula mempunyai templat prompt `skPrompt` yang membenarkan ruang untuk pengguna memasukkan teks, `$userInput`. Kemudian anda cipta fungsi kernel `SummarizeText` dan import ke dalam kernel dengan nama plugin `SemanticFunctions`. Perhatikan nama fungsi yang membantu Semantic Kernel memahami apa yang fungsi itu lakukan dan bila ia perlu dipanggil.
 
-- **Fungsi Asli**: Terdapat juga fungsi asli yang boleh dipanggil oleh rangka kerja secara langsung untuk melaksanakan tugas. Berikut adalah contoh fungsi sedemikian yang mendapatkan kandungan daripada fail:
+- **Fungsi asli**: Terdapat juga fungsi asli yang boleh dipanggil terus oleh rangka kerja untuk menjalankan tugasan. Berikut adalah contoh fungsi sebegitu yang mengambil kandungan daripada fail:
 
     ```csharp
     public class NativeFunctions {
@@ -517,7 +516,7 @@ Mari kita mula-mula merangkumi beberapa komponen teras:
 
     ```
 
-- **Memori**: Abstrak dan mempermudah pengurusan konteks untuk aplikasi AI. Idea dengan memori adalah bahawa ini adalah sesuatu yang harus diketahui oleh LLM. Anda boleh menyimpan maklumat ini dalam stor vektor yang akhirnya menjadi pangkalan data dalam memori atau pangkalan data vektor atau serupa. Berikut adalah contoh senario yang sangat dipermudahkan di mana *fakta* ditambahkan ke dalam memori:
+- **Memori**: Merangkum dan memudahkan pengurusan konteks untuk aplikasi AI. Idea dengan memori adalah bahawa ini adalah sesuatu yang LLM perlu ketahui. Anda boleh menyimpan maklumat ini dalam stor vektor yang akhirnya menjadi pangkalan data dalam memori atau pangkalan data vektor atau yang serupa. Berikut adalah contoh senario yang sangat dipermudahkan di mana *fakta* ditambah ke dalam memori:
 
     ```csharp
     var facts = new Dictionary<string,string>();
@@ -547,21 +546,21 @@ Mari kita mula-mula merangkumi beberapa komponen teras:
     }
     ```
 
-Fakta-fakta ini kemudian disimpan dalam koleksi memori `SummarizedAzureDocs`. Ini adalah contoh yang sangat ringkas, tetapi anda dapat melihat bagaimana maklumat boleh disimpan dalam memori untuk digunakan oleh LLM.
+    Fakta-fakta ini kemudian disimpan dalam koleksi memori `SummarizedAzureDocs`. Ini adalah contoh yang sangat mudah, tetapi anda boleh lihat bagaimana anda boleh menyimpan maklumat dalam memori untuk digunakan oleh LLM.
 
-Jadi, itulah asas rangka kerja Semantic Kernel, bagaimana pula dengan Agent Framework?
+Jadi itulah asas rangka kerja Semantic Kernel, bagaimana pula dengan Rangka Kerja Agen?
 
-## Perkhidmatan Azure AI Agent
+## Perkhidmatan Agen Azure AI
 
-Perkhidmatan Azure AI Agent adalah tambahan yang lebih baru, diperkenalkan di Microsoft Ignite 2024. Ia membolehkan pembangunan dan penyebaran agen AI dengan model yang lebih fleksibel, seperti memanggil LLM sumber terbuka secara langsung seperti Llama 3, Mistral, dan Cohere.
+Perkhidmatan Agen Azure AI adalah penambahan terbaru, diperkenalkan di Microsoft Ignite 2024. Ia membolehkan pembangunan dan penyebaran agen AI dengan model yang lebih fleksibel, seperti memanggil terus LLM sumber terbuka seperti Llama 3, Mistral, dan Cohere.
 
-Perkhidmatan Azure AI Agent menyediakan mekanisme keselamatan perusahaan yang lebih kuat dan kaedah penyimpanan data, menjadikannya sesuai untuk aplikasi perusahaan.
+Perkhidmatan Agen Azure AI menyediakan mekanisme keselamatan perusahaan yang lebih kukuh dan kaedah penyimpanan data, menjadikannya sesuai untuk aplikasi perusahaan.
 
-Ia berfungsi secara langsung dengan rangka kerja orkestrasi multi-agen seperti AutoGen dan Semantic Kernel.
+Ia berfungsi terus dengan rangka kerja orkestrasi multi-agen seperti AutoGen dan Semantic Kernel.
 
 Perkhidmatan ini kini dalam Pratonton Awam dan menyokong Python dan C# untuk membina agen.
 
-Menggunakan Semantic Kernel Python, kita boleh mencipta Azure AI Agent dengan plugin yang ditentukan pengguna:
+Menggunakan Semantic Kernel Python, kita boleh membuat Agen Azure AI dengan plugin yang ditakrifkan pengguna:
 
 ```python
 import asyncio
@@ -575,7 +574,7 @@ from semantic_kernel.contents import AuthorRole
 from semantic_kernel.functions import kernel_function
 
 
-# Define a sample plugin for the sample
+# Tentukan plugin contoh untuk sampel
 class MenuPlugin:
     """A sample Menu Plugin used for the concept sample."""
 
@@ -604,23 +603,23 @@ async def main() -> None:
             conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
         ) as client,
     ):
-        # Create agent definition
+        # Buat definisi ejen
         agent_definition = await client.agents.create_agent(
             model=ai_agent_settings.model_deployment_name,
             name="Host",
             instructions="Answer questions about the menu.",
         )
 
-        # Create the AzureAI Agent using the defined client and agent definition
+        # Buat Ejen AzureAI menggunakan klien dan definisi ejen yang ditakrifkan
         agent = AzureAIAgent(
             client=client,
             definition=agent_definition,
             plugins=[MenuPlugin()],
         )
 
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
+        # Cipta utas untuk menampung perbualan
+        # Jika tiada utas disediakan, sebuah utas baru akan
+        # dibuat dan dikembalikan dengan respons awal
         thread: AzureAIAgentThread | None = None
 
         user_inputs = [
@@ -633,7 +632,7 @@ async def main() -> None:
         try:
             for user_input in user_inputs:
                 print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
+                # Panggil ejen untuk utas yang ditentukan
                 response = await agent.get_response(
                     messages=user_input,
                     thread_id=thread,
@@ -649,11 +648,11 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### Konsep Teras
+### Konsep teras
 
-Perkhidmatan Azure AI Agent mempunyai konsep teras berikut:
+Perkhidmatan Agen Azure AI mempunyai konsep teras berikut:
 
-- **Agen**. Perkhidmatan Azure AI Agent berintegrasi dengan Azure AI Foundry. Dalam AI Foundry, Agen AI bertindak sebagai mikroservis "pintar" yang boleh digunakan untuk menjawab soalan (RAG), melaksanakan tindakan, atau mengautomasikan aliran kerja sepenuhnya. Ia mencapai ini dengan menggabungkan kuasa model AI generatif dengan alat yang membolehkannya mengakses dan berinteraksi dengan sumber data dunia nyata. Berikut adalah contoh agen:
+- **Agen**. Perkhidmatan Agen Azure AI berintegrasi dengan Microsoft Foundry. Dalam AI Foundry, Agen AI bertindak sebagai mikroservis "pintar" yang boleh digunakan untuk menjawab soalan (RAG), melaksanakan tindakan, atau mengautomasikan alur kerja sepenuhnya. Ia mencapai ini dengan menggabungkan kuasa model AI generatif dengan alat yang membolehkannya mengakses dan berinteraksi dengan sumber data dunia nyata. Berikut adalah contoh agen:
 
     ```python
     agent = project_client.agents.create_agent(
@@ -665,9 +664,9 @@ Perkhidmatan Azure AI Agent mempunyai konsep teras berikut:
     )
     ```
 
-    Dalam contoh ini, agen dicipta dengan model `gpt-4o-mini`, nama `my-agent`, dan arahan `You are helpful agent`. Agen ini dilengkapi dengan alat dan sumber untuk melaksanakan tugas interpretasi kod.
+    Dalam contoh ini, agen dicipta dengan model `gpt-4o-mini`, nama `my-agent`, dan arahan `You are helpful agent`. Agen ini dilengkapi dengan alat dan sumber untuk melaksanakan tugas tafsiran kod.
 
-- **Thread dan mesej**. Thread adalah konsep penting yang lain. Ia mewakili perbualan atau interaksi antara agen dan pengguna. Thread boleh digunakan untuk menjejaki kemajuan perbualan, menyimpan maklumat konteks, dan menguruskan keadaan interaksi. Berikut adalah contoh thread:
+- **Thread dan mesej**. Thread adalah konsep penting lain. Ia mewakili perbualan atau interaksi antara agen dan pengguna. Thread boleh digunakan untuk mengesan kemajuan perbualan, menyimpan maklumat konteks, dan menguruskan keadaan interaksi. Berikut adalah contoh thread:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -685,89 +684,89 @@ Perkhidmatan Azure AI Agent mempunyai konsep teras berikut:
     print(f"Messages: {messages}")
     ```
 
-    Dalam kod sebelumnya, thread dicipta. Selepas itu, mesej dihantar ke thread. Dengan memanggil `create_and_process_run`, agen diminta untuk melaksanakan kerja pada thread. Akhirnya, mesej diambil dan direkodkan untuk melihat respons agen. Mesej menunjukkan kemajuan perbualan antara pengguna dan agen. Penting juga untuk memahami bahawa mesej boleh terdiri daripada pelbagai jenis seperti teks, imej, atau fail, yang mana kerja agen menghasilkan, contohnya, imej atau respons teks. Sebagai pembangun, anda boleh menggunakan maklumat ini untuk memproses respons lebih lanjut atau menyampaikannya kepada pengguna.
+    Dalam kod sebelumnya, satu thread dicipta. Kemudian, satu mesej dihantar ke thread tersebut. Dengan memanggil `create_and_process_run`, agen diminta untuk melakukan kerja pada thread itu. Akhirnya, mesej diambil dan direkod untuk melihat respons agen. Mesej-mesej menunjukkan kemajuan perbualan antara pengguna dan agen. Penting juga untuk memahami bahawa mesej boleh dalam pelbagai jenis seperti teks, imej, atau fail; ini menunjukkan kerja agen seperti contohnya respons imej atau teks. Sebagai pembangun, anda boleh menggunakan maklumat ini untuk memproses respons lebih lanjut atau membentangkannya kepada pengguna.
 
-- **Berintegrasi dengan rangka kerja AI lain**. Perkhidmatan Azure AI Agent boleh berinteraksi dengan rangka kerja lain seperti AutoGen dan Semantic Kernel, yang bermaksud anda boleh membina sebahagian aplikasi anda dalam salah satu rangka kerja ini dan contohnya menggunakan perkhidmatan Agen sebagai pengatur atau anda boleh membina semuanya dalam perkhidmatan Agen.
+- **Berintegrasi dengan rangka kerja AI lain**. Perkhidmatan Agen Azure AI boleh berinteraksi dengan rangka kerja lain seperti AutoGen dan Semantic Kernel, yang bermakna anda boleh membina sebahagian aplikasi anda dalam salah satu rangka kerja ini dan contohnya menggunakan Perkhidmatan Agen sebagai pengorkestrasian atau anda boleh membina semuanya dalam Perkhidmatan Agen.
 
-**Kes Penggunaan**: Perkhidmatan Azure AI Agent direka untuk aplikasi perusahaan yang memerlukan penyebaran agen AI yang selamat, boleh diskalakan, dan fleksibel.
+**Kes Penggunaan**: Perkhidmatan Agen Azure AI direka untuk aplikasi perusahaan yang memerlukan penyebaran agen AI yang selamat, boleh diskala, dan fleksibel.
 
-## Apakah perbezaan antara rangka kerja ini?
+## Apakah perbezaan antara rangka kerja-rangka kerja ini?
 
-Nampaknya terdapat banyak persamaan antara rangka kerja ini, tetapi terdapat beberapa perbezaan utama dari segi reka bentuk, keupayaan, dan kes penggunaan sasaran:
+Ini memang kedengaran ada banyak pertindihan antara rangka kerja ini, tetapi terdapat beberapa perbezaan utama dari segi reka bentuk, keupayaan, dan kes penggunaan sasaran:
 
-- **AutoGen**: Adalah rangka kerja eksperimen yang memberi tumpuan kepada penyelidikan terkini mengenai sistem multi-agen. Ia adalah tempat terbaik untuk bereksperimen dan membuat prototaip sistem multi-agen yang canggih.
-- **Semantic Kernel**: Adalah perpustakaan agen yang sedia untuk pengeluaran untuk membina aplikasi agen perusahaan. Memberi tumpuan kepada aplikasi agen yang didorong oleh acara, diedarkan, membolehkan pelbagai LLM dan SLM, alat, dan corak reka bentuk agen tunggal/multi.
-- **Azure AI Agent Service**: Adalah platform dan perkhidmatan penyebaran dalam Azure Foundry untuk agen. Ia menawarkan sambungan kepada perkhidmatan yang disokong oleh Azure seperti Azure OpenAI, Azure AI Search, Bing Search dan pelaksanaan kod.
+- **AutoGen**: Adalah rangka kerja eksperimen yang menumpukan pada penyelidikan termaju tentang sistem multi-agen. Ia adalah tempat terbaik untuk bereksperimen dan membuat prototaip sistem multi-agen yang kompleks.
+- **Semantic Kernel**: Adalah perpustakaan agen yang siap untuk pengeluaran bagi membina aplikasi agen berasaskan perusahaan. Menumpukan pada aplikasi agen berasaskan peristiwa yang diedarkan, membolehkan pelbagai LLM dan SLM, alat, dan corak reka bentuk agen tunggal/berbilang.
+- **Perkhidmatan Agen Azure AI**: Adalah platform dan perkhidmatan penyebaran dalam Azure Foundry untuk agen. Ia menawarkan sambungan kepada perkhidmatan disokong oleh Azure Foundry seperti Azure OpenAI, Azure AI Search, Bing Search dan pelaksanaan kod.
 
-Masih tidak pasti mana yang hendak dipilih?
+Masih tidak pasti yang mana satu untuk dipilih?
 
 ### Kes Penggunaan
 
-Mari kita lihat jika kita boleh membantu anda dengan melalui beberapa kes penggunaan biasa:
+Mari kita lihat jika kami boleh membantu anda dengan meneliti beberapa kes penggunaan biasa:
 
-> S: Saya sedang bereksperimen, belajar dan membina aplikasi agen bukti konsep, dan saya mahu dapat membina dan bereksperimen dengan cepat
+> Q: Saya sedang bereksperimen, belajar dan membina aplikasi agen sebagai bukti konsep, dan saya mahu dapat membina dan bereksperimen dengan cepat
 >
 
->J: AutoGen akan menjadi pilihan yang baik untuk senario ini, kerana ia memberi tumpuan kepada aplikasi agen yang didorong oleh acara, diedarkan dan menyokong corak reka bentuk multi-agen yang canggih.
+> A: AutoGen adalah pilihan yang baik untuk senario ini, kerana ia memberi tumpuan kepada aplikasi agen berasaskan peristiwa yang diedarkan dan menyokong corak reka bentuk multi-agen maju.
 
-> S: Apa yang menjadikan AutoGen pilihan yang lebih baik daripada Semantic Kernel dan Azure AI Agent Service untuk kes penggunaan ini?
+> Q: Apakah yang menjadikan AutoGen pilihan lebih baik berbanding Semantic Kernel dan Perkhidmatan Agen Azure AI untuk kes penggunaan ini?
 >
-> J: AutoGen direka khusus untuk aplikasi agen yang didorong oleh acara, diedarkan, menjadikannya sangat sesuai untuk mengautomasikan penjanaan kod dan tugas analisis data. Ia menyediakan alat dan keupayaan yang diperlukan untuk membina sistem multi-agen yang kompleks dengan cekap.
+> A: AutoGen direka khas untuk aplikasi agen berasaskan peristiwa yang diedarkan, menjadikannya sesuai untuk mengautomasikan penjanaan kod dan tugas analisis data. Ia menyediakan alat dan keupayaan yang diperlukan untuk membina sistem multi-agen yang kompleks dengan cekap.
 
->S: Nampaknya Azure AI Agent Service juga boleh berfungsi di sini, ia mempunyai alat untuk penjanaan kod dan banyak lagi?
+> Q: Nampaknya Perkhidmatan Agen Azure AI juga boleh berfungsi di sini, ia mempunyai alat untuk penjanaan kod dan banyak lagi?
 
 >
-> J: Ya, Azure AI Agent Service adalah perkhidmatan platform untuk agen dan menambah keupayaan terbina dalam untuk pelbagai model, Azure AI Search, Bing Search dan Azure Functions. Ia memudahkan untuk membina agen anda di Foundry Portal dan menyebarkannya pada skala.
- 
-> S: Saya masih keliru, berikan saya satu pilihan sahaja
+> A: Ya, Perkhidmatan Agen Azure AI adalah perkhidmatan platform untuk agen dan menambah keupayaan terbina dalam untuk pelbagai model, Azure AI Search, Bing Search dan Azure Functions. Ia memudahkan anda membina agen anda di Portal Foundry dan menyebarkannya secara berskala.
+
+> Q: Saya masih keliru, berikan saya satu pilihan sahaja
 >
-> J: Pilihan yang hebat adalah untuk membina aplikasi anda dalam Semantic Kernel terlebih dahulu dan kemudian menggunakan Azure AI Agent Service untuk menyebarkan agen anda. Pendekatan ini membolehkan anda dengan mudah mengekalkan agen anda sambil memanfaatkan kuasa untuk membina sistem multi-agen dalam Semantic Kernel. Selain itu, Semantic Kernel mempunyai penyambung dalam AutoGen, menjadikannya mudah untuk menggunakan kedua-dua rangka kerja bersama-sama.
+> A: Pilihan terbaik adalah membina aplikasi anda di Semantic Kernel terlebih dahulu dan kemudian menggunakan Perkhidmatan Agen Azure AI untuk menyebarkan agen anda. Pendekatan ini membolehkan anda mengekalkan agen anda dengan mudah sambil memanfaatkan keupayaan untuk membina sistem multi-agen dalam Semantic Kernel. Selain itu, Semantic Kernel mempunyai penyambung dalam AutoGen, menjadikannya mudah untuk menggunakan kedua-dua rangka kerja bersama-sama.
 
 Mari kita ringkaskan perbezaan utama dalam jadual:
 
 | Rangka Kerja | Fokus | Konsep Teras | Kes Penggunaan |
 | --- | --- | --- | --- |
-| AutoGen | Aplikasi agen yang didorong oleh acara, diedarkan | Agen, Persona, Fungsi, Data | Penjanaan kod, tugas analisis data |
+| AutoGen | Aplikasi agen berasaskan peristiwa yang diedarkan | Agen, Personas, Fungsi, Data | Penjanaan kod, tugas analisis data |
 | Semantic Kernel | Memahami dan menjana kandungan teks seperti manusia | Agen, Komponen Modular, Kolaborasi | Pemahaman bahasa semula jadi, penjanaan kandungan |
-| Azure AI Agent Service | Model fleksibel, keselamatan perusahaan, Penjanaan kod, Panggilan alat | Modulariti, Kolaborasi, Orkestrasi Proses | Penyebaran agen AI yang selamat, boleh diskalakan, dan fleksibel |
+| Perkhidmatan Agen Azure AI | Model fleksibel, keselamatan perusahaan, Penjanaan kod, Panggilan alat | Modulasi, Kolaborasi, Orkestrasi Proses | Penyebaran agen AI yang selamat, boleh diskala dan fleksibel |
 
 Apakah kes penggunaan ideal untuk setiap rangka kerja ini?
 
-## Bolehkah saya mengintegrasikan alat ekosistem Azure sedia ada saya secara langsung, atau adakah saya memerlukan penyelesaian yang berdiri sendiri?
+## Bolehkah saya mengintegrasi alat ekosistem Azure saya yang sedia ada secara langsung, atau adakah saya memerlukan penyelesaian berdiri sendiri?
 
-Jawapannya adalah ya, anda boleh mengintegrasikan alat ekosistem Azure sedia ada anda secara langsung dengan Azure AI Agent Service terutamanya, kerana ia dibina untuk berfungsi dengan lancar dengan perkhidmatan Azure yang lain. Sebagai contoh, anda boleh mengintegrasikan Bing, Azure AI Search, dan Azure Functions. Terdapat juga integrasi mendalam dengan Azure AI Foundry.
+Jawapannya ialah ya, anda boleh mengintegrasi alat ekosistem Azure sedia ada anda secara langsung dengan Perkhidmatan Agen Azure AI khususnya, ini kerana ia telah dibina untuk berfungsi lancar dengan perkhidmatan Azure lain. Anda boleh contohnya mengintegrasi Bing, Azure AI Search, dan Azure Functions. Terdapat juga integrasi mendalam dengan Microsoft Foundry.
 
-Untuk AutoGen dan Semantic Kernel, anda juga boleh mengintegrasikan dengan perkhidmatan Azure, tetapi ia mungkin memerlukan anda memanggil perkhidmatan Azure dari kod anda. Cara lain untuk mengintegrasikan adalah dengan menggunakan SDK Azure untuk berinteraksi dengan perkhidmatan Azure dari agen anda. Selain itu, seperti yang disebutkan, anda boleh menggunakan Azure AI Agent Service sebagai pengatur untuk agen anda yang dibina dalam AutoGen atau Semantic Kernel yang akan memberikan akses mudah ke ekosistem Azure.
+Untuk AutoGen dan Semantic Kernel, anda juga boleh mengintegrasi dengan perkhidmatan Azure, tetapi mungkin memerlukan anda memanggil perkhidmatan Azure dari kod anda. Cara lain untuk mengintegrasi ialah menggunakan Azure SDK untuk berinteraksi dengan perkhidmatan Azure dari agen anda. Selain itu, seperti yang disebutkan, anda boleh gunakan Perkhidmatan Agen Azure AI sebagai pengorkestrasian untuk agen anda yang dibina dalam AutoGen atau Semantic Kernel yang memberikannya akses mudah ke ekosistem Azure.
 
 ## Kod Contoh
 
 - Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## Ada Lagi Soalan tentang Rangka Kerja AI Agent?
+## Ada Lagi Soalan tentang Rangka Kerja Agen AI?
 
-Sertai [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) untuk bertemu dengan pelajar lain, menghadiri waktu pejabat dan mendapatkan jawapan kepada soalan AI Agents anda.
+Sertai [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) untuk berjumpa dengan pembelajar lain, hadir waktu pejabat dan dapatkan soalan anda berkenaan Agen AI dijawab.
 
 ## Rujukan
 
-- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
+- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Perkhidmatan Agen Azure AI</a>
 - <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel dan AutoGen</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Menggunakan Azure AI Agent Service dengan AutoGen / Semantic Kernel untuk membina penyelesaian multi-agen</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Perkhidmatan Agen Azure AI</a>
+- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Menggunakan Perkhidmatan Agen Azure AI dengan AutoGen / Semantic Kernel untuk membina penyelesaian multi-agen</a>
 
 ## Pelajaran Sebelumnya
 
-[Pengenalan kepada AI Agents dan Kes Penggunaan Agen](../01-intro-to-ai-agents/README.md)
+[Pengenalan kepada Agen AI dan Kes Penggunaan Agen](../01-intro-to-ai-agents/README.md)
 
 ## Pelajaran Seterusnya
 
-[Memahami Corak Reka Bentuk Agen](../03-agentic-design-patterns/README.md)
+[Memahami Corak Reka Bentuk Agenik](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk mencapai ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidakakuratan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber yang sahih. Untuk maklumat penting, disyorkan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

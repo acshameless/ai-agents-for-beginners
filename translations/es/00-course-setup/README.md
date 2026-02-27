@@ -1,64 +1,64 @@
-# Configuración del Curso
+# Course Setup
 
-## Introducción
+## Introduction
 
-Esta lección cubrirá cómo ejecutar los ejemplos de código de este curso.
+This lesson will cover how to run the code samples of this course.
 
-## Únete a Otros Estudiantes y Obtén Ayuda
+## Join Other Learners and Get Help
 
-Antes de comenzar a clonar tu repositorio, únete al [canal de Discord AI Agents For Beginners](https://aka.ms/ai-agents/discord) para obtener ayuda con la configuración, resolver cualquier duda sobre el curso o conectarte con otros estudiantes.
+Before you begin cloning your repo, join the [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) to get any help with setup, any questions about the course, or to connect with other learners.
 
-## Clona o Haz un Fork de este Repositorio
+## Clone or Fork this Repo
 
-Para comenzar, por favor clona o haz un fork del repositorio de GitHub. Esto creará tu propia versión del material del curso para que puedas ejecutar, probar y modificar el código.
+To begin, please clone or fork the GitHub Repository. This will make your own version of the course material so that you can run, test, and tweak the code!
 
-Esto se puede hacer haciendo clic en el enlace para <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">hacer un fork del repositorio</a>
+This can be done by clicking the link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">hacer un fork del repositorio</a>
 
-Ahora deberías tener tu propia versión del curso en el siguiente enlace:
+You should now have your own forked version of this course in the following link:
 
-![Repositorio Forkeado](../../../translated_images/es/forked-repo.33f27ca1901baa6a.webp)
+![Repositorio bifurcado](../../../translated_images/es/forked-repo.33f27ca1901baa6a.webp)
 
-### Clonación Superficial (recomendada para talleres / Codespaces)
+### Shallow Clone (recommended for workshop / Codespaces)
 
-  >El repositorio completo puede ser grande (~3 GB) cuando descargas todo el historial y todos los archivos. Si solo estás asistiendo al taller o necesitas solo algunas carpetas de lecciones, una clonación superficial (o clonación parcial) evita la mayor parte de esa descarga truncando el historial y/o omitiendo blobs.
+  >The full repository can be large (~3 GB) when you download full history and all files. If you're only attending the workshop or only need a few lesson folders, a shallow clone (or a sparse clone) avoids most of that download by truncating history and/or skipping blobs.
 
-#### Clonación superficial rápida — historial mínimo, todos los archivos
+#### Quick shallow clone — minimal history, all files
 
-Reemplaza `<your-username>` en los comandos a continuación con la URL de tu fork (o la URL original si lo prefieres).
+Replace `<your-username>` in the below commands with your fork URL (or the upstream URL if you prefer).
 
-Para clonar solo el historial del último commit (descarga pequeña):
+To clone only the latest commit history (small download):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Para clonar una rama específica:
+To clone a specific branch:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Clonación parcial (sparse) — blobs mínimos + solo carpetas seleccionadas
+#### Partial (sparse) clone — minimal blobs + only selected folders
 
-Esto utiliza clonación parcial y sparse-checkout (requiere Git 2.25+ y se recomienda una versión moderna de Git con soporte para clonación parcial):
+This uses partial clone and sparse-checkout (requires Git 2.25+ and recommended modern Git with partial clone support):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Accede a la carpeta del repositorio:
+Traverse into the repo folder:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Luego especifica qué carpetas deseas (el ejemplo a continuación muestra dos carpetas):
+Then specify which folders you want (example below shows two folders):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-Después de clonar y verificar los archivos, si solo necesitas los archivos y quieres liberar espacio (sin historial de git), por favor elimina los metadatos del repositorio (💀irreversible — perderás toda la funcionalidad de Git: no commits, pulls, pushes ni acceso al historial).
+After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality: no commits, pulls, pushes, or history access).
 
 ```bash
 # zsh/bash
@@ -70,52 +70,51 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Usando GitHub Codespaces (recomendado para evitar descargas locales grandes)
+#### Using GitHub Codespaces (recommended to avoid local large downloads)
 
-- Crea un nuevo Codespace para este repositorio a través de la [interfaz de GitHub](https://github.com/codespaces).  
+- Create a new Codespace for this repo via the [GitHub UI](https://github.com/codespaces).  
 
-- En el terminal del Codespace recién creado, ejecuta uno de los comandos de clonación superficial/parcial mencionados anteriormente para traer solo las carpetas de lecciones que necesitas al espacio de trabajo de Codespaces.
-- Opcional: después de clonar dentro de Codespaces, elimina .git para recuperar espacio adicional (consulta los comandos de eliminación anteriores).
-- Nota: Si prefieres abrir el repositorio directamente en Codespaces (sin una clonación adicional), ten en cuenta que Codespaces construirá el entorno devcontainer y aún puede provisionar más de lo que necesitas. Clonar una copia superficial dentro de un Codespace nuevo te da más control sobre el uso del disco.
+- In the terminal of the newly created codespace, run one of the shallow/sparse clone commands above to bring only the lesson folders you need into the Codespace workspace.
+- Optional: after cloning inside Codespaces, remove .git to reclaim extra space (see removal commands above).
+- Note: If you prefer to open the repo directly in Codespaces (without an extra clone), be aware Codespaces will construct the devcontainer environment and may still provision more than you need. Cloning a shallow copy inside a fresh Codespace gives you more control over disk usage.
 
-#### Consejos
+#### Tips
 
-- Siempre reemplaza la URL de clonación con tu fork si deseas editar/realizar commits.
-- Si más adelante necesitas más historial o archivos, puedes obtenerlos o ajustar sparse-checkout para incluir carpetas adicionales.
+- Always replace the clone URL with your fork if you want to edit/commit.
+- If you later need more history or files, you can fetch them or adjust sparse-checkout to include additional folders.
 
-## Ejecutando el Código
+## Running the Code
 
-Este curso ofrece una serie de Jupyter Notebooks que puedes ejecutar para obtener experiencia práctica construyendo Agentes de IA.
+This course offers a series of Jupyter Notebooks that you can run with to get hands-on experience building AI Agents.
 
-Los ejemplos de código utilizan:
+The code samples use either:
 
-**Requiere Cuenta de GitHub - Gratis**:
+**Requires GitHub Account - Free**:
 
-1) Marco de Agente Semantic Kernel + Marketplace de Modelos de GitHub. Etiquetado como (semantic-kernel.ipynb)
-2) Marco AutoGen + Marketplace de Modelos de GitHub. Etiquetado como (autogen.ipynb)
+1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Labelled as (semantic-kernel.ipynb)
+2) AutoGen Framework + GitHub Models Marketplace. Labeled as (autogen.ipynb)
 
-**Requiere Suscripción a Azure**:
+**Requires Azure Subscription**:
+3) Azure AI Foundry + Azure AI Agent Service. Labelled as (azureaiagent.ipynb)
 
-3) Azure AI Foundry + Servicio de Agente de Azure AI. Etiquetado como (azureaiagent.ipynb)
+We encourage you to try out all three types of examples to see which one works best for you.
 
-Te animamos a probar los tres tipos de ejemplos para ver cuál funciona mejor para ti.
+Whichever option you choose, it will determine which setup steps you need to follow below:
 
-La opción que elijas determinará qué pasos de configuración necesitas seguir a continuación:
-
-## Requisitos
+## Requirements
 
 - Python 3.12+
-  - **NOTA**: Si no tienes Python 3.12 instalado, asegúrate de instalarlo. Luego crea tu entorno virtual usando python3.12 para garantizar que las versiones correctas se instalen desde el archivo requirements.txt.
+  - **NOTA**: If you don't have Python3.12 installed, ensure you install it.  Then create your venv using python3.12 to ensure the correct versions are installed from the requirements.txt file.
   
-    >Ejemplo
+    >Example
 
-    Crea un directorio de entorno virtual de Python:
+    Create Python venv directory:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    Luego activa el entorno virtual para:
+    Then activate venv environment for:
 
     ```bash
     # zsh/bash
@@ -127,113 +126,79 @@ La opción que elijas determinará qué pasos de configuración necesitas seguir
     venv\Scripts\activate
     ```
 
-- .NET 10+: Para los ejemplos de código que usan .NET, asegúrate de instalar el [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) o una versión posterior. Luego, verifica la versión instalada del SDK de .NET:
+- .NET 10+: For the sample codes using .NET, ensure you install [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later. Then, check your installed .NET SDK version:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- Una Cuenta de GitHub - Para Acceso al Marketplace de Modelos de GitHub
-- Suscripción a Azure - Para Acceso a Azure AI Foundry
-- Cuenta de Azure AI Foundry - Para Acceso al Servicio de Agente de Azure AI
+- A GitHub Account - For Access to the GitHub Models Marketplace
+- Azure Subscription - For Access to Microsoft Foundry
+- Microsoft Foundry Account - For Access to the Azure AI Agent Service
 
-Hemos incluido un archivo `requirements.txt` en la raíz de este repositorio que contiene todos los paquetes de Python necesarios para ejecutar los ejemplos de código.
+We have included a `requirements.txt` file in the root of this repository that contains all the required Python packages to run the code samples.
 
-Puedes instalarlos ejecutando el siguiente comando en tu terminal en la raíz del repositorio:
+You can install them by running the following command in your terminal at the root of the repository:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-Recomendamos crear un entorno virtual de Python para evitar conflictos y problemas.
+We recommend creating a Python virtual environment to avoid any conflicts and issues.
 
-## Configuración de VSCode
+## Setup VSCode
 
-Asegúrate de estar utilizando la versión correcta de Python en VSCode.
+Make sure that you are using the right version of Python in VSCode.
 
-![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+![imagen](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Configuración para Ejemplos usando Modelos de GitHub 
+## Set Up for Samples using GitHub Models 
 
-### Paso 1: Obtén tu Token de Acceso Personal (PAT) de GitHub
+### Step 1: Retrieve Your GitHub Personal Access Token (PAT)
 
-Este curso utiliza el Marketplace de Modelos de GitHub, que proporciona acceso gratuito a Modelos de Lenguaje Extenso (LLMs) que usarás para construir Agentes de IA.
+This course leverages the GitHub Models Marketplace, providing free access to Large Language Models (LLMs) that you will use to build AI Agents.
 
-Para usar los Modelos de GitHub, necesitarás crear un [Token de Acceso Personal de GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+To use the GitHub Models, you will need to create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
-Esto se puede hacer yendo a tu <a href="https://github.com/settings/personal-access-tokens" target="_blank">configuración de Tokens de Acceso Personal</a> en tu cuenta de GitHub.
+This can be done by going to your <a href="https://github.com/settings/personal-access-tokens" target="_blank">Personal Access Tokens settings</a> in your GitHub Account.
 
-Por favor, sigue el [Principio de Menor Privilegio](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) al crear tu token. Esto significa que solo debes otorgar al token los permisos necesarios para ejecutar los ejemplos de código de este curso.
+Please follow the [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) when creating your token. This means you should only give the token the permissions it needs to run the code samples in this course.
 
-1. Selecciona la opción `Fine-grained tokens` en el lado izquierdo de tu pantalla navegando a la **Configuración de Desarrollador**
+1. Select the `Fine-grained tokens` option on the left side of your screen by traversing to the **Developer settings**
 
-   ![Configuración de Desarrollador](../../../translated_images/es/profile_developer_settings.410a859fe749c755.webp)
+   ![Configuración de desarrollador](../../../translated_images/es/profile_developer_settings.410a859fe749c755.webp)
 
-   Luego selecciona `Generate new token`.
+   Then select `Generate new token`.
 
    ![Generar Token](../../../translated_images/es/fga_new_token.1c1a234afe202ab3.webp)
 
-2. Ingresa un nombre descriptivo para tu token que refleje su propósito, facilitando su identificación más adelante.
+2. Enter a descriptive name for your token that reflects its purpose, making it easy to identify later.
 
-    🔐 Recomendación de Duración del Token
+    🔐 Recomendación de duración del token
 
-    Duración recomendada: 30 días
-    Para una postura más segura, puedes optar por un período más corto, como 7 días 🛡️
-    Es una excelente manera de establecer un objetivo personal y completar el curso mientras tu impulso de aprendizaje está alto 🚀.
+    Recommended duration: 30 days
+    For a more secure posture, you can opt for a shorter period—such as 7 days 🛡️
+    It’s a great way to set a personal target and complete the course while your learning momentum is high 🚀.
 
-    ![Nombre y Expiración del Token](../../../translated_images/es/token-name-expiry-date.a095fb0de6386864.webp)
+    ![Nombre del token y expiración](../../../translated_images/es/token-name-expiry-date.a095fb0de6386864.webp)
 
-3. Limita el alcance del token a tu fork de este repositorio.
+3. Limit the token's scope to your fork of this repository.
 
-    ![Limitar alcance al repositorio fork](../../../translated_images/es/token_repository_limit.924ade5e11d9d8bb.webp)
+    ![Limitar alcance al repositorio bifurcado](../../../translated_images/es/token_repository_limit.924ade5e11d9d8bb.webp)
 
-4. Restringe los permisos del token: En **Permissions**, haz clic en la pestaña **Account** y luego en el botón "+ Add permissions". Aparecerá un menú desplegable. Busca **Models** y marca la casilla correspondiente.
+4. Restrict the token's permissions: Under **Permissions**, click **Account** tab, and click the "+ Add permissions" button. A dropdown will appear. Please search for **Models** and check the box for it.
 
-    ![Agregar Permiso de Modelos](../../../translated_images/es/add_models_permissions.c0c44ed8b40fc143.webp)
+    ![Agregar permiso de Models](../../../translated_images/es/add_models_permissions.c0c44ed8b40fc143.webp)
 
-5. Verifica los permisos requeridos antes de generar el token. ![Verificar Permisos](../../../translated_images/es/verify_permissions.06bd9e43987a8b21.webp)
+5. Verify the permissions required before generating the token. ![Verificar permisos](../../../translated_images/es/verify_permissions.06bd9e43987a8b21.webp)
 
-6. Antes de generar el token, asegúrate de estar listo para almacenarlo en un lugar seguro como un gestor de contraseñas, ya que no se mostrará nuevamente después de crearlo. ![Almacenar Token de Forma Segura](../../../translated_images/es/store_token_securely.08ee2274c6ad6caf.webp)
+6. Before generating the token, ensure you are ready to store the token in a secure place like a password manager vault, as it will not be shown again after you create it. ![Guardar el token de forma segura](../../../translated_images/es/store_token_securely.08ee2274c6ad6caf.webp)
 
-Copia tu nuevo token que acabas de crear. Ahora lo agregarás a tu archivo `.env` incluido en este curso.
+Copy your new token that you have just created. You will now add this to your `.env` file included in this course.
 
-### Paso 2: Crea tu Archivo `.env`
+### Step 2: Create Your `.env` File
 
-Para crear tu archivo `.env`, ejecuta el siguiente comando en tu terminal.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Esto copiará el archivo de ejemplo y creará un `.env` en tu directorio donde llenarás los valores de las variables de entorno.
-
-Con tu token copiado, abre el archivo `.env` en tu editor de texto favorito y pega tu token en el campo `GITHUB_TOKEN`.
-
-![Campo de Token de GitHub](../../../translated_images/es/github_token_field.20491ed3224b5f4a.webp)
-
-Ahora deberías poder ejecutar los ejemplos de código de este curso.
-
-## Configuración para Ejemplos usando Azure AI Foundry y el Servicio de Agente de Azure AI
-
-### Paso 1: Obtén tu Endpoint de Proyecto de Azure
-
-Sigue los pasos para crear un hub y proyecto en Azure AI Foundry que se encuentran aquí: [Descripción general de recursos del hub](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-Una vez que hayas creado tu proyecto, necesitarás obtener la cadena de conexión para tu proyecto.
-
-Esto se puede hacer yendo a la página **Overview** de tu proyecto en el portal de Azure AI Foundry.
-
-![Cadena de Conexión del Proyecto](../../../translated_images/es/project-endpoint.8cf04c9975bbfbf1.webp)
-
-### Paso 2: Crea tu Archivo `.env`
-
-Para crear tu archivo `.env`, ejecuta el siguiente comando en tu terminal.
+To create your `.env` file run the following command in your terminal.
 
 ```bash
 # zsh/bash
@@ -245,79 +210,115 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Esto copiará el archivo de ejemplo y creará un `.env` en tu directorio donde llenarás los valores de las variables de entorno.
+This will copy the example file and create a `.env` in your directory and where you fill in the values for the environment variables.
 
-Con tu token copiado, abre el archivo `.env` en tu editor de texto favorito y pega tu token en el campo `PROJECT_ENDPOINT`.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
-### Paso 3: Inicia sesión en Azure
+![Campo del token de GitHub](../../../translated_images/es/github_token_field.20491ed3224b5f4a.webp)
 
-Como práctica de seguridad, utilizaremos [autenticación sin claves](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) para autenticarte en Azure OpenAI con Microsoft Entra ID. 
+You should now be able to run the code samples of this course.
 
-A continuación, abre un terminal y ejecuta `az login --use-device-code` para iniciar sesión en tu cuenta de Azure.
+## Set Up for Samples using Microsoft Foundry and Azure AI Agent Service
 
-Una vez que hayas iniciado sesión, selecciona tu suscripción en el terminal.
+### Step 1: Retrieve Your Azure Project Endpoint
 
-## Variables de Entorno Adicionales - Azure Search y Azure OpenAI 
 
-Para la lección Agentic RAG - Lección 5 - hay ejemplos que utilizan Azure Search y Azure OpenAI.
+Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
 
-Si deseas ejecutar estos ejemplos, necesitarás agregar las siguientes variables de entorno a tu archivo `.env`:
 
-### Página de Descripción General (Proyecto)
+Once you have created your project, you will need to retrieve the connection string for your project.
 
-- `AZURE_SUBSCRIPTION_ID` - Consulta **Detalles del Proyecto** en la página **Overview** de tu proyecto.
+This can be done by going to the **Overview** page of your project in the Microsoft Foundry portal.
 
-- `AZURE_AI_PROJECT_NAME` - Mira la parte superior de la página **Overview** de tu proyecto.
+![Cadena de conexión del proyecto](../../../translated_images/es/project-endpoint.8cf04c9975bbfbf1.webp)
 
-- `AZURE_OPENAI_SERVICE` - Encuentra esto en la pestaña **Included capabilities** para **Azure OpenAI Service** en la página **Overview**.
+### Step 2: Create Your `.env` File
 
-### Centro de Gestión
+To create your `.env` file run the following command in your terminal.
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - Ve a **Propiedades del Proyecto** en la página **Overview** del **Centro de Gestión**.
+```bash
+# zsh/bash
+cp .env.example .env
+```
 
-- `GLOBAL_LLM_SERVICE` - En **Recursos Conectados**, encuentra el nombre de conexión de **Azure AI Services**. Si no está listado, consulta el **portal de Azure** en tu grupo de recursos para el nombre del recurso de AI Services.
+```powershell
+# PowerShell
+Copy-Item .env.example .env
+```
 
-### Página de Modelos + Endpoints
+This will copy the example file and create a `.env` in your directory and where you fill in the values for the environment variables.
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Selecciona tu modelo de embedding (por ejemplo, `text-embedding-ada-002`) y toma nota del **Nombre de Despliegue** de los detalles del modelo.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Selecciona tu modelo de chat (por ejemplo, `gpt-4o-mini`) y toma nota del **Nombre de Despliegue** de los detalles del modelo.
+### Step 3: Sign in to Azure
 
-### Portal de Azure
+As a security best practice, we'll use [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) to authenticate to Azure OpenAI with Microsoft Entra ID. 
 
-- `AZURE_OPENAI_ENDPOINT` - Busca **Azure AI services**, haz clic en él, luego ve a **Gestión de Recursos**, **Claves y Endpoint**, desplázate hacia abajo hasta los "Endpoints de Azure OpenAI" y copia el que dice "Language APIs".
+Next, open a terminal and run `az login --use-device-code` to sign in to your Azure account.
 
-- `AZURE_OPENAI_API_KEY` - Desde la misma pantalla, copia la CLAVE 1 o CLAVE 2.
+Once you've logged in, select your subscription in the terminal.
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Encuentra tu recurso de **Azure AI Search**, haz clic en él y consulta **Overview**.
+## Additional Environment Variables - Azure Search and Azure OpenAI 
 
-- `AZURE_SEARCH_API_KEY` - Luego ve a **Configuración** y luego a **Claves** para copiar la clave de administrador primaria o secundaria.
+For the Agentic RAG Lesson - Lesson 5 - there are samples that use Azure Search and Azure OpenAI.
 
-### Página Externa
+If you want to run these samples, you will need to add the following environment variables to your `.env` file:
 
-- `AZURE_OPENAI_API_VERSION` - Visita la página [Ciclo de vida de la versión API](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) bajo **Última versión GA de la API**.
+### Overview Page (Project)
 
-### Configuración de autenticación sin claves
+- `AZURE_SUBSCRIPTION_ID` - Check **Project details** on the **Overview** page of your project.
 
-En lugar de codificar tus credenciales, utilizaremos una conexión sin claves con Azure OpenAI. Para hacerlo, importaremos `DefaultAzureCredential` y luego llamaremos a la función `DefaultAzureCredential` para obtener la credencial.
+- `AZURE_AI_PROJECT_NAME` - Look at the top of the **Overview** page for your project.
+
+- `AZURE_OPENAI_SERVICE` - Find this in the **Included capabilities** tab for **Azure OpenAI Service** on the **Overview** page.
+
+### Management Center
+
+- `AZURE_OPENAI_RESOURCE_GROUP` - Go to **Project properties** on the **Overview** page of the **Management Center**.
+
+- `GLOBAL_LLM_SERVICE` - Under **Connected resources**, find the **Azure AI Services** connection name. If not listed, check the **Azure portal** under your resource group for the AI Services resource name.
+
+### Models + Endpoints Page
+
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Select your embedding model (e.g., `text-embedding-ada-002`) and note the **Deployment name** from the model details.
+
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Select your chat model (e.g., `gpt-4o-mini`) and note the **Deployment name** from the model details.
+
+### Azure Portal
+
+- `AZURE_OPENAI_ENDPOINT` - Look for **Azure AI services**, click on it, then go to **Resource Management**, **Keys and Endpoint**, scroll down to the "Azure OpenAI endpoints", and copy the one that says "Language APIs".
+
+- `AZURE_OPENAI_API_KEY` - From the same screen, copy KEY 1 or KEY 2.
+
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Find your **Azure AI Search** resource, click it, and see **Overview**.
+
+- `AZURE_SEARCH_API_KEY` - Then go to **Settings** and then **Keys** to copy the primary or secondary admin key.
+
+### External Webpage
+
+- `AZURE_OPENAI_API_VERSION` - Visit the [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page under **Latest GA API release**.
+
+### Setup keyless authentication
+
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` function to get the credential.
 
 ```python
 # Python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## ¿Atascado en algún lugar?
-Si tienes algún problema al ejecutar esta configuración, únete a nuestro <a href="https://discord.gg/kzRShWzttr" target="_blank">Discord de la Comunidad de Azure AI</a> o <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">crea un problema</a>.
+## Stuck Somewhere?
+Si tienes algún problema al ejecutar esta configuración, únete a nuestro <a href="https://discord.gg/kzRShWzttr" target="_blank">Discord de la comunidad Azure AI</a> o <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">crea un issue</a>.
 
-## Próxima Lección
+## Siguiente lección
 
-Ahora estás listo para ejecutar el código de este curso. ¡Disfruta aprendiendo más sobre el mundo de los Agentes de IA!
+Ahora estás listo para ejecutar el código de este curso. ¡Disfruta aprendiendo más sobre el mundo de los Agentes de IA! 
 
-[Introducción a los Agentes de IA y Casos de Uso de Agentes](../01-intro-to-ai-agents/README.md)
+[Introducción a los Agentes de IA y casos de uso de agentes](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.
+Descargo de responsabilidad:
+Este documento ha sido traducido utilizando el servicio de traducción automática Co-op Translator (https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la exactitud, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por un traductor humano. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,161 +2,163 @@
 
 [![Engenharia de Contexto](../../../translated_images/pt-BR/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Clique na imagem acima para assistir ao vídeo desta lição)_
+> _(Clique na imagem acima para ver o vídeo desta aula)_
 
-Compreender a complexidade da aplicação para a qual você está desenvolvendo um agente de IA é essencial para criar um agente confiável. Precisamos construir agentes de IA que gerenciem informações de forma eficaz para atender a necessidades complexas, indo além da engenharia de prompts.
+Entender a complexidade da aplicação para a qual você está construindo um agente de IA é importante para tornar esse agente confiável. Precisamos construir Agentes de IA que gerenciem informações de forma eficaz para atender necessidades complexas além da engenharia de prompts.
 
-Nesta lição, exploraremos o que é engenharia de contexto e seu papel na construção de agentes de IA.
+Nesta aula, veremos o que é engenharia de contexto e seu papel na construção de agentes de IA.
 
-## Introdução
+## Introduction
 
-Esta lição abordará:
+Esta aula abordará:
 
-• **O que é Engenharia de Contexto** e por que ela é diferente da engenharia de prompts.
+• **O que é Engenharia de Contexto** e por que é diferente da engenharia de prompts.
 
 • **Estratégias para uma Engenharia de Contexto eficaz**, incluindo como escrever, selecionar, comprimir e isolar informações.
 
-• **Falhas Comuns de Contexto** que podem prejudicar seu agente de IA e como corrigi-las.
+• **Falhas Comuns de Contexto** que podem atrapalhar seu agente de IA e como corrigi-las.
 
-## Objetivos de Aprendizado
+## Learning Goals
 
-Após concluir esta lição, você será capaz de:
+Após concluir esta aula, você saberá e entenderá como:
 
 • **Definir engenharia de contexto** e diferenciá-la da engenharia de prompts.
 
-• **Identificar os principais componentes do contexto** em aplicações de Modelos de Linguagem de Grande Escala (LLM).
+• **Identificar os componentes-chave do contexto** em aplicações com Large Language Models (LLMs).
 
-• **Aplicar estratégias para escrever, selecionar, comprimir e isolar o contexto** para melhorar o desempenho do agente.
+• **Aplicar estratégias para escrever, selecionar, comprimir e isolar contexto** para melhorar o desempenho do agente.
 
-• **Reconhecer falhas comuns de contexto**, como envenenamento, distração, confusão e conflito, e implementar técnicas de mitigação.
+• **Reconhecer falhas comuns de contexto** como envenenamento, distração, confusão e conflito, e implementar técnicas de mitigação.
 
-## O que é Engenharia de Contexto?
+## What is Context Engineering?
 
-Para agentes de IA, o contexto é o que orienta o planejamento do agente para tomar certas ações. Engenharia de Contexto é a prática de garantir que o agente de IA tenha as informações corretas para completar a próxima etapa da tarefa. A janela de contexto é limitada em tamanho, então, como desenvolvedores de agentes, precisamos criar sistemas e processos para gerenciar a adição, remoção e condensação das informações na janela de contexto.
+Para Agentes de IA, contexto é o que direciona o planejamento do Agente de IA para tomar certas ações. Engenharia de Contexto é a prática de garantir que o Agente de IA tenha as informações corretas para completar a próxima etapa da tarefa. A janela de contexto é limitada em tamanho, então, como construtores de agentes, precisamos criar sistemas e processos para gerenciar a adição, remoção e condensação das informações na janela de contexto.
 
-### Engenharia de Prompts vs Engenharia de Contexto
+### Prompt Engineering vs Context Engineering
 
-A engenharia de prompts foca em um conjunto único de instruções estáticas para orientar os agentes de IA com um conjunto de regras. A engenharia de contexto, por outro lado, trata de gerenciar um conjunto dinâmico de informações, incluindo o prompt inicial, para garantir que o agente de IA tenha o que precisa ao longo do tempo. A ideia principal da engenharia de contexto é tornar esse processo repetível e confiável.
+Engenharia de prompts foca em um conjunto único de instruções estáticas para guiar efetivamente os Agentes de IA com um conjunto de regras. Engenharia de contexto é como gerenciar um conjunto dinâmico de informações, incluindo o prompt inicial, para garantir que o Agente de IA tenha o que precisa ao longo do tempo. A ideia principal em torno da engenharia de contexto é tornar esse processo repetível e confiável.
 
-### Tipos de Contexto
+### Types of Context
 
 [![Tipos de Contexto](../../../translated_images/pt-BR/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-É importante lembrar que o contexto não é uma coisa única. As informações que o agente de IA precisa podem vir de várias fontes diferentes, e cabe a nós garantir que o agente tenha acesso a essas fontes:
+É importante lembrar que contexto não é apenas uma coisa. A informação que o Agente de IA precisa pode vir de uma variedade de fontes diferentes e cabe a nós garantir que o agente tenha acesso a essas fontes:
 
 Os tipos de contexto que um agente de IA pode precisar gerenciar incluem:
 
-• **Instruções:** São como as "regras" do agente – prompts, mensagens do sistema, exemplos few-shot (mostrando ao agente como fazer algo) e descrições de ferramentas que ele pode usar. Aqui é onde a engenharia de prompts se combina com a engenharia de contexto.
+• **Instruções:** Estas são como as "regras" do agente – prompts, mensagens do sistema, exemplos few-shot (mostrando ao IA como fazer algo) e descrições de ferramentas que ele pode usar. É aqui que o foco da engenharia de prompts se combina com a engenharia de contexto.
 
-• **Conhecimento:** Abrange fatos, informações recuperadas de bancos de dados ou memórias de longo prazo acumuladas pelo agente. Isso inclui integrar um sistema de Geração Aumentada por Recuperação (RAG) se o agente precisar acessar diferentes repositórios de conhecimento e bancos de dados.
+• **Conhecimento:** Isso cobre fatos, informações recuperadas de bancos de dados ou memórias de longo prazo que o agente acumulou. Isso inclui integrar um sistema Retrieval Augmented Generation (RAG) se um agente precisar acessar diferentes repositórios de conhecimento e bancos de dados.
 
-• **Ferramentas:** São as definições de funções externas, APIs e servidores MCP que o agente pode chamar, junto com o feedback (resultados) que ele obtém ao usá-las.
+• **Ferramentas:** Estas são as definições de funções externas, APIs e MCP Servers que o agente pode chamar, junto com o feedback (resultados) que ele obtém ao usá-las.
 
-• **Histórico de Conversa:** O diálogo contínuo com um usuário. Com o tempo, essas conversas se tornam mais longas e complexas, ocupando mais espaço na janela de contexto.
+• **Histórico de Conversa:** O diálogo contínuo com um usuário. À medida que o tempo passa, essas conversas ficam mais longas e complexas, o que significa que ocupam espaço na janela de contexto.
 
-• **Preferências do Usuário:** Informações aprendidas sobre os gostos ou desgostos de um usuário ao longo do tempo. Essas informações podem ser armazenadas e usadas ao tomar decisões importantes para ajudar o usuário.
+• **Preferências do Usuário:** Informações aprendidas sobre gostos ou desgostos de um usuário ao longo do tempo. Isso pode ser armazenado e recuperado ao tomar decisões-chave para ajudar o usuário.
 
-## Estratégias para uma Engenharia de Contexto Eficaz
+## Strategies for Effective Context Engineering
 
-### Estratégias de Planejamento
+### Planning Strategies
 
-[![Melhores Práticas de Engenharia de Contexto](../../../translated_images/pt-BR/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
+[![Context Engineering Best Practices](../../../translated_images/pt-BR/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-Uma boa engenharia de contexto começa com um bom planejamento. Aqui está uma abordagem que ajudará você a começar a aplicar o conceito de engenharia de contexto:
+Boa engenharia de contexto começa com um bom planejamento. Aqui está uma abordagem que ajudará você a começar a pensar em como aplicar o conceito de engenharia de contexto:
 
-1. **Defina Resultados Claros** - Os resultados das tarefas atribuídas aos agentes de IA devem ser claramente definidos. Responda à pergunta: "Como o mundo estará quando o agente de IA concluir sua tarefa?" Em outras palavras, qual mudança, informação ou resposta o usuário deve ter após interagir com o agente de IA.
+1. **Define Clear Results** - Os resultados das tarefas que os Agentes de IA irão executar devem ser claramente definidos. Responda à pergunta - "Como o mundo estará quando o Agente de IA terminar sua tarefa?" Em outras palavras, qual mudança, informação ou resposta o usuário deve ter após interagir com o Agente de IA.
+2. **Map the Context** - Depois de definir os resultados do Agente de IA, você precisa responder à pergunta "Quais informações o Agente de IA precisa para completar esta tarefa?". Dessa forma você pode começar a mapear o contexto de onde essas informações podem ser encontradas.
+3. **Create Context Pipelines** - Agora que você sabe onde está a informação, precisa responder à pergunta "Como o Agente obterá essa informação?". Isso pode ser feito de várias maneiras, incluindo RAG, uso de MCP servers e outras ferramentas.
 
-2. **Mapeie o Contexto** - Depois de definir os resultados do agente de IA, você precisa responder à pergunta: "Quais informações o agente de IA precisa para concluir essa tarefa?" Assim, você pode começar a mapear o contexto de onde essas informações podem ser localizadas.
+### Practical Strategies
 
-3. **Crie Pipelines de Contexto** - Agora que você sabe onde estão as informações, precisa responder à pergunta: "Como o agente obterá essas informações?" Isso pode ser feito de várias maneiras, incluindo RAG, uso de servidores MCP e outras ferramentas.
+Planejamento é importante, mas uma vez que a informação começa a fluir para a janela de contexto do nosso agente, precisamos ter estratégias práticas para gerenciá-la:
 
-### Estratégias Práticas
+#### Managing Context
 
-O planejamento é importante, mas, uma vez que as informações começam a fluir para a janela de contexto do agente, precisamos de estratégias práticas para gerenciá-las:
+Enquanto algumas informações serão adicionadas à janela de contexto automaticamente, a engenharia de contexto trata de assumir um papel mais ativo sobre essas informações, o que pode ser feito por algumas estratégias:
 
-#### Gerenciando o Contexto
+ 1. **Agent Scratchpad**
+ This allows for an AI Agent to takes notes of relevant information about the current tasks and user interactions during a single session. This should exist outside of the context window in a file or runtime object that the agent can later retrieve during this session if needed.
 
-Embora algumas informações sejam adicionadas automaticamente à janela de contexto, a engenharia de contexto envolve um papel mais ativo nesse gerenciamento, o que pode ser feito por meio de algumas estratégias:
+ 2. **Memories**
+ Scratchpads are good for managing information outside of the context window of a single session. Memories enable agents to store and retrieve relevant information across multiple sessions. This could include summaries, user preferences and feedback for improvements in the future.
 
-1. **Bloco de Notas do Agente**  
-   Permite que o agente de IA faça anotações sobre informações relevantes relacionadas às tarefas atuais e interações com o usuário durante uma única sessão. Isso deve existir fora da janela de contexto, em um arquivo ou objeto em tempo de execução, que o agente possa recuperar mais tarde, se necessário.
+ 3. **Compressing Context**
+  Once the context window grows and is nearing its limit, techniques such as summarization and trimming can be used. This includes either keeping only the most relevant information or removing older messages.
+  
+ 4. **Multi-Agent Systems**
+  Developing multi-agent system is a form of context engineering because each agent has its own context window. How that context is shared and passed to different agents is another thing to plan out when building these systems.
+  
+ 5. **Sandbox Environments**
+  If an agent needs to run some code or process large amounts of information in a document, this can take a large amount of tokens to process the results. Instead of having this all stored in the context window, the agent can use a sandbox environment that is able to run this code and only read the results and other relevant information.
+  
+ 6. **Runtime State Objects**
+   This is done by creating containers of information to manage situations when the Agent needs to have access to certain information. For a complex task, this would enable an Agent to store the results of each subtask step by step, allowing the context to remain connected only to that specific subtask.
+  
+### Example of Context Engineering
 
-2. **Memórias**  
-   Blocos de notas são úteis para gerenciar informações fora da janela de contexto de uma única sessão. Memórias permitem que agentes armazenem e recuperem informações relevantes ao longo de várias sessões. Isso pode incluir resumos, preferências do usuário e feedback para melhorias futuras.
+Let's say we want an AI agent to **"Reserve-me uma viagem para Paris."**
 
-3. **Comprimindo o Contexto**  
-   Quando a janela de contexto cresce e se aproxima do limite, técnicas como sumarização e corte podem ser usadas. Isso inclui manter apenas as informações mais relevantes ou remover mensagens mais antigas.
+• A simple  agent using only prompt engineering might just respond: **"Ok, quando você gostaria de ir para Paris?**". It only processed your direct question at the time that the user asked.
 
-4. **Sistemas Multiagentes**  
-   Desenvolver sistemas multiagentes é uma forma de engenharia de contexto, pois cada agente tem sua própria janela de contexto. Planejar como esse contexto será compartilhado e passado entre diferentes agentes é outro aspecto importante ao construir esses sistemas.
+• An agent using  the context engineering strategies covered would do much more. Before even responding, its system might:
 
-5. **Ambientes de Teste (Sandbox)**  
-   Se um agente precisa executar algum código ou processar grandes quantidades de informações em um documento, isso pode consumir muitos tokens para processar os resultados. Em vez de armazenar tudo na janela de contexto, o agente pode usar um ambiente de teste que execute o código e leia apenas os resultados e outras informações relevantes.
+  ◦ **Check your calendar** for available dates (retrieving real-time data).
 
-6. **Objetos de Estado em Tempo de Execução**  
-   Isso é feito criando contêineres de informações para gerenciar situações em que o agente precisa acessar certas informações. Para uma tarefa complexa, isso permitiria que o agente armazenasse os resultados de cada subtarefa passo a passo, mantendo o contexto conectado apenas à subtarefa específica.
+  ◦ **Recall past travel preferences** (from long-term memory) like your preferred airline, budget, or whether you prefer direct flights.
 
-### Exemplo de Engenharia de Contexto
+  ◦ **Identify available tools** for flight and hotel booking.
 
-Digamos que queremos que um agente de IA **"Reserve uma viagem para Paris."**
+- Then, an example response could be:  "Ei [Your Name]! Vejo que você está livre na primeira semana de outubro. Posso procurar voos diretos para Paris pela [Preferred Airline] dentro do seu orçamento habitual de [Budget]?". This richer, context-aware response demonstrates the power of context engineering.
 
-• Um agente simples usando apenas engenharia de prompts pode responder: **"Certo, quando você gostaria de ir para Paris?"**. Ele processa apenas a pergunta direta feita pelo usuário no momento.
+## Common Context Failures
 
-• Um agente usando as estratégias de engenharia de contexto abordadas faria muito mais. Antes mesmo de responder, seu sistema poderia:
+### Context Poisoning
 
-  ◦ **Verificar seu calendário** para datas disponíveis (recuperando dados em tempo real).  
-  ◦ **Lembrar preferências de viagens anteriores** (de memórias de longo prazo), como sua companhia aérea preferida, orçamento ou se você prefere voos diretos.  
-  ◦ **Identificar ferramentas disponíveis** para reserva de voos e hotéis.  
+**What it is:** When a hallucination (false information generated by the LLM) or an error enters the context and is repeatedly referenced, causing the agent to pursue impossible goals or develop nonsense strategies.
 
-- Então, uma resposta exemplo poderia ser: "Olá [Seu Nome]! Vejo que você está livre na primeira semana de outubro. Devo procurar voos diretos para Paris na [Companhia Aérea Preferida] dentro do seu orçamento usual de [Orçamento]?" Essa resposta mais rica e consciente do contexto demonstra o poder da engenharia de contexto.
+**What to do:** Implement **context validation** and **quarantine**. Validate information before it's added to long-term memory. If potential poisoning is detected, start fresh context threads to prevent the bad information from spreading.
 
-## Falhas Comuns de Contexto
+**Travel Booking Example:** Your agent hallucinates a **direct flight from a small local airport to a distant international city** that doesn't actually offer international flights. This non-existent flight detail gets saved into the context. Later, when you ask the agent to book, it keeps trying to find tickets for this impossible route, leading to repeated errors.
 
-### Envenenamento de Contexto
+**Solution:** Implement a step that **validates flight existence and routes with a real-time API** _before_ adding the flight detail to the agent's working context. If the validation fails, the erroneous information is "quarantined" and not used further.
 
-**O que é:** Quando uma alucinação (informação falsa gerada pelo LLM) ou um erro entra no contexto e é repetidamente referenciado, fazendo com que o agente persiga objetivos impossíveis ou desenvolva estratégias sem sentido.
+### Context Distraction
 
-**O que fazer:** Implemente **validação de contexto** e **quarentena**. Valide informações antes de adicioná-las à memória de longo prazo. Se for detectado um possível envenenamento, inicie novos threads de contexto para evitar que a informação errada se espalhe.
+**What it is:** When the context becomes so large that the model focuses too much on the accumulated history instead of using what it learned during training, leading to repetitive or unhelpful actions. Models may begin making mistakes even before the context window is full.
 
-**Exemplo de Reserva de Viagem:** Seu agente alucina um **voo direto de um pequeno aeroporto local para uma cidade internacional distante** que não oferece voos internacionais. Esse detalhe inexistente é salvo no contexto. Mais tarde, ao pedir para reservar, o agente continua tentando encontrar passagens para essa rota impossível, levando a erros repetidos.
+**What to do:** Use **context summarization**. Periodically compress accumulated information into shorter summaries, keeping important details while removing redundant history. This helps "reset" the focus.
 
-**Solução:** Implemente uma etapa que **valide a existência de voos e rotas com uma API em tempo real** _antes_ de adicionar o detalhe do voo ao contexto do agente. Se a validação falhar, a informação errada é "quarentenada" e não é usada novamente.
+**Travel Booking Example:** You've been discussing various dream travel destinations for a long time, including a detailed recounting of your backpacking trip from two years ago. When you finally ask to **"encontre-me um voo barato para** **no próximo mês****,"** the agent gets bogged down in the old, irrelevant details and keeps asking about your backpacking gear or past itineraries, neglecting your current request.
 
-### Distração de Contexto
+**Solution:** After a certain number of turns or when the context grows too large, the agent should **summarize the most recent and relevant parts of the conversation** – focusing on your current travel dates and destination – and use that condensed summary for the next LLM call, discarding the less relevant historical chat.
 
-**O que é:** Quando o contexto se torna tão grande que o modelo foca demais no histórico acumulado, em vez de usar o que aprendeu durante o treinamento, levando a ações repetitivas ou inúteis. Modelos podem começar a cometer erros mesmo antes de a janela de contexto estar cheia.
+### Context Confusion
 
-**O que fazer:** Use **sumarização de contexto**. Periodicamente, comprima as informações acumuladas em resumos mais curtos, mantendo detalhes importantes e removendo o histórico redundante. Isso ajuda a "reiniciar" o foco.
+**What it is:** When unnecessary context, often in the form of too many available tools, causes the model to generate bad responses or call irrelevant tools. Smaller models are especially prone to this.
 
-**Exemplo de Reserva de Viagem:** Você discute vários destinos de viagem dos sonhos por um longo tempo, incluindo uma descrição detalhada de sua viagem de mochilão de dois anos atrás. Quando finalmente pede para **"encontrar um voo barato para o próximo mês"**, o agente se perde nos detalhes antigos e irrelevantes, perguntando sobre seu equipamento de mochilão ou itinerários passados, negligenciando sua solicitação atual.
+**What to do:** Implement **tool loadout management** using RAG techniques. Store tool descriptions in a vector database and select _only_ the most relevant tools for each specific task. Research shows limiting tool selections to fewer than 30.
 
-**Solução:** Após um certo número de interações ou quando o contexto crescer demais, o agente deve **resumir as partes mais recentes e relevantes da conversa** – focando nas datas e no destino atuais – e usar esse resumo condensado para a próxima chamada ao LLM, descartando o histórico menos relevante.
+**Travel Booking Example:** Your agent has access to dozens of tools: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, etc. You ask, **"What's the best way to get around Paris?"** Due to the sheer number of tools, the agent gets confused and attempts to call `book_flight` _within_ Paris, or `rent_car` even though you prefer public transport, because the tool descriptions might overlap or it simply can't discern the best one.
 
-### Confusão de Contexto
+**Solution:** Use **RAG over tool descriptions**. When you ask about getting around Paris, the system dynamically retrieves _only_ the most relevant tools like `rent_car` or `public_transport_info` based on your query, presenting a focused "loadout" of tools to the LLM.
 
-**O que é:** Quando o contexto desnecessário, muitas vezes na forma de ferramentas disponíveis em excesso, faz com que o modelo gere respostas ruins ou chame ferramentas irrelevantes. Modelos menores são especialmente propensos a isso.
+### Context Clash
 
-**O que fazer:** Implemente **gerenciamento de ferramentas** usando técnicas RAG. Armazene descrições de ferramentas em um banco de dados vetorial e selecione _apenas_ as ferramentas mais relevantes para cada tarefa específica. Pesquisas mostram que limitar as seleções de ferramentas a menos de 30 é eficaz.
+**What it is:** When conflicting information exists within the context, leading to inconsistent reasoning or bad final responses. This often happens when information arrives in stages, and early, incorrect assumptions remain in the context.
 
-**Exemplo de Reserva de Viagem:** Seu agente tem acesso a dezenas de ferramentas: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, etc. Você pergunta, **"Qual é a melhor forma de se locomover em Paris?"** Devido ao grande número de ferramentas, o agente se confunde e tenta chamar `book_flight` _dentro_ de Paris ou `rent_car`, mesmo que você prefira transporte público, porque as descrições das ferramentas podem se sobrepor ou ele simplesmente não consegue discernir a melhor opção.
+**What to do:** Use **context pruning** and **offloading**. Pruning means removing outdated or conflicting information as new details arrive. Offloading gives the model a separate "scratchpad" workspace to process information without cluttering the main context.
 
-**Solução:** Use **RAG sobre descrições de ferramentas**. Quando você pergunta sobre locomoção em Paris, o sistema recupera dinamicamente _apenas_ as ferramentas mais relevantes, como `rent_car` ou `public_transport_info`, com base na sua consulta, apresentando um "conjunto" focado de ferramentas ao LLM.
+**Travel Booking Example:** You initially tell your agent, **"I want to fly economy class."** Later in the conversation, you change your mind and say, **"Actually, for this trip, let's go business class."** If both instructions remain in the context, the agent might receive conflicting search results or get confused about which preference to prioritize.
 
-### Conflito de Contexto
+**Solution:** Implement **context pruning**. When a new instruction contradicts an old one, the older instruction is removed or explicitly overridden in the context. Alternatively, the agent can use a **scratchpad** to reconcile conflicting preferences before deciding, ensuring only the final, consistent instruction guides its actions.
 
-**O que é:** Quando informações conflitantes existem dentro do contexto, levando a raciocínios inconsistentes ou respostas finais ruins. Isso geralmente acontece quando informações chegam em etapas, e suposições iniciais incorretas permanecem no contexto.
+## Got More Questions About Context Engineering?
 
-**O que fazer:** Use **poda de contexto** e **descarte**. A poda remove informações desatualizadas ou conflitantes à medida que novos detalhes chegam. O descarte dá ao modelo um "bloco de notas" separado para processar informações sem sobrecarregar o contexto principal.
-
-**Exemplo de Reserva de Viagem:** Inicialmente, você diz ao agente, **"Quero voar na classe econômica."** Mais tarde, na conversa, você muda de ideia e diz, **"Na verdade, para esta viagem, vamos de classe executiva."** Se ambas as instruções permanecerem no contexto, o agente pode receber resultados de busca conflitantes ou se confundir sobre qual preferência priorizar.
-
-**Solução:** Implemente **poda de contexto**. Quando uma nova instrução contradiz uma antiga, a instrução mais antiga é removida ou explicitamente substituída no contexto. Alternativamente, o agente pode usar um **bloco de notas** para reconciliar preferências conflitantes antes de decidir, garantindo que apenas a instrução final e consistente guie suas ações.
-
-## Tem Mais Perguntas Sobre Engenharia de Contexto?
-
-Junte-se ao [Discord do Azure AI Foundry](https://aka.ms/ai-agents/discord) para interagir com outros aprendizes, participar de horários de atendimento e tirar suas dúvidas sobre agentes de IA.
+Join the [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
 
 ---
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Isenção de responsabilidade:
+Este documento foi traduzido usando o serviço de tradução por IA Co-op Translator (https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional realizada por um tradutor humano. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,55 +1,55 @@
-[![Tervezési minták tervezése](../../../translated_images/hu/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Tervezési minta](../../../translated_images/hu/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Kattints a fenti képre a videó megtekintéséhez az óráról)_
+> _(Kattintson a fenti képre a lecke videójának megtekintéséhez)_
 
-# Tervezési tervezés
+# Tervezési minta
 
 ## Bevezetés
 
-Ebben a leckében szó lesz:
+Ez a lecke a következő témákat fedi:
 
-* Egyértelmű általános cél meghatározása és egy összetett feladat kezelhető részfeladatokra bontása.
-* Strukturált kimenet használata megbízhatóbb és gép által olvasható válaszok érdekében.
+* Egyértelmű, átfogó cél meghatározása és egy összetett feladat lebontása kezelhető részfeladatokra.
+* Strukturált kimenet használata a megbízhatóbb és géppel olvashatóbb válaszokhoz.
 * Eseményvezérelt megközelítés alkalmazása dinamikus feladatok és váratlan bemenetek kezelésére.
 
 ## Tanulási célok
 
-A lecke elvégzése után megérted:
+A lecke elvégzése után a következőket fogja érteni:
 
-* Hogyan kell azonosítani és meghatározni egy AI ügynök általános célját, biztosítva, hogy egyértelműen tudja, mit kell elérni.
-* Hogyan lehet egy összetett feladatot kezelhető részfeladatokra bontani, és logikai sorrendbe szervezni.
-* Hogyan lehet az ügynököket megfelelő eszközökkel (pl. keresőeszközök vagy adat-elemző eszközök) ellátni, eldönteni, mikor és hogyan használják ezeket, és kezelni a felmerülő váratlan helyzeteket.
-* Hogyan lehet értékelni a részfeladatok eredményeit, mérni a teljesítményt, és iterálni a cselekvéseken a végső kimenet javítása érdekében.
+* Megfogalmazni és meghatározni egy átfogó célt egy MI-ügynök számára, biztosítva, hogy pontosan tudja, mit kell elérnie.
+* Egy összetett feladat lebontása kezelhető részfeladatokra és azok logikus sorrendbe rendezése.
+* Az ügynökök felszerelése a megfelelő eszközökkel (pl. keresőeszközök vagy adat-analitikai eszközök), meghatározva, mikor és hogyan használják őket, valamint a felmerülő váratlan helyzetek kezelése.
+* A részfeladatok eredményeinek értékelése, a teljesítmény mérése és az intézkedések iterálása a végső kimenet javítása érdekében.
 
-## Az általános cél meghatározása és a feladat bontása
+## Átfogó cél meghatározása és egy feladat lebontása
 
 ![Célok és feladatok meghatározása](../../../translated_images/hu/defining-goals-tasks.d70439e19e37c47a.webp)
 
-A legtöbb valós feladat túl összetett ahhoz, hogy egyetlen lépésben megoldható legyen. Egy AI ügynöknek tömör célkitűzésre van szüksége, hogy irányítsa a tervezést és a cselekvéseket. Például vegyük a következő célt:
+A legtöbb valós feladat túl összetett ahhoz, hogy egyetlen lépésben oldjuk meg. Egy MI-ügynöknek tömör célt kell kapnia, ami irányítja a tervezését és a cselekvéseit. Például vegyük a következő célt:
 
-    "Készíts egy 3 napos utazási tervet."
+    "Készíts egy 3 napos utazási útitervet."
 
-Bár egyszerűen megfogalmazható, mégis finomításra szorul. Minél egyértelműbb a cél, annál jobban tud az ügynök (és bármely emberi közreműködő) a megfelelő eredmény elérésére összpontosítani, például egy átfogó útiterv létrehozására repülési lehetőségekkel, szállodai ajánlásokkal és programjavaslatokkal.
+Habár egyszerű megfogalmazni, mégis finomításra szorul. Minél világosabb a cél, annál jobban tud az ügynök (és az emberi közreműködők) a megfelelő eredmény elérésére összpontosítani, például egy átfogó útiterv létrehozására járatokkal, szállásajánlásokkal és programjavaslatokkal.
 
-### Feladatbontás
+### Feladatlebontás
 
 A nagy vagy bonyolult feladatok kezelhetőbbé válnak, ha kisebb, célorientált részfeladatokra bontjuk őket.
-Az utazási terv példájánál a célt így bonthatjuk:
+Az útiterv példájánál a célt a következőkre bonthatja:
 
-* Repülőjegy foglalás
-* Szállodai foglalás
+* Járatfoglalás
+* Szállásfoglalás
 * Autóbérlés
 * Személyre szabás
 
-Minden részfeladatot dedikált ügynökök vagy folyamatok kezelhetnek. Egy ügynök például a legjobb repülőjegy-ajánlatok keresésére specializálódhat, míg egy másik a szállodai foglalásokra összpontosít, és így tovább. Egy koordináló vagy „lefelé irányító” ügynök ezután összeállíthatja ezeket az eredményeket egy összefüggő útitervvé a végfelhasználó számára.
+Ezeket a részfeladatokat dedikált ügynökök vagy folyamatok kezelhetik. Az egyik ügynök például a legjobb járatkedvezmények keresésére specializálódhat, egy másik a szállásfoglalásokra, és így tovább. Egy koordináló vagy „downstream” ügynök ezután összeállíthatja ezeket az eredményeket egy koherens útitervvé a végfelhasználó számára.
 
-Ez a moduláris megközelítés lehetővé teszi az inkrementális fejlesztéseket is. Például hozzáadhatunk specializált ügynököket étteremajánlásokhoz vagy helyi programjavaslatokhoz, és idővel finomíthatjuk az útitervet.
+Ez a moduláris megközelítés lehetővé teszi a fokozatos fejlesztéseket is. Például hozzáadhat specializált ügynököket ételajánlásokhoz vagy helyi programjavaslatokhoz, és idővel tovább finomíthatja az útitervet.
 
 ### Strukturált kimenet
 
-A nagy nyelvi modellek (LLM-ek) képesek strukturált kimenetet (pl. JSON) generálni, amelyet a lefelé irányuló ügynökök vagy szolgáltatások könnyebben tudnak elemezni és feldolgozni. Ez különösen hasznos egy több ügynököt érintő kontextusban, ahol a tervezési kimenet kézhezvétele után cselekedhetünk ezekkel a feladatokkal. Rövid áttekintésért tekintsd meg az alábbi példát.
+A nagy nyelvi modellek (LLM-ek) strukturált kimenetet (pl. JSON) képesek előállítani, amelyet a downstream ügynökök vagy szolgáltatások könnyebben fel tudnak dolgozni és értelmezni. Ez különösen hasznos több-ügynökös környezetben, ahol a tervezési kimenet beérkezése után végrehajthatjuk a feladatokat. Tekintse meg ezt a <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogbejegyzést</a> rövid áttekintésért.
 
-Az alábbi Python kódrészlet bemutatja egy egyszerű tervező ügynök működését, amely egy célt részfeladatokra bont, és strukturált tervet generál:
+Az alábbi Python kivonat egy egyszerű tervezőügynököt mutat be, amely egy célt bont részfeladatokra és strukturált tervet generál:
 
 ```python
 from pydantic import BaseModel
@@ -72,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Utazási alfeladat modell
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # a feladatot az ügynöknek szeretnénk kiosztani
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -85,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # A modell hitelesítéséhez létre kell hoznia egy személyes hozzáférési tokent (PAT) a GitHub beállításaiban.
+    # Hozza létre a PAT tokenjét a következő utasítások szerint: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -96,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Határozza meg a felhasználói üzenetet
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -125,30 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Győződjön meg róla, hogy a válasz tartalma érvényes JSON-szöveg, mielőtt betöltené
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
 #     raise ValueError("Response content is not a valid JSON string")
 
-# # Print the response content after loading it as JSON
+# # Írja ki a válasz tartalmát, miután JSON-ként betöltötte
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Ellenőrizze a válasz tartalmát a MathReasoning modellel
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Tervező ügynök több ügynök koordinációjával
+### Tervezőügynök többügynökös orkestrációval
 
-Ebben a példában egy Szemantikus Router Ügynök fogadja a felhasználói kérést (pl. "Szükségem van egy szállodai tervre az utazásomhoz.").
+Ebben a példában egy Semantic Router Agent kap egy felhasználói kérést (pl. "Szükségem van egy szállástervre az utazásomhoz.").
 
-A tervező:
+A tervező ezután:
 
-* Fogadja a szállodai tervet: A tervező megkapja a felhasználó üzenetét, és egy rendszerprompt alapján (beleértve az elérhető ügynökök részleteit) strukturált utazási tervet generál.
-* Listázza az ügynököket és eszközeiket: Az ügynökregiszter tartalmazza az ügynökök listáját (pl. repülőjegy, szálloda, autóbérlés és programok), valamint az általuk kínált funkciókat vagy eszközöket.
-* A tervet a megfelelő ügynökökhöz irányítja: A részfeladatok számától függően a tervező vagy közvetlenül egy dedikált ügynökhöz küldi az üzenetet (egyszerű feladatok esetén), vagy egy csoportos csevegéskezelőn keresztül koordinálja a több ügynök együttműködését.
-* Összegzi az eredményt: Végül a tervező összefoglalja a generált tervet az érthetőség érdekében.
-Az alábbi Python kódminta szemlélteti ezeket a lépéseket:
+* Megkapja a szállástervet: A tervező fogadja a felhasználó üzenetét, és egy rendszerprompt alapján (beleértve az elérhető ügynökök részleteit) strukturált utazási tervet generál.
+* Felsorolja az ügynököket és eszközeiket: Az ügynökregiszter tartalmazza az ügynökök listáját (pl. járat, szállás, autóbérlés és programok) és az általuk kínált funkciókat vagy eszközöket.
+* A terv továbbítása a megfelelő ügynökökhöz: A részfeladatok számától függően a tervező vagy közvetlenül egy dedikált ügynökhöz küldi az üzenetet (egyfeladatos esetekben), vagy többügynökös együttműködéshez egy csoportos chatkezelőn keresztül koordinál.
+* Összegzi az eredményt: Végül a tervező összefoglalja a létrehozott tervet az érthetőség érdekében.
+Az alábbi Python kódminta illusztrálja ezeket a lépéseket:
 
 ```python
 
@@ -166,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Utazási alfeladat-modell
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # szeretnénk a feladatot az ügynöknek kiosztani
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -183,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Hozza létre a klienst típusellenőrzött környezeti változókkal
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -195,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Határozza meg a felhasználói üzenetet
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -212,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Győződjön meg arról, hogy a válasz tartalma érvényes JSON-karakterlánc, mielőtt betöltené
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Írja ki a válasz tartalmát a JSON-ként történő betöltés után
 
 pprint(json.loads(response_content))
 ```
 
-Az előző kód kimenete az alábbiakban látható, és ezt a strukturált kimenetet használhatod az `assigned_agent`-hez való irányításhoz, valamint az utazási terv összegzéséhez a végfelhasználó számára.
+A következő a fenti kód kimenete, és ezt a strukturált kimenetet használhatja arra, hogy továbbítsa a `assigned_agent`-hez és összefoglalja az útitervet a végfelhasználónak.
 
 ```json
 {
@@ -254,19 +254,19 @@ Az előző kód kimenete az alábbiakban látható, és ezt a strukturált kimen
 }
 ```
 
-Egy példa notebook az előző kódmintával elérhető [itt](07-autogen.ipynb).
+A fenti kódmintát tartalmazó példanapló elérhető [itt](07-autogen.ipynb).
 
 ### Iteratív tervezés
 
-Néhány feladat oda-vissza kommunikációt vagy újratervezést igényel, ahol az egyik részfeladat eredménye befolyásolja a következőt. Például, ha az ügynök egy váratlan adatformátumot talál repülőjegy foglalás közben, előfordulhat, hogy módosítania kell a stratégiáját, mielőtt továbblépne a szállodai foglalásokra.
+Egyes feladatok igényelnek oda-vissza kommunikációt vagy újratervezést, ahol az egyik részfeladat eredménye befolyásolja a következőt. Például ha az ügynök egy váratlan adatformátumot fedez fel a járatfoglalás közben, előfordulhat, hogy módosítania kell a stratégiáját, mielőtt tovább lépne a szállásfoglalásokra.
 
-Ezenkívül a felhasználói visszajelzés (pl. ha egy ember úgy dönt, hogy korábbi járatot szeretne) részleges újratervezést válthat ki. Ez a dinamikus, iteratív megközelítés biztosítja, hogy a végső megoldás megfeleljen a valós korlátoknak és a változó felhasználói preferenciáknak.
+Emellett a felhasználói visszajelzés (pl. amikor egy ember úgy dönt, hogy korábbi járatot preferál) részleges újratervezést válthat ki. Ez a dinamikus, iteratív megközelítés biztosítja, hogy a végső megoldás igazodjon a valós korlátokhoz és a változó felhasználói preferenciákhoz.
 
-Példa kód:
+példakód
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. ugyanaz, mint az előző kód, és továbbítani a felhasználói előzményeket és az aktuális tervet
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -280,34 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. újratervezni és elküldeni a feladatokat a megfelelő ügynököknek
 ```
 
-A komplex feladatok átfogó tervezéséhez nézd meg a Magnetic One-t.
+További, átfogóbb tervezéshez tekintse meg a Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">blogbejegyzését</a> az összetett feladatok megoldásáról.
 
 ## Összefoglalás
 
-Ebben a cikkben megvizsgáltuk, hogyan hozhatunk létre egy tervezőt, amely dinamikusan kiválasztja a meghatározott elérhető ügynököket. A Tervező kimenete bontja a feladatokat, és kiosztja az ügynököket, hogy végrehajtsák azokat. Feltételezzük, hogy az ügynökök hozzáférnek a feladat elvégzéséhez szükséges funkciókhoz/eszközökhöz. Az ügynökök mellett más mintákat is beépíthetsz, mint például reflexió, összegző és körforgó csevegés, hogy tovább testre szabhasd.
+Ebben a cikkben megvizsgáltunk egy példát arra, hogyan hozhatunk létre egy tervezőt, amely dinamikusan képes kiválasztani a definiált elérhető ügynököket. A tervező kimenete lebontja a feladatokat és hozzárendeli az ügynököket, hogy azokat végre lehessen hajtani. Feltételezzük, hogy az ügynökök hozzáférnek a feladat végrehajtásához szükséges funkciókhoz/eszközökhöz. Az ügynökök mellett további mintákat is bevonhat, mint például reflektálás, összefoglaló és körkörös chat a további testreszabáshoz.
 
 ## További források
 
-AutoGen Magnetic One - Egy általános több ügynököt használó rendszer komplex feladatok megoldására, amely lenyűgöző eredményeket ért el számos kihívást jelentő ügynöki benchmarkon. Referencia:
+AutoGen Magentic One - A Generalist multi-agent system for solving complex tasks and has achieved impressive results on multiple challenging agentic benchmarks. Reference: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. Ebben a megvalósításban az orchestrator létrehozza a feladatra szabott tervet és delegálja ezeket a feladatokat az elérhető ügynököknek. A tervezés mellett az orchestrator nyomkövető mechanizmust is alkalmaz a feladat előrehaladásának figyelésére és szükség szerint újratervezésre.
 
-Ebben a megvalósításban az orkesztrátor feladat-specifikus tervet készít, és ezeket a feladatokat kiosztja az elérhető ügynököknek. A tervezés mellett az orkesztrátor nyomonkövetési mechanizmust is alkalmaz a feladat előrehaladásának figyelésére, és szükség esetén újratervezésre.
+### Van még kérdése a tervezési mintával kapcsolatban?
 
-### További kérdéseid vannak a tervezési mintával kapcsolatban?
-
-Csatlakozz az [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) közösséghez, hogy találkozz más tanulókkal, részt vegyél fogadóórákon, és választ kapj az AI ügynökökkel kapcsolatos kérdéseidre.
+Csatlakozzon a [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord)-hoz, hogy találkozzon más tanulókkal, részt vegyen konzultációs órákon és választ kapjon az AI ügynökökkel kapcsolatos kérdéseire.
 
 ## Előző lecke
 
-[Bizalomépítő AI ügynökök](../06-building-trustworthy-agents/README.md)
+[Megbízható MI-ügynökök építése](../06-building-trustworthy-agents/README.md)
 
 ## Következő lecke
 
-[Több ügynököt használó tervezési minta](../08-multi-agent/README.md)
+[Többügynökös tervezési minta](../08-multi-agent/README.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget az ebből a fordításból eredő félreértésekért vagy téves értelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Felelősségkizárás:
+Ezt a dokumentumot a Co-op Translator (https://github.com/Azure/co-op-translator) mesterséges intelligencia alapú fordító szolgáltatásával fordítottuk. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő irányadónak. Fontos információk esetén professzionális, emberi fordítást javasolunk. Nem vállalunk felelősséget a jelen fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

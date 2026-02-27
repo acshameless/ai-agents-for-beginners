@@ -1,64 +1,64 @@
-# Kuweka Kozi
+# Usanidi wa Kozi
 
 ## Utangulizi
 
-Somo hili litafundisha jinsi ya kuendesha sampuli za msimbo wa kozi hii.
+Somo hili litafunika jinsi ya kuendesha mifano ya msimbo ya kozi hii.
 
 ## Jiunge na Wanafunzi Wengine na Pata Msaada
 
-Kabla ya kuanza kunakili repo yako, jiunge na [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) ili kupata msaada wowote wa kuweka mazingira, maswali yoyote kuhusu kozi, au kuungana na wanafunzi wengine.
+Kabla ya kuanza ku-kloni repoh yako, jiunge na [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) ili kupata msaada wa usanidi, kuuliza maswali kuhusu kozi, au kuwasiliana na wanafunzi wengine.
 
-## Nakili au Fork Repo Hii
+## Kloni au Forka repo hii
 
-Ili kuanza, tafadhali nakili au fork Hifadhi ya GitHub. Hii itakupa toleo lako la nyenzo za kozi ili uweze kuendesha, kujaribu, na kurekebisha msimbo!
+Ili kuanza, tafadhali kloni au forka Repositori ya GitHub. Hii itaunda toleo lako la nyenzo za kozi ili uweze kuendesha, kujaribu, na kubadilisha msimbo!
 
-Hii inaweza kufanyika kwa kubonyeza kiungo cha <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">fork repo</a>
+This can be done by clicking the link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">fork the repo</a>
 
-Sasa unapaswa kuwa na toleo lako la forked la kozi hii katika kiungo kifuatacho:
+You should now have your own forked version of this course in the following link:
 
-![Forked Repo](../../../translated_images/sw/forked-repo.33f27ca1901baa6a.webp)
+![Repo Imeforkiwa](../../../translated_images/sw/forked-repo.33f27ca1901baa6a.webp)
 
-### Nakili kwa Kina Kidogo (inapendekezwa kwa warsha / Codespaces)
+### Kloni ya Ndogo (inapendekezwa kwa warsha / Codespaces)
 
-  >Hifadhi nzima inaweza kuwa kubwa (~3 GB) unapopakua historia nzima na faili zote. Ikiwa unahudhuria tu warsha au unahitaji tu folda chache za somo, nakala ya kina kidogo (au sparse clone) huepuka sehemu kubwa ya upakuaji huo kwa kufupisha historia na/au kuruka blobs.
+  >Repositi nzima inaweza kuwa kubwa (~3 GB) unapopakua historia yote na faili zote. Ikiwa unahudhuria tu warsha au unahitaji folda chache za somo, kloni ya kina kidogo (au kloni sparse) hubaki bila sehemu kubwa ya upakuaji kwa kukata historia na/au kuepuka blobs.
 
-#### Nakala ya haraka ya kina kidogo — historia ndogo, faili zote
+#### Kloni ya haraka — historia ndogo, faili zote
 
-Badilisha `<your-username>` katika amri zilizo hapa chini na URL ya fork yako (au URL ya upstream ikiwa unapendelea).
+Replace `<your-username>` in the below commands with your fork URL (or the upstream URL if you prefer).
 
-Ili kunakili historia ya commit ya hivi karibuni pekee (upakuaji mdogo):
+To clone only the latest commit history (small download):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Ili kunakili tawi maalum:
+To clone a specific branch:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Nakala ya sehemu (sparse) — blobs ndogo + folda zilizochaguliwa pekee
+#### Kloni Sehemu (sparse) — blobs ndogo + folda zilizochaguliwa pekee
 
-Hii inatumia nakala ya sehemu na sparse-checkout (inahitaji Git 2.25+ na Git ya kisasa inayopendekezwa na msaada wa nakala ya sehemu):
+This uses partial clone and sparse-checkout (requires Git 2.25+ and recommended modern Git with partial clone support):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Ingia kwenye folda ya repo:
+Traverse into the repo folder:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Kisha taja folda unazotaka (mfano hapa chini unaonyesha folda mbili):
+Then specify which folders you want (example below shows two folders):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-Baada ya kunakili na kuthibitisha faili, ikiwa unahitaji tu faili na unataka kuokoa nafasi (hakuna historia ya git), tafadhali futa metadata ya hifadhi (💀isiyoweza kubadilishwa — utapoteza utendaji wote wa Git: hakuna commits, pulls, pushes, au ufikiaji wa historia).
+After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality: no commits, pulls, pushes, or history access).
 
 ```bash
 # zsh/bash
@@ -70,52 +70,51 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Kutumia GitHub Codespaces (inapendekezwa kuepuka upakuaji mkubwa wa ndani)
+#### Kutumia GitHub Codespaces (inapendekezwa ili kuepuka upakuaji mkubwa mahali pa kazi)
 
 - Unda Codespace mpya kwa repo hii kupitia [GitHub UI](https://github.com/codespaces).  
 
-- Katika terminal ya Codespace mpya iliyoundwa, endesha moja ya amri za nakala ya kina kidogo/sehemu hapo juu ili kuleta folda za somo unazohitaji tu kwenye workspace ya Codespace.
-- Hiari: baada ya kunakili ndani ya Codespaces, ondoa .git ili kurejesha nafasi ya ziada (tazama amri za kuondoa hapo juu).
-- Kumbuka: Ikiwa unapendelea kufungua repo moja kwa moja ndani ya Codespaces (bila nakala ya ziada), fahamu Codespaces itajenga mazingira ya devcontainer na inaweza bado kutoa zaidi ya unavyohitaji. Kunakili nakala ya kina kidogo ndani ya Codespace mpya hukupa udhibiti zaidi wa matumizi ya diski.
+- Kwenye terminal ya codespace iliyoundwa, endesha mojawapo ya amri za shallow/sparse clone hapo juu ili kuleta folda za somo unazohitaji kwenye nafasi ya Codespace workspace.
+- Hiari: baada ya ku-cloni ndani ya Codespaces, ondoa .git ili kuurejesha nafasi zaidi (ona amri za kuondoa hapo juu).
+- Kumbuka: Ikiwa unapendelea kufungua repo moja kwa moja ndani ya Codespaces (bila kloni ya ziada), fahamu Codespaces itaunda mazingira ya devcontainer na inaweza bado kutoa zaidi ya unachohitaji. Ku-cloni nakala isiyo nzito ndani ya Codespace safi kunakupa udhibiti zaidi juu ya matumizi ya diski.
 
 #### Vidokezo
 
-- Badilisha URL ya nakala kila wakati na fork yako ikiwa unataka kuhariri/commit.
-- Ikiwa baadaye unahitaji historia zaidi au faili, unaweza kuzichukua au kurekebisha sparse-checkout ili kujumuisha folda za ziada.
+- Badilisha kila wakati URL ya kloni na fork yako ikiwa unataka kuhariri/commit.
+- Ikiwa baadaye utahitaji historia zaidi au faili, unaweza kuzipata kwa fetch au kurekebisha sparse-checkout ili kujumuisha folda za ziada.
 
 ## Kuendesha Msimbo
 
 Kozi hii inatoa mfululizo wa Jupyter Notebooks ambazo unaweza kuendesha ili kupata uzoefu wa vitendo wa kujenga AI Agents.
 
-Sampuli za msimbo zinatumia:
+The code samples use either:
 
-**Inahitaji Akaunti ya GitHub - Bure**:
+**Inahitaji Akaunti ya GitHub - Bila malipo**:
 
 1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Imewekwa alama kama (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Imewekwa alama kama (autogen.ipynb)
+2) AutoGen Framework + GitHub Models Marketplace. Imetajwa kama (autogen.ipynb)
 
 **Inahitaji Usajili wa Azure**:
+3) Azure AI Foundry + Azure AI Agent Service. Imetajwa kama (azureaiagent.ipynb)
 
-3) Azure AI Foundry + Azure AI Agent Service. Imewekwa alama kama (azureaiagent.ipynb)
+Tunakuunga mkono ujaribu aina zote tatu za mifano ili kuona ni ipi inakufaa zaidi.
 
-Tunapendekeza ujaribu aina zote tatu za mifano ili kuona ni ipi inakufaa zaidi.
-
-Chaguo lolote unalochagua, litaamua hatua za kuweka mazingira unazohitaji kufuata hapa chini:
+Chaguo lolote utakalochagua, litaamua hatua za usanidi unazohitaji kufuata hapa chini:
 
 ## Mahitaji
 
 - Python 3.12+
-  - **NOTE**: Ikiwa huna Python3.12 iliyosakinishwa, hakikisha unaisakinisha. Kisha unda venv yako ukitumia python3.12 ili kuhakikisha matoleo sahihi yamesakinishwa kutoka faili ya requirements.txt.
+  - **KUMBUKU**: Ikiwa huna Python3.12 imewekwa, hakikisha unaiweka.  Kisha unda venv yako ukitumia python3.12 kuhakikisha toleo sahihi zinawekwa kutoka kwa faili requirements.txt.
   
     >Mfano
 
-    Unda folda ya Python venv:
+    Create Python venv directory:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    Kisha wezesha mazingira ya venv kwa:
+    Then activate venv environment for:
 
     ```bash
     # zsh/bash
@@ -127,113 +126,79 @@ Chaguo lolote unalochagua, litaamua hatua za kuweka mazingira unazohitaji kufuat
     venv\Scripts\activate
     ```
 
-- .NET 10+: Kwa sampuli za msimbo zinazotumia .NET, hakikisha umesakinisha [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) au baadaye. Kisha, angalia toleo la SDK ya .NET iliyosakinishwa:
+- .NET 10+: Kwa mifano ya msimbo inayotumia .NET, hakikisha umeweka [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) au baadaye. Kisha, angalia toleo la .NET SDK ulioweka:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- Akaunti ya GitHub - Kwa Ufikiaji wa GitHub Models Marketplace
-- Usajili wa Azure - Kwa Ufikiaji wa Azure AI Foundry
-- Akaunti ya Azure AI Foundry - Kwa Ufikiaji wa Azure AI Agent Service
+- Akaunti ya GitHub - Kwa Upatikanaji wa GitHub Models Marketplace
+- Usajili wa Azure - Kwa Upatikanaji wa Microsoft Foundry
+- Akaunti ya Microsoft Foundry - Kwa Upatikanaji wa Azure AI Agent Service
 
-Tumeshirikisha faili ya `requirements.txt` katika mzizi wa hifadhi hii ambayo ina vifurushi vyote vya Python vinavyohitajika kuendesha sampuli za msimbo.
+Tumeweka faili `requirements.txt` katika mzizi wa repositori hii inayojumuisha vifurushi vyote vya Python vinavyohitajika kuendesha mifano ya msimbo.
 
-Unaweza kuvisakinisha kwa kuendesha amri ifuatayo katika terminal yako kwenye mzizi wa hifadhi:
+Unaweza kuviweka kwa kuendesha amri ifuatayo katika terminal yako kwenye mzizi wa repositori:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-Tunapendekeza kuunda mazingira ya Python virtual ili kuepuka migogoro na matatizo.
+Tunashauri kuunda mazingira ya kimazingira (virtual environment) ya Python ili kuepuka migongano na matatizo.
 
-## Kuweka VSCode
+## Sanidi VSCode
 
 Hakikisha unatumia toleo sahihi la Python katika VSCode.
 
-![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+![picha](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Kuweka Sampuli zinazotumia GitHub Models 
+## Sanidi kwa Mifano inayotumia GitHub Models 
 
-### Hatua ya 1: Pata Token ya Ufikiaji wa Kibinafsi ya GitHub (PAT)
+### Hatua 1: Pata Tokeni Yako ya Ufikiaji wa Binafsi ya GitHub (PAT)
 
-Kozi hii inatumia GitHub Models Marketplace, ikitoa ufikiaji wa bure kwa Large Language Models (LLMs) ambazo utatumia kujenga AI Agents.
+Kozi hii inatumia GitHub Models Marketplace, inayotoa upatikanaji wa bure kwa Large Language Models (LLMs) utakazotumia kujenga AI Agents.
 
-Ili kutumia GitHub Models, utahitaji kuunda [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+Ili kutumia GitHub Models, utahitaji kuunda a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
-Hii inaweza kufanyika kwa kwenda kwenye <a href="https://github.com/settings/personal-access-tokens" target="_blank">mipangilio ya Token ya Ufikiaji wa Kibinafsi</a> katika Akaunti yako ya GitHub.
+This can be done by going to your <a href="https://github.com/settings/personal-access-tokens" target="_blank">Personal Access Tokens settings</a> in your GitHub Account.
 
-Tafadhali fuata [Kanuni ya Upendeleo wa Chini](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) unapounda token yako. Hii inamaanisha unapaswa kutoa token ruhusa zinazohitajika tu kuendesha sampuli za msimbo katika kozi hii.
+Tafadhali fuata the [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) when creating your token. This means you should only give the token the permissions it needs to run the code samples in this course.
 
 1. Chagua chaguo la `Fine-grained tokens` upande wa kushoto wa skrini yako kwa kwenda kwenye **Developer settings**
 
-   ![Developer settings](../../../translated_images/sw/profile_developer_settings.410a859fe749c755.webp)
+   ![Mipangilio ya Developer](../../../translated_images/sw/profile_developer_settings.410a859fe749c755.webp)
 
    Kisha chagua `Generate new token`.
 
-   ![Generate Token](../../../translated_images/sw/fga_new_token.1c1a234afe202ab3.webp)
+   ![Tengeneza Tokeni](../../../translated_images/sw/fga_new_token.1c1a234afe202ab3.webp)
 
-2. Weka jina la kuelezea kwa token yako linaloonyesha kusudi lake, ili iwe rahisi kuitambua baadaye.
+2. Weka jina lenye maelezo kwa tokeni yako linaloonyesha kusudi lake, ili liwe rahisi kutambua baadaye.
 
-    🔐 Pendekezo la Muda wa Token
+    🔐 Mapendekezo ya Muda wa Tokeni
 
-    Muda uliopendekezwa: siku 30
-    Kwa usalama zaidi, unaweza kuchagua muda mfupi—kama siku 7 🛡️
-    Ni njia nzuri ya kuweka lengo la kibinafsi na kukamilisha kozi wakati kasi yako ya kujifunza iko juu 🚀.
+    Muda uliopendekezwa: 30 days
+    Kwa usalama zaidi, unaweza kuchagua kipindi kifupi—kama siku 7 🛡️
+    Ni njia nzuri ya kuweka lengo la kibinafsi na kumaliza kozi wakati hamasa yako ya kujifunza iko juu 🚀.
 
-    ![Token Name and Expiration](../../../translated_images/sw/token-name-expiry-date.a095fb0de6386864.webp)
+    ![Jina la Tokeni na Kumalizika kwa Muda](../../../translated_images/sw/token-name-expiry-date.a095fb0de6386864.webp)
 
-3. Punguza wigo wa token kwa fork yako ya hifadhi hii.
+3. Punguza wigo wa tokeni kwa fork yako ya repositori hii.
 
-    ![Limit scope to fork repository](../../../translated_images/sw/token_repository_limit.924ade5e11d9d8bb.webp)
+    ![Punguza wigo kwa fork ya repositori](../../../translated_images/sw/token_repository_limit.924ade5e11d9d8bb.webp)
 
-4. Punguza ruhusa za token: Chini ya **Permissions**, bonyeza tab ya **Account**, na bonyeza kitufe cha "+ Add permissions". Dropdown itaonekana. Tafadhali tafuta **Models** na angalia kisanduku chake.
+4. Punguza ruhusa za tokeni: Chini ya **Permissions**, bonyeza kichupo cha **Account**, na bonyeza kitufe cha "+ Add permissions". Menyu itajitokeza. Tafadhali tafuta **Models** na weka tiki kwenye kisanduku chake.
 
-    ![Add Models Permission](../../../translated_images/sw/add_models_permissions.c0c44ed8b40fc143.webp)
+    ![Ongeza Ruhusa za Models](../../../translated_images/sw/add_models_permissions.c0c44ed8b40fc143.webp)
 
-5. Thibitisha ruhusa zinazohitajika kabla ya kuunda token. ![Verify Permissions](../../../translated_images/sw/verify_permissions.06bd9e43987a8b21.webp)
+5. Thibitisha ruhusa zinazohitajika kabla ya kuunda tokeni. ![Thibitisha Ruhusa](../../../translated_images/sw/verify_permissions.06bd9e43987a8b21.webp)
 
-6. Kabla ya kuunda token, hakikisha uko tayari kuhifadhi token katika sehemu salama kama vault ya meneja wa nywila, kwani haitatolewa tena baada ya kuunda. ![Store Token Securely](../../../translated_images/sw/store_token_securely.08ee2274c6ad6caf.webp)
+6. Kabla ya kuunda tokeni, hakikisha uko tayari kuhifadhi tokeni kwenye mahali salama kama hifadhi ya wasimamizi wa nywila (password manager), kwani haitaonyeshwa tena baada ya kuunda. ![Hifadhi Tokeni Salama](../../../translated_images/sw/store_token_securely.08ee2274c6ad6caf.webp)
 
-Nakili token yako mpya ambayo umekuja kuunda. Sasa utaongeza hii kwenye faili yako ya `.env` iliyojumuishwa katika kozi hii.
+Nakili tokeni yako mpya uliyotengeneza. Sasa itaongeza kwenye faili yako `.env` iliyomo katika kozi hii.
 
-### Hatua ya 2: Unda Faili Yako ya `.env`
+### Hatua 2: Tengeneza Faili Yako `.env`
 
-Ili kuunda faili yako ya `.env` endesha amri ifuatayo katika terminal yako.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Hii itanakili faili ya mfano na kuunda `.env` katika folda yako ambapo utaweka maadili ya vigezo vya mazingira.
-
-Kwa token yako iliyokopiwa, fungua faili ya `.env` katika mhariri wako wa maandishi unaopenda na bandika token yako kwenye sehemu ya `GITHUB_TOKEN`.
-
-![GitHub Token Field](../../../translated_images/sw/github_token_field.20491ed3224b5f4a.webp)
-
-Sasa unapaswa kuwa na uwezo wa kuendesha sampuli za msimbo wa kozi hii.
-
-## Kuweka Sampuli zinazotumia Azure AI Foundry na Azure AI Agent Service
-
-### Hatua ya 1: Pata Endpoint ya Mradi wa Azure Yako
-
-Fuata hatua za kuunda hub na mradi katika Azure AI Foundry zilizopatikana hapa: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-Baada ya kuunda mradi wako, utahitaji kupata string ya muunganisho kwa mradi wako.
-
-Hii inaweza kufanyika kwa kwenda kwenye ukurasa wa **Overview** wa mradi wako katika portal ya Azure AI Foundry.
-
-![Project Connection String](../../../translated_images/sw/project-endpoint.8cf04c9975bbfbf1.webp)
-
-### Hatua ya 2: Unda Faili Yako ya `.env`
-
-Ili kuunda faili yako ya `.env` endesha amri ifuatayo katika terminal yako.
+To create your `.env` file run the following command in your terminal.
 
 ```bash
 # zsh/bash
@@ -245,79 +210,115 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Hii itanakili faili ya mfano na kuunda `.env` katika folda yako ambapo utaweka maadili ya vigezo vya mazingira.
+Hii itakopa faili la mfano na kuunda `.env` katika saraka yako, ambapo utakamilisha thamani za vigezo vya mazingira.
 
-Kwa token yako iliyokopiwa, fungua faili ya `.env` katika mhariri wako wa maandishi unaopenda na bandika token yako kwenye sehemu ya `PROJECT_ENDPOINT`.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
-### Hatua ya 3: Ingia kwenye Azure
+![Uwanja wa Tokeni ya GitHub](../../../translated_images/sw/github_token_field.20491ed3224b5f4a.webp)
 
-Kama mazoea bora ya usalama, tutatumia [uthibitishaji bila funguo](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) kuingia kwenye Azure OpenAI na Microsoft Entra ID. 
+Sasa unapaswa kuwa na uwezo wa kuendesha mifano ya msimbo ya kozi hii.
 
-Kisha, fungua terminal na endesha `az login --use-device-code` ili kuingia kwenye akaunti yako ya Azure.
+## Sanidi kwa Mifano inayotumia Microsoft Foundry na Azure AI Agent Service
 
-Baada ya kuingia, chagua usajili wako katika terminal.
+### Hatua 1: Pata Endpoint ya Mradi wako wa Azure
 
-## Vigezo vya Mazingira vya Ziada - Azure Search na Azure OpenAI 
 
-Kwa Somo la Agentic RAG - Somo la 5 - kuna sampuli zinazotumia Azure Search na Azure OpenAI.
+Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
 
-Ikiwa unataka kuendesha sampuli hizi, utahitaji kuongeza vigezo vifuatavyo vya mazingira kwenye faili yako ya `.env`:
+
+Once you have created your project, you will need to retrieve the connection string for your project.
+
+Hii inaweza kufanywa kwa kwenda kwenye ukurasa wa **Overview** wa mradi wako katika bandari ya Microsoft Foundry.
+
+![Connection String ya Mradi](../../../translated_images/sw/project-endpoint.8cf04c9975bbfbf1.webp)
+
+### Hatua 2: Tengeneza Faili Yako `.env`
+
+To create your `.env` file run the following command in your terminal.
+
+```bash
+# zsh/bash
+cp .env.example .env
+```
+
+```powershell
+# PowerShell
+Copy-Item .env.example .env
+```
+
+Hii itakopa faili la mfano na kuunda `.env` katika saraka yako, ambapo utakamilisha thamani za vigezo vya mazingira.
+
+Baada ya kunakili tokeni yako, fungua faili `.env` katika mhariri unaoupenda na weka tokeni yako kwenye uwanja `PROJECT_ENDPOINT`.
+
+### Hatua 3: Ingia kwenye Azure
+
+Kama njia bora ya usalama, tutatumia [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) kuji-authenticate kwa Azure OpenAI kwa kutumia Microsoft Entra ID. 
+
+Next, open a terminal and run `az login --use-device-code` to sign in to your Azure account.
+
+Once you've logged in, select your subscription in the terminal.
+
+## Vigezo vya Mazingira Zaidi - Azure Search na Azure OpenAI 
+
+Kwa Somo la Agentic RAG - Somo la 5 - kuna mifano inayotumia Azure Search na Azure OpenAI.
+
+Iki unataka kuendesha mifano hii, utahitaji kuongeza vigezo vya mazingira vifuatavyo kwenye faili yako `.env`:
 
 ### Ukurasa wa Muhtasari (Mradi)
 
 - `AZURE_SUBSCRIPTION_ID` - Angalia **Project details** kwenye ukurasa wa **Overview** wa mradi wako.
 
-- `AZURE_AI_PROJECT_NAME` - Angalia juu ya ukurasa wa **Overview** wa mradi wako.
+- `AZURE_AI_PROJECT_NAME` - Angalia sehemu ya juu ya ukurasa wa **Overview** wa mradi wako.
 
-- `AZURE_OPENAI_SERVICE` - Pata hii katika tab ya **Included capabilities** kwa **Azure OpenAI Service** kwenye ukurasa wa **Overview**.
+- `AZURE_OPENAI_SERVICE` - Tafuta hii kwenye kichupo cha **Included capabilities** kwa **Azure OpenAI Service** kwenye ukurasa wa **Overview**.
 
 ### Kituo cha Usimamizi
 
 - `AZURE_OPENAI_RESOURCE_GROUP` - Nenda kwenye **Project properties** kwenye ukurasa wa **Overview** wa **Management Center**.
 
-- `GLOBAL_LLM_SERVICE` - Chini ya **Connected resources**, pata jina la muunganisho wa **Azure AI Services**. Ikiwa halipo, angalia **Azure portal** chini ya kikundi chako cha rasilimali kwa jina la rasilimali za AI Services.
+- `GLOBAL_LLM_SERVICE` - Chini ya **Connected resources**, tafuta jina la muunganisho wa **Azure AI Services**. Ikiwa halijatolewa, angalia **Azure portal** chini ya resource group yako kwa jina la rasilimali ya AI Services.
 
 ### Ukurasa wa Models + Endpoints
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Chagua mfano wako wa embedding (mfano, `text-embedding-ada-002`) na kumbuka **Deployment name** kutoka maelezo ya mfano.
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Chagua modeli yako ya embedding (mfano, `text-embedding-ada-002`) na kumbuka **Deployment name** kutoka kwa maelezo ya modeli.
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Chagua mfano wako wa chat (mfano, `gpt-4o-mini`) na kumbuka **Deployment name** kutoka maelezo ya mfano.
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Chagua modeli yako ya chat (mfano, `gpt-4o-mini`) na kumbuka **Deployment name** kutoka kwa maelezo ya modeli.
 
-### Portal ya Azure
+### Azure Portal
 
-- `AZURE_OPENAI_ENDPOINT` - Tafuta **Azure AI services**, bonyeza juu yake, kisha nenda kwenye **Resource Management**, **Keys and Endpoint**, shuka chini kwenye "Azure OpenAI endpoints", na nakili ile inayosema "Language APIs".
+- `AZURE_OPENAI_ENDPOINT` - Tafuta **Azure AI services**, ibonyeze, kisha nenda kwenye **Resource Management**, **Keys and Endpoint**, punguza hadi kwenye "Azure OpenAI endpoints", na nakili ile inayosema "Language APIs".
 
-- `AZURE_OPENAI_API_KEY` - Kutoka skrini hiyo hiyo, nakili KEY 1 au KEY 2.
+- `AZURE_OPENAI_API_KEY` - Kutoka kwenye skrini ile ile, nakili KEY 1 au KEY 2.
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Pata rasilimali yako ya **Azure AI Search**, bonyeza juu yake, na angalia **Overview**.
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Tafuta rasilimali yako ya **Azure AI Search**, ibonyeze, na ona **Overview**.
 
-- `AZURE_SEARCH_API_KEY` - Kisha nenda kwenye **Settings** na kisha **Keys** ili kunakili funguo kuu au sekondari ya msimamizi.
+- `AZURE_SEARCH_API_KEY` - Kisha nenda **Settings** na kisha **Keys** ili kunakili ufunguo mkuu au wa pili wa admin.
 
-### Ukurasa wa Nje
+### Tovuti ya Nje
 
-- `AZURE_OPENAI_API_VERSION` - Tembelea ukurasa wa [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) chini ya **Latest GA API release**.
+- `AZURE_OPENAI_API_VERSION` - Tembelea the [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page under **Latest GA API release**.
 
-### Kuweka uthibitishaji bila funguo
+### Sanidi uthibitishaji bila funguo
 
-Badala ya kuweka maelezo yako ya kuingia, tutatumia muunganisho bila funguo na Azure OpenAI. Ili kufanya hivyo, tutaingiza `DefaultAzureCredential` na baadaye kuita kazi ya `DefaultAzureCredential` kupata uthibitisho.
+Badala ya kuweka sifa zako (credentials) moja kwa moja ndani ya msimbo, tutatumia muunganisho unaofanya bila funguo (keyless) na Azure OpenAI. Kufanya hivyo, tutaingiza `DefaultAzureCredential` na baadaye kuita kazi ya `DefaultAzureCredential` ili kupata uthibitisho.
 
 ```python
-# Kipyton
+# Python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## Umekwama Mahali Fulani?
-Kama unakutana na changamoto yoyote ukiendesha mpangilio huu, jiunge na <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> yetu au <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">unda suala</a>.
+## Umekwama Wapi?
+Iwapo una matatizo yoyote kuendesha usanidi huu, jiunge kwenye <a href="https://discord.gg/kzRShWzttr" target="_blank">Discord ya Jumuiya ya Azure AI</a> au <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">tengeneza suala</a>.
 
-## Somo Lijalo
+## Somo Ifuatayo
 
-Sasa uko tayari kuendesha msimbo wa kozi hii. Jifunze kwa furaha zaidi kuhusu ulimwengu wa Mawakala wa AI!
+Sasa uko tayari kuendesha msimbo wa kozi hii. Furahia kujifunza zaidi kuhusu ulimwengu wa mawakala wa AI! 
 
-[Utangulizi wa Mawakala wa AI na Matumizi Yake](../01-intro-to-ai-agents/README.md)
+[Utangulizi wa Mawakala wa AI na Matumizi ya Mawakala](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Tamko la kutokuwajibika:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au ukosefu wa usahihi. Nakala ya awali ya hati hii katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo chenye mamlaka. Kwa taarifa muhimu, inapendekezwa kutumia tafsiri ya kitaalamu iliyofanywa na mtafsiri wa binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,7 +1,7 @@
 # Pamięć dla Agentów AI  
 [![Agent Memory](../../../translated_images/pl/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-Podczas omawiania unikalnych korzyści związanych z tworzeniem Agentów AI, głównie porusza się dwie kwestie: zdolność do wywoływania narzędzi do wykonywania zadań oraz zdolność do ulepszania się w czasie. Pamięć leży u podstaw tworzenia samo-ulepszających się agentów, którzy mogą tworzyć lepsze doświadczenia dla naszych użytkowników.
+Podczas omawiania unikalnych korzyści związanych z tworzeniem Agentów AI, głównie dyskutuje się o dwóch aspektach: zdolności do wywoływania narzędzi do realizacji zadań oraz zdolności do samodoskonalenia się. Pamięć stanowi fundament tworzenia agenta samodoskonalącego się, który może tworzyć lepsze doświadczenia dla naszych użytkowników.
 
 W tej lekcji przyjrzymy się, czym jest pamięć dla Agentów AI oraz jak możemy nią zarządzać i wykorzystywać ją na korzyść naszych aplikacji.
 
@@ -9,163 +9,163 @@ W tej lekcji przyjrzymy się, czym jest pamięć dla Agentów AI oraz jak możem
 
 Ta lekcja obejmie:
 
-• **Zrozumienie pamięci Agenta AI**: Czym jest pamięć i dlaczego jest niezbędna dla agentów.
+• **Zrozumienie pamięci Agenta AI**: Czym jest pamięć i dlaczego jest istotna dla agentów.
 
-• **Implementacja i przechowywanie pamięci**: Praktyczne metody dodawania funkcji pamięci do twoich agentów AI, ze szczególnym uwzględnieniem pamięci krótkoterminowej i długoterminowej.
+• **Implementacja i przechowywanie pamięci**: Praktyczne metody dodawania funkcji pamięci do twoich agentów AI, ze szczególnym uwzględnieniem pamięci krótkotrwałej i długotrwałej.
 
-• **Sprawianie, by Agenci AI się samo-ulepszali**: Jak pamięć umożliwia agentom uczenie się na podstawie przeszłych interakcji i poprawę w czasie.
+• **Uczynienie agentów AI samodoskonalącymi się**: Jak pamięć umożliwia agentom uczenie się na podstawie wcześniejszych interakcji i ulepszanie się z upływem czasu.
 
 ## Dostępne implementacje
 
-Ta lekcja zawiera dwa kompleksowe poradniki w formie notebooków:
+Ta lekcja zawiera dwa wszechstronne poradniki-notatniki:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implementuje pamięć z wykorzystaniem Mem0 oraz Azure AI Search wraz z frameworkiem Semantic Kernel
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implementuje pamięć przy użyciu Mem0 oraz Azure AI Search z frameworkiem Semantic Kernel
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implementuje strukturę pamięci za pomocą Cognee, automatycznie budując graf wiedzy oparty na embeddings, wizualizując graf i inteligentne wyszukiwanie
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implementuje strukturalną pamięć z użyciem Cognee, automatycznie budując graf wiedzy oparty na embeddingach, wizualizując graf i inteligentne wyszukiwanie
 
 ## Cele nauki
 
 Po ukończeniu tej lekcji będziesz potrafił:
 
-• **Rozróżniać różne typy pamięci agenta AI**, w tym pamięć roboczą, krótkoterminową i długoterminową oraz wyspecjalizowane formy, takie jak pamięć persony i epizodyczna.
+• **Rozróżniać różne typy pamięci agenta AI**, w tym pamięć roboczą, krótkoterminową i długoterminową, a także specjalistyczne formy jak pamięć persona i epizodyczna.
 
-• **Implementować i zarządzać pamięcią krótkoterminową i długoterminową dla agentów AI** korzystając z frameworka Semantic Kernel, wykorzystując narzędzia takie jak Mem0, Cognee, Whiteboard memory oraz integrując się z Azure AI Search.
+• **Implementować i zarządzać pamięcią krótkoterminową i długoterminową dla agentów AI** przy użyciu frameworka Semantic Kernel, wykorzystując narzędzia takie jak Mem0, Cognee, pamięć typu Whiteboard oraz integrując z Azure AI Search.
 
-• **Zrozumieć zasady stojące za samo-ulepszającymi się agentami AI** oraz jak solidne systemy zarządzania pamięcią przyczyniają się do ciągłego uczenia się i adaptacji.
+• **Zrozumieć zasady stojące za samodoskonalącymi się agentami AI** oraz jak solidne systemy zarządzania pamięcią przyczyniają się do ciągłego uczenia się i adaptacji.
 
 ## Zrozumienie pamięci Agenta AI
 
-U podstaw, **pamięć dla agentów AI odnosi się do mechanizmów umożliwiających im utrzymywanie i przypominanie informacji**. Informacje te mogą obejmować szczegóły rozmowy, preferencje użytkownika, wcześniejsze działania lub nawet wyuczone wzorce.
+W swojej istocie **pamięć dla agentów AI odnosi się do mechanizmów, które pozwalają im przechowywać i przypominać informacje**. Informacje te mogą zawierać konkretne szczegóły rozmowy, preferencje użytkownika, wcześniejsze działania lub nawet wyuczone wzorce.
 
-Bez pamięci aplikacje AI są często bezstanowe, co oznacza, że każda interakcja zaczyna się od zera. Prowadzi to do powtarzalnego i frustrującego doświadczenia użytkownika, gdy agent „zapomina” poprzedni kontekst lub preferencje.
+Bez pamięci aplikacje AI często są bezstanowe, co oznacza, że każda interakcja zaczyna się od zera. Prowadzi to do powtarzalnego i frustrującego doświadczenia użytkownika, gdzie agent „zapomina” wcześniejszy kontekst lub preferencje.
 
 ### Dlaczego pamięć jest ważna?
 
-Inteligencja agenta jest głęboko powiązana z jego zdolnością do przypominania i wykorzystywania przeszłych informacji. Pamięć pozwala agentom na:
+Inteligencja agenta jest głęboko związana z jego zdolnością do przypominania i wykorzystywania informacji z przeszłości. Pamięć pozwala agentom być:
 
-• **Refleksyjność**: Uczenie się na podstawie poprzednich działań i rezultatów.
+• **Refleksyjni**: Uczyć się na podstawie wcześniejszych działań i rezultatów.
 
-• **Interaktywność**: Utrzymywanie kontekstu podczas trwającej rozmowy.
+• **Interakcyjni**: Utrzymywać kontekst w trakcie trwającej rozmowy.
 
-• **Proaktywność i reaktywność**: Przewidywanie potrzeb lub odpowiednie reagowanie na podstawie danych historycznych.
+• **Proaktywni i reaktywni**: Przewidywać potrzeby lub odpowiednio reagować na podstawie danych historycznych.
 
-• **Autonomię**: Działanie bardziej niezależne dzięki korzystaniu z przechowywanej wiedzy.
+• **Autonomiczni**: Działać bardziej niezależnie, korzystając z przechowywanej wiedzy.
 
-Celem implementacji pamięci jest uczynienie agentów bardziej **wiarygodnymi i zdolnymi**.
+Celem implementacji pamięci jest uczynienie agentów bardziej **wiarygodnymi i efektywnymi**.
 
-### Typy pamięci
+### Rodzaje pamięci
 
 #### Pamięć robocza
 
-Możesz ją porównać do kartki papieru, której agent używa podczas pojedynczego, trwającego zadania lub procesu myślowego. Przechowuje ona bezpośrednio potrzebne informacje do wykonania następnego kroku.
+Można ją porównać do kawałka kartki, z której agent korzysta podczas pojedynczego, trwającego zadania lub procesu myślowego. Zawiera natychmiastowe informacje potrzebne do wykonania następnego kroku.
 
-Dla agentów AI pamięć robocza często wychwytuje najbardziej istotne informacje z rozmowy, nawet jeśli cała historia czatu jest długa lub obcięta. Skupia się na wydobywaniu kluczowych elementów jak wymagania, propozycje, decyzje i działania.
+Dla agentów AI, pamięć robocza często przechwytuje najistotniejsze informacje z rozmowy, nawet jeśli pełna jej historia jest długa lub przycięta. Skupia się na wydobyciu kluczowych elementów, takich jak wymagania, propozycje, decyzje i działania.
 
 **Przykład pamięci roboczej**
 
-W agencie do rezerwacji podróży pamięć robocza może przechowywać bieżące żądanie użytkownika, np. „Chcę zarezerwować wycieczkę do Paryża”. Ta konkretna potrzeba jest utrzymywana w bezpośrednim kontekście agenta, aby kierować bieżącą interakcją.
+W agencie do rezerwacji podróży pamięć robocza może przechwycić aktualne żądanie użytkownika, np. „Chcę zarezerwować wycieczkę do Paryża”. To konkretne wymaganie jest utrzymywane w kontekście agenta, aby ukierunkować bieżącą interakcję.
 
 #### Pamięć krótkoterminowa
 
-Ten typ pamięci przechowuje informacje przez czas trwania pojedynczej rozmowy lub sesji. To kontekst aktualnego czatu, pozwalający agentowi odwoływać się do wcześniejszych wypowiedzi w dialogu.
+Ten typ pamięci przechowuje informacje przez czas trwania pojedynczej rozmowy lub sesji. To jest kontekst bieżącego czatu, pozwalający agentowi odwoływać się do wcześniejszych wypowiedzi w dialogu.
 
 **Przykład pamięci krótkoterminowej**
 
-Jeśli użytkownik zapyta „Ile kosztuje lot do Paryża?” a następnie doda „A co z noclegiem tam?”, pamięć krótkoterminowa zapewnia, że agent rozumie, że „tam” odnosi się do „Paryża” w obrębie tej samej rozmowy.
+Jeśli użytkownik zapyta „Ile kosztuje lot do Paryża?” a następnie zapyta „A co z zakwaterowaniem tam?”, pamięć krótkoterminowa zapewnia, że agent wie, iż „tam” odnosi się do „Paryża” w ramach tej samej rozmowy.
 
 #### Pamięć długoterminowa
 
-To informacje, które utrzymują się między wieloma rozmowami lub sesjami. Pozwala agentom zapamiętywać preferencje użytkownika, historyczne interakcje lub wiedzę ogólną przez dłuższy czas. To ważne dla personalizacji.
+To informacje, które utrzymują się pomiędzy wieloma rozmowami lub sesjami. Pozwala agentom pamiętać preferencje użytkownika, wcześniejsze interakcje lub ogólną wiedzę przez dłuższy czas. Jest to ważne dla personalizacji.
 
 **Przykład pamięci długoterminowej**
 
-Pamięć długoterminowa może zapisać, że „Ben lubi narciarstwo i aktywności na świeżym powietrzu, pije kawę z widokiem na góry i chce unikać zaawansowanych tras narciarskich ze względu na wcześniejszą kontuzję”. Te informacje, wyuczone z poprzednich interakcji, wpływają na rekomendacje podczas przyszłych sesji planowania podróży, czyniąc je wysoce spersonalizowanymi.
+Pamięć długoterminowa może przechowywać fakt, że „Ben lubi narciarstwo i aktywności na świeżym powietrzu, pije kawę z widokiem na góry i unika zaawansowanych tras narciarskich z powodu dawnej kontuzji”. Te informacje, zdobyte z wcześniejszych interakcji, wpływają na rekomendacje podczas przyszłych sesji planowania podróży, czyniąc je bardzo spersonalizowanymi.
 
-#### Pamięć persony
+#### Pamięć persona
 
-Ten wyspecjalizowany typ pamięci pomaga agentowi rozwijać spójną „osobowość” lub „personę”. Umożliwia agentowi zapamiętanie szczegółów o sobie lub o swojej roli, dzięki czemu interakcje są bardziej płynne i skupione.
+Ten specjalistyczny typ pamięci pomaga agentowi rozwijać spójną „osobowość” lub „personę”. Pozwala agentowi pamiętać szczegóły o sobie lub swojej roli, co sprawia, że interakcje są bardziej płynne i skupione.
 
-**Przykład pamięci persony**
+**Przykład pamięci persona**
 
-Jeśli agent podróżniczy jest zaprojektowany jako „ekspert ds. planowania wyjazdów narciarskich”, pamięć persony może wzmocnić tę rolę, wpływając na odpowiedzi zgodnie z tonem i wiedzą eksperta.
+Jeśli agent podróży jest zaprojektowany jako „ekspert od planowania narciarskiego”, pamięć persona może wzmacniać tę rolę, wpływając na odpowiedzi zgodne z tonem i wiedzą eksperta.
 
-#### Pamięć przepływu pracy/epizodyczna
+#### Pamięć Workflow/Epizodyczna
 
-Ta pamięć zapisuje kolejność kroków, jakie agent podejmuje podczas złożonego zadania, włączając w to sukcesy i porażki. To jak zapamiętywanie konkretnych „epizodów” lub doświadczeń, z których można się uczyć.
+Ta pamięć przechowuje sekwencję kroków, które agent wykonuje podczas złożonego zadania, włączając w to sukcesy i porażki. To jak pamiętanie konkretnych „epizodów” lub doświadczeń, aby z nich wyciągać naukę.
 
 **Przykład pamięci epizodycznej**
 
-Jeśli agent próbował zarezerwować określony lot, ale nie powiodło się to z powodu braku dostępności, pamięć epizodyczna może zarejestrować tę nieudaną próbę, pozwalając agentowi spróbować alternatywnych lotów lub poinformować użytkownika o problemie w bardziej świadomy sposób podczas kolejnej próby.
+Jeśli agent próbował zarezerwować określony lot, ale się to nie powiodło z powodu braku dostępności, pamięć epizodyczna może to zanotować, pozwalając agentowi spróbować alternatywnych lotów lub poinformować użytkownika o problemie w lepszy sposób podczas kolejnej próby.
 
 #### Pamięć encji
 
-Polega na wydobywaniu i zapamiętywaniu konkretnych encji (jak osoby, miejsca lub rzeczy) oraz wydarzeń z rozmów. Pozwala agentowi budować strukturalne rozumienie kluczowych elementów omówionych w konwersacji.
+Polega na wyodrębnianiu i zapamiętywaniu konkretnych encji (jak osoby, miejsca czy rzeczy) oraz zdarzeń z rozmów. Pozwala agentowi budować uporządkowane rozumienie kluczowych elementów omawianych w rozmowie.
 
 **Przykład pamięci encji**
 
-Z rozmowy o przeszłej podróży agent może wyciągnąć takie encje jak „Paryż”, „Wieża Eiffla” oraz „kolacja w restauracji Le Chat Noir”. W przyszłej interakcji agent mógłby przypomnieć sobie „Le Chat Noir” i zaoferować dokonanie nowej rezerwacji w tym miejscu.
+Z rozmowy o przeszłej podróży agent może wydobyć encje takie jak „Paryż”, „Wieża Eiffla” i „kolacja w restauracji Le Chat Noir”. W przyszłej interakcji agent może przypomnieć sobie „Le Chat Noir” i zaoferować dokonanie nowej rezerwacji.
 
 #### Strukturalny RAG (Retrieval Augmented Generation)
 
-Choć RAG to szersza technika, „Strukturalny RAG” jest wyróżniany jako potężna technologia pamięci. Wydobywa gęste, ustrukturyzowane informacje z różnych źródeł (rozmowy, e-maile, obrazy) i używa ich do zwiększenia precyzji, recallu i szybkości odpowiedzi. W przeciwieństwie do klasycznego RAG, który opiera się wyłącznie na semantycznym podobieństwie, Strukturalny RAG wykorzystuje wbudowaną strukturę informacji.
+Chociaż RAG to szersza technika, „Strukturalny RAG” jest wyróżniany jako potężna technologia pamięci. Wydobywa gęste, strukturalne informacje z różnych źródeł (rozmowy, e-maile, obrazy) i wykorzystuje je, by zwiększyć precyzję, przypominanie oraz szybkość odpowiedzi. W przeciwieństwie do klasycznego RAG, który opiera się wyłącznie na podobieństwie semantycznym, Strukturalny RAG korzysta z inherentnej struktury informacji.
 
 **Przykład Strukturalnego RAG**
 
-Zamiast tylko wyszukiwać dopasowania słów kluczowych, Strukturalny RAG mógłby wyodrębnić szczegóły lotu (cel, data, godzina, linie lotnicze) z e-maila i zapisać je w sposób ustrukturyzowany. To pozwala na precyzyjne zapytania typu „Jaki lot do Paryża zarezerwowałem na wtorek?”
+Zamiast tylko dopasowywać słowa kluczowe, Strukturalny RAG może przeanalizować szczegóły lotu (cel, data, godzina, linia lotnicza) z e-maila i zapisać je w uporządkowany sposób. Pozwala to na precyzyjne zapytania typu „Jaki lot zarezerwowałem do Paryża we wtorek?”
 
 ## Implementacja i przechowywanie pamięci
 
-Implementacja pamięci dla agentów AI to systematyczny proces **zarządzania pamięcią**, który obejmuje generowanie, przechowywanie, wyszukiwanie, integrowanie, aktualizowanie, a nawet „zapominanie” (czyli usuwanie) informacji. Wyszukiwanie jest szczególnie ważnym aspektem.
+Implementacja pamięci dla agentów AI obejmuje systematyczny proces **zarządzania pamięcią**, który zawiera generowanie, przechowywanie, wyszukiwanie, integrowanie, aktualizowanie, a nawet „zapominanie” (czyli usuwanie) informacji. Wyszukiwanie jest szczególnie istotnym aspektem.
 
-### Specjalistyczne narzędzia pamięci
+### Specjalistyczne narzędzia pamięciowe
 
 #### Mem0
 
-Jednym ze sposobów przechowywania i zarządzania pamięcią agenta jest użycie specjalistycznych narzędzi jak Mem0. Mem0 działa jako trwała warstwa pamięci, umożliwiając agentom przywoływanie istotnych interakcji, przechowywanie preferencji użytkownika oraz faktograficznego kontekstu, a także uczenie się na podstawie sukcesów i porażek w czasie. Idea polega na tym, że agenci bezstanowi zmieniają się w stanowych.
+Jednym ze sposobów przechowywania i zarządzania pamięcią agenta jest użycie specjalistycznych narzędzi, takich jak Mem0. Mem0 działa jako warstwa pamięci trwałej, pozwalając agentom przypominać sobie istotne interakcje, przechowywać preferencje użytkownika i faktyczny kontekst oraz uczyć się na podstawie sukcesów i porażek z upływem czasu. Idea jest taka, że agenci bezstanowi zmieniają się w stanowych.
 
-Działa poprzez **dwufazowy pipeline pamięci: ekstrakcję i aktualizację**. Najpierw wiadomości dodane do wątku agenta są wysyłane do usługi Mem0, która wykorzystuje Duży Model Językowy (LLM) do podsumowania historii rozmowy i wyodrębnienia nowych wspomnień. Następnie faza aktualizacji prowadzona przez LLM decyduje, czy dodać, zmodyfikować lub usunąć te pamięci, przechowując je w hybrydowej bazie danych, która może obejmować wektorowe, grafowe i klucz-wartość. System wspiera różne typy pamięci i może wykorzystać pamięć grafową do zarządzania relacjami między encjami.
+Działa to poprzez **dwufazowy proces pamięci: ekstrakcję i aktualizację**. Najpierw wiadomości dodane do wątku agenta są wysyłane do usługi Mem0, która wykorzystuje Duży Model Językowy (LLM) do zsumowania historii rozmowy i ekstrakcji nowych wspomnień. Następnie faza aktualizacji sterowana przez LLM decyduje, czy dodać, zmodyfikować lub usunąć te wspomnienia, zapisując je w hybrydowej bazie danych, która może zawierać bazy wektorowe, grafowe i klucz-wartość. System ten obsługuje też różne typy pamięci i może integrować pamięć grafową do zarządzania relacjami między encjami.
 
 #### Cognee
 
-Innym potężnym podejściem jest użycie **Cognee**, open-source'owej semantycznej pamięci dla agentów AI, która przekształca dane strukturalne i niestrukturalne w zapytalne grafy wiedzy oparte na embeddings. Cognee oferuje **architekturę dual-store**, łączącą wyszukiwanie według podobieństwa wektorów z relacjami grafowymi, pozwalając agentom rozumieć nie tylko co jest podobne, ale jak pojęcia się ze sobą łączą.
+Innym potężnym podejściem jest użycie **Cognee** — otwartoźródłowej semantycznej pamięci dla agentów AI, która przekształca dane ustrukturyzowane i nieustrukturyzowane w zapytalne grafy wiedzy oparte na embeddingach. Cognee oferuje **architekturę dual-store** łączącą wyszukiwanie wektorowe z relacjami grafowymi, pozwalając agentom rozumieć nie tylko podobieństwo informacji, lecz także wzajemne powiązania koncepcji.
 
-Wyróżnia się w **hybrydowym wyszukiwaniu**, które łączy wektorowe podobieństwo, strukturę grafu i rozumowanie LLM — od prostego wyszukiwania fragmentów po świadome grafowo odpowiadanie na pytania. System utrzymuje **żywą pamięć**, która ewoluuje i rośnie, a jednocześnie pozostaje zapytalna jako jeden spójny graf, wspierając zarówno krótkoterminowy kontekst sesji, jak i długoterminową, trwałą pamięć.
+Wyróżnia się w **hybrydowym wyszukiwaniu**, które łączy podobieństwo wektorowe, strukturę grafu oraz rozumowanie LLM — od prostego wyszukiwania fragmentów do zadawania pytań świadomych grafu. System utrzymuje **żywą pamięć**, która ewoluuje i rośnie, pozostając jednocześnie zapytalna jako jeden połączony graf, wspierając zarówno kontekst sesji krótkoterminowej, jak i pamięć trwałą długoterminową.
 
-Poradnik w notebooku Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonstruje budowę tej zunifikowanej warstwy pamięci, z praktycznymi przykładami przetwarzania różnorodnych źródeł danych, wizualizacją grafu wiedzy i zadawaniem pytań z wykorzystaniem różnych strategii wyszukiwania dostosowanych do potrzeb agenta.
+Poradnik-notatnik Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) demonstruje budowę tej zunifikowanej warstwy pamięci, z praktycznymi przykładami wprowadzania różnorodnych źródeł danych, wizualizacji grafu wiedzy oraz zapytań z zastosowaniem różnych strategii wyszukiwania dostosowanych do konkretnych potrzeb agenta.
 
 ### Przechowywanie pamięci z RAG
 
-Poza specjalistycznymi narzędziami pamięci jak mem0 , możesz wykorzystać solidne usługi wyszukiwania jak **Azure AI Search jako backend do przechowywania i wyszukiwania pamięci**, zwłaszcza dla strukturalnego RAG.
+Poza specjalistycznymi narzędziami pamięciowymi takimi jak mem0, możesz wykorzystać zaawansowane usługi wyszukiwania, takie jak **Azure AI Search, jako backend do przechowywania i wyszukiwania wspomnień**, zwłaszcza w przypadku strukturalnego RAG.
 
-To pozwala zakotwiczyć odpowiedzi twojego agenta w własnych danych, zapewniając bardziej istotne i dokładne odpowiedzi. Azure AI Search może być używany do przechowywania użytkownikowo-specyficznych wspomnień podróżniczych, katalogów produktów lub jakiejkolwiek innej wiedzy specyficznej dla domeny.
+Pozwala to ugruntować odpowiedzi twojego agenta na własnych danych, zapewniając bardziej trafne i dokładne odpowiedzi. Azure AI Search może być używany do przechowywania pamięci użytkownika dotyczących podróży, katalogów produktów lub innej specjalistycznej wiedzy.
 
-Azure AI Search wspiera funkcje takie jak **Structured RAG**, które doskonale sprawdzają się w wydobywaniu i wyszukiwaniu gęstych, ustrukturyzowanych informacji z dużych zbiorów danych jak historia rozmów, e-maile czy nawet obrazy. Zapewnia to „nadludzką precyzję i recall” w porównaniu do tradycyjnego dzielenia tekstów i podejść embeddingowych.
+Azure AI Search wspiera funkcje takie jak **Strukturalny RAG**, który świetnie nadaje się do wydobywania i przywoływania gęstych, strukturalnych informacji z dużych zbiorów danych, takich jak historie rozmów, e-maile czy nawet obrazy. Zapewnia to „ponadludzką” precyzję i przypominanie w porównaniu do tradycyjnych metod cięcia tekstu i embeddingu.
 
-## Sprawianie, by Agenci AI się Samo-ulepszali
+## Uczynienie agentów AI samodoskonalącymi się
 
-Powszechny wzorzec dla agentów samo-ulepszających się polega na wprowadzeniu **„agenta wiedzy”**. Ten odrębny agent obserwuje główną rozmowę między użytkownikiem a podstawowym agentem. Jego rola to:
+Typowym wzorcem dla agentów samodoskonalących się jest wprowadzenie **„agenta wiedzy”**. Ten oddzielny agent obserwuje główną rozmowę pomiędzy użytkownikiem a agentem podstawowym. Jego zadania to:
 
-1. **Identyfikacja wartościowej informacji**: Określenie, czy jakaś część rozmowy zasługuje na zapis jako wiedza ogólna lub specyficzna preferencja użytkownika.
+1. **Identyfikacja cennych informacji**: Określenie, czy jakaś część rozmowy jest warta zachowania jako wiedza ogólna lub konkretna preferencja użytkownika.
 
-2. **Ekstrakcja i podsumowanie**: Wyłuskanie kluczowej nauki lub preferencji z rozmowy.
+2. **Ekstrakcja i podsumowanie**: Wyodrębnienie istotnych nauk lub preferencji z rozmowy.
 
-3. **Przechowanie w bazie wiedzy**: Utrwalenie tych informacji, często w bazie wektorowej, aby można je było później odzyskać.
+3. **Przechowywanie w bazie wiedzy**: Zapis tych informacji, często w bazie wektorowej, aby mogły być później wyszukane.
 
-4. **Rozszerzanie przyszłych zapytań**: Gdy użytkownik inicjuje nowe zapytanie, agent wiedzy wyszukuje istotne przechowywane informacje i dołącza je do promptu użytkownika, zapewniając kluczowy kontekst głównemu agentowi (podobnie do RAG).
+4. **Wzbogacanie przyszłych zapytań**: Gdy użytkownik inicjuje nowe zapytanie, agent wiedzy pobiera istotne przechowywane informacje i dołącza je do promptu użytkownika, dostarczając kluczowy kontekst agentowi podstawowemu (podobnie do RAG).
 
-### Optymalizacje dla pamięci
+### Optymalizacje pamięci
 
-• **Zarządzanie opóźnieniami**: Aby nie spowalniać interakcji użytkownika, najpierw można użyć tańszego, szybszego modelu do szybkiego sprawdzenia czy dana informacja jest warta zapisu lub wyszukania, wywołując bardziej złożony proces ekstrakcji/wyszukiwania tylko w razie potrzeby.
+• **Zarządzanie opóźnieniami**: Aby nie spowalniać interakcji użytkownika, na początku można użyć tańszego, szybszego modelu, który szybko oceni, czy informacja jest warta zapisania lub przywołania, a bardziej złożony proces ekstrakcji/wyszukiwania wywołać tylko wtedy, gdy jest to potrzebne.
 
-• **Utrzymanie bazy wiedzy**: Dla rosnącej bazy wiedzy, rzadziej wykorzystywane informacje można przenosić do „zimnego przechowywania” dla obniżenia kosztów.
+• **Utrzymanie bazy wiedzy**: Dla rosnącej bazy wiedzy, rzadziej używane informacje mogą być przenoszone do „zimnego magazynu” celem obniżenia kosztów.
 
-## Masz więcej pytań o pamięć agentów?
+## Masz więcej pytań dotyczących pamięci agentów?
 
-Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na swoje pytania dotyczące Agentów AI.
+Dołącz do [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać innych uczących się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące Agentów AI.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zastrzeżenie**:  
-Niniejszy dokument został przetłumaczony przy użyciu usługi tłumaczeń AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego, ludzkiego tłumaczenia. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+**Disclaimer**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczeń AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za autorytatywne źródło. W przypadku informacji o istotnym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

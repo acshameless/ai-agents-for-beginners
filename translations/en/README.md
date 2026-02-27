@@ -65,10 +65,10 @@ If you get stuck or have any questions about building AI Agents, join our dedica
 
 Each lesson in this course includes code examples, which can be found in the code_samples folder. You can [fork this repo](https://github.com/microsoft/ai-agents-for-beginners/fork) to create your own copy.  
 
-The code example in these exercises, utilize Azure AI Foundry and GitHub Model Catalogs for interacting with Language Models:
+The code example in these exercises, utilize Microsoft Foundry and GitHub Model Catalogs for interacting with Language Models:
 
 - [Github Models](https://aka.ms/ai-agents-beginners/github-models) - Free / Limited
-- [Azure AI Foundry](https://aka.ms/ai-agents-beginners/ai-foundry) - Azure Account Required
+- [Microsoft Foundry](https://aka.ms/ai-agents-beginners/ai-foundry) - Azure Account Required
 
 This course also uses the following AI Agent frameworks and services from Microsoft:
 
@@ -89,7 +89,7 @@ Do you have suggestions or found spelling or code errors? [Raise an issue](https
 ## 📂 Each lesson includes
 
 - A written lesson located in the README and a short video
-- Python code samples supporting Azure AI Foundry and Github Models (Free)
+- Python code samples supporting Microsoft Foundry and Github Models (Free)
 - Links to extra resources to continue your learning
 
 
@@ -191,15 +191,15 @@ Any use of third-party trademarks or logos is subject to those third-parties' po
 
 If you get stuck or have any questions about building AI apps, join:
 
-[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
+[![Microsoft Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 If you have product feedback or errors while building visit:
 
-[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
+**Disclaimer**:
 This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

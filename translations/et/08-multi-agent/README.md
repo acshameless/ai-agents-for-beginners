@@ -4,178 +4,178 @@
 
 # Mitmeagendi disainimustrid
 
-Niipea kui hakkate töötama projektiga, mis hõlmab mitut agenti, peate kaaluma mitmeagendi disainimustrit. Kuid ei pruugi kohe olla selge, millal mitmeagendi süsteemile üle minna ja millised on selle eelised.
+Niipea kui hakkate töötama projektiga, mis hõlmab mitut agenti, peate kaaluma mitmeagendi disainimustrit. Kuid võib-olla ei ole kohe selge, millal üle minna mitme agenti kasutamisele ja millised on eelised.
 
 ## Sissejuhatus
 
-Selles õppetunnis püüame vastata järgmistele küsimustele:
+Selles õppetükis püüame vastata järgmistele küsimustele:
 
-- Millistes olukordades on mitmeagendi süsteem rakendatav?
-- Millised on mitmeagendi kasutamise eelised võrreldes üheainsa agendiga, kes täidab mitut ülesannet?
-- Millised on mitmeagendi disainimustri rakendamise põhielemendid?
-- Kuidas saada ülevaadet sellest, kuidas mitmed agendid omavahel suhtlevad?
+- Millistes stsenaariumites on mitmeagendid rakendatavad?
+- Millised on mitme agenti kasutamise eelised võrreldes üheainsa agendiga, kes teeb mitu ülesannet?
+- Millised on mitmeagendi disainimustri rakendamise ehituskivid?
+- Kuidas meil on ülevaade sellest, kuidas mitmed agendid omavahel suhtlevad?
 
-## Õppeesmärgid
+## Õpieesmärgid
 
-Pärast seda õppetundi peaksite olema võimeline:
+Pärast seda õppetundi peaksid suutma:
 
-- Tuvastama olukordi, kus mitmeagendi süsteem on rakendatav.
-- Mõistma mitmeagendi kasutamise eeliseid võrreldes üheainsa agendiga.
-- Mõistma mitmeagendi disainimustri rakendamise põhielemente.
+- Tuvastada stsenaariumid, kus mitmeagendid on rakendatavad
+- Tunnustada mitme agenti kasutamise eeliseid võrreldes üheainsa agendiga
+- Mõista mitmeagendi disainimustri rakendamise ehituskive
 
 Mis on suurem pilt?
 
-*Mitmeagendi süsteemid on disainimuster, mis võimaldab mitmel agendil koos töötada ühise eesmärgi saavutamiseks.*
+*Mitmeagendid on disainimuster, mis võimaldab mitmel agendil töötada koos ühise eesmärgi saavutamiseks.*
 
-See muster on laialdaselt kasutusel erinevates valdkondades, sealhulgas robootikas, autonoomsetes süsteemides ja hajutatud arvutustes.
+See muster on laialdaselt kasutusel erinevates valdkondades, sealhulgas robootikas, autonoomsetes süsteemides ja hajutatud arvutustehnoloogias.
 
-## Olukorrad, kus mitmeagendi süsteem on rakendatav
+## Stsenaariumid, kus mitmeagendid on rakendatavad
 
-Millised olukorrad on sobivad mitmeagendi süsteemi kasutamiseks? Vastus on, et mitmeagendi kasutamine on kasulik paljudes olukordades, eriti järgmistel juhtudel:
+Millised stsenaariumid on head mitmeagendi kasutamiseks? Vastus on, et on palju olukordi, kus mitme agendi rakendamine on kasulik, eriti järgmistes juhtudel:
 
-- **Suured töökoormused**: Suured töökoormused saab jagada väiksemateks ülesanneteks ja määrata erinevatele agentidele, võimaldades paralleelset töötlemist ja kiiremat lõpetamist. Näiteks suurte andmetöötlusülesannete puhul.
-- **Komplekssed ülesanded**: Komplekssed ülesanded, nagu suured töökoormused, saab jagada väiksemateks alamülesanneteks ja määrata erinevatele agentidele, kes on spetsialiseerunud konkreetsele ülesande aspektile. Hea näide on autonoomsed sõidukid, kus erinevad agendid haldavad navigeerimist, takistuste tuvastamist ja suhtlust teiste sõidukitega.
-- **Mitmekesine ekspertiis**: Erinevatel agentidel võib olla mitmekesine ekspertiis, mis võimaldab neil käsitleda ülesande erinevaid aspekte tõhusamalt kui üksainus agent. Näiteks tervishoius, kus agendid haldavad diagnostikat, raviplaane ja patsientide jälgimist.
+- **Suur koormus**: Suuri töömahtusid saab jagada väiksemateks ülesanneteks ja määrata erinevatele agentidele, võimaldades paralleelprotsessimist ja kiiremat lõpetamist. Näide sellest on suur andmetöötlustöö.
+- **Komplekssed ülesanded**: Kompleksseid ülesandeid, nagu suured töömahud, saab jagada väiksemateks alaufunktsioonideks ja määrata erinevatele agentidele, kellest igaüks spetsialiseerub konkreetsele aspektile. Hea näide on autonoomsed sõidukid, kus erinevad agendid haldavad navigeerimist, takistuste tuvastamist ja suhtlust teiste sõidukitega.
+- **Mitmekesine ekspertiis**: Erinevatel agentidel võib olla mitmekesine ekspertiis, mis võimaldab neil käsitleda erinevaid ülesande aspekte tõhusamalt kui üks agent. Hea näide on tervishoid, kus agendid võivad hallata diagnostikat, raviplaane ja patsiendi jälgimist.
 
-## Mitmeagendi kasutamise eelised võrreldes üheainsa agendiga
+## Mitme agenti kasutamise eelised võrreldes üheainsa agendiga
 
-Üheainsa agendi süsteem võib hästi toimida lihtsate ülesannete puhul, kuid keerukamate ülesannete puhul võib mitmeagendi kasutamine pakkuda mitmeid eeliseid:
+Ühe agendi süsteem võib toimida hästi lihtsate ülesannete puhul, kuid keerukamate ülesannete puhul võib mitme agendi kasutamine anda mitmeid eeliseid:
 
-- **Spetsialiseerumine**: Iga agent saab spetsialiseeruda konkreetsele ülesandele. Üheainsa agendi puhul puudub spetsialiseerumine, mis tähendab, et agent võib küll teha kõike, kuid keeruka ülesande korral võib ta segadusse sattuda ja teha midagi, milleks ta pole parim.
-- **Mastaapsus**: Süsteeme on lihtsam laiendada, lisades rohkem agente, mitte koormates ühte agenti üle.
-- **Tõrkekindlus**: Kui üks agent ebaõnnestub, saavad teised jätkata, tagades süsteemi töökindluse.
+- **Spetsialiseerumine**: Iga agent võib olla spetsialiseerunud konkreetsele ülesandele. Ühe agendi spetsialiseerumise puudumine tähendab, et teil on agent, kes suudab kõike teha, kuid võib keeruka ülesande korral segadusse sattuda. Ta võib näiteks lõpuks teha ülesannet, milleks ta pole kõige paremini sobiv.
+- **Skaalautuvus**: Süsteeme on lihtsam skaleerida, lisades rohkem agente, kui koormata ühte agenti üle.
+- **Tõrketaluvus**: Kui üks agent ebaõnnestub, võivad teised jätkata toimimist, tagades süsteemi usaldusväärsuse.
 
-Võtame näiteks reisibroneeringu. Üheainsa agendi süsteem peaks haldama kõiki reisibroneeringu protsessi aspekte, alates lendude leidmisest kuni hotellide ja rendiautode broneerimiseni. Selleks peaks agentil olema tööriistad kõigi nende ülesannete täitmiseks, mis võib viia keeruka ja monoliitse süsteemini, mida on raske hooldada ja laiendada. Mitmeagendi süsteem võiks aga kasutada erinevaid agente, kes on spetsialiseerunud lendude leidmisele, hotellide broneerimisele ja rendiautodele. See muudaks süsteemi modulaarsemaks, lihtsamini hooldatavaks ja mastaapselt laiendatavaks.
+Võtame näiteks: broneerime kasutajale reisi. Ühe agendi süsteem peaks tegelema kõigi reisi broneerimise aspektidega, alates lendude leidmisest kuni hotellide ja autorentide broneerimiseni. Ühe agendi jaoks saavutamiseks peaks agentil olema tööriistad kõigi nende ülesannete haldamiseks. See võib viia keeruka ja monoliitse süsteemini, mida on raske hooldada ja skaleerida. Mitmeagendi süsteem võiks seevastu omada erinevaid agente, kes on spetsialiseerunud lendude leidmisele, hotellide broneerimisele ja autorentidele. See muudaks süsteemi modulaarsemaks, lihtsamini hooldatavaks ja skaleeritavaks.
 
-Võrdleme seda reisibürooga, mida juhib väike pereettevõte, ja reisibürooga, mis on frantsiis. Pereettevõttes haldab üks agent kõiki reisibroneeringu protsessi aspekte, samas kui frantsiisis haldavad erinevad agendid erinevaid protsessi aspekte.
+Võrrelge seda pereettevõttena juhitava reisibürooga versus frantsiisina juhitava reisibürooga. Pereettevõttes tegeleb kogu broneerimisprotsessiga üks agent, samas kui frantsiisis on erinevad agendid, kes tegelevad erinevate broneerimisprotsessi osadega.
 
-## Mitmeagendi disainimustri rakendamise põhielemendid
+## Mitmeagendi disainimustri rakendamise ehituskivid
 
-Enne mitmeagendi disainimustri rakendamist peate mõistma mustri põhielemente.
+Enne kui saate mitmeagendi disainimustri rakendada, peate mõistma mustri moodustavaid ehituskive.
 
-Teeme selle konkreetsemaks, vaadates taas reisibroneeringu näidet. Sel juhul oleksid põhielemendid järgmised:
+Teeme selle konkreetsemaks, uurides taas kasutaja reisi broneerimise näidet. Sel juhul hõlmaksid ehituskivid:
 
-- **Agendi kommunikatsioon**: Lennupiletite leidmise, hotellide broneerimise ja rendiautode agendid peavad suhtlema ja jagama teavet kasutaja eelistuste ja piirangute kohta. Peate otsustama, millised protokollid ja meetodid selleks kommunikatsiooniks sobivad. Näiteks lennupiletite leidmise agent peab suhtlema hotellide broneerimise agendiga, et tagada hotelli broneerimine samadeks kuupäevadeks kui lend. See tähendab, et agendid peavad jagama teavet kasutaja reisikuupäevade kohta, mis tähendab, et peate otsustama *millised agendid jagavad infot ja kuidas nad seda teevad*.
-- **Koordineerimismehhanismid**: Agendid peavad koordineerima oma tegevusi, et tagada kasutaja eelistuste ja piirangute täitmine. Näiteks võib kasutaja eelistada hotelli, mis asub lennujaama lähedal, samas kui piiranguks võib olla, et rendiautod on saadaval ainult lennujaamas. See tähendab, et hotellide broneerimise agent peab koordineerima rendiautode broneerimise agendiga, et tagada kasutaja eelistuste ja piirangute täitmine. See tähendab, et peate otsustama *kuidas agendid oma tegevusi koordineerivad*.
-- **Agendi arhitektuur**: Agendid peavad omama sisemist struktuuri, et teha otsuseid ja õppida oma interaktsioonidest kasutajaga. Näiteks lennupiletite leidmise agent peab omama sisemist struktuuri, et teha otsuseid selle kohta, milliseid lende kasutajale soovitada. See tähendab, et peate otsustama *kuidas agendid teevad otsuseid ja õpivad oma interaktsioonidest kasutajaga*. Näiteks lennupiletite leidmise agent võiks kasutada masinõppe mudelit, et soovitada lende kasutajale nende varasemate eelistuste põhjal.
-- **Mitmeagendi interaktsioonide nähtavus**: Peate omama ülevaadet sellest, kuidas mitmed agendid omavahel suhtlevad. See tähendab, et peate omama tööriistu ja tehnikaid agendi tegevuste ja interaktsioonide jälgimiseks. See võib olla logimise ja jälgimise tööriistade, visualiseerimise tööriistade ja jõudlusmõõdikute kujul.
-- **Mitmeagendi mustrid**: Mitmeagendi süsteemide rakendamiseks on erinevaid mustreid, nagu tsentraliseeritud, detsentraliseeritud ja hübriidarhitektuurid. Peate otsustama, milline muster sobib teie kasutusjuhtumiga kõige paremini.
-- **Inimene protsessis**: Enamasti on protsessis inimene ja peate juhendama agente, millal küsida inimsekkumist. Näiteks võib kasutaja küsida konkreetset hotelli või lendu, mida agendid pole soovitanud, või küsida kinnitust enne lennu või hotelli broneerimist.
+- **Agentide kommunikatsioon**: Lendude leidmise agent, hotellide broneerimise agent ja autorentide agent peavad suhtlema ja jagama teavet kasutaja eelistuste ja piirangute kohta. Peate otsustama selle suhtluse protokollide ja meetodite üle. Konkreetselt tähendab see, et lendude leidmise agent peab suhtlema hotellide broneerimise agendiga, et tagada hotell broneeritakse samadel kuupäevadel kui lend. See tähendab, et agentidel peab olema jagatud info kasutaja reisi kuupäevade kohta; peate otsustama *millised agendid infot jagavad ja kuidas nad infot jagavad*.
+- **Koordineerimismehhanismid**: Agendid peavad koordineerima oma tegevusi, et tagada kasutaja eelistuste ja piirangute täitmine. Kasutaja eelistus võib olla näiteks hotell lennujaama lähedal, samas kui piirang võib olla, et autorendid on saadaval ainult lennujaamas. See tähendab, et hotellide broneerimise agent peab koordineerima autorendi agendiga, et tagada kasutaja eelistuste ja piirangute täitmine. See tähendab, et peate otsustama *kuidas agendid oma tegevusi koordineerivad*.
+- **Agendi arhitektuur**: Agentidel peab olema sisemine struktuur, et teha otsuseid ja õppida oma suhtlustest kasutajaga. See tähendab, et lendude leidmise agendil peab olema sisemine struktuur, et otsustada, milliseid lende kasutajale soovitada. See tähendab, et peate otsustama *kuidas agendid otsuseid teevad ja õppivad oma suhtlustest kasutajaga*. Näited sellest, kuidas agent õpib ja paraneb, võivad olla näiteks see, et lendude leidmise agent kasutab masinõppemudelit lendude soovitamiseks kasutaja varasemate eelistuste põhjal.
+- **Ülevaade mitmeagendilisest suhtlusest**: Teil peab olema ülevaade sellest, kuidas mitmed agendid omavahel suhtlevad. See tähendab, et teil peavad olema tööriistad ja tehnikad agentide tegevuste ja suhtluste jälgimiseks. See võib olla logimise ja jälgimise tööriistade, visualiseerimistööriistade ja jõudlusmõõdikute kujul.
+- **Mitmeagendi mustrid**: Mitmeagendiliste süsteemide rakendamiseks on erinevaid mustreid, näiteks tsentraliseeritud, detsentraliseeritud ja hübriidse arhitektuuriga lahendused. Te peate otsustama mustri, mis kõige paremini sobib teie kasutusjuhule.
+- **Inimene tsüklis**: Enamasti on protsessis inimene ja peate juhendama agente, millal küsida inimsekkumist. See võib väljenduda näiteks kasutajasõnumina, kus kasutaja soovib kindlat hotelli või lendu, mida agendid ei ole soovitanud, või kui küsitakse kinnitust enne lennu või hotelli broneerimist.
 
-## Mitmeagendi interaktsioonide nähtavus
+## Ülevaade mitmeagendilisest suhtlusest
 
-Oluline on omada ülevaadet sellest, kuidas mitmed agendid omavahel suhtlevad. See nähtavus on oluline süsteemi silumiseks, optimeerimiseks ja üldise tõhususe tagamiseks. Selle saavutamiseks peate omama tööriistu ja tehnikaid agendi tegevuste ja interaktsioonide jälgimiseks. See võib olla logimise ja jälgimise tööriistade, visualiseerimise tööriistade ja jõudlusmõõdikute kujul.
+Oluline on, et teil oleks ülevaade sellest, kuidas mitmed agendid omavahel suhtlevad. See ülevaade on hädavajalik silumiseks, optimeerimiseks ja kogu süsteemi toimivuse tagamiseks. Selle saavutamiseks peavad teil olema tööriistad ja tehnikad agentide tegevuste ja suhtluste jälgimiseks. See võib väljenduda logimise ja jälgimise tööriistade, visualiseerimistööriistade ja jõudlusmõõdikute kujul.
 
-Näiteks reisibroneeringu puhul võiks teil olla armatuurlaud, mis näitab iga agendi staatust, kasutaja eelistusi ja piiranguid ning agentide vahelisi interaktsioone. See armatuurlaud võiks näidata kasutaja reisikuupäevi, lennupileteid, mida lennupiletite agent soovitab, hotelle, mida hotellide agent soovitab, ja rendiautosid, mida rendiautode agent soovitab. See annaks selge ülevaate sellest, kuidas agendid omavahel suhtlevad ja kas kasutaja eelistused ja piirangud on täidetud.
+Näiteks kasutaja reisi broneerimise puhul võite omada juhtpaneeli, mis näitab iga agendi olekut, kasutaja eelistusi ja piiranguid ning agentidevahelisi suhtlusi. See juhtpaneel võib näidata kasutaja reisi kuupäevi, lendude soovitusi lendude agendi poolt, hotelle, mida soovitab hotellide agent, ja autorente, mida soovitab autorendi agent. See annab selge ülevaate sellest, kuidas agendid omavahel suhtlevad ja kas kasutaja eelistused ja piirangud on täidetud.
 
-Vaatame iga aspekti lähemalt.
+Vaatame neid aspekte üksikasjalikumalt.
 
-- **Logimise ja jälgimise tööriistad**: Soovite logida iga agendi tehtud tegevuse. Logikirje võiks sisaldada teavet tegevuse teinud agendi, tehtud tegevuse, tegevuse aja ja tulemuse kohta. Seda teavet saab kasutada silumiseks, optimeerimiseks ja muuks.
-- **Visualiseerimise tööriistad**: Visualiseerimise tööriistad aitavad teil näha agentide vahelisi interaktsioone intuitiivsemal viisil. Näiteks võiks teil olla graafik, mis näitab teabevoogu agentide vahel. See aitaks tuvastada kitsaskohti, ebatõhususi ja muid süsteemi probleeme.
-- **Jõudlusmõõdikud**: Jõudlusmõõdikud aitavad teil jälgida mitmeagendi süsteemi tõhusust. Näiteks võiks jälgida ülesande täitmiseks kuluvat aega, ajaühikus täidetud ülesannete arvu ja agentide tehtud soovituste täpsust. See teave aitab tuvastada parendamisvõimalusi ja optimeerida süsteemi.
+- **Logimine ja jälgimistööriistad**: Soovite, et iga agendi tehtud tegevus oleks logitud. Logikirje võib salvestada teavet, milline agent tegevuse tegi, millise tegevuse võttis, millal see tegevus toimus ja tegevuse tulemuse. Seda teavet saab seejärel kasutada vigade otsimiseks, optimeerimiseks ja muuks.
+- **Visualiseerimistööriistad**: Visualiseerimistööriistad aitavad näha agentidevahelisi suhtlusi intuitiivsemal viisil. Näiteks võite omada graafikut, mis näitab infovoogu agentide vahel. See võib aidata tuvastada kitsaskohti, ebatõhususi ja muid süsteemi probleeme.
+- **Tulemusmõõdikud**: Tulemusmõõdikud aitavad jälgida mitmeagendilise süsteemi tõhusust. Näiteks võite jälgida ülesande täitmiseks kuluvat aega, täidetud ülesannete arvu ajaühikus ja agentide poolt tehtud soovituste täpsust. See teave aitab tuvastada parandamisvõimalusi ja optimeerida süsteemi.
 
 ## Mitmeagendi mustrid
 
-Vaatame mõningaid konkreetseid mustreid, mida saame kasutada mitmeagendi rakenduste loomiseks. Siin on mõned huvitavad mustrid, mida tasub kaaluda:
+Sukeldume mõnede konkreetsete mustrite juurde, mida saab kasutada mitmeagendiliste rakenduste loomiseks. Siin on mõned huvitavad mustrid, mida tasub kaaluda:
 
-### Grupivestlus
+### Rühmavestlus
 
-See muster on kasulik, kui soovite luua grupivestluse rakenduse, kus mitmed agendid saavad omavahel suhelda. Tüüpilised kasutusjuhtumid selle mustri jaoks hõlmavad meeskonnatööd, kliendituge ja sotsiaalvõrgustikke.
+See muster on kasulik, kui soovite luua rühmavestluse rakenduse, kus mitu agenti saavad omavahel suhelda. Tüüpilised kasutusjuhud sisaldavad meeskonnatööd, kliendituge ja sotsiaalset võrgustumist.
 
-Selles mustris esindab iga agent grupivestluse kasutajat ning sõnumeid vahetatakse agentide vahel sõnumiprotokolli abil. Agendid saavad saata sõnumeid grupivestlusse, vastu võtta sõnumeid grupivestlusest ja vastata teiste agentide sõnumitele.
+Selles mustris esindab iga agent ühte kasutajat rühmavestluses ning sõnumeid vahetatakse agentide vahel sõnumivahetuse protokolli kaudu. Agendid saavad saata sõnumeid rühmavestlusesse, vastu võtta rühmavestlusest sõnumeid ja vastata teiste agentide sõnumitele.
 
-Seda mustrit saab rakendada tsentraliseeritud arhitektuuriga, kus kõik sõnumid suunatakse läbi keskserveri, või detsentraliseeritud arhitektuuriga, kus sõnumeid vahetatakse otse.
+Seda mustrit saab rakendada tsentraliseeritud arhitektuuri abil, kus kõik sõnumid suunatakse läbi keskserveri, või detsentraliseeritud arhitektuuri abil, kus sõnumeid vahetatakse otse.
 
-![Grupivestlus](../../../translated_images/et/multi-agent-group-chat.ec10f4cde556babd.webp)
+![Rühmavestlus](../../../translated_images/et/multi-agent-group-chat.ec10f4cde556babd.webp)
 
-### Ülesande üleandmine
+### Üleandmine
 
-See muster on kasulik, kui soovite luua rakenduse, kus mitmed agendid saavad ülesandeid üksteisele üle anda.
+See muster on kasulik, kui soovite luua rakenduse, kus mitu agenti saavad omavahel ülesandeid üle anda.
 
-Tüüpilised kasutusjuhtumid selle mustri jaoks hõlmavad kliendituge, ülesannete haldamist ja töövoo automatiseerimist.
+Tüüpilised kasutusjuhud hõlmavad kliendituge, ülesannete haldust ja töövoo automatiseerimist.
 
-Selles mustris esindab iga agent ülesannet või töövoo sammu ning agendid saavad ülesandeid üksteisele üle anda eelnevalt määratletud reeglite alusel.
+Selles mustris esindab iga agent ülesannet või töövoo sammu ning agendid saavad määratud reeglite alusel ülesandeid teistele agentidele üle anda.
 
-![Ülesande üleandmine](../../../translated_images/et/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
+![Tööde üleandmine](../../../translated_images/et/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
 ### Koostööpõhine filtreerimine
 
-See muster on kasulik, kui soovite luua rakenduse, kus mitmed agendid saavad koostööd teha, et kasutajatele soovitusi anda.
+See muster on kasulik, kui soovite luua rakenduse, kus mitu agenti saavad teha koostööd, et pakkuda kasutajatele soovitusi.
 
-Miks sooviksite, et mitmed agendid teeksid koostööd? Sest iga agent võib omada erinevat ekspertiisi ja panustada soovitusprotsessi erineval viisil.
+Miks soovite, et mitu agenti teeksid koostööd? Sest iga agent võib omada erinevat ekspertiisi ja anda soovitusprotsessi erineva panuse.
 
-Võtame näiteks olukorra, kus kasutaja soovib soovitust parima aktsia ostmiseks börsil.
+Võtame näiteks olukorra, kus kasutaja soovib soovitust parimaaktsia ostmiseks aktsiaturul.
 
-- **Tööstuse ekspert**: Üks agent võiks olla ekspert konkreetses tööstusharus.
-- **Tehniline analüüs**: Teine agent võiks olla ekspert tehnilises analüüsis.
-- **Fundamentaalne analüüs**: Ja kolmas agent võiks olla ekspert fundamentaalses analüüsis. Koostööd tehes saavad need agendid anda kasutajale põhjalikuma soovituse.
+- **Tööstuse ekspert**: Üks agent võib olla konkreetse tööstusharu ekspert.
+- **Tehniline analüüs**: Teine agent võib olla tehnilise analüüsi ekspert.
+- **Fundamentaalne analüüs**: Ja kolmas agent võib olla fundamentaalse analüüsi ekspert. Koostöös saavad need agendid pakkuda kasutajale põhjalikumat soovitust.
 
 ![Soovitus](../../../translated_images/et/multi-agent-filtering.d959cb129dc9f608.webp)
 
-## Olukord: Tagasimakse protsess
+## Stsenaarium: tagasimakse protsess
 
-Vaatleme olukorda, kus klient püüab saada tagasimakset toote eest. Selles protsessis võib olla kaasatud üsna palju agente, kuid jagame need protsessispetsiifilisteks agentideks ja üldisteks agentideks, mida saab kasutada muudes protsessides.
+Kujutage ette stsenaariumi, kus klient üritab saada toote eest tagasimakset. Selle protsessi puhul võib olla kaasatud üsna mitu agenti, kuid jagame need protsessispetsiifilisteks agentideks ja üldisteks agentideks, keda saab kasutada ka teistes protsessides.
 
-**Protsessispetsiifilised agendid**:
+**Protsessispetsiifilised agentid tagasimakse jaoks**:
 
-Järgnevalt on mõned agendid, kes võiksid olla kaasatud tagasimakse protsessi:
+Järgnevad on mõned agendid, kes võivad olla kaasatud tagasimakse protsessi:
 
-- **Kliendi agent**: See agent esindab klienti ja vastutab tagasimakse protsessi algatamise eest.
-- **Müüja agent**: See agent esindab müüjat ja vastutab tagasimakse töötlemise eest.
-- **Makse agent**: See agent esindab makseprotsessi ja vastutab kliendi makse tagastamise eest.
-- **Lahenduse agent**: See agent esindab lahendusprotsessi ja vastutab tagasimakse protsessi käigus tekkivate probleemide lahendamise eest.
-- **Vastavuse agent**: See agent esindab vastavusprotsessi ja vastutab tagasimakse protsessi vastavuse tagamise eest regulatsioonidele ja poliitikatele.
+- **Kliendiagent**: See agent esindab klienti ja vastutab tagasimakse protsessi algatamise eest.
+- **Müüjaagent**: See agent esindab müüjat ja vastutab tagasimakse töötlemise eest.
+- **Makseagent**: See agent esindab makseprotsessi ja vastutab kliendi makse tagastamise eest.
+- **Lahendusagent**: See agent esindab lahenduse protsessi ja vastutab kõigi tagasimakse protsessi käigus tekkinud probleemide lahendamise eest.
+- **Vastavusagent**: See agent esindab vastavuse protsessi ja vastutab selle eest, et tagasimakse protsess vastaks eeskirjadele ja poliitikatele.
 
 **Üldised agendid**:
 
-Need agendid võivad olla kasutatavad teie ettevõtte muudes osades.
+Neid agente saab kasutada teie äri teiste osade poolt.
 
-- **Saatmise agent**: See agent esindab saatmisprotsessi ja vastutab toote saatmise eest tagasi müüjale. Seda agenti saab kasutada nii tagasimakse protsessis kui ka üldises toote saatmises näiteks ostu korral.
-- **Tagasiside agent**: See agent esindab tagasiside protsessi ja vastutab kliendi tagasiside kogumise eest. Tagasisidet võib koguda igal ajal, mitte ainult tagasimakse protsessi käigus.
-- **Eskaleerimise agent**: See agent esindab eskaleerimise protsessi ja vastutab probleemide eskaleerimise eest kõrgemale tugitasemele. Seda tüüpi agenti saab kasutada igas protsessis, kus on vaja probleemi eskaleerida.
-- **Teavitamise agent**: See agent esindab teavitamise protsessi ja vastutab teavituste saatmise eest kliendile tagasimakse protsessi erinevates etappides.
-- **Analüüsi agent**: See agent esindab analüüsi protsessi ja vastutab tagasimakse protsessiga seotud andmete analüüsimise eest.
-- **Auditi agent**: See agent esindab auditi protsessi ja vastutab tagasimakse protsessi auditeerimise eest, et tagada selle korrektne läbiviimine.
-- **Raporteerimise agent**: See agent esindab raporteerimise protsessi ja vastutab tagasimakse protsessi aruannete koostamise eest.
-- **Teadmiste agent**: See agent esindab teadmiste protsessi ja vastutab tagasimakse protsessiga seotud teadmistebaasi haldamise eest. See agent võiks olla teadlik nii tagasimaksetest kui ka teie ettevõtte muudest osadest.
-- **Turvalisuse agent**: See agent esindab turvalisuse protsessi ja vastutab tagasimakse protsessi turvalisuse tagamise eest.
-- **Kvaliteedi agent**: See agent esindab kvaliteedi protsessi ja vastutab tagasimakse protsessi kvaliteedi tagamise eest.
+- **Saatmisagent**: See agent esindab saatmisprotsessi ja vastutab toote tagastamise saatmise eest müüjale. Seda agenti saab kasutada nii tagasimakse protsessis kui ka üldises toote saatmises näiteks ostu puhul.
+- **Tagasisideagent**: See agent esindab tagasiside protsessi ja vastutab kliendilt tagasiside kogumise eest. Tagasisidet võidakse koguda igal ajal, mitte ainult tagasimakse protsessi ajal.
+- **Eskalatsiooniagent**: See agent esindab eskalatsiooni protsessi ja vastutab probleemide eskaleerimise eest kõrgemale tugitasemele. Seda tüüpi agenti saab kasutada mis tahes protsessi puhul, kus on vaja teemat eskaleerida.
+- **Teavituseagent**: See agent esindab teavituse protsessi ja vastutab kliendi teavitamise eest tagasimakse protsessi eri etappides.
+- **Analüüsiagent**: See agent esindab analüüsi protsessi ja vastutab tagasimakse protsessiga seotud andmete analüüsimise eest.
+- **Auditagent**: See agent esindab auditi protsessi ja vastutab tagasimakse protsessi auditeerimise eest, et tagada selle korrektne teostamine.
+- **Aruandlusagent**: See agent esindab aruandluse protsessi ja vastutab raportite genereerimise eest tagasimakse protsessi kohta.
+- **Teadmisteagent**: See agent esindab teadmiste protsessi ja vastutab tagasimakse protsessiga seotud teabe teadmistebaasi hooldamise eest. See agent võib omada teadmisi nii tagasimaksetest kui ka muudest teie äri valdkondadest.
+- **Turbeagent**: See agent esindab turbe protsessi ja vastutab tagasimakse protsessi turvalisuse tagamise eest.
+- **Kvaliteediagent**: See agent esindab kvaliteedi protsessi ja vastutab tagasimakse protsessi kvaliteedi tagamise eest.
 
-Eelnevalt loetletud agentide hulk on üsna suur, nii protsessispetsiifiliste kui ka üldiste agentide osas, mida saab kasutada teie ettevõtte muudes osades. Loodetavasti annab see teile idee, kuidas otsustada, milliseid agente kasutada oma mitmeagendi süsteemis.
+Nimetatud agentide hulk on üsna suur nii spetsiifiliste tagasimakse agentide kui ka üldiste agentide osas, keda saab kasutada teie äri teistes osades. Loodetavasti annab see teile ülevaate, kuidas otsustada, milliseid agente kasutada oma mitmeagendilises süsteemis.
 
 ## Ülesanne
-Kujunda mitmeagendiline süsteem klienditoe protsessi jaoks. Määra protsessis osalevad agendid, nende rollid ja vastutusalad ning kuidas nad omavahel suhtlevad. Arvesta nii klienditoe protsessile spetsiifilisi agente kui ka üldiseid agente, mida saab kasutada teistes ärivaldkondades.
 
-> Mõtle enne, kui loed järgmist lahendust – sul võib vaja minna rohkem agente, kui esialgu arvad.
-
-> NÕUANNE: Mõtle klienditoe protsessi erinevatele etappidele ja ka süsteemi jaoks vajalikele agentidele.
+Kavandage mitmeagendiline süsteem klienditoe protsessi jaoks. Tuvastage protsessis osalevad agendid, nende rollid ja vastutusvaldkonnad ning kuidas nad omavahel suhtlevad. Arvestage nii klienditoega seotud spetsiifilisi agente kui ka üldisi agente, keda saab kasutada teie ettevõtte teiste osade jaoks.
+> Mõtle enne, kui loed järgmist lahendust — sul võib vaja minna rohkem agente, kui arvad.
+> Vihje: Mõtle klienditoe protsessi erinevatele etappidele ja ka sellele, milliseid agente iga süsteem vajab.
 
 ## Lahendus
 
 [Lahendus](./solution/solution.md)
 
-## Teadmiste kontroll
+## Teadmiskontrollid
 
-Küsimus: Millal peaks kaaluma mitmeagendilise süsteemi kasutamist?
+Question: Millal peaksid kaaluma mitmeagendi kasutamist?
 
-- [ ] A1: Kui töökoormus on väike ja ülesanne lihtne.
-- [ ] A2: Kui töökoormus on suur.
-- [ ] A3: Kui ülesanne on lihtne.
+- [ ] A1: Kui sul on väike töökoormus ja lihtne ülesanne.
+- [ ] A2: Kui sul on suur töökoormus
+- [ ] A3: Kui sul on lihtne ülesanne.
 
 [Lahenduse viktoriin](./solution/solution-quiz.md)
 
 ## Kokkuvõte
 
-Selles õppetükis vaatasime mitmeagendilist disainimustrit, sealhulgas olukordi, kus mitmeagendiline lähenemine on asjakohane, mitmeagendilise süsteemi eeliseid võrreldes üheainsa agendiga, mitmeagendilise disainimustri rakendamise põhielemente ning kuidas saada ülevaadet agentide omavahelisest suhtlusest.
+Selles õppetükis käsitlesime mitmeagendi disainimustrit — sealhulgas olukordi, kus mitmeagendiline lähenemine on kohane, mitmeagendi kasutamise eeliseid võrreldes üheainsa agendiga, mitmeagendi disainimustri rakendamise ehitusplokke ning seda, kuidas saada ülevaadet, kuidas mitmed agendid omavahel suhtlevad.
 
-### Kas sul on rohkem küsimusi mitmeagendilise disainimustri kohta?
+### Kas sul on veel küsimusi mitmeagendi disainimustri kohta?
 
-Liitu [Azure AI Foundry Discordiga](https://aka.ms/ai-agents/discord), et kohtuda teiste õppijatega, osaleda vastuvõtutundides ja saada vastuseid oma AI agentide küsimustele.
+Liitu [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) et kohtuda teiste õppuritega, osaleda konsultatsioonitundides ja saada vastused oma AI agentide küsimustele.
 
 ## Täiendavad ressursid
 
 - <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html" target="_blank">AutoGen disainimustrid</a>
-- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentlikud disainimustrid</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentikesksed disainimustrid</a>
+
 
 ## Eelmine õppetund
 
@@ -183,9 +183,11 @@ Liitu [Azure AI Foundry Discordiga](https://aka.ms/ai-agents/discord), et kohtud
 
 ## Järgmine õppetund
 
-[Metakognitsioon AI agentides](../09-metacognition/README.md)
+[Metakognitsioon tehisintellekti agentides](../09-metacognition/README.md)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud tehisintellekti tõlke-teenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palun arvestage, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokumenti selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta ühegi arusaamatuse või valesti tõlgendamise eest, mis võib tuleneda selle tõlke kasutamisest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

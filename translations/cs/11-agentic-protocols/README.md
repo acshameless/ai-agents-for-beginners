@@ -1,180 +1,182 @@
-# Používání agentních protokolů (MCP, A2A a NLWeb)
+# Používání Agentic Protocols (MCP, A2A and NLWeb)
 
 [![Agentní protokoly](../../../translated_images/cs/lesson-11-thumbnail.b6c742949cf1ce2a.webp)](https://youtu.be/X-Dh9R3Opn8)
 
-> _(Klikněte na obrázek výše pro zhlédnutí videa k této lekci)_
+> _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
-S rostoucím využíváním AI agentů roste i potřeba protokolů, které zajistí standardizaci, bezpečnost a podporu otevřené inovace. V této lekci se zaměříme na 3 protokoly, které se snaží tyto potřeby naplnit – Model Context Protocol (MCP), Agent to Agent (A2A) a Natural Language Web (NLWeb).
+S rostoucím využíváním AI agentů roste i potřeba protokolů, které zajistí standardizaci, bezpečnost a podporu otevřené inovace. V této lekci pokryjeme 3 protokoly, které usilují o splnění této potřeby - Model Context Protocol (MCP), Agent to Agent (A2A) a Natural Language Web (NLWeb).
 
-## Úvod
+## Introduction
 
-V této lekci se naučíte:
+In this lesson, we will cover:
 
-• Jak **MCP** umožňuje AI agentům přístup k externím nástrojům a datům pro splnění úkolů uživatele.
+• How **MCP** allows AI Agents to access external tools and data to complete user tasks.
 
-• Jak **A2A** umožňuje komunikaci a spolupráci mezi různými AI agenty.
+•  How **A2A** enables communication and collaboration between different AI agents.
 
-• Jak **NLWeb** přináší rozhraní v přirozeném jazyce na jakýkoli web, což umožňuje AI agentům objevovat a interagovat s obsahem.
+• How **NLWeb** brings natural language interfaces to any website enabling AI Agents to discover and interact with the content.
 
-## Cíle učení
+## Learning Goals
 
-• **Identifikovat** hlavní účel a přínosy MCP, A2A a NLWeb v kontextu AI agentů.
+• **Identify** the core purpose and benefits of MCP, A2A, and NLWeb in the context of AI agents.
 
-• **Vysvětlit**, jak každý protokol usnadňuje komunikaci a interakci mezi LLM, nástroji a dalšími agenty.
+• **Explain** how each protocol facilitates communication and interaction between LLMs, tools, and other agents.
 
-• **Rozpoznat** odlišné role, které každý protokol hraje při budování komplexních agentních systémů.
+• **Recognize** the distinct roles each protocol plays in building complex agentic systems.
 
 ## Model Context Protocol
 
-**Model Context Protocol (MCP)** je otevřený standard, který poskytuje standardizovaný způsob, jak aplikace poskytují kontext a nástroje LLM. To umožňuje "univerzální adaptér" pro různé datové zdroje a nástroje, ke kterým se AI agenti mohou připojit konzistentním způsobem.
+The **Model Context Protocol (MCP)** is an open standard that provides standardized way for applications to provide context and tools to LLMs. This enables a "universal adaptor" to different data sources and tools that AI Agents can connect to in a consistent way.
 
-Podívejme se na komponenty MCP, výhody oproti přímému používání API a příklad, jak by AI agenti mohli využívat MCP server.
+Let’s look at the components of MCP, the benefits compared to direct API usage, and an example of how AI agents might use an MCP server.
 
-### Základní komponenty MCP
+### MCP Core Components
 
-MCP funguje na **architektuře klient-server** a jeho základní komponenty jsou:
+MCP operates on a **client-server architecture** and the core components are:
 
-• **Hostitelé** jsou aplikace LLM (například editor kódu jako VSCode), které zahajují připojení k MCP serveru.
+• **Hosts** are LLM applications (for example a code editor like VSCode) that start the connections to an MCP Server.
 
-• **Klienti** jsou komponenty v hostitelské aplikaci, které udržují jednosměrná připojení k serverům.
+• **Clients** are components within the host application that maintain one-to-one connections with servers.
 
-• **Servery** jsou lehké programy, které poskytují specifické schopnosti.
+• **Servers** are lightweight programs that expose specific capabilities.
 
-Protokol zahrnuje tři základní primitivy, které představují schopnosti MCP serveru:
+Included in the protocol are three core primitives which are the capabilities of an MCP Server:
 
-• **Nástroje**: Jsou to samostatné akce nebo funkce, které může AI agent vyvolat pro provedení úkolu. Například služba počasí může poskytovat nástroj "získat počasí" nebo e-commerce server může poskytovat nástroj "zakoupit produkt". MCP servery inzerují název, popis a schéma vstupů/výstupů každého nástroje ve svém seznamu schopností.
+• **Tools**: These are discrete actions or functions an AI agent can call to perform an action. For example, a weather service might expose a "get weather" tool, or an e-commerce server might expose a "purchase product" tool. MCP servers advertise each tool's name, description, and input/output schema in their capabilities listing.
 
-• **Zdroje**: Jsou to položky dat nebo dokumenty pouze pro čtení, které může MCP server poskytovat a klienti je mohou na vyžádání získat. Příklady zahrnují obsah souborů, záznamy databáze nebo logy. Zdroje mohou být textové (například kód nebo JSON) nebo binární (například obrázky nebo PDF).
+• **Resources**: These are read-only data items or documents that an MCP server can provide, and clients can retrieve them on demand. Examples include file contents, database records, or log files. Resources can be text (like code or JSON) or binary (like images or PDFs).
 
-• **Prompty**: Jsou to předdefinované šablony, které poskytují navrhované prompty, umožňující složitější pracovní postupy.
+• **Prompts**: These are predefined templates that provide suggested prompts, allowing for more complex workflows.
 
-### Výhody MCP
+### Benefits of MCP
 
-MCP nabízí významné výhody pro AI agenty:
+MCP offers significant advantages for AI Agents:
 
-• **Dynamické objevování nástrojů**: Agenti mohou dynamicky získat seznam dostupných nástrojů ze serveru spolu s popisy jejich funkcí. To je v kontrastu s tradičními API, které často vyžadují statické kódování pro integrace, což znamená, že jakákoli změna API vyžaduje aktualizaci kódu. MCP nabízí přístup "integrovat jednou", což vede k větší přizpůsobivosti.
+• **Dynamic Tool Discovery**: Agents can dynamically receive a list of available tools from a server along with descriptions of what they do. This contrasts with traditional APIs, which often require static coding for integrations, meaning any API change necessitates code updates. MCP offers an "integrate once" approach, leading to greater adaptability.
 
-• **Interoperabilita mezi LLM**: MCP funguje napříč různými LLM, což poskytuje flexibilitu při přepínání základních modelů pro lepší výkon.
+• **Interoperability Across LLMs**: MCP works across different LLMs, providing flexibility to switch core models to evaluate for better performance.
 
-• **Standardizovaná bezpečnost**: MCP zahrnuje standardní metodu autentizace, což zlepšuje škálovatelnost při přidávání přístupu k dalším MCP serverům. To je jednodušší než správa různých klíčů a typů autentizace pro různé tradiční API.
+• **Standardized Security**: MCP includes a standard authentication method, improving scalability when adding access to additional MCP servers. This is simpler than managing different keys and authentication types for various traditional APIs.
 
-### Příklad MCP
+### MCP Example
 
-![MCP Diagram](../../../translated_images/cs/mcp-diagram.e4ca1cbd551444a1.webp)
+![Diagram MCP](../../../translated_images/cs/mcp-diagram.e4ca1cbd551444a1.webp)
 
-Představte si, že uživatel chce rezervovat let pomocí AI asistenta poháněného MCP.
+Imagine a user wants to book a flight using an AI assistant powered by MCP.
 
-1. **Připojení**: AI asistent (MCP klient) se připojí k MCP serveru poskytovanému leteckou společností.
+1. **Connection**: The AI assistant (the MCP client) connects to an MCP server provided by an airline.
 
-2. **Objevování nástrojů**: Klient se zeptá MCP serveru letecké společnosti: "Jaké nástroje máte k dispozici?" Server odpoví nástroji jako "vyhledat lety" a "rezervovat lety".
+2. **Tool Discovery**: The client asks the airline's MCP server, "What tools do you have available?" The server responds with tools like "search flights" and "book flights".
 
-3. **Vyvolání nástroje**: Poté požádáte AI asistenta: "Prosím, vyhledej let z Portlandu do Honolulu." AI asistent pomocí svého LLM identifikuje, že potřebuje vyvolat nástroj "vyhledat lety" a předá relevantní parametry (původ, destinace) MCP serveru.
+3. **Tool Invocation**: You then ask the AI assistant, "Please search for a flight from Portland to Honolulu." The AI assistant, using its LLM, identifies that it needs to call the "search flights" tool and passes the relevant parameters (origin, destination) to the MCP server.
 
-4. **Provedení a odpověď**: MCP server, fungující jako obal, provede skutečné volání na interní API letecké společnosti. Poté obdrží informace o letu (například JSON data) a pošle je zpět AI asistentovi.
+4. **Execution and Response**: The MCP server, acting as a wrapper, makes the actual call to the airline's internal booking API. It then receives the flight information (e.g., JSON data) and sends it back to the AI assistant.
 
-5. **Další interakce**: AI asistent představí možnosti letu. Jakmile vyberete let, asistent může vyvolat nástroj "rezervovat let" na stejném MCP serveru a dokončit rezervaci.
+5. **Further Interaction**: The AI assistant presents the flight options. Once you select a flight, the assistant might invoke the "book flight" tool on the same MCP server, completing the booking.
 
-## Protokol Agent-to-Agent (A2A)
+## Agent-to-Agent Protocol (A2A)
 
-Zatímco MCP se zaměřuje na připojení LLM k nástrojům, **Agent-to-Agent (A2A) protokol** jde o krok dále tím, že umožňuje komunikaci a spolupráci mezi různými AI agenty. A2A propojuje AI agenty napříč různými organizacemi, prostředími a technologickými stacky, aby splnily společný úkol.
+While MCP focuses on connecting LLMs to tools, the **Agent-to-Agent (A2A) protocol** takes it a step further by enabling communication and collaboration between different AI agents.  A2A connects AI agents across different organizations, environments and tech stacks to complete a shared task.
 
-Prozkoumáme komponenty a výhody A2A spolu s příkladem, jak by mohl být aplikován v naší cestovní aplikaci.
+We’ll examine the components and benefits of A2A, along with an example of how it could be applied in our travel application.
 
-### Základní komponenty A2A
+### A2A Core Components
 
-A2A se zaměřuje na umožnění komunikace mezi agenty a jejich spolupráci na splnění dílčího úkolu uživatele. Každá komponenta protokolu k tomu přispívá:
+A2A focuses on enabling communication between agents and having them work together to complete a subtask of user. Each component of the protocol contributes to this:
 
-#### Agentní karta
+#### Agent Card
 
-Podobně jako MCP server sdílí seznam nástrojů, agentní karta obsahuje:
-- Název agenta.
-- **Popis obecných úkolů**, které agent plní.
-- **Seznam specifických dovedností** s popisy, které pomáhají ostatním agentům (nebo dokonce lidským uživatelům) pochopit, kdy a proč by chtěli zavolat tohoto agenta.
-- **Aktuální URL koncového bodu** agenta.
-- **Verzi** a **schopnosti** agenta, jako jsou streamované odpovědi a push notifikace.
+Similar to how an MCP server shares a list of tools, an Agent Card has:
+- Jméno agenta .
+- A **popis obecných úkolů** které plní.
+- A **seznam konkrétních dovedností** s popisy, které pomáhají ostatním agentům (nebo i lidským uživatelům) pochopit, kdy a proč by daného agenta volali.
+- The **current Endpoint URL** of the agent
+- The **version** and **capabilities** of the agent such as streaming responses and push notifications.
 
-#### Agentní vykonavatel
+#### Agent Executor
 
-Agentní vykonavatel je zodpovědný za **předání kontextu uživatelského chatu vzdálenému agentovi**, který tento kontext potřebuje k pochopení úkolu, který má být splněn. Na A2A serveru agent používá svůj vlastní LLM k analýze příchozích požadavků a provádění úkolů pomocí svých vlastních interních nástrojů.
+The Agent Executor is responsible for **passing the context of the user chat to the remote agent**, the remote agent needs this to understand the task that needs to be completed. In an A2A server, an agent uses its own Large Language Model (LLM) to parse incoming requests and execute tasks using its own internal tools.
 
-#### Artefakt
+#### Artifact
 
-Jakmile vzdálený agent dokončí požadovaný úkol, jeho výsledek je vytvořen jako artefakt. Artefakt **obsahuje výsledek práce agenta**, **popis toho, co bylo dokončeno**, a **textový kontext**, který je poslán přes protokol. Po odeslání artefaktu je připojení s vzdáleným agentem uzavřeno, dokud není znovu potřeba.
+Once a remote agent has completed the requested task, its work product is created as an artifact.  An artifact **contains the result of the agent's work**, a **description of what was completed**, and the **text context** that is sent through the protocol. After the artifact is sent, the connection with the remote agent is closed until it is needed again.
 
-#### Fronta událostí
+#### Event Queue
 
-Tato komponenta se používá pro **zpracování aktualizací a předávání zpráv**. Je obzvláště důležitá v produkci pro agentní systémy, aby se zabránilo uzavření připojení mezi agenty před dokončením úkolu, zejména když doba dokončení úkolu může být delší.
+This component is used for **handling updates and passing messages**. It is particularly important in production for agentic systems to prevent the connection between agents from being closed before a task is completed, especially when task completion times can take a longer time.
 
-### Výhody A2A
+### Benefits of A2A
 
-• **Zlepšená spolupráce**: Umožňuje agentům od různých dodavatelů a platforem interagovat, sdílet kontext a spolupracovat, což usnadňuje automatizaci napříč tradičně odpojenými systémy.
+• **Enhanced Collaboration**: It enables agents from different vendors and platforms to interact, share context, and work together, facilitating seamless automation across traditionally disconnected systems.
 
-• **Flexibilita výběru modelu**: Každý A2A agent může rozhodnout, který LLM použije k obsluze svých požadavků, což umožňuje optimalizované nebo jemně doladěné modely pro každého agenta, na rozdíl od jediného LLM připojení v některých scénářích MCP.
+• **Model Selection Flexibility**: Each A2A agent can decide which LLM it uses to service its requests, allowing for optimized or fine-tuned models per agent, unlike a single LLM connection in some MCP scenarios.
 
-• **Integrovaná autentizace**: Autentizace je přímo integrovaná do A2A protokolu, což poskytuje robustní bezpečnostní rámec pro interakce agentů.
+• **Built-in Authentication**: Authentication is integrated directly into the A2A protocol, providing a robust security framework for agent interactions.
 
-### Příklad A2A
+### A2A Example
 
-![A2A Diagram](../../../translated_images/cs/A2A-Diagram.8666928d648acc26.webp)
+![Diagram A2A](../../../translated_images/cs/A2A-Diagram.8666928d648acc26.webp)
 
-Rozšiřme náš scénář rezervace cestování, tentokrát pomocí A2A.
+Let's expand on our travel booking scenario, but this time using A2A.
 
-1. **Požadavek uživatele na multi-agentní systém**: Uživatel interaguje s "Cestovním agentem" A2A klientem/agentem, například tím, že řekne: "Prosím, rezervujte celý výlet do Honolulu na příští týden, včetně letů, hotelu a pronájmu auta."
+1. **User Request to Multi-Agent**: A user interacts with a "Travel Agent" A2A client/agent, perhaps by saying, "Please book an entire trip to Honolulu for next week, including flights, a hotel, and a rental car".
 
-2. **Orchestrace cestovním agentem**: Cestovní agent obdrží tento komplexní požadavek. Používá svůj LLM k rozpoznání úkolu a určení, že musí interagovat s dalšími specializovanými agenty.
+2. **Orchestration by Travel Agent**: The Travel Agent receives this complex request. It uses its LLM to reason about the task and determine that it needs to interact with other specialized agents.
 
-3. **Komunikace mezi agenty**: Cestovní agent poté použije A2A protokol k připojení k downstream agentům, jako je "Agent letecké společnosti", "Agent hotelu" a "Agent pronájmu auta", které jsou vytvořeny různými společnostmi.
+3. **Inter-Agent Communication**: The Travel Agent then uses the A2A protocol to connect to downstream agents, such as an "Airline Agent," a "Hotel Agent," and a "Car Rental Agent" that are created by different companies.
 
-4. **Delegované provedení úkolu**: Cestovní agent pošle specifické úkoly těmto specializovaným agentům (například "Najdi lety do Honolulu", "Rezervuj hotel", "Pronajmi auto"). Každý z těchto specializovaných agentů, provozující své vlastní LLM a využívající své vlastní nástroje (které mohou být samy MCP servery), provede svou specifickou část rezervace.
+4. **Delegated Task Execution**: The Travel Agent sends specific tasks to these specialized agents (e.g., "Find flights to Honolulu," "Book a hotel," "Rent a car"). Each of these specialized agents, running their own LLMs and utilizing their own tools (which could be MCP servers themselves), performs its specific part of the booking.
 
-5. **Konsolidovaná odpověď**: Jakmile všichni downstream agenti dokončí své úkoly, cestovní agent sestaví výsledky (detaily letu, potvrzení hotelu, rezervace auta) a pošle komplexní odpověď ve stylu chatu zpět uživateli.
+5. **Consolidated Response**: Once all downstream agents complete their tasks, the Travel Agent compiles the results (flight details, hotel confirmation, car rental booking) and sends a comprehensive, chat-style response back to the user.
 
 ## Natural Language Web (NLWeb)
 
-Webové stránky dlouho sloužily jako primární způsob, jak uživatelé přistupují k informacím a datům na internetu.
+Websites have long been the primary way for users to access information and data across the internet.
 
-Podívejme se na různé komponenty NLWeb, výhody NLWeb a příklad, jak NLWeb funguje v naší cestovní aplikaci.
+Let us look at the different components of NLWeb, the benefits of NLWeb and an example how our NLWeb works by looking at our travel application.
 
-### Komponenty NLWeb
+### Components of NLWeb
 
-- **NLWeb aplikace (základní kód služby)**: Systém, který zpracovává otázky v přirozeném jazyce. Spojuje různé části platformy, aby vytvořil odpovědi. Můžete si ho představit jako **motor, který pohání funkce přirozeného jazyka** na webu.
+- **NLWeb Application (Core Service Code)**: Systém, který zpracovává otázky v přirozeném jazyce. Spojuje různé části platformy, aby vytvářel odpovědi. Můžete si ho představit jako **motor, který pohání funkce přirozeného jazyka** webu.
 
-- **NLWeb protokol**: Jedná se o **základní sadu pravidel pro interakci v přirozeném jazyce** s webem. Odpovědi posílá ve formátu JSON (často pomocí Schema.org). Jeho účelem je vytvořit jednoduchý základ pro „AI web“, podobně jako HTML umožnil sdílení dokumentů online.
+- **NLWeb Protocol**: Toto je **základní sada pravidel pro interakci v přirozeném jazyce** s webovou stránkou. Vrací odpovědi ve formátu JSON (často se používá Schema.org). Jeho účelem je vytvořit jednoduchý základ pro „AI Web“, podobně jako HTML umožnilo sdílení dokumentů online.
 
-- **MCP server (Model Context Protocol Endpoint)**: Každé nastavení NLWeb také funguje jako **MCP server**. To znamená, že může **sdílet nástroje (například metodu „ask“) a data** s jinými AI systémy. V praxi to umožňuje, aby obsah a schopnosti webu byly použitelné AI agenty, což umožňuje webu stát se součástí širšího „ekosystému agentů“.
+- **MCP Server (Model Context Protocol Endpoint)**: Každé NLWeb nasazení funguje také jako **MCP server**. To znamená, že může **sdílet nástroje (jako metodu „ask“) a data** s jinými AI systémy. V praxi to umožňuje, aby se obsah a schopnosti webu staly použitelnými pro AI agenty a web se stal součástí širší „ekosystému agentů“.
 
-- **Modely vkládání**: Tyto modely se používají k **převodu obsahu webu na číselné reprezentace zvané vektory** (vkládání). Tyto vektory zachycují význam způsobem, který počítače mohou porovnávat a vyhledávat. Jsou uloženy ve speciální databázi a uživatelé si mohou vybrat, který model vkládání chtějí použít.
+- **Embedding Models**: Tyto modely se používají k **převedení obsahu webu do číselných reprezentací nazývaných vektory** (embeddings). Tyto vektory zachycují význam tak, aby je počítače mohly porovnávat a vyhledávat. Ukládají se do speciální databáze a uživatelé si mohou vybrat, který embedding model chtějí použít.
 
-- **Vektorová databáze (mechanismus vyhledávání)**: Tato databáze **ukládá vkládání obsahu webu**. Když někdo položí otázku, NLWeb zkontroluje vektorovou databázi, aby rychle našel nejrelevantnější informace. Poskytuje rychlý seznam možných odpovědí, seřazených podle podobnosti. NLWeb pracuje s různými systémy pro ukládání vektorů, jako jsou Qdrant, Snowflake, Milvus, Azure AI Search a Elasticsearch.
+- **Vector Database (Retrieval Mechanism)**: Tato databáze **ukládá embeddingy obsahu webu**. Když někdo položí otázku, NLWeb prohledá vektorovou databázi, aby rychle našel nejrelevantnější informace. Vrací rychlý seznam možných odpovědí, seřazených podle podobnosti. NLWeb funguje s různými systémy pro ukládání vektorů, jako jsou Qdrant, Snowflake, Milvus, Azure AI Search a Elasticsearch.
 
-### Příklad NLWeb
+### NLWeb by Example
 
 ![NLWeb](../../../translated_images/cs/nlweb-diagram.c1e2390b310e5fe4.webp)
 
-Zvažme náš cestovní web, tentokrát poháněný NLWeb.
+Consider our travel booking website again, but this time, it's powered by NLWeb.
 
-1. **Příjem dat**: Stávající katalogy produktů cestovního webu (například seznamy letů, popisy hotelů, balíčky zájezdů) jsou formátovány pomocí Schema.org nebo načteny prostřednictvím RSS feedů. Nástroje NLWeb tyto strukturované údaje načtou, vytvoří vkládání a uloží je do lokální nebo vzdálené vektorové databáze.
+1. **Data Ingestion**: The travel website's existing product catalogs (e.g., flight listings, hotel descriptions, tour packages) are formatted using Schema.org or loaded via RSS feeds. NLWeb's tools ingest this structured data, create embeddings, and store them in a local or remote vector database.
 
-2. **Dotaz v přirozeném jazyce (člověk)**: Uživatel navštíví web a místo navigace v menu zadá do rozhraní chatu: "Najdi mi rodinný hotel v Honolulu s bazénem na příští týden".
+2. **Natural Language Query (Human)**: A user visits the website and, instead of navigating menus, types into a chat interface: "Find me a family-friendly hotel in Honolulu with a pool for next week".
 
-3. **Zpracování NLWeb**: NLWeb aplikace obdrží tento dotaz. Pošle dotaz LLM pro porozumění a současně prohledá svou vektorovou databázi pro relevantní seznamy hotelů.
+3. **NLWeb Processing**: The NLWeb application receives this query. It sends the query to an LLM for understanding and simultaneously searches its vector database for relevant hotel listings.
 
-4. **Přesné výsledky**: LLM pomáhá interpretovat výsledky vyhledávání z databáze, identifikovat nejlepší shody na základě kritérií "rodinný", "bazén" a "Honolulu" a poté formátuje odpověď v přirozeném jazyce. Klíčové je, že odpověď odkazuje na skutečné hotely z katalogu webu, čímž se vyhýbá vymyšleným informacím.
+4. **Accurate Results**: The LLM helps to interpret the search results from the database, identify the best matches based on "family-friendly," "pool," and "Honolulu" criteria, and then formats a natural language response. Crucially, the response refers to actual hotels from the website's catalog, avoiding made-up information.
 
-5. **Interakce AI agenta**: Protože NLWeb slouží jako MCP server, externí AI cestovní agent by se mohl také připojit k NLWeb instanci tohoto webu. AI agent by mohl použít metodu `ask` MCP k přímému dotazování webu: `ask("Jsou v oblasti Honolulu nějaké veganské restaurace doporučené hotelem?")`. NLWeb instance by to zpracovala, využila svou databázi informací o restauracích (pokud je načtena) a vrátila strukturovanou JSON odpověď.
+5. **AI Agent Interaction**: Because NLWeb serves as an MCP server, an external AI travel agent could also connect to this website's NLWeb instance. The AI agent could then use the `ask("Doporučuje hotel nějaké veganské restaurace v oblasti Honolulu?")` MCP method to query the website directly. The NLWeb instance would process this, leveraging its database of restaurant information (if loaded), and return a structured JSON response.
 
-### Máte další otázky ohledně MCP/A2A/NLWeb?
+### Got More Questions about MCP/A2A/NLWeb?
 
-Připojte se k [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde se můžete setkat s dalšími studenty, zúčastnit se konzultačních hodin a získat odpovědi na své otázky ohledně AI agentů.
+Připojte se k [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) a setkejte se s ostatními studenty, navštivte office hours a nechte si zodpovědět své otázky ohledně AI agentů.
 
-## Zdroje
+## Resources
 
 - [MCP pro začátečníky](https://aka.ms/mcp-for-beginners)  
-- [MCP dokumentace](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic-kernel/semantic_kernel/connectors/mcp)
-- [NLWeb Repo](https://github.com/nlweb-ai/NLWeb)
-- [Semantic Kernel Guides](https://learn.microsoft.com/semantic-kernel/)
+- [MCP Documentation](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic-kernel/semantic_kernel/connectors/mcp)
+- [Repo NLWeb](https://github.com/nlweb-ai/NLWeb)
+- [Průvodce Semantic Kernel](https://learn.microsoft.com/semantic-kernel/)
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Prohlášení o vyloučení odpovědnosti:
+Tento dokument byl přeložen pomocí služby pro překlad založené na umělé inteligenci [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho originálním jazyce by měl být považován za autoritativní zdroj. Pro zásadní informace se doporučuje využít profesionální lidský překlad. Nejsme odpovědní za žádná nedorozumění nebo chybné výklady vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

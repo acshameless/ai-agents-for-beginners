@@ -1,76 +1,76 @@
 [![Wie man gute KI-Agenten entwirft](../../../translated_images/de/lesson-4-thumbnail.546162853cb3daff.webp)](https://youtu.be/vieRiPRx-gI?si=cEZ8ApnT6Sus9rhn)
 
-> _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
+> _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
 
-# Entwurfsmuster für Werkzeugnutzung
+# Designmuster für Werkzeugnutzung
 
-Werkzeuge sind interessant, weil sie KI-Agenten eine breitere Palette von Fähigkeiten ermöglichen. Anstatt dass der Agent nur eine begrenzte Menge von Aktionen ausführen kann, kann der Agent mit einem zusätzlichen Werkzeug nun eine Vielzahl von Aktionen durchführen. In diesem Kapitel betrachten wir das Entwurfsmuster für Werkzeugnutzung, das beschreibt, wie KI-Agenten spezifische Werkzeuge verwenden können, um ihre Ziele zu erreichen.
+Werkzeuge sind interessant, weil sie KI-Agenten eine breitere Palette von Fähigkeiten ermöglichen. Anstatt dass der Agent nur eine begrenzte Anzahl von Aktionen ausführen kann, kann der Agent durch Hinzufügen eines Werkzeugs nun eine Vielzahl von Aktionen ausführen. In diesem Kapitel betrachten wir das Designmuster für Werkzeugnutzung, das beschreibt, wie KI-Agenten spezifische Werkzeuge verwenden können, um ihre Ziele zu erreichen.
 
 ## Einführung
 
-In dieser Lektion wollen wir folgende Fragen beantworten:
+In dieser Lektion möchten wir die folgenden Fragen beantworten:
 
-- Was ist das Entwurfsmuster für Werkzeugnutzung?
+- Was ist das Designmuster für Werkzeugnutzung?
 - Für welche Anwendungsfälle kann es angewendet werden?
-- Welche Elemente/Bausteine werden benötigt, um das Entwurfsmuster umzusetzen?
-- Welche besonderen Überlegungen gibt es beim Einsatz des Entwurfsmusters für Werkzeugnutzung, um vertrauenswürdige KI-Agenten zu bauen?
+- Welche Elemente/Bausteine werden benötigt, um das Designmuster zu implementieren?
+- Welche besonderen Überlegungen gibt es bei der Verwendung des Designmusters für Werkzeugnutzung, um vertrauenswürdige KI-Agenten zu bauen?
 
 ## Lernziele
 
-Nach Abschluss dieser Lektion sind Sie in der Lage:
+Nach Abschluss dieser Lektion werden Sie in der Lage sein:
 
-- Das Entwurfsmuster für Werkzeugnutzung und dessen Zweck zu definieren.
-- Anwendungsfälle zu identifizieren, in denen das Entwurfsmuster für Werkzeugnutzung anwendbar ist.
-- Die Schlüsselaspekte zu verstehen, die für die Implementierung des Entwurfsmusters erforderlich sind.
-- Überlegungen zu erkennen, die für die Gewährleistung von Vertrauenswürdigkeit bei KI-Agenten, die dieses Entwurfsmuster verwenden, notwendig sind.
+- Das Designmuster für Werkzeugnutzung und seinen Zweck zu definieren.
+- Anwendungsfälle zu identifizieren, in denen das Designmuster für Werkzeugnutzung anwendbar ist.
+- Die Schlüsselelemente zu verstehen, die benötigt werden, um das Designmuster zu implementieren.
+- Überlegungen zu erkennen, um Vertrauenswürdigkeit bei KI-Agenten, die dieses Designmuster nutzen, sicherzustellen.
 
-## Was ist das Entwurfsmuster für Werkzeugnutzung?
+## Was ist das Designmuster für Werkzeugnutzung?
 
-Das **Entwurfsmuster für Werkzeugnutzung** konzentriert sich darauf, großen Sprachmodellen (LLMs) die Fähigkeit zu verleihen, mit externen Werkzeugen zu interagieren, um spezifische Ziele zu erreichen. Werkzeuge sind Code, der von einem Agenten ausgeführt werden kann, um Aktionen durchzuführen. Ein Werkzeug kann eine einfache Funktion wie ein Taschenrechner sein oder ein API-Aufruf zu einem Drittanbieterdienst wie Aktienkursabfrage oder Wettervorhersage. Im Kontext von KI-Agenten sind Werkzeuge so konzipiert, dass sie als Antwort auf **modellgenerierte Funktionsaufrufe** von Agenten ausgeführt werden.
+Das **Designmuster für Werkzeugnutzung** konzentriert sich darauf, LLMs die Fähigkeit zu geben, mit externen Werkzeugen zu interagieren, um bestimmte Ziele zu erreichen. Werkzeuge sind Code, der von einem Agenten ausgeführt werden kann, um Aktionen durchzuführen. Ein Werkzeug kann eine einfache Funktion wie ein Taschenrechner oder ein API-Aufruf zu einem Drittanbieterdienst wie Aktienkursabfrage oder Wettervorhersage sein. Im Kontext von KI-Agenten sind Werkzeuge so konzipiert, dass sie von Agenten als Reaktion auf **modellgenerierte Funktionsaufrufe** ausgeführt werden.
 
 ## Für welche Anwendungsfälle kann es angewendet werden?
 
-KI-Agenten können Werkzeuge nutzen, um komplexe Aufgaben zu erledigen, Informationen abzurufen oder Entscheidungen zu treffen. Das Entwurfsmuster für Werkzeugnutzung wird häufig in Szenarien verwendet, die eine dynamische Interaktion mit externen Systemen erfordern, wie Datenbanken, Webdiensten oder Code-Interpretern. Diese Fähigkeit ist für eine Reihe von Anwendungsfällen nützlich, darunter:
+KI-Agenten können Werkzeuge nutzen, um komplexe Aufgaben zu erledigen, Informationen abzurufen oder Entscheidungen zu treffen. Das Designmuster für Werkzeugnutzung wird häufig in Szenarien verwendet, die eine dynamische Interaktion mit externen Systemen erfordern, wie Datenbanken, Webservices oder Code-Interpreter. Diese Fähigkeit ist nützlich für verschiedene Anwendungsfälle, darunter:
 
-- **Dynamische Informationsabfrage:** Agenten können externe APIs oder Datenbanken abfragen, um aktuelle Daten zu erhalten (z.B. Abfrage einer SQLite-Datenbank für Datenanalysen, Abrufen von Aktienkursen oder Wetterinformationen).
-- **Code-Ausführung und -Interpretation:** Agenten können Code oder Skripte ausführen, um mathematische Probleme zu lösen, Berichte zu generieren oder Simulationen durchzuführen.
-- **Automatisierung von Arbeitsabläufen:** Automatisierung von repetitiven oder mehrstufigen Arbeitsabläufen durch Integration von Werkzeugen wie Aufgabenplanern, E-Mail-Diensten oder Daten-Pipelines.
-- **Kundensupport:** Agenten können mit CRM-Systemen, Ticket-Plattformen oder Wissensdatenbanken interagieren, um Benutzeranfragen zu beantworten.
-- **Inhaltserstellung und -bearbeitung:** Agenten können Werkzeuge wie Grammatikprüfer, Textzusammenfasser oder Tools zur Bewertung der Inhalts-Sicherheit nutzen, um bei der Inhaltserstellung zu helfen.
+- **Dynamische Informationsabfrage:** Agenten können externe APIs oder Datenbanken abfragen, um aktuelle Daten zu erhalten (z. B. Abfrage einer SQLite-Datenbank zur Datenanalyse, Abrufen von Aktienkursen oder Wetterinformationen).
+- **Code-Ausführung und Interpretation:** Agenten können Code oder Skripte ausführen, um mathematische Probleme zu lösen, Berichte zu erstellen oder Simulationen durchzuführen.
+- **Workflow-Automatisierung:** Automatisierung von wiederkehrenden oder mehrstufigen Arbeitsabläufen durch Integration von Werkzeugen wie Task-Schedulern, E-Mail-Diensten oder Daten-Pipelines.
+- **Kundensupport:** Agenten können mit CRM-Systemen, Ticketplattformen oder Wissensdatenbanken interagieren, um Benutzeranfragen zu lösen.
+- **Inhaltserstellung und -bearbeitung:** Agenten können Werkzeuge wie Grammatikprüfer, Textzusammenfasser oder Inhaltsicherheitsbewertungen nutzen, um bei der Inhaltserstellung zu helfen.
 
-## Welche Elemente/Bausteine werden benötigt, um das Entwurfsmuster für Werkzeugnutzung umzusetzen?
+## Welche Elemente/Bausteine werden benötigt, um das Designmuster für Werkzeugnutzung zu implementieren?
 
-Diese Bausteine ermöglichen es dem KI-Agenten, eine breite Palette von Aufgaben auszuführen. Schauen wir uns die Schlüsselelemente an, die für die Implementierung des Entwurfsmusters für Werkzeugnutzung erforderlich sind:
+Diese Bausteine ermöglichen es dem KI-Agenten, eine breite Palette von Aufgaben auszuführen. Werfen wir einen Blick auf die Schlüsselelemente, die zur Implementierung des Designmusters für Werkzeugnutzung benötigt werden:
 
-- **Funktions-/Werkzeug-Schemas**: Detaillierte Definitionen der verfügbaren Werkzeuge, einschließlich Funktionsname, Zweck, erforderliche Parameter und erwartete Ausgaben. Diese Schemas ermöglichen es dem LLM zu verstehen, welche Werkzeuge verfügbar sind und wie gültige Anfragen aufgebaut werden.
+- **Funktions-/Werkzeugschemata**: Detaillierte Definitionen der verfügbaren Werkzeuge, einschließlich Funktionsname, Zweck, erforderliche Parameter und erwartete Ausgaben. Diese Schemata ermöglichen es dem LLM zu verstehen, welche Werkzeuge verfügbar sind und wie gültige Anfragen formuliert werden.
 
-- **Logik der Funktionsausführung**: Bestimmt wie und wann Werkzeuge basierend auf der Absicht des Nutzers und dem Gesprächskontext aufgerufen werden. Dies kann Planungsmodule, Routing-Mechanismen oder bedingte Abläufe umfassen, die die Werkzeugnutzung dynamisch steuern.
+- **Funktionsausführungslogik**: Steuert, wie und wann Werkzeuge basierend auf der Absicht des Benutzers und dem Gesprächskontext aufgerufen werden. Dies kann Planungsmodule, Routing-Mechanismen oder bedingte Abläufe umfassen, die die Werkzeugnutzung dynamisch bestimmen.
 
-- **Nachrichtenverarbeitungssystem**: Komponenten, die den Gesprächsfluss zwischen Benutzereingaben, LLM-Antworten, Werkzeugaufrufen und Werkzeugergebnissen verwalten.
+- **Nachrichtenverwaltungssystem**: Komponenten, die den Gesprächsfluss zwischen Benutzereingaben, LLM-Antworten, Werkzeugaufrufen und Werkzeugausgaben verwalten.
 
 - **Werkzeugintegrations-Framework**: Infrastruktur, die den Agenten mit verschiedenen Werkzeugen verbindet, egal ob einfache Funktionen oder komplexe externe Dienste.
 
-- **Fehlerbehandlung & Validierung**: Mechanismen zur Handhabung von Fehlern bei der Werkzeugaussführung, Validierung von Parametern und Umgang mit unerwarteten Antworten.
+- **Fehlerbehandlung & Validierung**: Mechanismen zum Umgang mit Fehlern bei der Werkzeugausführung, zur Validierung von Parametern und zur Handhabung unerwarteter Antworten.
 
-- **Statusverwaltung**: Verfolgt Gesprächskontext, vorherige Werkzeuginteraktionen und persistente Daten, um Konsistenz über mehrmalige Interaktionen sicherzustellen.
+- **Statusverwaltung**: Verfolgt den Gesprächskontext, vorherige Werkzeuginteraktionen und persistente Daten, um Konsistenz über mehrstufige Interaktionen hinweg sicherzustellen.
 
-Als nächstes betrachten wir Funktions-/Werkzeugaufrufe im Detail.
+Als nächstes betrachten wir Funktions-/Werkzeugaufrufe etwas genauer.
 
 ### Funktions-/Werkzeugaufrufe
 
-Funktionsaufrufe sind der primäre Weg, wie wir großen Sprachmodellen (LLMs) ermöglichen, mit Werkzeugen zu interagieren. Oft werden „Funktion“ und „Werkzeug“ synonym verwendet, da „Funktionen“ (Blöcke wiederverwendbaren Codes) die „Werkzeuge“ sind, die Agenten zur Erledigung von Aufgaben verwenden. Damit der Code einer Funktion aufgerufen werden kann, muss ein LLM die Nutzeranfrage mit der Funktionsbeschreibung vergleichen. Dafür wird ein Schema mit den Beschreibungen aller verfügbaren Funktionen an das LLM gesendet. Das LLM wählt dann die passendste Funktion für die Aufgabe aus und gibt deren Namen und Argumente zurück. Die ausgewählte Funktion wird dann ausgeführt, die Antwort zurück an das LLM gesendet, das diese Information nutzt, um auf die Nutzeranfrage zu antworten.
+Funktionsaufrufe sind der primäre Weg, um Large Language Models (LLMs) die Interaktion mit Werkzeugen zu ermöglichen. Man sieht oft, dass „Funktion“ und „Werkzeug“ synonym verwendet werden, weil „Funktionen“ (wiederverwendbare Codeblöcke) die „Werkzeuge“ sind, die Agenten verwenden, um Aufgaben auszuführen. Damit der Code einer Funktion aufgerufen werden kann, muss ein LLM die Benutzeranfrage mit der Funktionsbeschreibung abgleichen. Dazu wird ein Schema mit Beschreibungen aller verfügbaren Funktionen an das LLM gesendet. Das LLM wählt dann die passendste Funktion für die Aufgabe aus und gibt deren Namen und Argumente zurück. Die ausgewählte Funktion wird aufgerufen, die Antwort wird an das LLM zurückgesendet, das diese Informationen nutzt, um auf die Benutzeranfrage zu antworten.
 
-Für Entwickler, die Funktionsaufrufe für Agenten implementieren möchten, sind folgende Dinge notwendig:
+Um Funktionsaufrufe für Agenten zu implementieren, benötigen Entwickler:
 
 1. Ein LLM-Modell, das Funktionsaufrufe unterstützt
-2. Ein Schema, das Funktionsbeschreibungen enthält
-3. Der Code zu jeder beschriebenen Funktion
+2. Ein Schema mit Funktionsbeschreibungen
+3. Den Code für jede beschriebene Funktion
 
-Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um dies zu veranschaulichen:
+Um dies zu veranschaulichen, verwenden wir das Beispiel, die aktuelle Zeit in einer Stadt abzurufen:
 
-1. **Initialisierung eines LLM, das Funktionsaufrufe unterstützt:**
+1. **Initialisieren eines LLM, das Funktionsaufrufe unterstützt:**
 
-    Nicht alle Modelle unterstützen Funktionsaufrufe, daher ist es wichtig zu prüfen, ob das verwendete LLM dies tut. <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> unterstützt Funktionsaufrufe. Wir starten mit der Initialisierung des Azure OpenAI Clients.
+    Nicht alle Modelle unterstützen Funktionsaufrufe, daher ist es wichtig zu prüfen, ob das von Ihnen verwendete LLM dies tut.     <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> unterstützt Funktionsaufrufe. Wir können beginnen, indem wir den Azure OpenAI-Client initialisieren.
 
     ```python
     # Initialisiere den Azure OpenAI-Client
@@ -81,13 +81,13 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
     )
     ```
 
-1. **Erstellung eines Funktionsschemas:**
+1. **Erstellen eines Funktionsschemas:**
 
-    Als nächstes definieren wir ein JSON-Schema, das den Funktionsnamen, eine Beschreibung der Funktion und die Namen und Beschreibungen der Funktionsparameter enthält.
-    Dieses Schema wird dann an den zuvor erstellten Client zusammen mit der Nutzereingabe gesendet, um die Uhrzeit in San Francisco zu ermitteln. Wichtig ist, dass ein **Werkzeugaufruf** zurückgegeben wird, **nicht** die endgültige Antwort auf die Frage. Wie bereits erwähnt, gibt das LLM den Namen der für die Aufgabe ausgewählten Funktion und die zu übergebenden Argumente zurück.
+    Als Nächstes definieren wir ein JSON-Schema, das den Funktionsnamen, eine Beschreibung der Funktion sowie die Namen und Beschreibungen der Funktionsparameter enthält.
+    Dieses Schema übergeben wir dann zusammen mit der Benutzeranfrage an den zuvor erstellten Client, um die Zeit in San Francisco zu ermitteln. Wichtig ist zu beachten, dass ein **Werkzeugaufruf** zurückgegeben wird, **nicht** die endgültige Antwort auf die Frage. Wie bereits erwähnt, gibt das LLM den Namen der Funktion zurück, die es für die Aufgabe ausgewählt hat, sowie die Argumente, die an sie übergeben werden.
 
     ```python
-    # Funktionsbeschreibung für das Modell zum Lesen
+    # Funktionsbeschreibung zum Einlesen durch das Modell
     tools = [
         {
             "type": "function",
@@ -111,10 +111,10 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
    
     ```python
   
-    # Erste Benutzeranfrage
+    # Initiale Benutzeranfrage
     messages = [{"role": "user", "content": "What's the current time in San Francisco"}] 
   
-    # Erster API-Aufruf: Fordere das Modell auf, die Funktion zu verwenden
+    # Erster API-Aufruf: Frage das Modell, die Funktion zu verwenden
       response = client.chat.completions.create(
           model=deployment_name,
           messages=messages,
@@ -139,8 +139,8 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
   
 1. **Der Funktionscode zur Ausführung der Aufgabe:**
 
-    Da das LLM die Funktion ausgewählt hat, die ausgeführt werden muss, muss der Code implementiert und ausgeführt werden, der die Aufgabe erledigt.
-    Wir implementieren den Code, um die aktuelle Uhrzeit in Python zu erhalten. Außerdem müssen wir den Code schreiben, um Name und Argumente aus der response_message zu extrahieren, um das endgültige Ergebnis zu erhalten.
+    Nun da das LLM entschieden hat, welche Funktion ausgeführt werden muss, muss der Code implementiert und ausgeführt werden, der die Aufgabe ausführt.
+    Wir können den Code in Python schreiben, um die aktuelle Zeit zu erhalten. Wir müssen auch den Code schreiben, um den Namen und die Argumente aus der response_message zu extrahieren, um das endgültige Ergebnis zu erhalten.
 
     ```python
       def get_current_time(location):
@@ -162,7 +162,7 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
     ```
 
      ```python
-     # Funktionaufrufe verarbeiten
+     # Funktionenaufrufe behandeln
       if response_message.tool_calls:
           for tool_call in response_message.tool_calls:
               if tool_call.function.name == "get_current_time":
@@ -182,7 +182,7 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
       else:
           print("No tool calls were made by the model.")  
   
-      # Zweiter API-Aufruf: Holen Sie sich die endgültige Antwort vom Modell
+      # Zweiter API-Aufruf: Hole die endgültige Antwort vom Modell
       final_response = client.chat.completions.create(
           model=deployment_name,
           messages=messages,
@@ -197,22 +197,22 @@ Wir verwenden das Beispiel, die aktuelle Uhrzeit in einer Stadt abzurufen, um di
       The current time in San Francisco is 09:24 AM.
      ```
 
-Funktionsaufrufe sind das Herzstück der meisten, wenn nicht aller Agenten-Werkzeugnutzungen, jedoch kann die Umsetzung von Grund auf manchmal herausfordernd sein.
-Wie wir in [Lektion 2](../../../02-explore-agentic-frameworks) gelernt haben, bieten agentische Frameworks vorgefertigte Bausteine zur Implementierung der Werkzeugnutzung.
+Funktionsaufrufe stehen im Zentrum der meisten, wenn nicht aller Designmuster für den Werkzeuggebrauch bei Agenten, jedoch kann ihre Implementierung von Grund auf manchmal herausfordernd sein.
+Wie wir in [Lektionen 2](../../../02-explore-agentic-frameworks) gelernt haben, stellen agentische Frameworks vorgefertigte Bausteine bereit, um Werkzeugnutzung umzusetzen.
 
 ## Beispiele für Werkzeugnutzung mit agentischen Frameworks
 
-Hier einige Beispiele, wie Sie das Entwurfsmuster für Werkzeugnutzung mit verschiedenen agentischen Frameworks umsetzen können:
+Hier sind einige Beispiele, wie Sie das Designmuster für Werkzeugnutzung mit verschiedenen agentischen Frameworks implementieren können:
 
 ### Semantic Kernel
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Semantic Kernel</a> ist ein Open-Source KI-Framework für .NET-, Python- und Java-Entwickler, die mit großen Sprachmodellen arbeiten. Es vereinfacht die Verwendung von Funktionsaufrufen, indem es Ihre Funktionen und deren Parameter über einen Prozess namens <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">Serialisierung</a> automatisch für das Modell beschreibt. Es verwaltet zudem die Hin- und Rückkommunikation zwischen dem Modell und Ihrem Code. Ein weiterer Vorteil bei der Verwendung eines agentischen Frameworks wie Semantic Kernel ist, dass es Ihnen Zugang zu vorgefertigten Werkzeugen wie <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py" target="_blank">Dateisuche</a> und <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Code-Interpreter</a> ermöglicht.
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Semantic Kernel</a> ist ein Open-Source-KI-Framework für .NET-, Python- und Java-Entwickler, die mit Large Language Models (LLMs) arbeiten. Es vereinfacht die Nutzung von Funktionsaufrufen, indem es Ihre Funktionen und deren Parameter automatisch über einen Prozess namens <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">Serialisierung</a> beschreibt. Es übernimmt auch die Kommunikation zwischen dem Modell und Ihrem Code. Ein weiterer Vorteil eines agentischen Frameworks wie Semantic Kernel ist, dass es Ihnen den Zugriff auf vorgefertigte Werkzeuge wie <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py" target="_blank">Dateisuche</a> und <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Code Interpreter</a> ermöglicht.
 
-Das folgende Diagramm veranschaulicht den Prozess des Funktionsaufrufs mit Semantic Kernel:
+Das folgende Diagramm illustriert den Prozess des Funktionsaufrufs mit Semantic Kernel:
 
-![function calling](../../../translated_images/de/functioncalling-diagram.a84006fc287f6014.webp)
+![Funktionsaufrufe](../../../translated_images/de/functioncalling-diagram.a84006fc287f6014.webp)
 
-In Semantic Kernel werden Funktionen/Werkzeuge <a href="https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python" target="_blank">Plugins</a> genannt. Wir können die Funktion `get_current_time`, die wir zuvor gesehen haben, in ein Plugin umwandeln, indem wir sie in eine Klasse mit der Funktion darin verwandeln. Außerdem importieren wir den `kernel_function` Dekorator, der die Beschreibung der Funktion erhält. Wenn Sie dann mit dem GetCurrentTimePlugin einen Kernel erstellen, serialisiert der Kernel automatisch die Funktion und ihre Parameter und erstellt dabei das Schema, das an das LLM gesendet wird.
+In Semantic Kernel werden Funktionen/Werkzeuge <a href="https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python" target="_blank">Plugins</a> genannt. Wir können die zuvor gezeigte Funktion `get_current_time` in ein Plugin umwandeln, indem wir sie in eine Klasse integrieren. Wir können auch den Decorator `kernel_function` importieren, der die Funktionsbeschreibung übernimmt. Wenn man dann einen Kernel mit dem GetCurrentTimePlugin erstellt, serialisiert der Kernel automatisch die Funktion und ihre Parameter und erstellt dabei das Schema, das an das LLM gesendet wird.
 
 ```python
 from semantic_kernel.functions import kernel_function
@@ -238,21 +238,21 @@ kernel = Kernel()
 # Erstelle das Plugin
 get_current_time_plugin = GetCurrentTimePlugin(location)
 
-# Füge das Plugin dem Kernel hinzu
+# Füge das Plugin zum Kernel hinzu
 kernel.add_plugin(get_current_time_plugin)
 ```
   
 ### Azure AI Agent Service
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a> ist ein neueres agentisches Framework, das darauf ausgelegt ist, Entwickler dabei zu unterstützen, sicher qualitativ hochwertige, skalierbare und erweiterbare KI-Agenten zu erstellen und bereitzustellen, ohne die zugrundeliegende Rechen- und Speicherkapazität verwalten zu müssen. Es ist besonders für Unternehmensanwendungen nützlich, da es ein vollständig verwalteter Dienst mit unternehmensgerechter Sicherheit ist.
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a> ist ein neueres agentisches Framework, das Entwicklern ermöglicht, hochwertige und erweiterbare KI-Agenten sicher zu erstellen, bereitzustellen und zu skalieren, ohne sich um die zugrundeliegenden Compute- und Speicherressourcen kümmern zu müssen. Es ist besonders nützlich für Unternehmensanwendungen, da es ein vollständig verwalteter Dienst mit Unternehmenssicherheitsstandard ist.
 
-Im Vergleich zur direkten Entwicklung mit der LLM-API bietet Azure AI Agent Service einige Vorteile, darunter:
+Im Vergleich zur direkten Entwicklung mit der LLM-API bietet der Azure AI Agent Service einige Vorteile, darunter:
 
-- Automatischer Werkzeugaufruf – kein Bedarf, einen Werkzeugaufruf zu parsen, das Werkzeug aufzurufen und die Antwort zu bearbeiten; dies erfolgt jetzt serverseitig
-- Sicher verwaltete Daten – statt den eigenen Gesprächszustand zu verwalten, können Sie sich auf Threads verlassen, die alle notwendigen Informationen speichern
-- Sofort einsetzbare Werkzeuge – Werkzeuge, mit denen Sie auf Ihre Datenquellen zugreifen können, wie Bing, Azure AI Search und Azure Functions.
+- Automatischer Werkzeugaufruf – keine Notwendigkeit, einen Werkzeugaufruf zu parsen, das Werkzeug aufzurufen und die Antwort zu verarbeiten; all dies geschieht jetzt serverseitig
+- Sicher verwaltete Daten – statt den eigenen Gesprächszustand zu verwalten, können Sie Threads nutzen, die alle notwendigen Informationen speichern
+- Fertige Werkzeuge – Werkzeuge, mit denen Sie mit Ihren Datenquellen interagieren können, wie Bing, Azure AI Search und Azure Functions.
 
-Die verfügbaren Werkzeuge im Azure AI Agent Service lassen sich in zwei Kategorien einteilen:
+Die im Azure AI Agent Service verfügbaren Werkzeuge lassen sich in zwei Kategorien unterteilen:
 
 1. Wissenswerkzeuge:
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview" target="_blank">Grounding mit Bing Search</a>
@@ -260,26 +260,26 @@ Die verfügbaren Werkzeuge im Azure AI Agent Service lassen sich in zwei Kategor
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-ai-search?tabs=azurecli%2Cpython&pivots=overview-azure-ai-search" target="_blank">Azure AI Search</a>
 
 2. Aktionswerkzeuge:
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview" target="_blank">Funktionsaufruf</a>
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview" target="_blank">Code-Interpreter</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview" target="_blank">Funktionsaufrufe</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview" target="_blank">Code Interpreter</a>
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/openapi-spec?tabs=python&pivots=overview" target="_blank">OpenAPI-definierte Werkzeuge</a>
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview" target="_blank">Azure Functions</a>
 
-Der Agent Service ermöglicht uns, diese Werkzeuge als `Werkzeugset` gemeinsam zu nutzen. Zudem nutzt er `Threads`, die die Nachrichtenhistorie eines bestimmten Gesprächs verfolgen.
+Der Agent Service ermöglicht es uns, diese Werkzeuge zusammen als `toolset` zu verwenden. Er nutzt außerdem `Threads`, die die Historie der Nachrichten eines bestimmten Gesprächstrackings speichern.
 
-Stellen Sie sich vor, Sie sind Vertriebsagent bei einem Unternehmen namens Contoso. Sie möchten einen konversationellen Agenten entwickeln, der Fragen zu Ihren Verkaufsdaten beantworten kann.
+Stellen Sie sich vor, Sie sind Vertriebsmitarbeiter bei einem Unternehmen namens Contoso. Sie möchten einen Konversationsagenten entwickeln, der Fragen zu Ihren Vertriebsdaten beantworten kann.
 
-Das folgende Bild zeigt, wie Sie Azure AI Agent Service verwenden könnten, um Ihre Verkaufsdaten zu analysieren:
+Das folgende Bild zeigt, wie Sie Azure AI Agent Service verwenden könnten, um Ihre Vertriebsdaten zu analysieren:
 
-![Agentic Service In Action](../../../translated_images/de/agent-service-in-action.34fb465c9a84659e.webp)
+![Agentic Service in Aktion](../../../translated_images/de/agent-service-in-action.34fb465c9a84659e.webp)
 
-Um eines dieser Werkzeuge mit dem Service zu nutzen, können wir einen Client erstellen und ein Werkzeug oder Werkzeugset definieren. Praktisch umgesetzt kann dies mit dem folgenden Python-Code erfolgen. Das LLM kann das Werkzeugset betrachten und entscheiden, ob es die vom Nutzer erstellte Funktion `fetch_sales_data_using_sqlite_query` oder den vorgefertigten Code-Interpreter je nach Benutzeranfrage verwendet.
+Um eines dieser Werkzeuge mit dem Dienst zu nutzen, können wir einen Client erstellen und ein Werkzeug oder Toolset definieren. Um dies praktisch umzusetzen, können wir den folgenden Python-Code verwenden. Das LLM kann das Toolset betrachten und entscheiden, ob es die benutzerdefinierte Funktion `fetch_sales_data_using_sqlite_query` oder den vorgefertigten Code Interpreter abhängig von der Benutzeranfrage verwendet.
 
 ```python 
 import os
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query Funktion, die in einer fetch_sales_data_functions.py Datei gefunden werden kann.
+from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query Funktion, die in einer Datei fetch_sales_data_functions.py zu finden ist.
 from azure.ai.projects.models import ToolSet, FunctionTool, CodeInterpreterTool
 
 project_client = AIProjectClient.from_connection_string(
@@ -287,14 +287,14 @@ project_client = AIProjectClient.from_connection_string(
     conn_str=os.environ["PROJECT_CONNECTION_STRING"],
 )
 
-# Toolset initialisieren
+# Werkzeugset initialisieren
 toolset = ToolSet()
 
-# Funktionsaufruf-Agent mit der fetch_sales_data_using_sqlite_query Funktion initialisieren und zum Toolset hinzufügen
+# Funktion zur Agentenaufruf mit der fetch_sales_data_using_sqlite_query Funktion initialisieren und zum Werkzeugset hinzufügen
 fetch_data_function = FunctionTool(fetch_sales_data_using_sqlite_query)
 toolset.add(fetch_data_function)
 
-# Code-Interpreter-Tool initialisieren und zum Toolset hinzufügen.
+# Code Interpreter Werkzeug initialisieren und zum Werkzeugset hinzufügen.
 code_interpreter = code_interpreter = CodeInterpreterTool()
 toolset.add(code_interpreter)
 
@@ -304,19 +304,19 @@ agent = project_client.agents.create_agent(
 )
 ```
 
-## Welche besonderen Überlegungen gibt es bei der Nutzung des Entwurfsmusters für Werkzeugnutzung, um vertrauenswürdige KI-Agenten zu bauen?
+## Welche besonderen Überlegungen gibt es bei der Verwendung des Designmusters für Werkzeugnutzung, um vertrauenswürdige KI-Agenten zu bauen?
 
-Eine häufige Sorge bei SQL, das dynamisch von LLMs generiert wird, betrifft die Sicherheit, insbesondere das Risiko von SQL-Injektionen oder schädlichen Aktionen wie dem Löschen oder Manipulieren der Datenbank. Obwohl diese Bedenken berechtigt sind, können sie effektiv durch die richtige Konfiguration der Datenbankzugriffsrechte gemindert werden. Für die meisten Datenbanken bedeutet dies, die Datenbank im Lesezugriff (read-only) zu konfigurieren. Für Datenbankdienste wie PostgreSQL oder Azure SQL sollte der App eine read-only (SELECT) Rolle zugewiesen werden.
-Das Ausführen der App in einer sicheren Umgebung erhöht den Schutz zusätzlich. In Unternehmensszenarien werden Daten typischerweise aus operativen Systemen extrahiert und in eine schreibgeschützte Datenbank oder ein Data Warehouse mit einem benutzerfreundlichen Schema transformiert. Dieser Ansatz stellt sicher, dass die Daten sicher, leistungs- und zugänglichkeitsoptimiert sind und die App einen eingeschränkten, schreibgeschützten Zugriff hat.
+Ein häufiges Anliegen bei dynamisch durch LLM generiertem SQL ist die Sicherheit, insbesondere das Risiko von SQL-Injection oder böswilligen Aktionen wie dem Löschen oder Manipulieren der Datenbank. Obwohl diese Bedenken berechtigt sind, lassen sie sich durch eine ordnungsgemäße Konfiguration der Datenbankzugriffsberechtigungen effektiv mindern. Für die meisten Datenbanken bedeutet dies, die Datenbank als schreibgeschützt zu konfigurieren. Für Datenbankdienste wie PostgreSQL oder Azure SQL sollte der Anwendung eine schreibgeschützte (SELECT) Rolle zugewiesen werden.
 
-## Beispiel-Code
+Der Betrieb der Anwendung in einer sicheren Umgebung erhöht den Schutz zusätzlich. In Unternehmensszenarien werden Daten typischerweise extrahiert und von operativen Systemen in eine schreibgeschützte Datenbank oder ein Data Warehouse mit einer benutzerfreundlichen Schemaform transformiert. Dieses Vorgehen stellt sicher, dass die Daten sicher, für Leistung und Zugänglichkeit optimiert sind und dass die Anwendung einen eingeschränkten, schreibgeschützten Zugriff hat.
 
+## Beispielcodes
 - Python: [Agent Framework](./code_samples/04-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/04-dotnet-agent-framework.md)
 
-## Haben Sie weitere Fragen zu den Design Patterns des Tools?
+## Haben Sie weitere Fragen zur Verwendung von Design Patterns im Tool?
 
-Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, an Sprechstunden teilzunehmen und Ihre Fragen zu AI Agents beantwortet zu bekommen.
+Treten Sie dem [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) bei, um andere Lernende zu treffen, an Sprechstunden teilzunehmen und Antworten auf Ihre AI Agents Fragen zu erhalten.
 
 ## Zusätzliche Ressourcen
 
@@ -328,7 +328,7 @@ Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei,
 
 ## Vorherige Lektion
 
-[Understanding Agentic Design Patterns](../03-agentic-design-patterns/README.md)
+[Verstehen von agentenbasierten Designmustern](../03-agentic-design-patterns/README.md)
 
 ## Nächste Lektion
 
@@ -338,5 +338,5 @@ Treten Sie dem [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) bei,
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir bemüht sind, Genauigkeit zu gewährleisten, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ausgangssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

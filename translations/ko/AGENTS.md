@@ -1,161 +1,159 @@
 # AGENTS.md
 
-## 프로젝트 개요
+## Project Overview
 
-이 저장소는 "초보자를 위한 AI 에이전트"라는 교육 과정을 포함하고 있으며, AI 에이전트를 구축하는 데 필요한 모든 것을 가르칩니다. 이 과정은 AI 에이전트의 기본 개념, 디자인 패턴, 프레임워크, 그리고 실제 배포까지 다루는 15개 이상의 강의로 구성되어 있습니다.
+This repository contains "AI Agents for Beginners" - a comprehensive educational course teaching everything needed to build AI Agents. The course consists of 15+ lessons covering fundamentals, design patterns, frameworks, and production deployment of AI agents.
 
-**주요 기술:**
-- Python 3.12 이상
-- Jupyter Notebooks를 활용한 대화형 학습
-- AI 프레임워크: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI 서비스: Azure AI Foundry, Azure AI Agent Service
-- GitHub Models Marketplace (무료 등급 제공)
+**Key Technologies:**
+- Python 3.12+
+- Jupyter Notebooks for interactive learning
+- AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
+- GitHub Models Marketplace (free tier available)
 
-**아키텍처:**
-- 강의 기반 구조 (00-15+ 디렉토리)
-- 각 강의는 README 문서, 코드 샘플(Jupyter 노트북), 이미지로 구성
-- 자동 번역 시스템을 통한 다국어 지원
-- 강의별로 다양한 프레임워크 옵션 제공 (Semantic Kernel, AutoGen, Azure AI Agent Service)
+**Architecture:**
+- Lesson-based structure (00-15+ directories)
+- Each lesson contains: README documentation, code samples (Jupyter notebooks), and images
+- Multi-language support via automated translation system
+- Multiple framework options per lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
 
-## 설정 명령어
+## Setup Commands
 
-### 사전 요구사항
-- Python 3.12 이상
-- GitHub 계정 (GitHub Models - 무료 등급)
-- Azure 구독 (선택 사항, Azure AI 서비스용)
+### Prerequisites
+- Python 3.12 or higher
+- GitHub account (for GitHub Models - free tier)
+- Azure subscription (optional, for Azure AI services)
 
-### 초기 설정
+### Initial Setup
 
-1. **저장소를 클론하거나 포크하세요:**
+1. **Clone or fork the repository:**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # 또는
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **Python 가상 환경을 생성하고 활성화하세요:**
+2. **Create and activate Python virtual environment:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows에서: venv\Scripts\activate
    ```
 
-3. **필요한 종속성을 설치하세요:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **환경 변수를 설정하세요:**
+4. **Set up environment variables:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # .env 파일을 API 키와 엔드포인트로 편집하세요
    ```
 
+### Required Environment Variables
 
-### 필수 환경 변수
+For **GitHub Models (Free)**:
+- `GITHUB_TOKEN` - Personal access token from GitHub
 
-**GitHub Models (무료)**:
-- `GITHUB_TOKEN` - GitHub에서 발급받은 개인 액세스 토큰
+For **Azure AI Services** (optional):
+- `PROJECT_ENDPOINT` - Microsoft Foundry project endpoint
+- `AZURE_OPENAI_API_KEY` - Azure OpenAI API key
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Deployment name for chat model
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Deployment name for embeddings
+- Additional Azure configuration as shown in `.env.example`
 
-**Azure AI 서비스** (선택 사항):
-- `PROJECT_ENDPOINT` - Azure AI Foundry 프로젝트 엔드포인트
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI API 키
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI 엔드포인트 URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - 채팅 모델 배포 이름
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - 임베딩 배포 이름
-- `.env.example`에 표시된 추가 Azure 구성
+## Development Workflow
 
-## 개발 워크플로우
+### Running Jupyter Notebooks
 
-### Jupyter 노트북 실행
+Each lesson contains multiple Jupyter notebooks for different frameworks:
 
-각 강의는 다양한 프레임워크를 위한 여러 Jupyter 노트북을 포함합니다:
-
-1. **Jupyter 시작:**
+1. **Start Jupyter:**
    ```bash
    jupyter notebook
    ```
 
-2. **강의 디렉토리로 이동** (예: `01-intro-to-ai-agents/code_samples/`)
+2. **Navigate to a lesson directory** (e.g., `01-intro-to-ai-agents/code_samples/`)
 
-3. **노트북 열고 실행:**
-   - `*-semantic-kernel.ipynb` - Semantic Kernel 프레임워크 사용
-   - `*-autogen.ipynb` - AutoGen 프레임워크 사용
-   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python) 사용
-   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET) 사용
-   - `*-azureaiagent.ipynb` - Azure AI Agent Service 사용
+3. **Open and run notebooks:**
+   - `*-semantic-kernel.ipynb` - Using Semantic Kernel framework
+   - `*-autogen.ipynb` - Using AutoGen framework
+   - `*-python-agent-framework.ipynb` - Using Microsoft Agent Framework (Python)
+   - `*-dotnet-agent-framework.ipynb` - Using Microsoft Agent Framework (.NET)
+   - `*-azureaiagent.ipynb` - Using Azure AI Agent Service
 
-### 다양한 프레임워크 활용
+### Working with Different Frameworks
 
 **Semantic Kernel + GitHub Models:**
-- GitHub 계정으로 무료 등급 사용 가능
-- 학습 및 실험에 적합
-- 파일 패턴: `*-semantic-kernel*.ipynb`
+- Free tier available with GitHub account
+- Good for learning and experimentation
+- File pattern: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
-- GitHub 계정으로 무료 등급 사용 가능
-- 다중 에이전트 오케스트레이션 기능 제공
-- 파일 패턴: `*-autogen.ipynb`
+- Free tier available with GitHub account
+- Multi-agent orchestration capabilities
+- File pattern: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
-- Microsoft의 최신 프레임워크
-- Python 및 .NET에서 사용 가능
-- 파일 패턴: `*-agent-framework.ipynb`
+- Latest framework from Microsoft
+- Available in Python and .NET
+- File pattern: `*-agent-framework.ipynb`
 
 **Azure AI Agent Service:**
-- Azure 구독 필요
-- 실제 배포에 적합한 기능 제공
-- 파일 패턴: `*-azureaiagent.ipynb`
+- Requires Azure subscription
+- Production-ready features
+- File pattern: `*-azureaiagent.ipynb`
 
-## 테스트 지침
+## Testing Instructions
 
-이 저장소는 교육용 예제 코드로 구성되어 있으며, 자동화된 테스트가 포함된 프로덕션 코드가 아닙니다. 설정 및 변경 사항을 확인하려면:
+This is an educational repository with example code rather than production code with automated tests. To verify your setup and changes:
 
-### 수동 테스트
+### Manual Testing
 
-1. **Python 환경 테스트:**
+1. **Test Python environment:**
    ```bash
-   python --version  # Should be 3.12+
+   python --version  # 3.12 이상이어야 합니다.
    pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
    ```
 
-2. **노트북 실행 테스트:**
+2. **Test notebook execution:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # 노트북을 스크립트로 변환하고 실행(테스트 임포트)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
-3. **환경 변수 확인:**
+3. **Verify environment variables:**
    ```bash
    python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
    ```
 
+### Running Individual Notebooks
 
-### 개별 노트북 실행
+Open notebooks in Jupyter and execute cells sequentially. Each notebook is self-contained and includes:
+- Import statements
+- Configuration loading
+- Example agent implementations
+- Expected outputs in markdown cells
 
-Jupyter에서 노트북을 열고 셀을 순차적으로 실행하세요. 각 노트북은 독립적으로 구성되어 있으며 다음을 포함합니다:
-- import 문
-- 구성 로딩
-- 에이전트 구현 예제
-- Markdown 셀에 예상 출력
+## Code Style
 
-## 코드 스타일
+### Python Conventions
 
-### Python 규칙
+- **Python Version**: 3.12+
+- **Code Style**: Follow standard Python PEP 8 conventions
+- **Notebooks**: Use clear markdown cells to explain concepts
+- **Imports**: Group by standard library, third-party, local imports
 
-- **Python 버전**: 3.12 이상
-- **코드 스타일**: 표준 Python PEP 8 규칙 준수
-- **노트북**: 개념을 설명하는 명확한 Markdown 셀 사용
-- **import**: 표준 라이브러리, 서드파티, 로컬 import 순서로 그룹화
+### Jupyter Notebook Conventions
 
-### Jupyter 노트북 규칙
+- Include descriptive markdown cells before code cells
+- Add output examples in notebooks for reference
+- Use clear variable names that match lesson concepts
+- Keep notebook execution order linear (cell 1 → 2 → 3...)
 
-- 코드 셀 앞에 설명이 포함된 Markdown 셀 추가
-- 참조용 출력 예제를 노트북에 포함
-- 강의 개념에 맞는 명확한 변수 이름 사용
-- 노트북 실행 순서를 선형적으로 유지 (셀 1 → 2 → 3...)
-
-### 파일 구성
+### File Organization
 
 ```
 <lesson-number>-<lesson-name>/
@@ -169,174 +167,175 @@ Jupyter에서 노트북을 열고 셀을 순차적으로 실행하세요. 각 �
     └── *.png
 ```
 
+## Build and Deployment
 
-## 빌드 및 배포
+### Building Documentation
 
-### 문서 빌드
+This repository uses Markdown for documentation:
+- README.md files in each lesson folder
+- Main README.md at repository root
+- Automated translation system via GitHub Actions
 
-이 저장소는 Markdown을 문서화에 사용합니다:
-- 각 강의 폴더에 README.md 파일 포함
-- 저장소 루트에 메인 README.md 파일
-- GitHub Actions를 통한 자동 번역 시스템
+### CI/CD Pipeline
 
-### CI/CD 파이프라인
+Located in `.github/workflows/`:
 
-`.github/workflows/`에 위치:
+1. **co-op-translator.yml** - Automatic translation to 50+ languages
+2. **welcome-issue.yml** - Welcomes new issue creators
+3. **welcome-pr.yml** - Welcomes new pull request contributors
 
-1. **co-op-translator.yml** - 50개 이상의 언어로 자동 번역
-2. **welcome-issue.yml** - 새로운 이슈 작성자 환영
-3. **welcome-pr.yml** - 새로운 PR 기여자 환영
+### Deployment
 
-### 배포
+This is an educational repository - no deployment process. Users:
+1. Fork or clone the repository
+2. Run notebooks locally or in GitHub Codespaces
+3. Learn by modifying and experimenting with examples
 
-이 저장소는 교육용으로 설계되었으며 배포 프로세스가 없습니다. 사용자는:
-1. 저장소를 포크하거나 클론
-2. 노트북을 로컬 또는 GitHub Codespaces에서 실행
-3. 예제를 수정하고 실험하며 학습
+## Pull Request Guidelines
 
-## Pull Request 지침
+### Before Submitting
 
-### 제출 전
+1. **Test your changes:**
+   - Run affected notebooks completely
+   - Verify all cells execute without errors
+   - Check that outputs are appropriate
 
-1. **변경 사항 테스트:**
-   - 영향을 받은 노트북을 완전히 실행
-   - 모든 셀이 오류 없이 실행되는지 확인
-   - 출력이 적절한지 확인
+2. **Documentation updates:**
+   - Update README.md if adding new concepts
+   - Add comments in notebooks for complex code
+   - Ensure markdown cells explain the purpose
 
-2. **문서 업데이트:**
-   - 새로운 개념을 추가할 경우 README.md 업데이트
-   - 복잡한 코드에 주석 추가
-   - Markdown 셀이 목적을 설명하도록 작성
+3. **File changes:**
+   - Avoid committing `.env` files (use `.env.example`)
+   - Don't commit `venv/` or `__pycache__/` directories
+   - Keep notebook outputs when they demonstrate concepts
+   - Remove temporary files and backup notebooks (`*-backup.ipynb`)
 
-3. **파일 변경 사항:**
-   - `.env` 파일을 커밋하지 않음 (`.env.example` 사용)
-   - `venv/` 또는 `__pycache__/` 디렉토리를 커밋하지 않음
-   - 개념을 설명하는 경우 노트북 출력 유지
-   - 임시 파일 및 백업 노트북(`*-backup.ipynb`) 제거
+### PR Title Format
 
-### PR 제목 형식
+Use descriptive titles:
+- `[Lesson-XX] Add new example for <concept>`
+- `[Fix] Correct typo in lesson-XX README`
+- `[Update] Improve code sample in lesson-XX`
+- `[Docs] Update setup instructions`
 
-설명적인 제목 사용:
-- `[Lesson-XX] <개념>에 대한 새로운 예제 추가`
-- `[Fix] Lesson-XX README의 오타 수정`
-- `[Update] Lesson-XX 코드 샘플 개선`
-- `[Docs] 설정 지침 업데이트`
+### Required Checks
 
-### 필수 확인 사항
+- Notebooks should execute without errors
+- README files should be clear and accurate
+- Follow existing code patterns in the repository
+- Maintain consistency with other lessons
 
-- 노트북이 오류 없이 실행되어야 함
-- README 파일이 명확하고 정확해야 함
-- 저장소의 기존 코드 패턴을 따를 것
-- 다른 강의와 일관성을 유지할 것
+## Additional Notes
 
-## 추가 참고 사항
+### Common Gotchas
 
-### 일반적인 문제
+1. **Python version mismatch:**
+   - Ensure Python 3.12+ is used
+   - Some packages may not work with older versions
+   - Use `python3 -m venv` to specify Python version explicitly
 
-1. **Python 버전 불일치:**
-   - Python 3.12 이상 사용
-   - 일부 패키지는 이전 버전에서 작동하지 않을 수 있음
-   - `python3 -m venv`를 사용하여 Python 버전을 명시적으로 지정
+2. **Environment variables:**
+   - Always create `.env` from `.env.example`
+   - Don't commit `.env` file (it's in `.gitignore`)
+   - GitHub token needs appropriate permissions
 
-2. **환경 변수:**
-   - 항상 `.env.example`에서 `.env` 생성
-   - `.env` 파일을 커밋하지 않음 (`.gitignore`에 포함)
-   - GitHub 토큰은 적절한 권한 필요
+3. **Package conflicts:**
+   - Use a fresh virtual environment
+   - Install from `requirements.txt` rather than individual packages
+   - Some notebooks may require additional packages mentioned in their markdown cells
 
-3. **패키지 충돌:**
-   - 새 가상 환경 사용
-   - 개별 패키지 대신 `requirements.txt`에서 설치
-   - 일부 노트북은 Markdown 셀에 언급된 추가 패키지가 필요할 수 있음
+4. **Azure services:**
+   - Azure AI services require active subscription
+   - Some features are region-specific
+   - Free tier limitations apply to GitHub Models
 
-4. **Azure 서비스:**
-   - Azure AI 서비스는 활성 구독 필요
-   - 일부 기능은 지역별로 제한될 수 있음
-   - GitHub Models의 무료 등급 제한 적용
+### Learning Path
 
-### 학습 경로
+Recommended progression through lessons:
+1. **00-course-setup** - Start here for environment setup
+2. **01-intro-to-ai-agents** - Understand AI agent fundamentals
+3. **02-explore-agentic-frameworks** - Learn about different frameworks
+4. **03-agentic-design-patterns** - Core design patterns
+5. Continue through numbered lessons sequentially
 
-강의 진행 순서 추천:
-1. **00-course-setup** - 환경 설정을 위한 시작점
-2. **01-intro-to-ai-agents** - AI 에이전트 기본 개념 이해
-3. **02-explore-agentic-frameworks** - 다양한 프레임워크 학습
-4. **03-agentic-design-patterns** - 핵심 디자인 패턴
-5. 번호 순서대로 강의 진행
+### Framework Selection
 
-### 프레임워크 선택
+Choose framework based on your goals:
+- **Learning/Prototyping**: Semantic Kernel + GitHub Models (free)
+- **Multi-agent systems**: AutoGen
+- **Latest features**: Microsoft Agent Framework (MAF)
+- **Production deployment**: Azure AI Agent Service
 
-목표에 따라 프레임워크 선택:
-- **학습/프로토타입**: Semantic Kernel + GitHub Models (무료)
-- **다중 에이전트 시스템**: AutoGen
-- **최신 기능**: Microsoft Agent Framework (MAF)
-- **실제 배포**: Azure AI Agent Service
+### Getting Help
 
-### 도움 받기
+- Join the [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- Review lesson README files for specific guidance
+- Check the main [README.md](./README.md) for course overview
+- Refer to [Course Setup](./00-course-setup/README.md) for detailed setup instructions
 
-- [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord)에 참여
-- 강의 README 파일에서 특정 지침 검토
-- 메인 [README.md](./README.md)에서 과정 개요 확인
-- [Course Setup](./00-course-setup/README.md)에서 자세한 설정 지침 참조
+### Contributing
 
-### 기여
+This is an open educational project. Contributions welcome:
+- Improve code examples
+- Fix typos or errors
+- Add clarifying comments
+- Suggest new lesson topics
+- Translate to additional languages
 
-이 프로젝트는 오픈 교육 프로젝트입니다. 기여를 환영합니다:
-- 코드 예제 개선
-- 오타 또는 오류 수정
-- 명확한 주석 추가
-- 새로운 강의 주제 제안
-- 추가 언어로 번역
+See [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) for current needs.
 
-현재 필요 사항은 [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues)에서 확인하세요.
+## Project-Specific Context
 
-## 프로젝트 특수 맥락
+### Multi-Language Support
 
-### 다국어 지원
+This repository uses an automated translation system:
+- 50+ languages supported
+- Translations in `/translations/<lang-code>/` directories
+- GitHub Actions workflow handles translation updates
+- Source files are in English at repository root
 
-이 저장소는 자동 번역 시스템을 사용합니다:
-- 50개 이상의 언어 지원
-- 번역은 `/translations/<lang-code>/` 디렉토리에 저장
-- GitHub Actions 워크플로우가 번역 업데이트 처리
-- 원본 파일은 저장소 루트에 영어로 제공
+### Lesson Structure
 
-### 강의 구조
+Each lesson follows a consistent pattern:
+1. Video thumbnail with link
+2. Written lesson content (README.md)
+3. Code samples in multiple frameworks
+4. Learning objectives and prerequisites
+5. Extra learning resources linked
 
-각 강의는 일관된 패턴을 따릅니다:
-1. 비디오 썸네일 및 링크
-2. 작성된 강의 내용 (README.md)
-3. 다양한 프레임워크의 코드 샘플
-4. 학습 목표 및 사전 요구사항
-5. 추가 학습 자료 링크
+### Code Sample Naming
 
-### 코드 샘플 명명 규칙
+Format: `<lesson-number>-<framework-name>.ipynb`
+- `04-semantic-kernel.ipynb` - Lesson 4, Semantic Kernel
+- `07-autogen.ipynb` - Lesson 7, AutoGen
+- `14-python-agent-framework.ipynb` - Lesson 14, MAF Python
+- `14-dotnet-agent-framework.ipynb` - Lesson 14, MAF .NET
 
-형식: `<lesson-number>-<framework-name>.ipynb`
-- `04-semantic-kernel.ipynb` - 강의 4, Semantic Kernel
-- `07-autogen.ipynb` - 강의 7, AutoGen
-- `14-python-agent-framework.ipynb` - 강의 14, MAF Python
-- `14-dotnet-agent-framework.ipynb` - 강의 14, MAF .NET
+### Special Directories
 
-### 특별 디렉토리
+- `translated_images/` - Localized images for translations
+- `images/` - Original images for English content
+- `.devcontainer/` - VS Code development container configuration
+- `.github/` - GitHub Actions workflows and templates
 
-- `translated_images/` - 번역된 이미지 저장
-- `images/` - 영어 콘텐츠의 원본 이미지
-- `.devcontainer/` - VS Code 개발 컨테이너 구성
-- `.github/` - GitHub Actions 워크플로우 및 템플릿
+### Dependencies
 
-### 종속성
-
-`requirements.txt`의 주요 패키지:
-- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen 프레임워크
-- `semantic-kernel` - Semantic Kernel 프레임워크
+Key packages from `requirements.txt`:
+- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen framework
+- `semantic-kernel` - Semantic Kernel framework
 - `agent-framework` - Microsoft Agent Framework
-- `azure-ai-inference`, `azure-ai-projects` - Azure AI 서비스
-- `azure-search-documents` - Azure AI 검색 통합
-- `chromadb` - RAG 예제를 위한 벡터 데이터베이스
-- `chainlit` - 채팅 UI 프레임워크
-- `browser_use` - 에이전트용 브라우저 자동화
-- `mcp[cli]` - 모델 컨텍스트 프로토콜 지원
-- `mem0ai` - 에이전트 메모리 관리
+- `azure-ai-inference`, `azure-ai-projects` - Azure AI services
+- `azure-search-documents` - Azure AI Search integration
+- `chromadb` - Vector database for RAG examples
+- `chainlit` - Chat UI framework
+- `browser_use` - Browser automation for agents
+- `mcp[cli]` - Model Context Protocol support
+- `mem0ai` - Memory management for agents
 
 ---
 
-**면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 신뢰할 수 있는 권위 있는 자료로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+면책사항:
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 기하기 위해 노력하고 있으나, 자동 번역에는 오류나 부정확성이 있을 수 있음을 유의해 주십시오. 원문(원어) 문서를 권위 있는 출처로 간주하시기 바랍니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역의 사용으로 인해 발생하는 어떠한 오해나 잘못된 해석에 대해서도 당사는 책임을 지지 않습니다.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

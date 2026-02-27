@@ -1,187 +1,188 @@
-## Etkinlik Adı: Azure AI Agent Service ile Kod-Öncelikli Uygulamanızı Oluşturun (EMEA/ABD Sunumu)
+## Event Name: Kod-öncelikli uygulamanızı Azure AI Agent Service ile oluşturun (EMEA/US teklifi)
 
-## Açıklama
+## Description
 
-Azure AI Agent Service, güçlü yapay zeka çözümleri geliştirmeyi kolaylaştıran bir hizmet ve SDK karışımıdır. Bu oturumda, Azure ile kendi kod-öncelikli yapay zeka ajanınızı nasıl oluşturacağınızı öğreneceksiniz. Bu ajan, soruları yanıtlayabilir, veri analizi yapabilir ve harici veri kaynaklarıyla entegre olabilir. Ayrıca, birden fazla ajanın birlikte çalıştığı daha karmaşık mimarileri de keşfedeceksiniz.
+Azure AI Agent Service, sağlam yapay zekâ odaklı çözümler geliştirmenizi kolaylaştıran hizmet ve SDK'nın kusursuz bir birleşimidir. Bu oturumda, soruları yanıtlayabilen, veri analizi yapabilen ve harici veri kaynaklarını entegre edebilen kendi kod-öncelikli AI ajanınızı Azure ile nasıl oluşturacağınızı öğreneceksiniz. Ayrıca birden fazla ajanın birlikte çalıştığı daha karmaşık mimarileri de keşfedeceksiniz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25325/>
 
 ---
 
-## Etkinlik Adı: Semantic Kernel ile Çoklu Ajan Yapay Zeka Kullanarak İş Süreçlerini Dönüştürmek
+## Event Name: Semantic Kernel kullanarak Çok Ajanlı Yapay Zekâ ile İş Süreçlerini Dönüştürme
 
-## Açıklama
+## Description
 
-Canlı demolar ve grup sohbeti, yansıtma, seçici ve sürü gibi desenlerle uygulamalı öğrenme yoluyla çoklu ajan yapay zeka sistemlerinin gücünü keşfedin. Semantic Kernel Süreç Çerçevesi'ni kullanarak müşteri desteğinden proje yönetimine kadar kritik iş süreçlerini otomatikleştirin ve ölçeklendirin.
+Grup sohbeti, yansıtma, seçici ve sürü gibi desenler dahil olmak üzere canlı gösterimler ve uygulamalı öğrenme yoluyla çok ajanlı AI sistemlerinin gücünü keşfedin. Kritik iş süreçlerini otomatikleştirmek ve ölçeklendirmek için Semantic Kernel Process Framework'ü kullanarak müşteri desteğinden proje yönetimine kadar çeşitli süreçleri Python ile ele alın.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25313/>
 
 ---
 
-## Etkinlik Adı: AutoGen v0.4 ile Ajanik Uygulamalar Geliştirme
+## Event Name: AutoGen v0.4 ile Agentik Uygulamalar Oluşturma
 
-## Açıklama
+## Description
 
-AutoGen v0.4 kullanarak ajanlar ve çoklu ajan ekipleri oluşturmanın temellerini öğrenin. Yeni AutoGen v0.4 mimarisine genel bir bakış yapacak ve web tabanlı bir kullanıcı arayüzü ile çoklu ajan ekibi oluşturmayı adım adım göstereceğiz.
+AutoGen v0.4 kullanarak ajanlar ve çok ajanlı takımlar oluşturmaya başlama. Yeni AutoGen v0.4 mimarisinin bir genel bakışını ele alacağız ve web tabanlı kullanıcı arayüzü ile çok ajanlı bir takımın nasıl kurulacağını adım adım göstereceğiz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25327/>
 
 ---
 
-## Etkinlik Adı: GitHub Modelleri ile Yapay Zeka Ajanları Prototiplemek
+## Event Name: GitHub Modelleri ile AI Ajanları Prototipleme
 
-## Açıklama
+## Description
 
-GitHub Modelleri sayesinde, ilk yapay zeka ajanınızı oluşturmak için ihtiyacınız olan tek şey bir GitHub hesabı! GitHub Modelleri, OpenAI gpt-4o, DeepSeek-R1, Llama-3.1 ve daha birçok güçlü modeli içerir. Bu modelleri oyun alanında veya kodunuzda denemeye hazırdır. 
-
-Bu oturumda, GitHub Modellerine Python ile nasıl bağlanacağınızı ve ardından PydanticAI, AutoGen ve Semantic Kernel gibi popüler Python paketlerini kullanarak ajanlar oluşturmayı göstereceğiz. Canlı olarak GitHub Codespaces'te takip edebilir veya oturumdan sonra örnekleri kendiniz deneyebilirsiniz.
+GitHub Models sayesinde ilk AI Ajanınızı oluşturmak için tek ihtiyacınız bir GitHub hesabı! GitHub Models, OpenAI gpt-4o, DeepSeek-R1, Llama-3.1 ve daha fazlası gibi güçlü modelleri içerir ve playground’da veya kodunuzda denemeye hazırdır.
+Bu oturumda, Python'dan GitHub Models'a nasıl bağlanılacağını gösterecek ve ardından PydanticAI, AutoGen ve Semantic Kernel gibi popüler Python paketlerini kullanarak ajanlar oluşturacağız.
+Canlı olarak GitHub Codespaces içinde katılabilir veya oturumdan sonra örnekleri istediğiniz zaman deneyebilirsiniz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25481/>
 
 ---
 
-## Etkinlik Adı: Azure AI Model Kataloğundaki Modeller Ordusuyla Ajanlar Oluşturmak
+## Event Name: Azure AI model kataloğundan bir model ordusuyla ajanlar oluşturma
 
-## Açıklama
+## Description
 
-Azure AI model kataloğu, farklı beceri ve yeteneklere sahip geniş bir model yelpazesi sunar. Başlangıç için hazır bir model kullanırken, geliştiriciler daha karmaşık iş akışları için özel modellerden yararlanabilir. Bu sunumda, model kataloğu tekliflerini ve modeller ordusunun üzerinde çalışan ajanlar oluşturmayı nasıl gerçekleştirebileceğinizi ele alacağız - üstelik bütçenizi zorlamadan.
+Azure AI model kataloğu, farklı beceri ve yeteneklere sahip geniş bir model çeşitliliği sunar. Başlangıç için kutudan çıkan bir modeli kullanırken, geliştiriciler daha sofistike iş akışları kullandıkça, tercih ettikleri çerçevede işi yapan uzmanlaşmış modellerden faydalanabilirler. Bu sunumda model kataloğu teklifini ve üstünde bir model ordusu bulunan ajanları nasıl oluşturabileceğinizi — aynı zamanda maliyeti çok yükseltmeden — ele alacağız.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25328/>
 
 ---
 
-## Etkinlik Adı: LangGraph ve Azure Cosmos DB ile Çoklu Ajan API'si
+## Event Name: LangGraph ve Azure Cosmos DB ile Çok Ajanlı API
 
-## Açıklama
+## Description
 
-Çoklu ajan yapay zeka uygulamalarının yükselişi, akıllı sistemler oluşturma yöntemlerimizi dönüştürüyor - ancak bunları gerçek dünya ölçeklenebilirliği ve performansı için nasıl tasarlarsınız? Bu oturumda, LangGraph ile ajan düzenlemesi, FastAPI ile bir API katmanı ve Azure Cosmos DB ile durum yönetimi, vektör depolama ve işlem verileri için bir omurga olarak oluşturulmuş üretim düzeyinde bir çoklu ajan uygulamasını derinlemesine inceleyeceğiz.
+Çok ajanlı AI uygulamalarının yükselişi, zeki sistemleri oluşturma biçimimizi dönüştürüyor — peki bunları gerçek dünya ölçeklenebilirliği ve performansı için nasıl mimarilendirirsiniz? Bu oturumda, ajan orkestrasyonu için LangGraph, API katmanı için FastAPI ve durum yönetimi, vektör depolama ve işlemsel veri için omurga olarak Azure Cosmos DB kullanılarak oluşturulmuş üretim düzeyinde bir çok ajanlı uygulamaya derinlemesine bakacağız.
 
-Detaylı bir kod incelemesiyle, bilgi alma artırılmış üretim (RAG), bellek kalıcılığı ve dinamik durum geçişlerini sorunsuz bir şekilde entegre eden bir ajan odaklı iş akışını nasıl tasarlayıp uygulayacağınızı göreceksiniz. Ele alınacak konular:
+Detaylı bir kod yürütmesi aracılığıyla, RAG (retrieval-augmented generation), bellek kalıcılığı ve dinamik durum geçişlerini sorunsuz şekilde bütünleştiren ajan odaklı bir iş akışının nasıl tasarlanıp uygulanacağını göreceksiniz. Aşağıdakileri ele alacağız:
 
-- Yapılandırılmış akıl yürütme için LangGraph ile ajan iş birliği
-- Azure Cosmos DB kullanarak gerçek zamanlı sohbet geçmişi depolama - ChatGPT'nin sohbet geçmişini güçlendiren aynı veritabanı
-- Cosmos DB'nin yerel gömme desteğiyle bilgi alma için vektör arama
-- FastAPI'nin asenkron yetenekleriyle etkileşimleri duyarlı ve ölçeklenebilir tutma
-
-Bu oturumun sonunda, modern yapay zeka ve bulut altyapısının gücünden yararlanan kendi ölçeklenebilir, bulut tabanlı çoklu ajan uygulamalarınızı oluşturmak ve dağıtmak için net bir yol haritasına sahip olacaksınız. İster bir yapay zeka mühendisi, bulut mimarı veya Python geliştiricisi olun, bu konuşma size bir sonraki nesil yapay zeka destekli uygulamaları oluşturmak için pratik bilgiler ve test edilmiş desenler sunacak.
+Agent işbirliği için yapılandırılmış akıl yürütme ile LangGraph
+Gerçek zamanlı sohbet geçmişi saklama için Azure Cosmos DB - ChatGPT'deki sohbet geçmişini destekleyen ve tarih boyunca en hızlı büyüyen AI ajan uygulaması olan aynı veritabanı
+Cosmos DB'nin yerel embedding desteği ile bilgi geri getirme için vektör arama
+Etkileşimleri duyarlı ve ölçeklenebilir tutmak için FastAPI’nin async yetenekleri
+Bu oturumun sonunda, modern AI ve bulut altyapısının gücünü kullanan kendi ölçeklenebilir, bulut yerel çok ajanlı uygulamalarınızı oluşturup dağıtmanız için net bir yol haritanız olacak. İster bir AI mühendisi, ister bulut mimarı, ister Python geliştiricisi olun, bu konuşma size bir sonraki nesil AI destekli uygulamaları oluşturmak için pratik içgörüler ve saha testli desenler sağlayacak.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25314/>
 
 ---
 
-## Etkinlik Adı: Azure AI Agent Service ile JavaScript'te İlk Yapay Zeka Ajanınızı Oluşturun
+## Event Name: JS ile İlk AI Ajanınız: Azure AI Agent Service ile
 
-## Açıklama
+## Description
 
-Azure AI Agent Service için JavaScript SDK'sını kullanarak ilk yapay zeka ajanınızı nasıl oluşturacağınızı öğrenin. Bu tamamen yönetilen platform, geliştirmeyi kolaylaştırır. Kurulumu nasıl yapacağınızı, Azure AI Search gibi araçları nasıl bağlayacağınızı ve basit bir soru-cevap ajanını nasıl dağıtacağınızı göreceksiniz. Canlı bir demo ile otomatik araç çağırma ve yönetilen durumun süreci nasıl basitleştirdiğini keşfedeceksiniz. Yeni başlayanlar için mükemmel olan bu oturum, yapay zeka ajanı yolculuğunuza güvenle başlamanız için pratik adımlar ve ipuçları sunar.
+Azure AI Agent Service için JavaScript SDK'sını kullanarak ilk AI ajanınızı nasıl oluşturacağınızı öğrenin; bu tamamen yönetilen platform geliştirmeyi kolaylaştırır. Nasıl kuracağınızı, Azure AI Search gibi araçları nasıl bağlayacağınızı ve basit bir soru-cevap ajanını nasıl dağıtacağınızı göreceksiniz. Canlı demo ile otomatik araç çağırma ve yönetilen durumun süreci nasıl kolaylaştırdığını keşfedeceksiniz. Yeni başlayanlar için mükemmel olan bu oturum, AI ajan yolculuğunuza güvenle başlamanız için pratik adımlar ve ipuçları sunar.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25381/>
 
 ---
 
-## Etkinlik Adı: Prompting Yeni Scripting: GenAIScript ile Tanışın
+## Event Name: Prompting Yeni Scripting: GenAIScript ile Tanışın
 
-## Açıklama
+## Description
 
-Bir zamanlar jQuery, web geliştirmeyi kolaylaştırarak geliştiricilerin tarayıcı sorunlarıyla uğraşmak yerine inşa etmeye odaklanmasını sağladı. Bugün, yapay zeka geliştirme benzer bir zorlukla karşı karşıya. Yeni desenler sürekli olarak ortaya çıkıyor ve bunlara ayak uydurmak, özellikle ajanik yapay zeka araçları daha güçlü ve karmaşık hale geldikçe, bunaltıcı olabilir. Peki ya yapay zeka yeteneklerini basit, tanıdık JavaScript soyutlamaları kullanarak iş akışınıza entegre edebilseydiniz? GenAIScript ile tanışın—yapay zekayı iş akışınıza zahmetsizce entegre etmenin bir yolu, istemleri yeniden kullanılabilir kod parçacıkları gibi ele alarak. Bu konuşmada, GenAIScript'in yapay zeka otomasyon ajanlarını JavaScript yazmak kadar sezgisel hale nasıl getirdiğini keşfedeceğiz ve derin yapay zeka uzmanlığına ihtiyaç duymadan tekrarlayan işleri nasıl kolaylaştırabileceğinizi göstereceğiz.
+jQuery bir zamanlar tarayıcı karmaşıklıklarını soyutlayarak web geliştirmeyi kolaylaştırdı ve geliştiricilerin mücadele etmek yerine inşa etmeye odaklanmalarını sağladı. Bugün, AI geliştirme benzer bir zorlukla karşı karşıya. Yeni desenler sürekli ortaya çıkıyor ve özellikle ajanik araçlar daha güçlü ve karmaşık hale geldikçe bunları takip etmek bunaltıcı olabilir. Peki ya en son AI yeteneklerini, basit ve tanıdık JavaScript soyutlamaları kullanarak görevleri otomatikleştirmek için kullanabilseydiniz? Karşınızda GenAIScript — istemleri yeniden kullanılabilir kod parçacıkları gibi ele alarak AI'yı iş akışınıza zahmetsizce entegre etmenin bir yolu. Bu konuşmada, GenAIScript'in AI otomasyon ajanlarını JavaScript yazıyormuşsunuz gibi sezgisel hale getirmesini ve derin AI bilgisine ihtiyaç duymadan tekrarlayan işleri nasıl kolaylaştırdığını keşfedeceğiz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25441/>
 
 ---
 
-## Etkinlik Adı: LlamaIndex.TS ile Bilgiyle Zenginleştirilmiş Ajanlar
+## Event Name: LlamaIndex.TS ile Bilgiyle Zenginleştirilmiş Ajanlar
 
-## Açıklama
+## Description
 
-LlamaIndex, Bilgi Alma Artırılmış Üretim (RAG) oluşturmayı kolaylaştırmasıyla bilinir, ancak çerçevelerimiz aynı zamanda ajanlar ve çoklu ajan sistemleri oluşturmayı da kolaylaştırır! Bu oturumda, ajanik sistemler oluşturmanın temel yapı taşı olan Workflows'u tanıtacağız ve RAG ve diğer araçları kullanan bir ajan oluşturacağız.
+LlamaIndex, Retrieval-Augmented Generation (RAG) oluşturmayı kolaylaştırmasıyla bilinir, ancak çerçevelerimiz aynı zamanda ajanlar ve çok ajanlı sistemler oluşturmayı da kolaylaştırır! Bu oturumda, ajanik sistemler oluşturmak için temel yapı taşımız olan Workflows'ı tanıtacağız ve RAG ve diğer araçları kullanan bir ajan oluşturacağız.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25440/>
 
 ---
 
-## Etkinlik Adı: Azure AI Foundry ve GitHub Copilot Kullanarak Java için Yapay Zeka Ajanları
+## Event Name: Microsoft Foundry ve GitHub Copilot kullanarak Java için AI Ajanları
 
-## Açıklama
+## Description
 
-Bu oturumda, Azure AI Foundry kullanarak Java uygulamalarınıza gelişmiş yapay zeka ajanı yeteneklerini nasıl entegre edeceğinizi göstereceğiz. Proje hedeflerini belirleme, modellerle denemeler yapma ve üretime hazır çözümleri güvenli bir şekilde ölçeklendirme konularını ele alacağız. Ayrıca, GitHub Copilot'un (IntelliJ, VS Code ve Eclipse'te) kod yazmayı ve istem oluşturmayı nasıl kolaylaştırdığını göreceksiniz. Model seçimi, ince ayar ve ajanik iş akışlarında en iyi uygulamalarla sorumlu ve verimli geliştirme sağlanır. Yapay zeka ajanlarına yeni başlayanlar veya ileri düzey ajan oluşturma teknikleri arayanlar için bu oturum, bildiğiniz araçlarla bir sonraki seviyede deneyimler sunmanızı sağlayacak.
+Bu oturumda, Microsoft Foundry kullanarak Java uygulamalarınıza gelişmiş AI Ajan yeteneklerini nasıl gömeceğinizi göstereceğiz; proje hedefleri belirleme, modellerle denemeler yapma ve ölçeklenebilir, üretime hazır çözümleri güvenli bir şekilde dağıtma dahil. Yol boyunca, GitHub Copilot'un (IntelliJ, VS Code ve Eclipse'te) kodlama ve prompt oluşturmayı nasıl hızlandırabileceğini öğrenecek, model seçimi, ince ayar ve ajanik iş akışlarında en iyi uygulamalarla sorumlu ve verimli geliştirmeyi sağlayacaksınız. AI Ajanlarına yeniyseniz veya ileri düzey ajan oluşturma teknikleri arıyorsanız, bu oturum tanıdığınız araçlarla bir üst düzey deneyim sunmanız için sizi donatacak.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25336/>
 
 ---
 
-## Etkinlik Adı: LangChain4j ve Dinamik Oturumlar Kullanarak Java Yapay Zeka Ajanları Oluşturmak
+## Event Name: LangChain4j ve Dinamik Oturumlarla Java AI Ajanları Oluşturma
 
-## Açıklama
+## Description
 
-LangChain4j ile Azure Container Apps (ACA) dinamik oturumlarını Azure AI hizmetlerine bağlayarak Java uygulamalarınızda yapay zeka ajanlarının potansiyelini açığa çıkarın. Bu oturum, uzak bir ortamla etkileşim kurabilen, dosya yönetimi gibi işlemleri gerçekleştirebilen bir ajan oluşturmanın pratik bir örneğini sunar. Özel araçlar tanımlamayı, bunları ajan iş akışlarına entegre etmeyi ve Azure'un ölçeklenebilir altyapısını kullanarak akıllı, dinamik çözümler dağıtmayı öğrenin.
+LangChain4j'yi Azure Container Apps (ACA) dinamik oturumları ile birleştirip Azure AI hizmetlerine bağlayarak Java uygulamalarınızda AI Ajanlarının potansiyelini açığa çıkarın. Bu oturum, uzak bir ortamla (dosya yönetimi dahil) etkileşime girebilen bir ajan oluşturmanın pratik bir örneğini gösterir. Özel araçları nasıl tanımlayacağınızı, bunları ajan iş akışlarına nasıl entegre edeceğinizi ve Azure'un ölçeklenebilir altyapısından yararlanarak akıllı, dinamik çözümler nasıl dağıtılacağını öğrenin.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25337/>
 
 ---
 
-## Etkinlik Adı: Sorumluluk Sahibi Olmayan Yapay Zeka Ajanları
+## Event Name: Sorumsuz AI Ajanları
 
-## Açıklama
+## Description
 
-Yapay zeka ajanlarının potansiyel risklerini keşfederken, güvenilir yapay zeka uygulamalarını konuşma yapay zeka platformlarına entegre etme zorluğunu ele alacağımız bu oturuma katılın! Bu oturumda, model hataları, adversaryal jailbreak'ler ve güveni ve uyumluluğu zedeleyen diğer riskleri içeren sorumsuz yapay zeka ajanlarının çarpıcı örneklerini derinlemesine inceleyeceğiz.
+AI ajanlarının potansiyel risklerini keşfederken, konuşma tabanlı AI platformlarına güvenilir AI uygulamalarını entegre etme zorluğuyla başa çıkıyoruz! Bu oturum, inanılmaz model hataları, adversarial jailbreakler ve güveni ve uyumluluğu zedeleyen diğer riskleri sergileyen sorumsuz AI ajanı örneklerine derinlemesine dalıyor.
 
-Microsoft’un güvenilir yapay zeka için en son araçlarını keşfedeceğiz; içerik filtreleri, kırmızı ekip stratejileri ve değerlendirmeler dahil. Ayrıca, hem sorumlu hem de sorumsuz davranan yapay zeka ajanlarının canlı demolarını göreceksiniz.
+Microsoft’un içerik filtreleri, red teaming stratejileri ve değerlendirmeler dahil olmak üzere güvenilir AI için ileri düzey araçlarını keşfedeceğiz—sorumlu ve sorumsuz davranan AI ajanlarının canlı demolarını içeren gösterimler sizin inanamayacağınız türden olacak.
 
-🔥 Bu oturumdan kazanacaklarınız:
-✅ Yapay zeka risklerini fark etme ve bunlar istismar edilmeden önce azaltma
-✅ Riskli davranışları tespit etmek ve azaltmak için Azure AI Content Safety'yi kullanma
-✅ Yapay zeka ajanlarını güvenilir hale getirmenin püf noktaları
+🔥 Elde edeceğiniz kazanımlar:
+✅ Potansiyel olarak suistimal edilebilecek AI risklerini nasıl tespit edip hafifleteceğiniz
+✅ Riskli davranışları tespit etmek ve hafifletmek için Azure AI Content Safety'i nasıl dağıtacağınız
+✅ AI ajanlarını güvenilir kılmanın sırları
 
-Hype dolu, yüksek riskli yapay zeka dramaları ve yapay zekanızı doğru yolda tutmak için bilmeniz gereken stratejilerle dolu bir oturuma hazır olun. Sadece yapay zeka oluşturmayın—önemli olan yapay zeka oluşturun!
+Tarih boyunca doğru tarafta kalacak AI'lar oluşturmak için gerekli stratejilerle dolu, heyecanlı ve yüksek riskli AI dramalarıyla dolu bir oturuma hazır olun. Sadece AI oluşturmayın—önemli olan AI'ı oluşturun!
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25388/>
 
 ---
 
-## Etkinlik Adı: Azure AI Agent Service ile Kod-Öncelikli Uygulamanızı Oluşturun (.NET)
+## Event Name: Kod-öncelikli uygulamanızı Azure AI Agent Service ile oluşturun (.NET)
 
-## Açıklama
+## Description
 
-Azure AI Agent Service, güçlü yapay zeka çözümleri geliştirmeyi kolaylaştıran bir hizmet ve SDK karışımıdır. Bu oturumda, Azure ve C# ile kendi kod-öncelikli yapay zeka ajanınızı nasıl oluşturacağınızı öğreneceksiniz. Bu ajan, soruları yanıtlayabilir, veri analizi yapabilir ve harici veri kaynaklarıyla entegre olabilir. Ayrıca, birden fazla ajanın birlikte çalıştığı daha karmaşık mimarileri de keşfedeceksiniz.
+Azure AI Agent Service, sağlam yapay zekâ odaklı çözümler geliştirmenizi kolaylaştıran hizmet ve SDK'nın kusursuz bir birleşimidir. Bu oturumda, soruları yanıtlayabilen, veri analizi yapabilen ve harici veri kaynaklarını entegre edebilen kendi kod-öncelikli AI ajanınızı Azure ve C# ile nasıl oluşturacağınızı öğreneceksiniz. Ayrıca birden fazla ajanın birlikte çalıştığı daha karmaşık mimarileri de keşfedeceksiniz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25370/>
 
 ---
 
-## Etkinlik Adı: Yapay Zeka Ajanları + .NET Aspire
+## Event Name: AI Ajanları + .NET Aspire
 
-## Açıklama
+## Description
 
-Bu oturumda, .NET platformundaki Ajanlar ile ilgili en heyecan verici gelişmelerden bazılarını paylaşacağız. .NET'in mevcut durumunu, yeni özelliklerini ve iyileştirmelerini keşfedin. Güçlü yapay zeka ajanı yeteneklerini inceleyin. Ayrıca, Ajanlar ve .NET Aspire ile canlı kodlama yapacağız.
+Bu oturumda Agents etrafındaki .NET platformundaki en heyecan verici gelişmelerden bazılarını paylaşacağız. .NET'in mevcut durumu, yeni özellikleri ve iyileştirmeleri hakkında bilgi edinin. Güçlü AI Agent yeteneklerini keşfedin. Ayrıca Agents ve .NET Aspire ile canlı kodlama yapacağız.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25332/>
 
 ---
 
-## Etkinlik Adı: Azure Cosmos ile Güçlendirilmiş Çoklu Ajan Yapay Zeka Uygulamaları için C# ile Semantic Kernel
+## Event Name: Semantic Kernel ile C# kullanarak Azure Cosmos destekli çok ajanlı AI uygulamaları oluşturma
 
-## Açıklama
+## Description
 
-Semantic Kernel çerçevesi üzerine inşa edilmiş bir C# çoklu ajan uygulamasını adım adım inceleyeceğiz. Ajanik uygulamaların arkasındaki kavramları anlayacak, uygulama detaylarını ve inceliklerini öğrenecek ve çeşitli kullanım durumları için Azure Cosmos DB'yi bir veritabanı olarak nasıl entegre edeceğinizi göreceksiniz.
+Semantic Kernel çerçevesi üzerine kurulmuş C# ile çok ajanlı bir uygulamayı adım adım göstereceğiz. Agentik uygulamaların arkasındaki kavramları anlayacak, uygulama detaylarını ve nüanslarını görecek ve çeşitli kullanım senaryoları için veri tabanı olarak Azure Cosmos DB'yi nasıl entegre edeceğinizi öğreneceksiniz.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25455/>
 
 ---
 
-**Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Sorumluluk Reddi:
+Bu belge, yapay zeka çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğa özen göstermekle birlikte, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilindeki haliyle yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek herhangi bir yanlış anlama veya hatalı yorumlamadan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,75 +1,73 @@
-[![Kuchunguza Mfumo wa Mawakala wa AI](../../../translated_images/sw/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![Kuchunguza Mifumo ya Mawakala ya AI](../../../translated_images/sw/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(Bofya picha hapo juu kutazama video ya somo hili)_
+> _(Bonyeza picha hapo juu ili kutazama video ya somo hili)_
 
-# Kuchunguza Mfumo wa Mawakala wa AI
+# Chunguza Mifumo ya Mawakala ya AI
 
-Mifumo ya mawakala wa AI ni majukwaa ya programu yaliyoundwa ili kurahisisha uundaji, usambazaji, na usimamizi wa mawakala wa AI. Mifumo hii huwapa watengenezaji vipengele vilivyotengenezwa tayari, dhana za juu, na zana zinazorahisisha maendeleo ya mifumo changamano ya AI.
+Mifumo ya mawakala ya AI ni jukwaa za programu zilizoundwa ili kurahisisha uundaji, uanzishaji, na usimamizi wa mawakala wa AI. Mifumo hii huwapa watengenezaji vipengele vilivyotengenezwa tayari, uzito wa mawazo, na zana ambazo zinafanya kuwa rahisi kutengeneza mifumo tata ya AI.
 
-Mifumo hii husaidia watengenezaji kuzingatia vipengele vya kipekee vya programu zao kwa kutoa mbinu zilizo sanifu kwa changamoto za kawaida katika maendeleo ya mawakala wa AI. Inaboresha uwezo wa kupanuka, upatikanaji, na ufanisi katika kujenga mifumo ya AI.
+Mifumo hii inawasaidia watengenezaji kuzingatia nyanja za kipekee za programu zao kwa kutoa mbinu zilizostandardishwa kwa changamoto za kawaida katika maendeleo ya mawakala wa AI. Zinaboreshwa kwa upanuzi, upatikana, na ufanisi katika ujenzi wa mifumo ya AI.
 
 ## Utangulizi 
 
-Somo hili litashughulikia:
+Somo hili litajumuisha:
 
-- Mifumo ya Mawakala wa AI ni nini na inawawezesha watengenezaji kufanikisha nini?
-- Timu zinawezaje kutumia mifumo hii kuunda haraka, kuboresha, na kuongeza uwezo wa wakala wao?
-- Tofauti ni zipi kati ya mifumo na zana zilizoundwa na Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, na <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
-- Je, ninaweza kuunganisha zana zangu zilizopo za mfumo wa Azure moja kwa moja, au ninahitaji suluhisho za pekee?
-- Huduma ya Mawakala wa Azure AI ni nini na inasaidiaje?
+- Nini ni Mifumo ya Mawakala ya AI na ni nini inawawezesha watengenezaji kufanikisha?
+- Je, timu zinaweza kutumia vipi hizi ili kutengeneza mifano ya awali haraka, kurudia, na kuboresha uwezo wa wakala wao?
+- Ni tofauti gani kati ya miundombinu na zana zilizotengenezwa na Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, na <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
+- Je, ninaweza kuunganisha zana zangu zilizopo za mfumo wa Azure moja kwa moja, au nahitaji suluhisho huru?
+- Huduma ya Azure AI Agents ni nini na inanisadia vipi?
 
-## Malengo ya Kujifunza
+## Malengo ya kujifunza
 
 Malengo ya somo hili ni kukusaidia kuelewa:
 
-- Jukumu la Mifumo ya Mawakala wa AI katika maendeleo ya AI.
-- Jinsi ya kutumia Mifumo ya Mawakala wa AI kujenga mawakala wenye akili.
-- Uwezo muhimu unaowezeshwa na Mifumo ya Mawakala wa AI.
+- Nafasi ya Mifumo ya Mawakala ya AI katika maendeleo ya AI.
+- Jinsi ya kutumia Mifumo ya Mawakala ya AI kujenga mawakala wenye akili.
+- Uwezo muhimu unaowezeshwa na Mifumo ya Mawakala ya AI.
 - Tofauti kati ya AutoGen, Semantic Kernel, na Azure AI Agent Service.
 
-## Mifumo ya Mawakala wa AI ni nini na inawawezesha watengenezaji kufanya nini?
+## Mifumo ya Mawakala ya AI ni nini na inawawezesha watengenezaji kufanya nini?
 
-Mifumo ya AI ya jadi inaweza kusaidia kuunganisha AI katika programu zako na kuzifanya programu hizi kuwa bora kwa njia zifuatazo:
+Mifumo ya jadi ya AI inaweza kukusaidia kuingiza AI katika programu zako na kuboresha programu hizi kwa njia zifuatazo:
 
-- **Ubinafsishaji**: AI inaweza kuchambua tabia na mapendeleo ya mtumiaji ili kutoa mapendekezo, maudhui, na uzoefu wa kibinafsi.
-Mfano: Huduma za utiririshaji kama Netflix hutumia AI kupendekeza filamu na vipindi kulingana na historia ya kutazama, kuboresha ushirikiano wa mtumiaji na kuridhika.
+- **Ubinafsishaji**: AI inaweza kuchambua tabia na upendeleo wa mtumiaji ili kutoa mapendekezo, yaliyomo, na uzoefu wa kibinafsi.
+Mfano: Huduma za kuhamisha kama Netflix hutumia AI kupendekeza sinema na vipindi kulingana na historia ya kutazama, kuboresha ushiriki na kuridhika kwa mtumiaji.
+- **Uendeshaji Otomatiki na Ufanisi**: AI inaweza kuendesha shughuli za kurudiwa, kurahisisha mtiririko wa kazi, na kuboresha ufanisi wa operesheni.
+Mfano: Programu za huduma kwa wateja hutumia chatbots zenye nguvu za AI kushughulikia maswali ya kawaida, kupunguza muda wa majibu na kuachilia mawakala wa kibinadamu kwa masuala magumu zaidi.
+- **Kuboresha Uzoefu wa Mtumiaji**: AI inaweza kuboresha uzoefu wa mtumiaji kwa ujumla kwa kutoa vipengele vya akili kama utambuzi wa sauti, usindikaji wa lugha asilia, na maandishi yanayotabiri.
+Mfano: Msaidizi wa mtandao kama Siri na Google Assistant hutumia AI kuelewa na kujibu amri za sauti, kufanya iwe rahisi kwa watumiaji kuwasiliana na vifaa vyao.
 
-- **Ufanisi na Uendeshaji wa Kiotomatiki**: AI inaweza kuendesha kazi za kurudia, kurahisisha mtiririko wa kazi, na kuboresha ufanisi wa kiutendaji.
-Mfano: Programu za huduma kwa wateja hutumia chatbots zinazoendeshwa na AI kushughulikia maswali ya kawaida, kupunguza muda wa kujibu na kuwaachia mawakala wa binadamu masuala magumu zaidi.
+### Hilo lote linaonekana vizuri, sivyo? Kwa nini basi tunahitaji Mfumo wa Mawakala wa AI?
 
-- **Uzoefu Bora wa Mtumiaji**: AI inaweza kuboresha uzoefu wa mtumiaji kwa kutoa vipengele vya akili kama utambuzi wa sauti, usindikaji wa lugha asilia, na maandishi ya utabiri.
-Mfano: Wasaidizi wa mtandaoni kama Siri na Google Assistant hutumia AI kuelewa na kujibu amri za sauti, kurahisisha watumiaji kuingiliana na vifaa vyao.
+Mifumo ya mawakala ya AI inawakilisha kitu zaidi ya mifumo ya kawaida ya AI. Imetengenezwa ili kuwezesha uundaji wa mawakala wenye akili ambao wanaweza kuingiliana na watumiaji, mawakala wengine, na mazingira ili kufikia malengo maalum. Mawakala hawa wanaweza kuonyesha tabia za kujitegemea, kufanya maamuzi, na kuzoea mabadiliko ya mazingira. Tazama baadhi ya uwezo muhimu unaowezeshwa na Mifumo ya Mawakala ya AI:
 
-### Hiyo yote inasikika vizuri, sivyo? Kwa nini tunahitaji Mfumo wa Mawakala wa AI?
+- **Ushirikiano na Uratibu wa Mawakala**: Wezesha uundaji wa mawakala wengi wa AI ambao wanaweza kufanya kazi pamoja, kuwasiliana, na kuratibu ili kutatua kazi ngumu.
+- **Uendeshaji Otomatiki na Usimamizi wa Kazi**: Hutoa mifumo ya kuendesha mtiririko wa kazi zenye hatua nyingi, ugawaji wa kazi, na usimamizi wa kazi unaobadilika kati ya mawakala.
+- **Uelewa wa Muktadha na Urekebishaji**: Inawapa mawakala uwezo wa kuelewa muktadha, kuzoea mazingira yanayobadilika, na kufanya maamuzi kulingana na taarifa za wakati halisi.
 
-Mifumo ya Mawakala wa AI inawakilisha kitu zaidi ya mifumo ya AI ya kawaida. Imeundwa kuwezesha uundaji wa mawakala wenye akili wanaoweza kuingiliana na watumiaji, mawakala wengine, na mazingira ili kufanikisha malengo maalum. Mawakala hawa wanaweza kuonyesha tabia ya kujitegemea, kufanya maamuzi, na kubadilika kulingana na hali zinazobadilika. Hebu tuangalie uwezo muhimu unaowezeshwa na Mifumo ya Mawakala wa AI:
+Kwa muhtasari, mawakala yanakuwezesha kufanya zaidi, kuchukua uendeshaji otomatiki hadi kiwango kinachofuata, na kuunda mifumo yenye akili zaidi inayoweza kuzoea na kujifunza kutoka kwa mazingira yake.
 
-- **Ushirikiano na Uratibu wa Mawakala**: Kuwezesha uundaji wa mawakala wengi wa AI wanaoweza kufanya kazi pamoja, kuwasiliana, na kuratibu kutatua kazi changamano.
-- **Uendeshaji na Usimamizi wa Kazi**: Kutoa mifumo ya kuendesha mtiririko wa kazi wa hatua nyingi, ugawaji wa kazi, na usimamizi wa kazi wa kiotomatiki kati ya mawakala.
-- **Uelewa wa Muktadha na Ubadilishaji**: Kuwapa mawakala uwezo wa kuelewa muktadha, kubadilika kwa mazingira yanayobadilika, na kufanya maamuzi kulingana na taarifa za wakati halisi.
+## Jinsi ya kutengeneza muundo wa awali haraka, kurudia, na kuboresha uwezo wa wakala?
 
-Kwa muhtasari, mawakala wanakuwezesha kufanya zaidi, kuchukua uendeshaji wa kiotomatiki hadi kiwango cha juu, na kuunda mifumo yenye akili zaidi inayoweza kubadilika na kujifunza kutoka kwa mazingira yao.
+Hili ni jukwaa linalohamia kwa kasi, lakini kuna mambo ambayo ni ya kawaida katika Mifumo mingi ya Mawakala ya AI yanayoweza kukusaidia kutengeneza mifano ya awali haraka na kurudia, yaani sehemu za moduli, zana za ushirikiano, na kujifunza kwa wakati halisi. Hebu tuangalie haya:
 
-## Jinsi ya kuunda haraka, kuboresha, na kuongeza uwezo wa wakala?
+- **Tumia Komponenti za Moduli**: SDK za AI zinatoa komponenti zilizojengwa tayari kama konekta za AI na kumbukumbu, kuitwa kwa kazi kwa kutumia lugha asilia au plugins za msimbo, templeti za prompt, na zaidi.
+- **Tumia Zana za Ushirikiano**: Unda mawakala wenye majukumu na kazi maalum, kuwezesha kujaribu na kuboresha mtiririko wa kazi za ushirikiano.
+- **Jifunze kwa Wakati Halisi**: Tekeleza mizunguko ya maoni ambapo mawakala hujifunza kutoka kwa mwingiliano na kurekebisha tabia zao kwa wakati halisi.
 
-Hili ni eneo linalobadilika haraka, lakini kuna mambo fulani ya kawaida katika Mifumo mingi ya Mawakala wa AI ambayo yanaweza kukusaidia kuunda haraka na kuboresha, yaani vipengele vya moduli, zana za ushirikiano, na kujifunza kwa wakati halisi. Hebu tuingie ndani ya haya:
+### Tumia Komponenti za Moduli
 
-- **Tumia Vipengele vya Moduli**: SDK za AI hutoa vipengele vilivyotengenezwa tayari kama viunganishi vya AI na Kumbukumbu, kupiga kazi kwa kutumia lugha asilia au programu za nyongeza, templeti za maelekezo, na zaidi.
-- **Tumia Zana za Ushirikiano**: Unda mawakala wenye majukumu na kazi maalum, kuwawezesha kujaribu na kuboresha mtiririko wa kazi wa ushirikiano.
-- **Jifunze kwa Wakati Halisi**: Tekeleza mizunguko ya maoni ambapo mawakala hujifunza kutoka kwa mwingiliano na kurekebisha tabia zao kwa nguvu.
+SDK kama Microsoft Semantic Kernel na LangChain hutoa komponenti zilizojengwa tayari kama konekta za AI, templeti za prompt, na usimamizi wa kumbukumbu.
 
-### Tumia Vipengele vya Moduli
+**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kuchanganya haraka vipengele hivi ili kuunda mfano wa utendakazi bila kuanza kutoka mwanzo, kuwezesha majaribio ya haraka na kurudia.
 
-SDK kama Microsoft Semantic Kernel na LangChain hutoa vipengele vilivyotengenezwa tayari kama viunganishi vya AI, templeti za maelekezo, na usimamizi wa kumbukumbu.
+**Jinsi inavyofanya kazi kwa vitendo**: Unaweza kutumia parser iliyojengwa tayari kutoa taarifa kutoka kwa ingizo la mtumiaji, moduli ya kumbukumbu kuhifadhi na kupata data, na jenereta ya prompt kuingiliana na watumiaji, yote bila kujenga vipengele hivi kutoka mwanzo.
 
-**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kuunganisha haraka vipengele hivi kuunda mfano wa kazi bila kuanza kutoka mwanzo, kuruhusu majaribio ya haraka na maboresho.
-
-**Jinsi inavyofanya kazi kwa vitendo**: Unaweza kutumia parser iliyotengenezwa tayari kutoa taarifa kutoka kwa pembejeo ya mtumiaji, moduli ya kumbukumbu kuhifadhi na kupata data, na jenereta ya maelekezo kuingiliana na watumiaji, yote bila kujenga vipengele hivi kutoka mwanzo.
-
-**Mfano wa programu**. Hebu tuangalie mifano ya jinsi unavyoweza kutumia Kiunganishi cha AI kilichotengenezwa tayari na Semantic Kernel Python na .Net kinachotumia kupiga kazi kiotomatiki ili kuwa na modeli inayojibu pembejeo ya mtumiaji:
+**Mfano wa msimbo**. Tazama mifano ya jinsi unavyoweza kutumia AI Connector iliyojengwa tayari na Semantic Kernel Python na .Net inayotumia auto-function calling ili kupata modeli ijibu ingizo la mtumiaji:
 
 ``` python
-# Semantic Kernel Python Example
+# Mfano wa Semantic Kernel wa Python
 
 import asyncio
 from typing import Annotated
@@ -80,12 +78,12 @@ from semantic_kernel.contents import ChatHistory
 from semantic_kernel.functions import kernel_function
 from semantic_kernel.kernel import Kernel
 
-# Define a ChatHistory object to hold the conversation's context
+# Tafsiri kielekezi cha ChatHistory kushikilia muktadha wa mazungumzo
 chat_history = ChatHistory()
 chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
 
 
-# Define a sample plugin that contains the function to book travel
+# Tafsiri kiendelezi cha mfano chenye kazi ya kuweka tiketi ya safari
 class BookTravelPlugin:
     """A Sample Book Travel Plugin"""
 
@@ -95,26 +93,26 @@ class BookTravelPlugin:
     ) -> str:
         return f"Travel was booked to {location} on {date}"
 
-# Create the Kernel
+# Tengeneza Kernel
 kernel = Kernel()
 
-# Add the sample plugin to the Kernel object
+# Ongeza kiendelezi cha mfano kwenye kitu cha Kernel
 kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
 
-# Define the Azure OpenAI AI Connector
+# Tafsiri Azure OpenAI AI Connector
 chat_service = AzureChatCompletion(
     deployment_name="YOUR_DEPLOYMENT_NAME", 
     api_key="YOUR_API_KEY", 
     endpoint="https://<your-resource>.azure.openai.com/",
 )
 
-# Define the request settings to configure the model with auto-function calling
+# Tafsiri mipangilio ya ombi ili kusanidi mfano na uitoaji wa kazi moja kwa moja
 request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
+    # Tuma ombi kwa mfano kwa muktadha uliotolewa wa mazungumzo na mipangilio ya ombi
+    # Kernel ina mfano ambao mfano utamuomba kuitekeleza
     response = await chat_service.get_chat_message_content(
         chat_history=chat_history, settings=request_settings, kernel=kernel
     )
@@ -147,9 +145,9 @@ async def main():
     """
 
     print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
+    # Mfano wa Jibu la Mfano wa AI: `Katikati ya ndege yako kwenda New York Januari 1, 2025, imethibitishwa kwa mafanikio. Safiri salama! ✈️🗽`
 
-    # Add the model's response to our chat history context
+    # Ongeza jibu la mfano kwenye muktadha wa mazungumzo yetu
     chat_history.add_assistant_message(response.content)
 
 
@@ -218,24 +216,24 @@ public class BookTravelPlugin
 }
 ```
 
-Unachoweza kuona kutoka kwa mfano huu ni jinsi unavyoweza kutumia parser iliyotengenezwa tayari kutoa taarifa muhimu kutoka kwa pembejeo ya mtumiaji, kama asili, marudio, na tarehe ya ombi la uhifadhi wa ndege. Mbinu hii ya moduli inakuwezesha kuzingatia mantiki ya kiwango cha juu.
+Unaoona kutoka kwa mfano huu jinsi unavyoweza kutumia parser iliyojengwa tayari kutoa taarifa muhimu kutoka kwa ingizo la mtumiaji, kama chanzo, hatima, na tarehe ya ombi la ukodishaji wa ndege. Mbinu hii ya moduli inakuwezesha kuzingatia mantiki ya kiwango cha juu.
 
 ### Tumia Zana za Ushirikiano
 
-Mifumo kama CrewAI, Microsoft AutoGen, na Semantic Kernel hufanikisha uundaji wa mawakala wengi wanaoweza kufanya kazi pamoja.
+Mifumo kama CrewAI, Microsoft AutoGen, na Semantic Kernel zinawezesha uundaji wa mawakala wengi wanaoweza kufanya kazi pamoja.
 
-**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kuunda mawakala wenye majukumu na kazi maalum, kuwawezesha kujaribu na kuboresha mtiririko wa kazi wa ushirikiano na kuboresha ufanisi wa mfumo kwa ujumla.
+**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kubuni mawakala wenye majukumu na kazi maalum, kuwezesha kujaribu na kuboresha mtiririko wa kazi za ushirikiano na kuongeza ufanisi wa mfumo kwa ujumla.
 
-**Jinsi inavyofanya kazi kwa vitendo**: Unaweza kuunda timu ya mawakala ambapo kila wakala ana kazi maalum, kama vile kupata data, kuchambua, au kufanya maamuzi. Mawakala hawa wanaweza kuwasiliana na kushiriki taarifa kufanikisha lengo la pamoja, kama kujibu swali la mtumiaji au kukamilisha kazi.
+**Jinsi inavyofanya kazi kwa vitendo**: Unaweza kuunda timu ya mawakala ambapo kila wakala ana kazi maalum, kama kupata data, uchambuzi, au kufanya maamuzi. Mawakala hawa wanaweza kuwasiliana na kushiriki taarifa ili kufikia lengo la pamoja, kama kujibu swali la mtumiaji au kumalizia kazi.
 
-**Mfano wa programu (AutoGen)**:
+**Mfano wa msimbo (AutoGen)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# kuunda mawakala, kisha unda ratiba ya round robin ambapo wanaweza kufanya kazi pamoja, katika kesi hii kwa mpangilio
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+# Wakala wa Uhakiki Data
+# Wakala wa Uchambuzi wa Data
+# Wakala wa Uamuzi
 
 agent_retrieve = AssistantAgent(
     name="dataretrieval",
@@ -251,7 +249,7 @@ agent_analyze = AssistantAgent(
     system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
+# mazungumzo hisha wakati mtumiaji anasema "KUBALI"
 termination = TextMentionTermination("APPROVE")
 
 user_proxy = UserProxyAgent("user_proxy", input_func=input)
@@ -259,42 +257,42 @@ user_proxy = UserProxyAgent("user_proxy", input_func=input)
 team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
 
 stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
+# Tumia asyncio.run(...) unapotekeleza katika script.
 await Console(stream)
 ```
 
-Unachokiona katika programu ya awali ni jinsi unavyoweza kuunda kazi inayohusisha mawakala wengi wanaofanya kazi pamoja kuchambua data. Kila wakala hufanya kazi maalum, na kazi inatekelezwa kwa kuratibu mawakala kufanikisha matokeo yanayotarajiwa. Kwa kuunda mawakala maalum wenye majukumu maalum, unaweza kuboresha ufanisi wa kazi na utendaji.
+Unaoona katika msimbo uliopita ni jinsi unavyoweza kuunda kazi inayohusisha mawakala wengi wakifanya kazi pamoja kuchambua data. Kila wakala hufanya kazi maalum, na kazi inatekelezwa kwa kuratibu mawakala ili kufikia matokeo yanayotarajiwa. Kwa kuunda mawakala maalum yenye majukumu maalum, unaweza kuboresha ufanisi na utendaji wa kazi.
 
 ### Jifunze kwa Wakati Halisi
 
-Mifumo ya hali ya juu hutoa uwezo wa kuelewa muktadha wa wakati halisi na kubadilika.
+Mifumo ya juu inatoa uwezo wa uelewa wa muktadha kwa wakati halisi na urekebishaji.
 
-**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kutekeleza mizunguko ya maoni ambapo mawakala hujifunza kutoka kwa mwingiliano na kurekebisha tabia zao kwa nguvu, na kusababisha maboresho ya kuendelea na uboreshaji wa uwezo.
+**Jinsi timu zinaweza kutumia hizi**: Timu zinaweza kutekeleza mizunguko ya maoni ambapo mawakala hujifunza kutokana na mwingiliano na kurekebisha tabia zao kwa njia ya mabadiliko, na kusababisha uboreshaji endelevu na kutengenezwa kwa uwezo.
 
-**Jinsi inavyofanya kazi kwa vitendo**: Mawakala wanaweza kuchambua maoni ya mtumiaji, data ya mazingira, na matokeo ya kazi ili kusasisha hifadhidata yao ya maarifa, kurekebisha algorithmu za kufanya maamuzi, na kuboresha utendaji kwa muda. Mchakato huu wa kujifunza kwa kurudia unawawezesha mawakala kubadilika kulingana na hali zinazobadilika na mapendeleo ya mtumiaji, kuboresha ufanisi wa mfumo kwa ujumla.
+**Jinsi inavyofanya kazi kwa vitendo**: Mawakala wanaweza kuchambua maoni ya watumiaji, data za mazingira, na matokeo ya kazi ili kusasisha hifadhidata yao ya maarifa, kurekebisha algoriti za kufanya maamuzi, na kuboresha utendaji kwa muda. Mchakato huu wa kujifunza kwa kurudia unawawezesha mawakala kuzoea hali zinazobadilika na upendeleo wa watumiaji, na kuongeza ufanisi wa mfumo kwa ujumla.
 
-## Tofauti ni zipi kati ya mifumo AutoGen, Semantic Kernel na Azure AI Agent Service?
+## Ni tofauti gani kati ya miundombinu AutoGen, Semantic Kernel na Azure AI Agent Service?
 
-Kuna njia nyingi za kulinganisha mifumo hii, lakini hebu tuangalie tofauti muhimu kwa mujibu wa muundo wao, uwezo, na matumizi yanayolengwa:
+Kuna njia nyingi za kulinganisha mifumo hii, lakini hebu tazame baadhi ya tofauti muhimu kwa kuzingatia muundo wao, uwezo, na matumizi yaliyolengwa:
 
 ## AutoGen
 
-AutoGen ni mfumo wa chanzo huria uliotengenezwa na Maabara ya AI Frontiers ya Microsoft Research. Unalenga programu za wakala wa *kijumuishi* zinazoendeshwa na matukio, zinazowezesha LLMs na SLMs nyingi, zana, na mifumo ya hali ya juu ya muundo wa mawakala wengi.
+AutoGen ni mfumo wa chanzo wazi uliotengenezwa na AI Frontiers Lab ya Microsoft Research. Unazingatia programu za *agentic* zinazoendeshwa na matukio na kusambazwa, ukiruhusu LLMs na SLMs nyingi, zana, na mifumo ya kubuni ya mawakala wengi ya juu.
 
-AutoGen umejengwa kuzunguka dhana ya msingi ya mawakala, ambao ni vyombo vya kujitegemea vinavyoweza kutambua mazingira yao, kufanya maamuzi, na kuchukua hatua kufanikisha malengo maalum. Mawakala huwasiliana kupitia ujumbe usio wa moja kwa moja, kuwawezesha kufanya kazi kwa kujitegemea na kwa sambamba, kuboresha uwezo wa kupanuka na kujibu wa mfumo.
+AutoGen imejengwa kuzunguka wazo kuu la mawakala, ambayo ni viumbe vinavyojiendesha ambavyo vinaweza kutambua mazingira yao, kufanya maamuzi, na kuchukua hatua ili kufikia malengo maalum. Mawakala huwasiliana kupitia ujumbe zisizo za wakati mmoja, ukiwawezesha kufanya kazi kwa uhuru na kwa sambamba, na kuongeza upanuzi na ufanisi wa mfumo.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Mawakala wanategemea mfano wa mwigizaji</a>. Kulingana na Wikipedia, mwigizaji ni _sehemu ya msingi ya hesabu ya pamoja. Kwa kujibu ujumbe unaopokelewa, mwigizaji anaweza: kufanya maamuzi ya ndani, kuunda waigizaji zaidi, kutuma ujumbe zaidi, na kuamua jinsi ya kujibu ujumbe unaofuata unaopokelewa_.
+<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Mawakala yanategemea modeli ya aktor</a>. Kwa mujibu wa Wikipedia, aktor ni _kigawo cha msingi cha ujenzi wa hesabu sambamba. Kwa majibu ya ujumbe unaopokelewa, aktor anaweza: kufanya maamuzi ya ndani, kuunda aktor zaidi, kutuma ujumbe zaidi, na kuamua jinsi ya kujibu ujumbe ufuatao unaopokelewa_.
 
-**Matumizi**: Kuendesha kizazi cha programu kiotomatiki, kazi za uchambuzi wa data, na kujenga mawakala maalum kwa kazi za kupanga na utafiti.
+**Matumizi**: Kuendesha utengenezaji wa msimbo kwa njia ya otomatiki, kazi za uchambuzi wa data, na ujenzi wa mawakala maalum kwa kazi za upangaji na utafiti.
 
-Hapa kuna dhana muhimu za msingi za AutoGen:
+Hapa kuna baadhi ya dhana muhimu za msingi za AutoGen:
 
-- **Mawakala**. Wakala ni chombo cha programu ambacho:
-  - **Huwasiliana kupitia ujumbe**, ujumbe huu unaweza kuwa wa moja kwa moja au usio wa moja kwa moja.
-  - **Hudumisha hali yake mwenyewe**, ambayo inaweza kubadilishwa na ujumbe unaoingia.
-  - **Hufanya vitendo** kujibu ujumbe uliopokelewa au mabadiliko katika hali yake. Vitendo hivi vinaweza kubadilisha hali ya wakala na kutoa athari za nje, kama kusasisha kumbukumbu za ujumbe, kutuma ujumbe mpya, kutekeleza programu, au kufanya miito ya API.
-
-  Hapa kuna kipande kifupi cha programu ambacho unaunda wakala wako mwenyewe mwenye uwezo wa mazungumzo:
+- **Mawakala**. Wakala ni kiumbe cha programu ambacho:
+  - **Huwasiliana kupitia ujumbe**, ujumbe hizi zinaweza kuwa za sinkroni au asinkroni.
+  - **Huhifadhi hali yake mwenyewe**, ambayo inaweza kubadilishwa na ujumbe zinazoingia.
+  - **Huchukua vitendo** kama mwitikio kwa ujumbe uliopokelewa au mabadiliko katika hali yake. Vitendo hivi vinaweza kubadilisha hali ya wakala na kutoa athari za nje, kama kusasisha kumbukumbu za ujumbe, kutuma ujumbe mpya, kutekeleza msimbo, au kufanya maombi ya API.
+    
+  Here you have a short code snippet in which you create your own agent with Chat capabilities:
 
     ```python
     from autogen_agentchat.agents import AssistantAgent
@@ -317,9 +315,10 @@ Hapa kuna dhana muhimu za msingi za AutoGen:
             print(f"{self.id.type} responded: {response.chat_message.content}")
     ```
     
-Katika programu ya awali, `MyAgent` imeundwa na kurithi kutoka kwa `RoutedAgent`. Ina mshughulikiaji wa ujumbe unaochapisha maudhui ya ujumbe na kisha kutuma jibu kwa kutumia wakala wa `AssistantAgent`. Kumbuka hasa jinsi tunavyoweka kwa `self._delegate` mfano wa `AssistantAgent` ambayo ni wakala uliotengenezwa tayari anayeshughulikia mazungumzo.
+    Katika msimbo uliotangulia, `MyAgent` imeundwa na inarithi kutoka `RoutedAgent`. Ina mshughulikiaji wa ujumbe unaochapisha yaliyomo ya ujumbe kisha kutuma majibu kwa kutumia delegate `AssistantAgent`. Tambua hasa jinsi tunavyompa `self._delegate` mfano wa `AssistantAgent` ambao ni wakala aliyetengenezwa tayari na anaweza kushughulikia tamati za mazungumzo.
 
-Hebu tujulisha AutoGen kuhusu aina hii ya wakala na kuanzisha programu:
+
+    Tuwarifu AutoGen kuhusu aina hii ya wakala kisha kuanzisha programu ifuatayo:
 
     ```python
     
@@ -327,11 +326,11 @@ Hebu tujulisha AutoGen kuhusu aina hii ya wakala na kuanzisha programu:
     runtime = SingleThreadedAgentRuntime()
     await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
 
-    runtime.start()  # Start processing messages in the background.
+    runtime.start()  # Anza kusindika ujumbe kwa usuli.
     await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
     ```
 
-Katika programu ya awali mawakala wamesajiliwa na runtime na kisha ujumbe unatumwa kwa wakala na kusababisha matokeo yafuatayo:
+    Katika msimbo uliopita mawakala wameorodheshwa na runtime kisha ujumbe umetumwa kwa wakala na kusababisha matokeo yafuatayo:
 
     ```text
     # Output from the console:
@@ -340,15 +339,15 @@ Katika programu ya awali mawakala wamesajiliwa na runtime na kisha ujumbe unatum
     my_assistant responded: Hello! How can I assist you today?
     ```
 
-- **Mawakala Wengi**. AutoGen inaunga mkono uundaji wa mawakala wengi wanaoweza kufanya kazi pamoja kufanikisha kazi changamano. Mawakala wanaweza kuwasiliana, kushiriki taarifa, na kuratibu vitendo vyao kutatua matatizo kwa ufanisi zaidi. Ili kuunda mfumo wa mawakala wengi, unaweza kufafanua aina tofauti za mawakala wenye kazi na majukumu maalum, kama vile kupata data, kuchambua, kufanya maamuzi, na kuingiliana na mtumiaji. Hebu tuone jinsi uundaji kama huo unavyoonekana ili tupate hisia ya hilo:
+- **Mawakala wengi**. AutoGen inasaidia uundaji wa mawakala wengi ambao wanaweza kufanya kazi pamoja kufikia kazi ngumu. Mawakala wanaweza kuwasiliana, kushiriki taarifa, na kuratibu vitendo vyao ili kutatua matatizo kwa ufanisi zaidi. Kuunda mfumo wa mawakala wengi, unaweza kufafanua aina tofauti za mawakala zenye kazi na majukumu maalum, kama uchukuzi wa data, uchambuzi, kufanya maamuzi, na mwingiliano wa mtumiaji. Hebu tuone jinsi uundaji huo unavyoonekana ili tupate hisia ya hilo:
 
     ```python
     editor_description = "Editor for planning and reviewing the content."
 
-    # Example of declaring an Agent
+    # Mfano wa kutangaza Wakala
     editor_agent_type = await EditorAgent.register(
     runtime,
-    editor_topic_type,  # Using topic type as the agent type.
+    editor_topic_type,  # Kutumia aina ya mada kama aina ya wakala.
     lambda: EditorAgent(
         description=editor_description,
         group_chat_topic_type=group_chat_topic_type,
@@ -359,9 +358,9 @@ Katika programu ya awali mawakala wamesajiliwa na runtime na kisha ujumbe unatum
         ),
     )
 
-    # remaining declarations shortened for brevity
+    # tamko zilizobaki zimefupishwa kwa ufupi
 
-    # Group chat
+    # Gumzo la kikundi
     group_chat_manager_type = await GroupChatManager.register(
     runtime,
     "group_chat_manager",
@@ -381,30 +380,30 @@ Katika programu ya awali mawakala wamesajiliwa na runtime na kisha ujumbe unatum
     )
     ```
 
-Katika programu ya awali tuna `GroupChatManager` ambayo imesajiliwa na runtime. Meneja huyu anahusika na kuratibu mwingiliano kati ya aina tofauti za mawakala, kama waandishi, wachoraji, wahariri, na watumiaji.
+    Katika msimbo uliopita tuna `GroupChatManager` ambaye ameorodheshwa na runtime. Meneja huyu ndiye anayehusika kuratibu mwingiliano kati ya aina tofauti za mawakala, kama waandishi, wachoraji, wahariri, na watumiaji.
 
-- **Runtime ya Mawakala**. Mfumo hutoa mazingira ya runtime, kuwezesha mawasiliano kati ya mawakala, kusimamia utambulisho wao na mizunguko ya maisha, na kutekeleza mipaka ya usalama na faragha. Hii inamaanisha kuwa unaweza kuendesha mawakala wako katika mazingira salama na yanayodhibitiwa, kuhakikisha kuwa wanaweza kuingiliana kwa usalama na ufanisi. Kuna runtime mbili za kuvutia:
-  - **Runtime ya pekee**. Hii ni chaguo nzuri kwa programu za mchakato mmoja ambapo mawakala wote wanatekelezwa kwa lugha moja ya programu na kuendeshwa katika mchakato mmoja. Hapa kuna mfano wa jinsi inavyofanya kazi:
+- **Runtime ya Wakala**. Mfumo hutoa mazingira ya runtime, kuruhusu mawasiliano kati ya mawakala, kusimamia utambulisho wao na mizunguko ya maisha, na kutekeleza mipaka ya usalama na faragha. Hii inamaanisha unaweza kuendesha mawakala wako katika mazingira salama na yaliyodhibitiwa, kuhakikisha kuwa wanaweza kuingiliana kwa usalama na kwa ufanisi. Kuna runtimes mbili za kuzingatia:
+  - **Runti ya kujitegemea**. Hii ni chaguo zuri kwa programu za mchakato mmoja ambapo mawakala wote yameekelezwa katika lugha ile ile ya programu na yanakimbia katika mchakato huo huo. Here's an illustration of how it works:
   
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Runtime ya pekee</a>   
-Stack ya programu
+    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Runti ya kujitegemea</a>   
+Application stack
 
-    *mawakala huwasiliana kupitia ujumbe kupitia runtime, na runtime inasimamia mzunguko wa maisha ya mawakala*
+    *mawakala huwasiliana kupitia ujumbe kupitia runtime, na runtime husimamia mzunguko wa maisha ya mawakala*
 
-  - **Runtime ya mawakala wa kusambazwa**, inafaa kwa programu za mchakato mwingi ambapo mawakala wanaweza kutekelezwa kwa lugha tofauti za programu na kuendeshwa kwenye mashine tofauti. Hapa kuna mfano wa jinsi inavyofanya kazi:
+  - **Runti ya kusambazwa**, inafaa kwa programu za mchakato nyingi ambapo mawakala yanaweza kutekelezwa katika lugha tofauti za programu na kukimbia kwenye mashine tofauti. Here's an illustration of how it works:
   
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">Runtime ya kusambazwa</a>
+    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg" target="_blank">Runti ya kusambazwa</a>
 
-## Semantic Kernel + Mfumo wa Mawakala
+## Semantic Kernel + Agent Framework
 
-Semantic Kernel ni SDK ya Orchestration ya AI inayofaa kwa biashara. Inajumuisha viunganishi vya AI na kumbukumbu, pamoja na Mfumo wa Mawakala.
+Semantic Kernel ni SDK ya Uandaaji wa AI iliyotengenezwa kwa biashara. Inajumuisha konekta za AI na kumbukumbu, pamoja na Mfumo wa Mawakala.
 
-Hebu kwanza tuangalie vipengele vya msingi:
+Tuanze kwa kufunika baadhi ya vipengele vya msingi:
 
-- **Viunganishi vya AI**: Hii ni kiunganishi na huduma za AI za nje na vyanzo vya data kwa matumizi katika Python na C#.
+- **AI Connectors**: Hii ni kiolesura na huduma za nje za AI na vyanzo vya data kwa ajili ya matumizi katika Python na C#.
 
   ```python
-  # Semantic Kernel Python
+  # Kiini cha Maana Python
   from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
   from semantic_kernel.kernel import Kernel
 
@@ -434,9 +433,9 @@ Hebu kwanza tuangalie vipengele vya msingi:
     var kernel = builder.Build();
     ```
 
-Hapa kuna mfano rahisi wa jinsi unavyoweza kuunda kernel na kuongeza huduma ya mazungumzo ya kukamilisha. Semantic Kernel huunda kiunganishi na huduma ya AI ya nje, katika kesi hii, Azure OpenAI Chat Completion.
+    Hapa una mfano rahisi wa jinsi unavyoweza kuunda kernel na kuongeza huduma ya ukamilisho wa mazungumzo. Semantic Kernel huunda muunganisho kwa huduma ya nje ya AI, katika kesi hii, Azure OpenAI Chat Completion.
 
-- **Plugins**: Hizi hufungasha kazi ambazo programu inaweza kutumia. Kuna plugins zilizotengenezwa tayari na za kawaida unazoweza kuunda. Dhana inayohusiana ni "kazi za maelekezo." Badala ya kutoa maelekezo ya lugha asilia kwa ajili ya kupiga kazi, unatangaza kazi fulani kwa modeli. Kulingana na muktadha wa mazungumzo ya sasa, modeli inaweza kuchagua kupiga moja ya kazi hizi kukamilisha ombi au swali. Hapa kuna mfano:
+- **Plugins**: Hizi zinafunika kazi ambazo programu inaweza kutumia. Kuna plugins zilizotengenezwa tayari na zile zako unazoweza kuunda. Dhana inayohusiana ni "prompt functions." Badala ya kutoa viholela vya lugha asilia kwa kuitwa kwa kazi, unatangaza kazi fulani kwa modeli. Kulingana na muktadha wa mazungumzo uliopo, modeli inaweza kuchagua kuita mojawapo ya kazi hizi ili kumalizia ombi au utafutaji. Hapa kuna mfano:
 
   ```python
   from semantic_kernel.connectors.ai.open_ai.services.azure_chat_completion import AzureChatCompletion
@@ -493,9 +492,9 @@ Hapa kuna mfano rahisi wa jinsi unavyoweza kuunda kernel na kuongeza huduma ya m
 
     ```
 
-Hapa, kwanza una template ya maelekezo `skPrompt` inayotoa nafasi kwa mtumiaji kuingiza maandishi, `$userInput`. Kisha unaunda kazi ya kernel `SummarizeText` na kisha kuiingiza kwenye kernel na jina la plugin `SemanticFunctions`. Kumbuka jina la kazi ambalo husaidia Semantic Kernel kuelewa kazi hiyo inafanya nini na wakati inapaswa kuitwa.
+    Hapa, kwanza una templeti ya prompt `skPrompt` ambayo inatoa nafasi kwa mtumiaji kuingiza maandishi, `$userInput`. Kisha unaunda kazi ya kernel `SummarizeText` na kisha kuileta kwenye kernel na jina la plugin `SemanticFunctions`. Kumbuka jina la kazi linalosaidia Semantic Kernel kuelewa kazi hiyo inafanya nini na lini inapaswa kuitwa.
 
-- **Kazi Asilia**: Pia kuna kazi asilia ambazo mfumo unaweza kupiga moja kwa moja kutekeleza kazi. Hapa kuna mfano wa kazi kama hiyo inayopata maudhui kutoka kwa faili:
+- **Native function**: Pia kuna kazi za asili ambazo mfumo unaweza kuitisha moja kwa moja kutekeleza jukumu. Hapa kuna mfano wa kazi kama hiyo inayopata yaliyomo kutoka kwa faili:
 
     ```csharp
     public class NativeFunctions {
@@ -518,22 +517,51 @@ Hapa, kwanza una template ya maelekezo `skPrompt` inayotoa nafasi kwa mtumiaji k
 
     ```
 
-- **Kumbukumbu
-Haya maelezo basi huhifadhiwa katika mkusanyiko wa kumbukumbu `SummarizedAzureDocs`. Hii ni mfano rahisi sana, lakini unaweza kuona jinsi ya kuhifadhi taarifa katika kumbukumbu kwa matumizi ya LLM.
+- **Memory**:  Inafupisha na kurahisisha usimamizi wa muktadha kwa programu za AI. Wazo la kumbukumbu ni kwamba hii ni kitu ambacho LLM inapaswa kujua. Unaweza kuhifadhi taarifa hizi katika duka la vector ambalo hatimaye linakuwa hifadhidata ya kumbukumbu au hifadhidata ya vector au sawa. Hapa kuna mfano wa hali iliyorahisishwa ambapo *facts* zinaongezwa kwenye kumbukumbu:
 
-Hivyo ndivyo msingi wa mfumo wa Semantic Kernel, vipi kuhusu Agent Framework?
+    ```csharp
+    var facts = new Dictionary<string,string>();
+    facts.Add(
+        "Azure Machine Learning; https://learn.microsoft.com/azure/machine-learning/",
+        @"Azure Machine Learning is a cloud service for accelerating and
+        managing the machine learning project lifecycle. Machine learning professionals,
+        data scientists, and engineers can use it in their day-to-day workflows"
+    );
+    
+    facts.Add(
+        "Azure SQL Service; https://learn.microsoft.com/azure/azure-sql/",
+        @"Azure SQL is a family of managed, secure, and intelligent products
+        that use the SQL Server database engine in the Azure cloud."
+    );
+    
+    string memoryCollectionName = "SummarizedAzureDocs";
+    
+    foreach (var fact in facts) {
+        await memoryBuilder.SaveReferenceAsync(
+            collection: memoryCollectionName,
+            description: fact.Key.Split(";")[1].Trim(),
+            text: fact.Value,
+            externalId: fact.Key.Split(";")[2].Trim(),
+            externalSourceName: "Azure Documentation"
+        );
+    }
+    ```
 
-## Huduma ya Azure AI Agent
+    Mambo haya kisha yanahifadhiwa kwenye mkusanyiko wa kumbukumbu `SummarizedAzureDocs`. Huu ni mfano uliorahisishwa sana, lakini unaweza kuona jinsi unavyoweza kuhifadhi taarifa katika kumbukumbu ili LLM izitumie.
 
-Huduma ya Azure AI Agent ni nyongeza ya hivi karibuni, iliyotangazwa katika Microsoft Ignite 2024. Inaruhusu maendeleo na utekelezaji wa mawakala wa AI kwa kutumia mifano inayobadilika zaidi, kama vile kupiga simu moja kwa moja kwa LLMs za wazi kama Llama 3, Mistral, na Cohere.
+Hivyo ndivyo msingi wa mfumo wa Semantic Kernel; vipi kuhusu Agent Framework?
 
-Huduma ya Azure AI Agent inatoa mifumo ya usalama wa biashara yenye nguvu na mbinu za kuhifadhi data, ikifanya iwe bora kwa matumizi ya biashara.
+## Azure AI Agent Service
 
-Inafanya kazi moja kwa moja na mifumo ya uratibu wa mawakala kama AutoGen na Semantic Kernel.
+Azure AI Agent Service ni nyongeza ya karibuni, iliyoletwa kwenye Microsoft Ignite 2024. Inaruhusu ukuzaji na uenezaji wa wakala wa AI kwa kutumia modeli za kubadilika zaidi, kama vile kuita moja kwa moja LLM za chanzo wazi kama Llama 3, Mistral, na Cohere.
 
-Huduma hii kwa sasa ipo katika Public Preview na inasaidia Python na C# kwa ajili ya kujenga mawakala.
+Azure AI Agent Service inatoa mbinu madhubuti za usalama wa biashara na njia za uhifadhi data, ikifanya iwe inayofaa kwa programu za biashara.
 
-Kwa kutumia Semantic Kernel Python, tunaweza kuunda Azure AI Agent na programu-jalizi iliyofafanuliwa na mtumiaji:
+Inafanya kazi moja kwa moja na mifumo ya upangaji kazi ya wawakala wengi kama AutoGen na Semantic Kernel.
+
+Huduma hii kwa sasa iko katika Public Preview na inasaidia Python na C# kwa ujenzi wa wawakala.
+
+Using Semantic Kernel Python, we can create an Azure AI Agent with a user-defined plugin:
 
 ```python
 import asyncio
@@ -547,7 +575,7 @@ from semantic_kernel.contents import AuthorRole
 from semantic_kernel.functions import kernel_function
 
 
-# Define a sample plugin for the sample
+# Tafsiri kiungo cha sampuli kwa sampuli
 class MenuPlugin:
     """A sample Menu Plugin used for the concept sample."""
 
@@ -576,23 +604,23 @@ async def main() -> None:
             conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
         ) as client,
     ):
-        # Create agent definition
+        # Unda ufafanuzi wa wakala
         agent_definition = await client.agents.create_agent(
             model=ai_agent_settings.model_deployment_name,
             name="Host",
             instructions="Answer questions about the menu.",
         )
 
-        # Create the AzureAI Agent using the defined client and agent definition
+        # Unda Wakala wa AzureAI ukitumia mteja na ufafanuzi wa wakala uliofafanuliwa
         agent = AzureAIAgent(
             client=client,
             definition=agent_definition,
             plugins=[MenuPlugin()],
         )
 
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
+        # Unda mfululizo wa kushikilia mazungumzo
+        # Ikiwa hakuna mfululizo uliotolewa, mfululizo mpya utaundwa
+        # na kurudishiwa pamoja na jibu la mwanzo
         thread: AzureAIAgentThread | None = None
 
         user_inputs = [
@@ -605,7 +633,7 @@ async def main() -> None:
         try:
             for user_input in user_inputs:
                 print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
+                # Ita wakala kwa mfululizo uliotajwa
                 response = await agent.get_response(
                     messages=user_input,
                     thread_id=thread,
@@ -621,11 +649,11 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### Dhana za Msingi
+### Dhana za msingi
 
-Huduma ya Azure AI Agent ina dhana zifuatazo za msingi:
+Azure AI Agent Service ina dhana kuu zifuatazo:
 
-- **Agent**. Huduma ya Azure AI Agent inaunganishwa na Azure AI Foundry. Ndani ya AI Foundry, AI Agent hufanya kazi kama huduma ndogo "smart" inayoweza kutumika kujibu maswali (RAG), kutekeleza vitendo, au kuendesha kabisa mtiririko wa kazi. Inafanikisha hili kwa kuchanganya nguvu za mifano ya AI ya kizazi na zana zinazoiwezesha kufikia na kuingiliana na vyanzo vya data halisi. Hapa kuna mfano wa wakala:
+- **Agent**. Azure AI Agent Service integrates with Microsoft Foundry. Ndani ya AI Foundry, wakala wa AI hufanya kazi kama microservice "mwerevu" ambayo inaweza kutumika kujibu maswali (RAG), kutekeleza vitendo, au kuendesha taratibu kikamilifu kwa njia ya otomatiki. Inafanikisha hili kwa kuchanganya nguvu za modeli za kizazi cha AI na zana zinazomruhusu kufikia na kuingiliana na vyanzo vya data vya ulimwengu halisi. Hapa kuna mfano wa wakala:
 
     ```python
     agent = project_client.agents.create_agent(
@@ -637,9 +665,9 @@ Huduma ya Azure AI Agent ina dhana zifuatazo za msingi:
     )
     ```
 
-    Katika mfano huu, wakala ameundwa na mfano `gpt-4o-mini`, jina `my-agent`, na maelekezo `You are helpful agent`. Wakala amepewa zana na rasilimali za kutekeleza kazi za tafsiri ya msimbo.
+    Katika mfano huu, wakala ameundwa na modeli `gpt-4o-mini`, jina `my-agent`, na maelekezo `You are helpful agent`. Wakala amepewa zana na rasilimali za kutekeleza majukumu ya tafsiri ya msimbo.
 
-- **Thread na ujumbe**. Thread ni dhana nyingine muhimu. Inawakilisha mazungumzo au mwingiliano kati ya wakala na mtumiaji. Thread zinaweza kutumika kufuatilia maendeleo ya mazungumzo, kuhifadhi taarifa za muktadha, na kusimamia hali ya mwingiliano. Hapa kuna mfano wa thread:
+- **Thread and messages**. Thread ni dhana muhimu pia. Inawakilisha mazungumzo au mwingiliano kati ya wakala na mtumiaji. Threads zinaweza kutumika kufuatilia maendeleo ya mazungumzo, kuhifadhi taarifa za muktadha, na kusimamia hali ya mwingiliano. Hapa kuna mfano wa thread:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -657,89 +685,89 @@ Huduma ya Azure AI Agent ina dhana zifuatazo za msingi:
     print(f"Messages: {messages}")
     ```
 
-    Katika msimbo uliopita, thread imeundwa. Baada ya hapo, ujumbe umetumwa kwa thread. Kwa kupiga `create_and_process_run`, wakala ameombwa kufanya kazi kwenye thread. Hatimaye, ujumbe unapatikana na kuandikwa ili kuona majibu ya wakala. Ujumbe unaonyesha maendeleo ya mazungumzo kati ya mtumiaji na wakala. Pia ni muhimu kuelewa kwamba ujumbe unaweza kuwa wa aina tofauti kama vile maandishi, picha, au faili, yaani kazi ya wakala imesababisha kwa mfano picha au jibu la maandishi. Kama msanidi programu, unaweza kutumia taarifa hii kuendelea kuchakata jibu au kulionesha kwa mtumiaji.
+    Katika msimbo uliopita, thread imeundwa. Baadaye, ujumbe umetumwa kwa thread. Kwa kuita `create_and_process_run`, wakala anaombwa kufanya kazi kwenye thread. Mwishowe, ujumbe unachukuliwa na kurekodiwa ili kuona jibu la wakala. Ujumbe zinaonyesha maendeleo ya mazungumzo kati ya mtumiaji na wakala. Pia ni muhimu kuelewa kwamba ujumbe zinaweza kuwa za aina tofauti kama maandishi, picha, au faili; kwamba kazi za wakala zinaweza kusababisha kwa mfano picha au jibu la maandishi. Kama msanidi programu, unaweza kutumia taarifa hii kuprosesa zaidi jibu au kuwasilisha kwa mtumiaji.
 
-- **Inaunganishwa na mifumo mingine ya AI**. Huduma ya Azure AI Agent inaweza kuingiliana na mifumo mingine kama AutoGen na Semantic Kernel, ambayo inamaanisha unaweza kujenga sehemu ya programu yako katika mojawapo ya mifumo hii na kwa mfano kutumia Huduma ya Agent kama mratibu au unaweza kujenga kila kitu katika Huduma ya Agent.
+- **Integrates with other AI frameworks**. Azure AI Agent service inaweza kuingiliana na mifumo mingine kama AutoGen na Semantic Kernel, ambayo inamaanisha unaweza kujenga sehemu ya programu yako katika mojawapo ya mifumo hii na kwa mfano kutumia Agent service kama msimamiaji au unaweza kujenga kila kitu ndani ya Agent service.
 
-**Matumizi**: Huduma ya Azure AI Agent imeundwa kwa matumizi ya biashara yanayohitaji utekelezaji wa mawakala wa AI salama, unaoweza kupanuka, na unaobadilika.
+**Use Cases**: Azure AI Agent Service imeundwa kwa ajili ya programu za biashara zinazohitaji ulinzi thabiti, uwezo wa kupanuka, na ueneaji wa wakala wa AI.
 
-## Tofauti ni ipi kati ya mifumo hii?
+## Je, ni tofauti gani kati ya mifumo hii?
+ 
+Inaonekana kuna mwingiliano mwingi kati ya mifumo hii, lakini kuna tofauti muhimu kadhaa katika muundo wao, uwezo, na matukio wanayolenga:
+ 
+- **AutoGen**: Ni mfumo wa majaribio unaolenga utafiti wa kisasa kuhusu mifumo ya wawakala wengi. Ni mahali pazuri kwa kufanya majaribio na kutengeneza mifano ya mfumo tata wa wawakala wengi.
+- **Semantic Kernel**: Ni maktaba inayotumika katika uzalishaji kwa ajili ya kujenga programu za wakala kwa viwango vya biashara. Inazingatia programu za wakala zinazotegemea matukio na zilizoenea, ikiruhusu LLMs na SLMs nyingi, zana, na mifumo ya muundo ya wakala mmoja/wa wengi.
+- **Azure AI Agent Service**: Ni jukwaa na huduma ya uenezaji katika Azure Foundry kwa wawakala. Inatoa ujumuishaji wa uunganisho kwa huduma zinazoungwa mkono na Azure Foundry kama Azure OpenAI, Azure AI Search, Bing Search na utekelezaji wa msimbo.
+ 
+Bado haujaamua ni ipi ya kuchagua?
 
-Inaonekana kuna mwingiliano mwingi kati ya mifumo hii, lakini kuna tofauti muhimu katika muundo, uwezo, na matumizi yanayolengwa:
-
-- **AutoGen**: Ni mfumo wa majaribio unaolenga utafiti wa kisasa juu ya mifumo ya mawakala wengi. Ni mahali bora pa kujaribu na kuunda mifumo ya mawakala wengi yenye ustadi.
-- **Semantic Kernel**: Ni maktaba ya wakala inayoweza kutumika kwa ajili ya kujenga programu za mawakala wa biashara. Inalenga programu za mawakala wa tukio, zilizogawanyika, ikiruhusu LLMs na SLMs nyingi, zana, na miundo ya mawakala mmoja/wengi.
-- **Huduma ya Azure AI Agent**: Ni jukwaa na huduma ya utekelezaji katika Azure Foundry kwa mawakala. Inatoa uunganishaji wa huduma zinazosaidiwa na Azure kama Azure OpenAI, Azure AI Search, Bing Search na utekelezaji wa msimbo.
-
-Bado hujui ni ipi ya kuchagua?
-
-### Matumizi
-
-Hebu tujaribu kukusaidia kwa kupitia baadhi ya matumizi ya kawaida:
-
-> Q: Ninajaribu, kujifunza na kujenga programu za mawakala wa dhana, na ninataka kuwa na uwezo wa kujenga na kujaribu haraka
+### Matukio ya Matumizi
+ 
+Tuchunguze kama tunaweza kukusaidia kupitia baadhi ya matukio ya kawaida ya matumizi:
+ 
+> Q: Ninafanya majaribio, kujifunza na kujenga programu za wakala za uthibitisho wa wazo, na nataka kuwa na uwezo wa kujenga na kujaribu haraka
 >
 
->A: AutoGen itakuwa chaguo nzuri kwa hali hii, kwani inalenga programu za mawakala wa tukio, zilizogawanyika na inasaidia miundo ya mawakala wengi yenye ustadi.
+>A: AutoGen itakuwa chaguo zuri kwa nafasi hii, kwani inalenga programu za wawakala zinazoendeshwa na matukio, zilizoenea na inaunga mkono mifumo ya kubuni ya wawakala wengi ya kiwango cha juu.
 
-> Q: Nini kinachofanya AutoGen kuwa chaguo bora kuliko Semantic Kernel na Huduma ya Azure AI Agent kwa matumizi haya?
+> Q: Je, ni nini kinachofanya AutoGen kuwa chaguo bora kuliko Semantic Kernel na Azure AI Agent Service kwa kesi hii ya matumizi?
 >
-> A: AutoGen imeundwa mahsusi kwa programu za mawakala wa tukio, zilizogawanyika, ikifanya iwe bora kwa kazi za kizazi cha msimbo na uchambuzi wa data. Inatoa zana na uwezo unaohitajika kujenga mifumo ya mawakala wengi yenye ustadi kwa ufanisi.
+> A: AutoGen imetengenezwa mahsusi kwa programu zinazoendeshwa na matukio na zilizoenea za wawakala, ikifanya iwe inayofaa kwa kuendeleza uundaji wa msimbo na kazi za uchambuzi wa data. Inatoa zana na uwezo unaohitajika kujenga mifumo tata ya wawakala wengi kwa ufanisi.
 
->Q: Inaonekana kama Huduma ya Azure AI Agent inaweza kufanya kazi hapa pia, ina zana za kizazi cha msimbo na zaidi?
+>Q: Inaonekana Azure AI Agent Service inaweza kufaa pia hapa, ina zana kwa uundaji wa msimbo na zaidi?
 
 >
-> A: Ndiyo, Huduma ya Azure AI Agent ni huduma ya jukwaa kwa mawakala na inaongeza uwezo wa kujengwa kwa mifano mingi, Azure AI Search, Bing Search na Azure Functions. Inafanya iwe rahisi kujenga mawakala wako katika Foundry Portal na kuwatekeleza kwa kiwango kikubwa.
-
-> Q: Bado siko wazi, nipe chaguo moja tu
+> A: Ndiyo, Azure AI Agent Service ni huduma ya jukwaa kwa wawakala na ina uwezo uliojengwa kwa ajili ya modeli nyingi, Azure AI Search, Bing Search na Azure Functions. Inafanya iwe rahisi kujenga wawakala wako katika Foundry Portal na kuwatangaza kwa kiwango kikubwa.
+ 
+> Q: Bado nimeshauliwa, nitumie chaguo moja tu
 >
-> A: Chaguo bora ni kujenga programu yako katika Semantic Kernel kwanza na kisha kutumia Huduma ya Azure AI Agent kutekeleza wakala wako. Njia hii inakuruhusu kuhifadhi mawakala wako kwa urahisi huku ukitumia nguvu ya kujenga mifumo ya mawakala wengi katika Semantic Kernel. Zaidi ya hayo, Semantic Kernel ina kiunganishi katika AutoGen, ikifanya iwe rahisi kutumia mifumo yote miwili pamoja.
+> A: Chaguo nzuri ni kujenga programu yako kwanza katika Semantic Kernel kisha kutumia Azure AI Agent Service kupeleka wakala wako. Njia hii inakuwezesha kuhifadhi kwa urahisi wawakala wako huku ukitumia nguvu ya kujenga mifumo ya wawakala wengi katika Semantic Kernel. Zaidi ya hayo, Semantic Kernel ina kiunganishi katika AutoGen, ikifanya iwe rahisi kutumia mifumo yote miwili pamoja.
+ 
+Tufupishe tofauti kuu katika jedwali:
 
-Hebu tuweke tofauti muhimu katika jedwali:
-
-| Mfumo | Lengo | Dhana za Msingi | Matumizi |
+| Framework | Focus | Core Concepts | Use Cases |
 | --- | --- | --- | --- |
-| AutoGen | Programu za mawakala wa tukio, zilizogawanyika | Mawakala, Personas, Functions, Data | Kizazi cha msimbo, kazi za uchambuzi wa data |
-| Semantic Kernel | Kuelewa na kuzalisha maudhui ya maandishi yanayofanana na binadamu | Mawakala, Vipengele vya Modular, Ushirikiano | Kuelewa lugha ya asili, kizazi cha maudhui |
-| Huduma ya Azure AI Agent | Mifano inayobadilika, usalama wa biashara, Kizazi cha msimbo, Kuita zana | Modularity, Ushirikiano, Uratibu wa Mchakato | Utekelezaji wa mawakala wa AI salama, unaoweza kupanuka, na unaobadilika |
+| AutoGen | Programu za wawakala zinazoendeshwa na matukio, zilizoenea | Wawakala, Personas, Kazi, Data | Uundaji wa msimbo, kazi za uchambuzi wa data |
+| Semantic Kernel | Kuelewa na kuzalisha maudhui ya maandishi yanayofanana na ya kibinadamu | Wawakala, Vipengele vya Moduli, Ushirikiano | Uelewa wa lugha asilia, uundaji wa maudhui |
+| Azure AI Agent Service | Modeli zinazobadilika, usalama wa biashara, uundaji wa msimbo, kuitwa kwa zana | Umoduli, Ushirikiano, Uratibu wa Mchakato | Uenezaji wa wawakala wa AI salama, unaoweza kupanuka na wenye kubadilika |
 
-Matumizi bora ya kila mfumo ni yapi?
+Je, ni matumizi gani kamili kwa kila moja ya mifumo hii?
 
-## Je, ninaweza kuunganisha zana zangu zilizopo za mfumo wa Azure moja kwa moja, au ninahitaji suluhisho za pekee?
+## Je, naweza kuunganisha zana zangu za mfumo wa Azure moja kwa moja, au nahitaji suluhisho huru?
 
-Jibu ni ndiyo, unaweza kuunganisha zana zako zilizopo za mfumo wa Azure moja kwa moja na Huduma ya Azure AI Agent hasa, kwa sababu imejengwa kufanya kazi bila matatizo na huduma nyingine za Azure. Kwa mfano, unaweza kuunganisha Bing, Azure AI Search, na Azure Functions. Pia kuna muunganisho wa kina na Azure AI Foundry.
+Jibu ni ndiyo, unaweza kuunganisha zana zako za mfumo wa Azure moja kwa moja hasa na Azure AI Agent Service, hii ni kwa sababu imejengwa kufanya kazi kwa urahisi pamoja na huduma nyingine za Azure. Kwa mfano unaweza kuunganisha Bing, Azure AI Search, na Azure Functions. Pia kuna ujumuishaji wa kina na Microsoft Foundry.
 
-Kwa AutoGen na Semantic Kernel, unaweza pia kuunganisha na huduma za Azure, lakini inaweza kuhitaji kupiga huduma za Azure kutoka kwa msimbo wako. Njia nyingine ya kuunganisha ni kutumia SDKs za Azure kuingiliana na huduma za Azure kutoka kwa mawakala wako. Zaidi ya hayo, kama ilivyotajwa, unaweza kutumia Huduma ya Azure AI Agent kama mratibu wa mawakala wako walioundwa katika AutoGen au Semantic Kernel ambayo ingetoa ufikiaji rahisi kwa mfumo wa Azure.
+Kwa AutoGen na Semantic Kernel, pia unaweza kuingiliana na huduma za Azure, lakini inaweza kuhitaji uwaitie huduma za Azure kutoka kwenye msimbo wako. Njia nyingine ya kuunganishwa ni kutumia Azure SDKs kuingiliana na huduma za Azure kutoka kwa wawakala wako. Zaidi ya hayo, kama ilivyotajwa, unaweza kutumia Azure AI Agent Service kama msimamiaji kwa wawakala wako waliotengenezwa katika AutoGen au Semantic Kernel ili kupata ufikiaji rahisi wa mfumo wa Azure.
 
-## Mifano ya Msimbo
+## Sampuli za Msimbo
 
-- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
-- .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
+- Python: [Mfumo wa Wakala](./code_samples/02-python-agent-framework.ipynb)
+- .NET: [Mfumo wa Wakala](./code_samples/02-dotnet-agent-framework.md)
 
-## Una Maswali Zaidi kuhusu Mifumo ya Mawakala wa AI?
+## Una Maswali Zaidi kuhusu Mifumo ya Wakala za AI?
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+Jiunge na [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) kukutana na wanafunzi wengine, kuhudhuria saa za ofisi na kupata maswali yako kuhusu Wakala za AI yajibiwe.
 
 ## Marejeleo
 
-- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Huduma ya Azure Agent</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel na AutoGen</a>
+- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
+- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel and AutoGen</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
 - <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Huduma ya Azure AI Agent</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Kutumia Huduma ya Azure AI Agent na AutoGen / Semantic Kernel kujenga suluhisho la mawakala wengi</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
+- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution</a>
 
-## Somo la Awali
+## Previous Lesson
 
-[Utangulizi wa Mawakala wa AI na Matumizi ya Mawakala](../01-intro-to-ai-agents/README.md)
+[Utangulizi wa Wawakala wa AI na Matukio ya Matumizi yao](../01-intro-to-ai-agents/README.md)
 
-## Somo Linalofuata
+## Next Lesson
 
-[Kuelewa Miundo ya Mawakala](../03-agentic-design-patterns/README.md)
+[Kuelewa Mifumo ya Ubunifu ya Wakala](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Tamko la kutowajibika**:
+Nyaraka hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuwa sahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kasoro. Nyaraka ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha kuaminika. Kwa taarifa muhimu, inapendekezwa kutumia tafsiri ya kitaalamu iliyofanywa na mtafsiri mtaalamu wa binadamu. Hatuwajibiki kwa kutoelewana au tafsiri potofu zitokanazo na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

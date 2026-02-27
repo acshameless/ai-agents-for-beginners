@@ -1,54 +1,55 @@
 [![Planeerimise disainimuster](../../../translated_images/et/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
+> _(Klõpsa ülaloleval pildil, et vaadata selle tunni videot)_
 
 # Planeerimise disain
 
 ## Sissejuhatus
 
-Selles õppetunnis käsitletakse:
+See õppetund hõlmab
 
-* Selge üldeesmärgi määratlemist ja keeruka ülesande jagamist hallatavateks osadeks.
-* Struktureeritud väljundi kasutamist usaldusväärsemate ja masinloetavate vastuste saamiseks.
-* Sündmustepõhise lähenemise rakendamist dünaamiliste ülesannete ja ootamatute sisendite käsitlemiseks.
+* Selge üldeesmärgi määratlemist ja keeruka ülesande jaotamist hallatavateks osadeks.
+* Struktureeritud väljundi kasutamist usaldusväärsemate ja masinloetavamate vastuste saamiseks.
+* Sündmustepõhise lähenemise kasutamist dünaamiliste ülesannete ja ootamatute sisendite käsitlemiseks.
 
-## Õppeesmärgid
+## Õpieesmärgid
 
-Pärast selle õppetunni läbimist mõistad:
+Pärast selle õppetunni läbimist saate aru:
 
-* Kuidas määratleda ja seada AI agendile üldeesmärk, tagades, et see teab täpselt, mida tuleb saavutada.
-* Kuidas jagada keerukas ülesanne hallatavateks alamülesanneteks ja korraldada need loogilisse järjestusse.
-* Kuidas varustada agente õigete tööriistadega (nt otsingutööriistad või andmeanalüüsitööriistad), otsustada, millal ja kuidas neid kasutada, ning käsitleda ootamatuid olukordi.
-* Kuidas hinnata alamülesannete tulemusi, mõõta jõudlust ja korrigeerida tegevusi, et parandada lõpptulemust.
+* Määratleda ja seada AI-agendile üldeesmärk, tagades, et see teab selgelt, mida tuleb saavutada.
+* Jagada keerukas ülesanne hallatavateks alameesmärkideks ja korraldada need loogilisse järjekorda.
+* Varustada agendid õige tööriistavaraga (nt otsingutööriistad või andmeanalüüsi tööriistad), otsustada, millal ja kuidas neid kasutada, ning käsitleda tekkivaid ootamatuid olukordi.
+* Hinnata alameesmärkide tulemusi, mõõta sooritusvõimet ja iteratiivselt korrigeerida tegevusi lõpptulemuse parandamiseks.
 
-## Üldeesmärgi määratlemine ja ülesande jagamine
+## Üldeesmärgi määratlemine ja ülesande jaotamine
 
 ![Eesmärkide ja ülesannete määratlemine](../../../translated_images/et/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Enamik päriselu ülesandeid on liiga keerulised, et neid ühe sammuga lahendada. AI agent vajab konkreetset eesmärki, mis juhiks selle planeerimist ja tegevusi. Näiteks võib eesmärk olla:
+Enamik reaalse maailma ülesandeid on liiga keerulised ühe sammuga lahendamiseks. AI-agent vajab oma planeerimise ja tegevuste juhendamiseks lühikest eesmärki. Näiteks võite seada eesmärgi:
 
-    "Koosta 3-päevane reisikava."
+    "Koosta 3-päevane reisiplaan."
 
-Kuigi see on lihtne öelda, vajab see siiski täpsustamist. Mida selgem on eesmärk, seda paremini suudavad agent (ja kõik inimkaastöötajad) keskenduda õige tulemuse saavutamisele, näiteks koostada põhjalik reisikava koos lennuvalikute, hotellisoovituste ja tegevuste ettepanekutega.
+Kuigi seda on lihtne sõnastada, vajab see siiski täpsustamist. Mida selgem on eesmärk, seda paremini suudab agent (ja kõik kaasatud inimesed) keskenduda õige tulemuse saavutamisele, näiteks koostada põhjalik reisiplaan koos lennuvalikutega, hotellisoovitustega ja tegevuste ettepanekutega.
 
-### Ülesande jagamine
+### Ülesande jaotamine
 
-Suured või keerulised ülesanded muutuvad hallatavamaks, kui need jagatakse väiksemateks, eesmärgipõhisteks alamülesanneteks. Reisikava näite puhul võiks eesmärgi jagada järgmiselt:
+Suured või keerukad ülesanded muutuvad hallatavamaks, kui need jagada väiksemateks, eesmärgipõhiseks alameesmärkideks.
+Reisiplaani näite puhul võiksite eesmärgi jagada järgmistesse alameesmärkidesse:
 
-* Lennupiletite broneerimine
-* Hotelli broneerimine
-* Autorendi korraldamine
+* Lendude broneerimine
+* Hotellibroneering
+* Autorent
 * Isikupärastamine
 
-Iga alamülesannet saab seejärel lahendada spetsialiseerunud agentide või protsesside abil. Üks agent võib spetsialiseeruda parimate lennupakkumiste otsimisele, teine keskendub hotellibroneeringutele jne. Koordineeriv või "järgmine" agent saab seejärel need tulemused koondada ühtseks reisikavaks lõppkasutajale.
+Iga alameesmärgiga saab seejärel tegeleda pühendatud agendid või protsessid. Üks agent võib spetsialiseeruda parimate lennupakkumiste otsimisele, teine keskendub hotellibroneeringutele jne. Koordineeriv või "edasesse torusse" suunatud agent saab seejärel need tulemused lõppkasutajale ühtseks reisikavaks koondada.
 
-See modulaarne lähenemine võimaldab ka järkjärgulisi täiustusi. Näiteks võiks lisada spetsialiseerunud agente toidusoovituste või kohalike tegevuste ettepanekute jaoks ja aja jooksul reisikava täiustada.
+See modulaarne lähenemine võimaldab ka järkjärgulisi täiustusi. Näiteks võiksite lisada spetsialiseeritud agente Toidusoovituste või Kohalike tegevuste soovituste jaoks ning aja jooksul reisikava täpsustada.
 
 ### Struktureeritud väljund
 
-Suured keelemudelid (LLM-id) suudavad genereerida struktureeritud väljundeid (nt JSON), mida on lihtsam alluvatel agentidel või teenustel analüüsida ja töödelda. See on eriti kasulik mitme agendi kontekstis, kus ülesandeid saab täita pärast planeerimisväljundi saamist. Vaata seda <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogipostitust</a> kiireks ülevaateks.
+Suurte keelemudelite (LLM-ide) väljund võib olla struktureeritud (nt JSON), mida on allagentide või teenuste jaoks lihtsam parsida ja töödelda. See on eriti kasulik mitmeagendilise konteksti puhul, kus planeerimisväljundi saab kätte ja seejärel tegutseda. Tutvu selle <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">blogipostitusega</a> kiire ülevaate saamiseks.
 
-Järgmine Python'i koodinäide demonstreerib lihtsat planeerimisagenti, mis jagab eesmärgi alamülesanneteks ja genereerib struktureeritud plaani:
+The following Python snippet demonstrates a simple planning agent decomposing a goal into subtasks and generating a structured plan:
 
 ```python
 from pydantic import BaseModel
@@ -71,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Reisi alamülesande mudel
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # me tahame ülesande agendile määrata
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -84,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # Mudeli autentimiseks peate looma oma GitHubi seadetes isikliku juurdepääsutokeni (PAT).
+    # Looge oma PAT-token, järgides juhiseid siin: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -95,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Määrake kasutaja sõnum
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -124,30 +125,30 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Veenduge, et vastuse sisu oleks kehtiv JSON-string enne selle laadimist
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
+#     raise ValueError("Vastuse sisu ei ole kehtiv JSON-string")
 
-# # Print the response content after loading it as JSON
+# # Trüki vastuse sisu pärast selle JSON-ina laadimist
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Valideeri vastuse sisu MathReasoning-mudeliga
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Planeerimisagent mitme agendi orkestreerimisega
+### Planeerimisagent mitmeagendilise orkestreerimisega
 
-Selles näites võtab Semantiline Router Agent vastu kasutaja päringu (nt "Mul on vaja hotelli plaani oma reisiks.").
+Selles näites võtab Semantic Router Agent vastu kasutaja päringu (nt "I need a hotel plan for my trip.").
 
-Planeerija:
+Planeerija teeb seejärel:
 
-* Võtab vastu hotelli plaani: Planeerija võtab kasutaja sõnumi ja genereerib struktureeritud reisiplaani, tuginedes süsteemi juhistele (sealhulgas olemasolevate agentide üksikasjadele).
-* Loetleb agendid ja nende tööriistad: Agentide register sisaldab nimekirja agentidest (nt lennu, hotelli, autorendi ja tegevuste jaoks) koos nende pakutavate funktsioonide või tööriistadega.
-* Suunab plaani vastavatele agentidele: Sõltuvalt alamülesannete arvust saadab planeerija sõnumi kas otse spetsiaalsele agendile (ühe ülesande stsenaariumide korral) või koordineerib grupivestluse halduri kaudu mitme agendi koostööks.
-* Kokkuvõte tulemusest: Lõpuks võtab planeerija kokku genereeritud plaani selguse huvides.
-Järgmine Python'i koodinäide illustreerib neid samme:
+* Vastu võtab hotelliplaani: planeerija võtab kasutaja sõnumi ja, lähtudes süsteemi promptist (mis sisaldab saadavalolevate agentide detaile), genereerib struktureeritud reisiplaani.
+* Loetleb agendid ja nende tööriistad: agentide registris on nimekiri agentidest (nt lendude, hotellide, autorendi ja tegevuste jaoks) koos nende pakutavate funktsioonide või tööriistadega.
+* Suunab plaani vastavatele agentidele: sõltuvalt alameesmärkide arvust saadab planeerija sõnumi kas otse pühendatud agendile (ülesande puhul) või koordineerib mitme agendi koostööd grupivestluse halduri kaudu.
+* Kokkuvõtte koostamine: lõpuks võtab planeerija genereeritud plaani kokku selguse huvides.
+The following Python code sample illustrates these steps:
 
 ```python
 
@@ -165,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Reisi alamülesande mudel
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # soovime ülesande agendile määrata
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -182,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Loo klient tüübikontrollitud keskkonnamuutujatega
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -194,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Määra kasutaja sõnum
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -211,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Enne selle laadimist veendu, et vastuse sisu oleks kehtiv JSON-i string
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Prindi vastuse sisu pärast selle laadimist JSON-ina
 
 pprint(json.loads(response_content))
 ```
 
-Eelneva koodi väljundit saab kasutada struktureeritud väljundina, et suunata `assigned_agent`-ile ja kokku võtta reisiplaan lõppkasutajale.
+What follows is the output from the previous code and you can then use this structured output to route to `assigned_agent` and summarize the travel plan to the end user.
 
 ```json
 {
@@ -253,19 +254,19 @@ Eelneva koodi väljundit saab kasutada struktureeritud väljundina, et suunata `
 }
 ```
 
-Näidispäevik eelneva koodinäitega on saadaval [siin](07-autogen.ipynb).
+Näidis-notebook eelmise koodinäitega on saadaval [siin](07-autogen.ipynb).
 
 ### Iteratiivne planeerimine
 
-Mõned ülesanded nõuavad edasi-tagasi suhtlust või ümberplaneerimist, kus ühe alamülesande tulemus mõjutab järgmist. Näiteks, kui agent avastab lennupiletite broneerimisel ootamatu andmeformaadi, võib see vajada strateegia kohandamist enne hotellibroneeringute juurde liikumist.
+Mõned ülesanded vajavad edasi-tagasi suhtlust või ümberplaneerimist, kus ühe alameesmärgi tulemus mõjutab järgmist. Näiteks kui agent leiab lennu broneerimisel ootamatu andmeformaadi, võib tal olla vaja enne hotellibroneeringute juurde liikumist oma strateegiat kohandada.
 
-Lisaks võib kasutaja tagasiside (nt inimene otsustab, et eelistab varasemat lendu) käivitada osalise ümberplaneerimise. See dünaamiline, iteratiivne lähenemine tagab, et lõplik lahendus vastab päriselu piirangutele ja muutuvatele kasutaja eelistustele.
+Lisaks võib kasutaja tagasiside (nt inimene otsustab, et eelistab varasemat lendu) esile kutsuda osalise ümberplaneerimise. See dünaamiline, iteratiivne lähenemine tagab, et lõplik lahendus vastab reaalse maailma piirangutele ja kasutaja muutuvatele eelistustele.
 
-Näide koodist:
+nt. näidiskood
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. sama mis eelnevas koodis ja edastada kasutaja ajalugu ja praegune plaan
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -279,32 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. uuesti planeerida ja saata ülesanded vastavatele agentidele
 ```
 
-Täpsema planeerimise jaoks vaata Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">blogipostitust</a>, mis käsitleb keeruliste ülesannete lahendamist.
+Lisateabe saamiseks põhjalikuma planeerimise kohta vaadake Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">blogipostitust</a>, mis käsitleb keerukate ülesannete lahendamist.
 
 ## Kokkuvõte
 
-Selles artiklis vaatasime näidet, kuidas luua planeerijat, mis suudab dünaamiliselt valida määratletud agendid. Planeerija väljund jagab ülesanded ja määrab agendid, et need saaksid täidetud. Eeldatakse, et agentidel on juurdepääs funktsioonidele/tööriistadele, mis on vajalikud ülesande täitmiseks. Lisaks agentidele saab lisada muid mustreid, nagu refleksioon, kokkuvõtja ja ringvestlus, et veelgi kohandada.
+Selles artiklis vaatasime näidet, kuidas luua planeerijat, mis suudab dünaamiliselt valida määratletud saadavalolevaid agente. Planeerija väljund jagab ülesanded osadeks ja määrab agentidele ülesanded, et neid saaks täita. Eeldatakse, et agentidel on juurdepääs ülesande täitmiseks vajalikele funktsioonidele/tööriistadele. Lisaks agentidele võite lisada muid mustreid, nagu refleksioon, kokkuvõtte tegija ja round robin chat, et veelgi kohandada.
 
 ## Täiendavad ressursid
 
-AutoGen Magnetic One - Üldine mitme agendi süsteem keeruliste ülesannete lahendamiseks, mis on saavutanud muljetavaldavaid tulemusi mitmel keerulisel agentide võrdlusalusel. Viide: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. Selles rakenduses loob orkestreerija ülesandespetsiifilise plaani ja delegeerib need ülesanded olemasolevatele agentidele. Lisaks planeerimisele kasutab orkestreerija ka jälgimismehhanismi, et jälgida ülesande edenemist ja vajadusel ümber planeerida.
+AutoGen Magentic One — üldotstarbeline mitmeagendiline süsteem keerukate ülesannete lahendamiseks, mis on saavutanud muljetavaldavaid tulemusi mitmetel väljakutsuvatel agendipõhistel võrdlusalustel. Viide: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. Selles implementeeringus loob orkestreerija ülesandepõhise plaani ja delegeerib need ülesanded saadavalolevatele agentidele. Planeerimise kõrval kasutab orkestreerija ka jälgimismehhanismi ülesande edenemise jälgimiseks ning vajadusel uuesti planeerimiseks.
 
-### Kas sul on rohkem küsimusi planeerimise disainimustri kohta?
+### Kas sul on veel küsimusi planeerimisdisainimustri kohta?
 
-Liitu [Azure AI Foundry Discordiga](https://aka.ms/ai-agents/discord), et kohtuda teiste õppijatega, osaleda vastuvõtutundides ja saada vastuseid oma AI agentide küsimustele.
+Liitu [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) kogukonnaga, kohtuge teiste õppuritega, osalege konsultatsioonitundides ja saate vastused oma AI-agentide küsimustele.
 
 ## Eelmine õppetund
 
-[Usaldusväärsete AI agentide loomine](../06-building-trustworthy-agents/README.md)
+[Usaldusväärsete AI-agentide loomine](../06-building-trustworthy-agents/README.md)
 
 ## Järgmine õppetund
 
-[Mitme agendi disainimuster](../08-multi-agent/README.md)
+[Mitmeagendiline disainimuster](../08-multi-agent/README.md)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+Vastutusest loobumine:
+See dokument on tõlgitud tehisintellekti tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, tuleb arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle algkeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta käesoleva tõlke kasutamisest tulenevate arusaamatuste ega valesti tõlgendamise eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

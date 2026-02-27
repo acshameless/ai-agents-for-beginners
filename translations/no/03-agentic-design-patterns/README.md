@@ -1,32 +1,32 @@
 [![Hvordan designe gode AI-agenter](../../../translated_images/no/lesson-3-thumbnail.1092dd7a8f1074a5.webp)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
 
-> _(Klikk på bildet over for å se videoen til denne leksjonen)_
-# Prinsipper for design av AI-agenter
+> _(Klikk på bildet over for å se videoen av denne leksjonen)_
+# Prinsipper for AI-agentisk design
 
 ## Introduksjon
 
-Det finnes mange måter å tenke på når det gjelder å bygge AI-agentiske systemer. Siden tvetydighet er en funksjon og ikke en feil i design av generativ AI, kan det noen ganger være vanskelig for ingeniører å vite hvor de skal begynne. Vi har laget et sett med menneskesentrerte UX-designprinsipper for å gjøre det mulig for utviklere å bygge kundesentrerte agentiske systemer som løser deres forretningsbehov. Disse designprinsippene er ikke en foreskrevet arkitektur, men snarere et utgangspunkt for team som definerer og bygger agentopplevelser.
+Det finnes mange måter å tenke på bygging av AI-agentiske systemer på. Gitt at tvetydighet er en egenskap og ikke en feil i design av generativ AI, kan det noen ganger være vanskelig for ingeniører å finne ut hvor de i det hele tatt skal begynne. Vi har laget et sett med menneskesentrerte UX-designprinsipper for å gjøre det mulig for utviklere å bygge kundesentrerte agentiske systemer som løser deres forretningsbehov. Disse designprinsippene er ikke en forskriftsmessig arkitektur, men heller et utgangspunkt for team som definerer og bygger agentopplevelser.
 
 Generelt bør agenter:
 
 - Utvide og skalere menneskelige evner (idémyldring, problemløsning, automatisering, osv.)
-- Fylle kunnskapshull (gi meg en rask innføring i kunnskapsområder, oversettelse, osv.)
-- Legge til rette for og støtte samarbeid på måter vi som individer foretrekker å jobbe med andre
-- Gjøre oss til bedre versjoner av oss selv (f.eks. livscoach/oppgavemester, hjelpe oss med å lære emosjonell regulering og mindfulness-ferdigheter, bygge motstandskraft, osv.)
+- Fylle kunnskapshull (gjøre meg oppdatert på kunnskapsområder, oversettelse, osv.)
+- Legge til rette for og støtte samarbeid på de måtene vi som individer foretrekker å jobbe sammen med andre
+- Gjøre oss til bedre versjoner av oss selv (f.eks. livscoach/oppgaveleder, hjelpe oss å lære emosjonell regulering og mindfulness-ferdigheter, bygge resiliens, osv.)
 
 ## Denne leksjonen vil dekke
 
-- Hva er de agentiske designprinsippene
-- Hvilke retningslinjer bør følges når man implementerer disse designprinsippene
+- Hva de agentiske designprinsippene er
+- Hvilke retningslinjer man bør følge under implementering av disse designprinsippene
 - Eksempler på bruk av designprinsippene
 
 ## Læringsmål
 
-Etter å ha fullført denne leksjonen, vil du kunne:
+Etter å ha fullført denne leksjonen vil du kunne:
 
 1. Forklare hva de agentiske designprinsippene er
 2. Forklare retningslinjene for bruk av de agentiske designprinsippene
-3. Forstå hvordan man bygger en agent ved hjelp av de agentiske designprinsippene
+3. Forstå hvordan man bygger en agent ved bruk av de agentiske designprinsippene
 
 ## De agentiske designprinsippene
 
@@ -34,66 +34,67 @@ Etter å ha fullført denne leksjonen, vil du kunne:
 
 ### Agent (Rom)
 
-Dette er miljøet der agenten opererer. Disse prinsippene informerer hvordan vi designer agenter for å engasjere seg i fysiske og digitale verdener.
+Dette er miljøet der agenten opererer. Disse prinsippene informerer hvordan vi designer agenter for samhandling i fysiske og digitale verdener.
 
-- **Koble sammen, ikke bryte ned** – hjelp til med å koble mennesker til andre mennesker, hendelser og handlingsbar kunnskap for å muliggjøre samarbeid og tilknytning.
-- Agenter hjelper til med å koble hendelser, kunnskap og mennesker.
+- **Forbinder, ikke kollapser** – hjelp til med å koble mennesker til andre mennesker, hendelser og handlingsrettet kunnskap for å muliggjøre samarbeid og tilknytning.
+- Agenter bidrar til å koble sammen hendelser, kunnskap og mennesker.
 - Agenter bringer mennesker nærmere hverandre. De er ikke designet for å erstatte eller nedvurdere mennesker.
-- **Lett tilgjengelig, men av og til usynlig** – agenten opererer stort sett i bakgrunnen og gir oss bare et dytt når det er relevant og passende.
-  - Agenten er lett å oppdage og tilgjengelig for autoriserte brukere på alle enheter eller plattformer.
-  - Agenten støtter multimodale inn- og utganger (lyd, stemme, tekst, osv.).
-  - Agenten kan sømløst skifte mellom forgrunn og bakgrunn; mellom proaktiv og reaktiv, avhengig av brukerens behov.
-  - Agenten kan operere i usynlig form, men dens bakgrunnsprosess og samarbeid med andre agenter er transparente og kontrollerbare for brukeren.
+- **Lett tilgjengelig, men av og til usynlig** – agenten opererer stort sett i bakgrunnen og gir oss kun et puff når det er relevant og hensiktsmessig.
+  - Agenten er lett å oppdage og tilgjengelig for autoriserte brukere på hvilken som helst enhet eller plattform.
+  - Agenten støtter multimodale input og output (lyd, tale, tekst, osv.).
+  - Agenten kan sømløst skifte mellom forgrunn og bakgrunn; mellom proaktiv og reaktiv, avhengig av oppfattelsen av brukerens behov.
+  - Agenten kan operere i usynlig form, men dens bakgrunnsprosess og samarbeid med andre agenter er transparent og kontrollerbart av brukeren.
 
 ### Agent (Tid)
 
-Dette er hvordan agenten opererer over tid. Disse prinsippene informerer hvordan vi designer agenter som interagerer på tvers av fortid, nåtid og fremtid.
+Dette er hvordan agenten opererer over tid. Disse prinsippene informerer hvordan vi designer agenter som samhandler på tvers av fortid, nåtid og framtid.
 
 - **Fortid**: Reflektere over historien som inkluderer både tilstand og kontekst.
-  - Agenten gir mer relevante resultater basert på analyse av rikere historiske data utover bare hendelsen, mennesker eller tilstander.
-  - Agenten skaper forbindelser fra tidligere hendelser og reflekterer aktivt over minne for å engasjere seg i nåværende situasjoner.
-- **Nå**: Gi et dytt mer enn en varsling.
-  - Agenten har en helhetlig tilnærming til å interagere med mennesker. Når en hendelse skjer, går agenten utover statisk varsling eller annen statisk formalitet. Agenten kan forenkle prosesser eller dynamisk generere signaler for å rette brukerens oppmerksomhet på riktig tidspunkt.
-  - Agenten leverer informasjon basert på kontekstuell miljø, sosiale og kulturelle endringer og tilpasset brukerens intensjon.
-  - Agentens interaksjon kan være gradvis, utvikle seg i kompleksitet for å styrke brukeren over tid.
-- **Fremtid**: Tilpasse seg og utvikle seg.
+  - Agenten gir mer relevante resultater basert på analyse av rikere historiske data utover selve hendelsen, menneskene eller tilstandene.
+  - Agenten skaper koblinger fra tidligere hendelser og reflekterer aktivt over minner for å engasjere seg i nåværende situasjoner.
+- **Nåtid**: Pushe mer enn å varsle.
+  - Agenten legemliggjør en helhetlig tilnærming til samhandling med mennesker. Når en hendelse skjer, går agenten utover statisk varsling eller annen formell statisk form. Agenten kan forenkle prosesser eller dynamisk generere signaler for å rette brukerens oppmerksomhet på rett tidspunkt.
+  - Agenten leverer informasjon basert på kontekstuell miljø, sosiale og kulturelle endringer, og tilpasset brukerens intensjon.
+  - Agentens samhandling kan være gradvis, utvikle/øke i kompleksitet for å gi brukerne styrke over tid.
+- **Framtid**: Tilpasse og utvikle seg.
   - Agenten tilpasser seg ulike enheter, plattformer og modaliteter.
-  - Agenten tilpasser seg brukerens atferd, tilgjengelighetsbehov og er fritt tilpassbar.
+  - Agenten tilpasser seg brukerens atferd, tilgjengelighetsbehov, og kan fritt tilpasses.
   - Agenten formes av og utvikler seg gjennom kontinuerlig brukerinteraksjon.
 
 ### Agent (Kjerne)
 
-Dette er de sentrale elementene i kjernen av en agents design.
+Dette er nøkkelelementene i kjernen av en agents design.
 
 - **Omfavn usikkerhet, men etabler tillit**.
-  - Et visst nivå av usikkerhet hos agenten er forventet. Usikkerhet er et nøkkelaspekt ved agentdesign.
-  - Tillit og transparens er grunnleggende lag i agentdesign.
+  - Et visst nivå av usikkerhet i agenten forventes. Usikkerhet er et nøkkel-element i agentdesign.
+  - Tillit og åpenhet er grunnleggende lag i agentdesign.
   - Mennesker har kontroll over når agenten er på/av, og agentens status er alltid tydelig synlig.
 
 ## Retningslinjer for implementering av disse prinsippene
 
-Når du bruker de tidligere designprinsippene, følg disse retningslinjene:
+Når du bruker de forannevnte designprinsippene, benytt følgende retningslinjer:
 
-1. **Transparens**: Informer brukeren om at AI er involvert, hvordan det fungerer (inkludert tidligere handlinger), og hvordan man kan gi tilbakemelding og endre systemet.
-2. **Kontroll**: Gi brukeren mulighet til å tilpasse, spesifisere preferanser og personalisere, og ha kontroll over systemet og dets attributter (inkludert muligheten til å glemme).
-3. **Konsistens**: Sikt mot konsistente, multimodale opplevelser på tvers av enheter og endepunkter. Bruk kjente UI/UX-elementer der det er mulig (f.eks. mikrofonikon for stemmeinteraksjon) og reduser brukerens kognitive belastning så mye som mulig (f.eks. sikt mot korte svar, visuelle hjelpemidler og ‘Lær mer’-innhold).
+1. **Åpenhet**: Informer brukeren om at AI er involvert, hvordan det fungerer (inkludert tidligere handlinger), og hvordan man gir tilbakemeldinger og modifiserer systemet.
+2. **Kontroll**: Gi brukeren mulighet til å tilpasse, spesifisere preferanser og personalisere, samt ha kontroll over systemet og dets attributter (inkludert mulighet til å glemme).
+3. **Konsistens**: Sikre konsistente, multimodale opplevelser på tvers av enheter og endepunkter. Bruk kjente UI/UX-elementer der det er mulig (f.eks. mikrofonikon for taleinteraksjon) og reduser brukerens kognitive belastning så mye som mulig (f.eks. streb etter konsise svar, visuelle hjelpemidler og "Lær mer"-innhold).
 
-## Hvordan designe en reiseagent ved hjelp av disse prinsippene og retningslinjene
+## Hvordan designe en reiseagent ved bruk av disse prinsippene og retningslinjene
 
-Tenk deg at du designer en reiseagent, her er hvordan du kan bruke designprinsippene og retningslinjene:
+Tenk deg at du designer en reiseagent, her er hvordan du kan tenke omkring bruk av designprinsippene og retningslinjene:
 
-1. **Transparens** – La brukeren vite at reiseagenten er en AI-drevet agent. Gi noen grunnleggende instruksjoner om hvordan man kommer i gang (f.eks. en “Hei”-melding, eksempelforespørsler). Dokumenter dette tydelig på produktsiden. Vis listen over forespørsler en bruker har stilt tidligere. Gjør det klart hvordan man gir tilbakemelding (tommel opp og ned, Send tilbakemelding-knapp, osv.). Klargjør om agenten har bruks- eller emnebegrensninger.
-2. **Kontroll** – Sørg for at det er tydelig hvordan brukeren kan endre agenten etter at den er opprettet, med ting som systemprompt. Gi brukeren mulighet til å velge hvor detaljert agenten skal være, dens skrivestil, og eventuelle forbehold om hva agenten ikke skal snakke om. Tillat brukeren å se og slette tilknyttede filer eller data, forespørsler og tidligere samtaler.
-3. **Konsistens** – Sørg for at ikonene for Del forespørsel, legg til en fil eller et bilde og tagge noen eller noe er standard og gjenkjennelige. Bruk bindersikonet for å indikere filopplasting/deling med agenten, og et bildeikon for å indikere opplasting av grafikk.
+1. **Åpenhet** – La brukeren vite at Reiseagenten er en AI-aktivert agent. Gi noen grunnleggende instruksjoner om hvordan man kommer i gang (f.eks. en "Hei"-melding, eksempelspørsmål). Dokumenter dette tydelig på produktsiden. Vis listen over spørsmål brukeren har stilt tidligere. Gjør det klart hvordan man gir tilbakemelding (tommel opp/ned, knapp for Send tilbakemelding, osv.). Tydeliggjør eventuelle bruks- eller emnebegrensninger for agenten.
+2. **Kontroll** – Sørg for at det er klart hvordan brukeren kan endre agenten etter at den er opprettet via for eksempel System Prompt. La brukeren velge hvor detaljert agenten skal være, agentens skrivestil, og eventuelle forbehold om hva agenten ikke skal ta opp. Gi mulighet til å se og slette tilknyttede filer eller data, spørsmål og tidligere samtaler.
+3. **Konsistens** – Sørg for at ikonene for Del prompt, legg til fil eller bilde og merk noen eller noe er standard og gjenkjennelige. Bruk bindersikon for å indikere filopplasting/deling med agenten, og et bildeikon for opplasting av grafikk.
 
 ## Eksempelkoder
 
 - Python: [Agent Framework](./code_samples/03-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/03-dotnet-agent-framework.md)
 
-## Har du flere spørsmål om agentiske designmønstre for AI?
 
-Bli med i [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) for å møte andre elever, delta på kontortid og få svar på spørsmålene dine om AI-agenter.
+## Har du flere spørsmål om AI-agentiske designmønstre?
+
+Bli med i [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) for å møte andre lærende, delta på kontortid og få svar på dine spørsmål om AI-agenter.
 
 ## Tilleggsressurser
 
@@ -112,6 +113,6 @@ Bli med i [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) for å m�
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+**Ansvarsfraskrivelse**:
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk skal anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

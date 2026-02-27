@@ -4,51 +4,51 @@
 
 ### Úvod
 
-Táto lekcia pokrýva:
+Táto lekcia pokryje:
 
-- Porozumenie Microsoft Agent Framework: Kľúčové vlastnosti a hodnota  
+- Pochopenie Microsoft Agent Framework: Kľúčové vlastnosti a hodnota  
 - Preskúmanie kľúčových konceptov Microsoft Agent Framework
-- Porovnanie MAF so Semantic Kernel a AutoGen: Príručka migrácie
+- Porovnanie MAF so Semantic Kernel a AutoGen: Sprievodca migráciou
 
 ## Ciele učenia
 
-Po dokončení tejto lekcie budete vedieť:
+Po dokončení tejto lekcie budete vedieť, ako:
 
-- Vytvárať AI agentov pripravených na produkciu pomocou Microsoft Agent Framework
-- Použiť základné vlastnosti Microsoft Agent Framework na vaše agentické prípady použitia
+- Vytvárať produkčne pripravené AI agentov pomocou Microsoft Agent Framework
+- Použiť základné funkcie Microsoft Agent Framework vo vašich agentických scenároch
 - Migrovať a integrovať existujúce agentické rámce a nástroje  
 
-## Ukážky kódu 
+## Ukážky kódu
 
-Ukážky kódu pre [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) nájdete v tomto repozitári pod súbormi `xx-python-agent-framework` a `xx-dotnet-agent-framework`.
+Ukážky kódu pre [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) nájdete v tomto repozitári v súboroch `xx-python-agent-framework` a `xx-dotnet-agent-framework`.
 
-## Porozumenie Microsoft Agent Framework
+## Pochopenie Microsoft Agent Framework
 
 ![Framework Intro](../../../translated_images/sk/framework-intro.077af16617cf130c.webp)
 
-[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) stavia na skúsenostiach a poznatkoch zo Semantic Kernel a AutoGen. Ponúka flexibilitu na riešenie širokej škály agentických prípadov použitia v produkčných aj výskumných prostrediach vrátane:
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) nadväzuje na skúsenosti a poznatky zo Semantic Kernel a AutoGen. Ponúka flexibilitu na riešenie širokej škály agentických prípadov použitia v produkčnom a výskumnom prostredí, vrátane:
 
-- **Sekvenčná orchestrácia agentov** v scenároch, kde sú potrebné krokové pracovné postupy.
-- **Súbežná orchestrácia** v scenároch, kde agenti musia vykonávať úlohy súčasne.
-- **Orchestrácia skupinového chatu** v scenároch, kde agenti môžu spolupracovať na jednej úlohe.
-- **Orchestrácia odovzdania** v scenároch, kde agenti odovzdávajú úlohu jeden druhému po dokončení čiastkových úloh.
-- **Magnetická orchestrácia** v scenároch, kde manažérsky agent vytvára a upravuje zoznam úloh a koordinuje podagentov na dokončenie úlohy.
+- **Sekvenčnej orchestrácie agentov** v scenároch, kde sú potrebné pracovné postupy krok za krokom.
+- **Súbežnej orchestrácie** v scenároch, kde agenti musia dokončiť úlohy súčasne.
+- **Orchestrácie skupinového chatu** v scenároch, kde agenti môžu spolupracovať na jednej úlohe.
+- **Odovzdávacej orchestrácie** v scenároch, kde si agenti medzi sebou odovzdávajú úlohu, keď sú podúlohy dokončené.
+- **Magnetickej orchestrácie** v scenároch, kde správcovský agent tvorí a mení zoznam úloh a riadi koordináciu podagentov na dokončenie úlohy.
 
-Na dodanie AI agentov v produkcii MAF obsahuje aj funkcie pre:
+Pre dodanie AI agentov v produkcii MAF tiež obsahuje funkcie pre:
 
-- **Pozorovateľnosť** prostredníctvom OpenTelemetry, kde každá akcia AI agenta vrátane volania nástrojov, krokov orchestrácie, tokov uvažovania a monitorovania výkonu je sledovaná cez Azure AI Foundry dashboardy.
-- **Bezpečnosť** hostovaním agentov natívne na Azure AI Foundry, ktoré zahŕňa bezpečnostné kontroly ako prístup na základe rolí, spracovanie súkromných údajov a zabudovanú bezpečnosť obsahu.
-- **Trvanlivosť** ako vlákna a pracovné postupy agentov môžu pozastaviť, obnoviť a zotaviť sa z chýb, čo umožňuje dlhšie procesy.
-- **Kontrola** ako sú podporované pracovné postupy s ľudským zásahom, kde úlohy sú označené ako vyžadujúce schválenie človekom.
+- **Pozorovateľnosť** prostredníctvom použitia OpenTelemetry, kde každá akcia AI agenta vrátane volania nástrojov, orchestrácie krokov, logického toku a monitorovania výkonu cez Microsoft Foundry dashboardy.
+- **Bezpečnosť** hosťovaním agentov natívne na Microsoft Foundry, čo zahŕňa bezpečnostné kontroly ako prístup na základe rolí, spracovanie súkromných dát a zabudovanú bezpečnosť obsahu.
+- **Trvácnosť** pretože vlákna a pracovné postupy agenta môžu byť pozastavené, obnovené a zotaviť sa z chýb, čo umožňuje dlhšie bežiace procesy.
+- **Kontrolu** ako sú podporené pracovné postupy s človekom v slučke, kde sú úlohy označené ako vyžadujúce schválenie človekom.
 
-Microsoft Agent Framework sa tiež zameriava na interoperabilitu prostredníctvom:
+Microsoft Agent Framework je tiež zameraný na interoperabilitu tým, že:
 
-- **Cloud-agnostickosti** - Agenti môžu bežať v kontajneroch, on-premise a naprieč rôznymi cloudmi.
-- **Poskytovateľskej agnostickosti** - Agenti môžu byť vytvorení prostredníctvom preferovaného SDK vrátane Azure OpenAI a OpenAI.
-- **Integrácie otvorených štandardov** - Agenti môžu využívať protokoly ako Agent-to-Agent (A2A) a Model Context Protocol (MCP) na objavovanie a používanie iných agentov a nástrojov.
-- **Pluginov a konektorov** - Pripojenia môžu byť vytvorené k dátovým a pamäťovým službám ako Microsoft Fabric, SharePoint, Pinecone a Qdrant.
+- **Je nezávislý od cloudu** - agenti môžu bežať v kontajneroch, on-premise a naprieč viacerými rôznymi cloudmi.
+- **Je nezávislý od poskytovateľa** - agenti môžu byť vytváraní prostredníctvom vášho preferovaného SDK vrátane Azure OpenAI a OpenAI
+- **Integruje otvorené štandardy** - agenti môžu využívať protokoly ako Agent-to-Agent (A2A) a Model Context Protocol (MCP) na objavovanie a používanie iných agentov a nástrojov.
+- **Pluginy a konektory** - pripojenia môžu byť vytvorené k dátovým a pamäťovým službám ako Microsoft Fabric, SharePoint, Pinecone a Qdrant.
 
-Pozrime sa, ako sú tieto funkcie aplikované na niektoré základné koncepty Microsoft Agent Framework.
+Pozrime sa, ako sa tieto funkcie aplikujú na niektoré zo základných konceptov Microsoft Agent Framework.
 
 ## Kľúčové koncepty Microsoft Agent Framework
 
@@ -58,13 +58,13 @@ Pozrime sa, ako sú tieto funkcie aplikované na niektoré základné koncepty M
 
 **Vytváranie agentov**
 
-Vytváranie agentov sa vykonáva definovaním inferenčnej služby (LLM Provider), súboru inštrukcií pre AI agenta a priradeného `name`:
+Vytvorenie agenta sa vykonáva definovaním inferenčnej služby (poskytovateľ LLM), súboru inštrukcií, ktoré má AI agent nasledovať, a priradením `name`:
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-Vyššie uvedené používa `Azure OpenAI`, ale agenti môžu byť vytvorení pomocou rôznych služieb vrátane `Azure AI Foundry Agent Service`:
+Vyššie uvedené používa `Azure OpenAI`, ale agenti môžu byť vytvorení pomocou rôznych služieb vrátane `Microsoft Foundry Agent Service`:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
@@ -80,7 +80,7 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
-alebo vzdialených agentov pomocou protokolu A2A:
+alebo vzdialení agenti používajúci protokol A2A:
 
 ```python
 agent = A2AAgent( name=agent_card.name, description=agent_card.description, agent_card=agent_card, url="https://your-a2a-agent-host" )
@@ -88,7 +88,7 @@ agent = A2AAgent( name=agent_card.name, description=agent_card.description, agen
 
 **Spúšťanie agentov**
 
-Agenti sú spúšťaní pomocou metód `.run` alebo `.run_stream` pre odpovede bez streamovania alebo so streamovaním.
+Agenti sa spúšťajú pomocou metód `.run` alebo `.run_stream` pre nereálne alebo streamované odpovede.
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,9 +102,9 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-Každé spustenie agenta môže mať aj možnosti prispôsobenia parametrov, ako napríklad `max_tokens`, ktoré agent používa, `tools`, ktoré agent môže volať, a dokonca aj samotný `model`, ktorý agent používa.
+Každé spustenie agenta môže mať aj voľby na prispôsobenie parametrov ako `max_tokens` používaných agentom, `tools`, ktoré agent môže volať, a dokonca aj samotný `model` použitý agentom.
 
-To je užitočné v prípadoch, kde sú na dokončenie úlohy používateľa potrebné konkrétne modely alebo nástroje.
+To je užitočné v prípadoch, kde sú pre splnenie používateľovej úlohy potrebné určité modely alebo nástroje.
 
 **Nástroje**
 
@@ -114,7 +114,7 @@ Nástroje môžu byť definované pri definovaní agenta:
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# Pri priamej tvorbe ChatAgenta
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
@@ -124,53 +124,53 @@ a tiež pri spúšťaní agenta:
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Nástroj poskytnutý iba pre tento beh )
 ```
 
-**Vlákna agentov**
+**Vlákna agenta**
 
-Vlákna agentov sa používajú na spracovanie viacotáčkových konverzácií. Vlákna môžu byť vytvorené buď:
+Vlákna agenta sa používajú na spracovanie viackolových konverzácií. Vlákna môžu byť vytvorené buď:
 
-- Použitím `get_new_thread()`, čo umožňuje vlákno uložiť na dlhší čas
-- Automatickým vytvorením vlákna pri spúšťaní agenta, pričom vlákno existuje iba počas aktuálneho spustenia.
+- Použitím `get_new_thread()` čo umožňuje vlákno ukladať v čase
+- Automatickým vytvorením vlákna pri spúšťaní agenta, pričom vlákno trvá iba počas aktuálneho spustenia.
 
-Na vytvorenie vlákna kód vyzerá takto:
+Na vytvorenie vlákna vyzerá kód takto:
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Vytvorte nový vlákno.
+thread = agent.get_new_thread() # Spustite agenta s vláknom.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-Potom môžete vlákno serializovať na uloženie na neskoršie použitie:
+Môžete potom serializovať vlákno na jeho uloženie na neskoršie použitie:
 
 ```python
-# Create a new thread. 
+# Vytvorte novú vlákno.
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# Spustite agenta s vláknom.
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# Serializujte vlákno na uloženie.
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# Deserializujte stav vlákna po načítaní z úložiska.
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
 **Middleware agenta**
 
-Agenti interagujú s nástrojmi a LLM na dokončenie úloh používateľa. V určitých scenároch chceme vykonať alebo sledovať akcie medzi týmito interakciami. Middleware agenta nám to umožňuje prostredníctvom:
+Agenti komunikujú s nástrojmi a LLM, aby dokončili používateľské úlohy. V určitých situáciách chceme vykonať alebo sledovať akcie medzi týmito interakciami. Middleware agenta nám to umožňuje pomocou:
 
-*Function Middleware*
+*Funkčný middleware*
 
-Tento middleware nám umožňuje vykonať akciu medzi agentom a funkciou/nástrojom, ktorý bude volať. Príkladom použitia by mohlo byť logovanie volania funkcie.
+Tento middleware umožňuje vykonať akciu medzi agentom a funkciou/nástrojom, ktorý bude volať. Príklad použitia je napríklad zaznamenávanie volania funkcie.
 
-V kóde nižšie `next` definuje, či by mal byť volaný ďalší middleware alebo samotná funkcia.
+V kóde nižšie `next` definuje, či má byť zavolaný ďalší middleware alebo skutočná funkcia.
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +178,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # Predspracovanie: Zaznamenať pred vykonaním funkcie
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # Pokračovať na ďalší middleware alebo vykonanie funkcie
     await next(context)
 
-    # Post-processing: Log after function execution
+    # Následné spracovanie: Zaznamenať po vykonaní funkcie
     print(f"[Function] {context.function.name} completed")
 ```
 
-*Chat Middleware*
+*Chat middleware*
 
-Tento middleware nám umožňuje vykonať alebo logovať akciu medzi agentom a požiadavkami medzi LLM.
+Tento middleware umožňuje vykonať alebo zaznamenať akciu medzi agentom a požiadavkami medzi LLM.
 
-Obsahuje dôležité informácie, ako napríklad `messages`, ktoré sú posielané AI službe.
+Obsahuje dôležité informácie ako správy `messages`, ktoré sú posielané AI službe.
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +200,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # Predspracovanie: Zaznamenať pred volaním AI
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # Pokračovať na ďalší middleware alebo AI službu
     await next(context)
 
-    # Post-processing: Log after AI response
+    # Postspracovanie: Zaznamenať po odpovedi AI
     print("[Chat] AI response received")
 
 ```
 
 **Pamäť agenta**
 
-Ako bolo pokryté v lekcii `Agentic Memory`, pamäť je dôležitým prvkom umožňujúcim agentovi operovať v rôznych kontextoch. MAF ponúka niekoľko rôznych typov pamätí:
+Ako sme pokryli v lekcii `Agentic Memory`, pamäť je dôležitý prvok na umožnenie agenta operovať v rôznom kontexte. MAF ponúka niekoľko rôznych typov pamätí:
 
-*Pamäť v pamäti*
+*Pamäť v pamäti (In-Memory Storage)*
 
 Toto je pamäť uložená vo vláknach počas behu aplikácie.
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# Vytvorte nový vlákn.
+thread = agent.get_new_thread() # Spustite agenta s vláknom.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
-*Trvalé správy*
+*Trvácne správy (Persistent Messages)*
 
-Táto pamäť sa používa pri ukladaní histórie konverzácií naprieč rôznymi reláciami. Je definovaná pomocou `chat_message_store_factory`:
+Táto pamäť sa používa na ukladanie histórie konverzácie naprieč rôznymi reláciami. Definuje sa pomocou `chat_message_store_factory`:
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# Vytvorte vlastné úložisko správ
 def create_message_store():
     return ChatMessageStore()
 
@@ -246,12 +246,12 @@ agent = ChatAgent(
 
 *Dynamická pamäť*
 
-Táto pamäť je pridaná do kontextu pred spustením agentov. Tieto pamäte môžu byť uložené v externých službách, ako je mem0:
+Táto pamäť sa pridáva do kontextu pred spustením agentov. Tieto pamäte môžu byť uložené v externých službách, ako je mem0:
 
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# Použitie Mem0 pre pokročilé pamäťové schopnosti
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -268,7 +268,7 @@ agent = ChatAgent(
 
 **Pozorovateľnosť agenta**
 
-Pozorovateľnosť je dôležitá pre budovanie spoľahlivých a udržiavateľných agentických systémov. MAF integruje OpenTelemetry na poskytovanie sledovania a metrík pre lepšiu pozorovateľnosť.
+Pozorovateľnosť je dôležitá pre vytváranie spoľahlivých a udržiavateľných agentických systémov. MAF sa integruje s OpenTelemetry na poskytovanie trasovania a meradiel pre lepšiu pozorovateľnosť.
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,7 +276,7 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # urob niečo
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
@@ -284,21 +284,21 @@ counter.add(1, {"key": "value"})
 
 ### Pracovné postupy
 
-MAF ponúka pracovné postupy, ktoré sú preddefinované kroky na dokončenie úlohy a zahŕňajú AI agentov ako komponenty v týchto krokoch.
+MAF ponúka pracovné postupy, ktoré sú preddefinované kroky na dokončenie úlohy a zahŕňajú AI agentov ako komponenty týchto krokov.
 
-Pracovné postupy sú zložené z rôznych komponentov, ktoré umožňujú lepšiu kontrolu toku. Pracovné postupy tiež umožňujú **orchestráciu viacerých agentov** a **kontrolné body** na uloženie stavov pracovného postupu.
+Pracovné postupy sa skladajú z rôznych komponentov, ktoré umožňujú lepšiu kontrolu toku. Tiež umožňujú **multi-agent orchestráciu** a **checkpointing** na uloženie stavov pracovného procesu.
 
-Základné komponenty pracovného postupu sú:
+Základné komponenty pracovného procesu sú:
 
-**Exekútory**
+**Výkonníky (Executors)**
 
-Exekútory prijímajú vstupné správy, vykonávajú priradené úlohy a potom produkujú výstupnú správu. Tým sa pracovný postup posúva smerom k dokončeniu väčšej úlohy. Exekútory môžu byť buď AI agenti alebo vlastná logika.
+Výkonníci prijímajú vstupné správy, vykonávajú priradené úlohy a potom produkujú výstupnú správu. Tým posúvajú pracovný postup smerom k dokončeniu väčšej úlohy. Výkonníci môžu byť AI agenti alebo vlastná logika.
 
-**Hrany**
+**Hrany (Edges)**
 
-Hrany sa používajú na definovanie toku správ v pracovnom postupe. Môžu byť:
+Hrany sa používajú na definovanie toku správ v pracovnom procese. Môžu byť:
 
-*Priame hrany* - Jednoduché spojenia jeden na jedného medzi exekútormi:
+*Priame hrany* - jednoduché jedno-na-jedno spojenia medzi výkonníkmi:
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,24 +309,24 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*Podmienené hrany* - Aktivované po splnení určitej podmienky. Napríklad, keď hotelové izby nie sú dostupné, exekútor môže navrhnúť iné možnosti.
+*Podmienené hrany* - aktivujú sa po splnení určitej podmienky. Napríklad, keď nie sú dostupné hotelové izby, výkonník môže navrhnúť iné možnosti.
 
-*Switch-case hrany* - Posielajú správy rôznym exekútorom na základe definovaných podmienok. Napríklad, ak má cestovný zákazník prioritný prístup, jeho úlohy budú spracované cez iný pracovný postup.
+*Switch-case hrany* - smerujú správy k rôznym výkonníkom na základe definovaných podmienok. Napríklad ak má cestovateľ prioritu, jeho úlohy budú spracované inom pracovnom procese.
 
-*Fan-out hrany* - Posielajú jednu správu viacerým cieľom.
+*Fan-out hrany* - posielajú jednu správu viacerým cieľom.
 
-*Fan-in hrany* - Zbierajú viac správ od rôznych exekútorov a posielajú ich jednému cieľu.
+*Fan-in hrany* - zbierajú viacero správ od rôznych výkonníkov a posielajú ich jednému cieľu.
 
 **Udalosti**
 
-Na lepšiu pozorovateľnosť pracovných postupov MAF ponúka zabudované udalosti pre vykonávanie vrátane:
+Aby sa zlepšila pozorovateľnosť pracovných postupov, MAF ponúka zabudované udalosti počas vykonávania vrátane:
 
-- `WorkflowStartedEvent`  - Začiatok vykonávania pracovného postupu
-- `WorkflowOutputEvent` - Pracovný postup produkuje výstup
-- `WorkflowErrorEvent` - Pracovný postup narazí na chybu
-- `ExecutorInvokeEvent`  - Exekútor začína spracovanie
-- `ExecutorCompleteEvent`  - Exekútor dokončuje spracovanie
-- `RequestInfoEvent` - Vydaná požiadavka
+- `WorkflowStartedEvent`  - začiatok vykonávania pracovného postupu
+- `WorkflowOutputEvent` - pracovný postup produkuje výstup
+- `WorkflowErrorEvent` - pracovný postup narazí na chybu
+- `ExecutorInvokeEvent`  - výkonník začína spracovávanie
+- `ExecutorCompleteEvent`  - výkonník dokončuje spracovanie
+- `RequestInfoEvent` - je vydaná požiadavka
 
 ## Migrácia z iných rámcov (Semantic Kernel a AutoGen)
 
@@ -334,23 +334,23 @@ Na lepšiu pozorovateľnosť pracovných postupov MAF ponúka zabudované udalos
 
 **Zjednodušené vytváranie agentov**
 
-Semantic Kernel vyžaduje vytvorenie inštancie Kernel pre každého agenta. MAF používa zjednodušený prístup pomocou rozšírení pre hlavné poskytovateľov.
+Semantic Kernel vyžaduje vytvorenie inštancie Kernel pre každého agenta. MAF používa zjednodušený prístup pomocou rozšírení pre hlavných poskytovateľov.
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-**Vytváranie vlákien agentov**
+**Vytváranie vlákien agenta**
 
-Semantic Kernel vyžaduje manuálne vytváranie vlákien. V MAF je agent priamo priradený vlákno.
+Semantic Kernel vyžaduje manuálne vytváranie vlákien. V MAF je priamo agentovi priradené vlákno.
 
 ```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+thread = agent.get_new_thread() # Spustiť agenta s vláknom.
 ```
 
 **Registrácia nástrojov**
 
-V Semantic Kernel sú nástroje registrované do Kernel a Kernel je potom odovzdaný agentovi. V MAF sú nástroje registrované priamo počas procesu vytvárania agenta.
+V Semantic Kernel sú nástroje registrované v Kernel a Kernel je potom odovzdaný agentovi. V MAF sa nástroje registrujú priamo počas procesu tvorby agenta.
 
 ```python
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
@@ -358,27 +358,29 @@ agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpf
 
 ### Rozdiely medzi MAF a AutoGen
 
-**Tímy vs pracovné postupy**
+**Tímy vs Pracovné postupy**
 
-`Tímy` sú štruktúra udalostí pre aktivity riadené udalosťami s agentmi v AutoGen. MAF používa `Pracovné postupy`, ktoré smerujú dáta k exekútorom prostredníctvom architektúry založenej na grafoch.
+`Teams` sú štruktúra udalostí pre event-driven aktivity s agentmi v AutoGen. MAF používa `Workflows`, ktoré smerujú dáta k výkonníkom cez architektúru založenú na grafe.
 
 **Vytváranie nástrojov**
 
-AutoGen používa `FunctionTool` na obalenie funkcií, ktoré agenti môžu volať. MAF používa @ai_function, ktorý funguje podobne, ale tiež automaticky odvodzuje schémy pre každú funkciu.
+AutoGen používa `FunctionTool` na zabalenie funkcií pre volanie agentmi. MAF používa @ai_function, ktorý funguje podobne a zároveň automaticky odvádza schémy pre každú funkciu.
 
-**Správanie agentov**
+**Správanie agenta**
 
-Agenti sú v AutoGen predvolene jednootáčkoví, pokiaľ `max_tool_iterations` nie je nastavené na vyššiu hodnotu. V MAF je `ChatAgent` predvolene viacotáčkový, čo znamená, že bude pokračovať vo volaní nástrojov, kým úloha používateľa nebude dokončená.
+Agenti sú v AutoGen predvolene jedno-koloví, pokiaľ nie je nastavené `max_tool_iterations` na vyššiu hodnotu. V MAF je `ChatAgent` predvolene viac-kolový, čo znamená, že bude pokračovať v volaní nástrojov, kým nie je používateľova úloha dokončená.
 
-## Ukážky kódu 
+## Ukážky kódu
 
-Ukážky kódu pre Microsoft Agent Framework nájdete v tomto repozitári pod súbormi `xx-python-agent-framework` a `xx-dotnet-agent-framework`.
+Ukážky kódu pre Microsoft Agent Framework nájdete v tomto repozitári v súboroch `xx-python-agent-framework` a `xx-dotnet-agent-framework`.
 
 ## Máte ďalšie otázky o Microsoft Agent Framework?
 
-Pripojte sa k [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde sa môžete stretnúť s ostatnými študentmi, zúčastniť sa konzultačných hodín a získať odpovede na vaše otázky o AI agentoch.
+Pridajte sa do [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord), kde sa môžete stretnúť s ďalšími študentmi, zúčastniť sa konzultačných hodín a získať odpovede na vaše otázky o AI agentoch.
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vyhlásenie o vylúčení zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, majte prosím na pamäti, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho materskom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Za akékoľvek nepochopenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu nezodpovedáme.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,161 +1,159 @@
 # AGENTS.md
 
-## प्रकल्पाचा आढावा
+## Project Overview
 
-हे रिपॉझिटरी "AI Agents for Beginners" - एक व्यापक शैक्षणिक कोर्स आहे जो AI एजंट्स तयार करण्यासाठी आवश्यक असलेल्या सर्व गोष्टी शिकवतो. या कोर्समध्ये 15+ धडे आहेत ज्यामध्ये मूलभूत गोष्टी, डिझाइन पॅटर्न, फ्रेमवर्क्स आणि AI एजंट्सचे उत्पादन तैनाती समाविष्ट आहे.
+This repository contains "AI Agents for Beginners" - a comprehensive educational course teaching everything needed to build AI Agents. The course consists of 15+ lessons covering fundamentals, design patterns, frameworks, and production deployment of AI agents.
 
-**मुख्य तंत्रज्ञान:**
+**Key Technologies:**
 - Python 3.12+
-- परस्पर शिकण्यासाठी Jupyter Notebooks
-- AI फ्रेमवर्क्स: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI Services: Azure AI Foundry, Azure AI Agent Service
-- GitHub Models Marketplace (फ्री टियर उपलब्ध)
+- Jupyter Notebooks for interactive learning
+- AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
+- GitHub Models Marketplace (free tier available)
 
-**आर्किटेक्चर:**
-- धड्यांवर आधारित रचना (00-15+ डिरेक्टरीज)
-- प्रत्येक धड्यात: README दस्तऐवज, कोड नमुने (Jupyter notebooks), आणि प्रतिमा
-- स्वयंचलित भाषांतर प्रणालीद्वारे बहुभाषिक समर्थन
-- प्रत्येक धड्यासाठी एकाधिक फ्रेमवर्क पर्याय (Semantic Kernel, AutoGen, Azure AI Agent Service)
+**Architecture:**
+- Lesson-based structure (00-15+ directories)
+- Each lesson contains: README documentation, code samples (Jupyter notebooks), and images
+- Multi-language support via automated translation system
+- Multiple framework options per lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
 
-## सेटअप कमांड्स
+## Setup Commands
 
-### पूर्वतयारी
-- Python 3.12 किंवा त्याहून अधिक
-- GitHub खाते (GitHub Models - फ्री टियरसाठी)
-- Azure सदस्यता (पर्यायी, Azure AI सेवांसाठी)
+### Prerequisites
+- Python 3.12 or higher
+- GitHub account (for GitHub Models - free tier)
+- Azure subscription (optional, for Azure AI services)
 
-### प्रारंभिक सेटअप
+### Initial Setup
 
-1. **रिपॉझिटरी क्लोन किंवा फोर्क करा:**
+1. **Clone or fork the repository:**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # किंवा
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **Python व्हर्च्युअल वातावरण तयार करा आणि सक्रिय करा:**
+2. **Create and activate Python virtual environment:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows वर: venv\Scripts\activate
    ```
 
-3. **आवश्यकता स्थापित करा:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **पर्यावरणीय व्हेरिएबल्स सेट करा:**
+4. **Set up environment variables:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # .env मध्ये तुमच्या API की आणि एंडपॉइंट्स संपादित करा
    ```
 
+### Required Environment Variables
 
-### आवश्यक पर्यावरणीय व्हेरिएबल्स
+For **GitHub Models (Free)**:
+- `GITHUB_TOKEN` - Personal access token from GitHub
 
-**GitHub Models (फ्री) साठी:**
-- `GITHUB_TOKEN` - GitHub वरून वैयक्तिक प्रवेश टोकन
+For **Azure AI Services** (optional):
+- `PROJECT_ENDPOINT` - Microsoft Foundry project endpoint
+- `AZURE_OPENAI_API_KEY` - Azure OpenAI API key
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Deployment name for chat model
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Deployment name for embeddings
+- Additional Azure configuration as shown in `.env.example`
 
-**Azure AI Services** (पर्यायी) साठी:
-- `PROJECT_ENDPOINT` - Azure AI Foundry प्रकल्पाचा एंडपॉइंट
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI API की
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI एंडपॉइंट URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - चॅट मॉडेलसाठी डिप्लॉयमेंट नाव
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - एम्बेडिंगसाठी डिप्लॉयमेंट नाव
-- `.env.example` मध्ये दाखवलेल्या अतिरिक्त Azure कॉन्फिगरेशन
+## Development Workflow
 
-## विकास कार्यप्रवाह
+### Running Jupyter Notebooks
 
-### Jupyter Notebooks चालवणे
+Each lesson contains multiple Jupyter notebooks for different frameworks:
 
-प्रत्येक धड्यात विविध फ्रेमवर्कसाठी अनेक Jupyter notebooks आहेत:
-
-1. **Jupyter सुरू करा:**
+1. **Start Jupyter:**
    ```bash
    jupyter notebook
    ```
 
-2. **धड्याच्या डिरेक्टरीमध्ये जा** (उदा., `01-intro-to-ai-agents/code_samples/`)
+2. **Navigate to a lesson directory** (e.g., `01-intro-to-ai-agents/code_samples/`)
 
-3. **नोटबुक उघडा आणि चालवा:**
-   - `*-semantic-kernel.ipynb` - Semantic Kernel फ्रेमवर्क वापरून
-   - `*-autogen.ipynb` - AutoGen फ्रेमवर्क वापरून
-   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python) वापरून
-   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET) वापरून
-   - `*-azureaiagent.ipynb` - Azure AI Agent Service वापरून
+3. **Open and run notebooks:**
+   - `*-semantic-kernel.ipynb` - Using Semantic Kernel framework
+   - `*-autogen.ipynb` - Using AutoGen framework
+   - `*-python-agent-framework.ipynb` - Using Microsoft Agent Framework (Python)
+   - `*-dotnet-agent-framework.ipynb` - Using Microsoft Agent Framework (.NET)
+   - `*-azureaiagent.ipynb` - Using Azure AI Agent Service
 
-### विविध फ्रेमवर्कसह काम करणे
+### Working with Different Frameworks
 
 **Semantic Kernel + GitHub Models:**
-- GitHub खात्यासह फ्री टियर उपलब्ध
-- शिकण्यासाठी आणि प्रयोगासाठी चांगले
-- फाइल नमुना: `*-semantic-kernel*.ipynb`
+- Free tier available with GitHub account
+- Good for learning and experimentation
+- File pattern: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
-- GitHub खात्यासह फ्री टियर उपलब्ध
-- मल्टी-एजंट ऑर्केस्ट्रेशन क्षमता
-- फाइल नमुना: `*-autogen.ipynb`
+- Free tier available with GitHub account
+- Multi-agent orchestration capabilities
+- File pattern: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
-- Microsoft कडून नवीनतम फ्रेमवर्क
-- Python आणि .NET मध्ये उपलब्ध
-- फाइल नमुना: `*-agent-framework.ipynb`
+- Latest framework from Microsoft
+- Available in Python and .NET
+- File pattern: `*-agent-framework.ipynb`
 
 **Azure AI Agent Service:**
-- Azure सदस्यता आवश्यक
-- उत्पादनासाठी तयार वैशिष्ट्ये
-- फाइल नमुना: `*-azureaiagent.ipynb`
+- Requires Azure subscription
+- Production-ready features
+- File pattern: `*-azureaiagent.ipynb`
 
-## चाचणी सूचना
+## Testing Instructions
 
-हे शैक्षणिक रिपॉझिटरी आहे ज्यामध्ये उदाहरण कोड आहे, उत्पादन कोडसह स्वयंचलित चाचण्या नाहीत. तुमची सेटअप आणि बदल सत्यापित करण्यासाठी:
+This is an educational repository with example code rather than production code with automated tests. To verify your setup and changes:
 
-### मॅन्युअल चाचणी
+### Manual Testing
 
-1. **Python वातावरणाची चाचणी करा:**
+1. **Test Python environment:**
    ```bash
-   python --version  # Should be 3.12+
+   python --version  # 3.12+ असावे
    pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
    ```
 
-2. **नोटबुक कार्यान्वयनाची चाचणी करा:**
+2. **Test notebook execution:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # नोटबुक स्क्रिप्टमध्ये रूपांतरित करा आणि चालवा (टेस्ट्सची आयात)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
-3. **पर्यावरणीय व्हेरिएबल्स सत्यापित करा:**
+3. **Verify environment variables:**
    ```bash
    python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
    ```
 
+### Running Individual Notebooks
 
-### वैयक्तिक नोटबुक चालवणे
+Open notebooks in Jupyter and execute cells sequentially. Each notebook is self-contained and includes:
+- Import statements
+- Configuration loading
+- Example agent implementations
+- Expected outputs in markdown cells
 
-Jupyter मध्ये नोटबुक उघडा आणि अनुक्रमे सेल्स कार्यान्वित करा. प्रत्येक नोटबुक स्वतंत्र आहे आणि यामध्ये समाविष्ट आहे:
-- आयात स्टेटमेंट्स
-- कॉन्फिगरेशन लोडिंग
-- उदाहरण एजंट अंमलबजावणी
-- अपेक्षित आउटपुट्स markdown सेल्समध्ये
+## Code Style
 
-## कोड शैली
+### Python Conventions
 
-### Python परंपरा
+- **Python Version**: 3.12+
+- **Code Style**: Follow standard Python PEP 8 conventions
+- **Notebooks**: Use clear markdown cells to explain concepts
+- **Imports**: Group by standard library, third-party, local imports
 
-- **Python आवृत्ती**: 3.12+
-- **कोड शैली**: मानक Python PEP 8 परंपरा पाळा
-- **नोटबुक्स**: संकल्पना स्पष्ट करण्यासाठी स्पष्ट markdown सेल्स वापरा
-- **आयात**: मानक लायब्ररी, तृतीय-पक्ष, स्थानिक आयातानुसार गट करा
+### Jupyter Notebook Conventions
 
-### Jupyter Notebook परंपरा
+- Include descriptive markdown cells before code cells
+- Add output examples in notebooks for reference
+- Use clear variable names that match lesson concepts
+- Keep notebook execution order linear (cell 1 → 2 → 3...)
 
-- कोड सेल्सच्या आधी वर्णनात्मक markdown सेल्स समाविष्ट करा
-- संदर्भासाठी नोटबुक्समध्ये आउटपुट उदाहरणे जोडा
-- धडाच्या संकल्पनांशी जुळणारी स्पष्ट व्हेरिएबल नावे वापरा
-- नोटबुक कार्यान्वयन क्रम रेखीय ठेवा (सेल 1 → 2 → 3...)
-
-### फाइल संघटना
+### File Organization
 
 ```
 <lesson-number>-<lesson-name>/
@@ -169,174 +167,175 @@ Jupyter मध्ये नोटबुक उघडा आणि अनुक�
     └── *.png
 ```
 
+## Build and Deployment
 
-## बांधणी आणि तैनाती
+### Building Documentation
 
-### दस्तऐवज तयार करणे
+This repository uses Markdown for documentation:
+- README.md files in each lesson folder
+- Main README.md at repository root
+- Automated translation system via GitHub Actions
 
-हे रिपॉझिटरी Markdown वापरते:
-- प्रत्येक धडाच्या फोल्डरमध्ये README.md फाइल्स
-- रिपॉझिटरीच्या मूळ ठिकाणी मुख्य README.md
-- GitHub Actions द्वारे स्वयंचलित भाषांतर प्रणाली
+### CI/CD Pipeline
 
-### CI/CD पाइपलाइन
+Located in `.github/workflows/`:
 
-`.github/workflows/` मध्ये स्थित:
+1. **co-op-translator.yml** - Automatic translation to 50+ languages
+2. **welcome-issue.yml** - Welcomes new issue creators
+3. **welcome-pr.yml** - Welcomes new pull request contributors
 
-1. **co-op-translator.yml** - 50+ भाषांमध्ये स्वयंचलित भाषांतर
-2. **welcome-issue.yml** - नवीन समस्या निर्मात्यांचे स्वागत करते
-3. **welcome-pr.yml** - नवीन पुल विनंती योगदानकर्त्यांचे स्वागत करते
+### Deployment
 
-### तैनाती
+This is an educational repository - no deployment process. Users:
+1. Fork or clone the repository
+2. Run notebooks locally or in GitHub Codespaces
+3. Learn by modifying and experimenting with examples
 
-हे शैक्षणिक रिपॉझिटरी आहे - कोणतीही तैनाती प्रक्रिया नाही. वापरकर्ते:
-1. रिपॉझिटरी फोर्क किंवा क्लोन करा
-2. नोटबुक्स स्थानिकपणे किंवा GitHub Codespaces मध्ये चालवा
-3. उदाहरणे बदलून आणि प्रयोग करून शिका
+## Pull Request Guidelines
 
-## पुल विनंती मार्गदर्शक तत्त्वे
+### Before Submitting
 
-### सबमिट करण्यापूर्वी
+1. **Test your changes:**
+   - Run affected notebooks completely
+   - Verify all cells execute without errors
+   - Check that outputs are appropriate
 
-1. **तुमचे बदल चाचणी करा:**
-   - प्रभावित नोटबुक्स पूर्णपणे चालवा
-   - सर्व सेल्स त्रुटीशिवाय कार्यान्वित होतात याची खात्री करा
-   - आउटपुट योग्य आहेत याची तपासणी करा
+2. **Documentation updates:**
+   - Update README.md if adding new concepts
+   - Add comments in notebooks for complex code
+   - Ensure markdown cells explain the purpose
 
-2. **दस्तऐवज अद्यतन:**
-   - नवीन संकल्पना जोडल्यास README.md अद्यतनित करा
-   - जटिल कोडसाठी नोटबुक्समध्ये टिप्पण्या जोडा
-   - markdown सेल्समध्ये उद्देश स्पष्ट करा
+3. **File changes:**
+   - Avoid committing `.env` files (use `.env.example`)
+   - Don't commit `venv/` or `__pycache__/` directories
+   - Keep notebook outputs when they demonstrate concepts
+   - Remove temporary files and backup notebooks (`*-backup.ipynb`)
 
-3. **फाइल बदल:**
-   - `.env` फाइल्स कमिट करू नका (`.env.example` वापरा)
-   - `venv/` किंवा `__pycache__/` डिरेक्टरीज कमिट करू नका
-   - संकल्पना दाखवण्यासाठी नोटबुक आउटपुट ठेवा
-   - तात्पुरत्या फाइल्स आणि बॅकअप नोटबुक्स (`*-backup.ipynb`) काढा
+### PR Title Format
 
-### PR शीर्षक स्वरूप
+Use descriptive titles:
+- `[Lesson-XX] Add new example for <concept>`
+- `[Fix] Correct typo in lesson-XX README`
+- `[Update] Improve code sample in lesson-XX`
+- `[Docs] Update setup instructions`
 
-वर्णनात्मक शीर्षके वापरा:
-- `[Lesson-XX] <संकल्पनेसाठी नवीन उदाहरण जोडा>`
-- `[Fix] lesson-XX README मधील टायपो सुधारित करा`
-- `[Update] lesson-XX मधील कोड नमुना सुधारित करा`
-- `[Docs] सेटअप सूचना अद्यतनित करा`
+### Required Checks
 
-### आवश्यक तपासण्या
+- Notebooks should execute without errors
+- README files should be clear and accurate
+- Follow existing code patterns in the repository
+- Maintain consistency with other lessons
 
-- नोटबुक्स त्रुटीशिवाय कार्यान्वित होणे आवश्यक आहे
-- README फाइल्स स्पष्ट आणि अचूक असाव्यात
-- रिपॉझिटरीमधील विद्यमान कोड नमुन्यांचे अनुसरण करा
-- इतर धडांशी सुसंगतता राखा
+## Additional Notes
 
-## अतिरिक्त टिप्पण्या
+### Common Gotchas
 
-### सामान्य अडचणी
+1. **Python version mismatch:**
+   - Ensure Python 3.12+ is used
+   - Some packages may not work with older versions
+   - Use `python3 -m venv` to specify Python version explicitly
 
-1. **Python आवृत्ती विसंगती:**
-   - Python 3.12+ वापरला जात आहे याची खात्री करा
-   - काही पॅकेजेस जुन्या आवृत्त्यांसह कार्य करत नाहीत
-   - Python आवृत्ती स्पष्टपणे निर्दिष्ट करण्यासाठी `python3 -m venv` वापरा
+2. **Environment variables:**
+   - Always create `.env` from `.env.example`
+   - Don't commit `.env` file (it's in `.gitignore`)
+   - GitHub token needs appropriate permissions
 
-2. **पर्यावरणीय व्हेरिएबल्स:**
-   - नेहमी `.env.example` वरून `.env` तयार करा
-   - `.env` फाइल कमिट करू नका (ती `.gitignore` मध्ये आहे)
-   - GitHub टोकनला योग्य परवानग्या आवश्यक आहेत
+3. **Package conflicts:**
+   - Use a fresh virtual environment
+   - Install from `requirements.txt` rather than individual packages
+   - Some notebooks may require additional packages mentioned in their markdown cells
 
-3. **पॅकेज संघर्ष:**
-   - नवीन व्हर्च्युअल वातावरण वापरा
-   - वैयक्तिक पॅकेजेसऐवजी `requirements.txt` मधून स्थापित करा
-   - काही नोटबुक्समध्ये त्यांच्या markdown सेल्समध्ये अतिरिक्त पॅकेजेस आवश्यक असू शकतात
+4. **Azure services:**
+   - Azure AI services require active subscription
+   - Some features are region-specific
+   - Free tier limitations apply to GitHub Models
 
-4. **Azure सेवांसाठी:**
-   - Azure AI सेवांसाठी सक्रिय सदस्यता आवश्यक आहे
-   - काही वैशिष्ट्ये प्रदेश-विशिष्ट आहेत
-   - GitHub Models साठी फ्री टियर मर्यादा लागू होतात
+### Learning Path
 
-### शिकण्याचा मार्ग
+Recommended progression through lessons:
+1. **00-course-setup** - Start here for environment setup
+2. **01-intro-to-ai-agents** - Understand AI agent fundamentals
+3. **02-explore-agentic-frameworks** - Learn about different frameworks
+4. **03-agentic-design-patterns** - Core design patterns
+5. Continue through numbered lessons sequentially
 
-धडांमधून अनुक्रमे प्रगती करण्याची शिफारस:
-1. **00-course-setup** - वातावरण सेटअपसाठी येथे प्रारंभ करा
-2. **01-intro-to-ai-agents** - AI एजंट्सची मूलभूत माहिती समजून घ्या
-3. **02-explore-agentic-frameworks** - विविध फ्रेमवर्क्सबद्दल शिका
-4. **03-agentic-design-patterns** - मुख्य डिझाइन पॅटर्न्स
-5. क्रमांकित धडांद्वारे अनुक्रमे पुढे जा
+### Framework Selection
 
-### फ्रेमवर्क निवड
+Choose framework based on your goals:
+- **Learning/Prototyping**: Semantic Kernel + GitHub Models (free)
+- **Multi-agent systems**: AutoGen
+- **Latest features**: Microsoft Agent Framework (MAF)
+- **Production deployment**: Azure AI Agent Service
 
-तुमच्या उद्दिष्टांनुसार फ्रेमवर्क निवडा:
-- **शिकणे/प्रोटोटायपिंग**: Semantic Kernel + GitHub Models (फ्री)
-- **मल्टी-एजंट सिस्टम्स**: AutoGen
-- **नवीनतम वैशिष्ट्ये**: Microsoft Agent Framework (MAF)
-- **उत्पादन तैनाती**: Azure AI Agent Service
+### Getting Help
 
-### मदत मिळवणे
+- Join the [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- Review lesson README files for specific guidance
+- Check the main [README.md](./README.md) for course overview
+- Refer to [Course Setup](./00-course-setup/README.md) for detailed setup instructions
 
-- [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord) मध्ये सामील व्हा
-- विशिष्ट मार्गदर्शनासाठी धड README फाइल्स पुनरावलोकन करा
-- कोर्सचा आढावा घेण्यासाठी मुख्य [README.md](./README.md) तपासा
-- तपशीलवार सेटअप सूचनांसाठी [Course Setup](./00-course-setup/README.md) पहा
+### Contributing
 
-### योगदान
+This is an open educational project. Contributions welcome:
+- Improve code examples
+- Fix typos or errors
+- Add clarifying comments
+- Suggest new lesson topics
+- Translate to additional languages
 
-हे एक खुले शैक्षणिक प्रकल्प आहे. योगदान स्वागतार्ह:
-- कोड उदाहरणे सुधारित करा
-- टायपो किंवा त्रुटी सुधारित करा
-- स्पष्ट करणाऱ्या टिप्पण्या जोडा
-- नवीन धड विषय सुचवा
-- अतिरिक्त भाषांमध्ये भाषांतर करा
+See [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) for current needs.
 
-[GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) मध्ये विद्यमान गरजा पहा.
+## Project-Specific Context
 
-## प्रकल्प-विशिष्ट संदर्भ
+### Multi-Language Support
 
-### बहुभाषिक समर्थन
+This repository uses an automated translation system:
+- 50+ languages supported
+- Translations in `/translations/<lang-code>/` directories
+- GitHub Actions workflow handles translation updates
+- Source files are in English at repository root
 
-हे रिपॉझिटरी स्वयंचलित भाषांतर प्रणाली वापरते:
-- 50+ भाषांचे समर्थन
-- `/translations/<lang-code>/` डिरेक्टरीजमध्ये भाषांतरे
-- GitHub Actions कार्यप्रवाह भाषांतर अद्यतन हाताळतो
-- मूळ फाइल्स इंग्रजीमध्ये रिपॉझिटरीच्या मूळ ठिकाणी आहेत
+### Lesson Structure
 
-### धड रचना
+Each lesson follows a consistent pattern:
+1. Video thumbnail with link
+2. Written lesson content (README.md)
+3. Code samples in multiple frameworks
+4. Learning objectives and prerequisites
+5. Extra learning resources linked
 
-प्रत्येक धड एकसारखा नमुना अनुसरण करतो:
-1. व्हिडिओ थंबनेलसह लिंक
-2. लेखी धड सामग्री (README.md)
-3. अनेक फ्रेमवर्क्समधील कोड नमुने
-4. शिकण्याची उद्दिष्टे आणि पूर्वतयारी
-5. अतिरिक्त शिकण्याचे संसाधने लिंक केलेली
+### Code Sample Naming
 
-### कोड नमुना नामकरण
+Format: `<lesson-number>-<framework-name>.ipynb`
+- `04-semantic-kernel.ipynb` - Lesson 4, Semantic Kernel
+- `07-autogen.ipynb` - Lesson 7, AutoGen
+- `14-python-agent-framework.ipynb` - Lesson 14, MAF Python
+- `14-dotnet-agent-framework.ipynb` - Lesson 14, MAF .NET
 
-नमुना: `<lesson-number>-<framework-name>.ipynb`
-- `04-semantic-kernel.ipynb` - धडा 4, Semantic Kernel
-- `07-autogen.ipynb` - धडा 7, AutoGen
-- `14-python-agent-framework.ipynb` - धडा 14, MAF Python
-- `14-dotnet-agent-framework.ipynb` - धडा 14, MAF .NET
+### Special Directories
 
-### विशेष डिरेक्टरीज
+- `translated_images/` - Localized images for translations
+- `images/` - Original images for English content
+- `.devcontainer/` - VS Code development container configuration
+- `.github/` - GitHub Actions workflows and templates
 
-- `translated_images/` - भाषांतरांसाठी स्थानिक प्रतिमा
-- `images/` - इंग्रजी सामग्रीसाठी मूळ प्रतिमा
-- `.devcontainer/` - VS Code विकास कंटेनर कॉन्फिगरेशन
-- `.github/` - GitHub Actions कार्यप्रवाह आणि टेम्पलेट्स
+### Dependencies
 
-### आवश्यकताः
-
-`requirements.txt` मधील मुख्य पॅकेजेस:
-- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen फ्रेमवर्क
-- `semantic-kernel` - Semantic Kernel फ्रेमवर्क
+Key packages from `requirements.txt`:
+- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen framework
+- `semantic-kernel` - Semantic Kernel framework
 - `agent-framework` - Microsoft Agent Framework
-- `azure-ai-inference`, `azure-ai-projects` - Azure AI सेवांसाठी
-- `azure-search-documents` - Azure AI Search एकत्रीकरण
-- `chromadb` - RAG उदाहरणांसाठी व्हेक्टर डेटाबेस
-- `chainlit` - चॅट UI फ्रेमवर्क
-- `browser_use` - एजंट्ससाठी ब्राउझर ऑटोमेशन
-- `mcp[cli]` - मॉडेल कॉन्टेक्स्ट प्रोटोकॉल समर्थन
-- `mem0ai` - एजंट्ससाठी मेमरी व्यवस्थापन
+- `azure-ai-inference`, `azure-ai-projects` - Azure AI services
+- `azure-search-documents` - Azure AI Search integration
+- `chromadb` - Vector database for RAG examples
+- `chainlit` - Chat UI framework
+- `browser_use` - Browser automation for agents
+- `mcp[cli]` - Model Context Protocol support
+- `mem0ai` - Memory management for agents
 
 ---
 
-**अस्वीकरण**:  
-हा दस्तऐवज AI भाषांतर सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून भाषांतरित करण्यात आला आहे. आम्ही अचूकतेसाठी प्रयत्नशील असलो तरी, कृपया लक्षात ठेवा की स्वयंचलित भाषांतरांमध्ये त्रुटी किंवा अचूकतेचा अभाव असू शकतो. मूळ भाषेतील दस्तऐवज हा अधिकृत स्रोत मानला जावा. महत्त्वाच्या माहितीसाठी, व्यावसायिक मानवी भाषांतराची शिफारस केली जाते. या भाषांतराचा वापर करून उद्भवलेल्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थासाठी आम्ही जबाबदार राहणार नाही.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+अस्वीकरण:
+हा दस्तऐवज AI अनुवादीय सेव्हिस (Co-op Translator: https://github.com/Azure/co-op-translator) वापरून अनुवादित करण्यात आला आहे. आम्ही अचूकतेसाठी प्रयत्न करतो, परंतु कृपया लक्षात घ्या की स्वयंचलित अनुवादांमध्ये चुका किंवा अचूकतेची त्रुटी असू शकते. मूळ दस्तऐवज त्याच्या स्थानिक भाषेत अधिकृत स्रोत समजावा. महत्त्वाच्या माहितीच्या बाबतीत व्यावसायिक मानवी अनुवाद शिफारसीय आहे. या अनुवादाच्या वापरामुळे उद्भवणाऱ्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थलागीसाठी आम्ही जबाबदार नाही.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

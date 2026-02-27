@@ -1,123 +1,125 @@
-[![Bevezetés az AI ügynökökbe](../../../translated_images/hu/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
+[![Bevezetés az AI ügynökökhöz](../../../translated_images/hu/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
 
-> _(Kattints a fenti képre a videó megtekintéséhez erről a leckéről)_
+> _(A fenti képre kattintva megtekintheti az óra videóját)_
 
-# Bevezetés az AI ügynökökbe és azok felhasználási eseteibe
 
-Üdvözlünk az "AI ügynökök kezdőknek" kurzuson! Ez a kurzus alapvető ismereteket és gyakorlati példákat nyújt az AI ügynökök létrehozásához.
+# Bevezetés az AI ügynökökbe és ügynök-alapú felhasználási esetekbe
 
-Csatlakozz az <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Discord közösséghez</a>, hogy találkozz más tanulókkal és AI ügynök fejlesztőkkel, valamint feltehesd kérdéseidet a kurzussal kapcsolatban.
+Üdvözlünk az „AI ügynökök kezdőknek” tanfolyamon! Ez a tanfolyam alapvető ismereteket és alkalmazási példákat kínál AI ügynökök építéséhez.
 
-A kurzus elején megismerkedünk azzal, hogy mik is az AI ügynökök, és hogyan használhatjuk őket az általunk létrehozott alkalmazásokban és munkafolyamatokban.
+Csatlakozz az <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Discord közösséghez</a>, hogy találkozz más tanulókkal és AI Ügynök fejlesztőkkel, és feltehesd kérdéseidet ezzel a tanfolyammal kapcsolatban.
+
+A tanfolyamot azzal kezdjük, hogy jobban megértjük, mik azok az AI ügynökök, és hogyan használhatjuk őket az általunk épített alkalmazásokban és munkafolyamatokban.
 
 ## Bevezetés
 
-Ez a lecke az alábbiakat tárgyalja:
+Ez az óra a következőket tárgyalja:
 
-- Mik azok az AI ügynökök, és milyen típusú ügynökök léteznek?
-- Milyen felhasználási esetekben a leghasznosabbak az AI ügynökök, és hogyan segíthetnek nekünk?
-- Melyek az alapvető építőelemek az ügynöki megoldások tervezésekor?
+- Mik azok az AI ügynökök és milyen különböző típusai vannak az ügynököknek?
+- Milyen felhasználási esetekhez a legalkalmasabbak az AI ügynökök, és hogyan segíthetnek nekünk?
+- Mik az alapvető építőelemek ügynöki megoldások tervezésekor?
 
 ## Tanulási célok
-A lecke elvégzése után képes leszel:
+Az óra elvégzése után képes leszel:
 
-- Megérteni az AI ügynökök fogalmát és azt, hogy miben különböznek más AI megoldásoktól.
-- Hatékonyan alkalmazni az AI ügynököket.
-- Produktívan tervezni ügynöki megoldásokat a felhasználók és ügyfelek számára.
+- Megérteni az AI ügynökök fogalmait és hogy miben különböznek más AI megoldásoktól.
+- A leghatékonyabban alkalmazni az AI ügynököket.
+- Produktívan tervezni ügynöki megoldásokat mind felhasználók, mind ügyfelek számára.
 
-## Az AI ügynökök meghatározása és típusai
+## Az AI ügynökök meghatározása és az AI ügynökök típusai
 
 ### Mik azok az AI ügynökök?
 
-Az AI ügynökök olyan **rendszerek**, amelyek lehetővé teszik a **Nagy Nyelvi Modellek (LLM-ek)** számára, hogy **cselekvéseket hajtsanak végre**, kiterjesztve képességeiket azáltal, hogy az LLM-eknek **hozzáférést biztosítanak eszközökhöz** és **tudáshoz**.
+Az AI ügynökök olyan **rendszerek**, melyek lehetővé teszik a **nagy nyelvi modelleknek (LLM-eknek)**, hogy **műveleteket hajtsanak végre** azzal, hogy bővítik képességeiket eszközökhöz való **hozzáféréssel** és **tudással**.
 
-Nézzük meg közelebbről ezt a definíciót:
+Nézzük meg ezt a meghatározást kisebb részekre bontva:
 
-- **Rendszer** - Fontos, hogy az ügynökökre ne csak egyetlen komponensként gondoljunk, hanem egy több komponensből álló rendszerként. Az AI ügynök alapvető komponensei:
-  - **Környezet** - Az a meghatározott tér, ahol az AI ügynök működik. Például, ha egy utazási foglalási AI ügynököt nézünk, a környezet lehet az utazási foglalási rendszer, amelyet az ügynök használ a feladatok elvégzéséhez.
-  - **Érzékelők** - A környezet információkat és visszajelzéseket biztosít. Az AI ügynökök érzékelőket használnak, hogy összegyűjtsék és értelmezzék a környezet aktuális állapotáról szóló információkat. Az utazási foglalási ügynök példájában a foglalási rendszer információkat nyújthat, például a szállodai elérhetőségről vagy repülőjegyárakról.
-  - **Végrehajtók** - Miután az AI ügynök megkapja a környezet aktuális állapotát, az ügynök meghatározza, hogy milyen cselekvést hajtson végre a környezet megváltoztatásához. Az utazási foglalási ügynök esetében ez lehet például egy szoba lefoglalása a felhasználó számára.
+- **Rendszer** – Fontos, hogy az ügynököket ne egyetlen komponensként, hanem több komponensből álló rendszerként tekintsük. Alapvető szinten az AI Ügynök komponensei:
+  - **Környezet** – Az a meghatározott tér, ahol az AI Ügynök működik. Például ha egy utazási foglaló AI ügynökünk van, a környezet lehet maga az utazási foglaló rendszer, amelyet az ügynök a feladatok elvégzésére használ.
+  - **Érzékelők** – A környezet információkat tartalmaz és visszajelzést ad. Az AI ügynök érzékelőket használ az aktuális környezeti állapot információinak összegyűjtésére és értelmezésére. Az utazási foglaló ügynök esetében az utazási rendszer például szolgáltathat adatokat a szállodák elérhetőségéről vagy a repülőjegy árakról.
+  - **Beavatkozók** – Miután az AI ügynök megkapja az aktuális környezeti állapotot, az adott feladathoz meghatározza, milyen műveletet hajtson végre a környezet megváltoztatásához. Az utazási foglaló ügynök például lefoglalhat egy elérhető szobát a felhasználó számára.
 
 ![Mik azok az AI ügynökök?](../../../translated_images/hu/what-are-ai-agents.1ec8c4d548af601a.webp)
 
-**Nagy Nyelvi Modellek** - Az ügynökök fogalma már az LLM-ek létrehozása előtt is létezett. Az AI ügynökök LLM-ekkel való építésének előnye az, hogy képesek értelmezni az emberi nyelvet és adatokat. Ez a képesség lehetővé teszi az LLM-ek számára, hogy értelmezzék a környezeti információkat és tervet készítsenek a környezet megváltoztatására.
+**Nagy nyelvi modellek** – Az ügynökök fogalma a LLM-ek létrejötte előtt is létezett. Az AI ügynökök LLM-ekkel történő létrehozásának előnye az emberi nyelv és adatértelmezési képességük. Ez a képesség lehetővé teszi a LLM-ek számára, hogy értelmezzék a környezeti információkat és tervezzék meg a környezet megváltoztatását.
 
-**Cselekvések végrehajtása** - Az AI ügynök rendszereken kívül az LLM-ek korlátozottak olyan helyzetekben, ahol a cselekvés tartalom vagy információ generálása a felhasználó kérésére. Az AI ügynök rendszereken belül az LLM-ek képesek feladatokat végrehajtani a felhasználó kérésének értelmezésével és az elérhető eszközök használatával.
+**Műveletek végrehajtása** – Az AI ügynök rendszereken kívül a LLM-ek csak olyan helyzetekben képesek műveleteket végrehajtani, ahol a művelet tartalom vagy információ generálása a felhasználó által megadott prompt alapján. Az AI ügynök rendszerekben a LLM-ek feladatokat végeznek el a felhasználói kérés értelmezésével, és a környezetükben rendelkezésre álló eszközök használatával.
 
-**Hozzáférés eszközökhöz** - Az, hogy az LLM milyen eszközökhöz fér hozzá, 1) a környezetétől és 2) az AI ügynök fejlesztőjétől függ. Az utazási ügynök példájában az ügynök eszközei korlátozottak a foglalási rendszer által elérhető műveletekre, illetve a fejlesztő korlátozhatja az ügynök eszközhozzáférését például csak repülőjáratokra.
+**Eszközökhöz való hozzáférés** – Az, hogy a LLM milyen eszközökhöz fér hozzá, két tényező határozza meg: 1) a környezet, ahol működik és 2) az AI ügynök fejlesztője. Utazási ügynök példánkban az ügynök eszközeit a foglalási rendszerben elérhető műveletek korlátozzák, illetve a fejlesztő szűkítheti az eszközhasználatot például csak repülőjegyekre.
 
-**Memória + Tudás** - A memória lehet rövid távú, a felhasználó és az ügynök közötti beszélgetés kontextusában. Hosszú távon, a környezet által biztosított információn kívül az AI ügynökök más rendszerekből, szolgáltatásokból, eszközökből és akár más ügynököktől is tudást szerezhetnek. Az utazási ügynök példájában ez a tudás lehet például a felhasználó utazási preferenciáira vonatkozó információ egy ügyféladatbázisban.
+**Memória + Tudás** – A memória lehet rövid távú, a felhasználó és az ügynök közötti beszélgetés kontextusában. Hosszú távon, a környezet által nyújtott információn túl, az AI ügynökök más rendszerekből, szolgáltatásokból, eszközökből és akár más ügynököktől is képesek tudást lekérni. Az utazási ügynök példájában ez lehet a felhasználó utazási preferenciáit tartalmazó ügyféladatbázis.
 
 ### Az ügynökök különböző típusai
 
-Most, hogy van egy általános definíciónk az AI ügynökökről, nézzük meg néhány konkrét ügynöktípust, és hogyan alkalmazhatók egy utazási foglalási AI ügynöknél.
+Most, hogy van egy általános meghatározásunk az AI ügynökökről, nézzünk meg néhány speciális ügynök típust, és hogyan alkalmazhatók egy utazási foglaló AI ügynök esetében.
 
-| **Ügynöktípus**               | **Leírás**                                                                                                                           | **Példa**                                                                                                                                                                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Egyszerű reflex ügynökök**  | Azonnali cselekvéseket hajtanak végre előre meghatározott szabályok alapján.                                                          | Az utazási ügynök értelmezi az e-mail kontextusát, és továbbítja az utazási panaszokat az ügyfélszolgálatnak.                                                                                                                |
-| **Modellalapú reflex ügynökök**| A világ modellje és annak változásai alapján cselekszenek.                                                                            | Az utazási ügynök prioritást ad az útvonalaknak, ahol jelentős árváltozások történtek, a történelmi áradatokhoz való hozzáférés alapján.                                                                                      |
-| **Célalapú ügynökök**         | Terveket készítenek konkrét célok elérésére, értelmezve a célt és meghatározva a szükséges cselekvéseket.                              | Az utazási ügynök lefoglal egy utazást, meghatározva a szükséges utazási intézkedéseket (autó, tömegközlekedés, repülőjáratok) az aktuális helyszíntől a célállomásig.                                                          |
-| **Hasznosságalapú ügynökök**  | Figyelembe veszik a preferenciákat, és numerikusan mérlegelik a kompromisszumokat a célok elérése érdekében.                          | Az utazási ügynök maximalizálja a hasznosságot, mérlegelve a kényelmet és a költségeket az utazás foglalásakor.                                                                                                               |
-| **Tanuló ügynökök**           | Idővel javulnak, visszajelzésekre reagálva és ennek megfelelően módosítva cselekvéseiket.                                             | Az utazási ügynök javul az ügyfél visszajelzései alapján, amelyeket az utazás utáni felmérésekből kap, és ezek alapján módosítja a jövőbeli foglalásokat.                                                                      |
-| **Hierarchikus ügynökök**     | Többszintű rendszert alkotnak, ahol a magasabb szintű ügynökök feladatokat bontanak le alacsonyabb szintű ügynökök számára.            | Az utazási ügynök lemond egy utazást, a feladatot részfeladatokra bontva (például konkrét foglalások törlése), és az alacsonyabb szintű ügynökök végrehajtják ezeket, majd visszajelzést adnak a magasabb szintű ügynöknek.       |
-| **Több ügynökből álló rendszerek (MAS)** | Az ügynökök önállóan végzik el a feladatokat, akár együttműködve, akár versengve.                                                | Együttműködő: Több ügynök foglal konkrét utazási szolgáltatásokat, például szállodákat, repülőjáratokat és szórakozási lehetőségeket. Versengő: Több ügynök kezeli és verseng egy közös szállodai foglalási naptárban az ügyfelek elhelyezéséért. |
+| **Ügynök típus**              | **Leírás**                                                                                                                          | **Példa**                                                                                                                                                                                                                   |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Egyszerű reflex ügynökök**  | Előre definiált szabályok alapján azonnali műveleteket hajtanak végre.                                                             | Az utazási ügynök értelmezi az e-mail kontextusát és továbbítja az utazási panaszokat az ügyfélszolgálathoz.                                                                                                                   |
+| **Modellalapú reflex ügynökök** | A világmodell alapján, és annak változásaira reagálva hajtanak végre műveleteket.                                                 | Az utazási ügynök az előzményár-adatok alapján előnyben részesíti az olyan útvonalakat, ahol jelentős ármozgások történtek.                                                                                                  |
+| **Cél-alapú ügynökök**        | Terveket készítenek egy adott cél elérésére, értelmezve a célt és meghatározva az eléréshez szükséges lépéseket.                     | Az utazási ügynök megtervezi az utazást az indulási helytől a célállomásig szükséges közlekedési módok (autó, tömegközlekedés, repülőjáratok) foglalásával.                                                                        |
+| **Hasznosság-alapú ügynökök** | Preferenciákat mérlegelnek és numerikusan értékelik az alternatívákat a célok eléréséhez.                                           | Az utazási ügynök kényelmi és költségbeli szempontokat mérlegelve maximalizálja a hasznosságot az utazás foglalásakor.                                                                                                        |
+| **Tanuló ügynökök**           | Visszacsatolás alapján folyamatosan javulnak és igazítják a műveleteket ennek megfelelően.                                          | Az utazási ügynök a felhasználói visszajelzések alapján utólagos felmérésekből tanul és módosítja a jövőbeni foglalásokat.                                                                                                   |
+| **Hierarchikus ügynökök**    | Több ügynök tagozódik hierarchikus rendszerbe, a magasabb szintű ügynök feladatokat bont alfeladatokra, amelyeket alacsonyabb szintű ügynökök végeznek el. | Az utazási ügynök egy utat lemond úgy, hogy a feladatot több részfeladatra bontja (például egyes foglalások törlése), amelyeket alacsonyabb szintű ügynökök végeznek el, és visszajelzést adnak a felsőbb szintű ügynöknek.            |
+| **Több-ügynökös rendszerek (MAS)** | Az ügynökök önállóan, vagy együttműködve, vagy versengve teljesítik a feladatokat.                                                 | Együttműködés: Több ügynök egyes utazási szolgáltatásokat (szállás, repülőjegy, program) foglal. Versengés: Több ügynök osztozik és verseng egy közös szállodai foglalási naptáron, hogy ügyfeleket helyezzen el a szállodában. |
 
-## Mikor használjunk AI ügynököket?
+## Mikor használjuk az AI ügynököket?
 
-Az előző szakaszban az utazási ügynök példáját használtuk, hogy bemutassuk, hogyan alkalmazhatók az ügynökök különböző típusai az utazási foglalás különböző forgatókönyveiben. Ezt az alkalmazást a kurzus során végig használni fogjuk.
+Korábban az utazási ügynök példán keresztül magyaráztuk meg, hogy hogyan alkalmazhatók a különböző ügynök típusok az utazásfoglalás eltérő szcenárióiban. A képzés során továbbra is ezt az alkalmazást fogjuk használni.
 
-Nézzük meg, milyen típusú felhasználási esetekben a legjobb az AI ügynökök használata:
+Nézzük meg azokat a felhasználási eseteket, amelyekhez az AI ügynökök a legalkalmasabbak:
 
-![Mikor használjunk AI ügynököket?](../../../translated_images/hu/when-to-use-ai-agents.54becb3bed74a479.webp)
+![Mikor használjuk az AI ügynököket?](../../../translated_images/hu/when-to-use-ai-agents.54becb3bed74a479.webp)
 
-- **Nyitott végű problémák** - lehetővé téve az LLM számára, hogy meghatározza a szükséges lépéseket egy feladat elvégzéséhez, mivel ez nem mindig kódolható előre egy munkafolyamatba.
-- **Többlépcsős folyamatok** - olyan feladatok, amelyek bizonyos szintű összetettséget igényelnek, és az AI ügynöknek eszközöket vagy információkat kell használnia több lépésben, nem csak egyszeri lekérdezés során.
-- **Idővel történő javulás** - olyan feladatok, ahol az ügynök visszajelzést kap a környezetétől vagy a felhasználóktól, hogy idővel jobb eredményeket nyújtson.
 
-Az AI ügynökök használatának további szempontjait a "Megbízható AI ügynökök építése" leckében tárgyaljuk.
+- **Nyitott problémák** – ahol a LLM határozza meg a szükséges lépéseket a feladat végrehajtásához, mert ezt nem lehet előre fixen beprogramozni a munkafolyamatba.
+- **Többlépcsős folyamatok** – olyan feladatok, amelyek összetettségük miatt igénylik, hogy az AI ügynök több lépésen keresztül használjon eszközöket vagy információkat az egyszeri adatlekérés helyett.
+- **Idővel történő javulás** – olyan feladatok, ahol az ügynök visszajelzések alapján tud fejlődni, akár a környezetéből, akár a felhasználóktól kapott visszacsatolással, hogy jobb hasznosságot biztosítson.
 
-## Az ügynöki megoldások alapjai
+Az AI ügynökök használatának további szempontjait a Megbízható AI ügynökök építése leckében tárgyaljuk.
 
-### Ügynökfejlesztés
+## Ügynöki megoldások alapjai
 
-Az AI ügynök rendszer tervezésének első lépése az eszközök, cselekvések és viselkedések meghatározása. Ebben a kurzusban az **Azure AI Agent Service** használatára összpontosítunk az ügynökök meghatározásához. Ez olyan funkciókat kínál, mint:
+### Ügynök fejlesztés
 
-- Nyílt modellek kiválasztása, például OpenAI, Mistral és Llama
+Az AI ügynök rendszer tervezésének első lépése a használandó eszközök, műveletek és viselkedések meghatározása. Ebben a tanfolyamban az **Azure AI Agent Service** használatára fókuszálunk az ügynökök meghatározásához. Ez a szolgáltatás a következőket kínálja:
+
+- Nyílt modellek kiválasztása, mint például OpenAI, Mistral, és Llama
 - Licencelt adatok használata olyan szolgáltatóktól, mint a Tripadvisor
-- Szabványosított OpenAPI 3.0 eszközök használata
+- Szabványosított OpenAPI 3.0 eszközök alkalmazása
 
 ### Ügynöki minták
 
-Az LLM-ekkel való kommunikáció promptokon keresztül történik. Az AI ügynökök félig autonóm jellege miatt nem mindig lehetséges vagy szükséges manuálisan újrapromptolni az LLM-et a környezet változása után. **Ügynöki mintákat** használunk, amelyek lehetővé teszik az LLM promptolását több lépésben, skálázhatóbb módon.
+A LLM-ekkel való kommunikáció promptokon keresztül történik. Az AI ügynökök félönálló jellege miatt nem mindig lehetséges vagy szükséges a LLM-et manuálisan újrapromptolni egy környezeti változás után. Olyan **ügynöki mintákat** használunk, amelyek lehetővé teszik a LLM több lépésen át tartó skálázható promptolását.
 
-Ez a kurzus néhány jelenleg népszerű ügynöki mintát tárgyal.
+Ez a tanfolyam néhány jelenleg népszerű ügynöki mintára oszlik.
 
 ### Ügynöki keretrendszerek
 
-Az ügynöki keretrendszerek lehetővé teszik a fejlesztők számára, hogy ügynöki mintákat valósítsanak meg kóddal. Ezek a keretrendszerek sablonokat, bővítményeket és eszközöket kínálnak az AI ügynökök jobb együttműködéséhez. Ezek az előnyök jobb megfigyelhetőséget és hibakeresési lehetőségeket biztosítanak az AI ügynök rendszerek számára.
+Az ügynöki keretrendszerek lehetővé teszik a fejlesztők számára, hogy kódon keresztül valósítsák meg az ügynöki mintákat. Ezek a keretrendszerek sablonokat, bővítményeket és eszközöket kínálnak az AI ügynökök jobb együttműködéséhez. Ezek az előnyök jobb megfigyelhetőséget és hibakeresést biztosítanak az AI ügynök rendszerekhez.
 
-Ebben a kurzusban megvizsgáljuk a kutatás-orientált AutoGen keretrendszert és a gyártásra kész Agent keretrendszert a Semantic Kernelből.
+Ebben a tanfolyamban megismerkedünk a kutatás-alapú AutoGen keretrendszerrel és a termelésre kész Agent keretrendszerrel a Semantic Kertből.
 
-## Mintakódok
+## Minta kódok
 
 - Python: [Agent Framework](./code_samples/01-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/01-dotnet-agent-framework.md)
 
-## További kérdéseid vannak az AI ügynökökről?
+## Van még kérdése az AI ügynökökről?
 
-Csatlakozz az [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) közösséghez, hogy találkozz más tanulókkal, részt vegyél fogadóórákon, és választ kapj az AI ügynökökkel kapcsolatos kérdéseidre.
+Csatlakozz a [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) közösséghez, hogy találkozz más tanulókkal, részt vegyél konzultációkon, és választ kapj AI ügynök kérdéseidre.
 
-## Előző lecke
+## Előző óra
 
-[Kurzus beállítása](../00-course-setup/README.md)
+[Tanfolyam beállítása](../00-course-setup/README.md)
 
-## Következő lecke
+## Következő óra
 
-[Ügynöki keretrendszerek felfedezése](../02-explore-agentic-frameworks/README.md)
+[Az ügynöki keretrendszerek felfedezése](../02-explore-agentic-frameworks/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősség kizárása**:
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár igyekszünk pontos fordítást nyújtani, kérjük, vegye figyelembe, hogy az automatikus fordítások tartalmazhatnak hibákat vagy pontatlanságokat. Az eredeti dokumentum az anyanyelvén tekintendő hivatalos forrásnak. Kritikus információk esetén professzionális, emberi fordítást javaslunk. Nem vállalunk felelősséget az ebből a fordításból eredő félreértésekért vagy téves értelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

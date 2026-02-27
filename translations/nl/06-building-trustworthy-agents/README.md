@@ -1,44 +1,44 @@
-[![Betrouwbare AI-agenten](../../../translated_images/nl/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
+[![Betrouwbare AI-Agenten](../../../translated_images/nl/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
-# Betrouwbare AI-agenten bouwen
+# Betrouwbare AI-Agenten bouwen
 
 ## Introductie
 
-In deze les behandelen we:
+Deze les behandelt:
 
-- Hoe je veilige en effectieve AI-agenten bouwt en implementeert.
-- Belangrijke beveiligingsoverwegingen bij het ontwikkelen van AI-agenten.
-- Hoe je gegevens en gebruikersprivacy waarborgt bij het ontwikkelen van AI-agenten.
+- Hoe veilige en effectieve AI-agenten te bouwen en implementeren
+- Belangrijke beveiligingsoverwegingen bij het ontwikkelen van AI-agenten
+- Hoe gegevens- en privacybescherming te waarborgen bij het ontwikkelen van AI-agenten
 
 ## Leerdoelen
 
-Na het voltooien van deze les kun je:
+Na het voltooien van deze les weet je hoe je:
 
-- Risico's identificeren en beperken bij het creëren van AI-agenten.
-- Beveiligingsmaatregelen implementeren om ervoor te zorgen dat gegevens en toegang goed worden beheerd.
-- AI-agenten maken die gegevensprivacy waarborgen en een kwalitatieve gebruikerservaring bieden.
+- Risico’s kunt identificeren en beperken bij het creëren van AI-agenten
+- Beveiligingsmaatregelen implementeert om ervoor te zorgen dat gegevens en toegang correct worden beheerd
+- AI-agenten maakt die gegevensprivacy handhaven en een kwalitatieve gebruikerservaring bieden
 
 ## Veiligheid
 
-Laten we eerst kijken naar het bouwen van veilige agenttoepassingen. Veiligheid betekent dat de AI-agent presteert zoals ontworpen. Als ontwikkelaars van agenttoepassingen hebben we methoden en tools om de veiligheid te maximaliseren:
+Laten we eerst kijken naar het bouwen van veilige agentische toepassingen. Veiligheid betekent dat de AI-agent presteert zoals ontworpen. Als bouwers van agentische toepassingen hebben we methoden en tools om de veiligheid te maximaliseren:
 
-### Een systeemberichtframework bouwen
+### Een systeemberichtenframework bouwen
 
-Als je ooit een AI-toepassing hebt gebouwd met behulp van Large Language Models (LLMs), weet je hoe belangrijk het is om een robuuste systeemprompt of systeembericht te ontwerpen. Deze prompts stellen de meta-regels, instructies en richtlijnen vast voor hoe de LLM met de gebruiker en gegevens omgaat.
+Als je ooit een AI-toepassing hebt gebouwd met Large Language Models (LLM’s), weet je hoe belangrijk het is om een robuuste systeemprompt of systeembericht te ontwerpen. Deze prompts stellen de meta regels, instructies en richtlijnen vast voor hoe het LLM met de gebruiker en data omgaat.
 
-Voor AI-agenten is de systeemprompt nog belangrijker, omdat de AI-agenten zeer specifieke instructies nodig hebben om de taken uit te voeren waarvoor we ze hebben ontworpen.
+Voor AI-agenten is de systeemprompt nog belangrijker, omdat ze zeer specifieke instructies nodig hebben om de taken uit te voeren die we voor ze hebben ontworpen.
 
-Om schaalbare systeemprompts te maken, kunnen we een systeemberichtframework gebruiken om één of meerdere agenten in onze toepassing te bouwen:
+Om schaalbare systeemprompts te creëren, kunnen we een systeemberichtenframework gebruiken om een of meer agenten in onze applicatie te bouwen:
 
-![Een systeemberichtframework bouwen](../../../translated_images/nl/system-message-framework.3a97368c92d11d68.webp)
+![Een systeemberichtenframework bouwen](../../../translated_images/nl/system-message-framework.3a97368c92d11d68.webp)
 
-#### Stap 1: Maak een meta-systeembericht
+#### Stap 1: Maak een meta systeembericht
 
-De meta-prompt wordt door een LLM gebruikt om de systeemprompts te genereren voor de agenten die we maken. We ontwerpen het als een sjabloon, zodat we efficiënt meerdere agenten kunnen maken indien nodig.
+De meta prompt wordt door een LLM gebruikt om de systeemprompts voor de agenten die we maken te genereren. We ontwerpen het als een sjabloon, zodat we efficiënt meerdere agenten kunnen maken indien nodig.
 
-Hier is een voorbeeld van een meta-systeembericht dat we aan de LLM zouden geven:
+Hier is een voorbeeld van een meta systeembericht dat we aan de LLM zouden geven:
 
 ```plaintext
 You are an expert at creating AI agent assistants. 
@@ -57,9 +57,9 @@ Hier is een voorbeeld:
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### Stap 3: Basis-systeembericht aan LLM geven
+#### Stap 3: Voorzie het basis systeembericht aan de LLM
 
-Nu kunnen we dit systeembericht optimaliseren door het meta-systeembericht als systeembericht te gebruiken en ons basis-systeembericht toe te voegen.
+Nu kunnen we dit systeembericht optimaliseren door het meta systeembericht als systeembericht te geven en ons basis systeembericht.
 
 Dit zal een systeembericht opleveren dat beter is ontworpen om onze AI-agenten te begeleiden:
 
@@ -115,86 +115,86 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 #### Stap 4: Itereren en verbeteren
 
-De waarde van dit systeemberichtframework is dat het gemakkelijker wordt om systeemberichten voor meerdere agenten te maken en om je systeemberichten in de loop van de tijd te verbeteren. Het is zeldzaam dat een systeembericht in één keer werkt voor je volledige use case. Door kleine aanpassingen en verbeteringen aan te brengen in het basis-systeembericht en dit door het systeem te laten lopen, kun je resultaten vergelijken en evalueren.
+De waarde van dit systeemberichtenframework is dat het makkelijker wordt om meerdere systeemberichten van verschillende agenten op te schalen en je systeemberichten in de loop der tijd te verbeteren. Het is zeldzaam dat je een systeembericht hebt dat de eerste keer werkt voor je volledige use case. Kleine aanpassingen en verbeteringen maken door het basis systeembericht te wijzigen en het door het systeem te laten lopen, stelt je in staat resultaten te vergelijken en evalueren.
 
-## Bedreigingen begrijpen
+## Inzicht in bedreigingen
 
-Om betrouwbare AI-agenten te bouwen, is het belangrijk om de risico's en bedreigingen voor je AI-agent te begrijpen en te beperken. Laten we enkele van de verschillende bedreigingen voor AI-agenten bekijken en hoe je hier beter op kunt plannen en je kunt voorbereiden.
+Om betrouwbare AI-agenten te bouwen, is het belangrijk risico’s en bedreigingen voor je AI-agent te begrijpen en te beperken. Laten we kijken naar enkele verschillende bedreigingen voor AI-agenten en hoe je hier beter op kunt voorbereiden.
 
-![Bedreigingen begrijpen](../../../translated_images/nl/understanding-threats.89edeada8a97fc0f.webp)
+![Inzicht in bedreigingen](../../../translated_images/nl/understanding-threats.89edeada8a97fc0f.webp)
 
-### Taken en instructies
+### Taak en instructie
 
-**Beschrijving:** Aanvallers proberen de instructies of doelen van de AI-agent te wijzigen door middel van prompts of manipulatie van invoer.
+**Beschrijving:** Aanvallers proberen de instructies of doelen van de AI-agent te wijzigen via prompting of manipulatie van inputs.
 
-**Beperking:** Voer validatiecontroles en invoerfilters uit om potentieel gevaarlijke prompts te detecteren voordat ze door de AI-agent worden verwerkt. Aangezien deze aanvallen meestal frequente interactie met de agent vereisen, is het beperken van het aantal beurten in een gesprek een andere manier om dit soort aanvallen te voorkomen.
+**Beperking:** Voer validatiecontroles en inputfilters uit om mogelijk gevaarlijke prompts te detecteren voordat ze door de AI-agent worden verwerkt. Omdat deze aanvallen meestal frequente interactie met de agent vereisen, is het beperken van het aantal beurten in een gesprek een andere manier om dit soort aanvallen te voorkomen.
 
 ### Toegang tot kritieke systemen
 
-**Beschrijving:** Als een AI-agent toegang heeft tot systemen en diensten die gevoelige gegevens opslaan, kunnen aanvallers de communicatie tussen de agent en deze diensten compromitteren. Dit kunnen directe aanvallen zijn of indirecte pogingen om informatie over deze systemen via de agent te verkrijgen.
+**Beschrijving:** Als een AI-agent toegang heeft tot systemen en diensten die gevoelige gegevens opslaan, kunnen aanvallers de communicatie tussen de agent en deze diensten compromitteren. Dit kan directe aanvallen zijn of indirecte pogingen om via de agent informatie over deze systemen te verkrijgen.
 
-**Beperking:** AI-agenten zouden alleen toegang moeten hebben tot systemen op basis van noodzaak om dit soort aanvallen te voorkomen. De communicatie tussen de agent en het systeem moet ook veilig zijn. Het implementeren van authenticatie en toegangscontrole is een andere manier om deze informatie te beschermen.
+**Beperking:** AI-agenten dienen alleen toegang te hebben tot systemen op basis van noodzaak om dit soort aanvallen te voorkomen. Communicatie tussen de agent en het systeem moet ook veilig zijn. Authenticatie en toegangscontrole implementeren is een andere manier om deze informatie te beschermen.
 
 ### Overbelasting van bronnen en diensten
 
-**Beschrijving:** AI-agenten kunnen verschillende tools en diensten gebruiken om taken uit te voeren. Aanvallers kunnen deze mogelijkheid gebruiken om deze diensten aan te vallen door een groot aantal verzoeken via de AI-agent te sturen, wat kan leiden tot systeemstoringen of hoge kosten.
+**Beschrijving:** AI-agenten kunnen verschillende tools en diensten benaderen om taken uit te voeren. Aanvallers kunnen deze mogelijkheid misbruiken om deze diensten aan te vallen door een groot aantal verzoeken via de AI-agent te sturen, wat kan leiden tot systeemstoringen of hoge kosten.
 
-**Beperking:** Implementeer beleidsregels om het aantal verzoeken dat een AI-agent naar een dienst kan sturen te beperken. Het beperken van het aantal gesprekstappen en verzoeken aan je AI-agent is een andere manier om dit soort aanvallen te voorkomen.
+**Beperking:** Implementeer beleidsregels om het aantal verzoeken dat een AI-agent naar een dienst kan sturen te beperken. Het beperken van het aantal gespreksbeurten en verzoeken aan je AI-agent is een andere manier om dit soort aanvallen te voorkomen.
 
 ### Vergiftiging van de kennisbasis
 
-**Beschrijving:** Dit type aanval richt zich niet direct op de AI-agent, maar op de kennisbasis en andere diensten die de AI-agent zal gebruiken. Dit kan inhouden dat de gegevens of informatie die de AI-agent zal gebruiken om een taak uit te voeren, worden gecorrumpeerd, wat leidt tot bevooroordeelde of onbedoelde reacties aan de gebruiker.
+**Beschrijving:** Dit type aanval richt zich niet direct op de AI-agent, maar op de kennisbasis en andere diensten die de AI-agent gebruikt. Dit kan betekenen dat de data of informatie die de AI-agent gebruikt om een taak uit te voeren, wordt gecorrumpeerd, wat leidt tot bevooroordeelde of ongewenste reacties aan de gebruiker.
 
-**Beperking:** Voer regelmatige verificatie uit van de gegevens die de AI-agent zal gebruiken in zijn workflows. Zorg ervoor dat de toegang tot deze gegevens veilig is en alleen door vertrouwde personen wordt gewijzigd om dit soort aanvallen te voorkomen.
+**Beperking:** Voer regelmatig verificatie uit van de data die de AI-agent gebruikt in zijn workflows. Zorg ervoor dat de toegang tot deze data veilig is en alleen wordt gewijzigd door vertrouwde personen om dit type aanval te voorkomen.
 
 ### Cascaderende fouten
 
-**Beschrijving:** AI-agenten gebruiken verschillende tools en diensten om taken uit te voeren. Fouten veroorzaakt door aanvallers kunnen leiden tot storingen in andere systemen waarmee de AI-agent is verbonden, waardoor de aanval zich verder verspreidt en moeilijker te verhelpen is.
+**Beschrijving:** AI-agenten gebruiken verschillende tools en diensten om taken uit te voeren. Fouten veroorzaakt door aanvallers kunnen leiden tot storingen in andere systemen waar de AI-agent mee verbonden is, waardoor de aanval zich verspreidt en moeilijker te verhelpen is.
 
-**Beperking:** Een methode om dit te voorkomen is om de AI-agent in een beperkte omgeving te laten werken, zoals het uitvoeren van taken in een Docker-container, om directe systeemaanvallen te voorkomen. Het creëren van fallback-mechanismen en retry-logica wanneer bepaalde systemen met een fout reageren, is een andere manier om grotere systeemstoringen te voorkomen.
+**Beperking:** Een methode om dit te voorkomen is de AI-agent in een beperkte omgeving te laten opereren, bijvoorbeeld taken uitvoeren in een Docker-container, om directe systeemaanvallen te voorkomen. Het creëren van fallback-mechanismen en retry-logica wanneer systemen met een fout reageren, is een andere manier om grotere systeemstoringen te voorkomen.
 
-## Mens-in-de-lus
+## Mens in de lus
 
-Een andere effectieve manier om betrouwbare AI-agentensystemen te bouwen, is door gebruik te maken van een mens-in-de-lus. Dit creëert een proces waarbij gebruikers feedback kunnen geven aan de agenten tijdens de uitvoering. Gebruikers fungeren in feite als agenten in een multi-agentsysteem door goedkeuring te geven of het proces te beëindigen.
+Een andere effectieve manier om betrouwbare AI-agent systemen te bouwen is het gebruik van een mens-in-de-lus. Dit creëert een flow waarbij gebruikers tijdens het proces feedback kunnen geven aan de agenten. Gebruikers fungeren als agenten binnen een multi-agent systeem en geven goedkeuring of beëindigen het lopende proces.
 
-![Mens-in-de-lus](../../../translated_images/nl/human-in-the-loop.5f0068a678f62f4f.webp)
+![Mens in de lus](../../../translated_images/nl/human-in-the-loop.5f0068a678f62f4f.webp)
 
 Hier is een codevoorbeeld met AutoGen om te laten zien hoe dit concept wordt geïmplementeerd:
 
 ```python
 
-# Create the agents.
+# Maak de agenten aan.
 model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
 assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Gebruik input() om gebruikersinvoer vanaf de console te krijgen.
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
+# Maak de beëindigingsvoorwaarde die het gesprek zal beëindigen wanneer de gebruiker "APPROVE" zegt.
 termination = TextMentionTermination("APPROVE")
 
-# Create the team.
+# Maak het team aan.
 team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
 
-# Run the conversation and stream to the console.
+# Voer het gesprek uit en stroom naar de console.
 stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
+# Gebruik asyncio.run(...) bij het uitvoeren in een script.
 await Console(stream)
 
 ```
 
 ## Conclusie
 
-Het bouwen van betrouwbare AI-agenten vereist zorgvuldig ontwerp, robuuste beveiligingsmaatregelen en continue iteratie. Door gestructureerde meta-promptsystemen te implementeren, potentiële bedreigingen te begrijpen en mitigatiestrategieën toe te passen, kunnen ontwikkelaars AI-agenten creëren die zowel veilig als effectief zijn. Bovendien zorgt het opnemen van een mens-in-de-lus-benadering ervoor dat AI-agenten afgestemd blijven op de behoeften van gebruikers, terwijl risico's worden geminimaliseerd. Naarmate AI blijft evolueren, zal een proactieve houding ten aanzien van beveiliging, privacy en ethische overwegingen essentieel zijn om vertrouwen en betrouwbaarheid in AI-gedreven systemen te bevorderen.
+Het bouwen van betrouwbare AI-agenten vereist zorgvuldige ontwerpkeuzes, robuuste beveiligingsmaatregelen en continu itereren. Door gestructureerde meta prompt-systemen te implementeren, potentiële bedreigingen te begrijpen en mitigatiestrategieën toe te passen, kunnen ontwikkelaars AI-agenten maken die zowel veilig als effectief zijn. Daarnaast zorgt het integreren van een mens-in-de-lus aanpak ervoor dat AI-agenten in lijn blijven met de behoeften van gebruikers terwijl risico’s worden geminimaliseerd. Nu AI blijft evolueren, zal het behouden van een proactieve houding op het gebied van beveiliging, privacy en ethische overwegingen cruciaal zijn om vertrouwen en betrouwbaarheid in AI-gedreven systemen te bevorderen.
 
 ### Meer vragen over het bouwen van betrouwbare AI-agenten?
 
-Word lid van de [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) om andere leerlingen te ontmoeten, spreekuren bij te wonen en je vragen over AI-agenten beantwoord te krijgen.
+Word lid van de [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) om andere leerlingen te ontmoeten, deel te nemen aan kantooruren en je AI-agent vragen beantwoord te krijgen.
 
 ## Aanvullende bronnen
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Overzicht van verantwoord gebruik van AI</a>  
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Evaluatie van generatieve AI-modellen en AI-toepassingen</a>  
-- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Veiligheidssysteemberichten</a>  
-- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Risicobeoordelingssjabloon</a>  
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Overzicht verantwoord gebruik van AI</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Evaluatie van generatieve AI-modellen en AI-toepassingen</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Veiligheidssysteemberichten</a>
+- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Risicobeoordelingssjabloon</a>
 
 ## Vorige les
 
@@ -202,9 +202,11 @@ Word lid van de [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) om 
 
 ## Volgende les
 
-[Planning Design Pattern](../07-planning-design/README.md)
+[Planningsontwerppatroon](../07-planning-design/README.md)
 
 ---
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel wij streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal geldt als de gezaghebbende bron. Voor kritische informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,76 +1,76 @@
 # 探索 Microsoft Agent Framework
 
-![Agent Framework](../../../translated_images/zh-HK/lesson-14-thumbnail.90df0065b9d234ee.webp)
+![代理框架](../../../translated_images/zh-HK/lesson-14-thumbnail.90df0065b9d234ee.webp)
 
-### 簡介
+### 介紹
 
 本課程將涵蓋：
 
-- 理解 Microsoft Agent Framework：主要功能及價值  
-- 探索 Microsoft Agent Framework 的核心概念
-- 比較 MAF 與 Semantic Kernel 和 AutoGen：遷移指南
+- 了解 Microsoft Agent Framework：關鍵功能與價值  
+- 探索 Microsoft Agent Framework 的關鍵概念
+- 將 MAF 與 Semantic Kernel 及 AutoGen 作比較：遷移指南
 
 ## 學習目標
 
-完成本課程後，您將能夠：
+完成本課程後，你將會知道如何：
 
-- 使用 Microsoft Agent Framework 建立可投入生產的 AI Agents
-- 將 Microsoft Agent Framework 的核心功能應用於您的代理使用案例
-- 遷移並整合現有的代理框架和工具  
+- 使用 Microsoft Agent Framework 建立可投入生產的 AI 代理
+- 將 Microsoft Agent Framework 的核心功能套用到你的代理化使用案例
+- 遷移並整合既有的代理框架與工具  
 
-## 程式碼範例
+## 範例程式碼 
 
-[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) 的程式碼範例可在此存儲庫中找到，位於 `xx-python-agent-framework` 和 `xx-dotnet-agent-framework` 文件中。
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) 的範例程式碼可在此儲存庫的 `xx-python-agent-framework` 與 `xx-dotnet-agent-framework` 檔案中找到。
 
-## 理解 Microsoft Agent Framework
+## 了解 Microsoft Agent Framework
 
-![Framework Intro](../../../translated_images/zh-HK/framework-intro.077af16617cf130c.webp)
+![框架介紹](../../../translated_images/zh-HK/framework-intro.077af16617cf130c.webp)
 
-[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) 建立在 Semantic Kernel 和 AutoGen 的經驗和學習基礎之上。它提供了靈活性以應對生產和研究環境中各種代理使用案例，包括：
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) 建構於從 Semantic Kernel 與 AutoGen 的經驗與學習之上。它提供靈活性來處理生產與研究環境中各種代理化使用案例，包括：
 
-- **順序代理編排**：適用於需要逐步工作流程的場景。
-- **並行編排**：適用於代理需要同時完成任務的場景。
-- **群組聊天編排**：適用於代理共同協作完成一項任務的場景。
-- **交接編排**：適用於代理在完成子任務後將任務交接給其他代理的場景。
-- **磁性編排**：適用於管理代理創建並修改任務列表，並協調子代理完成任務的場景。
+- 在需要逐步工作流程的情境中，提供 **序列式代理協調 (Sequential Agent orchestration)**。
+- 在代理需要同時完成任務的情境中，提供 **併發協調 (Concurrent orchestration)**。
+- 在多個代理可以共同協作完成單一任務的情境中，提供 **群組聊天協調 (Group chat orchestration)**。
+- 在子任務完成後代理互相移交任務的情境中，提供 **移交協調 (Handoff Orchestration)**。
+- 在管理者代理建立並修改任務清單並處理子代理協調以完成任務的情境中，提供 **磁性協調 (Magnetic Orchestration)**。
 
-為了在生產環境中交付 AI Agents，MAF 還包含以下功能：
+為了在生產環境交付 AI 代理，MAF 還包含下列功能：
 
-- **可觀測性**：通過使用 OpenTelemetry，AI Agent 的每個行動，包括工具調用、編排步驟、推理流程和性能監控，都可以通過 Azure AI Foundry 儀表板進行追蹤。
-- **安全性**：代理原生託管於 Azure AI Foundry，包含角色基於訪問控制、私人數據處理和內建內容安全等安全控制。
-- **持久性**：代理線程和工作流程可以暫停、恢復並從錯誤中恢復，支持長時間運行的過程。
-- **控制**：支持人類介入的工作流程，任務可標記為需要人類批准。
+- 透過使用 OpenTelemetry 提供 **可觀測性 (Observability)**，記錄 AI 代理的每個操作，包括工具調用、協調步驟、推理流程，並可透過 Microsoft Foundry 儀表板進行效能監控。
+- 透過在 Microsoft Foundry 原生託管代理來提供 **安全性 (Security)**，包含角色存取控制、私有資料處理與內建內容安全性等控管。
+- 提供 **持久性 (Durability)**，代理執行緒與工作流程可以暫停、恢復並從錯誤中復原，支援長時間執行的流程。
+- 提供 **控制 (Control)**，支援人為介入的工作流程，當任務標示為需要人工核可時可進行處理。
 
-Microsoft Agent Framework 還專注於互操作性：
+Microsoft Agent Framework 亦著重於互通性，包含：
 
-- **雲端無關性**：代理可以在容器、內部部署以及多個不同的雲端上運行。
-- **提供者無關性**：代理可以通過您偏好的 SDK 創建，包括 Azure OpenAI 和 OpenAI。
-- **整合開放標準**：代理可以利用 Agent-to-Agent (A2A) 和 Model Context Protocol (MCP) 等協議來發現和使用其他代理及工具。
-- **插件和連接器**：可以連接到數據和記憶服務，例如 Microsoft Fabric、SharePoint、Pinecone 和 Qdrant。
+- **雲端無關 (Being Cloud-agnostic)** — 代理可以在容器、內部部署與多個不同雲端上執行。
+- **供應商無關 (Being Provider-agnostic)** — 代理可以透過你喜好的 SDK 建立，包括 Azure OpenAI 與 OpenAI。
+- **整合開放標準 (Integrating Open Standards)** — 代理可利用像是 Agent-to-Agent (A2A) 與 Model Context Protocol (MCP) 等協定來探索並使用其他代理與工具。
+- **外掛與連接器 (Plugins and Connectors)** — 可連接到資料與記憶服務，例如 Microsoft Fabric、SharePoint、Pinecone 與 Qdrant。
 
-接下來，我們將探討這些功能如何應用於 Microsoft Agent Framework 的核心概念。
+下面我們來看看這些功能如何應用於 Microsoft Agent Framework 的一些核心概念。
 
-## Microsoft Agent Framework 的核心概念
+## Microsoft Agent Framework 的關鍵概念
 
-### 代理
+### Agents
 
-![Agent Framework](../../../translated_images/zh-HK/agent-components.410a06daf87b4fef.webp)
+![代理組件](../../../translated_images/zh-HK/agent-components.410a06daf87b4fef.webp)
 
-**創建代理**
+**建立代理**
 
-代理的創建是通過定義推理服務（LLM 提供者）、一組 AI Agent 要遵循的指令以及分配的 `name` 來完成：
+代理的建立是透過定義推理服務（LLM Provider）、一組供 AI 代理遵循的指示，以及指定的 `name` 來完成：
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-上述範例使用了 `Azure OpenAI`，但代理也可以使用多種服務創建，包括 `Azure AI Foundry Agent Service`：
+上例使用的是 `Azure OpenAI`，但代理也可以使用多種服務來建立，包括 `Microsoft Foundry Agent Service`：
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
 ```
 
-OpenAI 的 `Responses` 和 `ChatCompletion` API：
+OpenAI `Responses`, `ChatCompletion` APIs
 
 ```python
 agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="You are a helpful weather assistant.", )
@@ -80,15 +80,15 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
-或使用 A2A 協議的遠程代理：
+或使用 A2A 協定的遠端代理：
 
 ```python
 agent = A2AAgent( name=agent_card.name, description=agent_card.description, agent_card=agent_card, url="https://your-a2a-agent-host" )
 ```
 
-**運行代理**
+**執行代理**
 
-代理可以通過 `.run` 或 `.run_stream` 方法運行，分別用於非流式或流式回應。
+代理可透過 `.run` 或 `.run_stream` 方法執行，分別用於非串流或串流回應。
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,75 +102,75 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-每次代理運行還可以選擇自定義參數，例如代理使用的 `max_tokens`、代理可以調用的 `tools`，甚至是代理使用的 `model`。
+每次代理執行也可以有選項來自訂參數，例如代理使用的 `max_tokens`、代理能呼叫的 `tools`，甚至代理所使用的 `model`。
 
-這在需要特定模型或工具來完成用戶任務的情況下非常有用。
+當完成使用者任務需要特定模型或工具時，這點相當有用。
 
-**工具**
+**工具 (Tools)**
 
-工具可以在定義代理時設置：
+工具可以在定義代理時一併定義：
 
 ```python
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# 當直接建立 ChatAgent 時
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
 ```
 
-也可以在運行代理時設置：
+也可以在執行代理時指定：
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # 此工具僅於本次執行期間提供 )
 ```
 
-**代理線程**
+**代理執行緒 (Agent Threads)**
 
-代理線程用於處理多輪對話。線程可以通過以下方式創建：
+代理執行緒用於處理多回合對話。執行緒可透過以下方式建立：
 
-- 使用 `get_new_thread()`，使線程可以隨時間保存。
-- 在運行代理時自動創建線程，線程僅在當前運行期間存在。
+- 使用 `get_new_thread()`，使該執行緒能夠長時間儲存
+- 在執行代理時自動建立執行緒，該執行緒僅於當前執行期間存在
 
-創建線程的程式碼如下：
+建立執行緒的程式碼如下：
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# 建立一個新執行緒。
+thread = agent.get_new_thread() # 使用該執行緒執行代理程式。
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-然後可以序列化線程以供日後使用：
+你也可以將執行緒序列化以便日後使用：
 
 ```python
-# Create a new thread. 
+# 建立一個新的執行緒。
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# 用該執行緒執行代理。
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# 將執行緒序列化以便儲存。
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# 從儲存載入後反序列化執行緒狀態。
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
-**代理中介軟件**
+**代理中介軟體 (Agent Middleware)**
 
-代理與工具和 LLM 交互以完成用戶的任務。在某些場景中，我們希望在這些交互之間執行或追蹤操作。代理中介軟件使我們能夠做到這一點：
+代理會與工具與 LLM 互動以完成使用者的任務。在某些情境下，我們希望在這些互動之間執行或追蹤動作。代理中介軟體使我們能夠透過下列方式做到這點：
 
-*功能中介軟件*
+*函式中介軟體 (Function Middleware)*
 
-此中介軟件允許我們在代理調用功能/工具之前執行操作。例如，您可能希望在功能調用時進行一些日誌記錄。
+此中介軟體允許我們在代理與其將呼叫的函式/工具之間執行一個動作。舉例來說，當你想在函式呼叫時做一些記錄時會使用到它。
 
-在以下程式碼中，`next` 定義了是否應調用下一個中介軟件或實際功能。
+在下列程式碼中，`next` 定義是否應呼叫下一個中介軟體或實際的函式。
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +178,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # 前置處理：在函數執行前記錄日誌
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # 繼續執行下一個中介軟體或函數
     await next(context)
 
-    # Post-processing: Log after function execution
+    # 後置處理：在函數執行後記錄日誌
     print(f"[Function] {context.function.name} completed")
 ```
 
-*聊天中介軟件*
+*聊天中介軟體 (Chat Middleware)*
 
-此中介軟件允許我們在代理與 LLM 之間的請求中執行或記錄操作。
+此中介軟體允許我們在代理與 LLM 之間的請求流程中執行或記錄某個動作。
 
-這包含重要信息，例如發送到 AI 服務的 `messages`。
+它包含像是正在傳送給 AI 服務的 `messages` 等重要資訊。
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +200,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # 預處理：於呼叫 AI 之前紀錄
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # 繼續到下一個中介軟件或 AI 服務
     await next(context)
 
-    # Post-processing: Log after AI response
+    # 後處理：於 AI 回應後紀錄
     print("[Chat] AI response received")
 
 ```
 
-**代理記憶**
+**代理記憶 (Agent Memory)**
 
-如 `Agentic Memory` 課程中所述，記憶是使代理能夠在不同上下文中運作的重要元素。MAF 提供了幾種不同類型的記憶：
+如在「Agentic Memory」課程中所述，記憶是讓代理能在不同上下文中運作的重要元素。MAF 提供數種不同類型的記憶：
 
-*內存存儲*
+*記憶體內儲存 (In-Memory Storage)*
 
-這是在應用程序運行期間存儲在線程中的記憶。
+這是應用程式執行期間，執行緒中所儲存的記憶。
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# 建立一個新執行緒。
+thread = agent.get_new_thread() # 使用該執行緒執行代理程式。
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
-*持久消息*
+*持久化訊息 (Persistent Messages)*
 
-此記憶用於在不同會話中存儲對話歷史。它是通過 `chat_message_store_factory` 定義的：
+當要在不同工作階段之間儲存對話歷史時會使用此記憶。它是使用 `chat_message_store_factory` 定義的：
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# 建立自訂訊息儲存庫
 def create_message_store():
     return ChatMessageStore()
 
@@ -244,14 +244,14 @@ agent = ChatAgent(
 
 ```
 
-*動態記憶*
+*動態記憶 (Dynamic Memory)*
 
-此記憶在運行代理之前添加到上下文中。這些記憶可以存儲在外部服務中，例如 mem0：
+此記憶會在代理執行前加入到上下文中。這些記憶可以儲存在像 mem0 之類的外部服務中：
 
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# 使用 Mem0 以啟用進階記憶體功能
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -266,9 +266,9 @@ agent = ChatAgent(
 
 ```
 
-**代理可觀測性**
+**代理可觀測性 (Agent Observability)**
 
-可觀測性對於構建可靠且可維護的代理系統至關重要。MAF 與 OpenTelemetry 集成，提供追蹤和計量以提高可觀測性。
+可觀測性對於建立可靠且可維護的代理系統很重要。MAF 整合了 OpenTelemetry，以提供追蹤與計量，增進可觀測性。
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,29 +276,29 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # 做啲嘢
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
 ```
 
-### 工作流程
+### 工作流程 (Workflows)
 
-MAF 提供了預定義的步驟來完成任務，並將 AI 代理作為這些步驟中的組件。
+MAF 提供預先定義的步驟來完成任務的工作流程，並將 AI 代理作為這些步驟中的元件之一。
 
-工作流程由不同的組件組成，允許更好的控制流。工作流程還支持 **多代理編排** 和 **檢查點** 以保存工作流程狀態。
+工作流程由不同的元件組成，以便更好地控制流程。工作流程也支援 **多代理協調 (multi-agent orchestration)** 與 **檢查點 (checkpointing)**，以儲存工作流程狀態。
 
-工作流程的核心組件包括：
+工作流程的核心元件包括：
 
-**執行器**
+**執行器 (Executors)**
 
-執行器接收輸入消息，執行分配的任務，然後生成輸出消息。這使工作流程向完成更大的任務邁進。執行器可以是 AI 代理或自定義邏輯。
+執行器接收輸入訊息，執行其指派的任務，然後產生輸出訊息。這推動工作流程向完成較大任務的方向前進。執行器可以是 AI 代理或自訂邏輯。
 
-**邊**
+**邊 (Edges)**
 
-邊用於定義工作流程中的消息流。這些可以是：
+邊用來定義工作流程中訊息的流向。這些可以是：
 
-*直接邊* - 執行器之間的簡單一對一連接：
+*直接邊 (Direct Edges)* - 執行器之間的一對一簡單連接：
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,48 +309,48 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*條件邊* - 在滿足某些條件後激活。例如，當酒店房間不可用時，執行器可以建議其他選項。
+*條件邊 (Conditional Edges)* - 在滿足特定條件後啟動。例如，當飯店房間不可用時，某個執行器可以建議其他選項。
 
-*Switch-case 邊* - 根據定義的條件將消息路由到不同的執行器。例如，如果旅遊客戶有優先訪問權，他們的任務將通過另一個工作流程處理。
+*切換分支邊 (Switch-case Edges)* - 根據定義的條件將訊息導向不同的執行器。例如，若旅客具有優先權存取，則其任務可能會透過另一個工作流程處理。
 
-*Fan-out 邊* - 將一條消息發送到多個目標。
+*分發邊 (Fan-out Edges)* - 將一則訊息發送到多個目標。
 
-*Fan-in 邊* - 收集來自不同執行器的多條消息並發送到一個目標。
+*匯聚邊 (Fan-in Edges)* - 收集來自不同執行器的多則訊息並發送到單一目標。
 
-**事件**
+**事件 (Events)**
 
-為了更好地觀測工作流程，MAF 提供了內建的執行事件，包括：
+為了提供對工作流程更佳的可觀測性，MAF 提供內建的執行事件，包括：
 
-- `WorkflowStartedEvent` - 工作流程執行開始
-- `WorkflowOutputEvent` - 工作流程生成輸出
+- `WorkflowStartedEvent`  - 工作流程執行開始
+- `WorkflowOutputEvent` - 工作流程產生輸出
 - `WorkflowErrorEvent` - 工作流程遇到錯誤
-- `ExecutorInvokeEvent` - 執行器開始處理
-- `ExecutorCompleteEvent` - 執行器完成處理
-- `RequestInfoEvent` - 發出請求
+- `ExecutorInvokeEvent`  - 執行器開始處理
+- `ExecutorCompleteEvent`  - 執行器完成處理
+- `RequestInfoEvent` - 發出了一個請求
 
-## 從其他框架遷移（Semantic Kernel 和 AutoGen）
+## 從其他框架遷移（Semantic Kernel 與 AutoGen）
 
 ### MAF 與 Semantic Kernel 的差異
 
-**簡化的代理創建**
+**簡化的代理建立流程**
 
-Semantic Kernel 需要為每個代理創建一個 Kernel 實例。MAF 使用擴展為主要提供者提供簡化的方法。
+Semantic Kernel 需要為每個代理建立一個 Kernel 實例。MAF 採用較簡化的作法，使用主要提供者的擴充套件。
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-**代理線程創建**
+**代理執行緒建立**
 
-Semantic Kernel 需要手動創建線程。在 MAF 中，代理直接分配線程。
+Semantic Kernel 需要手動建立執行緒。在 MAF 中，代理會直接被指派一個執行緒。
 
 ```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+thread = agent.get_new_thread() # 使用該執行緒執行代理。
 ```
 
 **工具註冊**
 
-在 Semantic Kernel 中，工具註冊到 Kernel，然後將 Kernel 傳遞給代理。在 MAF 中，工具直接在代理創建過程中註冊。
+在 Semantic Kernel 中，工具會註冊到 Kernel，然後將 Kernel 傳遞給代理。在 MAF 中，工具則是在建立代理的過程中直接註冊。
 
 ```python
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
@@ -358,27 +358,29 @@ agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpf
 
 ### MAF 與 AutoGen 的差異
 
-**Teams vs Workflows**
+**Teams 與 Workflows**
 
-`Teams` 是 AutoGen 中代理事件驅動活動的結構。MAF 使用 `Workflows`，通過基於圖形的架構將數據路由到執行器。
+`Teams` 是 AutoGen 中用於事件驅動代理活動的事件結構。MAF 使用將資料透過圖形架構路由到執行器的 `Workflows`。
 
-**工具創建**
+**工具建立**
 
-AutoGen 使用 `FunctionTool` 封裝代理可調用的功能。MAF 使用 @ai_function，運作方式類似，但還能自動推斷每個功能的架構。
+AutoGen 使用 `FunctionTool` 來包裝供代理呼叫的函式。MAF 使用 @ai_function，操作方式相似，但也會自動推斷每個函式的 schema。
 
 **代理行為**
 
-在 AutoGen 中，代理默認是單輪代理，除非 `max_tool_iterations` 設置為更高的值。在 MAF 中，`ChatAgent` 默認是多輪代理，意味著它會持續調用工具直到完成用戶的任務。
+在 AutoGen 中，代理預設為單回合代理，除非將 `max_tool_iterations` 設為較高值。在 MAF 中，`ChatAgent` 預設為多回合，這表示它會持續呼叫工具，直到使用者的任務完成為止。
 
-## 程式碼範例
+## 範例程式碼 
 
-Microsoft Agent Framework 的程式碼範例可在此存儲庫中找到，位於 `xx-python-agent-framework` 和 `xx-dotnet-agent-framework` 文件中。
+Microsoft Agent Framework 的範例程式碼可在此儲存庫的 `xx-python-agent-framework` 與 `xx-dotnet-agent-framework` 檔案中找到。
 
-## 有更多關於 Microsoft Agent Framework 的問題？
+## 對 Microsoft Agent Framework 有更多問題嗎？
 
-加入 [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)，與其他學習者交流，參加辦公時間並解答您的 AI Agents 問題。
+加入 [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) 與其他學習者交流、參加辦公時間，並獲得你的 AI 代理相關問題解答。
 
 ---
 
-**免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+免責聲明：
+本文件已使用 AI 翻譯服務 Co-op Translator (https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但自動翻譯可能包含錯誤或不準確之處。原文件的母語版本應被視為具權威性的版本。對於重要資訊，建議採用專業人工翻譯。我們不會對因使用本翻譯而引致的任何誤解或誤釋承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,25 +2,25 @@
 
 ## Project Overview
 
-Dis repository get "AI Agents for Beginners" - na full educational course wey dey teach wetin you need to sabi to build AI Agents. Di course get 15+ lessons wey cover fundamentals, design patterns, frameworks, and how to deploy AI agents for production.
+Dis repository get "AI Agents for Beginners" - na complete educational course wey dey teach everything wey person need sabi build AI Agents. Di course get over 15 lessons wey cover fundamentals, design patterns, frameworks, plus how to put AI agents for production deployment.
 
 **Key Technologies:**
 - Python 3.12+
 - Jupyter Notebooks for interactive learning
 - AI Frameworks: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI Services: Azure AI Foundry, Azure AI Agent Service
-- GitHub Models Marketplace (free tier dey)
+- Azure AI Services: Microsoft Foundry, Azure AI Agent Service
+- GitHub Models Marketplace (free tier available)
 
 **Architecture:**
 - Lesson-based structure (00-15+ directories)
-- Each lesson get: README documentation, code samples (Jupyter notebooks), and images
-- Multi-language support dey through automated translation system
-- Multiple framework options dey for each lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
+- Each lesson get: README documentation, code samples (Jupyter notebooks), and pictures
+- Multi-language support through automated translation system
+- Multiple framework options per lesson (Semantic Kernel, AutoGen, Azure AI Agent Service)
 
 ## Setup Commands
 
 ### Prerequisites
-- Python 3.12 or higher
+- Python 3.12 or above
 - GitHub account (for GitHub Models - free tier)
 - Azure subscription (optional, for Azure AI services)
 
@@ -37,7 +37,7 @@ Dis repository get "AI Agents for Beginners" - na full educational course wey de
 2. **Create and activate Python virtual environment:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # For Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies:**
@@ -48,7 +48,7 @@ Dis repository get "AI Agents for Beginners" - na full educational course wey de
 4. **Set up environment variables:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # Make you edit .env wit your API keys and endpoints
    ```
 
 ### Required Environment Variables
@@ -57,12 +57,12 @@ For **GitHub Models (Free)**:
 - `GITHUB_TOKEN` - Personal access token from GitHub
 
 For **Azure AI Services** (optional):
-- `PROJECT_ENDPOINT` - Azure AI Foundry project endpoint
+- `PROJECT_ENDPOINT` - Microsoft Foundry project endpoint
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
 - `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Deployment name for chat model
 - `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Deployment name for embeddings
-- Additional Azure configuration dey for `.env.example`
+- Additional Azure configuration as e dey for `.env.example`
 
 ## Development Workflow
 
@@ -75,82 +75,82 @@ Each lesson get plenty Jupyter notebooks for different frameworks:
    jupyter notebook
    ```
 
-2. **Navigate go one lesson directory** (e.g., `01-intro-to-ai-agents/code_samples/`)
+2. **Go enter lesson directory** (for example, `01-intro-to-ai-agents/code_samples/`)
 
 3. **Open and run notebooks:**
-   - `*-semantic-kernel.ipynb` - Use Semantic Kernel framework
-   - `*-autogen.ipynb` - Use AutoGen framework
-   - `*-python-agent-framework.ipynb` - Use Microsoft Agent Framework (Python)
-   - `*-dotnet-agent-framework.ipynb` - Use Microsoft Agent Framework (.NET)
-   - `*-azureaiagent.ipynb` - Use Azure AI Agent Service
+   - `*-semantic-kernel.ipynb` - Using Semantic Kernel framework
+   - `*-autogen.ipynb` - Using AutoGen framework
+   - `*-python-agent-framework.ipynb` - Using Microsoft Agent Framework (Python)
+   - `*-dotnet-agent-framework.ipynb` - Using Microsoft Agent Framework (.NET)
+   - `*-azureaiagent.ipynb` - Using Azure AI Agent Service
 
 ### Working with Different Frameworks
 
 **Semantic Kernel + GitHub Models:**
 - Free tier dey with GitHub account
-- Good for learning and experimentation
+- Good for learning and testing
 - File pattern: `*-semantic-kernel*.ipynb`
 
 **AutoGen + GitHub Models:**
 - Free tier dey with GitHub account
-- Multi-agent orchestration capabilities dey
+- Get multi-agent orchestration powers
 - File pattern: `*-autogen.ipynb`
 
 **Microsoft Agent Framework (MAF):**
 - Latest framework from Microsoft
-- Dey available for Python and .NET
+- Available for Python and .NET
 - File pattern: `*-agent-framework.ipynb`
 
 **Azure AI Agent Service:**
-- E need Azure subscription
-- Production-ready features dey
+- Need Azure subscription
+- Features ready for production
 - File pattern: `*-azureaiagent.ipynb`
 
 ## Testing Instructions
 
-Dis na educational repository with example code, e no be production code wey get automated tests. To check your setup and changes:
+Dis one na educational repository with example code, no be production code wey get automated tests. To confirm say your setup and changes dey okay:
 
 ### Manual Testing
 
 1. **Test Python environment:**
    ```bash
-   python --version  # Should be 3.12+
+   python --version  # E suppose dey 3.12+
    pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
    ```
 
 2. **Test notebook execution:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # Change notebook go script and run am (test say imports dey work)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
-3. **Verify environment variables:**
+3. **Check environment variables:**
    ```bash
    python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
    ```
 
 ### Running Individual Notebooks
 
-Open notebooks for Jupyter and run di cells one by one. Each notebook dey self-contained and e get:
+Open notebooks for Jupyter and run the cells one by one. Every notebook be self-contained and get:
 - Import statements
 - Configuration loading
 - Example agent implementations
-- Expected outputs for markdown cells
+- Expected outputs inside markdown cells
 
 ## Code Style
 
 ### Python Conventions
 
-- **Python Version**: 3.12+
-- **Code Style**: Follow standard Python PEP 8 conventions
-- **Notebooks**: Use clear markdown cells to explain concepts
-- **Imports**: Group by standard library, third-party, local imports
+- **Python Version:** 3.12+
+- **Code Style:** Follow standard Python PEP 8 conventions
+- **Notebooks:** Use clear markdown cells to explain stuff
+- **Imports:** Group by standard library, third-party, local imports
 
 ### Jupyter Notebook Conventions
 
-- Put descriptive markdown cells before code cells
-- Add output examples for notebooks for reference
-- Use clear variable names wey match lesson concepts
+- Include clear markdown cells before code cells
+- Add output samples inside notebooks for reference
+- Use clear variable names wey go match lesson concepts
 - Keep notebook execution order linear (cell 1 → 2 → 3...)
 
 ### File Organization
@@ -171,49 +171,49 @@ Open notebooks for Jupyter and run di cells one by one. Each notebook dey self-c
 
 ### Building Documentation
 
-Dis repository dey use Markdown for documentation:
-- README.md files dey for each lesson folder
-- Main README.md dey for repository root
-- Automated translation system dey through GitHub Actions
+Dis repository use Markdown for documentation:
+- README.md files for every lesson folder
+- Main README.md for repository root
+- Automated translation system with GitHub Actions
 
 ### CI/CD Pipeline
 
 E dey for `.github/workflows/`:
 
-1. **co-op-translator.yml** - Automatic translation to 50+ languages
-2. **welcome-issue.yml** - E dey welcome new issue creators
-3. **welcome-pr.yml** - E dey welcome new pull request contributors
+1. **co-op-translator.yml** - Automatic translation for 50+ languages
+2. **welcome-issue.yml** - Welcomes new issue creators
+3. **welcome-pr.yml** - Welcomes new pull request contributors
 
 ### Deployment
 
-Dis na educational repository - e no get deployment process. Users:
-1. Fork or clone di repository
-2. Run notebooks locally or for GitHub Codespaces
-3. Learn by modifying and experimenting with examples
+Dis one na educational repository - no deployment process. Users:
+1. Fork or clone the repository
+2. Run notebooks locally or inside GitHub Codespaces
+3. Learn by changing and experimenting with examples
 
 ## Pull Request Guidelines
 
 ### Before Submitting
 
 1. **Test your changes:**
-   - Run di notebooks wey you change completely
-   - Make sure say all cells dey run without errors
-   - Check say di outputs dey correct
+   - Run affected notebooks completely
+   - Confirm all cells run without errors
+   - Make sure outputs dey okay
 
 2. **Documentation updates:**
-   - Update README.md if you dey add new concepts
-   - Add comments for notebooks for complex code
-   - Make sure markdown cells dey explain di purpose
+   - Fix README.md if you add new concepts
+   - Add comments in notebooks for complex code
+   - Make sure markdown cells explain wetin dem try do
 
 3. **File changes:**
    - No commit `.env` files (use `.env.example`)
-   - No commit `venv/` or `__pycache__/` directories
-   - Keep notebook outputs if dem dey show concepts
+   - No commit `venv/` or `__pycache__/` folders
+   - Keep notebook outputs if e show concepts well
    - Remove temporary files and backup notebooks (`*-backup.ipynb`)
 
 ### PR Title Format
 
-Use descriptive titles:
+Use clear titles:
 - `[Lesson-XX] Add new example for <concept>`
 - `[Fix] Correct typo for lesson-XX README`
 - `[Update] Improve code sample for lesson-XX`
@@ -221,65 +221,65 @@ Use descriptive titles:
 
 ### Required Checks
 
-- Notebooks suppose dey run without errors
-- README files suppose dey clear and correct
-- Follow di existing code patterns for di repository
-- Maintain consistency with other lessons
+- Notebooks must run without errors
+- README files must clear and correct
+- Follow code patterns wey dey repository
+- Keep style consistent with other lessons
 
 ## Additional Notes
 
 ### Common Gotchas
 
-1. **Python version mismatch:**
-   - Make sure say you dey use Python 3.12+
-   - Some packages no go work with older versions
-   - Use `python3 -m venv` to specify Python version well
+1. **Python version wahala:**
+   - Make sure you dey use Python 3.12+
+   - Some packages no go work with old versions
+   - Use `python3 -m venv` to specify Python version sharp sharp
 
 2. **Environment variables:**
    - Always create `.env` from `.env.example`
-   - No commit `.env` file (e dey for `.gitignore`)
+   - No commit `.env` file (e dey `.gitignore`)
    - GitHub token need correct permissions
 
 3. **Package conflicts:**
    - Use fresh virtual environment
-   - Install from `requirements.txt` instead of individual packages
-   - Some notebooks fit need extra packages wey dem mention for markdown cells
+   - Install from `requirements.txt` better than separate packages
+   - Some notebooks fit need extra packages wey dem talk inside markdown cells
 
 4. **Azure services:**
    - Azure AI services need active subscription
-   - Some features dey region-specific
-   - Free tier limitations dey for GitHub Models
+   - Some features fit depend on region
+   - Free tier get limits for GitHub Models
 
 ### Learning Path
 
-Recommended progression through lessons:
-1. **00-course-setup** - Start here to set up environment
-2. **01-intro-to-ai-agents** - Understand AI agent fundamentals
+Recommended order to follow lessons:
+1. **00-course-setup** - Start here for environment setup
+2. **01-intro-to-ai-agents** - Understand AI agent basics
 3. **02-explore-agentic-frameworks** - Learn about different frameworks
 4. **03-agentic-design-patterns** - Core design patterns
-5. Continue through numbered lessons one by one
+5. Continue in sequence with numbered lessons
 
 ### Framework Selection
 
-Choose framework based on wetin you wan achieve:
-- **Learning/Prototyping**: Semantic Kernel + GitHub Models (free)
-- **Multi-agent systems**: AutoGen
-- **Latest features**: Microsoft Agent Framework (MAF)
-- **Production deployment**: Azure AI Agent Service
+Choose framework based on wetin you want:
+- **Learning/Prototyping:** Semantic Kernel + GitHub Models (free)
+- **Multi-agent systems:** AutoGen
+- **Latest features:** Microsoft Agent Framework (MAF)
+- **Production deployment:** Azure AI Agent Service
 
 ### Getting Help
 
-- Join di [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord)
-- Check lesson README files for specific guidance
-- Look di main [README.md](./README.md) for course overview
-- Check [Course Setup](./00-course-setup/README.md) for detailed setup instructions
+- Join di [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- Check lesson README files for detailed guide
+- See main [README.md](./README.md) for course overview
+- Refer to [Course Setup](./00-course-setup/README.md) for full setup instructions
 
 ### Contributing
 
-Dis na open educational project. Contributions dey welcome:
+Dis one na open educational project. Contributions dey welcome:
 - Improve code examples
 - Fix typos or errors
-- Add clarifying comments
+- Add better comments
 - Suggest new lesson topics
 - Translate to more languages
 
@@ -289,20 +289,20 @@ Check [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issue
 
 ### Multi-Language Support
 
-Dis repository dey use automated translation system:
-- 50+ languages dey supported
-- Translations dey for `/translations/<lang-code>/` directories
-- GitHub Actions workflow dey handle translation updates
-- Source files dey for English for repository root
+Dis repository get automated translation system:
+- 50+ languages supported
+- Translations dey inside `/translations/<lang-code>/` folders
+- GitHub Actions workflow dey update translations
+- Source files dey English at repository root
 
 ### Lesson Structure
 
-Each lesson dey follow one consistent pattern:
+Every lesson get di same pattern:
 1. Video thumbnail with link
 2. Written lesson content (README.md)
-3. Code samples for multiple frameworks
+3. Code samples for many frameworks
 4. Learning objectives and prerequisites
-5. Extra learning resources wey dem link
+5. Extra learning resources linked
 
 ### Code Sample Naming
 
@@ -315,8 +315,8 @@ Format: `<lesson-number>-<framework-name>.ipynb`
 ### Special Directories
 
 - `translated_images/` - Localized images for translations
-- `images/` - Original images for English content
-- `.devcontainer/` - VS Code development container configuration
+- `images/` - Original pictures for English content
+- `.devcontainer/` - VS Code development container config
 - `.github/` - GitHub Actions workflows and templates
 
 ### Dependencies
@@ -336,6 +336,6 @@ Key packages from `requirements.txt`:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI transleto service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even though we dey try make am correct, abeg make you sabi say machine translation fit get mistake or no dey accurate well. Di original dokyument for im native language na di main source wey you go fit trust. For important mata, e good make you use professional human translator. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Warning**:
+Dis kain dokument don translate by AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). As we dey try make am correct, abeg sabi say machine fit make mistake for translation. Di original document wey dey dia pesin language na di correct one. If na serious matter, better make person wey sabi human translation do am. We no go take blame if pesin no understand or if mistake show for dis translated version.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

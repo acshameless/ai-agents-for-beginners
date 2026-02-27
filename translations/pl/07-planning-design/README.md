@@ -1,55 +1,55 @@
-[![Wzorzec projektowania planowania](../../../translated_images/pl/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Wzorzec projektowy planowania](../../../translated_images/pl/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
+> _(Kliknij obraz powyżej, aby obejrzeć wideo tej lekcji)_
 
-# Projektowanie planowania
+# Projektowanie planu
 
 ## Wprowadzenie
 
-Ta lekcja obejmie:
+Ta lekcja omówi
 
-* Definiowanie jasnego ogólnego celu i dzielenie złożonego zadania na mniejsze, łatwiejsze do zarządzania zadania.
-* Wykorzystywanie strukturalnego wyjścia dla bardziej niezawodnych i czytelnych dla maszyn odpowiedzi.
-* Zastosowanie podejścia opartego na zdarzeniach do obsługi dynamicznych zadań i nieoczekiwanych danych wejściowych.
+* Określanie jasnego ogólnego celu i rozbijanie złożonego zadania na wykonalne podzadania.
+* Wykorzystanie strukturyzowanego wyniku dla bardziej niezawodnych i maszynowo czytelnych odpowiedzi.
+* Stosowanie podejścia opartego na zdarzeniach do obsługi dynamicznych zadań i nieoczekiwanych wejść.
 
 ## Cele nauki
 
 Po ukończeniu tej lekcji będziesz rozumieć:
 
-* Jak zidentyfikować i ustalić ogólny cel dla agenta AI, zapewniając, że jasno wie, co należy osiągnąć.
-* Jak rozłożyć złożone zadanie na mniejsze podzadania i zorganizować je w logiczną sekwencję.
-* Jak wyposażyć agentów w odpowiednie narzędzia (np. narzędzia wyszukiwania lub analizy danych), zdecydować, kiedy i jak ich używać, oraz radzić sobie z nieoczekiwanymi sytuacjami.
-* Jak oceniać wyniki podzadań, mierzyć wydajność i iterować działania, aby poprawić końcowy wynik.
+* Określić i ustawić ogólny cel dla agenta AI, zapewniając, że wyraźnie wie, co należy osiągnąć.
+* Rozłożyć złożone zadanie na mniejsze podzadania i zorganizować je w logiczną sekwencję.
+* Wyposażyć agentów we właściwe narzędzia (np. narzędzia wyszukiwania lub analizy danych), zdecydować kiedy i jak są używane oraz radzić sobie z nieoczekiwanymi sytuacjami, które się pojawiają.
+* Ocenić wyniki podzadań, mierzyć wydajność i iterować działania w celu poprawy końcowego rezultatu.
 
-## Definiowanie ogólnego celu i rozbijanie zadania
+## Określanie ogólnego celu i rozbijanie zadania
 
-![Definiowanie celów i zadań](../../../translated_images/pl/defining-goals-tasks.d70439e19e37c47a.webp)
+![Określanie celów i zadań](../../../translated_images/pl/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Większość zadań w rzeczywistym świecie jest zbyt złożona, aby można je było rozwiązać w jednym kroku. Agent AI potrzebuje zwięzłego celu, który będzie kierował jego planowaniem i działaniami. Na przykład rozważ cel:
+Większość zadań w rzeczywistym świecie jest zbyt skomplikowana, aby poradzić sobie z nią w jednym kroku. Agent AI potrzebuje zwięzłego celu, który pokieruje jego planowaniem i działaniami. Na przykład, rozważ cel:
 
-    "Stwórz 3-dniowy plan podróży."
+    "Wygeneruj 3-dniowy plan podróży."
 
-Choć jest to proste do sformułowania, wymaga dalszego doprecyzowania. Im jaśniejszy cel, tym lepiej agent (i wszyscy ludzie współpracujący) mogą skupić się na osiągnięciu właściwego wyniku, takiego jak stworzenie kompleksowego planu podróży z opcjami lotów, rekomendacjami hoteli i sugestiami dotyczącymi aktywności.
+Chociaż jest to proste do sformułowania, nadal wymaga doprecyzowania. Im klarowniejszy cel, tym lepiej agent (i ewentualni współpracownicy) mogą skupić się na osiągnięciu właściwego rezultatu, takiego jak stworzenie kompleksowego planu z opcjami lotów, rekomendacjami hoteli i sugestiami aktywności.
 
-### Rozkładanie zadania na części
+### Dekompozycja zadań
 
-Duże lub skomplikowane zadania stają się bardziej przystępne, gdy są podzielone na mniejsze, ukierunkowane podzadania. 
-Dla przykładu planu podróży można rozbić cel na:
+Duże lub złożone zadania stają się bardziej zarządzalne, gdy są podzielone na mniejsze, zorientowane na cel podzadania.
+Dla przykładu planu podróży można rozłożyć cel na:
 
 * Rezerwacja lotów
-* Rezerwacja hoteli
+* Rezerwacja hotelu
 * Wynajem samochodu
 * Personalizacja
 
-Każde podzadanie może być realizowane przez dedykowanych agentów lub procesy. Jeden agent może specjalizować się w wyszukiwaniu najlepszych ofert lotów, inny w rezerwacji hoteli i tak dalej. Koordynujący lub „downstream” agent może następnie skompilować te wyniki w jeden spójny plan podróży dla użytkownika końcowego.
+Każde podzadanie może następnie być obsłużone przez wyspecjalizowanych agentów lub procesy. Jeden agent może specjalizować się w wyszukiwaniu najlepszych ofert lotów, inny koncentruje się na rezerwacjach hotelowych, i tak dalej. Agent koordynujący lub „downstream” może następnie skompilować te wyniki w jeden spójny plan dla użytkownika końcowego.
 
-Takie modułowe podejście pozwala również na stopniowe ulepszenia. Na przykład można dodać wyspecjalizowanych agentów do rekomendacji kulinarnych lub sugestii lokalnych aktywności i z czasem udoskonalać plan podróży.
+Takie modularne podejście pozwala również na stopniowe ulepszenia. Na przykład można dodać wyspecjalizowanych agentów odpowiadających za rekomendacje kulinarne lub sugestie lokalnych atrakcji i z czasem dopracowywać plan podróży.
 
-### Strukturalne wyjście
+### Strukturyzowany wynik
 
-Duże modele językowe (LLM) mogą generować strukturalne wyjście (np. JSON), które jest łatwiejsze do analizy i przetwarzania przez agentów lub usługi downstream. Jest to szczególnie przydatne w kontekście wieloagentowym, gdzie można podjąć działania na podstawie wyników planowania. Zobacz poniżej dla szybkiego przeglądu.
+Large Language Models (LLMs) mogą generować strukturyzowany wynik (np. JSON), który jest łatwiejszy do parsowania i przetwarzania przez agentów lub usługi downstream. Jest to szczególnie przydatne w kontekście wieloagentowym, gdzie po otrzymaniu planu można wykonać kolejne zadania. Odniesienie do szybkiego przeglądu znajdziesz w tym <a href="https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/structured-output-agent.html" target="_blank">wpisie na blogu</a>.
 
-Poniższy fragment kodu w Pythonie demonstruje prostego agenta planującego, który rozkłada cel na podzadania i generuje strukturalny plan:
+Następujący fragment Pythona demonstruje prostego agenta planującego rozkładającego cel na podzadania i generującego strukturalny plan:
 
 ```python
 from pydantic import BaseModel
@@ -72,10 +72,10 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model podzadania podróży
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # chcemy przypisać zadanie agentowi
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -85,8 +85,8 @@ class TravelPlan(BaseModel):
 client = AzureAIChatCompletionClient(
     model="gpt-4o-mini",
     endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+    # Aby uwierzytelnić się w modelu, musisz wygenerować osobisty token dostępu (PAT) w ustawieniach GitHub.
+    # Utwórz swój token PAT, postępując zgodnie z instrukcjami tutaj: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
     credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     model_info={
         "json_output": False,
@@ -96,7 +96,7 @@ client = AzureAIChatCompletionClient(
     },
 )
 
-# Define the user message
+# Zdefiniuj wiadomość użytkownika
 messages = [
     SystemMessage(content="""You are an planner agent.
     Your job is to decide which agents to run based on the user's request.
@@ -125,30 +125,29 @@ if response_content is None:
 
 pprint(json.loads(response_content))
 
-# # Ensure the response content is a valid JSON string before loading it
+# # Upewnij się, że zawartość odpowiedzi jest prawidłowym łańcuchem JSON przed jej załadowaniem
 # response_content: Optional[str] = response.content if isinstance(
 #     response.content, str) else None
 # if response_content is None:
 #     raise ValueError("Response content is not a valid JSON string")
 
-# # Print the response content after loading it as JSON
+# # Wyświetl zawartość odpowiedzi po załadowaniu jej jako JSON
 # pprint(json.loads(response_content))
 
-# Validate the response content with the MathReasoning model
+# Zwaliduj zawartość odpowiedzi przy użyciu modelu MathReasoning
 # TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Agent planujący z wieloagentową orkiestracją
+### Agent planujący z orkiestracją wieloagentową
 
-W tym przykładzie agent Semantic Router otrzymuje żądanie użytkownika (np. "Potrzebuję planu hotelowego na moją podróż.").
+W tym przykładzie Agent Router Semantyczny otrzymuje żądanie użytkownika (np. "Potrzebuję planu hotelowego na moją podróż.").
 
-Planista następnie:
+Planner następnie:
 
-* Otrzymuje plan hotelowy: Planista przyjmuje wiadomość użytkownika i na podstawie systemowego promptu (zawierającego szczegóły dostępnych agentów) generuje strukturalny plan podróży.
-* Wymienia agentów i ich narzędzia: Rejestr agentów zawiera listę agentów (np. do lotów, hoteli, wynajmu samochodów i aktywności) wraz z funkcjami lub narzędziami, które oferują.
-* Przekazuje plan odpowiednim agentom: W zależności od liczby podzadań, planista albo wysyła wiadomość bezpośrednio do dedykowanego agenta (w przypadku scenariuszy jednozadaniowych), albo koordynuje za pomocą menedżera czatu grupowego dla współpracy wieloagentowej.
-* Podsumowuje wynik: Na koniec planista podsumowuje wygenerowany plan dla przejrzystości.
-
+* Otrzymuje Plan Hotelowy: Planner przyjmuje wiadomość użytkownika i, na podstawie promptu systemowego (w tym dostępnych szczegółów agentów), generuje strukturalny plan podróży.
+* Wymienia Agentów i Ich Narzędzia: Rejestr agentów zawiera listę agentów (np. do lotów, hoteli, wynajmu samochodów i aktywności) wraz z funkcjami lub narzędziami, które oferują.
+* Kieruje Plan do Odpowiednich Agentów: W zależności od liczby podzadań, planner albo wysyła wiadomość bezpośrednio do dedykowanego agenta (w scenariuszach jednego zadania), albo koordynuje poprzez menedżera czatu grupowego w przypadku współpracy wieloagentowej.
+* Podsumowuje Wynik: Na koniec planner podsumowuje wygenerowany plan dla jasności.
 Poniższy przykład kodu w Pythonie ilustruje te kroki:
 
 ```python
@@ -167,11 +166,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model podzadania podróży
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # chcemy przypisać zadanie agentowi
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -184,7 +183,7 @@ from typing import Optional
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
 from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 
-# Create the client with type-checked environment variables
+# Utwórz klienta z użyciem zmiennych środowiskowych sprawdzonych pod kątem typów
 
 client = AzureOpenAIChatCompletionClient(
     azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
@@ -196,7 +195,7 @@ client = AzureOpenAIChatCompletionClient(
 
 from pprint import pprint
 
-# Define the user message
+# Zdefiniuj wiadomość użytkownika
 
 messages = [
     SystemMessage(content="""You are an planner agent.
@@ -213,18 +212,18 @@ messages = [
 
 response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
 
-# Ensure the response content is a valid JSON string before loading it
+# Upewnij się, że zawartość odpowiedzi jest prawidłowym łańcuchem JSON przed jej załadowaniem
 
 response_content: Optional[str] = response.content if isinstance(response.content, str) else None
 if response_content is None:
     raise ValueError("Response content is not a valid JSON string")
 
-# Print the response content after loading it as JSON
+# Wypisz zawartość odpowiedzi po załadowaniu jej jako JSON
 
 pprint(json.loads(response_content))
 ```
 
-Poniżej znajduje się wynik poprzedniego kodu, który można następnie wykorzystać do przekierowania do `assigned_agent` i podsumowania planu podróży dla użytkownika końcowego.
+Co następuje, to wynik z poprzedniego kodu i możesz następnie użyć tego strukturyzowanego wyniku, aby skierować do `assigned_agent` i podsumować plan podróży dla użytkownika końcowego.
 
 ```json
 {
@@ -255,19 +254,19 @@ Poniżej znajduje się wynik poprzedniego kodu, który można następnie wykorzy
 }
 ```
 
-Przykładowy notebook z poprzednim fragmentem kodu jest dostępny [tutaj](07-autogen.ipynb).
+Przykładowy notebook z powyższym przykładem kodu jest dostępny [tutaj](07-autogen.ipynb).
 
-### Iteracyjne planowanie
+### Planowanie iteracyjne
 
-Niektóre zadania wymagają podejścia iteracyjnego, gdzie wynik jednego podzadania wpływa na kolejne. Na przykład, jeśli agent odkryje nieoczekiwany format danych podczas rezerwacji lotów, może być konieczne dostosowanie strategii przed przejściem do rezerwacji hoteli.
+Niektóre zadania wymagają wymiany informacji tam i z powrotem lub ponownego planowania, gdzie wynik jednego podzadania wpływa na następne. Na przykład, jeśli agent odkryje nieoczekiwany format danych podczas rezerwacji lotów, może potrzebować dostosować swoją strategię przed przejściem do rezerwacji hoteli.
 
-Dodatkowo, opinie użytkownika (np. decyzja człowieka, że woli wcześniejszy lot) mogą wywołać częściowe przeplanowanie. Takie dynamiczne, iteracyjne podejście zapewnia, że końcowe rozwiązanie odpowiada rzeczywistym ograniczeniom i zmieniającym się preferencjom użytkownika.
+Dodatkowo, opinia użytkownika (np. gdy człowiek zdecyduje, że woli wcześniejszy lot) może wywołać częściowe ponowne zaplanowanie. Takie dynamiczne, iteracyjne podejście zapewnia, że końcowe rozwiązanie jest zgodne z ograniczeniami rzeczywistego świata i ewoluującymi preferencjami użytkownika.
 
-Przykładowy kod:
+np. przykładowy kod
 
 ```python
 from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
+#.. tak samo jak poprzedni kod i przekaż historię użytkownika oraz bieżący plan
 messages = [
     SystemMessage(content="""You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
@@ -281,34 +280,34 @@ messages = [
     UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
     AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
 ]
-# .. re-plan and send the tasks to respective agents
+# .. przeplanuj i wyślij zadania do odpowiednich agentów
 ```
 
-Dla bardziej kompleksowego planowania sprawdź Magnetic One do rozwiązywania złożonych zadań.
+Dla bardziej kompleksowego planowania sprawdź Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Wpis na blogu</a> dotyczący rozwiązywania złożonych zadań.
 
 ## Podsumowanie
 
-W tym artykule przyjrzeliśmy się przykładowi, jak można stworzyć planistę, który dynamicznie wybiera dostępnych agentów zdefiniowanych. Wyjście planisty rozkłada zadania i przypisuje agentów, aby mogły być wykonane. Zakłada się, że agenci mają dostęp do funkcji/narzędzi wymaganych do wykonania zadania. Oprócz agentów można uwzględnić inne wzorce, takie jak refleksja, podsumowanie i czat w trybie round robin, aby jeszcze bardziej dostosować proces.
+W tym artykule przyjrzeliśmy się przykładowi, jak możemy stworzyć planner, który dynamicznie wybiera dostępnych zdefiniowanych agentów. Wynik Plannera dekomponuje zadania i przypisuje agentów, aby mogły zostać wykonane. Zakłada się, że agenci mają dostęp do funkcji/narzędzi wymaganych do realizacji zadania. Oprócz agentów można włączyć inne wzorce, takie jak refleksja, podsumowywacz i czat round robin, aby dodatkowo dostosować działanie.
 
 ## Dodatkowe zasoby
 
-AutoGen Magnetic One - Uniwersalny system wieloagentowy do rozwiązywania złożonych zadań, który osiągnął imponujące wyniki w wielu wymagających benchmarkach agentowych. Referencja:
-
-. W tej implementacji orkiestrator tworzy plan specyficzny dla zadania i deleguje te zadania do dostępnych agentów. Oprócz planowania orkiestrator stosuje również mechanizm śledzenia, aby monitorować postęp zadania i przeplanowywać w razie potrzeby.
+AutoGen Magentic One - A Generalist multi-agent system for solving complex tasks and has achieved impressive results on multiple challenging agentic benchmarks. Odniesienie: <a href="https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one" target="_blank">autogen-magentic-one</a>. W tej implementacji orkiestrator tworzy specyficzny dla zadania plan i deleguje te zadania dostępnym agentom. Oprócz planowania orkiestrator stosuje również mechanizm śledzenia, aby monitorować postęp zadania i w razie potrzeby ponownie planować.
 
 ### Masz więcej pytań dotyczących wzorca projektowania planowania?
 
-Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące agentów AI.
+Dołącz do [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące Twoich agentów AI.
 
 ## Poprzednia lekcja
 
-[Budowanie wiarygodnych agentów AI](../06-building-trustworthy-agents/README.md)
+[Budowanie godnych zaufania agentów AI](../06-building-trustworthy-agents/README.md)
 
 ## Następna lekcja
 
-[Wzorzec projektowania wieloagentowego](../08-multi-agent/README.md)
+[Wzorzec wieloagentowy](../08-multi-agent/README.md)
 
 ---
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym należy uznać za źródło nadrzędne. W przypadku informacji o krytycznym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za żadne nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

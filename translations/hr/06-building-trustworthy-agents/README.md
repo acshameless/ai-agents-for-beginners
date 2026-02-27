@@ -1,42 +1,42 @@
 [![Pouzdani AI agenti](../../../translated_images/hr/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
 
-> _(Kliknite na sliku iznad za pregled videa ove lekcije)_
+> _(Kliknite gornju sliku da pogledate video ove lekcije)_
 
 # Izgradnja pouzdanih AI agenata
 
 ## Uvod
 
-Ova lekcija obuhvaća:
+Ova lekcija će obuhvatiti:
 
 - Kako izgraditi i implementirati sigurne i učinkovite AI agente
-- Važne sigurnosne aspekte pri razvoju AI agenata
-- Kako očuvati privatnost podataka i korisnika tijekom razvoja AI agenata
+- Važne sigurnosne razmatranja prilikom razvoja AI agenata.
+- Kako održavati privatnost podataka i korisnika prilikom razvoja AI agenata.
 
 ## Ciljevi učenja
 
 Nakon završetka ove lekcije, znat ćete kako:
 
-- Prepoznati i ublažiti rizike pri stvaranju AI agenata.
-- Primijeniti sigurnosne mjere kako biste osigurali pravilno upravljanje podacima i pristupom.
-- Stvoriti AI agente koji čuvaju privatnost podataka i pružaju kvalitetno korisničko iskustvo.
+- Identificirati i ublažiti rizike pri stvaranju AI agenata.
+- Provesti sigurnosne mjere kako bi se osiguralo pravilno upravljanje podacima i pristupom.
+- Stvoriti AI agente koji održavaju privatnost podataka i pružaju kvalitetno korisničko iskustvo.
 
 ## Sigurnost
 
-Prvo ćemo se osvrnuti na izgradnju sigurnih aplikacija temeljenih na agentima. Sigurnost znači da AI agent radi prema predviđenom dizajnu. Kao graditelji aplikacija temeljenih na agentima, imamo metode i alate za maksimiziranje sigurnosti:
+Prvo pogledajmo izgradnju sigurnih agentskih aplikacija. Sigurnost znači da AI agent radi onako kako je zamišljen. Kao graditelji agentskih aplikacija, imamo metode i alate za maksimaliziranje sigurnosti:
 
 ### Izgradnja okvira za sistemske poruke
 
-Ako ste ikada gradili AI aplikaciju koristeći velike jezične modele (LLM-ove), znate koliko je važno dizajnirati robusne sistemske upute ili poruke. Ove upute postavljaju meta pravila, smjernice i upute za interakciju LLM-a s korisnikom i podacima.
+Ako ste ikada izgradili AI aplikaciju koristeći velike jezične modele (LLMs), znate koliko je važno dizajnirati robusni sistemski prompt ili sistemsku poruku. Ti promptovi uspostavljaju meta pravila, upute i smjernice za način na koji će se LLM odnositi prema korisniku i podacima.
 
-Za AI agente, sistemske upute su još važnije jer agenti trebaju vrlo specifične upute za izvršavanje zadataka koje smo im namijenili.
+Za AI agente, sistemski prompt je još važniji jer će AI agenti trebati vrlo specifične upute za izvršavanje zadataka koje smo za njih dizajnirali.
 
-Kako bismo stvorili skalabilne sistemske upute, možemo koristiti okvir za sistemske poruke za izgradnju jednog ili više agenata u našoj aplikaciji:
+Za stvaranje skalabilnih sistemskih promptova možemo koristiti okvir za sistemske poruke za izgradnju jednog ili više agenata u našoj aplikaciji:
 
 ![Izgradnja okvira za sistemske poruke](../../../translated_images/hr/system-message-framework.3a97368c92d11d68.webp)
 
-#### Korak 1: Stvorite meta sistemsku poruku
+#### Korak 1: Stvorite meta sistemsku poruku 
 
-Meta uputa koristi se za generiranje sistemskih uputa za agente koje stvaramo. Dizajniramo je kao predložak kako bismo mogli učinkovito stvoriti više agenata ako je potrebno.
+Meta prompt će se koristiti od strane LLM-a za generiranje sistemskih promptova za agente koje stvorimo. Dizajniramo ga kao predložak kako bismo efikasno mogli stvoriti više agenata po potrebi.
 
 Evo primjera meta sistemske poruke koju bismo dali LLM-u:
 
@@ -47,9 +47,9 @@ information that you will use to provide a system prompt for.
 To create the system prompt, be descriptive as possible and provide a structure that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
 ```
 
-#### Korak 2: Stvorite osnovnu uputu
+#### Korak 2: Stvorite osnovni prompt
 
-Sljedeći korak je stvaranje osnovne upute za opis AI agenta. Trebali biste uključiti ulogu agenta, zadatke koje će agent izvršavati i sve druge odgovornosti agenta.
+Sljedeći korak je stvoriti osnovni prompt koji opisuje AI agenta. Trebali biste uključiti ulogu agenta, zadatke koje će agent izvršavati i sve ostale odgovornosti agenta.
 
 Evo primjera:
 
@@ -57,11 +57,11 @@ Evo primjera:
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### Korak 3: Pružite osnovnu sistemsku poruku LLM-u
+#### Korak 3: Dostavite osnovnu sistemsku poruku LLM-u
 
-Sada možemo optimizirati ovu sistemsku poruku pružajući meta sistemsku poruku kao sistemsku poruku i našu osnovnu sistemsku poruku.
+Sada možemo optimizirati ovu sistemsku poruku tako da meta sistemsku poruku pružimo kao sistemsku poruku i našu osnovnu sistemsku poruku.
 
-Ovo će proizvesti sistemsku poruku koja je bolje dizajnirana za vođenje naših AI agenata:
+To će proizvesti sistemsku poruku koja je bolje dizajnirana za vođenje naših AI agenata:
 
 ```markdown
 **Company Name:** Contoso Travel  
@@ -113,88 +113,88 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 ```
 
-#### Korak 4: Iterirajte i poboljšavajte
+#### Korak 4: Ponavljajte i poboljšavajte
 
-Vrijednost ovog okvira za sistemske poruke je u tome što omogućuje lakše skaliranje stvaranja sistemskih poruka za više agenata, kao i poboljšanje vaših sistemskih poruka tijekom vremena. Rijetko ćete imati sistemsku poruku koja savršeno funkcionira iz prve za cijeli slučaj upotrebe. Mogućnost malih prilagodbi i poboljšanja promjenom osnovne sistemske poruke i ponovnim pokretanjem kroz sustav omogućit će vam usporedbu i procjenu rezultata.
+Vrijednost ovog okvira za sistemske poruke je u mogućnosti da se lakše skalira stvaranje sistemskih poruka za više agenata kao i u poboljšavanju vaših sistemskih poruka tijekom vremena. Rijetko je da ćete imati sistemsku poruku koja radi prvi put za vaš cjelokupni slučaj upotrebe. Mogućnost da napravite male izmjene i poboljšanja mijenjanjem osnovne sistemske poruke i pokretanjem kroz sustav omogućit će vam usporedbu i evaluaciju rezultata.
 
 ## Razumijevanje prijetnji
 
-Kako bismo izgradili pouzdane AI agente, važno je razumjeti i ublažiti rizike i prijetnje za vašeg AI agenta. Pogledajmo neke od različitih prijetnji AI agentima i kako se bolje pripremiti za njih.
+Kako biste izgradili pouzdane AI agente, važno je razumjeti i ublažiti rizike i prijetnje prema vašem AI agentu. Pogledajmo samo neke od različitih prijetnji AI agentima i kako se možete bolje planirati i pripremiti za njih.
 
 ![Razumijevanje prijetnji](../../../translated_images/hr/understanding-threats.89edeada8a97fc0f.webp)
 
 ### Zadatak i upute
 
-**Opis:** Napadači pokušavaju promijeniti upute ili ciljeve AI agenta putem promptova ili manipuliranjem unosima.
+**Opis:** Napadači pokušavaju promijeniti upute ili ciljeve AI agenta putem promptanja ili manipuliranja ulazima.
 
-**Ublažavanje:** Provedite provjere valjanosti i filtre unosa kako biste otkrili potencijalno opasne promptove prije nego što ih AI agent obradi. Budući da ovi napadi obično zahtijevaju čestu interakciju s agentom, ograničavanje broja izmjena u razgovoru još je jedan način sprječavanja ovakvih napada.
+**Ublažavanje**: Izvršite provjere valjanosti i filtre ulaza da biste otkrili potencijalno opasne promptove prije nego što ih AI agent obradi. Budući da ti napadi obično zahtijevaju učestalu interakciju s agentom, ograničavanje broja poteza u razgovoru je još jedan način da se spriječe ovakve vrste napada.
 
-### Pristup kritičnim sustavima
+### Pristup kritičkim sustavima
 
-**Opis:** Ako AI agent ima pristup sustavima i uslugama koje pohranjuju osjetljive podatke, napadači mogu kompromitirati komunikaciju između agenta i tih usluga. To mogu biti izravni napadi ili neizravni pokušaji dobivanja informacija o tim sustavima putem agenta.
+**Opis**: Ako AI agent ima pristup sustavima i servisima koji pohranjuju osjetljive podatke, napadači mogu kompromitirati komunikaciju između agenta i tih servisa. To mogu biti izravni napadi ili indirektni pokušaji dobivanja informacija o tim sustavima kroz agenta.
 
-**Ublažavanje:** AI agenti trebaju imati pristup sustavima samo kada je to nužno kako bi se spriječili ovakvi napadi. Komunikacija između agenta i sustava također treba biti sigurna. Implementacija autentifikacije i kontrole pristupa još je jedan način zaštite ovih informacija.
+**Ublažavanje**: AI agenti trebaju imati pristup sustavima samo po principu potrebe kako bi se spriječile ovakve vrste napada. Komunikacija između agenta i sustava također treba biti sigurna. Implementacija autentikacije i kontrole pristupa je još jedan način zaštite ovih informacija.
 
 ### Preopterećenje resursa i usluga
 
-**Opis:** AI agenti mogu pristupati različitim alatima i uslugama za izvršavanje zadataka. Napadači mogu iskoristiti ovu mogućnost za napad na te usluge slanjem velikog broja zahtjeva putem AI agenta, što može rezultirati kvarovima sustava ili visokim troškovima.
+**Opis:** AI agenti mogu pristupiti različitim alatima i servisima kako bi izvršili zadatke. Napadači mogu iskoristiti tu sposobnost za napad na te servise slanjem velike količine zahtjeva preko AI agenta, što može rezultirati kvarovima sustava ili visokim troškovima.
 
-**Ublažavanje:** Provedite politike za ograničavanje broja zahtjeva koje AI agent može poslati usluzi. Ograničavanje broja izmjena u razgovoru i zahtjeva prema vašem AI agentu još je jedan način sprječavanja ovakvih napada.
+**Ublažavanje:** Implementirajte politike za ograničavanje broja zahtjeva koje AI agent može slati servisu. Ograničavanje broja poteza u razgovoru i zahtjeva prema vašem AI agentu je još jedan način sprječavanja ovakvih vrsta napada.
 
 ### Trovanje baze znanja
 
-**Opis:** Ova vrsta napada ne cilja izravno AI agenta, već cilja bazu znanja i druge usluge koje AI agent koristi. To može uključivati korumpiranje podataka ili informacija koje AI agent koristi za izvršavanje zadatka, što dovodi do pristranih ili neželjenih odgovora korisniku.
+**Opis:** Ova vrsta napada ne cilja izravno AI agenta već cilja bazu znanja i druge servise koje će AI agent koristiti. To može uključivati korumpiranje podataka ili informacija koje će AI agent koristiti za izvršavanje zadatka, što dovodi do pristranih ili neželjenih odgovora korisniku.
 
-**Ublažavanje:** Redovito provjeravajte podatke koje AI agent koristi u svojim radnim procesima. Osigurajte da je pristup tim podacima siguran i da ih mogu mijenjati samo pouzdane osobe kako biste izbjegli ovu vrstu napada.
+**Ublažavanje:** Redovito provjeravajte podatke koje će AI agent koristiti u svojim radnim tokovima. Osigurajte da je pristup tim podacima siguran i da ih mijenjaju samo pouzdane osobe kako biste izbjegli ovu vrstu napada.
 
 ### Kaskadne pogreške
 
-**Opis:** AI agenti pristupaju raznim alatima i uslugama za izvršavanje zadataka. Pogreške uzrokovane napadačima mogu dovesti do kvarova drugih sustava s kojima je AI agent povezan, uzrokujući da napad postane rašireniji i teži za otklanjanje.
+**Opis:** AI agenti pristupaju raznim alatima i servisima za izvršavanje zadataka. Pogreške uzrokovane od strane napadača mogu dovesti do kvarova drugih sustava s kojima je AI agent povezan, čime napad postaje rašireniji i teže ga je otkloniti.
 
-**Ublažavanje:** Jedna metoda za izbjegavanje ovoga je omogućiti AI agentu rad u ograničenom okruženju, poput izvršavanja zadataka u Docker kontejneru, kako bi se spriječili izravni napadi na sustav. Stvaranje mehanizama za povratne korake i logike ponovnog pokušaja kada određeni sustavi odgovore s pogreškom još je jedan način sprječavanja većih kvarova sustava.
+**Ublažavanje**: Jedna metoda za izbjegavanje toga je da AI agent radi u ograničenom okruženju, npr. izvršavanjem zadataka u Docker kontejneru, kako bi se spriječili izravni napadi na sustav. Izrada mehanizama za povratnu opciju i logike ponovnog pokušaja kad se neki sustavi jave s pogreškom je još jedan način sprječavanja većih kvarova sustava.
 
-## Ljudski faktor u petlji
+## Čovjek u petlji
 
-Još jedan učinkovit način za izgradnju pouzdanih sustava AI agenata je uključivanje ljudskog faktora u petlju. Ovo stvara tijek rada u kojem korisnici mogu pružiti povratne informacije agentima tijekom izvršavanja. Korisnici u osnovi djeluju kao agenti u sustavu s više agenata, pružajući odobrenje ili prekidanje procesa koji je u tijeku.
+Još jedan učinkovit način za izgradnju pouzdanih sustava AI agenata je korištenje koncepta 'čovjek u petlji'. Time se stvara tok u kojem korisnici mogu davati povratne informacije agentima tijekom izvršavanja. Korisnici u suštini djeluju kao agenti u sustavu s više agenata i svojim odobravanjem ili prekidom pokrenutog procesa utječu na izvršenje.
 
-![Ljudski faktor u petlji](../../../translated_images/hr/human-in-the-loop.5f0068a678f62f4f.webp)
+![Čovjek u petlji](../../../translated_images/hr/human-in-the-loop.5f0068a678f62f4f.webp)
 
-Evo isječka koda koji koristi AutoGen za prikaz kako se ovaj koncept implementira:
+Evo isječka koda koji koristi AutoGen kako bi pokazao kako se ovaj koncept implementira:
 
 ```python
 
-# Create the agents.
+# Kreirajte agente.
 model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
 assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Koristite input() za dobivanje korisničkog unosa iz konzole.
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
+# Kreirajte uvjet završetka koji će završiti razgovor kada korisnik kaže "APPROVE".
 termination = TextMentionTermination("APPROVE")
 
-# Create the team.
+# Kreirajte tim.
 team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
 
-# Run the conversation and stream to the console.
+# Pokrenite razgovor i streamajte u konzolu.
 stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
+# Koristite asyncio.run(...) kada se pokreće u skripti.
 await Console(stream)
 
 ```
 
 ## Zaključak
 
-Izgradnja pouzdanih AI agenata zahtijeva pažljiv dizajn, robusne sigurnosne mjere i kontinuiranu iteraciju. Primjenom strukturiranih sustava meta uputa, razumijevanjem potencijalnih prijetnji i primjenom strategija ublažavanja, programeri mogu stvoriti AI agente koji su i sigurni i učinkoviti. Dodatno, uključivanje ljudskog faktora u petlju osigurava da AI agenti ostanu usklađeni s potrebama korisnika uz minimaliziranje rizika. Kako AI nastavlja evoluirati, održavanje proaktivnog pristupa sigurnosti, privatnosti i etičkim razmatranjima bit će ključno za poticanje povjerenja i pouzdanosti u sustavima temeljenim na AI-u.
+Izgradnja pouzdanih AI agenata zahtijeva pažljiv dizajn, robusne sigurnosne mjere i kontinuiranu iteraciju. Implementacijom strukturiranih sustava meta promptanja, razumijevanjem potencijalnih prijetnji i primjenom strategija ublažavanja, programeri mogu stvoriti AI agente koji su i sigurni i učinkoviti. Dodatno, uključivanje pristupa 'čovjek u petlji' osigurava da AI agenti ostanu usklađeni s korisničkim potrebama uz minimiziranje rizika. Kako se AI nastavlja razvijati, održavanje proaktivnog stava prema sigurnosti, privatnosti i etičkim razmatranjima bit će ključno za njegovanje povjerenja i pouzdanosti u sustavima koje pokreće AI.
 
-### Imate li dodatnih pitanja o izgradnji pouzdanih AI agenata?
+### Imate li više pitanja o izgradnji pouzdanih AI agenata?
 
-Pridružite se [Azure AI Foundry Discordu](https://aka.ms/ai-agents/discord) kako biste se povezali s drugim učenicima, sudjelovali u uredskim satima i dobili odgovore na svoja pitanja o AI agentima.
+Pridružite se [Microsoft Foundry Discord](https://aka.ms/ai-agents/discord) kako biste se susreli s drugim učenicima, sudjelovali na radnim satima i dobili odgovore na pitanja o svojim AI agentima.
 
 ## Dodatni resursi
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Pregled odgovornog korištenja AI-a</a>
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Procjena generativnih AI modela i AI aplikacija</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Pregled odgovornog korištenja AI</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Evaluacija generativnih AI modela i AI aplikacija</a>
 - <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Sigurnosne sistemske poruke</a>
-- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Predložak za procjenu rizika</a>
+- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Predložak procjene rizika</a>
 
 ## Prethodna lekcija
 
@@ -202,9 +202,11 @@ Pridružite se [Azure AI Foundry Discordu](https://aka.ms/ai-agents/discord) kak
 
 ## Sljedeća lekcija
 
-[Planiranje dizajnerskog uzorka](../07-planning-design/README.md)
+[Planning Design Pattern](../07-planning-design/README.md)
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Odricanje od odgovornosti**:
+Ovaj dokument je preveden pomoću AI usluge za prijevod [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalan prijevod koji obavi ljudski prevoditelj. Ne snosimo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

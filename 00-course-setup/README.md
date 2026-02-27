@@ -254,6 +254,52 @@ The conditional workflow notebook in lesson 8 uses **Bing grounding** via Azure 
 |----------|-----------------|
 | `BING_CONNECTION_ID` | Azure AI Foundry portal → your project → **Management** → **Connected resources** → your Bing connection → copy the connection ID |
 
+## Troubleshooting
+
+### SSL Certificate Verification Errors on macOS
+
+If you are on macOS and encounter an error like:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+This is a known issue with Python on macOS where the system SSL certificates are not automatically trusted. Try the following solutions in order:
+
+**Option 1: Run Python's Install Certificates script (recommended)**
+
+```bash
+# Replace 3.XX with your installed Python version (e.g., 3.12 or 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**Option 2: Use `connection_verify=False` in your notebook (for GitHub Models notebooks only)**
+
+In the Lesson 6 notebook (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`), a commented-out workaround is already included. Uncomment `connection_verify=False` when creating the client:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # Disable SSL verification if you encounter certificate errors
+)
+```
+
+> **⚠️ Warning:** Disabling SSL verification (`connection_verify=False`) reduces security by skipping certificate validation. Use this only as a temporary workaround in development environments, never in production.
+
+**Option 3: Install and use `truststore`**
+
+```bash
+pip install truststore
+```
+
+Then add the following at the top of your notebook or script before making any network calls:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
 ## Stuck Somewhere?
 
 If you have any issues running this setup, hop into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create an issue</a>.

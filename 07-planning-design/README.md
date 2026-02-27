@@ -81,10 +81,7 @@ class TravelPlan(BaseModel):
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-    endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    model="gpt-4o-mini",
-)
+provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
 
 # Define the user message
 system_prompt = """You are a planner agent.
@@ -157,10 +154,7 @@ from azure.identity import AzureCliCredential
 
 # Create the client
 
-provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-    endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    model=os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"),
-)
+provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
 
 from pprint import pprint
 

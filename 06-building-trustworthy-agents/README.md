@@ -169,8 +169,6 @@ from azure.identity import AzureCliCredential
 # Create the provider with human-in-the-loop approval
 provider = AzureAIProjectAgentProvider(
     credential=AzureCliCredential(),
-    endpoint=os.getenv("AZURE_AI_PROJECT_ENDPOINT"),
-    model="gpt-4o-mini",
 )
 
 # Create the agent with a human approval step

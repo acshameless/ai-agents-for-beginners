@@ -84,8 +84,7 @@ def book_flight(date: str, location: str) -> str:
 
 
 async def main():
-    provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-    )
+    provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
     agent = await provider.create_agent(
         name="travel_agent",
         instructions="Help the user book travel. Use the book_flight tool when ready.",
@@ -120,8 +119,7 @@ import os
 from agent_framework.azure import AzureAIProjectAgentProvider
 from azure.identity import AzureCliCredential
 
-provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-)
+provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
 
 # Data Retrieval Agent
 agent_retrieve = await provider.create_agent(
@@ -177,8 +175,7 @@ Here are some important core concepts of the Microsoft Agent Framework:
     from agent_framework.azure import AzureAIProjectAgentProvider
     from azure.identity import AzureCliCredential
 
-    provider = AzureAIProjectAgentProvider(credential=AzureCliCredential()),
-    )
+    provider = AzureAIProjectAgentProvider(credential=AzureCliCredential())
     agent = await provider.create_agent(
         name="my_agent",
         instructions="You are a helpful assistant.",
